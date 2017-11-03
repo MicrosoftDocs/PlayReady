@@ -1,1 +1,6 @@
-# [Index](index.md)
+# [Microsoft PlayReady](index.md)
+## [Template](template.md)
+### [Placeholder](./../..)
+### [Placeholder](./../..)
+## [Placeholder](./../..)
+## [Placeholder](./../..)
