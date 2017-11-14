@@ -72,7 +72,7 @@ PlayReady Server SDK includes the following components:
 The following figure shows how the PlayReady Server SDK components interact in the PlayReady Server SDK architecture.  
    
   
-![](image26_19.png)  
+![PlayReady Server SDK Architecture](../images/image26_19.png)  
    
   
 As shown in the figure, a PlayReady client interacts with PlayReady Server SDK by following these steps:  
