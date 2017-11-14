@@ -12,7 +12,7 @@ Everything you need to know about how to provide licensing for playable content.
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="//developer.microsoft.com/en-us/games/uwp">
+        <a href="Overview/introductiontomicrosoftplayreadycontentaccesstechnology1.html">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
