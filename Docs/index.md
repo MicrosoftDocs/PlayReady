@@ -18,11 +18,11 @@ Everything you need to know about how to provide licensing for playable content.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/en-us/media/hubs/windows/win_developer-5.svg" alt="Immersive headset icon" />
+                            <img src="/en-us/media/common/i_overview.svg" alt="PlayReady Overview" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Windows 10 Game Developer Center</h3>
+                        <h3>Introduction to Microsoft PlayReady Content Access Technology</h3>
                     </div>
                 </div>
             </div>
