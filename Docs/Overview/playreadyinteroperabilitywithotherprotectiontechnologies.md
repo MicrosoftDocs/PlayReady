@@ -1,4 +1,4 @@
----
+﻿---
 author:
 title: "PlayReady Interoperability With Other Protection Technologies"
 description: ""
@@ -70,7 +70,7 @@ PlayReady Import designates an operation where content is initially protected us
 
 A device (such as a portable device) must acquire content. If the content contains an extensible policy that enables content to be copied to another device, then the device may copy the content to another device.
 
-When copying protected content to another device, the device needs to repackage the content. The content is protected on the device containing the data. The data, once repackaged, is copied to another device. The transmitting device will then create a new license (that may have different restrictions than the content�s original license) and will then transfer the license to the receiving device.
+When copying protected content to another device, the device needs to repackage the content. The content is protected on the device containing the data. The data, once repackaged, is copied to another device. The transmitting device will then create a new license (that may have different restrictions than the content's original license) and will then transfer the license to the receiving device.
 
 Once the receiving device has both the protected content and the license to unpackage the content, it can decrypt the content and play it back. If the license created on the transmitting device requires time-based expiration, the receiving device must support a secure clock. If the receiving device is revoked, the transmitting device will not transfer its content. If the license restricts content transfer to a domain, the device must be registered to the domain pertaining to that license.
 
