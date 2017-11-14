@@ -51,7 +51,7 @@ Because rental content generally requires start and expiration times, the client
 The following figure indicates the interactions between clients and servers in the rental content scenario.
 
 
- ![](image26_10.jpg)
+ ![Rental Content](../images/image26_10.jpg)
 
 
 The rental content scenario performs the following steps, as illustrated in the figure:
@@ -106,9 +106,9 @@ The following technical aspects should be considered when implementing rental co
 
    *  The content may be downloaded as a simple file through HTTP, if the content is already authored in the right format for the device. Another option is that the client retrieves the successive fragments of an adaptive streaming asset over the streaming protocol (SSTP, DASH, HLS, other) and packs them all on the device's local storage for further play back, in the form of a single fragmented file or a collection of fragment files. The latter allows more sophisticated scenarios like late binding, which is the ability for a client to select different tracks based on its preferences. For example, pick one video quality among multiple qualities, one particular audio track, or a subtitle track, independent of the initial content authoring on the backend.
 
-   *  Download and play rental content can also use either a persistent or non-persistent license. Typically, a predelivery persistent license would be preferred. {::comment}For more information, see [Performing License Acquisition](directlicenseacquisition.md).{:/comment}
+   *  Download and play rental content can also use either a persistent or non-persistent license. Typically, a predelivery persistent license would be preferred.
 
-   *  When using persistent licenses, the device may occasionally need to remove licenses from the data store after their expiration. {::comment}For more information, see [Data Store Maintenance](datastoremaintenance.md).{:/comment}
+   *  When using persistent licenses, the device may occasionally need to remove licenses from the data store after their expiration. 
 
-   *  Like all persistent licenses that include an expiration date, they should also include a begin date that helps prevent some user attacks against the device's trusted clock system. {::comment}For more information, see [Using BeginDate with EndDate](usingbegindatewithenddate.md).{:/comment}
+   *  Like all persistent licenses that include an expiration date, they should also include a begin date that helps prevent some user attacks against the device's trusted clock system. 
 

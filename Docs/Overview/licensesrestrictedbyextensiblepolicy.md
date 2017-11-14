@@ -27,7 +27,7 @@ Extensible policies are designed so that content owners can create a policy that
 The following figure illustrates this example.  
    
   
-![](image26_15.jpg)  
+![Extensible Policy](../images/image26_15.jpg)  
    
   
 In the figure, at points 1 and 2, the Web server and license server transfer content and a license that require an extensible policy to one client that supports the extensible policy and another that does not. At point 3 the first client attempts to use the policy to consume the content. When it encounters the extensible policy, it checks its system to verify that the policy is being properly enforced. After the policy is verified, the client displays the content. At point 4, the client that does not support the extensible policy opens the license, and identifies that it cannot enforce the policy. The client then discards the content and policy because it cannot view it.  

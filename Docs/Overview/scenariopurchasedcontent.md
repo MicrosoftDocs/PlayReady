@@ -22,7 +22,7 @@ In the purchased content scenario, a content owner sells media to consumers usin
 The following figure illustrates how the various components interact in a purchased content scenario.
 
 
- ![](image26_8.jpg)
+ ![Purchased Content](../images/image26_8.jpg)
 
 
 The purchased content scenario performs the following steps:

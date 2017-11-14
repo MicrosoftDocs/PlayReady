@@ -19,13 +19,13 @@ PlayReady version 1.0 introduced AES-128 CTR content encryption mode, in additio
 
 Starting with version 4.0, PlayReady systems support AES 128 bit keys in both Counter Mode (CTR) and Cipher Block Chaining mode (CBC).
 
-This change ensures that services using PlayReady can fully take advantage of a unique stream and file format across all devices. In addition, Microsoft supports the CMAF (Common Media Application Format) standard, as defined in [ISO/IEC FDIS 23000-19](https://www.iso.org/standard/71975.html){:target="_blank"}.
+This change ensures that services using PlayReady can fully take advantage of a unique stream and file format across all devices. In addition, Microsoft supports the CMAF (Common Media Application Format) standard, as defined in [ISO/IEC FDIS 23000-19](https://www.iso.org/standard/71975.html).
 
 ## Common encryption modes
 
 The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
-![](ciphermodes.jpg)
+![Common Encryption Modes](../images/ciphermodes.jpg)
 
 PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the key that has been mainly supported by PlayReady clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady clients. However, Common Encryption modes CENS and CBC1 are allowed.
 
@@ -54,7 +54,7 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 ## Signaling the ALGID in the PlayReady Header
 
-The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. Download the specification [here](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF){:target="_blank"}.
+The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. Download the specification [here](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF).
 
 &nbsp;
 
@@ -111,7 +111,7 @@ The ALGID (algorithm identifier) is a property of the KID element, and specifies
 
 The following figure shows a content flow, where the license request is based on the PlayReady Header and the ALGID is specified.
 
-![Content flow with ALGID specified](algid-e2e.jpg){:width="75%"}
+![Content flow with ALGID specified](../images/algid-e2e.jpg){:width="75%"}
 
 ## Missing ALGIDs
 
@@ -136,7 +136,7 @@ Starting with the PlayReady Header version 4.3, the ALGID may be missing. The fo
 
 The following figure shows a content flow, where the license request is using the CDMi module, and the ALGID is missing.
 
-![Content flow with ALGID missing](algid-missing.jpg){:width="75%"}
+![Content flow with ALGID missing](../images/algid-missing.jpg){:width="75%"}
 
 **Notes:** Each PlayReady Header may have:
 

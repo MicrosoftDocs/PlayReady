@@ -31,7 +31,7 @@ PlayReady clients are devices capable of playing back protected content when giv
 The following figure shows the icons used throughout this document that symbolize devices used as PlayReady clients.  
    
   
-![](image26_0.jpg)  
+![PlayReady Clients](../images/image26_0.jpg)  
   
 <a id="ID4EDB"></a>
 
@@ -46,7 +46,7 @@ Customized app servers enable interoperation with the clients. Service providers
 PlayReady servers include license servers, domain controllers, metering servers, secure stop servers, and secure delete servers. In addition to the PlayReady servers, you may also have a content packager to encrypt and encode your content, as well as a Web server to distribute the content on the Web. The following figure shows the icons used throughout this document to represent the different servers.  
    
   
-![](image26_1.jpg)  
+![PlayReady Servers](../images/image26_1.jpg)  
    
 > ![](note.gif)**Note** Content is stored and distributed using Web servers, but PlayReady products do not include or require a specialized Web server for content storage and distribution.  
   
@@ -60,7 +60,7 @@ PlayReady servers include license servers, domain controllers, metering servers,
 In PlayReady systems, a content packing service encrypts content and stores it on a Web server. That content is then transferred to clients that acquire content decryption information from a license server. The following figure depicts content and license flow for license acquisition (LA). Gray arrows indicate unlicensed content transfers and content transfers with a license. Black arrows indicate protected content transfer without a license, and white arrows indicate license transfer.  
    
   
-![](image26_2.jpg)  
+![Content License Flow](../images/image26_2.jpg)  
    
   
 The following steps describe the content and license flow for license acquisition shown in the previous figure:  

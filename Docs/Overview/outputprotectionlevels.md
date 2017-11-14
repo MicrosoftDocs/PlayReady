@@ -16,7 +16,7 @@ ms.technology: drm
 # Output Protection Levels
    
   
-Output protection levels (OPLs) are described in detail in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/){:target="_blank"}. This topic describes some of the general behavior of OPLs.   
+Output protection levels (OPLs) are described in detail in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). This topic describes some of the general behavior of OPLs.   
    
   
 OPLs create layers of rights protection in order to associate types of content to a security restriction. Higher OPLs indicate a higher-level security. A device does not output content if the device only supports an output protection level that is lower than the minimum OPL for the content, because the device does not support the protected path requirements for playing back content protected at that level.   

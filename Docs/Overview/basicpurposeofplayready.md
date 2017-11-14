@@ -20,7 +20,7 @@ Each license contains rights and restrictions, defining exactly how the content 
 
 The following illustration contains a high-level look at an end-to-end video service, including the back end of the service on the left and clients on the right. 
 
-![Video Service Architecture](video_service_architecture.png)
+![Video Service Architecture](../images/video_service_architecture.png)
 
 On the left side of the illustration you can see the service has some servers to stream the video (content distribution network). There are also some servers that let the users browse the content and choose the content they want to play (user interface). In addition, there are some servers that allow the users to log in and be authenticated, as well as pay for content (authenticate, pay). And, there is also a PlayReady license server.
 
@@ -28,19 +28,19 @@ On the right side of the illustation are the clients. The clients could be Windo
 
 This document is going to focus on what PlayReady does for a service, as shown in the following figure.
 
-![What PlayReady Does For The Service](playready_services.png)
+![What PlayReady Does For The Service](../images/playready_services.png)
 
 What PlayReady provides is a way for a client to request licenses from a server, which then delivers the keys that protect the content in a secure way over an open network. The second thing PlayReady does is deliver rights and right restrictions to the client. With PlayReady, the service has the ability to provide a key for content playback but, for example, only allow the client to use that key for two days in a rental scenario. So PlayReady provides a way to declare rights and right restrictions with the key.
 
 PlayReady also provides a way to securely store the content key on the client side so the client will be able to use that client key to decrypt content for rendering, but not allow saving content in the clear and sharing it with other users.
 
-The way PlayReady enforces these rules is through agreements Microsoft has with OEMs, typically with Final Product Licensees that deliver clients and applications to the market, that require them to reach a certain level of compliance and robustness when they distribute their players. So, when a client receives instructions to use the content key with a certain set of restrictions, the developer that programmed that client has to follow those instructions. For example, the client is not allowed to use the license for more than 48 hours if the license contains a 48 hour restriction. These rules are provided by Microsoft in the [Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/){:target="_blank"}, and it is up to the client developer to enforce those rules in their clients.
+The way PlayReady enforces these rules is through agreements Microsoft has with OEMs, typically with Final Product Licensees that deliver clients and applications to the market, that require them to reach a certain level of compliance and robustness when they distribute their players. So, when a client receives instructions to use the content key with a certain set of restrictions, the developer that programmed that client has to follow those instructions. For example, the client is not allowed to use the license for more than 48 hours if the license contains a 48 hour restriction. These rules are provided by Microsoft in the [Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/), and it is up to the client developer to enforce those rules in their clients.
 
 The following steps illustrate the end-to-end encryption and licensing process for content and how PlayReady is involved in the process.
 
 The following figure contains one asset - an audio/video file - that has not been encrypted. The method used to encrypt the content is entirely up to the content provider and is not provided as part of PlayReady. 
 
-   ![Encrypting the Content File](encrypting_the_content_file.png)
+   ![Encrypting the Content File](../images/encrypting_the_content_file.png)
 
    1. To encrypt this file, the service needs to use a key generator in their content encryptor that generates a new content key that will be used to encrypt the content. This content key will later be delivered from the PlayReady license server to the client to allow decryption of the content and rendering for the user. Along with the content key, which is a private value, encryption services also associate a key identifier (KeyID) - which is a GUID - with the content key. The KeyID is a public value. 
 
@@ -50,15 +50,15 @@ The following figure contains one asset - an audio/video file - that has not bee
 
       At this point, the audio and video will be encrypted using the KeyID, and you will have an encrypted content file that is ready to be delivered to a client.
 
-      ![Authenticating the User](authenticating_the_user.png)
+      ![Authenticating the User](../images/authenticating_the_user.png)
 
    4. Now, the client can begin consuming the content. The first thing the client is probably going to do is to authenticate the user to the service, typically providing a login name and password, but also using any other mechanism for authentication user and device. Typically, a session token is returned to the client once the user is verified. Note that whatever mechanism is used for user authentication, it is entirely up to the service how the user is authenticated; PlayReady does not supply this technology. 
 
-      ![Content Delivery](content_delivery.png)
+      ![Content Delivery](../images/content_delivery.png)
 
    5. Next, the content is delivered to the client (for example, the client has begun downloading part of the data stream that makes up the content). The client then begins to parse this content and discovers that it is encrypted and uses a key that is unknown, but contains a KeyID. 
 
-      ![License Acquisition](license_acquisition.png)
+      ![License Acquisition](../images/license_acquisition.png)
 
    6. At that point, the client will sent a license acquisition request to the license server.
 
@@ -70,7 +70,7 @@ The following figure contains one asset - an audio/video file - that has not bee
 
       Although this demonstration shows the PlayReady license server only delivering one key, it is possible that the license server will deliver a stack of licenses in one license response. Multiple licenses could be included in one transaction, with each license supplying one key if the content is protected with multiple keys or if the service wants to deliver multiple keys in advance because, for example, the service knows that the user is going to listen to eight tracks in a row.
 
-      ![License Store](license_store.png)
+      ![License Store](../images/license_store.png)
 
    10. The other piece of technology that PlayReady provides is a way to store the key and the rights in the client, which is called the license store. 
 

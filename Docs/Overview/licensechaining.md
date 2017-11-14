@@ -32,7 +32,7 @@ Although it is possible to link thousands of files to a single license, there ar
 License chaining provides the flexibility of multiple licenses and the download performance of a single license. The content is directly bound to a leaf license. The leaf license is then bound to a root license. Lastly, the root license is individually bound to each client or domain. The following figure illustrates license chaining.  
    
   
-![](image26_16.jpg)  
+![License Chaining](../images/image26_16.jpg)  
    
   
 License chaining improves performance in two crucial license scenarios:  

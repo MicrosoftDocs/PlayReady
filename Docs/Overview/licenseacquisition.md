@@ -54,7 +54,7 @@ There are two modes for license acquisition:
 The following figure gives an architectural overview of content protection and license acquisition.
 
 
-![License acquisition](image26_13.jpg)
+![License acquisition](../images/image26_13.jpg)
 
 
 License acquisition follows these steps, as illustrated in the figure:
@@ -81,7 +81,7 @@ The following figure shows the basic steps to proactively acquire a license.
 
 &nbsp;
 
-![Proactive license acquisition](playreadyproactivela.jpg){:width="75%"}
+![Proactive license acquisition](../images/playreadyproactivela.jpg)
 
 &nbsp;
 
@@ -89,6 +89,6 @@ The following figure shows the basic steps to reactively acquire a license.
 
 &nbsp;
 
-![Reactive license acquisition](playreadyreactivela.jpg){:width="75%"}
+![Reactive license acquisition](../images/playreadyreactivela.jpg)
 
 &nbsp;

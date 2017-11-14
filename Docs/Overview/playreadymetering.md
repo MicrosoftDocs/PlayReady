@@ -36,7 +36,7 @@ To perform metering, a device transmits its metering data to a metering aggregat
 The following figure illustrates the basic metering architecture.  
    
   
-![](image26_18.jpg)  
+![Metering](../images/image26_18.jpg)  
    
   
 The metering process performs the following steps, as illustrated in the figure:  

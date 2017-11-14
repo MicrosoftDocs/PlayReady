@@ -53,5 +53,5 @@ To continue to support Silverlight on the Mac:
   * Do the same as described for Windows 7 above.
 
   * Or, use a PlayReady SDK provided by a PlayReady partner. The SDK may be an Electron SDK, or any other type for
-  Mac native apps. For more information, see the [list of PlayReady partners](https://www.microsoft.com/playready/partners/){:target="_blank"}.
+  Mac native apps. For more information, see the [list of PlayReady partners](https://www.microsoft.com/playready/partners/).
 

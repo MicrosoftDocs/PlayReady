@@ -72,7 +72,7 @@ Microsoft PlayReady systems use ECC (Elliptical curve cryptography) for encrypti
 ### Signing algorithms
 
 
-For signing licenses, transient keys or data, PlayReady systems use AES OMAC1, which is equivalent to CMAC (Cipher-based message Authentication Code) and became a [NIST](http://csrc.nist.gov/publications/nistpubs/800-108/sp800-108.pdf){:target="_blank"} recommendation in May 2005. Keys are generated at random, but data is hashed with SHA256 and then the hash is signed with ECC256.
+For signing licenses, transient keys or data, PlayReady systems use AES OMAC1, which is equivalent to CMAC (Cipher-based message Authentication Code) and became a [NIST](http://csrc.nist.gov/publications/nistpubs/800-108/sp800-108.pdf) recommendation in May 2005. Keys are generated at random, but data is hashed with SHA256 and then the hash is signed with ECC256.
 
 
 
@@ -96,7 +96,7 @@ For apps or devices that are resource-constrained, start-up requires significant
 ## PlayReady Header
 
 
-The PlayReady Header is an XML fragment that is inserted in the protected content header. The PlayReady Header contains information such as the [key identifier](keyandkeyidskids1.md), or kid identifers (KIDs) of the keys used to encrypt the content, and the default server URL for license acquisition (LA). Additional information may be added, such as the content ID (CID), owner ID, and other operator-specific data. Other optional information describing additional business rules may be stored in the PlayReady Header. For more information about the PlayReady Header and the PlayReady Object, see the [PlayReady Header Specification](https://www.microsoft.com/playready/documents/){:target="_blank"}.
+The PlayReady Header is an XML fragment that is inserted in the protected content header. The PlayReady Header contains information such as the [key identifier](keyandkeyidskids1.md), or kid identifers (KIDs) of the keys used to encrypt the content, and the default server URL for license acquisition (LA). Additional information may be added, such as the content ID (CID), owner ID, and other operator-specific data. Other optional information describing additional business rules may be stored in the PlayReady Header. For more information about the PlayReady Header and the PlayReady Object, see the [PlayReady Header Specification](https://www.microsoft.com/playready/documents/).
 
 
 

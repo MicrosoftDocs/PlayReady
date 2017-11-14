@@ -49,7 +49,7 @@ Content encryption keys in PlayReady systems are AES-128 CTR and AES-128 CBC key
 
 &nbsp;
 
-![PlayReady content encryption flow](playready_encryption.jpg){:width="75%"}
+![PlayReady content encryption flow](../images/playready_encryption.jpg)
 
 &nbsp;
 
@@ -173,7 +173,7 @@ A single license response can also carry multiple licenses and thus multiple key
 
 ## See Also
 
- [PlayReady Header Specification](http://www.microsoft.com/playready/documents/){:target="_blank"}
+ [PlayReady Header Specification](http://www.microsoft.com/playready/documents/)
 
  [PlayReady Content Encryption Overview](playreadycontentencryptionoverview.md)
 

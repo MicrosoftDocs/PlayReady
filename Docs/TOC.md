@@ -2,7 +2,7 @@
 
 ## [Introduction to Microsoft PlayReady Content Access Technology](Overview/introductiontomicrosoftplayreadycontentaccesstechnology1.md)
 
-### [About the Microsoft PlayReady Ecosystem](Overview/microsoftplayreadyecosystem.md)
+### [Microsoft PlayReady Ecosystem](Overview/microsoftplayreadyecosystem.md)
 
 ### [Basic Purpose of PlayReady](Overview/basicpurposeofplayready.md)
 

@@ -19,7 +19,7 @@ ms.technology: drm
 In the super-distribution scenario, protected content is acquired and downloaded with a persistent license by one user on one client (user A, client A). Another user on another client (user B, client B), copies the content from client A to client B. User B tries to play the content, but can't until it has acquired a license for client B. Client B issues a license request to the service for the content. The service has the option to decline the request, or to deliver a license against some form of payment. User A, which contributed to "super"-distribute the content from the service to additional users, may be rewarded by the service by a back margin on the price paid by user B, or by any other form of renumeration (rewards points, bonuses, and so on).   
    
   
- ![](image26_7.jpg)   
+ ![Super Distribution](../images/image26_7.jpg)   
    
   
 The super-distribution scenario performs the following steps, as illustrated in the figure:   
@@ -41,12 +41,4 @@ The super-distribution scenario performs the following steps, as illustrated in 
    1. Client B then must acquire a license. Once client B has a license, it can play back or preview the content that was super-distributed. Note that preview is enforced by having a different policy than permanent or subscription licenses; for example, a license with a play-once policy could be used for preview.   
 
  
-<a id="ID4EFC"></a>
-
-   
-
-{::comment}
-## See Also  
- [Super Distribution Model](superdistributionmodel.md)
-{:/comment}
-  
+<a id="ID4EFC"></a>  

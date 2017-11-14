@@ -33,7 +33,7 @@ In a subscription model where a large number of content pieces are played (for e
 To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. A leaf license may be metered because mechanical royalties (pay per play) tend to be lower when content play counts are monitored. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](licensechaining.md).
 
 
- ![](image26_9.jpg)
+ ![Subscription Content](../images/image26_9.jpg)
 
 
 The subscription content scenario performs the following steps, as illustrated in the figure.
@@ -65,7 +65,7 @@ In a subscription scenario, where the subscription allows a certain maximum numb
 With adaptive streaming protocols over HTTP, the stream is HTTP cached and the streaming origin server gets all the streaming requests. As a consequence, it is non-trivial for the service to count how many clients currently play one stream.
 
 
-PlayReady Secure Stop solves this problem. PlayReady Secure Stop allows a service to be notified when a client stops playing a stream. Combined with non-persistent licenses, which allow the service to be notified when a client start playing a stream, it allows the service to count in real time how many clients play a stream, or a collection of streams, under a particular account, and enforce this number. {::comment}For more information, see [Secure Stop](usingsecurestop.md).{:/comment}
+PlayReady Secure Stop solves this problem. PlayReady Secure Stop allows a service to be notified when a client stops playing a stream. Combined with non-persistent licenses, which allow the service to be notified when a client start playing a stream, it allows the service to count in real time how many clients play a stream, or a collection of streams, under a particular account, and enforce this number.
 
 <a id="ID4EUC"></a>
 

@@ -49,7 +49,7 @@ Under some scenarios, content keys protected by domain private keys are only tra
 The following figure illustrates a domain join.  
    
   
-![](image26_11.jpg)  
+![Direct Domain Join](../images/image26_11.jpg)  
    
   
 In the figure above, the target client sends a domain-join challenge (1) and the domain controller then directly responds to the target client (2). PlayReady Server Software Development Kit (SDK) contains the interfaces for handling join request messages.  
