@@ -28,5 +28,5 @@ The following topics illustrate the typical ways that PlayReady is applied to bu
 
 &nbsp;
    
-> ![](note.gif)**Note** The scenarios described in these topics offer one way of enabling a business scenario. There are alternative ways of implementing these PlayReady scenarios.  
+> ![](../images/note.gif)**Note** The scenarios described in these topics offer one way of enabling a business scenario. There are alternative ways of implementing these PlayReady scenarios.  
  

@@ -133,7 +133,7 @@ When a client makes a license request, it sends the content's PlayReady Header t
 
 For example, let's say you have a video file. The encoder generates a random KID `123`, which it inserts into the file's PlayReady Header. The encoder also generates a random key value `ABC` to correspond with the KID `123`, and stores them both in the KMS. The encoder asks the KMS for the correct key to encrypt the file with, and encrypts the file with the key `ABC`. When the customer tries to play the file, the client asks the license issuer for a license that corresponds to the KID `123`. The license issuer looks up the KID in the KMS, and responds with a license including the key `ABC`, which allows the client to unlock the file, and the customer to watch it.
 
-> ![](note.gif)**Note**
+> ![](../images/note.gif)**Note**
 >
 > The license sent by the license issuer to the client (in our example, the license containing the key `ABC`) is encrypted; an attacker can't intercept the key value.
 >

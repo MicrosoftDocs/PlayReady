@@ -48,7 +48,7 @@ PlayReady servers include license servers, domain controllers, metering servers,
   
 ![PlayReady Servers](../images/image26_1.jpg)  
    
-> ![](note.gif)**Note** Content is stored and distributed using Web servers, but PlayReady products do not include or require a specialized Web server for content storage and distribution.  
+> ![](../images/note.gif)**Note** Content is stored and distributed using Web servers, but PlayReady products do not include or require a specialized Web server for content storage and distribution.  
   
 <a id="ID4ETB"></a>
 

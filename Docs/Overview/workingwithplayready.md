@@ -116,7 +116,7 @@ The PlayReady Test Server website includes documentation and test tools for Play
    *  Test audio content
    *  Test applications (HTML/JS, Silverlight)
 
-> ![](note.gif)**Note** Content and licenses delivered from this website are public and do not provide the level of security required for a production service.
+> ![](../images/note.gif)**Note** Content and licenses delivered from this website are public and do not provide the level of security required for a production service.
 
 The PlayReady Test Server is provided as an optional service to PlayReady developers. You do not need to use this service to test or certify your PlayReady implementations. For more information, see the [PlayReady Test Server](http://test.playready.microsoft.com/) website.
 

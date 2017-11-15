@@ -52,7 +52,7 @@ For example, a PlayReady client may decrypt PlayReady content to re-encrypt it u
 
 These Copy Enablers are optional rights that a license may contain. If they are present, the client is allowed to copy the content to the corresponding output. Note that a Copy Enabler involves an Export operation if passing to the corresponding output requires transcription.
 
-> ![](note.gif)**Note** Copy Enablers were supported up to PlayReady 2.X. They are no longer supported by clients 3.0 and above.
+> ![](../images/note.gif)**Note** Copy Enablers were supported up to PlayReady 2.X. They are no longer supported by clients 3.0 and above.
 
 
 ## Move Enablers
@@ -61,7 +61,7 @@ A **MoveEnabler** object represents a technology that content from a PlayReady c
 
 For example, move to CPRM.
 
-> ![](note.gif)**Note** Move Enablers were supported up to PlayReady 2.X. They are no longer supported by clients 3.0 and above.
+> ![](../images/note.gif)**Note** Move Enablers were supported up to PlayReady 2.X. They are no longer supported by clients 3.0 and above.
 
 
 ## Import and Export

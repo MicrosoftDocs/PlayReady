@@ -20,7 +20,7 @@ Several different types of encryption are used to protect content. Microsoft Pla
 
 This topic describes the encryption mechanisms and file format concepts used to protect content in the PlayReady ecosystem.
 
-> ![](note.gif)**Note** See [Glossary](glossary.md) for encryption terms and definitions.
+> ![](../images/note.gif)**Note** See [Glossary](glossary.md) for encryption terms and definitions.
 
 ## Encryption basics
 

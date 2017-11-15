@@ -31,7 +31,7 @@ In many cases, the service may want to change (that is, rotate) the encryption k
 In addition, the service may have dozens, hundreds, or thousands or channels available, and hundreds of different combinations (bundles) available to users depending on the level that they pay, and their geography.   
    
   
-A more sophisticated and scalable way of implementing a large scale TV protection system is to leverage PlayReady scalable licenses with key rotation. In this model, the license of each channel is chained, and a scalable root license and leaf license are needed to consume the content. A scalable root license gives access to the TV bundle that a user has registered. The root license can also contain the region information to which the client belongs; the region information is used when clients in a specific region need to be blacked out for a specific TV service. A scalable leaf license is embedded in the content itself (typically in a pssh box of a MP4 stream, or in a ECM segment of a TS stream), and it contains an encrypted version of the channel key. {::comment}For more information, see [Working with PlayReady Scalable License Chains](workingwithplayreadyscalablelicensechains.md) and the live TV sample in the PlayReady Server SDK.{:/comment} 
+A more sophisticated and scalable way of implementing a large scale TV protection system is to leverage PlayReady scalable licenses with key rotation. In this model, the license of each channel is chained, and a scalable root license and leaf license are needed to consume the content. A scalable root license gives access to the TV bundle that a user has registered. The root license can also contain the region information to which the client belongs; the region information is used when clients in a specific region need to be blacked out for a specific TV service. A scalable leaf license is embedded in the content itself (typically in a pssh box of a MP4 stream, or in a ECM segment of a TS stream), and it contains an encrypted version of the channel key. 
    
   
 Both the root and leaf keys in a live TV scenario should be rotated to ensure maximum robustness, to optimize the head end, and monetize a pay channel through pay-per-view.   
@@ -49,10 +49,4 @@ Note that PlayReady scalable licenses with key rotation also allows you to imple
 <a id="ID4EMB"></a>
 
    
-{::comment}
-## See Also  
- [PlayReady Live TV](playreadylivetv.md)
-
- [Key Rotation, Blackout, and Ad Insertion](keyrotationblackoutandad.md)
-{:/comment}
   
