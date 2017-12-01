@@ -7,12 +7,16 @@ keywords: PlayReady, licensing, playable content license
 
 # Microsoft PlayReady Documentation
 
-Everything you need to know about how to provide licensing for playable content. **This type of landing page is not required -- you can just use a normal docs page if preferred.*
+Microsoft PlayReady is a set of technologies you can use to distribute content securely over the Internet, over a network, or any other way, that prevents the unauthorized use of this content. This technology is used for defining, incorporating, and enforcing rights for digital media (content) chosen by the service provider and content provider, such as an expiration date, the number of times a user can play the content file, and so on. PlayReady technologies can be incorporated into media applications on mobile phones, tablets, personal computers, set top boxes, and other devices to enforce the content access rules.
+
+As of 2017, thousands of services around the world and more than four billion devices use PlayReady.
+
+PlayReady 3.0 and above supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) also supported other types of content, such as executable applications and ebooks. 
 
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="Overview/introductiontomicrosoftplayreadycontentaccesstechnology1.html">
+        <a href="Overview/playreadyoverview.html">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -22,7 +26,7 @@ Everything you need to know about how to provide licensing for playable content.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Introduction to Microsoft PlayReady Content Access Technology</h3>
+                        <h3>PlayReady Overview</h3>
                     </div>
                 </div>
             </div>
@@ -30,7 +34,7 @@ Everything you need to know about how to provide licensing for playable content.
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -40,7 +44,7 @@ Everything you need to know about how to provide licensing for playable content.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Placeholder</h3>
+                        <h3>PlayReady for Windows 10</h3>
                     </div>
                 </div>
             </div>
@@ -48,7 +52,7 @@ Everything you need to know about how to provide licensing for playable content.
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn468834.aspx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -58,7 +62,7 @@ Everything you need to know about how to provide licensing for playable content.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Placeholder</h3>
+                        <h3>PlayReady for Windows 8.1</h3>
                     </div>
                 </div>
             </div>
@@ -73,7 +77,7 @@ Everything you need to know about how to provide licensing for playable content.
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="">
+        <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Protection.PlayReady">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -83,7 +87,7 @@ Everything you need to know about how to provide licensing for playable content.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Placeholder</h3>
+                        <h3>Windows.Media.Protection.PlayReady Namespace</h3>
                     </div>
                 </div>
             </div>

@@ -38,9 +38,25 @@ The following table shows the feature availability for each version of the PlayR
 >|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, includinding CBC1, CBCS, and CENS.<br/>- [Secure Delete](playreadysecuredelete.md) support | 4.0.5117 | 4.0.5102 | 4.0| No longer distributed (see [PlayReady on Windows](workingwithplayready.md##prwindows))| &mdash;| No longer distributed|
 
 
+&nbsp;
+
+## Porting Kit Version Compatibility with Server SDK Versions
+
+
+The following table lists the compatibility between the various PlayReady Device Porting Kit and PlayReady Server SDK versions:
+
+| &nbsp;| Server SDK v1.5.2| Server SDK v2.1 and Server SDK v2.9| Server SDK v3.0| Server SDK v4.0 |
+| --- | --- | --- | --- | --- |
+| PK v4.x| No| Yes | Yes | Yes |
+| PK v3.x| No| Yes| Yes| Yes |
+| PK v2.5 and v2.11| Yes| Yes| Yes| Yes |
+
 
 &nbsp;
 
+Even though PlayReady v3.x based clients should work against a server running Server SDK v2.1 or v2.9, Microsoft recommends that customers running Server SDK v1.5.2 upgrade to Server SDK v3.0 instead of upgrading to Server SDK v2.1 or v2.9. This will ensure that you are on a much more supportable path.
 
+
+For more information on PlayReady Device Porting Kit and PlayReady Server SDK compatibility and migration considerations, see the *Compatibility and Migration Considerations for PlayReady 3.0* white paper on the [PlayReady Documents](https://www.microsoft.com/playready/documents/) website.
 
 

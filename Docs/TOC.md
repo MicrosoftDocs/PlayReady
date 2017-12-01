@@ -1,117 +1,98 @@
 # [Microsoft PlayReady](index.md)
 
-## [Introduction to Microsoft PlayReady Content Access Technology](Overview/introductiontomicrosoftplayreadycontentaccesstechnology1.md)
+## [PlayReady Overview](Overview/playreadyoverview.md)
 
-### [Microsoft PlayReady Ecosystem](Overview/microsoftplayreadyecosystem.md)
+### [PlayReady Ecosystem](Overview/playreadyecosystem.md)
 
-### [Basic Purpose of PlayReady](Overview/basicpurposeofplayready.md)
+### [Simple End to End System](Overview/simpleendtoendsystem.md)
 
-### [Working With PlayReady](Overview/workingwithplayready.md)
+### [License Acquisition](Overview/licenseacquisition.md)
 
-### [PlayReady Products](Overview/playreadyproducts.md)
+### [License Generation and Issuance](Overview/licensegenerationandissuance.md)
 
-#### [PlayReady Server SDK](Overview/playreadyserversdk.md)
+### [License and Policies](Overview/licenseandpolicies.md)
 
-#### [PlayReady Device Porting Kit](Overview/playreadyportingkit.md)
+### [Security Level](Overview/securitylevel.md)
 
-#### [PlayReady for Windows](Overview/playreadypcsdk.md)
+### [Output Protection Levels](Overview/outputprotectionlevels.md)
 
-#### [PlayReady and Silverlight](Overview/playreadyandsilverlight.md)
+### [Key and Key IDs (KIDs)](Overview/keyandkeyidskids.md)
 
-#### [PlayReady Client SDK for iOS](Overview/playreadyproductios.md)
+## [Common PlayReady Scenarios](Overview/commonplayreadyscenarios.md)
 
-#### [Porting Kit Version Compatibility with Server SDK Versions](Overview/portingkitversioncompatibilitywithserversdkversions.md)
+### [Scenario: Rental Content](Overview/scenariorentalcontent.md)
 
-### [How to Use PlayReady](Overview/howtouseplayready.md)
+### [Scenario: Subscription Content](Overview/scenariosubscriptioncontent.md)
 
-#### [Content Encryption and Delivery](Overview/contentencryptionanddelivery.md)
+### [Scenario: Purchased Content](Overview/scenariopurchasedcontent.md)
 
-#### [PlayReady in Clients](Overview/playreadyinclients.md)
+### [Scenario: Live TV](Overview/scenariolivetv.md)
 
-#### [PlayReady License Services](Overview/playreadylicenseservices.md)
+## [PlayReady Products and Deliverables](Overview/playreadyproductsanddeliverables.md)
 
-#### [Optional PlayReady Servers](Overview/optionalplayreadyservers.md)
+### [PlayReady Server SDK](Overview/playreadyserversdk.md)
 
-### [About PlayReady Technologies](Overview/aboutplayreadytechnologies.md)
+### [PlayReady Device Porting Kit](Overview/playreadyportingkit.md)
 
-#### [PlayReady Communication Protocols](Overview/playreadycommunicationprotocols.md)
+### [PlayReady for Windows](Overview/playreadyforwindows.md)
 
-#### [PlayReady Content Encryption](Overview/playreadycontentencryption.md)
-
-##### [PlayReady Content Encryption Overview](Overview/playreadycontentencryptionoverview.md)
-
-##### [PlayReady Content Encryption Modes](Overview/playreadycontentencryptionmodes.md)
-
-#### [Licenses](Overview/licenses.md)
-
-##### [Output Protection Levels](Overview/outputprotectionlevels.md)
-
-##### [License Generation and Issuance](Overview/licensegenerationandissuance.md)
-
-##### [License Acquisition](Overview/licenseacquisition.md)
-
-##### [License Chaining](Overview/licensechaining.md)
-
-##### [Embedded Licenses](Overview/embeddedlicenses.md)
-
-##### [License Nonce](Overview/licensenonce.md)
-
-##### [Key and Key IDs (KIDs)](Overview/keyandkeyidskids1.md)
-
-##### [License and Policies](Overview/licenseandpolicies.md)
-
-##### [Licenses Restricted by Binding Policy](Overview/licensesrestrictedbybindingpolicy.md)
-
-##### [Licenses Restricted by Extensible Policy](Overview/licensesrestrictedbyextensiblepolicy.md)
-
-##### [Best Practices for License Policies](Overview/bestpractices.md)
-
-#### [Trusted Clocks](Overview/trustedclocks.md)
-
-#### [PlayReady Metering](Overview/playreadymetering.md)
-
-#### [PlayReady Domains](Overview/playreadydomains.md)
-
-#### [PlayReady Secure Delete](Overview/playreadysecuredelete.md)
-
-#### [PlayReady Secure Stop](Overview/playreadysecurestop.md)
-
-#### [Individualization](Overview/individualization.md)
-
-#### [Revocation](Overview/revocation.md)
-
-#### [PlayReady and Other Protection Techologies](Overview/playreadyandotherprotectiontechnologies.md)
-
-### [Common PlayReady Scenarios](Overview/commonplayreadyscenarios.md)
-
-#### [Scenario: Rental Content](Overview/scenariorentalcontent.md)
-
-#### [Scenario: Subscription Content](Overview/scenariosubscriptioncontent.md)
-
-#### [Scenario: Purchased Content](Overview/scenariopurchasedcontent.md)
-
-#### [Scenario: Live TV](Overview/scenariolivetv.md)
-
-#### [Scenario: Super Distribution](Overview/scenariosuperdistribution.md)
+### [PlayReady and Silverlight](Overview/playreadyandsilverlight.md)
 
 ### [PlayReady Product Versions](Overview/playreadyproductversions.md)
 
-### [Glossary](Overview/glossary.md)
+## [Encryption](Overview/encryption.md)
 
-### [Specifications](Specifications/specifications1.md)
+### [Content Encryption and Delivery](Overview/contentencryptionanddelivery.md)
 
-#### [PlayReady DRM Plug-in for Android Specification](Specifications/PlayReady_DRM_Plugin_for_Android/playreadydrmpluginforandroidspecification.md)
+### [PlayReady Content Encryption Overview](Overview/playreadycontentencryptionoverview.md)
 
-##### [1. Introduction](Specifications/PlayReady_DRM_Plugin_for_Android/1introduction8.md)
+### [PlayReady Content Encryption Modes](Overview/playreadycontentencryptionmodes.md)
 
-##### [2. Interfaces](Specifications/PlayReady_DRM_Plugin_for_Android/2interfaces.md)
+## [PlayReady License Servers](Overview/playreadylicenseservers.md)
 
-##### [3. Operation](Specifications/PlayReady_DRM_Plugin_for_Android/3operation.md)
+### [Best Practices for License Policies](Overview/bestpractices.md)
 
-##### [4. PlayReadyDRMPlugin](Specifications/PlayReady_DRM_Plugin_for_Android/4playreadydrmplugin.md)
+### [Optional PlayReady Servers](Overview/optionalplayreadyservers.md)
 
-##### [5. PlayReadyCryptoPlugin](Specifications/PlayReady_DRM_Plugin_for_Android/5playreadycryptoplugin.md)
+### [PlayReady Metering](Overview/playreadymetering.md)
 
-##### [6. PlayReadyDrmFactory and PlayReadyCryptoFactory](Specifications/PlayReady_DRM_Plugin_for_Android/6playreadydrmfactoryandplayreadycryptofactory.md)
+### [PlayReady Domains](Overview/playreadydomains.md)
 
-##### [7. SessionManager](Specifications/PlayReady_DRM_Plugin_for_Android/7sessionmanager.md)
+### [PlayReady Secure Delete](Overview/playreadysecuredelete.md)
+
+### [PlayReady Secure Stop](Overview/playreadysecurestop.md)
+
+## [PlayReady Clients](Overview/playreadyclients.md)
+
+### [PlayReady Client Architectures](Overview/playreadyclientarchitectures.md)
+
+### [Trusted Clocks](Overview/trustedclocks.md)
+
+### [Individualization](Overview/individualization.md)
+
+### [Revocation](Overview/revocation.md)
+
+## [PlayReady Advanced Topics](Overview/playreadyadvancedtopics.md)
+
+### [PlayReady Communication Protocols](Overview/playreadycommunicationprotocols.md)
+
+### [License Chaining](Overview/licensechaining.md)
+
+### [Embedded Licenses](Overview/embeddedlicenses.md)
+
+### [License Nonce](Overview/licensenonce.md)
+
+### [Licenses Restricted by Binding Policy](Overview/licensesrestrictedbybindingpolicy.md)
+
+### [Licenses Restricted by Extensible Policy](Overview/licensesrestrictedbyextensiblepolicy.md)
+
+### [PlayReady and Other Protection Techologies](Overview/playreadyandotherprotectiontechnologies.md)
+
+## [Specifications](Specifications/specifications.md)
+
+### [PlayReady Header Object Specification](Specifications/playreadyheaderspecification.md)
+
+### [PlayReady DRM Plug-in for Android Specification](Specifications/playreadydrmpluginforandroidspecification.md)
+
+## [Glossary](Overview/glossary.md)
+

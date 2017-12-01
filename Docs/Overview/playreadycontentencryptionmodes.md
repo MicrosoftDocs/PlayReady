@@ -183,5 +183,8 @@ Examples:
 * Generating a license with a CBC key when the incoming client certificate is a device that uses a Porting Kit version prior to 4.0 will throw an exception.
 * Generating a license with a CBC key when the incoming license request does not indicate support for AES CBC, will throw an exception.
 
-
+>[!IMPORTANT]
+>Services must not encrypt a content in CTR mode and in CBC mode using the same {KID, Ck}. 
+>  *  For functional reasons, a client acquiring both a license for {KID, Ck, AESCTR} and for {KID, Ck, AESCBC} would not function. 
+>  *  For robustness reasons, an attacker having access to the same content encrypted with the same key both in CBC and CTR modes could more easily decrypt content without authorization.
 

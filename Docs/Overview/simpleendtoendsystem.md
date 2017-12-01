@@ -1,6 +1,6 @@
 ---
 author: 
-title: "Basic Purpose of PlayReady"
+title: "Simple End to End System"
 description: ""
 ms.assetid: "121F7DEA-A0D1-4279-9BBF-D8EBEA1F894C"
 kindex: purpose, of PlayReady
@@ -12,7 +12,7 @@ ms.prod: playready
 ms.technology: drm
 ---
 
-# Basic Purpose of PlayReady
+# Simple End to End System
 
 In typical use, Microsoft PlayReady protects content by providing licenses for media files. There is no need to hide files, make them inaccessible, or put special protection in place when files are transmitted from system to system. In other words, there are no operating system requirements or high-security, file-transport mechanisms needed. However, copying a file and giving it to a friend will not enable that friend to use the file if it's protected by PlayReady. To use a media file, users need a license. This license is the primary means of exercising control over content (the media file). A license is granted to a single client (such as a media player) or a domain. The license will not function on other clients or other domains.  
 

@@ -31,7 +31,3 @@ This section contains PlayReady implementation scenarios that illustrate the typ
 
 [Live TV](scenariolivetv.md)
 
-[Super Distribution](scenariosuperdistribution.md)
- 
-
-
