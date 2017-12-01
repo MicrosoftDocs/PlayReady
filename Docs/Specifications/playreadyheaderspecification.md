@@ -55,7 +55,7 @@ The following structure is a fragmented MP4 file with a PlayReady Object that co
 
 The following structure is a fragmented MP4 file with a PlayReady Object that contains a PlayReady Header and a PlayReady Embedded License Store:
 
-![PlayReady Header and ELS in MP4](header_els_mp4.png)
+![PlayReady Header and ELS in MP4](../images/header_els_mp4.png)
 
 ## 2. PlayReady Header (PRH)
 

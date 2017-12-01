@@ -30,11 +30,11 @@ This specification provides information on how the plug-in APIs map to PlayReady
 
 [PlayReadyDrmPlugin](#playreadyplugin) provides the implementation for the DRM plug-in interface. **PlayReadyDrmPlugin** is responsible for wrapping the DRM Manager APIs and doing the proper translation for the parameters as specified by the interface into a format that PlayReady can operate on.   
 
-![PlayReadyDRMPlugin interface](../../images/DrmPlugin.jpg)   
+![PlayReadyDRMPlugin interface](../images/DrmPlugin.jpg)   
 
 [PlayReadyCryptoPlugin](#playreadycryptoplugin) provides the implementation for the Crypto plug-in interface, which is responsible for decrypting the samples. The OEM must ensure that the decrypted samples never leave the trusted execution environment (TEE).   
 
-![PlayReadyCryptoPlugin interface](../../images/CryptoPlugin.jpg) 
+![PlayReadyCryptoPlugin interface](../images/CryptoPlugin.jpg) 
 
 ## 3. Operation
 
@@ -52,9 +52,9 @@ The following steps describe a simple playback scenario:
 
    1. Afterwards, all decryption calls will utilize the [PlayReadyCryptoPlugin::decrypt](#decrypt) method, which will return a handle to the decrypted samples.   
 
-![Simple Playback Flowchart](../../images/Simple_Playback.jpg)   
+![Simple Playback Flowchart](../images/Simple_Playback.jpg)   
 
-![Simple Playback Layers](../../images/Simple_Playback_Layers.jpg)   
+![Simple Playback Layers](../images/Simple_Playback_Layers.jpg)   
 
 <a id="playreadydrmplugin"></a>
 
