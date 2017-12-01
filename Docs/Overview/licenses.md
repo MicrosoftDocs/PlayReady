@@ -1,10 +1,10 @@
 ---
 author:
 title: "Licenses"
-description: "Licenses store the information necessary to access the associated content and store the rules by which that content can be accessed."
+description: ""
 ms.assetid: "EF3BEE65-8412-4A9A-8AA9-A3F6AF2E3D92"
 kindex: licenses
-keywords:  overview licenses,  licenses overview direct license acquisition,  licenses overview predelivery
+keywords:  licenses, key, policies, encryption, decrypt
 ms.author:
 ms.topic: conceptual
 ms.prod: playready
@@ -14,29 +14,38 @@ ms.technology: drm
 
 # Licenses
 
-After a client retrieves a protected file, that client needs to acquire a license before it can perform actions that use that content. Licenses encapsulate information describing the policies associated with particular content, along with information that is required to decrypt the content. In other words, a license is the key for unlocking content as well as the rules for how that content may be used. Different licenses for the same piece of content may grant different rights or right restrictions for that content.
+After a client retrieves a protected file, that client needs to acquire a license before it can perform actions that use that content. Licenses store the information necessary to access the associated content and store the rules by which that content can be accessed. Users must acquire their own licenses to play protected content, even if the protected content was copied from someone who already had a license for it. Licenses contain the encryption key to decrypt the corresponding content or, in the case of chained licenses, contain an intermediary key. Licenses also contain rights and other properties that specify the use of the content. For example, the license determines the number of times a protected file can be played, and whether the license ever expires. These properties are configured in the license separately from the protected file.
 
-Licenses are acquired either directly from license servers or through a proxy server.
+Each license contains the following information:
 
-The following topics describe the different ways in which licenses can be used by PlayReady to play back content.
+   *  The content encryption key.
+   *  The rights and conditions of the license.
+   *  Optional attributes, such as a name and description of the license.
 
-| Topic| Description|
-| --- | --- |
-| [Licenses Overview](licensesoverview.md)| Describes how to acquire and manage licenses, along with the policies for distributing licenses.|
-| [Output Protection Levels](outputprotectionlevels.md)| Describes the protection levels associated with content output.|
-| [License Generation and Issuance](licensegenerationandissuance.md)| Describes how licenses are created and issued to clients.|
-| [License Chaining](licensechaining.md)| Describes how license chaining enables more efficient use of multiple licenses.|
-| [Embedded Licenses](embeddedlicenses.md)| Provides an overview of embedded licenses.|
-| [License Nonce](licensenonce.md)| Describes how using the license nonce protects against attacks on non-persistent and persistent licenses.|
-| [Key and Key IDs](keyandkeyidskids1.md)|Describes how keys and key identifiers protect content, licenses, and other sensitive materials.|
-| [Licenses Restricted by Binding Policy](licensesrestrictedbybindingpolicy.md)| Describes how to restrict licenses using different types of binding policies.|
-| [Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md)| Describes how to restrict licenses by extending the existing XMR policy system.|
+Before a client can decrypt the content associated with a license, it must retrieve the policy from the license. The content protection information within the license is encrypted using a client's public key or a client's domain's public key encryption information. The license is considered "bound" to the client or domain that has the private key for decrypting the content protection information.
 
+Clients acquire licenses either directly from license servers or through a proxy server.
 
+## In This Section
 
+[Output Protection Levels](outputprotectionlevels.md)
 
+[License Generation and Issuance](licensegenerationandissuance.md)
 
+[License Acquisition](licenseacquisition.md)
 
+[License Chaining](licensechaining.md)
 
+[Embedded Licenses](embeddedlicenses.md)
 
+[License Nonce](licensenonce.md)
 
+[Key and Key IDs](keyandkeyidskids1.md)
+
+[License and Policies](licenseandpolicies.md)
+
+[Licenses Restricted by Binding Policy](licensesrestrictedbybindingpolicy.md)
+
+[Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md)
+
+[Best Practices for License Policies](bestpractices.md)

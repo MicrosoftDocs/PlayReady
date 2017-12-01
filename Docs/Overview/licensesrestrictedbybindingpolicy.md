@@ -29,7 +29,7 @@ Licenses may be bound to entities such as a client or a domain. Client binding&m
 ## Client binding  
    
   
-Each PlayReady client is uniquely identified to the license server by a machine or app certificate. This identifier takes the form of an ID and an asymmetric key pair. License servers receive this certificate as part of each license request. During the generation of the license to be returned to the client, the license server will bind and encrypt the license information towards the client public key, so that the client can use its private key to decrypt and access the license information. This license information includes the content encryption key, which allows the client to decrypt content using that license.   
+Each PlayReady client is uniquely identified to the license server by a machine or application certificate. This identifier takes the form of an ID and an asymmetric key pair. License servers receive this certificate as part of each license request. During the generation of the license to be returned to the client, the license server will bind and encrypt the license information towards the client public key, so that the client can use its private key to decrypt and access the license information. This license information includes the content encryption key, which allows the client to decrypt content using that license.   
    
   
 The simplest form of license binding is when a license server binds the license to the machine itself.  
@@ -44,7 +44,7 @@ The simplest form of license binding is when a license server binds the license 
 Alternatively, license servers can bind the license to an abstract group of clients, named a PlayReady domain (PlayReady domains are not the same as NTFS domains). This domain also has the same type of certificate, including an ID, and an asymmetric key pair.   
    
   
-If a client (device or app) receives a domain-bound license, it needs to join the related domain (for example, acquire from the service a domain certificate) to be able to access the license information. A client joining a domain requires a HTTP transaction similar to a license acquisition, called a domain join operation.   
+If a client (device or application) receives a domain-bound license, it needs to join the related domain (for example, acquire from the service a domain certificate) to be able to access the license information. A client joining a domain requires a HTTP transaction similar to a license acquisition, called a domain join operation.   
   
 <a id="ID4EQB"></a>
 

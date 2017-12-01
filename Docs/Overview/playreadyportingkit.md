@@ -85,5 +85,5 @@ The following figure shows the PlayReady PK architecture components that Microso
 ![Porting Kit Architecture](../images/image26_20.jpg)  
    
   
-When building a device based on PlayReady Device Porting Kit, a device builder will adapt the functionality in the OEM APIs in order to enable the functionality that Microsoft provides in the PlayReady APIs. Once these APIs are implemented, the device builder can create an app that enables PlayReady operations on the portable device.  
+When building a device based on PlayReady Device Porting Kit, a device builder will adapt the functionality in the OEM APIs in order to enable the functionality that Microsoft provides in the PlayReady APIs. Once these APIs are implemented, the device builder can create an application that enables PlayReady operations on the portable device.  
   

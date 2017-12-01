@@ -65,6 +65,7 @@ PlayReady Server SDK provides the functionality to manage clients joined to a do
    
   
 Domain renewability allows for domain certificates to be upgraded without invalidating previously-acquired content. Without renewability, content breaches of one entity on a domain would require all entities on the domain to reacquire their protected content. Renewability is enabled by invalidating all current certificates in a domain when the version is revised and then adding a newer-versioned certificate associated with a new private key. Whenever new content is acquired, the client must bind to the new version.  
-   
-> ![](../images/note.gif)**Note** Renewability is different from revocation because content for invalidated certificates still plays back on devices that are associated with the domain and the devices continue to function.  
+
+> [!NOTE]  
+> Renewability is different from revocation because content for invalidated certificates still plays back on devices that are associated with the domain and the devices continue to function.  
   

@@ -33,6 +33,7 @@ PlayReady licenses can be:
    
   
 Both persistent and non-persistent licenses include rights and right restrictions set by the issuing service. These rights, such as Play, and rights restrictions, such as date/time expiration, begin time, expiration after first play, and so on, are described in detail in the Microsoft PlayReady Extensible Media Rights Specification, which is contained in the PlayReady documentation provided to licensees.   
-   
-> ![](../images/note.gif)**Note** For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.  
+
+> [!NOTE]   
+> For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.  
  

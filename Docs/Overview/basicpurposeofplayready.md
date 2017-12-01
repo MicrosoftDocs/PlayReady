@@ -16,7 +16,9 @@ ms.technology: drm
 
 In typical use, Microsoft PlayReady protects content by providing licenses for media files. There is no need to hide files, make them inaccessible, or put special protection in place when files are transmitted from system to system. In other words, there are no operating system requirements or high-security, file-transport mechanisms needed. However, copying a file and giving it to a friend will not enable that friend to use the file if it's protected by PlayReady. To use a media file, users need a license. This license is the primary means of exercising control over content (the media file). A license is granted to a single client (such as a media player) or a domain. The license will not function on other clients or other domains.  
 
-Each license contains rights and restrictions, defining exactly how the content may be used and under what conditions. For example, a music file license may enable a "right to play" but restrict the security level of the app on which the content can be played. The license might be valid for the period between October 1, 2017 and November 1, 2017. There may be multiple licenses for a single file. A user will be able to access and use his or her content so long as one of the licenses grant the appropriate rights and the restrictions do not prevent access.  
+Each license contains rights and restrictions, defining exactly how the content may be used and under what conditions. For example, a music file license may enable a "right to play" but restrict the security level of the application on which the content can be played. The license might be valid for the period between October 1, 2017 and November 1, 2017. There may be multiple licenses for a single file. A user will be able to access and use his or her content so long as one of the licenses grant the appropriate rights and the restrictions do not prevent access. 
+
+## Overview of an end-to-end video Service 
 
 The following illustration contains a high-level look at an end-to-end video service, including the back end of the service on the left and clients on the right. 
 
@@ -24,9 +26,9 @@ The following illustration contains a high-level look at an end-to-end video ser
 
 On the left side of the illustration you can see the service has some servers to stream the video (content distribution network). There are also some servers that let the users browse the content and choose the content they want to play (user interface). In addition, there are some servers that allow the users to log in and be authenticated, as well as pay for content (authenticate, pay). And, there is also a PlayReady license server.
 
-On the right side of the illustation are the clients. The clients could be Windows apps, iPhone apps, or specific devices such as set top boxes, Roku receivers, and so on. Some of these clients may come with a PlayReady integrated client in their players, for example, the OEM may have integrated PlayReady in the operating system or in the hardware. Others could come with a client integrated in the application that is published in the app store. There are many different options for players to integrate PlayReady on the client side.
+On the right side of the illustation are the clients. The clients could be Windows applicationss, iPhone applications, or specific devices such as set top boxes, Roku receivers, and so on. Some of these clients may come with a PlayReady integrated client in their players, for example, the OEM may have integrated PlayReady in the operating system or in the hardware. Others could come with a client integrated in the application that is published in the app store. There are many different options for players to integrate PlayReady on the client side.
 
-This document is going to focus on what PlayReady does for a service, as shown in the following figure.
+This topic is going to focus on what PlayReady does for a service, as shown in the following figure.
 
 ![What PlayReady Does For The Service](../images/playready_services.png)
 
@@ -35,6 +37,9 @@ What PlayReady provides is a way for a client to request licenses from a server,
 PlayReady also provides a way to securely store the content key on the client side so the client will be able to use that client key to decrypt content for rendering, but not allow saving content in the clear and sharing it with other users.
 
 The way PlayReady enforces these rules is through agreements Microsoft has with OEMs, typically with Final Product Licensees that deliver clients and applications to the market, that require them to reach a certain level of compliance and robustness when they distribute their players. So, when a client receives instructions to use the content key with a certain set of restrictions, the developer that programmed that client has to follow those instructions. For example, the client is not allowed to use the license for more than 48 hours if the license contains a 48 hour restriction. These rules are provided by Microsoft in the [Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/), and it is up to the client developer to enforce those rules in their clients.
+
+<a id="basicprocess"></a>
+## Basic encryption and licensing process
 
 The following steps illustrate the end-to-end encryption and licensing process for content and how PlayReady is involved in the process.
 

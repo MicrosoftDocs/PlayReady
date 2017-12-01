@@ -16,7 +16,7 @@ ms.technology: drm
 # PlayReady Client SDK for iOS
 
 
-PlayReady Client SDK for iOS is designed to help developers create iOS apps that play digital content protected with PlayReady technology. With this development kit, PlayReady technology can then be used on a wide variety of iOS device classes such as telephones, set-top boxes, and portable media players.
+PlayReady Client SDK for iOS is designed to help developers create iOS applications that play digital content protected with PlayReady technology. With this development kit, PlayReady technology can then be used on a wide variety of iOS device classes such as telephones, set-top boxes, and portable media players.
 
 <a id="ID4ER"></a>
 
@@ -49,7 +49,7 @@ The PlayReady Client SDK for iOS is provided as a single ZIP formatted file that
 
    *  The libraries used by PlayReady.
 
-   *  The media player sample app for iOS.
+   *  The media player sample application for iOS.
 
    *  A readme file that contains last minute product information.
 

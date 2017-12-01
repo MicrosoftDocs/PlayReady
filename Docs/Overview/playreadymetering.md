@@ -30,7 +30,7 @@ ms.technology: drm
 Metered content uses a license with a metering identifier (MID) to track content usage. When content with a metered license is played, it updates entries in the metering store. The license contains the MID, and this allows the information to be grouped by MID. Usage data is grouped by the key identifier (KID)&mdash;if there is a different KID for each content file, each usage of that file is reported. Metering is turned on once for an entire license. At that point, every right will increment a separate entry in the store. Metering can be enabled on any device.
    
   
-To perform metering, a device transmits its metering data to a metering aggregation server. Furthermore, the media player app may perform additional scheduling calculations to restrict metering reporting cycles to regular intervals, such as every two weeks.  
+To perform metering, a device transmits its metering data to a metering aggregation server. Furthermore, the media player application may perform additional scheduling calculations to restrict metering reporting cycles to regular intervals, such as every two weeks.  
    
   
 The following figure illustrates the basic metering architecture.  
@@ -46,10 +46,11 @@ The metering process performs the following steps, as illustrated in the figure:
    1. End users acquire this content and receive a license for that content, through the standard license acquisition process.
   
    1. A media player on a device opens this content license. The DRM component of the media player records metering data, which includes a tally of the number of times the content is used, the type of action performed, and the metering identifier.
-  
-      > ![](../images/note.gif)**Note** When recording metering data, the media player uses the license key identifier to tally the counted actions. So to track metering information for individual content items, you must protect each content item using a unique key identifier.  
 
-   1. A metering plug-in or app on the device periodically requests metering data for a specific metering identifier and then sends the data to the corresponding metering aggregation service.
+      > [!NOTE]
+      > When recording metering data, the media player uses the license key identifier to tally the counted actions. So to track metering information for individual content items, you must protect each content item using a unique key identifier.  
+
+   1. A metering plug-in or application on the device periodically requests metering data for a specific metering identifier and then sends the data to the corresponding metering aggregation service.
   
       This metering data can be decrypted only by the metering aggregation service that owns the metering certificate containing this metering identifier.
   

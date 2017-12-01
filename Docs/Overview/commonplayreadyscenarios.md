@@ -16,17 +16,22 @@ ms.technology: drm
 # Common PlayReady Scenarios
    
   
-The following topics illustrate the typical ways that PlayReady is applied to business practices.  
- 
-| Topic| Description| 
-| --- | --- | 
-| [Rental Content](scenariorentalcontent.md)| Content can only be played for a limited amount of time.| 
-| [Subscription Content](scenariosubscriptioncontent.md)| Content is obtained from a content owner that sells subscriptions to a catalog of media content using an online store.| 
-| [Purchased Content](scenariopurchasedcontent.md)| Content is individually sold to the user.| 
-| [Live TV](scenariolivetv.md)| Content is provided through a streaming service at the same time as the event is occurring.| 
-| [Super Distribution](scenariosuperdistribution.md)| Content from one client is copied to another client, and that client can then play the content back.| 
+This section contains PlayReady implementation scenarios that illustrate the typical ways PlayReady is applied to business practices. 
 
-&nbsp;
-   
-> ![](../images/note.gif)**Note** The scenarios described in these topics offer one way of enabling a business scenario. There are alternative ways of implementing these PlayReady scenarios.  
+> [!NOTE]
+> The scenarios described in these topics offer one way of enabling a business scenario. There are alternative ways of implementing these PlayReady scenarios.  
  
+## In This Section
+
+[Rental Content](scenariorentalcontent.md)
+
+[Subscription Content](scenariosubscriptioncontent.md)
+
+[Purchased Content](scenariopurchasedcontent.md)
+
+[Live TV](scenariolivetv.md)
+
+[Super Distribution](scenariosuperdistribution.md)
+ 
+
+

@@ -111,7 +111,7 @@ The ALGID (algorithm identifier) is a property of the KID element, and specifies
 
 The following figure shows a content flow, where the license request is based on the PlayReady Header and the ALGID is specified.
 
-![Content flow with ALGID specified](../images/algid-e2e.jpg){:width="75%"}
+![Content flow with ALGID specified](../images/algid-e2e.jpg)
 
 ## Missing ALGIDs
 
@@ -136,11 +136,11 @@ Starting with the PlayReady Header version 4.3, the ALGID may be missing. The fo
 
 The following figure shows a content flow, where the license request is using the CDMi module, and the ALGID is missing.
 
-![Content flow with ALGID missing](../images/algid-missing.jpg){:width="75%"}
+![Content flow with ALGID missing](../images/algid-missing.jpg)
 
 **Notes:** Each PlayReady Header may have:
 
-* Only one encryption type. For example, if ALGID=”AESCTR”, all keys for the header are used in CTR mode. When ALGID="AESCBC", all keys for this header are used in CBC mode. See [DRM_SUPPORTED_CIPHERS](DRM_SUPPORTED_CIPHERS.md) for more information.
+* Only one encryption type. For example, if ALGID=”AESCTR”, all keys for the header are used in CTR mode. When ALGID="AESCBC", all keys for this header are used in CBC mode.
 * When the ALGID is missing, all keys for this header are used in Counter Mode or Cipher Block Chaining, but the value is not inserted in the header.
 * Making a license acquisition request with a PlayReady Header v4.3 to a License Server below v4.0 will throw an exception.
 * A license response can include one or many licenses, where each license contains one key and any number of policies.

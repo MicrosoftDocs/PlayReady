@@ -56,9 +56,8 @@ Content encryption keys in PlayReady systems are AES-128 CTR and AES-128 CBC key
 There are two ways to generate a KID and key, including:
 
    *  Using a *Key Management System* (KMS), where the service randomly generates each KID and key value and stores them, and can simply look up the key value that corresponds to the KID provided by the client. <br/>
-   *  Using the *PlayReady key seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value, which you can generate with the [GenerateKeySeed Method](generatekeyseedmethod.md)), and for each piece of content that requires a key, generates a random KID. Using the [AESContentKey Class](aescontentkeyclass.md) in the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady function, listed in the PlayReady Header Object specification at [https://www.microsoft.com/playready/documents/](https://www.microsoft.com/playready/documents/), section 5. For convenience, here is the algorithm: <br/>
+   *  Using the *PlayReady key seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value), and for each piece of content that requires a key, generates a random KID. Using the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady function, listed in the PlayReady Header Object specification at [https://www.microsoft.com/playready/documents/](https://www.microsoft.com/playready/documents/), section 6. For convenience, here is the algorithm: <br/>
       ```cpp
-
       byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
       {
         const int DRM_AES_KEYSIZE_128 = 16;
@@ -113,7 +112,6 @@ There are two ways to generate a KID and key, including:
 
         return contentKey;
       }
-
       ```
 
 
@@ -128,16 +126,13 @@ No matter how you generate the key, you must be able to verify that it correspon
 ## Deliver a license for the content
 
 
-When a client makes a license request, it sends the content's PlayReady Header to the license issuer. The license issuer extracts the KID and determines the corresponding key value, using one of the methods described above&mdash;if it uses the key seed mechanism, it just regenerates the key based on the KID and key seed. Then it generates a license including this key, which it sends back to the client in a *license response*. The license request is represented using the [LicenseChallenge](licensechallengeclass.md) class. Use the [LicenseChallenge.ContentHeader](contentheaderproperty.md) property to read the content header. The license response is represented using the [LicenseResponse Class](licenseresponseclass.md).
+When a client makes a license request, it sends the content's PlayReady Header to the license issuer. The license issuer extracts the KID and determines the corresponding key value, using one of the methods described above&mdash;if it uses the key seed mechanism, it just regenerates the key based on the KID and key seed. Then it generates a license including this key, which it sends back to the client in a *license response*.
 
 
 For example, let's say you have a video file. The encoder generates a random KID `123`, which it inserts into the file's PlayReady Header. The encoder also generates a random key value `ABC` to correspond with the KID `123`, and stores them both in the KMS. The encoder asks the KMS for the correct key to encrypt the file with, and encrypts the file with the key `ABC`. When the customer tries to play the file, the client asks the license issuer for a license that corresponds to the KID `123`. The license issuer looks up the KID in the KMS, and responds with a license including the key `ABC`, which allows the client to unlock the file, and the customer to watch it.
 
-> ![](../images/note.gif)**Note**
->
+> [!NOTE]
 > The license sent by the license issuer to the client (in our example, the license containing the key `ABC`) is encrypted; an attacker can't intercept the key value.
->
-
 
 The key used to protect the media file and the key in the license are the same; therefore, the content packager and the license issuer must both be able to retrieve or generate the exact same key for a specified media file. To accomplish this, if you're using a key seed to generate keys, you must share it between the content packager and the license issuer.
 
@@ -175,5 +170,5 @@ A single license response can also carry multiple licenses and thus multiple key
 
  [PlayReady Header Specification](http://www.microsoft.com/playready/documents/)
 
- [PlayReady Content Encryption Overview](playreadycontentencryptionoverview.md)
+ [PlayReady Content Encryption](playreadycontentencryption.md)
 

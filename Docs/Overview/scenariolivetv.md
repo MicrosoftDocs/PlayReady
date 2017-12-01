@@ -19,7 +19,7 @@ ms.technology: drm
 In the live TV scenario, a service sends live streams to users and users' clients on the Internet (Over The Top, OTP) or in a closed network (IPTV for operators).   
    
   
-The client may be a TV set, a phone app, a tablet, a PC, or any PlayReady embedded device.   
+The client may be a TV set, a phone application, a tablet, a PC, or any PlayReady embedded device.   
    
   
 Standard PlayReady licenses may be used. In this case, a channel in a bundle will have its own KID and encryption key, and clients willing to consume this channel request a PlayReady license for this KID.   

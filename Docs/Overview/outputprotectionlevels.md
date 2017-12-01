@@ -37,118 +37,119 @@ The following table contains the allowed output protection levels for each type 
 
 <p></p>   
   
-The following tables outline the mappings between various OPLs in the PlayReady license and how PlayReady enforces them.   
- 
-  <table>
-    <tr>
-      <th align="center" rowspan="2">OPL</th>
-      <th>
-        Uncompressed Digital Audio
-      </th>
-      <th>Compressed Digital Audio</th>
-      <th>
-        Analog Audio or USB Audio
-      </th>
-    </tr>
-    <tr>
-      <th>HDMI, DisplayPort, MHL</th>
-      <th>HDMI, DisplayPort, MHL</th>
-      <th>Any</th>
-    </tr>
-    <tr>
-      <td>0-100</td>
-      <td rowspan="2">Passes content</td>
-      <td>Passes content</td>
-      <td rowspan="4">Passes content</td>
-    </tr>
-    <tr>
-      <td>101-200</td>
-      <td rowspan="4">Does NOT pass content</td>
-    </tr>
-    <tr>
-      <td>201-250</td>
-      <td>
-        Passes content when HDCP is engaged on HDMI, DisplayPort, or MHL, or when SCMS is engaged and set to CopyNever.
-      </td>
-    </tr>
-    <tr>
-      <td>251-300</td>
-      <td>
-        Passes content when HDCP is engaged on HDMI, DisplayPort, or MHL.
-      </td>
-    </tr>
-    <tr>
-      <td>&gt;300</td>
-      <td>Does NOT pass content</td>
-      <td>Does NOT pass content</td>
-    </tr>
-  </table>
+The following tables outline the mappings between various OPLs in the PlayReady license and how PlayReady enforces them.
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table>
+  <tr>
+    <th class="tg-yw4l" align="center" rowspan="2">OPL</th>
+    <th class="tg-yw4l">
+      Uncompressed Digital Audio
+    </th>
+    <th class="tg-yw4l">Compressed Digital Audio</th>
+    <th class="tg-yw4l">
+      Analog Audio or USB Audio
+    </th>
+  </tr>
+  <tr>
+    <th class="tg-yw4l">HDMI, DisplayPort, MHL</th>
+    <th class="tg-yw4l">HDMI, DisplayPort, MHL</th>
+    <th class="tg-yw4l">Any</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">0-100</td>
+    <td class="tg-yw4l" rowspan="2">Passes content</td>
+    <td class="tg-yw4l">Passes content</td>
+    <td class="tg-yw4l" rowspan="4">Passes content</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">101-200</td>
+    <td class="tg-yw4l" rowspan="4">Does NOT pass content</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">201-250</td>
+    <td class="tg-yw4l">
+      Passes content when HDCP is engaged on HDMI, DisplayPort, or MHL, or when SCMS is engaged and set to CopyNever.
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">251-300</td>
+    <td class="tg-yw4l">
+      Passes content when HDCP is engaged on HDMI, DisplayPort, or MHL.
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">&gt;300</td>
+    <td class="tg-yw4l">Does NOT pass content</td>
+    <td class="tg-yw4l">Does NOT pass content</td>
+  </tr>
+</table>
 
 <p></p>
 
-  <table>
-    <tr>
-      <th align="center" rowspan="2">OPL</th>
-      <th>Compressed Digital Video</th>
-      <th colspan="2">
-        Uncompressed Digital Video
-      </th>
-      <th>Analog TV</th>
-    </tr>
-    <tr>
-      <th>Any</th>
-      <th colspan="2">HDMI, DVI, DisplayPort, MHL</th>
-      <th>Component, Composite</th>
-    </tr>
-    <tr>
-      <td>0-100</td>
-      <td rowspan="7">Block</td>
-      <td rowspan="3" colspan="2">Passes content</td>
-      <td>Passes content</td>
-    </tr>
-    <tr>
-      <td>101-150</td>
-      <td>Passes content when CGMS-A CopyNever is engaged or if CGMS-A can't be engaged.</td>
-    </tr>
-    <tr>
-      <td>151-200</td>
-      <td>Passes content when CGMS-A CopyNever is engaged.</td>
-    </tr>
-    <tr>
-      <td>201-250</td>
-      <td colspan="2">
-        Attempts to engage HDCP, but passes content regardless of result.
-      </td>
-      <td rowspan="4">Does NOT pass content</td>
-    </tr>
-    <tr>
-      <td>251-270</td>
-      <td>
-        <b>SWDRM:</b> Attempts to engage HDCP. If HDCP fails to engage, the PC will constrain 
-        the effective resolution to 520,000 pixels per frame and pass the content.
-      </td>
-      <td>
-        <b>HWDRM:</b> Passes content with HDCP. If HDCP fails to engage, playback to HDMI/DVI 
-        ports is blocked.</td>
-    </tr>
-    <tr>
-      <td>271-300</td>
-      <td colspan="2">
-        <p>
-          When HDCP type restriction is NOT defined:Passes content with HDCP. If HDCP fails to engage, 
-          playback to HDMI/DVI ports is blocked.</p>
-        <p>
-          When HDCP type restriction IS defined: Passes content with HDCP 2.2 and content stream type 
-          set to 1. If HDCP fails to engage or content stream type can't be set to 1, playback to HDMI/DVI 
-          ports is blocked.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>&gt;300</td>
-      <td colspan="2">Does NOT pass content</td>
-    </tr>
-  </table>
+<table>
+  <tr>
+    <th align="center" rowspan="2">OPL</th>
+    <th>Compressed Digital Video</th>
+    <th colspan="2">
+      Uncompressed Digital Video
+    </th>
+    <th>Analog TV</th>
+  </tr>
+  <tr>
+    <th>Any</th>
+    <th colspan="2">HDMI, DVI, DisplayPort, MHL</th>
+    <th>Component, Composite</th>
+  </tr>
+  <tr>
+    <td>0-100</td>
+    <td rowspan="7">Block</td>
+    <td rowspan="3" colspan="2">Passes content</td>
+    <td>Passes content</td>
+  </tr>
+  <tr>
+    <td>101-150</td>
+    <td>Passes content when CGMS-A CopyNever is engaged or if CGMS-A can't be engaged.</td>
+  </tr>
+  <tr>
+    <td>151-200</td>
+    <td>Passes content when CGMS-A CopyNever is engaged.</td>
+  </tr>
+  <tr>
+    <td>201-250</td>
+    <td colspan="2">
+      Attempts to engage HDCP, but passes content regardless of result.
+    </td>
+    <td rowspan="4">Does NOT pass content</td>
+  </tr>
+  <tr>
+    <td>251-270</td>
+    <td>
+      <b>SWDRM:</b> Attempts to engage HDCP. If HDCP fails to engage, the PC will constrain the effective resolution to 520,000 pixels per frame and pass the content.
+    </td>
+    <td>
+      <b>HWDRM:</b> Passes content with HDCP. If HDCP fails to engage, playback to HDMI/DVI ports is blocked.</td>
+  </tr>
+  <tr>
+    <td>271-300</td>
+    <td colspan="2">
+      <p>
+        When HDCP type restriction is NOT defined:Passes content with HDCP. If HDCP fails to engage, playback to HDMI/DVI ports is blocked.</p>
+      <p>
+        When HDCP type restriction IS defined: Passes content with HDCP 2.2 and content stream type set to 1. If HDCP fails to engage or content stream type can't be set to 1, playback to DMI/DVI  ports is blocked.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>&gt;300</td>
+    <td colspan="2">Does NOT pass content</td>
+  </tr>
+</table>
 <p></p>
   
   

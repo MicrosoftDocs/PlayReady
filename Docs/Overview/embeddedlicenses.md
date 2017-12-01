@@ -16,10 +16,10 @@ ms.technology: drm
 # Embedded Licenses
 
 
-PlayReady allows an app to store the license for a DRM-protected content file in the PlayReady Object of the content file itself. Because the license is stored (or "embedded") in the content file, it is immediately available, enabling a player app to decrypt and begin playing the content without first needing to complete the license acquisition process or check the HDS store.
+PlayReady allows an application to store the license for a DRM-protected content file in the PlayReady Object of the content file itself. Because the license is stored (or "embedded") in the content file, it is immediately available, enabling a player application to decrypt and begin playing the content without first needing to complete the license acquisition process or check the HDS store.
 
 
-When a domain-bound personal computer or device acquires a license for a DRM-protected content file, it can embed the license into the content file. If the license is flagged to be embedded, the app is required to embed the license. Afterward, if the user copies the content file to another personal computer or device in the domain, the player app on the personal computer or device can play the content without needing to reacquire the license. If the user copies the content file to a personal computer or device outside of the domain, the license will not be valid and the personal computer or device must acquire a valid license before the content can be played, or join the personal computer or device to the domain. For more information on joining domains, see [Domain Management](playreadydomains.md#domain_management).
+When a domain-bound personal computer or device acquires a license for a DRM-protected content file, it can embed the license into the content file. If the license is flagged to be embedded, the application is required to embed the license. Afterward, if the user copies the content file to another personal computer or device in the domain, the player application on the personal computer or device can play the content without needing to reacquire the license. If the user copies the content file to a personal computer or device outside of the domain, the license will not be valid and the personal computer or device must acquire a valid license before the content can be played, or join the personal computer or device to the domain. For more information on joining domains, see [Domain Management](playreadydomains.md#domain_management).
 
 
 Using embedded licenses improves the user's media experience in scenarios such as the following:
@@ -32,4 +32,4 @@ Using embedded licenses improves the user's media experience in scenarios such a
 
 
 
-A license is embedded into a given content file by one of the personal computers or devices in a domain, typically whichever one acquires the content. An app should embed the license as soon as both the content and license are acquired.
+A license is embedded into a given content file by one of the personal computers or devices in a domain, typically whichever one acquires the content. An application should embed the license as soon as both the content and license are acquired.

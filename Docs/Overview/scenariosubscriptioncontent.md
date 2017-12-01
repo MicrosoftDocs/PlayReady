@@ -86,7 +86,7 @@ The following technical aspects should be considered when implementing subscript
 
       1. The user starts watching episode 1 of a TV series.
 
-      1. The service pushes episodes 2, 3, and 4 to the device (the device app downloads these episodes, and the associated persistent licenses).
+      1. The service pushes episodes 2, 3, and 4 to the device (the device application downloads these episodes, and the associated persistent licenses).
 
       1. The user gets disconnected in the subway.
 

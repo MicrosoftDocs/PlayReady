@@ -25,7 +25,7 @@ Clients and servers are the two main components in the PlayReady ecosystem. Thes
 ## PlayReady clients  
    
   
-PlayReady clients are devices capable of playing back protected content when given a license for that content (such as media player programs on personal computers or apps on devices such as cell phones, tablets, and smart TVs). Clients also must be able to enforce the rights and restrictions associated with a policy included in a license.   
+PlayReady clients are devices capable of playing back protected content when given a license for that content (such as media player programs on personal computers or applications on devices such as cell phones, tablets, and smart TVs). Clients also must be able to enforce the rights and restrictions associated with a policy included in a license.   
    
   
 The following figure shows the icons used throughout this document that symbolize devices used as PlayReady clients.  
@@ -40,15 +40,16 @@ The following figure shows the icons used throughout this document that symboliz
 ## PlayReady servers  
    
   
-Customized app servers enable interoperation with the clients. Service providers use the PlayReady Server Software Development Kit (SDK) to build servers with service-specific business logic. For example, a subscription service would customize servers to have a service-specific license. The license might include expiration times and license issuance restrictions that tie to a specific data backend that has subscriber information. By using the PlayReady Server SDK, the customized server builder can be confident the service will protect content and issue licenses that work with PlayReady system clients.  
+Customized application servers enable interoperation with the clients. Service providers use the PlayReady Server Software Development Kit (SDK) to build servers with service-specific business logic. For example, a subscription service would customize servers to have a service-specific license. The license might include expiration times and license issuance restrictions that tie to a specific data backend that has subscriber information. By using the PlayReady Server SDK, the customized server builder can be confident the service will protect content and issue licenses that work with PlayReady system clients.  
    
   
 PlayReady servers include license servers, domain controllers, metering servers, secure stop servers, and secure delete servers. In addition to the PlayReady servers, you may also have a content packager to encrypt and encode your content, as well as a Web server to distribute the content on the Web. The following figure shows the icons used throughout this document to represent the different servers.  
    
   
 ![PlayReady Servers](../images/image26_1.jpg)  
-   
-> ![](../images/note.gif)**Note** Content is stored and distributed using Web servers, but PlayReady products do not include or require a specialized Web server for content storage and distribution.  
+
+> [!NOTE]   
+> Content is stored and distributed using Web servers, but PlayReady products do not include or require a specialized Web server for content storage and distribution.  
   
 <a id="ID4ETB"></a>
 
@@ -77,5 +78,7 @@ The following steps describe the content and license flow for license acquisitio
 
    
   
-For more information about license acquisition, see [License Acquisition](licenseacquisition.md).  
+For more information about license acquisition, see [License Acquisition](licenseacquisition.md). 
+
+The PlayReady encryption and licensing process is more fully explained in [Basic encryption and licensing process](basicpurposeofplayready.md#basicprocess).
   

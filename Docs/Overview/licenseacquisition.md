@@ -16,7 +16,7 @@ ms.technology: drm
 # License Acquisition
 
 
-To play protected content, a valid license for the content must be available. If there is no valid license for the content, the license must be acquired. During license acquisition, a client acquires its license from a license server or from a proxy server. The license acquisition client is a media player on mobile device, such as a phone or tablet, or on a personal computer. Clients for license acquisition connect directly to a license server and request licenses for content they have acquired.
+To play protected content, a valid license for the content must be available. If there is no valid license for the content, the license must be acquired. During license acquisition, a client acquires its license from a license server or from a proxy server. The license acquisition client is a media player on a mobile device, such as a phone or tablet, or on a personal computer. Clients for license acquisition connect directly to a license server and request licenses for content they have acquired.
 
 In the context of license acquisition, the license server and the packaging server are considered to be DRM servers. Portable devices and personal computers capable of license acquisition are considered to be clients.
 
@@ -39,7 +39,7 @@ The client on the consumer's portable device or personal computer provides funct
 
 
 
-Domain, metering, and secure stop support is included with PlayReady Server SDK.
+Domain, metering, secure stop, and secure delete support is also included with PlayReady Server SDK.
 
 <a id="ID4EUB"></a>
 
@@ -48,7 +48,7 @@ Domain, metering, and secure stop support is included with PlayReady Server SDK.
 
 There are two modes for license acquisition:
 
-   *  *Proactive license acquisition*&mdash;Your app explicitly creates a license acquirer and uses it to proactively acquire a license. Proactive license acquisition is typically used to acquire a root license or a persistent license.
+   *  *Proactive license acquisition*&mdash;Your application explicitly creates a license acquirer and uses it to proactively acquire a license. Proactive license acquisition is typically used to acquire a root license or a persistent license.
    *  *Reactive license acquisition*&mdash;When the PlayReady media player plays back protected content that does not yet have a usable license, it automatically uses the associated license acquirer to acquire the license before resuming the playback. Reactive license acquisition can be used to acquire simple or leaf licenses (both persistent and non-persistent).
 
 The following figure gives an architectural overview of content protection and license acquisition.

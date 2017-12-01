@@ -83,14 +83,14 @@ As shown in the figure, a PlayReady client interacts with PlayReady Server SDK b
   
    1. The Web service entry point then processes the call, processes the data, and triggers the service plug-in. 
   
-   1. The service-specific app logic (implemented by the service provider) is encapsulated in a service developed plug-in.  
+   1. The service-specific application logic (implemented by the service provider) is encapsulated in a service developed plug-in.  
 
    
   
-Service-specific app logic typically is either going to be identification information or business logic. Service information includes the service identifier (service ID) and the license acquisition URL associated with licenses (these settings are service-specific). Also specified in the plug-in is business logic associated with the service such as the policy that is associated with issued licenses.  
+Service-specific application logic typically is either going to be identification information or business logic. Service information includes the service identifier (service ID) and the license acquisition URL associated with licenses (these settings are service-specific). Also specified in the plug-in is business logic associated with the service such as the policy that is associated with issued licenses.  
    
   
-Service providers can implement their own services by using PlayReady Server SDK and offer individualized, unique license-issuing scenarios. For example, consider two services, Contoso and Fabrikam. Each service provider needs to provide separate identifiers for its services and each supports different policies. The Contoso service could build a license issuance service that issues licenses that point to its http://contoso.com license servers, and the Contoso service could issue licenses that expire after three months. The Fabrikam service can implement its own service that issues licenses that point to its http://fabrikam.com license servers and that expire in one month.   
+Service providers can implement their own services by using PlayReady Server SDK and offer individualized, unique license-issuing scenarios. For example, consider two services, Contoso and Fabrikam. Each service provider needs to provide separate identifiers for its services and each supports different policies. The Contoso service could build a license issuance service that issues licenses that point to its <http://contoso.com> license servers, and the Contoso service could issue licenses that expire after three months. The Fabrikam service can implement its own service that issues licenses that point to its <http://fabrikam.com> license servers and that expire in one month.   
    
   
 PlayReady Server SDK enables various scenarios that are based on the following protocols:  

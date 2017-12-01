@@ -13,14 +13,10 @@ ms.technology: drm
 
 # PlayReady Content Encryption Overview
 
+This topic provides an overview of the encryption mechanisms and file format concepts used to protect content in the PlayReady ecosystem.
 
-Microsoft PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in clients. With this technology, content owners and services distributing high-valued content can monetize their content with full control over their business model.
-
-Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) mode and CTR (Counter Mode), as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms.
-
-This topic describes the encryption mechanisms and file format concepts used to protect content in the PlayReady ecosystem.
-
-> ![](../images/note.gif)**Note** See [Glossary](glossary.md) for encryption terms and definitions.
+> [!NOTE]
+> See [Glossary](glossary.md) for encryption terms and definitions.
 
 ## Encryption basics
 
@@ -37,7 +33,7 @@ This topic describes the encryption mechanisms and file format concepts used to 
 *One-key Message Authentication Codes* (OMAC) is a message authentication code constructed from a block cipher. There are two OMAC algorithms, OMAC1 and OMAC2.
 
 
-*Certificates* are used to ensure authenticity for entities that are not trusted. The sender of a certificate signs its name (device identifier) by using its private key. The recipient of the certificate then verifies the signature of the certificate with the sender's public key to ensure the sender's identity. Because the sender is the only owner of the private key, it is difficult to create a private key given a public key, and the certificate will not be verified correctly unless it is signed with the private key; in this case, the data source is assumed to be correct and certified communication is secure. For more information about how PlayReady uses certificates, see [Certificates](certificates.md).
+*Certificates* are used to ensure authenticity for entities that are not trusted. The sender of a certificate signs its name (device identifier) by using its private key. The recipient of the certificate then verifies the signature of the certificate with the sender's public key to ensure the sender's identity. Because the sender is the only owner of the private key, it is difficult to create a private key given a public key, and the certificate will not be verified correctly unless it is signed with the private key; in this case, the data source is assumed to be correct and certified communication is secure.
 
 
 
@@ -80,7 +76,7 @@ For signing licenses, transient keys or data, PlayReady systems use AES OMAC1, w
 ## Runtime and performance considerations
 
 
-When content playback is triggered, the PlayReady client must perform some steps before initial playback can begin. This includes finding a license, binding, or interpreting the license, decrypting the content key, and finally, preparing decrypt the content. The PlayReady client stack takes time to bind a license to a piece of content, and this operation is required prior to starting the content decryption and rendering. This means that the time to bind a license impacts the time to first frame when starting a playback, or the gap between tracks. The client developer as well as the app developer might want to consider optimizing their code for runtime and performance issues, to reduce the time to first frame, and allow gapless playback.
+When content playback is triggered, the PlayReady client must perform some steps before initial playback can begin. This includes finding a license, binding, or interpreting the license, decrypting the content key, and finally, preparing decrypt the content. The PlayReady client stack takes time to bind a license to a piece of content, and this operation is required prior to starting the content decryption and rendering. This means that the time to bind a license impacts the time to first frame when starting a playback, or the gap between tracks. The client developer as well as the application developer might want to consider optimizing their code for runtime and performance issues, to reduce the time to first frame, and allow gapless playback.
 
 Protected containers use symmetric key encryption to encrypt the bulk of content. However, public key encryption is used within the license. This is because the license contains the content’s symmetric key, and the server uses the client’s public key to encrypt the content’s symmetric key.
 
@@ -88,7 +84,7 @@ When it is time to decrypt the content, the client's private key is used to decr
 
 Private key decryption is more intensive computationally, than symmetric decryption; therefore, interpreting the license is computationally intensive. Once the license has been properly handled, the symmetric key is decrypted and the content may be decrypted using small and fast algorithms.
 
-For apps or devices that are resource-constrained, start-up requires significant time and resources. Once that is complete, however, the resources are freed, decryption may proceed efficiently, and few CPU cycles or system resources are required.
+For applications or devices that are resource-constrained, start-up requires significant time and resources. Once that is complete, however, the resources are freed, decryption may proceed efficiently, and few CPU cycles or system resources are required.
 
 
 
@@ -96,7 +92,7 @@ For apps or devices that are resource-constrained, start-up requires significant
 ## PlayReady Header
 
 
-The PlayReady Header is an XML fragment that is inserted in the protected content header. The PlayReady Header contains information such as the [key identifier](keyandkeyidskids1.md), or kid identifers (KIDs) of the keys used to encrypt the content, and the default server URL for license acquisition (LA). Additional information may be added, such as the content ID (CID), owner ID, and other operator-specific data. Other optional information describing additional business rules may be stored in the PlayReady Header. For more information about the PlayReady Header and the PlayReady Object, see the [PlayReady Header Specification](https://www.microsoft.com/playready/documents/).
+The PlayReady Header is an XML fragment that is inserted in the protected content header. The PlayReady Header contains information such as the [key identifier](keyandkeyidskids1.md) or key identifers (KIDs) of the keys used to encrypt the content, and the default server URL for license acquisition (LA). Additional information may be added, such as the content ID (CID), owner ID, and other operator-specific data. Other optional information describing additional business rules may be stored in the PlayReady Header. For more information about the PlayReady Header and the PlayReady Object, see the [PlayReady Header Specification](https://www.microsoft.com/playready/documents/).
 
 
 
@@ -104,7 +100,7 @@ The PlayReady Header is an XML fragment that is inserted in the protected conten
 ## Protected audio and video content
 
 
-It is up to the content provider to ensure that their audio and video content has been protected using third party packagers and encoders, and that the encrypted content has been packaged using PlayReady Objects as described in the [Microsoft PlayReady Format Specification](microsoftplayreadyformatspecification.md). Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264) or High Efficiency Video Coding (HEVC) H.265 standards, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
+It is up to the content provider to ensure that their audio and video content has been protected using third party packagers and encoders, and that the encrypted content has been packaged using the appropriate PlayReady Objects. Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264) or High Efficiency Video Coding (HEVC) H.265 standards, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
 
 
 
