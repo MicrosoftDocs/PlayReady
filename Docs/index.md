@@ -40,7 +40,7 @@ PlayReady 3.0 and above supports media content composed of audio and video, such
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="Get started icon" />
+                            <img src="/media/common/i_get-started.svg" alt="PlayReady for Windows 10" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -58,7 +58,25 @@ PlayReady 3.0 and above supports media content composed of audio and video, such
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_tools.svg" alt="Tools icon" />
+                            <img src="/media/common/i_get-started.svg" alt="PlayReady for Windows 8.1" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>PlayReady for Windows 8.1</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="http://test.playready.microsoft.com/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_tools.svg" alt="PlayReady Test Server" />
                         </div>
                     </div>
                     <div class="cardText">
