@@ -25,10 +25,13 @@ PlayReady currently defines 3 levels:
 
 <br />
 Illustration of a SL2000 device or application. The Final Product is hardened and verified against unauthorized use.
+
 ![Illustration of a SL2000 device. The Final Product is hardened against unauthorized use](../images/security_level_2000.png)
 
 Illustration of a SL3000 device. The Intermediate Product is hardened and verified using a TEE and the Final Product is hardened and verified against unauthorized use.
+
 ![Illustration of a SL3000 device.The Intermediate Product is hardened and verified using a TEE and the Final Product is hardened and verified against unauthorized use](../images/security_level_3000.png)
+
 ## Using the Security Level
 The Security Level is a property of the client defined during the development cycle. It has implications on the means that are implemented to assure the security of the Content Secrets and Client Secrets against attacks, and on the development and certification plans that the client developer make.
 License Servers can adjust the licenses, or license properties, delivered to clients based on their Security Level, by two methods.
