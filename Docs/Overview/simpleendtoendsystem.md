@@ -16,7 +16,7 @@ ms.technology: drm
 
 In typical use, Microsoft PlayReady protects content by providing licenses for media files. There is no need to hide files, make them inaccessible, or put special protection in place when files are transmitted from system to system. In other words, there are no operating system requirements or high-security, file-transport mechanisms needed. However, copying a file and giving it to a friend will not enable that friend to use the file if it's protected by PlayReady. To use a media file, users need a license. This license is the primary means of exercising control over content (the media file). A license is granted to a single client (such as a media player) or a domain. The license will not function on other clients or other domains.  
 
-Each license contains rights and restrictions, defining exactly how the content may be used and under what conditions. For example, a music file license may enable a "right to play" but restrict the security level of the application on which the content can be played. The license might be valid for the period between October 1, 2017 and November 1, 2017. There may be multiple licenses for a single file. A user will be able to access and use his or her content so long as one of the licenses grant the appropriate rights and the restrictions do not prevent access. 
+Each license contains rights and restrictions, defining exactly how the content may be used and under what conditions. For example, a music file license may enable a "right to play" but restrict the security level of the application on which the content can be played. The license might be valid for the period between October 1, 2017 and November 1, 2017. There may be multiple licenses for a single file. A user will be able to access and use his or her content so long as one of the licenses grants the appropriate rights and the restrictions do not prevent access. 
 
 ## Overview of an end-to-end video Service 
 
@@ -26,7 +26,7 @@ The following illustration contains a high-level look at an end-to-end video ser
 
 On the left side of the illustration you can see the service has some servers to stream the video (content distribution network). There are also some servers that let the users browse the content and choose the content they want to play (user interface). In addition, there are some servers that allow the users to log in and be authenticated, as well as pay for content (authenticate, pay). And, there is also a PlayReady license server.
 
-On the right side of the illustation are the clients. The clients could be Windows applicationss, iPhone applications, or specific devices such as set top boxes, Roku receivers, and so on. Some of these clients may come with a PlayReady integrated client in their players, for example, the OEM may have integrated PlayReady in the operating system or in the hardware. Others could come with a client integrated in the application that is published in the app store. There are many different options for players to integrate PlayReady on the client side.
+On the right side of the illustation are the clients. The clients could be Windows applications, iPhone applications, or specific devices such as set top boxes, Roku receivers, and so on. Some of these clients may come with a PlayReady integrated client in their players, for example, the OEM may have integrated PlayReady in the operating system or in the hardware. Others could come with a client integrated in the application that is published in the app store. There are many different options for players to integrate PlayReady on the client side.
 
 This topic is going to focus on what PlayReady does for a service, as shown in the following figure.
 
@@ -57,7 +57,7 @@ The following figure contains one asset - an audio/video file - that has not bee
 
       ![Authenticating the User](../images/authenticating_the_user.png)
 
-   4. Now, the client can begin consuming the content. The first thing the client is probably going to do is to authenticate the user to the service, typically providing a login name and password, but also using any other mechanism for authentication user and device. Typically, a session token is returned to the client once the user is verified. Note that whatever mechanism is used for user authentication, it is entirely up to the service how the user is authenticated; PlayReady does not supply this technology. 
+   4. Now, the client can begin consuming the content. The first thing the client is probably going to do is to authenticate the user to the service, typically by providing a login name and password, but any other mechanism for authenticating the user and device is fine. Typically, a session token is returned to the client once the user is verified. Note that whatever mechanism is used for user authentication, it is entirely up to the service how the user is authenticated; PlayReady does not supply this technology. 
 
       ![Content Delivery](../images/content_delivery.png)
 
@@ -69,7 +69,7 @@ The following figure contains one asset - an audio/video file - that has not bee
 
    7. The license server then interfaces with the authentication service to verify the user. Typically the first thing the license server is going to do is verify that the client/user has the right for that particular license. And again, PlayReady does not provide that layout (authentication), we just provide the license server. The authentication service will then typically respond with yes or no, or maybe yes with restrictions (for example, this user has the right for this particular movie, but only at a lower quality of video because the user doesn't have the highest quality subscription level - based on the amount the user pays per month).
 
-   8. Then, the license server is going to request the value of the key, based on the KeyID, from the key management system that stores the keys, and the key management system is going to respond to that request. Just to reiterate, PlayReady does not supply the components of the key managemaent system, so there will be a request coming from the PlayReady license server to whatever component the service has built to store the keys. 
+   8. Then, the license server is going to request the value of the key, based on the KeyID, from the key management system that stores the keys, and the key management system is going to respond to that request. Just to reiterate, PlayReady does not supply the components of the key management system, so there will be a request coming from the PlayReady license server to whatever component the service has built to store the keys. 
 
    9. The key is going to be recieved by the license server and the license server can deliver the license. The secure PlayReady license response includes the value of the key and a list of rights and right restrictions for the client to enforce.
 

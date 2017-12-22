@@ -122,15 +122,15 @@ A Move Enabler object is an optional right that a license may contain. If it is 
 
 ## Import and Export
 
-Some system of devices may change the format of the protected content AND its associated license from one Content Protection Technology to another. This operation is either called import or export. In general, such an operation much be explicitly allowed by the exporting technology (A) to occur.
+Some system of devices may change the format of the protected content AND its associated license from one Content Protection Technology to another. This operation is either called import or export. In general, such an operation must be explicitly allowed by the exporting technology (A) to occur.
 
 ![Content Protection Transcription](../images/content_protection_A_to_B.png) 
 
-PlayReady Import designates an operation where content is initially protected using a Content Protection A technology and then protected using PlayReady, typically in a transcriptor. What it means is the encryption keys of the protected content are protected in a Content Protection A license when they get in the device, and are protected in a PlayReady license when they get out of that device. It may involve transcrypting the content (decrypting the content, and re-encrypting the content using different keys), or simply repackaging the encryption keys from the Content Protection A license format to the PlayReady license format. It may also involve transcribing the rights and right restrictions from Content Protection X technology to PlayReady XMR. 
+PlayReady Import designates an operation where content is initially protected using a Content Protection A technology and then protected using PlayReady, typically in a transcriptor. What that means is the encryption keys of the protected content are protected in a Content Protection A license when they get in the device, and are protected in a PlayReady license when they get out of that device. It may involve transcrypting the content (decrypting the content, and re-encrypting the content using different keys), or simply repackaging the encryption keys from the Content Protection A license format to the PlayReady license format. It may also involve transcribing the rights and right restrictions from Content Protection X technology to PlayReady extensible media rights (XMR). 
 
 ![PlayReady Import](../images/playready_import.png) 
 
-PlayReady Export designates an operation where content is initially protected using PlayReady and then protected using Content Protection Y technology, typically in a transcryptor. PlayReady does not allow exporting protected content by default, but allows some export through explicit optional rights set in the license, known as Play Enablers, Copy Enablers and Move Enablers.
+PlayReady Export designates an operation where content is initially protected using PlayReady and then protected using Content Protection Y technology, typically in a transcryptor. PlayReady does not allow exporting protected content by default, but allows some export through explicit optional rights set in the license, known as Play Enablers, Copy Enablers, and Move Enablers.
 
 For example, a user uses a computer to acquire subscription content that is protected with PlayReady and then wants to stream that content to a playback device on a network that only supports DTCP-IP. To play the content protected with PlayReady on that device, the protected content must be exported to DTCP-IP. 
 

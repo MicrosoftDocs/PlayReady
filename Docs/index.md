@@ -80,7 +80,25 @@ PlayReady 3.0 and above supports media content composed of audio and video, such
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>PlayReady for Windows 8.1</h3>
+                        <h3>PlayReady Test Server</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.microsoft.com/playready/documents/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_tools.svg" alt="PlayReady White Papers" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>PlayReady White Papers and Specifications</h3>
                     </div>
                 </div>
             </div>
@@ -101,7 +119,7 @@ PlayReady 3.0 and above supports media content composed of audio and video, such
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_benefits.svg" alt="Benefits icon" />
+                            <img src="/media/common/i_benefits.svg" alt="Windows.Media.Protection.PlayReady" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -113,6 +131,7 @@ PlayReady 3.0 and above supports media content composed of audio and video, such
         </a>
     </li>
 
+<!--
     <li>
         <a href="">
         <div class="cardSize">
@@ -149,5 +168,5 @@ PlayReady 3.0 and above supports media content composed of audio and video, such
             </div>
         </div>
         </a>
-    </li>   
+    </li>   -->
 </ul>

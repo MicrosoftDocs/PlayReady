@@ -39,7 +39,9 @@ The following table contains the allowed output protection levels for each type 
   
 The following tables outline the mappings between various OPLs in the PlayReady license and how PlayReady enforces them.
 
-<style type="text/css">
+![Output Protection Levels 1](../images/opl1.png)
+
+<!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
@@ -88,11 +90,13 @@ The following tables outline the mappings between various OPLs in the PlayReady 
     <td class="tg-yw4l">Does NOT pass content</td>
     <td class="tg-yw4l">Does NOT pass content</td>
   </tr>
-</table>
+</table> -->
 
 <p></p>
 
-<table>
+![Output Protection Levels 2](../images/opl2.png)
+
+<!-- <table>
   <tr>
     <th align="center" rowspan="2">OPL</th>
     <th>Compressed Digital Video</th>
@@ -149,11 +153,11 @@ The following tables outline the mappings between various OPLs in the PlayReady 
     <td>&gt;300</td>
     <td colspan="2">Does NOT pass content</td>
   </tr>
-</table>
+</table> -->
 <p></p>
   
   
-To illustrate the concept of OPLs, consider the following scenario. A user named Mike has acquired content for playback on his device that has an output protection level of 300 (requires a low level of encryption; HDCP is an example of low level encryption). When Mike tries to play his content on a device connected with only component output (supports OPLs up to 200), he cannot play the content. When he tries to play the content on a player that has a DVI connection and HDCP support (supports OPLs up to 300), he is able to play the content.  
+To illustrate the concept of OPLs, consider the following scenario. A user named Mike has acquired content for playback on his device that has an output protection level of 300 (requires a low level of encryption; HDCP is an example of low level encryption). When Mike tries to play his content on a device connected with only component outputs (supports OPLs up to 200), he cannot play the content. When he tries to play the content on a player that has a DVI connection and HDCP support (supports OPLs up to 300), he is able to play the content.  
    
   
  

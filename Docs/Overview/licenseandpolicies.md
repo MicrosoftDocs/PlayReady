@@ -19,7 +19,7 @@ During license acquisition, the client sends a challenge to the PlayReady licens
 
 ![License Request and Response](../images/license_request_response.png)
 
-A PlayReady policy describes the actions permitted and/or required with respect to PlayReady content and restrictions on those actions as described in the PlayReady license associated with the PlayReady content. PlayReady policies are defined in the PlayReady Compliance Rules. The service provider must incorporate the mandatory policies and choose which of the optional policies to use, and have these policies integrated into the license handler on the PlayReady license server. These policies can be rights, such as the Play right, or restrictions, such as the Minimum Security Level, Output Protection Level, expiration after first play, and so on. 
+A PlayReady policy describes the actions permitted and/or required with respect to PlayReady content and restrictions on those actions as described in the PlayReady license associated with the PlayReady content. PlayReady policies are defined in the PlayReady Compliance Rules (CR). The service provider must incorporate the mandatory policies and choose which of the optional policies to use, and have these policies integrated into the license handler on the PlayReady license server. These policies can be rights, such as the Play right, or restrictions, such as the Minimum Security Level, Output Protection Level, expiration after first play, and so on. 
 
 Note that a license response may contain multiple licenses. Each license contains one and only one Content Key {KID, CK} and a set of associated policies.
  
@@ -47,20 +47,20 @@ The PlayReady Compliance Rules contain a full list of right modifiers (extension
   *  **Must Understand**&mdash;specifies if a client is allowed to bind a license and decrypt content even if it does not understand the policy. Applicable for clients of a lower version (for example, a PlayReady 2.X client) receiving a license including PlayReady policy introduced in a future version (for example, a PlayReady 3.X server, see CR 2.4).
   *  **Best Effort**&mdash;another way to specify if the client must engage the action or must try to engage the action (for example, Macrovision Best Effort, see CR 2.4).
 
-  The following sections list some of the more commonly used right modifiers.
+The following sections list some of the more commonly used right modifiers.
   
-  ### Absolute Expiration Policy
+### Absolute Expiration Policy
   
 One of the common restrictions is the absolute time date expiration policy. Every license may include an absolute time date expiration policy. If it is present, the client must stop binding this license and decrypting content if the current date time is after that value.
 
-A practical example is a user on a client playing content from a monthly subscription service. The monthly renewal day of the service for this user is the 15th of the month. The user starts playback on the 2nd of the month (the 2nd of November, 2017). The license server will give right to the user until the 15th of the month, and include an Expiration policy set to 11/16/2017, 0:00am. Whenever the user pays the subscription fee for the next month, the service will issue another license with an Expiration date set one month later. 
+A practical example is a user on a client playing content from a monthly subscription service. The monthly renewal day of the service for this user is the 15th of the month. The user starts playback on the 2nd of the month (the 2nd of November, 2017). The license server will give the right to the user until the 15th of the month, and include an Expiration policy set to 11/16/2017, 0:00am. Whenever the user pays the subscription fee for the next month, the service will issue another license with an Expiration date set one month later. 
 
 This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that does include this policy MUST: 
 
   *  Have a PlayReady Trusted Clock System to have a trusted time. A PlayReady Secure Clock or a PlayReady Anti-Rollback Clock are two acceptable forms of PlayReady Trusted Clock Systems for PlayReady Clients.
   *  Have this PlayReady Trusted Clock set.
   *  Be able to parse and understand the Expiration policy in the license.
-  *  Compare the current time from the PlayReady Trusted Clock System with the Epxiration value.
+  *  Compare the current time from the PlayReady Trusted Clock System with the Expiration value.
   *  Not bind the license if the current time is past the Expiration value. 
  
 >[!NOTE]
