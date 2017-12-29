@@ -187,15 +187,9 @@ The following table clarifies whether a PlayReady Client needs to be developed o
 
 If you are designing a device with PlayReady installed in hardware or PlayReady on an integrated circuit, it is up to you to supply any hardware or software required to port the PlayReady Device Porting kit to your hardware. Some integrated circuits designed by [PlayReady Partners](https://www.microsoft.com/playready/partners/) already have PlayReady installed on the chip, and you could use these integrated circuits while designing your device. 
 
-For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](#hardwarevssoftware).
+For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](securitylevel/#hardwarevssoftware).
 
 ### Windows or Xbox application
 
 PlayReady DRM enables developers to create UWP apps capable of providing PlayReady content to the user while enforcing the access rules defined by the content provider. If you are designing an application that runs on Windows or Xbox, see [PlayReady DRM](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk).
-
-<a id="hardwarevssoftware"></a>
-
-### Hardware versus software DRM
-
-Increasingly, content providers are moving towards hardware-based protections for granting permission to play back full high value content in apps. Robust support for a hardware implementation of the cryptographic core has been added to PlayReady to meet this need. This support enables secure playback of higher value content on multiple device platforms. Key material (including private keys, content keys, and any other key material used to derive or unlock said keys), and decrypted compressed and uncompressed video samples are protected by leveraging hardware security. Hardware-based PlayReady DRM is supported on a multitude of devices, including both Windows and non-Windows devices such as TV sets, phones, and tablets.
 

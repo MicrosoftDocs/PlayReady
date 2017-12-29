@@ -13,7 +13,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady Domains
+# PlayReady Domain Server
    
   
 You can manage content access for multiple clients through a single entity, called a *PlayReady domain*. (A PlayReady domain is not the same as network or Web domains.) Because PlayReady introduces simplified license acquisition for mobile and embedded clients, the scenario in which clients are sharing service access will become more common. Domains provide simplified and more robust service access for multiple clients, including mobile device clients.   

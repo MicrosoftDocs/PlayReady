@@ -13,6 +13,9 @@ As of 2017, thousands of services around the world and more than four billion de
 
 PlayReady 3.0 and above supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) also supported other types of content, such as executable applications and ebooks. 
 
+As of January 2018, the latest version of PlayReady is 4.0, released in October 2017. It add supports for a whole class of content, encrypted in AES-CBC mode, in addition to the content encrypted in AES-CTR mode, supported since PlayReady version 1. Find more about the different versions of PlayReady [here](playreadyproductversions.md). We recommend that services update their license servers to the latest version available, and device makers do the same. However, at all times, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](playreadyproductversions.md) to learn more about the interoperability of PlayReady clients and servers.
+
+
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>

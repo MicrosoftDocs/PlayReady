@@ -16,10 +16,10 @@ ms.technology: drm
 
 # PlayReady for Windows
    
-  
- The PlayReady PC SDK v1.3.0, designed for desktop PC applications, is deprecated and should not be used. 
- 
- For Windows Store applications (Windows 8.1) and Universal Windows Platform (UWP) applications, this functionality originally provided by the PlayReady PC SDK has been integrated into the Windows SDK. For more information about PlayReady on UWP applications, see the documentation on the [Windows Dev Center](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt429381.aspx). For Windows 8.1 reference, see [Developing PlayReady Windows Store and Web Apps](https://msdn.microsoft.com/en-us/library/windows/apps/dn468834.aspx). 
+For Universal Windows Platform (UWP) applications and Windows Store applications (Windows 8.1), Microsoft provides a PlayReady PC SDK integrated in the Windows SDK. For more information about PlayReady on UWP applications, see the documentation on the [Windows Dev Center](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt429381.aspx). For Windows 8.1 reference, see [Developing PlayReady Windows Store and Web Apps](https://msdn.microsoft.com/en-us/library/windows/apps/dn468834.aspx). 
 
- Some PlayReady Partners provide SDKs to run PlayReady on Windows 7 and Mac OS, based on Electron, Xamarin, or other technologies. You can contact these [PlayReady Partners](https://www.microsoft.com/playready/partners/) directly for more information.   
+Some Microsoft Partners provide SDKs to run PlayReady on Windows 7 and Mac OS, based on Electron, Xamarin, or other technologies. You can contact these [PlayReady Partners](https://www.microsoft.com/playready/partners/) directly for more information.   
  
+> [!NOTE]   
+> The PlayReady Desktop PC SDK, designed for Desktop PC applications, is deprecated and should not be used. 
+

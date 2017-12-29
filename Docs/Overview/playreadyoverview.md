@@ -23,14 +23,14 @@ Microsoft PlayReady content access technology provides platforms for protecting 
 
 [Simple End to End System](simpleendtoendsystem.md)
 
+[Key and Key IDs (KIDs)](keyandkeyidskids.md) 
+
 [License Acquisition](licenseacquisition.md) 
 
-[License Generation and Issuance](licensegenerationandissuance.md)
+[License Persistence](licensepersistence.md)
  
+[Client Security Level](securitylevel.md)
+
 [License and Policies](licenseandpolicies.md)
- 
-[Security Level](securitylevel.md)
- 
+  
 [Output Protection Levels](outputprotectionlevels.md)
- 
-[Key and Key IDs (KIDs)](keyandkeyidskids.md) 
