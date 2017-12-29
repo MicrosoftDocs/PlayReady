@@ -12,8 +12,10 @@ ms.prod: playready
 ms.technology: drm
 ---
 
+# PlayReady Servers
 
-# PlayReady License Servers
+
+## PlayReady License Server
 A PlayReady license server allows process incoming license acquisition requests from clients, generate licenses, and issue them in a license acquisition response back to clients.
 
 For more information about PlayReady domains, see [PlayReady License Server](playreadylicenseserver.md).
