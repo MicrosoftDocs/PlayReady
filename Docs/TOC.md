@@ -48,7 +48,7 @@
 
 ### [PlayReady Content Encryption Modes](Overview/playreadycontentencryptionmodes.md)
 
-## [PlayReady Servers](Overview/playreadylicenseservers.md)
+## [PlayReady Servers](Overview/playreadyservers.md)
 
 ### [PlayReady License Server](Overview/playreadylicenseserver.md)
 

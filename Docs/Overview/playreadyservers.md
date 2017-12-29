@@ -12,7 +12,6 @@ ms.prod: playready
 ms.technology: drm
 ---
 
-You can either develop and deploy these optional servers yourself, or these services can be provided to you from third parties, such as a [PlayReady Partner](https://www.microsoft.com/playready/partners/). All of these optional servers must be deployed on a server running Windows Server. You do not need to deploy each type of server on their own machine; instead multiple PlayReady server types can be run on the same physical machine.
 
 # PlayReady License Servers
 A PlayReady license server allows process incoming license acquisition requests from clients, generate licenses, and issue them in a license acquisition response back to clients.
@@ -45,6 +44,10 @@ For more information about PlayReady Secure Stop, see [PlayReady Secure Stop Ser
 PlayReady Secure Delete allows service providers to receive secure acknowledgement of license deletion. This optional feature provides a PlayReady Secure Delete server with a means to track which licenses are available and which have been deleted on a particular client.
 
 For more information about PlayReady Secure Delete, see [PlayReady Secure Delete Server](playreadysecuredeleteserver.md).
+
+## Development and operation by a third party
+
+You can either develop and deploy these servers yourself, or these services can be provided to you from third parties, such as a [PlayReady Partner](https://www.microsoft.com/playready/partners/). All of these servers must be deployed on a server running Windows Server. You do not need to deploy each type of server on their own machine; instead multiple PlayReady server types can be run on the same physical machine.
 
 
 ## In This Section
