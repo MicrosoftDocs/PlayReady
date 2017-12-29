@@ -19,8 +19,6 @@ ms.technology: drm
 
 ## In This Section
 
-[PlayReady Communication Protocols](playreadycommunicationprotocols.md)
-
 [License Chaining](licensechaining.md)
 
 [Embedded Licenses](embeddedlicenses.md)

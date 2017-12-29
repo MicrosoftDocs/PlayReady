@@ -15,7 +15,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady Metering
+# PlayReady Metering Server
    
   
 *Metering* is the process for counting the number of times content is played. Metering is important because it allows a subscription content service provider to offer content on this basis. For example, in North America, if a song is transferred to a "blind" system, in which there will be no monitoring of the usage, a "mechanical royalty" of approximately 8 cents per song is required. On the other hand, if the licensee monitors content usage and reports it, the licensee pays a reduced mechanical royalty of 1 cent for each *play*. This can make a significant difference during transfers of large catalogs of music (for example, 10,000 songs). Even extremely heavy music-listening is likely to generate only 2,000 plays per month ($20 in royalties), whereas the mechanical royalty for these 10,000 songs would have been $800. There is therefore an economic incentive to "meter" content under this circumstance.  

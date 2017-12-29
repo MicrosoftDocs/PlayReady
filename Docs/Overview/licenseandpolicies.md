@@ -86,19 +86,15 @@ For more information, see [Using BeginDate with EndDate](bestpractices.md#begind
 
 Besides scenarios in which content can be played back depending on a begin time and end time, there is also the model that specifies how long content can be played back after the content is first played. The expiration after first play policy, if present, indicates that the client must stop binding this license and decrypting content if the current number of seconds after the content was first played matches the value in this policy. 
 
+> [!NOTE]   
+> For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.  
+ 
+
 ### Security Level Policy
 
-PlayReady clients all have a property set in their Unit-level Client Certificate called the Client Security Level. This security level indicates how robust the client is with respect to attacks for unauthorized use, for example attacks to record the decrypted A/V content with authorization, or attacks to access or modify the client secrets (Client Certificate associated Private Keys) or content secrets (Content Keys stored in the device).
+PlayReady clients all have a property set in their Unit-level Client Certificate called the Client Security Level. When a license server sends a license to a client, it includes in the license the MinimumSecurityLevel policy and sets its value to 150, 2000, or 3000. This value means that the license can be bound and content can be decrypted only on clients that have this Security Level, or a higher one.
 
-The Client Security Level is a property set by the design of the client, and there is nothing the server can do to modify or increase it. 
-
-![Client Security Level](../images/client_security_level.png)
-
-When a license server sends a license to a client, it includes in the license the MinimumSecurityLevel policy and sets its value to 150, 2000, or 3000. This value means that the license can be bound and content can be decrypted only on clients that have this Security Level, or a higher one.
-
-![Minimum Security Level](../images/security_level.png)
-
-Typically, a license server will know at the time of the license response generation if the client is an SL150, SL2000, or SL3000 client. The server will provide licenses with a MinimumSecurityLevel set to the value of the client, making sure it gives licenses only for the keys that it has approved sending to this class of clients. For example, a content owner may have given instructions to a service provider that this particular movie, which is early windows content (that is, a movie that is released in video on demand (VOD) at the same time, or little after the theatrical release), can be played only on SL3000 clients (because a leak of the movie at this time has a much more dramatic impact on the monetization of the movie). SL2000 clients will not be allowed to access it. 
+See the [Client Security Level](securitylevel.md#securitylevelpolicy) page for more information about that policy.
 
 ### Output Control for Uncompressed Digital Video Content Policy 
 
@@ -112,6 +108,10 @@ For example, if the license includes an Output Control for Uncompressed Digital 
   *  Just not play the content. If the device has an internal screen, an analog output, and an HDMI output, blocking the playback on all outputs just because the device can’t engage HDCP on the HDMI output would certainly be a suboptimal user experience. The user may ask “why does it not play on the analog output although the restriction only applies to the HDMI output?”. However, this option is acceptable from a PlayReady Compliance perspective as it fulfills the CR&RRs.
 
 Note that HDCP Type 1 is supported starting with HDCP version 2.1, so engaging HDCP Type 1 won’t be possible on devices that support only HDCP 2.0 or 1.4.
+
+### Other Policies 
+PlayReady supports dozens if not hundreds of different policies beyond the ones described on this page. Please read the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) for the complete definition of the supported policies.
+
 
 ## XMR Specification 
 

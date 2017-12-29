@@ -153,5 +153,5 @@ The following tables outline the mappings between various OPLs in the PlayReady 
   
 To illustrate the concept of OPLs, consider the following scenario. A user named Mike has acquired content for playback on his device that has an output protection level of 300 (requires a low level of encryption; HDCP is an example of low level encryption). When Mike tries to play his content on a device connected with only component outputs (supports OPLs up to 200), he cannot play the content. When he tries to play the content on a player that has a DVI connection and HDCP support (supports OPLs up to 300), he is able to play the content.  
    
-  
- 
+
+See this [page](https://msdn.microsoft.com/en-us/library/dn468832.aspx) about how Windows 10 enforces Output Protection Levels. Like every PlayReady Client, it allows playback on the various outputs in the boundaries defined in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/).

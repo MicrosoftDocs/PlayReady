@@ -21,8 +21,8 @@ ms.technology: drm
 
 [PlayReady Client Architectures](playreadyclientarchitectures.md)
  
-[Trusted Clocks](trustedclocks.md) 
+[PlayReady Trusted Clocks](trustedclocks.md) 
 
-[Individualization](individualization.md) 
+[PlayReady Individualization](individualization.md) 
 
-[Revocation](revocation.md) 
+[PlayReady Revocation](revocation.md) 

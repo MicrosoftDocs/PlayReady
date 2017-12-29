@@ -33,7 +33,16 @@ Illustration of a SL3000 device. The Intermediate Product is hardened and verifi
 
 ![Illustration of a SL3000 device.The Intermediate Product is hardened and verified using a TEE, and the Final Product is hardened and verified against unauthorized use](../images/security_level_3000.png)
 
-## Using the Security Level
+<a id="hardwarevssoftware"></a>
+## Hardware-DRM versus Software-DRM
+SL2000 Clients are commonly referred to as "Software-DRM" Clients, for the reason that their robustness is backed mostly with software means.
+SL3000 Clients are commonly referred to as "Hardware-DRM" Clients, because the core functionalities of their PlayReady stack must be implemented in a Trusted Execution Environment of the processor, and backed by hardware means.
+
+Increasingly, content providers are moving towards hardware-based protections for granting permission to play back full high value content in apps. Robust support for a hardware implementation of the cryptographic core has been added to PlayReady to meet this need. This support enables secure playback of higher value content on multiple device platforms. Key material (including private keys, content keys, and any other key material used to derive or unlock said keys), and decrypted compressed and uncompressed video samples are protected by leveraging hardware security. Hardware-based PlayReady DRM is supported on a multitude of devices, including both Windows and non-Windows devices such as TV sets, phones, and tablets.
+
+
+<a id="securitylevelpolicy"></a>
+## Using the Security Level in a License
 The Security Level is a property of the client defined during the development cycle. It has implications on the means that are implemented to assure the security of the Content Secrets and Client Secrets against attacks, and on the development and certification plans that the client developer makes.
 
 License Servers can adjust the licenses, or license properties, delivered to clients based on their Security Level, by two methods.

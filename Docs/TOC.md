@@ -6,17 +6,17 @@
 
 ### [Simple End to End System](Overview/simpleendtoendsystem.md)
 
+### [Key and Key IDs (KIDs)](Overview/keyandkeyidskids.md)
+
 ### [License Acquisition](Overview/licenseacquisition.md)
 
-### [License Generation and Issuance](Overview/licensegenerationandissuance.md)
+### [License Persistence](Overview/licensepersistence.md)
+
+### [Client Security Level](Overview/securitylevel.md)
 
 ### [License and Policies](Overview/licenseandpolicies.md)
 
-### [Security Level](Overview/securitylevel.md)
-
 ### [Output Protection Levels](Overview/outputprotectionlevels.md)
-
-### [Key and Key IDs (KIDs)](Overview/keyandkeyidskids.md)
 
 ## [Common PlayReady Scenarios](Overview/commonplayreadyscenarios.md)
 
@@ -48,33 +48,39 @@
 
 ### [PlayReady Content Encryption Modes](Overview/playreadycontentencryptionmodes.md)
 
-## [PlayReady License Servers](Overview/playreadylicenseservers.md)
+## [PlayReady Servers](Overview/playreadyservers.md)
 
-### [Best Practices for License Policies](Overview/bestpractices.md)
+### [PlayReady License Server](Overview/playreadylicenseserver.md)
 
-### [Optional PlayReady Servers](Overview/optionalplayreadyservers.md)
+### [Best Practices for License Policies](Overview/policiesbestpractices.md)
 
-### [PlayReady Metering](Overview/playreadymetering.md)
+### [PlayReady Domain Server](Overview/playreadydomainserver.md)
 
-### [PlayReady Domains](Overview/playreadydomains.md)
+### [PlayReady Metering Server](Overview/playreadymeteringserver.md)
 
-### [PlayReady Secure Delete](Overview/playreadysecuredelete.md)
+### [PlayReady Secure Stop Server](Overview/playreadysecurestopserver.md)
 
-### [PlayReady Secure Stop](Overview/playreadysecurestop.md)
+### [PlayReady Secure Delete Server](Overview/playreadysecuredeleteserver.md)
 
 ## [PlayReady Clients](Overview/playreadyclients.md)
 
 ### [PlayReady Client Architectures](Overview/playreadyclientarchitectures.md)
 
-### [Trusted Clocks](Overview/trustedclocks.md)
+### [PlayReady Trusted Clocks](Overview/trustedclocks.md)
 
-### [Individualization](Overview/individualization.md)
+### [PlayReady Individualization](Overview/individualization.md)
 
-### [Revocation](Overview/revocation.md)
+### [PlayReady Revocation](Overview/revocation.md)
+
+## [PlayReady Communication Protocols](Overview/playreadycommunicationprotocols.md)
+
+### [PlayReady Client-Server Protocol](Overview/playreadyclientserverprotocol.md)
+
+### [Microsoft Services for PlayReady Clients](Overview/microsoftplayreadyservices.md)
+
+### [Client Owner Services for PlayReady Clients](Overview/clientplayreadyservices.md)
 
 ## [PlayReady Advanced Topics](Overview/playreadyadvancedtopics.md)
-
-### [PlayReady Communication Protocols](Overview/playreadycommunicationprotocols.md)
 
 ### [License Chaining](Overview/licensechaining.md)
 

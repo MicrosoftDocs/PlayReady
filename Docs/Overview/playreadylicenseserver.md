@@ -1,6 +1,6 @@
 ---
 author: 
-title: "PlayReady License Servers"
+title: "PlayReady License Server"
 description: ""
 ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
 kindex: server, PlayReady license
@@ -13,8 +13,9 @@ ms.technology: drm
 ---
 
 
-# PlayReady License Servers
-   
+# PlayReady License Server
+
+
 The process of obtaining a license to play back PlayReady protected content is handled by a PlayReady license server. The PlayReady server contains the handler that authorizes playback of PlayReady protected client. It does this by providing the encryption key that unlocks the encrypted content that the client requests to play. In addition, the PlayReady license server response contains the rights and rights restrictions for that content. 
 
 The following figure shows the steps that describe how a client gets a license from a PlayReady license service.
@@ -43,16 +44,3 @@ PlayReady Server SDK provides the following functionality for license servers:
   *  Technology integrates with any web service or logic.
   *  Delivered as Windows Server libraries, plus C# code in the SDK. Includes sample handlers in source code.
 
-## In This Section
-
-[Best Practices for License Policies](bestpractices.md) 
-
-[Optional PlayReady Servers](optionalplayreadyservers.md) 
-
-[PlayReady Metering](playreadymetering.md) 
-
-[PlayReady Domains](playreadydomains.md) 
-
-[PlayReady Secure Delete](playreadysecuredelete.md) 
-
-[PlayReady Secure Stop](playreadysecurestop.md) 

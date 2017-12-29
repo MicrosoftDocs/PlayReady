@@ -14,7 +14,7 @@ ms.technology: drm
 
 # PlayReady and Silverlight
 
-
+## Web plug-ins phasing out 
 The commercial media industry is undergoing a major transition as content providers move away from proprietary
 web plug-in based delivery mechanisms (such as Flash or Silverlight), and replace them with unified plug-in free
 video players that are based on HTML5 specifications and commercial media encoding capabilities. Browsers are
@@ -33,25 +33,19 @@ choice. Microsoft believes that this is a huge benefit to both content producers
 to supporting companies that make this transition.
 
 With these changes in mind, support for ActiveX has been discontinued in Microsoft Edge, and that includes removing
-support for Silverlight. Microsoft continues to support Silverlight, and Silverlight out-of-browser applications can continue
-to use it.  Silverlight will also continue to be supported in Internet Explorer 11, so sites continue to have
+support for Silverlight. Microsoft continues to support Silverlight, and Silverlight out-of-browser applications can continue to use it.  Silverlight will also continue to be supported in Internet Explorer 11, so sites continue to have
 Silverlight options in Windows 10. At the same time, Microsoft encourages companies that are using Silverlight for
 media to begin the transition to DASH/MSE/CENC/EME based designs and to follow a single encoding work flow enabled
 by CENC. This represents the most broadly interoperable solution across browsers, platforms, content,
 and devices going forward.
 
-To continue to support Windows 7, Microsoft recommends that you develop a Silverlight out-of-browser application. To do this:
+## Continue to run your Silverlight applications
+Given the growing restrictions to run Silverlight applications in modern browsers, users may find difficult to use Silverlight in-browser applications.
+One way to continue offering an existing Silverlight application  on Windows 7 and MacOS to users is to turn it into a Silverlight out-of-browser application, installed with a standalone installer (installer.exe). To do this:
 
-  * If the service already has one in-browser application, then the conversion is trivial. If not, it should be developed
-  in C# so that it can share most of its code with Universal Windows Platform (UWP) applications designed for other Microsoft platforms, like Windows 10 or
-  XBox.
+  * Change the application configuration to OUt-Of-Browser
+  * Develop a standalone installer to help users get through the hurdle of installing the application on supported browsers and browser versions.
 
-  * Optionally add a standalone installer. This helps users get through the hurdle of installing the application on supported browsers and browser versions.
-
-To continue to support Silverlight on the Mac:
-
-  * Do the same as described for Windows 7 above.
-
-  * Or, use a PlayReady SDK provided by a PlayReady partner. The SDK may be an Electron SDK, or any other type for
-  Mac native applications. For more information, see the [list of PlayReady partners](https://www.microsoft.com/playready/partners/).
+## New applications should use an SDK
+Our recommended approach to develop Windows 7 and MacOS applications using PlayReady is to use a PlayReady SDK provided by a Microsoft partner. The SDK may be an Electron SDK, or any other type for Windows or Mac native applications. For more information, see the [list of PlayReady partners](https://www.microsoft.com/playready/partners/).
 
