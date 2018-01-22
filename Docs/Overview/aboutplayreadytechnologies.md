@@ -18,7 +18,7 @@ ms.technology: drm
 
 Microsoft's implementations of the fundamental technologies discussed in this section enable all of the scenarios described in [Common PlayReady Scenarios](commonplayreadyscenarios.md). This section discusses these building blocks and provides background about how they are used in Microsoft PlayReady.
 
-## In This Section
+## In this section
 
 [PlayReady Communication Protocols](playreadycommunicationprotocols.md)
 
@@ -28,13 +28,13 @@ Microsoft's implementations of the fundamental technologies discussed in this se
 
 [Trusted Clocks](trustedclocks.md)
 
-[PlayReady Metering](playreadymetering.md)
+[PlayReady Metering](playreadymeteringserver.md)
 
-[PlayReady Domains](playreadydomains.md)
+[PlayReady Domains](playreadydomainserver.md)
 
-[PlayReady Secure Delete](playreadysecuredelete.md)
+[PlayReady Secure Delete](playreadysecuredeleteserver.md)
 
-[PlayReady Secure Stop](playreadysecurestop.md)
+[PlayReady Secure Stop](playreadysecurestopserver.md)
 
 [Individualization](individualization.md)
 
