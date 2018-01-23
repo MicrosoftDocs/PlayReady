@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-description: Documentation for Microsoft PlayReady.
+description: Documentation for Microsoft PlayReady
 title:  Microsoft PlayReady Documentation
 keywords: PlayReady, licensing, playable content license
 ---
@@ -19,7 +19,7 @@ The latest version of PlayReady, PlayReady 4.0, was released in October of 2017.
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="Overview/playreadyoverview.html">
+        <a href="https://review.docs.microsoft.com/en-us/playready/overview/playreadyoverview">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
