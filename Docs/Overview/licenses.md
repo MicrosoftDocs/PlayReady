@@ -19,18 +19,16 @@ After a client retrieves a protected file, that client needs to acquire a licens
 Each license contains the following information:
 
    *  The content encryption key.
-   *  The rights and conditions of the license.
+   *  The rights and conditions of the license, otherwise known as policies.
    *  Optional attributes, such as a name and description of the license.
 
 Before a client can decrypt the content associated with a license, it must retrieve the policy from the license. The content protection information within the license is encrypted using a client's public key or a client's domain's public key encryption information. The license is considered "bound" to the client or domain that has the private key for decrypting the content protection information.
 
 Clients acquire licenses either directly from license servers or through a proxy server.
 
-## In This Section
+## In this section
 
 [Output Protection Levels](outputprotectionlevels.md)
-
-[License Generation and Issuance](licensegenerationandissuance.md)
 
 [License Acquisition](licenseacquisition.md)
 
@@ -40,7 +38,7 @@ Clients acquire licenses either directly from license servers or through a proxy
 
 [License Nonce](licensenonce.md)
 
-[Key and Key IDs](keyandkeyidskids1.md)
+[Key and Key IDs](keyandkeyidskids.md)
 
 [License and Policies](licenseandpolicies.md)
 
@@ -48,4 +46,4 @@ Clients acquire licenses either directly from license servers or through a proxy
 
 [Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md)
 
-[Best Practices for License Policies](bestpractices.md)
+[Best Practices for License Policies](policiesbestpractices.md)

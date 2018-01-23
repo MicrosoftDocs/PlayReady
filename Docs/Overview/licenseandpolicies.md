@@ -1,12 +1,12 @@
 ---
-author: 
+author:
 title: "License and Policies"
 description: ""
 ms.assetid: "BD5E39E2-20B2-42A5-9D4F-D109DD4E67DE"
 kindex: policies, license
 kindex: license, policies
 keywords: license, policy, policies
-ms.author: 
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -38,7 +38,7 @@ The following PlayReady rights are listed in the PlayReady Compliance Rules:
   *  Execute right (see CR 4.1): right for a client to decrypt PlayReady Executable content (applications), and execute it. No longer supported in PlayReady 3.0 and later. 
   *  Read right (see CR 5.1): right for a client to decrypt PlayReady Literary content (ebooks), and display it. No longer supported in PlayReady 3.0 and later. 
 
-## Right Restrictions and other Policies
+## Rights Restrictions and other Policies
 
 The PlayReady Compliance Rules contain a full list of right modifiers (extensions and restrictions) that may apply to the license. Each of these modifiers has multiple properties:
  
@@ -48,9 +48,9 @@ The PlayReady Compliance Rules contain a full list of right modifiers (extension
   *  **Best Effort**&mdash;another way to specify if the client must engage the action or must try to engage the action (for example, Macrovision Best Effort, see CR 2.4).
 
 The following sections list some of the more commonly used right modifiers.
-  
+
 ### Absolute Expiration Policy
-  
+
 One of the common restrictions is the absolute time date expiration policy. Every license may include an absolute time date expiration policy. If it is present, the client must stop binding this license and decrypting content if the current date time is after that value.
 
 A practical example is a user on a client playing content from a monthly subscription service. The monthly renewal day of the service for this user is the 15th of the month. The user starts playback on the 2nd of the month (the 2nd of November, 2017). The license server will give the right to the user until the 15th of the month, and include an Expiration policy set to 11/16/2017, 0:00am. Whenever the user pays the subscription fee for the next month, the service will issue another license with an Expiration date set one month later. 
@@ -64,13 +64,13 @@ This policy is by definition a Must Understand and Mandatory (meaning, not Best 
   *  Not bind the license if the current time is past the Expiration value. 
  
 >[!NOTE]
->Whenever a license server sets an Absolute Expiration policy in a license, Microsoft strongly recommendeds that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](bestpractices.md) for more details.
+>Whenever a license server sets an Absolute Expiration policy in a license, Microsoft strongly recommends that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](policiesbestpractices.md) for more details.
 
 ### Begin Date Policy 
 
 Another common restriction is the begin date policy. If it is present, the client must not bind this license and begin decrypting content until the current date time is after that value.
 
-For busines models that require content to be used only for a limited amount of time, such as in a rental scenario, an end date is required to indicate when the license expires and the content can no longer be played (for example, the content can only be played until 5pm EST, May 15, 2018). This is sufficient for a rental scenario. However, specifying a begin date with the end date is a natural impedence to clock rollback attacks.
+For business models that require content to be used only for a limited amount of time, such as in a rental scenario, an end date is required to indicate when the license expires and the content can no longer be played (for example, the content can only be played until 5pm EST, May 15, 2018). This is sufficient for a rental scenario. However, specifying a begin date with the end date is a natural impedance to clock rollback attacks.
 
 This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that does include this policy MUST: 
 
@@ -79,16 +79,16 @@ This policy is by definition a Must Understand and Mandatory (meaning, not Best 
   *  Be able to parse and understand the Begin Date policy in the license.
   *  Compare the current time from the PlayReady Trusted Clock System with the Begin Date value.
   *  Not bind the license if the current time is before the Begin Time value.
-  
-For more information, see [Using BeginDate with EndDate](bestpractices.md#begindate) 
+
+For more information, see [Using BeginDate with EndDate](policiesbestpractices.md#begindate) 
 
 ### Expiration After First Play Policy 
 
-Besides scenarios in which content can be played back depending on a begin time and end time, there is also the model that specifies how long content can be played back after the content is first played. The expiration after first play policy, if present, indicates that the client must stop binding this license and decrypting content if the current number of seconds after the content was first played matches the value in this policy. 
+Besides scenarios in which content can be played back depending on a begin time and end time, there is also the model that specifies how long content can be played back after the content is first played. The expiration after first play policy, if present, indicates that the client must stop binding this license and decrypting content if the current number of seconds after the content was first played matches the value in this policy.
 
-> [!NOTE]   
-> For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.  
- 
+> [!NOTE]
+> For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.
+
 
 ### Security Level Policy
 
@@ -117,7 +117,7 @@ PlayReady supports dozens if not hundreds of different policies beyond the ones 
 
 PlayReady licensed companies have access to a more comprehensive documentation package that includes the *PlayReady Extensible Media Rights (XMR) Specification* that describes precisely each of these policies and the way they’re coded in a license. 
 
-## See Also
+## See also
 
 [Licenses Restricted by Binding Policy](licensesrestrictedbybindingpolicy.md)
 

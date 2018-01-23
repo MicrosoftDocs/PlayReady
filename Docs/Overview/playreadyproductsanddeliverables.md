@@ -1,5 +1,5 @@
 ---
-author: 
+author:
 title: "PlayReady Products and Deliverables"
 description: ""
 ms.assetid: "53B49621-E528-43FA-B054-BB38442DF666"
@@ -7,7 +7,7 @@ kindex: PlayReady, products and deliverables
 kindex: products, PlayReady
 kindex: deliverables, PlayReady
 keywords:  products, deliverables, license, certificates, Azure, Windows, documentation, test server, secure clock
-ms.author: 
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -20,9 +20,9 @@ PlayReady is a very versatile technology that is designed to allow the developme
 
 Likewise, on the server side, PlayReady is very flexible to allow the development and deployment of servers in different types of environments (native Windows Server system, private cloud, public cloud, hybrid cloud), different types of architecture (combined with the service logic, distant from the service logic), and using partnerships. A service provider may use the PlayReady Server SDK received from Microsoft to prototype, but use a third party company to develop their license server logic, and use another company to operate it, in a public cloud infrastructure.
 
-PlayReady Customers, whether they are service providers, device makers, or application developers, are not required to develop either their PlayReady client or server themselves. Instead, they may obtain these services or products from third-party developers, that we refer to as PlayReady partners. 
+PlayReady Customers, whether they are service providers, device makers, or application developers, are not required to develop either their PlayReady client or server themselves. Instead, they may obtain these services or products from third-party developers, that we refer to as PlayReady partners.
 
-This topic discusses the parts of PlayReady that are supplied by Microsoft and the parts that can be developed and deployed by the customers themselves, or their third party partners. 
+This topic discusses the parts of PlayReady that are supplied by Microsoft and the parts that can be developed and deployed by the customers themselves, or their third party partners.
 
 Here is a figurative view of these levels of product integration, and its translation to a PlayReady Client Product:
 
@@ -113,7 +113,7 @@ Microsoft supplies all of the documentation that describes how to develop and de
 
    *  [PlayReady Training Slides](http://wmlalicensing.com)
 
-      Provides training slides (Knowledge Base) that describe how to implement PlayReady clients and servers. This website is restricted to licensees. 
+      Provides training slides (Knowledge Base) that describe how to implement PlayReady clients and servers. This website is restricted to licensees.
 
    *  [PlayReady Video Tutorials](http://test.playready.microsoft.com/Doc/VideoTutorials)
 
@@ -161,7 +161,7 @@ See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page 
 
 If you are developing an encoder utilizing PlayReady technologies, you will need to include a PlayReady Header in the encrypted content. The PlayReady Header contains information about the content being played back, including the key identifiers (KIDs) that identify the keys used to encrypt the data, the default license acquisition URL of the PlayReady license server, and any custom data that you want to include. The key and KID used to encrypt the content must be shared with the PlayReady license server that will be issuing the licenses for that specific content, typically through a Key Management System.
 
-For more information about encrypting content and the PlayReady Header, see [Content Encryption and Delivery](contentencryptionanddelivery.md) and the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/). 
+For more information about encrypting content and the PlayReady Header, see [Content Encryption and Delivery](contentencryptionanddelivery.md) and the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/).
 
 >[!NOTE]
 >Microsoft does not provide a Key Management System with PlayReady.
@@ -185,9 +185,9 @@ The following table clarifies whether a PlayReady Client needs to be developed o
 
 ### Device on which to install the PlayReady Device Porting Kit
 
-If you are designing a device with PlayReady installed in hardware or PlayReady on an integrated circuit, it is up to you to supply any hardware or software required to port the PlayReady Device Porting kit to your hardware. Some integrated circuits designed by [PlayReady Partners](https://www.microsoft.com/playready/partners/) already have PlayReady installed on the chip, and you could use these integrated circuits while designing your device. 
+If you are designing a device with PlayReady installed in hardware or PlayReady on an integrated circuit, it is up to you to supply any hardware or software required to port the PlayReady Device Porting kit to your hardware. Some integrated circuits designed by [PlayReady Partners](https://www.microsoft.com/playready/partners/) already have PlayReady installed on the chip, and you could use these integrated circuits while designing your device.
 
-For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](securitylevel/#hardwarevssoftware).
+For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](securitylevel.md/#hardwarevssoftware).
 
 ### Windows or Xbox application
 

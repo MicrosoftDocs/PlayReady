@@ -73,24 +73,24 @@ The most common delivery mechanisms for rental content is to stream the protecte
 <a id="ID4EID"></a>
 
 
-## Streaming rental content  
-   
-  
-When streaming rental media, content continuously plays back while it's being transferred from the Web server. The following technical aspects should be considered when implementing rental content that is streamed to user devices.   
- 
-   *  PlayReady supports many kinds of protocols. There is no restriction for any protocol. However, clients usually support one or many of the following standards: SSTP (Smooth Streaming, DASH, HLS). In addition to these protocols, it is perfectly acceptable and doable for a service that controls both its backend and clients to implement a different protocol, for example multicast TS on a closed network.   
+## Streaming rental content
 
-   *  The format of the content is typically H264 + AAC, or H265 + AAC, but all other codecs are allowed by PlayReady. However, for some of them the service may have to build the tools.   
+
+When streaming rental media, content continuously plays back while it's being transferred from the Web server. The following technical aspects should be considered when implementing rental content that is streamed to user devices.
+
+   *  PlayReady supports many kinds of protocols. There is no restriction for any protocol. However, clients usually support one or many of the following standards: SSTP (Smooth Streaming, DASH, HLS). In addition to these protocols, it is perfectly acceptable and doable for a service that controls both its backend and clients to implement a different protocol, for example multicast TS on a closed network.
+
+   *  The format of the content is typically H264 + AAC, or H265 + AAC, but all other codecs are allowed by PlayReady. However, for some of them the service may have to build the tools.
 
    *  Streaming rental content can use either a persistent or non-persistent license.
 
-      The most obvious case would be non-persistent licenses. Non-persistent licenses are stored in volatile memory (RAM) and only last for as long as the current session. Non-persistent licenses are well adapted to the streaming scenario, because for streaming, the device has to be connected anyway, and can afford acquiring a non-persistent license just in time at the time of playback. 
+      The most obvious case would be non-persistent licenses. Non-persistent licenses are stored in volatile memory (RAM) and only last for as long as the current session. Non-persistent licenses are well adapted to the streaming scenario, because for streaming, the device has to be connected anyway, and can afford acquiring a non-persistent license just in time at the time of playback.
 
-      A non-persistent license that is pre-acquired will also shorten the time to first frame. For more information, see [License Generation and Issuance](licensegenerationandissuance.md). 
+      A non-persistent license that is pre-acquired will also shorten the time to first frame. For more information, see [License Generation and Issuance](licensepersistence.md).
 
-      Another way to optimize the time to first frame when streaming rental content is to leverage "PlayReady Limited Duration Licenses." While the user is presented a page with a list of videos to select, licenses with a very small duration are pre-acquired in the background (typically thirty seconds). These licenses include the restriction "Real Time Expiration," which ensure that the client will actually stop playing back with this license after thirty seconds. Then the user can select one of the listed videos to play. At this time, playback can start immediately. The player requests a full rental license (for 48 hours) for the video selected by the user, and the player then seamlessly binds to the rental license while playing back. This optimization is possible on PlayReady version 3.0 or later clients, which support real time expiration and non-persistent license delivery in batches. 
-  
-   *  It is possible to use persistent licenses for streaming scenarios as well. Persistent licenses are stored in non-volatile memory (in the local data store) and last for the lifetime of the store or until a time-based restriction is reached.   
+      Another way to optimize the time to first frame when streaming rental content is to leverage "PlayReady Limited Duration Licenses." While the user is presented a page with a list of videos to select, licenses with a very small duration are pre-acquired in the background (typically thirty seconds). These licenses include the restriction "Real Time Expiration," which ensure that the client will actually stop playing back with this license after thirty seconds. Then the user can select one of the listed videos to play. At this time, playback can start immediately. The player requests a full rental license (for 48 hours) for the video selected by the user, and the player then seamlessly binds to the rental license while playing back. This optimization is possible on PlayReady version 3.0 or later clients, which support real time expiration and non-persistent license delivery in batches.
+
+   *  It is possible to use persistent licenses for streaming scenarios as well. Persistent licenses are stored in non-volatile memory (in the local data store) and last for the lifetime of the store or until a time-based restriction is reached.
 
 <a id="ID4EHE"></a>
 
@@ -108,7 +108,7 @@ The following technical aspects should be considered when implementing rental co
 
    *  Download and play rental content can also use either a persistent or non-persistent license. Typically, a predelivery persistent license would be preferred.
 
-   *  When using persistent licenses, the device may occasionally need to remove licenses from the data store after their expiration. 
+   *  When using persistent licenses, the device may occasionally need to remove licenses from the data store after their expiration.
 
-   *  Like all persistent licenses that include an expiration date, they should also include a begin date that helps prevent some user attacks against the device's trusted clock system. 
+   *  Like all persistent licenses that include an expiration date, they should also include a begin date that helps prevent some user attacks against the device's trusted clock system.
 

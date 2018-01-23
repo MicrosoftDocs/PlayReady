@@ -1,5 +1,5 @@
 ---
-title: Page topic title 
+title: Page topic title
 description: Page topic description.
 author: GitHubUserName
 ms.author: MicrosoftAlias
@@ -12,11 +12,11 @@ keywords: topic keywords for search discovery
 
 Description of the page content.
 
-## H2 level heading titles 
+## H2 level heading titles
 
 H2 level headings auto-populate the "In this article" anchor links on the right column of docs pages.
 
-If you want help with writing in Markdown language try referencing the [How to Write Markdown Poster](images/HowToWriteMarkdownPoster.pdf)
+If you want help with writing in Markdown language try referencing the ![How to Write Markdown Poster](images/HowToWriteMarkdownPoster.pdf)
 
 ## Best practices for authoring
 
@@ -40,14 +40,14 @@ They embody the [voice and tone of One Microsoft](https://worldready.cloudapp.ne
 | [Most common voice edits](https://msft.spoppe.com/teams/cpub/Resources/ContentDevelopment/Voice/_layouts/15/WopiFrame.aspx?sourcedoc=%7b59A56376-6F3E-41A7-BB94-9869CE0B098D%7d&file=Most%20common%20voice%20edits.docx&action=default) | A compilation of voice peer review comments compiled by the Office content team to help you self-edit. You need to be on corpnet to access this resource. |
 | [Top 10 tips for style and voice](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=28939) | In a rush to publish? Don't have time to go through the training first? These top 10 tips for voice and style compiled by the Azure UX team can help. And when you have more time, they guide the way to topics in the [Microsoft Writing Style Guide](https://worldready.cloudapp.net/StyleGuide/Read?id=2700). |
 
-## Authoring for good accessibility 
+## Authoring for good accessibility
 
 When authoring, please keep in mind [good accessibility practices](https://review.docs.microsoft.com/en-us/help/style/style-how-to-accessibility?branch=master), such as including [Alt Text](https://review.docs.microsoft.com/en-us/help/style/style-how-to-alt-text), using neutral "[Input Method](https://review.docs.microsoft.com/en-us/help/style/style-how-to-input-methods)" language, such as "Select" or "Choose", rather than "Click" or "Tap".
 
 Check out the "[Top five accessibility tips for authoring](https://review.docs.microsoft.com/en-us/help/style/style-how-to-accessibility-top-articles?branch=master)."
 
 ## Related content
-[Microsoft Writing Style Guide](https://worldready.cloudapp.net/StyleGuide/Read?id=2700), specifically the following sections:  
+[Microsoft Writing Style Guide](https://worldready.cloudapp.net/StyleGuide/Read?id=2700), specifically the following sections:
 
-- [Microsoft's brand voice: above all, simple and human](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=28361)  
-- [Top 10 tips for Microsoft style and voice](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=28939) 
+- [Microsoft's brand voice: above all, simple and human](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=28361)
+- [Top 10 tips for Microsoft style and voice](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=28939)
