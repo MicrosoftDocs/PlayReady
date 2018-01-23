@@ -46,7 +46,7 @@ This topic provides an overview of the encryption mechanisms and file format con
 The following AES encryption modes are supported:
 
 
-  * **AES 128 CTR mode**&mdash;PlayReady systems can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CTR mode of operation. Thes include the Common Encryption modes CENC (Common Encryption Scheme) and CENS (Common Encryption Scheme using a pattern of unencrypted/encryption bytes), which are defined in ISO/IEC 23001-7.
+  * **AES 128 CTR mode**&mdash;PlayReady systems can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CTR mode of operation. These include the Common Encryption modes CENC (Common Encryption Scheme) and CENS (Common Encryption Scheme using a pattern of unencrypted/encryption bytes), which are defined in ISO/IEC 23001-7.
 
   * **AES 128 CBC mode**&mdash;PlayReady systems starting with version 4.0 can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CBC mode of operation. These include the Common Encryption modes CBC1 and CBCS as defined in ISO/IEC 23001-7, and any other format that is encrypted with an AES 128 content key in CBC mode.
 

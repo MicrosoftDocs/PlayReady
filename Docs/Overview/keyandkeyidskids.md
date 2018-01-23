@@ -166,7 +166,7 @@ A single license response can also carry multiple licenses and thus multiple key
 
 
 
-## See Also
+## See also
 
  [PlayReady Header Specification](http://www.microsoft.com/playready/documents/)
 

@@ -19,7 +19,7 @@ PlayReady helps secure encrypted content by distributing and controlling the use
 
 Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) and CTR (Counter Mode) modes, as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms.
 
-**In this section**
+## In this section
 
 [Content Encryption and Delivery](contentencryptionanddelivery.md)
 

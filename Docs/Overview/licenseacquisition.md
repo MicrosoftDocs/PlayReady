@@ -113,6 +113,6 @@ PlayReady license acquisitions all require a transaction between the client and 
 Transactions typically occur on the Internet, through HTTP or HTTPS, or on a closed network. The protocol used are based on SOAP and can be customized.
 They can also be implemented asynchronously, for example with a client posting somewhere the challenge, and a server processing this challenge, generating a response and posting that response in some other location.
 
-> [!NOTE]   
-> PlayReady does not support however license broadcasting, meaning servers sending licenses to clients on a broadcast network.
+> [!NOTE]
+> PlayReady does not support, however, license broadcasting, meaning servers sending licenses to clients on a broadcast network.
 

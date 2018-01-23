@@ -17,7 +17,7 @@ ms.technology: drm
 
 This section covers more advanced features in the PlayReady technology.
 
-**In this section**
+## In this section
 
 [License Chaining](licensechaining.md)
 

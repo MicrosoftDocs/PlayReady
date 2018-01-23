@@ -21,7 +21,7 @@ This section contains PlayReady implementation scenarios that illustrate the typ
 > [!NOTE]
 > The scenarios described in these topics offer one way of enabling a business scenario. There are alternative ways of implementing these PlayReady scenarios.
 
-**In this section**
+## In this section
 
 [Rental Content](scenariorentalcontent.md)
 

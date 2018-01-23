@@ -52,7 +52,7 @@ For more information about PlayReady Secure Delete, see [PlayReady Secure Delete
 You can either develop and deploy these servers yourself, or these services can be provided to you from third parties, such as a [PlayReady Partner](https://www.microsoft.com/playready/partners/). All of these servers must be deployed on a server running Windows Server. You do not need to deploy each type of server on their own machine; instead multiple PlayReady server types can be run on the same physical machine.
 
 
-**In this section**
+## In this section
 
 [PlayReady License Server](playreadylicenseserver.md)
 

@@ -17,7 +17,7 @@ ms.technology: drm
 
 
 
-**In this section**
+## In this section
 
 [PlayReady Client Architectures](playreadyclientarchitectures.md)
  
