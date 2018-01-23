@@ -187,7 +187,7 @@ The following table clarifies whether a PlayReady Client needs to be developed o
 
 If you are designing a device with PlayReady installed in hardware or PlayReady on an integrated circuit, it is up to you to supply any hardware or software required to port the PlayReady Device Porting kit to your hardware. Some integrated circuits designed by [PlayReady Partners](https://www.microsoft.com/playready/partners/) already have PlayReady installed on the chip, and you could use these integrated circuits while designing your device.
 
-For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](securitylevel.md/#hardwarevssoftware).
+For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](securitylevel.md#hardwarevssoftware).
 
 ### Windows or Xbox application
 

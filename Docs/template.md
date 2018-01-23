@@ -16,7 +16,7 @@ Description of the page content.
 
 H2 level headings auto-populate the "In this article" anchor links on the right column of docs pages.
 
-If you want help with writing in Markdown language try referencing the ![How to Write Markdown Poster](images/HowToWriteMarkdownPoster.pdf)
+If you want help with writing in Markdown language try referencing the [How to Write Markdown Poster](images/howtowritemarkdownposter.png)
 
 ## Best practices for authoring
 
@@ -34,9 +34,9 @@ They embody the [voice and tone of One Microsoft](https://worldready.cloudapp.ne
 
 | Resource | Description |
 |---|----------------------|
-| [The 5 voice principles](style-how-to-voice-principles.md) | A quick text-only overview of the 5 principles and how to apply them. |
-| [Voice job aid](style-how-to-voice-job-aid.md) | A one-pager to help you apply voice when you write, self-edit, or peer review. |
-| [Self-paced voice training](style-how-to-voice-self-paced-training.md) | Recordings of training sessions covering each of the 5 principles. |
+| [The 5 voice principles](https://review.docs.microsoft.com/en-us/help/style/style-how-to-voice-principles?branch=master) | A quick text-only overview of the 5 principles and how to apply them. |
+| [Voice job aid](https://review.docs.microsoft.com/en-us/help/style/style-how-to-voice-job-aid?branch=master) | A one-pager to help you apply voice when you write, self-edit, or peer review. |
+| [Self-paced voice training](https://review.docs.microsoft.com/en-us/help/style/style-how-to-voice-self-paced-training?branch=master) | Recordings of training sessions covering each of the 5 principles. |
 | [Most common voice edits](https://msft.spoppe.com/teams/cpub/Resources/ContentDevelopment/Voice/_layouts/15/WopiFrame.aspx?sourcedoc=%7b59A56376-6F3E-41A7-BB94-9869CE0B098D%7d&file=Most%20common%20voice%20edits.docx&action=default) | A compilation of voice peer review comments compiled by the Office content team to help you self-edit. You need to be on corpnet to access this resource. |
 | [Top 10 tips for style and voice](https://worldready.cloudapp.net/Styleguide/Read?id=2700&topicid=28939) | In a rush to publish? Don't have time to go through the training first? These top 10 tips for voice and style compiled by the Azure UX team can help. And when you have more time, they guide the way to topics in the [Microsoft Writing Style Guide](https://worldready.cloudapp.net/StyleGuide/Read?id=2700). |
 

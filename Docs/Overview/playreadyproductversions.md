@@ -24,7 +24,7 @@ The following table shows the feature availability for each version of the PlayR
 >|:--- |:---|:---|:---|:---|:---|:---|:---|:---|
 >|Jun'08|**1.0** | Initial version | 1.0.1105| 1.0.1130|1.0.1130|1.1| Not yet available | Not yet available |
 >|Oct'08|**1.2** | [Embedded Licenses](embeddedlicenses.md) | 1.2.1404 | 1.2.1404|1.2.1404|1.2| &mdash; | &mdash; |
->|May'09|**1.3** | [Specifications section](..\Specificatios\specifications.md) | &mdash; |&mdash;| &mdash; |1.3| &mdash; | &mdash; |
+>|May'09|**1.3** | [Specifications section](../Specifications/specifications.md) | &mdash; |&mdash;| &mdash; |1.3| &mdash; | &mdash; |
 >|Apr'10|**1.5** | Common Encryption Smooth Streaming | 1.5.4018| &mdash; | 1.5| No further enhancements | &mdash; | &mdash; |
 >|Sep'10|**1.5.2** | Security improvements | 1.5.4094| &mdash;| &mdash; | &mdash; | &mdash; | &mdash; |
 >|Sep'11|**2.0** | - Live TV with Key Rotation through Scalable Embedded Licenses<br/>- Silverlight Client Verification | 2.0.1402 | 2.0.1402 | 2.0.1402| &mdash; | &mdash; | &mdash; |
