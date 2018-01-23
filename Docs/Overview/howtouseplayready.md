@@ -18,7 +18,7 @@ ms.technology: drm
 
 Once you have obtained the parts of the PlayReady ecosystem provided by Microsoft, you can begin developing your product. The following topics discuss how to use PlayReady in your systems, whether you are encoding content, providing content playback on clients, or providing PlayReady services to users.
 
-## In this section
+**In this section**
 
 [Content Encryption and Delivery](contentencryptionanddelivery.md)
 

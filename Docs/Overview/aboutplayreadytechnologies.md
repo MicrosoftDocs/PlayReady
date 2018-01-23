@@ -18,7 +18,7 @@ ms.technology: drm
 
 Microsoft's implementations of the fundamental technologies discussed in this section enable all of the scenarios described in [Common PlayReady Scenarios](commonplayreadyscenarios.md). This section discusses these building blocks and provides background about how they are used in Microsoft PlayReady.
 
-## In this section
+**In this section**
 
 [PlayReady Communication Protocols](playreadycommunicationprotocols.md)
 

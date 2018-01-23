@@ -20,7 +20,7 @@ PlayReady clients communicate with PlayReady servers to acquire licenses and per
 ![PlayReady Communication Protocols](../images/comm_protocol.png)
 
 
-## In This Section
+**In this section**
 
 [PlayReady Client-Server Protocol](playreadyclientserverprotocol.md)
 

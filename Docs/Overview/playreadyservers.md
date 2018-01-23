@@ -1,12 +1,12 @@
 ---
-author: 
+author:
 title: "PlayReady Servers"
 description: ""
 ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
 kindex: server, PlayReady license
 kindex: license, PlayReady server
 keywords: license, server
-ms.author: 
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -24,7 +24,7 @@ For more information about PlayReady domains, see [PlayReady License Server](pla
 
 An optional PlayReady domain server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients,including mobile device clients.
 
-> [!NOTE]   
+> [!NOTE]
 > A PlayReady domain is not the same as network or Web domains.
 
 For more information about PlayReady domains, see [PlayReady Domain Server](playreadydomainserver.md).
@@ -52,7 +52,7 @@ For more information about PlayReady Secure Delete, see [PlayReady Secure Delete
 You can either develop and deploy these servers yourself, or these services can be provided to you from third parties, such as a [PlayReady Partner](https://www.microsoft.com/playready/partners/). All of these servers must be deployed on a server running Windows Server. You do not need to deploy each type of server on their own machine; instead multiple PlayReady server types can be run on the same physical machine.
 
 
-## In This Section
+**In this section**
 
 [PlayReady License Server](playreadylicenseserver.md)
 

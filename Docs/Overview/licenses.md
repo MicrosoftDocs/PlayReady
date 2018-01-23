@@ -26,7 +26,7 @@ Before a client can decrypt the content associated with a license, it must retri
 
 Clients acquire licenses either directly from license servers or through a proxy server.
 
-## In this section
+**In this section**
 
 [Output Protection Levels](outputprotectionlevels.md)
 

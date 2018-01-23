@@ -17,7 +17,7 @@ ms.technology: drm
 
 This section contains a list of public specifications that provide background information on PlayReady content access technology.
 
-## In This Section
+**In this section**
 
 [PlayReady Header Object Specification](playreadyheaderspecification.md)
 

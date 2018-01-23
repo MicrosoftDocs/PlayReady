@@ -1,12 +1,12 @@
 ---
-author: 
+author:
 title: "PlayReady Advanced Topics"
 description: ""
 ms.assetid: "A5BA095E-3045-41A9-B947-72D21FFD885D"
 kindex: topic, PlayReady advanced
 kindex: advanced, PlayReady topic
-keywords: 
-ms.author: 
+keywords:
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -15,9 +15,9 @@ ms.technology: drm
 
 # PlayReady Advanced Topics
 
+This section covers more advanced features in the PlayReady technology.
 
-
-## In This Section
+**In this section**
 
 [License Chaining](licensechaining.md)
 
@@ -30,7 +30,7 @@ ms.technology: drm
 [Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md) 
 
 [PlayReady and Other Protection Technologies](playreadyandotherprotectiontechnologies.md) 
-   
-  
+
+
 
 
