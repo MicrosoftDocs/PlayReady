@@ -1,6 +1,6 @@
 ---
 author:
-title: Scenario: Subscription Content
+title: Scenario Subscription Content
 description:
 ms.assetid: "635ac0f9-99cd-365d-3349-f1fd12d2f408"
 kindex: scenarios, subscription content

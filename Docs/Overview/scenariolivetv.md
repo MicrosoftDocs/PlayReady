@@ -1,6 +1,6 @@
 ---
 author:
-title: Scenario: Live TV
+title: Scenario Live TV
 description:
 ms.assetid: "9c919b0f-c860-9d89-1297-16922e8de0e4"
 kindex: scenarios, Live TV

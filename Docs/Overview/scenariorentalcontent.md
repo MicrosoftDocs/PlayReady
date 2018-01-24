@@ -1,6 +1,6 @@
 ---
 author:
-title: Scenario: Rental Content
+title: Scenario Rental Content
 description:
 ms.assetid: "30da1be6-dfdc-d98e-261b-cc86c7e6da02"
 kindex: scenarios, rental content

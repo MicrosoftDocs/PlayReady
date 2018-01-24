@@ -1,6 +1,6 @@
 ---
 author:
-title: Scenario: Purchased Content
+title: Scenario Purchased Content
 description:
 ms.assetid: "75bf75de-b445-a957-f804-948a235048e7"
 kindex: scenarios, purchased content
