@@ -1,7 +1,7 @@
 ---
 author:
-title: "About PlayReady Technologies"
-description: ""
+title: About PlayReady Technologies
+description:
 ms.assetid: "be06ae45-5456-4084-26ca-f5527164f6c0"
 kindex: technologies, about PlayReady
 kindex: about, PlayReady technologies

@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady Client Architectures"
-description: ""
+title: PlayReady Client Architectures
+description:
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
 kindex: clients, architecture
 kindex: PlayReady, client architecture

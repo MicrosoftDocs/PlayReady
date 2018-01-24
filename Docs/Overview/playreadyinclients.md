@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady in Clients"
-description: ""
+title: PlayReady in Clients
+description:
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
 kindex: clients, PlayReady in
 kindex: PlayReady, in clients

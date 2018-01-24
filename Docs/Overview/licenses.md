@@ -1,7 +1,7 @@
 ---
 author:
-title: "Licenses"
-description: ""
+title: Licenses
+description:
 ms.assetid: "EF3BEE65-8412-4A9A-8AA9-A3F6AF2E3D92"
 kindex: licenses
 keywords:  licenses, key, policies, encryption, decrypt

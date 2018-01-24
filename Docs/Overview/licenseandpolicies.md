@@ -1,7 +1,7 @@
 ---
 author:
-title: "License and Policies"
-description: ""
+title: License and Policies
+description:
 ms.assetid: "BD5E39E2-20B2-42A5-9D4F-D109DD4E67DE"
 kindex: policies, license
 kindex: license, policies

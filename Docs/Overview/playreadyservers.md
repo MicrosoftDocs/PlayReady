@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady Servers"
-description: ""
+title: PlayReady Servers
+description:
 ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
 kindex: server, PlayReady license
 kindex: license, PlayReady server

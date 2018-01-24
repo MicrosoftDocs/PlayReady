@@ -1,12 +1,12 @@
 ---
-author: 
-title: "Output Protection Levels"
-description: ""
+author:
+title: Output Protection Levels
+description:
 ms.assetid: "538c8046-99bf-f922-321f-4425f02d8bbd"
 kindex: output protection levels, about
 kindex: about, output protection levels
 keywords:  about output protection levels,  output protection levels about
-ms.author: 
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -14,29 +14,29 @@ ms.technology: drm
 
 
 # Output Protection Levels
-   
-  
-Output protection levels (OPLs) are described in detail in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). This topic describes some of the general behavior of OPLs.   
-   
-  
-OPLs create layers of rights protection in order to associate types of content to a security restriction. Higher OPLs indicate a higher-level security. A device does not output content if the device only supports an output protection level that is lower than the minimum OPL for the content, because the device does not support the protected path requirements for playing back content protected at that level.   
-   
-  
-OPLs are associated to a particular type and format of content. For instance, compressed analog video, uncompressed analog video, compressed digital video, and uncompressed digital video all may have separate OPLs associated with them. Because each type of content format has a set of OPLs, different types of content may only have a few levels of protection associated with them.   
-   
-  
-The following table contains the allowed output protection levels for each type of content:  
- 
-| Content Type| Allowed Values| 
-| --- | --- | 
-| Minimum Compressed Digital Audio| 100, 150, 200, 250, 300| 
-| Minimum Uncompressed Digital Audio| 100, 150, 200, 250, 300| 
-| Minimum Compressed Digital Video| 400, 500| 
-| Minimum Uncompressed Digital Video| 100, 250, 270, 300| 
-| Minimum Analog Television| 100, 150, 200| 
 
-<p></p>   
-  
+
+Output protection levels (OPLs) are described in detail in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). This topic describes some of the general behavior of OPLs.
+
+
+OPLs create layers of rights protection in order to associate types of content to a security restriction. Higher OPLs indicate a higher-level security. A device does not output content if the device only supports an output protection level that is lower than the minimum OPL for the content, because the device does not support the protected path requirements for playing back content protected at that level.
+
+
+OPLs are associated to a particular type and format of content. For instance, compressed analog video, uncompressed analog video, compressed digital video, and uncompressed digital video all may have separate OPLs associated with them. Because each type of content format has a set of OPLs, different types of content may only have a few levels of protection associated with them.
+
+
+The following table contains the allowed output protection levels for each type of content:
+
+| Content Type| Allowed Values|
+| --- | --- |
+| Minimum Compressed Digital Audio| 100, 150, 200, 250, 300|
+| Minimum Uncompressed Digital Audio| 100, 150, 200, 250, 300|
+| Minimum Compressed Digital Video| 400, 500|
+| Minimum Uncompressed Digital Video| 100, 250, 270, 300|
+| Minimum Analog Television| 100, 150, 200|
+
+<p></p>
+
 The following tables outline the mappings between various OPLs in the PlayReady license and how PlayReady enforces them.
 
 ![Output Protection Levels 1](../images/opl1.png)
@@ -149,9 +149,9 @@ The following tables outline the mappings between various OPLs in the PlayReady 
   </tr>
 </table> -->
 <p></p>
-  
-  
-To illustrate the concept of OPLs, consider the following scenario. A user named Mike has acquired content for playback on his device that has an output protection level of 300 (requires a low level of encryption; HDCP is an example of low level encryption). When Mike tries to play his content on a device connected with only component outputs (supports OPLs up to 200), he cannot play the content. When he tries to play the content on a player that has a DVI connection and HDCP support (supports OPLs up to 300), he is able to play the content.  
-   
+
+
+To illustrate the concept of OPLs, consider the following scenario. A user named Mike has acquired content for playback on his device that has an output protection level of 300 (requires a low level of encryption; HDCP is an example of low level encryption). When Mike tries to play his content on a device connected with only component outputs (supports OPLs up to 200), he cannot play the content. When he tries to play the content on a player that has a DVI connection and HDCP support (supports OPLs up to 300), he is able to play the content.
+
 
 See this [page](https://msdn.microsoft.com/en-us/library/dn468832.aspx) about how Windows 10 enforces Output Protection Levels. Like every PlayReady Client, it allows playback on the various outputs in the boundaries defined in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/).

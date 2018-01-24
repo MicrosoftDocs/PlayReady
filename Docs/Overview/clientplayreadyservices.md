@@ -1,7 +1,7 @@
 ---
 author:
-title: "Client Owner Services for PlayReady Clients"
-description: ""
+title: Client Owner Services for PlayReady Clients
+description: Final Product Licensees may design their device or application so as to contact a service when they perform PlayReady operations.
 ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
 kindex: SOAP, PlayReady protocols
 kindex: protocols, PlayReady communication

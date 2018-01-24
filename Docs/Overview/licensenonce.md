@@ -1,12 +1,12 @@
 ---
-author: 
-title: "License Nonce"
-description: ""
+author:
+title: License Nonce
+description:
 ms.assetid: "9F5227F8-83AD-4B6D-A4E3-B06183879629"
 kindex: nonce, license
 kindex: license, nonce
-keywords: 
-ms.author: 
+keywords:
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -14,11 +14,11 @@ ms.technology: drm
 
 
 # License Nonce
-   
-  
+
+
 A PlayReady client includes a random **GUID** called the license nonce in every license request that it generates for a license server.
 
-If the server delivers a license response with only non-persistent licenses, it includes in the licenses a rights identifier that contains the license request's license nonce. 
+If the server delivers a license response with only non-persistent licenses, it includes in the licenses a rights identifier that contains the license request's license nonce.
 
 When adding the licenses received to the In-Memory-Only data store, the client verifies that the license's rights identifier matches the license request's license nonce, and rejects the licenses that don't match.
 

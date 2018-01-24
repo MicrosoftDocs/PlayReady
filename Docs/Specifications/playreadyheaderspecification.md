@@ -1,12 +1,12 @@
 ---
-author: 
-title: "PlayReady Header Specification"
-description: ""
+author:
+title: PlayReady Header Specification
+description:
 ms.assetid: "5DC27BBD-0ADA-48CD-B1CB-5D46A7059DB4"
 kindex: header, PlayReady specification
 kindex: specification, PlayReady header
-keywords: 
-ms.author: 
+keywords:
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -26,7 +26,7 @@ The PlayReady Object (PRO) contains the following fields.
 | Length| DWORD| 32| The length of the PlayReady Object in bytes. This value should not exceed 15 kilobytes (KB).|
 | PlayReady Object Record Count| WORD| 16| Specifies the number of PlayReady Object Records in the PlayReady Object.|
 | PlayReady Object Records| BYTE array| Varies|Contains a variable number of records that contain information related to licenses and license acquisition.|
- 
+
 ### 1.1 PlayReady Object Records
 
 The PlayReady Object consists of additional sub-objects called PlayReady Object Records. PlayReady Object Records contain the following fields.
@@ -176,7 +176,7 @@ PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September
 
 #### 2.3.1. Differences with other versions
 
-Starting with version 4.0, PlayReady SDKs and are able to process the PlayReady Header versions 4.0, 4.1, 4.2 and 4.3. PlayReady SDKs prior to version 4.0 will return an "unsupported version" error when provided with v4.3 headers. 
+Starting with version 4.0, PlayReady SDKs and are able to process the PlayReady Header versions 4.0, 4.1, 4.2 and 4.3. PlayReady SDKs prior to version 4.0 will return an "unsupported version" error when provided with v4.3 headers.
 
 The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2.0.0:
 
@@ -417,7 +417,7 @@ The tags are described below.
 
 Notes for v4.1:
 
-  *  All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element. 
+  *  All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element.
   *  The PlayReady Header should abide by the W3C Canonical XML v1.1 specifications ([http://www.w3.org/TR/xml-c14n11/](http://www.w3.org/TR/xml-c14n11/)).
   *  The PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
   *  It is recommended that the size of this field should not exceed 1 KB.
@@ -497,15 +497,15 @@ The following table describes the different tags.
 | KEYLEN| Yes| Specifies the size of the content key. Must be set to 16 if **ALGID** is set to "AESCTR" and 7 if **ALGID** is set to "COCKTAIL".|
 | ALGID| Yes| Specifies the encryption algorithm. Must be set to the following value:<br/><br/>AESCTR: Corresponds to the AES algorithm in counter mode.<br/><br/>COCKTAIL: Corresponds to the Cocktail algorithm.|
 | KID| Yes| Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
-| CHECKSUM| No| Contains checksum calculated by using the KID VALUE and content key. See the [Key Checksum Algorithm](#keychecksum) section for details.<br/><br/>Previous versions of PlayReady treated this field as required, so it should be included in any header that is going to be consumed by a previous version of PlayReady.| 
+| CHECKSUM| No| Contains checksum calculated by using the KID VALUE and content key. See the [Key Checksum Algorithm](#keychecksum) section for details.<br/><br/>Previous versions of PlayReady treated this field as required, so it should be included in any header that is going to be consumed by a previous version of PlayReady.|
 | LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed.|
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed.|
 | DS_ID| No| Service ID for the domain service.|
-| CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element.| 
+| CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element.|
 
 Notes for v4.0:
 
-  *  All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element as doing so may clash with future tags that Microsoft defines. 
+  *  All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element as doing so may clash with future tags that Microsoft defines.
   *  The order of child elements within a container element does not matter.
   *  Note that the PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
   *  It is recommended that the size of this field should not exceed 1 KB.
@@ -571,10 +571,10 @@ The following is the PlayReady standard algorithm:
 ```cpp
 byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
 {
-    const int DRM_AES_KEYSIZE_128 = 16;    
+    const int DRM_AES_KEYSIZE_128 = 16;
     byte[] contentKey = new byte[DRM_AES_KEYSIZE_128];
     //
-    //  Truncate the key seed to 30 bytes, key seed must be at least 30 bytes long. 
+    //  Truncate the key seed to 30 bytes, key seed must be at least 30 bytes long.
     //
     byte[] truncatedKeySeed = new byte[30];
     Array.Copy(keySeed, truncatedKeySeed, truncatedKeySeed.Length);
@@ -599,7 +599,7 @@ byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
     sha_B.TransformFinalBlock(truncatedKeySeed, 0, truncatedKeySeed.Length);
     byte[] sha_B_Output = sha_B.Hash;
     //
-    //  Create sha_C_Output buffer.  It is the SHA of the truncatedKeySeed, the keyIdAsBytes, 
+    //  Create sha_C_Output buffer.  It is the SHA of the truncatedKeySeed, the keyIdAsBytes,
     //  the truncatedKeySeed again, and the keyIdAsBytes again.
     //
     SHA256Managed sha_C = new SHA256Managed();

@@ -1,13 +1,13 @@
 ﻿---
 author:
-title: "PlayReady and Other Protection Technologies"
-description: ""
+title: PlayReady and Other Protection Technologies
+description:
 ms.assetid: "4bd6d175-18c2-1014-3762-73379579bbc5"
 kindex: content, about moving PlayReady
 kindex: moving, about PlayReady content
 kindex: about, moving PlayReady content
 kindex: PlayEnabler, moving PlayReady content
-keywords:  PlayRedy and other protection technologies
+keywords:  PlayReady and other protection technologies
 ms.author:
 ms.topic: conceptual
 ms.prod: playready
@@ -18,7 +18,7 @@ ms.technology: drm
 # PlayReady and Other Protection Technologies
 
 
-PlayReady systems are able to interoperate with other content protection systems through the following features discussed in this topic:  
+PlayReady systems are able to interoperate with other content protection systems through the following features discussed in this topic:
 
    *  Common Encryption
 
@@ -66,7 +66,7 @@ Here is the content flow in the overall system: 
     b.  The DRM B client uses the DRM B Header information to request a license from the service's DRM B license server, which returns a license containing the CK.
 
     c.  The DRM B client uses the CK to decrypt the protected content and render it.
-    
+
 For additional information about the MPEG Common Encryption Standard, see: 
 
    *  [MPEG Common Encryption](https://en.wikipedia.org/wiki/MPEG_Common_Encryption)
@@ -75,9 +75,9 @@ For additional information about the MPEG Common Encryption Standard, see: 
 
 > [!NOTE]
 > This mechanism can be extended to content encrypted with multiple keys, for example, in multi-track or multi-quality content where different tracks are encrypted with different content keys, or in content where content keys are changed periodically (rotating keys). 
-    
 
-## Play enablers  
+
+## Play enablers
 
 A **PlayEnabler** represents a technology that content from a PlayReady client is allowed to play to. For example: 
 

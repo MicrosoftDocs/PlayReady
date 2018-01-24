@@ -1,7 +1,7 @@
 ---
 author:
-title: "Key and Key IDs (KIDs)"
-description: ""
+title: Key and Key IDs (KIDs)
+description:
 ms.assetid: "cb010bd9-14d4-b6fb-60d4-48a37caa379f"
 kindex: key and key IDs (KIDs)
 kindex: KIDs, overview

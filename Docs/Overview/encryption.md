@@ -1,7 +1,7 @@
 ---
 author:
-title: "Encryption"
-description: ""
+title: PlayReady Content Encryption
+description: PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in clients.
 ms.assetid: "4B45DCD6-73FE-45B4-A5DF-926942695B7B"
 kindex: encryption, PlayReady content
 kindex: content, PlayReady encryption

@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady Overview"
-description: ""
+title: PlayReady Overview
+description:
 ms.assetid: "e3af1d6c-e65f-d73c-821b-f506704599d5"
 kindex: introduction, to Microsoft PlayReady content access technology
 kindex: content access technology, introduction to Microsoft PlayReady

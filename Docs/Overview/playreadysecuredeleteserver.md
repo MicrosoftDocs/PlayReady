@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady Secure Delete"
-description: "The PlayReady Secure Delete feature allows service providers to receive secure acknowledgement when a persistent license is deleted by the app on the client."
+title: PlayReady Secure Delete
+description: The PlayReady Secure Delete feature allows service providers to receive secure acknowledgement when a persistent license is deleted by the app on the client.
 ms.assetid: "012a9779-4bc0-450f-a1ec-ef93c9d25a8e"
 kindex: license, Secure Delete
 kindex: processing, Secure Delete
@@ -33,7 +33,7 @@ Before Secure Delete occurs, the application or client first instantiates a Play
 
 Next, PlayReady stores the license in the data store (HDS, Hashed Data Storage), along with a record of the license session blob, which is composed of a session identifier (SessionId) and one or more key identifiers (KIDs). When the application or client initiates a license deletion request, it will call the appropriate APIs to remove the license(s) associated with the KID from the data store. During a non-Secure Delete license removal process, PlayReady removes the license(s) from the data store without further action. Using Secure Delete, PlayReady not only removes the license(s) associated with the KID from the data store, but also generates a Secure Delete challenge that contains the SessionId and KID(s) (Steps 12-13 in the figure above).
 
-The application or client then sends the Secure Delete challenge to the Secure Delete server, which then processes the challenge. 
+The application or client then sends the Secure Delete challenge to the Secure Delete server, which then processes the challenge.
 
 After processing the Secure Delete challenge, the Secure Delete server sends an un-encrypted, unsigned Secure Delete response that contains a base 64 encoded SessionId to the application (or client).
 

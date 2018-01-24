@@ -1,7 +1,7 @@
 ﻿---
 author:
-title: "PlayReady Content Encryption Overview"
-description: ""
+title: PlayReady Content Encryption Overview
+description:
 ms.assetid: "002abfe2-5478-33da-9fd9-6a1b28f24cdd"
 keywords:  PlayReady content encryption overview,  PlayReady protects content
 ms.author:

@@ -1,7 +1,7 @@
 ---
 author:
-title: "Trusted Clocks"
-description: ""
+title: Trusted Clocks
+description:
 ms.assetid: "5ab667e2-7eb9-df4c-798e-ee3a4b9106a2"
 kindex: clock, about trusted
 kindex: about, trusted clocks
@@ -32,12 +32,12 @@ Client developers can choose amongst two types of PlayReady Trusted Clocks in th
 
 
 ## PlayReady Secure Clock
-A *PlayReady Secure Clock* is "a hardware real-time clock that has been designed to resist unauthorized access at the level defined in the Robustness Rules", as defined in the [Defined Terms document for the Compliance and Robutness Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) 
+A *PlayReady Secure Clock* is "a hardware real-time clock that has been designed to resist unauthorized access at the level defined in the Robustness Rules", as defined in the [Defined Terms document for the Compliance and Robutness Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/)
 
 ![PlayReady Secure Clock](../images/secure_clock.png)
 
 
 ## PlayReady Anti-rollback Clock
-A *PlayReady Anti-rollback Clock* is "a real-time clock that is periodically verified by the PlayReady Final Product to have advanced", as defined in the [Defined Terms document for the Compliance and Robutness Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) 
+A *PlayReady Anti-rollback Clock* is "a real-time clock that is periodically verified by the PlayReady Final Product to have advanced", as defined in the [Defined Terms document for the Compliance and Robutness Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/)
 
 ![PlayReady Anti-rollback Clock](../images/anti_rollback_clock.png)

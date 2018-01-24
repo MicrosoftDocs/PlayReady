@@ -1,12 +1,12 @@
 ---
-author: 
-title: "PlayReady DRM Plugin for Android Microsoft Specification"
-description: ""
+author:
+title: PlayReady DRM Plugin for Android Microsoft Specification
+description:
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
 kindex: PlayReady, DRM Plugin for Android specification
 kindex: specification, PlayReady DRM Plugin for Android
 keywords:  DRM Plugin for Android specification PlayReady,  PlayReady DRM Plugin for Android specification
-ms.author: 
+ms.author:
 ms.topic: conceptual
 ms.prod: xbox
 ms.technology: xboxone
@@ -14,47 +14,47 @@ ms.technology: xboxone
 
 
 # PlayReady DRM Plugin for Android Microsoft Specification
-   
-  
-This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.  
- 
+
+
+This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
+
 <a id="ID4ER"></a>
 
 ## 1. Introduction
-   
-The goal of this specification is to establish guidance for OEMs to implement PlayReady 3.0 based digital rights management (DRM) plug-ins on Android. For reference see [https://developer.android.com/reference/android/media/MediaDrm.html](https://developer.android.com/reference/android/media/MediaDrm.html).  
+
+The goal of this specification is to establish guidance for OEMs to implement PlayReady 3.0 based digital rights management (DRM) plug-ins on Android. For reference see [https://developer.android.com/reference/android/media/MediaDrm.html](https://developer.android.com/reference/android/media/MediaDrm.html).
 
 This specification provides information on how the plug-in APIs map to PlayReady calls.
 
 ## 2. Interfaces
 
-[PlayReadyDrmPlugin](#playreadyplugin) provides the implementation for the DRM plug-in interface. **PlayReadyDrmPlugin** is responsible for wrapping the DRM Manager APIs and doing the proper translation for the parameters as specified by the interface into a format that PlayReady can operate on.   
+[PlayReadyDrmPlugin](#playreadyplugin) provides the implementation for the DRM plug-in interface. **PlayReadyDrmPlugin** is responsible for wrapping the DRM Manager APIs and doing the proper translation for the parameters as specified by the interface into a format that PlayReady can operate on.
 
-![PlayReadyDRMPlugin interface](../images/DrmPlugin.jpg)   
+![PlayReadyDRMPlugin interface](../images/DrmPlugin.jpg)
 
-[PlayReadyCryptoPlugin](#playreadycryptoplugin) provides the implementation for the Crypto plug-in interface, which is responsible for decrypting the samples. The OEM must ensure that the decrypted samples never leave the trusted execution environment (TEE).   
+[PlayReadyCryptoPlugin](#playreadycryptoplugin) provides the implementation for the Crypto plug-in interface, which is responsible for decrypting the samples. The OEM must ensure that the decrypted samples never leave the trusted execution environment (TEE).
 
-![PlayReadyCryptoPlugin interface](../images/CryptoPlugin.jpg) 
+![PlayReadyCryptoPlugin interface](../images/CryptoPlugin.jpg)
 
 ## 3. Operation
 
-The following steps describe a simple playback scenario:   
+The following steps describe a simple playback scenario:
 
    1. The app creates the **MediaDrm** object, which will result in the instantiation of [PlayReadyDrmPlugin](#playreadydrmplugin).
 
-   1. Then call [openSession](#opensession), which will result in the initialization of the DRM Manager.  
+   1. Then call [openSession](#opensession), which will result in the initialization of the DRM Manager.
 
-   1. The app will then call [getKeyRequest](#getkeyrequest) and pass the content header extracted from the content as the *initData* parameter. In addition, the app can also pass the license acquisition challenge custom data in the *optionalParameters* key-value vector. The license acquisition challenge custom data should then propagate to the DRM Manager as a Drm_Content_SetProperty call.   
+   1. The app will then call [getKeyRequest](#getkeyrequest) and pass the content header extracted from the content as the *initData* parameter. In addition, the app can also pass the license acquisition challenge custom data in the *optionalParameters* key-value vector. The license acquisition challenge custom data should then propagate to the DRM Manager as a Drm_Content_SetProperty call.
 
-   1. At this point the app will be able to execute the (**getKeyRequest** / [provideKeyResponse](#providekeyresponse)) which will produce the equivalent (Drm_LicenseAcq_GenerateChallenge) / Drm_LicenseAcq_ProcessResponse) calls on the DRM Manager.   
+   1. At this point the app will be able to execute the (**getKeyRequest** / [provideKeyResponse](#providekeyresponse)) which will produce the equivalent (Drm_LicenseAcq_GenerateChallenge) / Drm_LicenseAcq_ProcessResponse) calls on the DRM Manager.
 
-   1. The app can then instantiate a **MediaCrypto** object that will create an instance of a [PlayReadyCryptoPlugin](#playreadycryptoplugin) interface (wrapping DRM_DECRYPT_CONTEXT) when the Drm_Reader_Bind call returns.   
+   1. The app can then instantiate a **MediaCrypto** object that will create an instance of a [PlayReadyCryptoPlugin](#playreadycryptoplugin) interface (wrapping DRM_DECRYPT_CONTEXT) when the Drm_Reader_Bind call returns.
 
-   1. Afterwards, all decryption calls will utilize the [PlayReadyCryptoPlugin::decrypt](#decrypt) method, which will return a handle to the decrypted samples.   
+   1. Afterwards, all decryption calls will utilize the [PlayReadyCryptoPlugin::decrypt](#decrypt) method, which will return a handle to the decrypted samples.
 
-![Simple Playback Flowchart](../images/Simple_Playback.jpg)   
+![Simple Playback Flowchart](../images/Simple_Playback.jpg)
 
-![Simple Playback Layers](../images/Simple_Playback_Layers.jpg)   
+![Simple Playback Layers](../images/Simple_Playback_Layers.jpg)
 
 <a id="playreadydrmplugin"></a>
 
@@ -813,16 +813,16 @@ status_t PlayReadyDrmPlugin::signRSA(
 <a id="playreadycryptoplugin"></a>
 
 ## 5. PlayReadyCryptoPlugin
- 
+
 <a id="ID4EN"></a>
 
-   
 
-### PlayReadyCryptoPlugin  
-   
-  
-Constructor to create a **PlayReadyCryptoPlugin** object.   
-   
+
+### PlayReadyCryptoPlugin
+
+
+Constructor to create a **PlayReadyCryptoPlugin** object.
+
 ```cpp
 PlayReadyCryptoPlugin::PlayReadyCryptoPlugin(
       const uint8_t sessionId[16],
@@ -845,16 +845,16 @@ ErrorExit:
   mdrBindResult = dr;
 }
 ```
-  
+
 <a id="ID4EZ"></a>
 
-   
 
-### requiresSecureDecoderComponent  
-   
-  
-A secure decoder component is required to process PlayReady encrypted content.   
-   
+
+### requiresSecureDecoderComponent
+
+
+A secure decoder component is required to process PlayReady encrypted content.
+
 ```cpp
 bool PlayReadyCryptoPlugin::requiresSecureDecoderComponent(const char *mime) const
 {
@@ -862,19 +862,19 @@ bool PlayReadyCryptoPlugin::requiresSecureDecoderComponent(const char *mime) con
   return true;
 }
 ```
-  
+
 <a id="decrypt"></a>
 
-   
 
-### decrypt  
-   
-  
-The decryption called by **MediaCodec**.   
-   
-  
-Since the decryption method will not give out clear samples, but rather an OEM-specific handle, the OEM must ensure that **MediaCodec** is able to operate correctly on that handle.   
-   
+
+### decrypt
+
+
+The decryption called by **MediaCodec**.
+
+
+Since the decryption method will not give out clear samples, but rather an OEM-specific handle, the OEM must ensure that **MediaCodec** is able to operate correctly on that handle.
+
 ```cpp
 ssize_t PlayReadyCryptoPlugin::decrypt(
       bool                 secure,
@@ -911,14 +911,14 @@ ssize_t PlayReadyCryptoPlugin::decrypt(
   // from the subSamples.
   for (idxSubSample = 0; idxSubSample < numSubSamples; idxSubSample++)
   {
-    pdwEncryptedRegionMappings[idx++] 
+    pdwEncryptedRegionMappings[idx++]
           = subSamples[idxSubSample].mNumBytesOfClearData;
-    pdwEncryptedRegionMappings[idx++] 
+    pdwEncryptedRegionMappings[idx++]
           = subSamples[idxSubSample].mNumBytesOfEncryptedData;
 
     // Calculate the total number of bytes
-    cbEncryptedContent += 
-          (subSamples[idxSubSample].mNumBytesOfClearData 
+    cbEncryptedContent +=
+          (subSamples[idxSubSample].mNumBytesOfClearData
           + subSamples[idxSubSample].mNumBytesOfEncryptedData);
   }
 
@@ -953,16 +953,16 @@ ErrorExit:
   return cbOpaqueClearContentHandle;
 }
 ```
-  
+
 <a id="ID4EUB"></a>
 
-   
 
-### ~PlayReadyCryptoPlugin  
-   
-  
-The crypto plug-in destructor must close the decryptor context.   
-   
+
+### ~PlayReadyCryptoPlugin
+
+
+The crypto plug-in destructor must close the decryptor context.
+
 ```cpp
 ~PlayReadyCryptoPlugin::PlayReadyCryptoPlugin()
 {
@@ -974,13 +974,13 @@ The crypto plug-in destructor must close the decryptor context.
 <a id="playreadydrmfactory"></a>
 
 ## 6. PlayReadyDrmFactory and PlayReadyCryptoFactory
-   
-  
-Implementation of the **PlayReadyDrmFactory** and **PlayReadyCryptoFactory** interfaces are required for creating instances of both [PlayReadyDrmPlugin](#playreadydrmplugin) and [PlayReadyCryptoPlugin](#playreadycryptoplugin) respectively.   
-   
-  
-Both factory classes must indicate to callers that they support creating objects that can consume PlayReady protected content by properly implementing the **isCryptoSchemeSupported** API.   
-   
+
+
+Implementation of the **PlayReadyDrmFactory** and **PlayReadyCryptoFactory** interfaces are required for creating instances of both [PlayReadyDrmPlugin](#playreadydrmplugin) and [PlayReadyCryptoPlugin](#playreadycryptoplugin) respectively.
+
+
+Both factory classes must indicate to callers that they support creating objects that can consume PlayReady protected content by properly implementing the **isCryptoSchemeSupported** API.
+
 ```cpp
 
 const uint8_t playready_uuid[16] =
@@ -990,21 +990,20 @@ bool isCryptoSchemeSupported(const uint8_t uuid[16])
 {
   return (!memcmp(uuid, playready_uuid, sizeof(playready_uuid)));
 }
-    
+
 ```
 
 <a id="sessionmanager"></a>
 
 ## 7. SessionManager
-   
-  
-A singleton session manager needs to be implemented to hold the **DRM_APP_CONTEXT** and allow sharing it between the [PlayReadyDrmPlugin](#playreadydrmplugin) and [PlayReadyCryptoPlugin](#playreadycryptoplugin).   
-   
-  
-Other designs that achieve the same purpose are also acceptable.   
- 
-| SessionManager| 
-| --- | 
-| static DRM_APP_CONTEXT soAppContext| 
-| static Mutex sLock| 
- 
+
+
+A singleton session manager needs to be implemented to hold the **DRM_APP_CONTEXT** and allow sharing it between the [PlayReadyDrmPlugin](#playreadydrmplugin) and [PlayReadyCryptoPlugin](#playreadycryptoplugin).
+
+
+Other designs that achieve the same purpose are also acceptable.
+
+| SessionManager|
+| --- |
+| static DRM_APP_CONTEXT soAppContext|
+| static Mutex sLock|

@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady Product Versions"
-description: "Feature availability for each version of the PlayReady products."
+title: PlayReady Product Versions
+description: Feature availability for each version of the PlayReady products.
 ms.assetid: "b1fe306d-2ef3-565a-ae60-cea1592ce0e8"
 kindex: product versions, about PlayReady
 kindex: versions, about PlayReady product

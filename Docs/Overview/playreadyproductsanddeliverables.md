@@ -1,7 +1,7 @@
 ---
 author:
-title: "PlayReady Products and Deliverables"
-description: ""
+title: PlayReady Products and Deliverables
+description:
 ms.assetid: "53B49621-E528-43FA-B054-BB38442DF666"
 kindex: PlayReady, products and deliverables
 kindex: products, PlayReady
