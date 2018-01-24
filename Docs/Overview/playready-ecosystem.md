@@ -16,7 +16,7 @@ ms.technology: drm
 # PlayReady Ecosystem
 
 
-Clients and servers are the two main components in the PlayReady ecosystem. These components communicate using protocols specified by Microsoft. Content is protected by a content packaging service using PlayReady, then transferred to clients that decrypt the content by using information stored in a license. The information in this section serves as a primer to the PlayReady concepts that are provided as scenarios in [Common PlayReady Scenarios](commonplayreadyscenarios.md).
+Clients and servers are the two main components in the PlayReady ecosystem. These components communicate using protocols specified by Microsoft. Content is protected by a content packaging service using PlayReady, then transferred to clients that decrypt the content by using information stored in a license. The information in this section serves as a primer to the PlayReady concepts that are provided as scenarios in [Common PlayReady Scenarios](common-playready-scenarios.md).
 
 <a id="ID4EV"></a>
 
@@ -78,7 +78,7 @@ The following steps describe the content and license flow for license acquisitio
 
 
 
-For more information about license acquisition, see [License Acquisition](licenseacquisition.md).
+For more information about license acquisition, see [License Acquisition](license-acquisition.md).
 
-The PlayReady encryption and licensing process is more fully explained in [Basic encryption and licensing process](simpleendtoendsystem.md#basicprocess).
+The PlayReady encryption and licensing process is more fully explained in [Basic encryption and licensing process](simple-end-to-end-system.md#basicprocess).
 

@@ -28,22 +28,22 @@ Clients acquire licenses either directly from license servers or through a proxy
 
 ## In this section
 
-[Output Protection Levels](outputprotectionlevels.md)
+[Output Protection Levels](output-protection-levels.md)
 
-[License Acquisition](licenseacquisition.md)
+[License Acquisition](license-acquisition.md)
 
-[License Chaining](licensechaining.md)
+[License Chaining](license-chaining.md)
 
-[Embedded Licenses](embeddedlicenses.md)
+[Embedded Licenses](embedded-licenses.md)
 
-[License Nonce](licensenonce.md)
+[License Nonce](license-nonce.md)
 
-[Key and Key IDs](keyandkeyidskids.md)
+[Key and Key IDs](key-and-key-ids-kids.md)
 
-[License and Policies](licenseandpolicies.md)
+[License and Policies](license-and-policies.md)
 
-[Licenses Restricted by Binding Policy](licensesrestrictedbybindingpolicy.md)
+[Licenses Restricted by Binding Policy](licenses-restricted-by-binding-policy.md)
 
-[Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md)
+[Licenses Restricted by Extensible Policy](licenses-restricted-by-extensible-policy.md)
 
-[Best Practices for License Policies](policiesbestpractices.md)
+[Best Practices for License Policies](policies-best-practices.md)

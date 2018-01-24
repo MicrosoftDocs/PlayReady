@@ -21,8 +21,8 @@ Several different types of encryption are used to protect content. Microsoft Pla
 
 ## In this section
 
-[Content Encryption and Delivery](contentencryptionanddelivery.md)
+[Content Encryption and Delivery](content-encryption-and-delivery.md)
 
-[PlayReady Content Encryption Overview](playreadycontentencryptionoverview.md)
+[PlayReady Content Encryption Overview](playready-content-encryption-overview.md)
 
-[PlayReady Content Encryption Modes](playreadycontentencryptionmodes.md)
+[PlayReady Content Encryption Modes](playready-content-encryption-modes.md)

@@ -23,11 +23,11 @@ This section contains PlayReady implementation scenarios that illustrate the typ
 
 ## In this section
 
-[Rental Content](scenariorentalcontent.md)
+[Rental Content](scenario-rental-content.md)
 
-[Subscription Content](scenariosubscriptioncontent.md)
+[Subscription Content](scenario-subscription-content.md)
 
-[Purchased Content](scenariopurchasedcontent.md)
+[Purchased Content](scenario-purchased-content.md)
 
-[Live TV](scenariolivetv.md)
+[Live TV](scenario-live-tv.md)
 

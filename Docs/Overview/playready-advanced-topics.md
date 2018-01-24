@@ -19,17 +19,17 @@ This section covers more advanced features in the PlayReady technology.
 
 ## In this section
 
-[License Chaining](licensechaining.md)
+[License Chaining](license-chaining.md)
 
-[Embedded Licenses](embeddedlicenses.md)
+[Embedded Licenses](embedded-licenses.md)
  
-[License Nonce](licensenonce.md) 
+[License Nonce](license-nonce.md) 
 
-[Licenses Restricted by Binding Policy](licensesrestrictedbybindingpolicy.md) 
+[Licenses Restricted by Binding Policy](licenses-restricted-by-binding-policy.md) 
 
-[Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md) 
+[Licenses Restricted by Extensible Policy](licenses-restricted-by-extensible-policy.md) 
 
-[PlayReady and Other Protection Technologies](playreadyandotherprotectiontechnologies.md) 
+[PlayReady and Other Protection Technologies](playready-and-other-protection-technologies.md) 
 
 
 

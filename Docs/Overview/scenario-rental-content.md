@@ -45,7 +45,7 @@ A typical example would be:
 
 
 
-Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](trustedclocks.md).
+Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](trusted-clocks.md).
 
 
 The following figure indicates the interactions between clients and servers in the rental content scenario.
@@ -86,7 +86,7 @@ When streaming rental media, content continuously plays back while it's being tr
 
       The most obvious case would be non-persistent licenses. Non-persistent licenses are stored in volatile memory (RAM) and only last for as long as the current session. Non-persistent licenses are well adapted to the streaming scenario, because for streaming, the device has to be connected anyway, and can afford acquiring a non-persistent license just in time at the time of playback.
 
-      A non-persistent license that is pre-acquired will also shorten the time to first frame. For more information, see [License Generation and Issuance](licensepersistence.md).
+      A non-persistent license that is pre-acquired will also shorten the time to first frame. For more information, see [License Generation and Issuance](license-persistence.md).
 
       Another way to optimize the time to first frame when streaming rental content is to leverage "PlayReady Limited Duration Licenses." While the user is presented a page with a list of videos to select, licenses with a very small duration are pre-acquired in the background (typically thirty seconds). These licenses include the restriction "Real Time Expiration," which ensure that the client will actually stop playing back with this license after thirty seconds. Then the user can select one of the listed videos to play. At this time, playback can start immediately. The player requests a full rental license (for 48 hours) for the video selected by the user, and the player then seamlessly binds to the rental license while playing back. This optimization is possible on PlayReady version 3.0 or later clients, which support real time expiration and non-persistent license delivery in batches.
 

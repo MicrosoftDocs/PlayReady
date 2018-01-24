@@ -34,7 +34,7 @@ A device that is embedding a DRM client (using the Content Decryption Module (CD
 
    *  On HTML5, the [Encrypted Media Extensions (EME)](http://www.w3.org/TR/encrypted-media/).
 
-   *  On Android, the [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady DRM Plugin for Android Microsoft Specification](../Specifications/playreadydrmpluginforandroidspecification.md) for more information.
+   *  On Android, the [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady DRM Plugin for Android Microsoft Specification](../Specifications/playready-drm-plugin-for-android-specification.md) for more information.
 
 There is another possible deployment model&mdash;developing the porting kit in the application. How you do this is entirely up to you (that is, whether you develop it yourself, or use an SDK supplied by a [PlayReady Partner](https://www.microsoft.com/playready/partners/), and will not be discussed in this document.
 

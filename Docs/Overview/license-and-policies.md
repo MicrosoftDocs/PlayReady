@@ -64,7 +64,7 @@ This policy is by definition a Must Understand and Mandatory (meaning, not Best 
   *  Not bind the license if the current time is past the Expiration value. 
  
 >[!NOTE]
->Whenever a license server sets an Absolute Expiration policy in a license, Microsoft strongly recommends that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](policiesbestpractices.md) for more details.
+>Whenever a license server sets an Absolute Expiration policy in a license, Microsoft strongly recommends that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](policies-best-practices.md) for more details.
 
 ### Begin Date Policy 
 
@@ -80,7 +80,7 @@ This policy is by definition a Must Understand and Mandatory (meaning, not Best 
   *  Compare the current time from the PlayReady Trusted Clock System with the Begin Date value.
   *  Not bind the license if the current time is before the Begin Time value.
 
-For more information, see [Using BeginDate with EndDate](policiesbestpractices.md#begindate) 
+For more information, see [Using BeginDate with EndDate](policies-best-practices.md#begindate) 
 
 ### Expiration After First Play Policy 
 
@@ -94,7 +94,7 @@ Besides scenarios in which content can be played back depending on a begin time 
 
 PlayReady clients all have a property set in their Unit-level Client Certificate called the Client Security Level. When a license server sends a license to a client, it includes in the license the MinimumSecurityLevel policy and sets its value to 150, 2000, or 3000. This value means that the license can be bound and content can be decrypted only on clients that have this Security Level, or a higher one.
 
-See the [Client Security Level](securitylevel.md#securitylevelpolicy) page for more information about that policy.
+See the [Client Security Level](security-level.md#securitylevelpolicy) page for more information about that policy.
 
 ### Output Control for Uncompressed Digital Video Content Policy 
 
@@ -119,6 +119,6 @@ PlayReady licensed companies have access to a more comprehensive documentation p
 
 ## See also
 
-[Licenses Restricted by Binding Policy](licensesrestrictedbybindingpolicy.md)
+[Licenses Restricted by Binding Policy](licenses-restricted-by-binding-policy.md)
 
-[Licenses Restricted by Extensible Policy](licensesrestrictedbyextensiblepolicy.md)
+[Licenses Restricted by Extensible Policy](licenses-restricted-by-extensible-policy.md)

@@ -50,7 +50,7 @@ The purchased content scenario performs the following steps:
 The figure above illustrates either a download-and-play model or a streaming model. Other scenarios would lead to a slightly different illustration. For example, live streaming would perform the packaging/encryption in real-time in step 2.
 
 
-Optionally, purchased content can be shared across devices using domains and embedded licenses. For more information, see [PlayReady Domains](playreadydomainserver.md) and [Embedded Licenses](embeddedlicenses.md).
+Optionally, purchased content can be shared across devices using domains and embedded licenses. For more information, see [PlayReady Domains](playready-domain-server.md) and [Embedded Licenses](embedded-licenses.md).
 
 
 For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.

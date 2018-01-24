@@ -61,7 +61,7 @@ Complete information about certificates and how to obtain different types of cer
 
 PlayReady Server SDK is delivered as two Microsoft MSI files that contain the libraries, samples, and tools required to develop a PlayReady license server, PlayReady domain server, PlayReady metering server, PlayReady secure stop server, or PlayReady secure delete server. In addition, you will also be supplied with the PlayReady documentation and any additional current information in the PlayReady Server SDK readme file.
 
-For more information on PlayReady Server SDK, see [PlayReady Server SDK](playreadyserversdk.md).
+For more information on PlayReady Server SDK, see [PlayReady Server SDK](playready-server-sdk.md).
 
 ### PlayReady Server on Azure
 
@@ -89,7 +89,7 @@ Silverlight is a deprecated application framework running on Windows 7 and Mac O
 
 PlayReady Device Porting Kit is delivered as a Microsoft MSI file that contains the libraries, samples, tools, and source code required to create portable devices for use with digital content that was protected with PlayReady technology.
 
-For more information on PlayReady Device Porting Kit, see [PlayReady Device Porting Kit](playreadyportingkit.md).
+For more information on PlayReady Device Porting Kit, see [PlayReady Device Porting Kit](playready-porting-kit.md).
 
 ### PlayReady documentation
 
@@ -161,7 +161,7 @@ See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page 
 
 If you are developing an encoder utilizing PlayReady technologies, you will need to include a PlayReady Header in the encrypted content. The PlayReady Header contains information about the content being played back, including the key identifiers (KIDs) that identify the keys used to encrypt the data, the default license acquisition URL of the PlayReady license server, and any custom data that you want to include. The key and KID used to encrypt the content must be shared with the PlayReady license server that will be issuing the licenses for that specific content, typically through a Key Management System.
 
-For more information about encrypting content and the PlayReady Header, see [Content Encryption and Delivery](contentencryptionanddelivery.md) and the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/).
+For more information about encrypting content and the PlayReady Header, see [Content Encryption and Delivery](content-encryption-and-delivery.md) and the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/).
 
 >[!NOTE]
 >Microsoft does not provide a Key Management System with PlayReady.
@@ -187,7 +187,7 @@ The following table clarifies whether a PlayReady Client needs to be developed o
 
 If you are designing a device with PlayReady installed in hardware or PlayReady on an integrated circuit, it is up to you to supply any hardware or software required to port the PlayReady Device Porting kit to your hardware. Some integrated circuits designed by [PlayReady Partners](https://www.microsoft.com/playready/partners/) already have PlayReady installed on the chip, and you could use these integrated circuits while designing your device.
 
-For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](securitylevel.md#hardwarevssoftware).
+For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](security-level.md#hardwarevssoftware).
 
 ### Windows or Xbox application
 
