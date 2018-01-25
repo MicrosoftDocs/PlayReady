@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady Servers
-description:
+description: This topic describes the different types of PlayReady Servers.
 ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
 kindex: server, PlayReady license
 kindex: license, PlayReady server
@@ -16,6 +16,7 @@ ms.technology: drm
 
 
 ## PlayReady License Server
+
 A PlayReady license server allows process incoming license acquisition requests from clients, generate licenses, and issue them in a license acquisition response back to clients.
 
 For more information about PlayReady domains, see [PlayReady License Server](playready-license-server.md).
@@ -45,7 +46,7 @@ For more information about PlayReady Secure Stop, see [PlayReady Secure Stop Ser
 
 PlayReady Secure Delete allows service providers to receive secure acknowledgement of license deletion. This optional feature provides a PlayReady Secure Delete server with a means to track which licenses are available and which have been deleted on a particular client.
 
-For more information about PlayReady Secure Delete, see [PlayReady Secure Delete Server](playready-secure-delete-server.md).
+For more information about PlayReady Secure Delete, see [PlayReady Secure Delete](playready-secure-delete.md).
 
 ## Development and operation by a third party
 
@@ -64,4 +65,4 @@ You can either develop and deploy these servers yourself, or these services can 
 
 [PlayReady Secure Stop Server](playready-secure-stop-server.md)
 
-[PlayReady Secure Delete Server](playready-secure-delete-server.md)
+[PlayReady Secure Delete Server](playready-secure-delete.md)

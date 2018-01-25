@@ -1,7 +1,7 @@
 ---
 author:
 title: License Acquisition
-description:
+description: To play protected content, a valid license for the content must be available.
 ms.assetid: "bfd615d3-0dfc-b261-b346-456e7aa617a5"
 kindex: license acquisition, about
 kindex: about, license acquisition

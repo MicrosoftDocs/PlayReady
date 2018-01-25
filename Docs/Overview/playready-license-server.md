@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady License Server
-description:
+description: The process of obtaining a license to play back PlayReady protected content is handled by a PlayReady license server.
 ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
 kindex: server, PlayReady license
 kindex: license, PlayReady server

@@ -1,7 +1,7 @@
 ---
 author:
 title: License and Policies
-description:
+description: During license acquisition, the client sends a challenge to the PlayReady license server containing the content header and information about the user's device.
 ms.assetid: "BD5E39E2-20B2-42A5-9D4F-D109DD4E67DE"
 kindex: policies, license
 kindex: license, policies

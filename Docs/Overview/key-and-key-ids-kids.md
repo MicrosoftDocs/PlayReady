@@ -1,7 +1,7 @@
 ---
 author:
 title: Key and Key IDs (KIDs)
-description:
+description: Every media file protected by PlayReady has a PlayReady Object, which contains several pieces of information that PlayReady needs.
 ms.assetid: "cb010bd9-14d4-b6fb-60d4-48a37caa379f"
 kindex: key and key IDs (KIDs)
 kindex: KIDs, overview

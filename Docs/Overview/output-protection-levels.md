@@ -1,7 +1,7 @@
 ---
 author:
 title: Output Protection Levels
-description:
+description: This topic describes some of the general behavior of output protection levels.
 ms.assetid: "538c8046-99bf-f922-321f-4425f02d8bbd"
 kindex: output protection levels, about
 kindex: about, output protection levels

@@ -1,7 +1,7 @@
 ---
 author:
 title: Licenses Restricted by Binding Policy
-description:
+description: Licenses may be bound to entities such as a client or a domain.
 ms.assetid: "02874cfb-f124-7be2-0319-6a8c15197f99"
 kindex: licenses, restricted by binding policy
 kindex: restrictions, licenses restricted by binding policy

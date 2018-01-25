@@ -1,7 +1,7 @@
 ---
 author:
 title: License Nonce
-description:
+description: A PlayReady client includes a random GUID called the license nonce in every license request that it generates for a license server.
 ms.assetid: "9F5227F8-83AD-4B6D-A4E3-B06183879629"
 kindex: nonce, license
 kindex: license, nonce

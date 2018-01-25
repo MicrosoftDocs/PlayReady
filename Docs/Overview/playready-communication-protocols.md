@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady Communication Protocols
-description:
+description: PlayReady clients communicate with PlayReady servers to acquire licenses and perform additional operations related to the management of rights set by services for clients.
 ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
 kindex: SOAP, PlayReady protocols
 kindex: protocols, PlayReady communication

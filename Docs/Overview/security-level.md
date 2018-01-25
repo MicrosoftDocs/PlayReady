@@ -1,7 +1,7 @@
 ---
 author:
 title: Security Level
-description:
+description: The PlayReady Client Security Level is a property of the client (device or application) that defines how robust the client is against unauthorized use.
 ms.assetid: "352220F0-2566-431E-8CC3-DC649B5E3CF2"
 kindex: security, level
 kindex: level, security
@@ -13,7 +13,9 @@ ms.technology: drm
 ---
 
 # Security Level
+
 ## Client Security Level
+
 The PlayReady Client Security Level is a property of the client (device or application) that defines how robust the client is against unauthorized use. The higher the Security Level is, the better the client is robust or hardened.
 
 PlayReady currently defines three levels:

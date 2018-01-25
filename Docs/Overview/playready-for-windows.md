@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady for Windows
-description:
+description: Microsoft provides a PlayReady PC SDK integrated in the Windows SDK.
 ms.assetid: "01e7b2ed-2204-9f0c-9d2d-901b4fe5f7c0"
 kindex: PlayReady PC SDK, overview
 kindex: overview, PlayReady PC SDK

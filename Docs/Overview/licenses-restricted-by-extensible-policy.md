@@ -1,7 +1,7 @@
 ---
 author:
 title: Licenses Restricted by Extensible Policy
-description:
+description: The Extensible Media Rights (XMR) system is a binary system used to convey media usage rights and restrictions.
 ms.assetid: "5fc141a7-025e-32d9-7879-ce481c29eaaa"
 kindex: licenses, restricted by extensible policy
 kindex: restrictions, licenses restricted by extensible policy

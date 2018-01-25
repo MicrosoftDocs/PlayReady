@@ -1,7 +1,7 @@
 ---
 author:
 title: Porting Kit Version Compatibility with Server SDK Versions
-description:
+description: The following table lists the compatibility between the various PlayReady Device Porting Kit and PlayReady Server SDK versions.
 ms.assetid: "e8840970-b510-dd44-9481-0d670775daf9"
 kindex: porting kit, version compatibility with Server SDK
 kindex: Server SDK, version compatibility with porting kit

@@ -14,7 +14,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady Secure Delete Server
+# PlayReady Secure Delete
 
 
 Introduced in PlayReady version 4.0, *PlayReady Secure Delete* is a feature that allows service providers to receive secure acknowledgement when a persistent license is deleted by the application on the client. Previously, when a license was deleted, service providers were not notified when deletion was completed. With PlayReady Secure Delete, the following operations are possible.

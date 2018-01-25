@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady Individualization
-description:
+description: Individualization is the process of updating the PlayReady runtime on the client computer, allowing licenses to be bound to the client computer.
 ms.assetid: "2d0eed43-5a52-a642-ff7f-aa1927766e5a"
 kindex: individualization, about
 kindex: about, individualization

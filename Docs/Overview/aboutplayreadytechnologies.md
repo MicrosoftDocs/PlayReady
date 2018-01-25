@@ -32,7 +32,7 @@ Microsoft's implementations of the fundamental technologies discussed in this se
 
 [PlayReady Domains](playready-domain-server.md)
 
-[PlayReady Secure Delete](playready-secure-delete-server.md)
+[PlayReady Secure Delete](playready-secure-delete.md)
 
 [PlayReady Secure Stop](playready-secure-stop-server.md)
 

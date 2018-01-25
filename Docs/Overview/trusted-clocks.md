@@ -1,7 +1,7 @@
 ---
 author:
 title: Trusted Clocks
-description:
+description: A PlayReady Trusted Clock is a general term for a clock that is used to enforce time-based limitations set to PlayReady protected content on PlayReady clients.
 ms.assetid: "5ab667e2-7eb9-df4c-798e-ee3a4b9106a2"
 kindex: clock, about trusted
 kindex: about, trusted clocks

@@ -1,7 +1,7 @@
 ﻿---
 author:
 title: PlayReady and Other Protection Technologies
-description:
+description: PlayReady systems are able to interoperate with other content protection systems.
 ms.assetid: "4bd6d175-18c2-1014-3762-73379579bbc5"
 kindex: content, about moving PlayReady
 kindex: moving, about PlayReady content

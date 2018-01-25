@@ -1,7 +1,7 @@
 ---
 author:
 title: Glossary
-description:
+description: Contains a glossary of PlayReady terms.
 ms.assetid: "07554286-539a-072a-14d9-81200b223c50"
 kindex: glossary
 keywords: glossary

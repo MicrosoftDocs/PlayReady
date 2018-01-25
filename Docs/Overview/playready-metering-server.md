@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady Metering
-description:
+description: Metering is the process for counting the number of times content is played.
 ms.assetid: "fec11f72-95f0-a80c-83cd-beafe53b4a57"
 kindex: metering, about PlayReady
 kindex: about, PlayReady metering

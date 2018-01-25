@@ -1,7 +1,7 @@
 ---
 author:
 title: PlayReady and Silverlight
-description:
+description: This topic discusses PlayReady support in Silverlight applications.
 ms.assetid: "cfce96cc-41c3-cd90-f872-66a503fcfb13"
 kindex: PlayReady and Silverlight
 keywords:
@@ -15,6 +15,7 @@ ms.technology: drm
 # PlayReady and Silverlight
 
 ## Web plug-ins phasing out
+
 The commercial media industry is undergoing a major transition as content providers move away from proprietary
 web plug-in based delivery mechanisms (such as Flash or Silverlight), and replace them with unified plug-in free
 video players that are based on HTML5 specifications and commercial media encoding capabilities. Browsers are

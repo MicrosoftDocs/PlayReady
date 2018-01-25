@@ -1,7 +1,7 @@
 ---
 author:
 title: Simple End to End System
-description:
+description: In typical use, Microsoft PlayReady protects content by providing licenses for media files.
 ms.assetid: "121F7DEA-A0D1-4279-9BBF-D8EBEA1F894C"
 kindex: purpose, of PlayReady
 kindex: PlayReady, basic purpose

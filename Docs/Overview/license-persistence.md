@@ -1,7 +1,7 @@
 ---
 author:
 title: Persistent and Non-persistent Licenses
-description:
+description: License servers built using PlayReady Server SDK issue licenses to clients.
 ms.assetid: "3da1f73f-e8a0-aa6a-a9cf-24a74226311b"
 kindex: license, generation and issuance
 kindex: generating, licenses

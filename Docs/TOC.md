@@ -60,7 +60,7 @@
 
 ### [PlayReady Secure Stop Server](Overview/playready-secure-stop-server.md)
 
-### [PlayReady Secure Delete Server](Overview/playready-secure-delete-server.md)
+### [PlayReady Secure Delete](Overview/playready-secure-delete.md)
 
 ## [PlayReady Clients](Overview/playready-clients.md)
 
