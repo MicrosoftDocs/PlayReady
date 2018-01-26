@@ -24,6 +24,6 @@ PlayReady clients communicate with PlayReady servers to acquire licenses and per
 
 [PlayReady Client-Server Protocol](playreadyclientserverprotocol.md)
 
-[Microsoft Services for PlayReady Clients](microsoftplayreadyservices.md)
+[PlayReady Secure Clock Services for PlayReady Clients](secureclockservices.md)
 
 [Client Owner Services for PlayReady Clients](clientplayreadyservices.md)

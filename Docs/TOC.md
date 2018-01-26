@@ -76,7 +76,7 @@
 
 ### [PlayReady Client-Server Protocol](Overview/playreadyclientserverprotocol.md)
 
-### [Microsoft Services for PlayReady Clients](Overview/microsoftplayreadyservices.md)
+### [PlayReady Secure Clock Services for PlayReady Clients](Overview/secureclockservices.md)
 
 ### [Client Owner Services for PlayReady Clients](Overview/clientplayreadyservices.md)
 
@@ -97,6 +97,8 @@
 ## [Specifications](Specifications/specifications.md)
 
 ### [PlayReady Header Object Specification](Specifications/playreadyheaderspecification.md)
+
+### [DASH using Microsoft PlayReady Specification](dashplayreadyspecification.md)
 
 ### [PlayReady DRM Plug-in for Android Specification](Specifications/playreadydrmpluginforandroidspecification.md)
 
