@@ -19,7 +19,7 @@ ms.technology: drm
 
 ## In this section
 
-[PlayReady Client Architectures](playready-client-architectures.md)
+[PlayReady Client Architectures](client-architectures.md)
  
 [PlayReady Trusted Clocks](trusted-clocks.md) 
 

@@ -43,62 +43,57 @@ The following table shows the current availability and percentage of units that 
 <table>
   <tr>
     <th></th>
-    <th>In the hardware</th>
-    <th>In the OS</th>
+    <th>Embedded in the device</th>
     <th>In the application</th>
   </tr>
   <tr>
     <td>MacOS</td>
-    <td></td>
-    <td></td>
+    <td>No</td>
     <td>Silverlight and 3rd party SDKs</td>
   </tr>
   <tr>
     <td>iOS</td>
-    <td></td>
-    <td></td>
+    <td>No</td>
     <td>1st and 3rd party SDKs</td>
   </tr>
   <tr>
     <td>Apple TV OS</td>
-    <td></td>
-    <td></td>
+    <td>No</td>
     <td>3rd party SDKs</td>
   </tr>
   <tr>
     <td>Chrome OS</td>
-    <td></td>
-    <td></td>
+    <td>No</td>
     <td></td>
   </tr>
   <tr>
     <td>Android Mobile</td>
-    <td colspan="2" align="center">Some OEMs (42% units)</td>
+    <td>Yes on some models</td>
     <td>3rd party SDKs</td>
   </tr>
   <tr>
     <td>Android TV</td>
-    <td colspan="2" align="center">All OEMs (100% units)</td>
+    <td>Yes on all models</td>
     <td></td>
   </tr>
   <tr>
     <td>Linux TVs</td>
-    <td colspan="2" align="center">Most OEMs (80% units)</td>
+    <td>Yes on most models</td>
     <td></td>
   </tr>
   <tr>
     <td>Consoles</td>
-    <td colspan="2" align="center">PlayStations and Xbox (87% units)</td>
+    <td>Yes on PlayStations and Xbox</td>
     <td></td>
   </tr>
   <tr>
     <td >Network Receivers</td>
-    <td colspan="2" align="center">Most OEMs (95% units)</td>
+    <td>Yes on most models</td>
     <td></td>
   </tr>
   <tr>
     <td>Blu Ray Disc Players</td>
-    <td colspan="2" align="center">Most OEMs (80% units)</td>
+    <td>Yes on most models</td>
     <td></td>
   </tr>
 </table>

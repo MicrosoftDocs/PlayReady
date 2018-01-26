@@ -22,7 +22,7 @@ PlayReady clients communicate with PlayReady servers to acquire licenses and per
 
 ## In this section
 
-[PlayReady Client-Server Protocol](playready-client-server-protocol.md)
+[PlayReady Client-Server Protocol](client-server-protocol.md)
 
 [Microsoft Services for PlayReady Clients](microsoft-playready-services.md)
 

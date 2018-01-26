@@ -19,7 +19,7 @@ ms.technology: drm
 
 A PlayReady license server allows process incoming license acquisition requests from clients, generate licenses, and issue them in a license acquisition response back to clients.
 
-For more information about PlayReady domains, see [PlayReady License Server](playready-license-server.md).
+For more information about PlayReady domains, see [PlayReady License Server](license-server.md).
 
 ## PlayReady Domain server
 
@@ -28,25 +28,25 @@ An optional PlayReady domain server allows you to manage content access for mult
 > [!NOTE]
 > A PlayReady domain is not the same as network or Web domains.
 
-For more information about PlayReady domains, see [PlayReady Domain Server](playready-domain-server.md).
+For more information about PlayReady domains, see [PlayReady Domain Server](domains.md).
 
 ## PlayReady Metering server
 
 An optional PlayReady metering server provides a process that indicates how many times specific content has been played. For example, you could use this metering aggregation service in a subscription scenario to track content usage and charge the use appropriately.
 
-For more information about PlayReady metering, see [PlayReady Metering Server](playready-metering-server.md).
+For more information about PlayReady metering, see [PlayReady Metering Server](metering.md).
 
 ## PlayReady Secure Stop server
 
 An optional PlayReady Secure Stop server provides the means for a PlayReady device to confidently assert to a media streaming service that media playback has stopped for any given piece of content. This capability ensures your media streaming services provide accurate enforcement and reporting of usage limitations on different devices for a given account.
 
-For more information about PlayReady Secure Stop, see [PlayReady Secure Stop Server](playready-secure-stop-server.md).
+For more information about PlayReady Secure Stop, see [PlayReady Secure Stop Server](secure-stop.md).
 
 ## PlayReady Secure Delete server
 
 PlayReady Secure Delete allows service providers to receive secure acknowledgement of license deletion. This optional feature provides a PlayReady Secure Delete server with a means to track which licenses are available and which have been deleted on a particular client.
 
-For more information about PlayReady Secure Delete, see [PlayReady Secure Delete](playready-secure-delete.md).
+For more information about PlayReady Secure Delete, see [PlayReady Secure Delete](secure-delete.md).
 
 ## Development and operation by a third party
 
@@ -55,14 +55,14 @@ You can either develop and deploy these servers yourself, or these services can 
 
 ## In this section
 
-[PlayReady License Server](playready-license-server.md)
+[PlayReady License Server](license-server.md)
 
 [Best Practices for License Policies](policies-best-practices.md)
 
-[PlayReady Domain Server](playready-domain-server.md)
+[PlayReady Domain Server](domains.md)
 
-[PlayReady Metering Server](playready-metering-server.md)
+[PlayReady Metering Server](metering.md)
 
-[PlayReady Secure Stop Server](playready-secure-stop-server.md)
+[PlayReady Secure Stop Server](secure-stop.md)
 
-[PlayReady Secure Delete Server](playready-secure-delete.md)
+[PlayReady Secure Delete](secure-delete.md)

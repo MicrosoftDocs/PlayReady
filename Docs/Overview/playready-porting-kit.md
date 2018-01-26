@@ -16,7 +16,7 @@ ms.technology: drm
 # PlayReady Device Porting Kit
 
 
-PlayReady Device Porting Kit (Device PK) contains ANSI C source code designed to help developers create portable devices for use with digital content that was protected with PlayReady technology. With this porting kit, PlayReady technology can then be translated to a wide variety of system architectures using different operating system environments and various device classes such as mobile phones, set-top boxes, and portable media players.
+PlayReady Device Porting Kit (Device PK, PK, or DPK) contains ANSI C source code designed to help developers create portable devices for use with digital content that was protected with PlayReady technology. With this porting kit, PlayReady technology can then be translated to a wide variety of system architectures using different operating system environments and various device classes such as mobile phones, set-top boxes, and portable media players.
 
 
 PlayReady Device Porting Kit provides features you can use to enable your hardware devices to render protected digital content. The porting kit is a non-optimized, platform-independent, source-code implementation of a PlayReady client.

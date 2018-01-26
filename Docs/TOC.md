@@ -1,8 +1,8 @@
 # [Microsoft PlayReady](index.md)
 
-## [PlayReady Overview](Overview/playready-overview.md)
+## [PlayReady Overview](Overview/overview.md)
 
-### [PlayReady Ecosystem](Overview/playready-ecosystem.md)
+### [PlayReady Ecosystem](Overview/ecosystem.md)
 
 ### [Simple End to End System](Overview/simple-end-to-end-system.md)
 
@@ -36,7 +36,7 @@
 
 ### [PlayReady for Windows](Overview/playready-for-windows.md)
 
-### [PlayReady and Silverlight](Overview/playready-and-silverlight.md)
+### [PlayReady and Silverlight](Overview/silverlight.md)
 
 ### [PlayReady Product Versions](Overview/playready-product-versions.md)
 
@@ -44,27 +44,27 @@
 
 ### [Content Encryption and Delivery](Overview/content-encryption-and-delivery.md)
 
-### [PlayReady Content Encryption Overview](Overview/playready-content-encryption-overview.md)
+### [PlayReady Content Encryption Overview](Overview/content-encryption-overview.md)
 
-### [PlayReady Content Encryption Modes](Overview/playready-content-encryption-modes.md)
+### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
 
 ## [PlayReady Servers](Overview/playready-servers.md)
 
-### [PlayReady License Server](Overview/playready-license-server.md)
+### [PlayReady License Server](Overview/license-server.md)
 
 ### [Best Practices for License Policies](Overview/policies-best-practices.md)
 
-### [PlayReady Domain Server](Overview/playready-domain-server.md)
+### [PlayReady Domain Server](Overview/domains.md)
 
-### [PlayReady Metering Server](Overview/playready-metering-server.md)
+### [PlayReady Metering Server](Overview/metering.md)
 
-### [PlayReady Secure Stop Server](Overview/playready-secure-stop-server.md)
+### [PlayReady Secure Stop Server](Overview/secure-stop.md)
 
-### [PlayReady Secure Delete](Overview/playready-secure-delete.md)
+### [PlayReady Secure Delete](Overview/secure-delete.md)
 
 ## [PlayReady Clients](Overview/playready-clients.md)
 
-### [PlayReady Client Architectures](Overview/playready-client-architectures.md)
+### [PlayReady Client Architectures](Overview/client-architectures.md)
 
 ### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
 
@@ -74,13 +74,13 @@
 
 ## [PlayReady Communication Protocols](Overview/playready-communication-protocols.md)
 
-### [PlayReady Client-Server Protocol](Overview/playready-client-server-protocol.md)
+### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
 
 ### [Microsoft Services for PlayReady Clients](Overview/microsoft-playready-services.md)
 
-### [Client Owner Services for PlayReady Clients](Overview/client-playready-services.md)
+### [Client Owner Services](Overview/client-playready-services.md)
 
-## [PlayReady Advanced Topics](Overview/playready-advanced-topics.md)
+## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
 ### [License Chaining](Overview/license-chaining.md)
 
@@ -98,7 +98,7 @@
 
 ### [PlayReady Header Object Specification](Specifications/playready-header-specification.md)
 
-### [PlayReady DRM Plug-in for Android Specification](Specifications/playready-drm-plugin-for-android-specification.md)
+### [PlayReady DRM Plugin for Android Specification](Specifications/playready-drm-plugin-for-android-specification.md)
 
 ## [Glossary](Overview/glossary.md)
 

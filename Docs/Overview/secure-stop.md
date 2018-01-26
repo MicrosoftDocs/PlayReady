@@ -14,7 +14,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady Secure Stop Server
+# PlayReady Secure Stop
 
 
 Introduced in PlayReady version 3.0, *PlayReady Secure Stop* is a feature that provides the means for a PlayReady device to confidently assert to a media streaming service that media playback has stopped for any given piece of content. This capability ensures your media streaming services provide accurate enforcement and reporting of usage limitations on different devices for a given account.

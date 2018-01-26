@@ -13,7 +13,7 @@ ms.technology: playreadydpk
 # PlayReady Content Encryption Modes
 
 
-This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption Overview](playready-content-encryption-overview.md). See [Glossary](glossary.md) for encryption terms and definitions.
+This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption Overview](content-encryption-overview.md). See [Glossary](glossary.md) for encryption terms and definitions.
 
 PlayReady version 1.0 introduced AES-128 CTR content encryption mode, in addition to the Microsoft-specific COCKTAIL encryption mode previously used in WMDRM (Windows Media Digital Rights Management). *AES-128 CTR* content encryption mode uses AES keys, with a length of 128 bits used on the content files in Counter Mode (CTR).
 

@@ -13,7 +13,7 @@ ms.technology: drm
 ---
 
 
-# Revocation
+# PlayReady Revocation
 
 
 Revocation is a process to identify clients that have compromised security, and prevent those clients from getting access to additional licenses for decrypting content that has been protected.

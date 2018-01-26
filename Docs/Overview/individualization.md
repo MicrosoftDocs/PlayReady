@@ -13,7 +13,7 @@ ms.technology: drm
 ---
 
 
-# Individualization
+# PlayReady Individualization
 
 
 Individualization is the process of updating the PlayReady runtime on the client computer, allowing licenses to be bound to the client computer.

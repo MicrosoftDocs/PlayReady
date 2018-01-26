@@ -19,7 +19,7 @@ Microsoft PlayReady content access technology provides platforms for protecting 
 
 ## In this section
 
-[PlayReady Ecosystem](playready-ecosystem.md)
+[PlayReady Ecosystem](ecosystem.md)
 
 [Simple End to End System](simple-end-to-end-system.md)
 

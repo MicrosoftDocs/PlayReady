@@ -13,7 +13,7 @@ ms.prod: playready
 ms.technology: drm
 ---
 
-# PlayReady Server&mdash;PlayReady Client Communication
+# PlayReady Client-Server Protocol
 
 
 Most communication between a PlayReady client and a PlayReady server are managed through the use of Simple Object Access Protocol (SOAP) messages. This communication begins when the client sends a SOAP message containing a challenge. The server responds with a SOAP message that contains a response. Both the challenge and the response contain information in XML format that signifies the type of challenge or response, and the various elements needed to process and identify the specific transaction that needs to take place.
