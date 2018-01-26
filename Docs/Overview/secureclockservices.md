@@ -1,6 +1,6 @@
 ---
 author:
-title: "Microsoft Services for PlayReady Clients"
+title: "PlayReady Secure Clock Services for PlayReady Clients"
 description: ""
 ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
 kindex: SOAP, PlayReady protocols
@@ -13,7 +13,7 @@ ms.prod: playready
 ms.technology: drm
 ---
 
-# Microsoft Services for PlayReady Clients
+# PlayReady Secure Clock Services for PlayReady Clients
 
 Microsoft operates a service to which a PlayReady client can connect to acquire the current time and set their secure clocks. The following table lists information about the existing versions of the secure clock services provided by Microsoft. The Porting Kit column describes which porting kits support each of the secure clock service versions.
 

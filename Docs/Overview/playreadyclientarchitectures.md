@@ -14,11 +14,7 @@ ms.technology: drm
 
 
 # PlayReady Client Architectures
-   
-  
-This topic provides a brief description the different ways to implement a DRM client in a device, how to develop applications using DRM, and gives details of the overall PlayReady Device Porting Kit structure.
-
-A PlayReady client can be either a device or an application that receives content for playback. The PlayReady Device Porting Kit is intended for original equipment manufactures (OEMs) who are developing devices (such as physical hardware or operating systems), and for application developers who are integrating their applications in a device. 
+This topic provides an overview of the different PlayReady Client architectures that are available. A PlayReady client can be either a device or an application that receives content for playback. The PlayReady Device Porting Kit is intended for original equipment manufactures (OEMs) who are developing devices (such as physical hardware or operating systems), and for application developers who are integrating their applications in a device. 
 
 The following figure shows the client implementation options available using PlayReady.
 

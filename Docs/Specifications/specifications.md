@@ -21,4 +21,6 @@ This section contains a list of public specifications that provide background in
 
 [PlayReady Header Object Specification](playreadyheaderspecification.md)
 
+[DASH Content Protection using Microsoft PlayReady Specification](dashplayreadyspecification.md)
+
 [PlayReady DRM Plug-in for Android Microsoft Specification](playreadydrmpluginforandroidspecification.md)
