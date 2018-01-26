@@ -62,7 +62,7 @@
 
 ### [PlayReady Secure Delete Server](Overview/playreadysecuredeleteserver.md)
 
-## [PlayReady Clients](Overview/playreadyclients.md)
+## [PlayReady Clients](Overview/clients.md)
 
 ### [PlayReady Client Architectures](Overview/playreadyclientarchitectures.md)
 

@@ -22,7 +22,7 @@ A PlayReady client can be either a device or an application that receives conten
 
 The following figure shows the client implementation options available using PlayReady.
 
-![PlayReady Client Options](../images/client_options.png)
+![PlayReady Client Options](../images/client_applications.png)
 
 A device that is embedding a DRM client (using the Content Decryption Module (CDM)) exposes an API to applications that has different forms. Some of these forms are:
 
