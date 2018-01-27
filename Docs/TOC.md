@@ -98,7 +98,7 @@
 
 ### [PlayReady Header Object Specification](Specifications/playready-header-specification.md)
 
-### [DASH using Microsoft PlayReady Specification](dashplayreadyspecification.md)
+### [DASH using Microsoft PlayReady Specification](Specifications/dashplayreadyspecification.md)
 
 ### [PlayReady DRM Plugin for Android Specification](Specifications/playready-drm-plugin-for-android-specification.md)
 

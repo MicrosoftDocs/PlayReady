@@ -23,4 +23,4 @@ This section contains a list of public specifications that provide background in
 
 [DASH Content Protection using Microsoft PlayReady Specification](dashplayreadyspecification.md)
 
-[PlayReady DRM Plug-in for Android Microsoft Specification](playreadydrmpluginforandroidspecification.md)
+[PlayReady DRM Plug-in for Android Microsoft Specification](playready-drm-plugin-for-android-specification.md)
