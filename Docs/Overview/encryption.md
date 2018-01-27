@@ -1,12 +1,12 @@
 ---
-author: 
-title: "Encryption"
-description: ""
+author:
+title: PlayReady Content Encryption
+description: PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in clients.
 ms.assetid: "4B45DCD6-73FE-45B4-A5DF-926942695B7B"
 kindex: encryption, PlayReady content
 kindex: content, PlayReady encryption
 keywords: encrypt, encryption, content encryption
-ms.author: 
+ms.author:
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -17,12 +17,12 @@ ms.technology: drm
 
 PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in clients. With this technology, content owners and services distributing high-valued content can monetize their content with full control over their business model.
 
-Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) and CTR (Counter Mode) modes, as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms. 
-  
+Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) and CTR (Counter Mode) modes, as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms.
+
 ## In this section
 
-[Content Encryption and Delivery](contentencryptionanddelivery.md)
+[Content Encryption and Delivery](content-encryption-and-delivery.md)
 
-[PlayReady Content Encryption Overview](playreadycontentencryptionoverview.md)
+[PlayReady Content Encryption Overview](content-encryption-overview.md)
 
-[PlayReady Content Encryption Modes](playreadycontentencryptionmodes.md)
+[PlayReady Content Encryption Modes](content-encryption-modes.md)
