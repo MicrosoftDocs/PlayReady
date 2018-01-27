@@ -76,9 +76,9 @@
 
 ### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
 
-### [PlayReady Secure Clock Services for PlayReady Clients](Overview/secureclockservices.md)
+### [PlayReady Secure Clock Services for PlayReady Clients](Overview/secure-clock-services.md)
 
-### [Client Owner Services](Overview/client-playready-services.md)
+### [OEM or App Vendor Services for PlayReady Clients](Overview/client-playready-services.md)
 
 ## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
