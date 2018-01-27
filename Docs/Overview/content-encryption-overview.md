@@ -1,10 +1,10 @@
 ﻿---
-author:
+author: rolandlefranc
 title: PlayReady Content Encryption Overview
 description: This topic provides an overview of the encryption mechanisms and file format concepts used to protect content in the PlayReady ecosystem.
 ms.assetid: "002abfe2-5478-33da-9fd9-6a1b28f24cdd"
 keywords:  PlayReady content encryption overview,  PlayReady protects content
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

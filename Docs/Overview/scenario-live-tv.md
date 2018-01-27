@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: Scenario Live TV
 description: In the live TV scenario, a service sends live streams to users and users' clients on the Internet or in a closed network.
 ms.assetid: "9c919b0f-c860-9d89-1297-16922e8de0e4"
 kindex: scenarios, Live TV
 kindex: Live TV, scenario
 keywords:  Live TV scenarios,  scenario Live TV
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

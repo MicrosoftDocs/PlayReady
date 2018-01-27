@@ -1,5 +1,5 @@
 ---
-author:
+author: rolandlefranc
 title: Licenses Restricted by Binding Policy
 description: Licenses may be bound to entities such as a client or a domain.
 ms.assetid: "02874cfb-f124-7be2-0319-6a8c15197f99"
@@ -10,7 +10,7 @@ kindex: policies, licenses restricted by binding policy
 kindex: machine binding
 kindex: domain, binding
 keywords:  restricted by binding policy licenses,  licenses restricted by binding policy restrictions,  licenses restricted by binding policy,  licenses restricted by binding policy policies, machine binding,  binding domain
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

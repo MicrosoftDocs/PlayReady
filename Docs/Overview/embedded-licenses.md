@@ -6,7 +6,7 @@ ms.assetid: "97eab5cb-afc4-fde8-91d2-904213fb3b54"
 kindex: licenses, about embedded
 kindex: about, embedded licenses
 keywords:  about embedded licenses,  embedded licenses about
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

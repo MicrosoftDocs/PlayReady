@@ -1,5 +1,5 @@
 ---
-author:
+author: rolandlefranc
 title: Content Encryption and Delivery
 description: The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks.
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
@@ -7,7 +7,7 @@ kindex: content, encryption and delivery
 kindex: encryption, and content delivery
 kindex: content, encryption and delivery
 keywords: content, encryption, delivery
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
