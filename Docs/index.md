@@ -72,6 +72,24 @@ The latest version of PlayReady, PlayReady 4.0, was released in October of 2017.
         </div>
         </a>
     </li>
+        <li>
+        <a href="https://www.microsoft.com/playready/features/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_get-started.svg" alt="PlayReady for iOS or Android" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>PlayReady for iOS or Android</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
     <li>
         <a href="http://test.playready.microsoft.com/">
         <div class="cardSize">
@@ -101,13 +119,32 @@ The latest version of PlayReady, PlayReady 4.0, was released in October of 2017.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>PlayReady White Papers and Specifications</h3>
+                        <h3>PlayReady White Papers</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
+        <li>
+        <a href="https://www.microsoft.com/PlayReady/licensing/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="PlayReady Licensing Options" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>PlayReady Licensing Options</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+
   </ul>
 
 ---
