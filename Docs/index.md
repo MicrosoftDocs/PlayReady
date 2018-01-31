@@ -115,7 +115,7 @@ The latest version of PlayReady, PlayReady 4.0, was released in October of 2017.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_tools.svg" alt="PlayReady White Papers" />
+                            <img src="/media/common/i_learn-about.svg" alt="PlayReady White Papers" />
                         </div>
                     </div>
                     <div class="cardText">
