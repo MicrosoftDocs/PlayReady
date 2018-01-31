@@ -12,7 +12,7 @@
 
 ### [License Persistence](Overview/license-persistence.md)
 
-### [Client Security Level](Overview/security-level.md)
+### [Security Level](Overview/security-level.md)
 
 ### [License and Policies](Overview/license-and-policies.md)
 
@@ -28,17 +28,17 @@
 
 ### [Scenario: Live TV](Overview/scenario-live-tv.md)
 
-## [PlayReady Products and Deliverables](Overview/playready-products-and-deliverables.md)
+## [PlayReady Products and Deliverables](Overview/products-and-deliverables.md)
 
-### [PlayReady Server SDK](Overview/playready-server-sdk.md)
+### [PlayReady Server SDK](Overview/server-sdk.md)
 
-### [PlayReady Device Porting Kit](Overview/playready-porting-kit.md)
+### [PlayReady Device Porting Kit](Overview/device-porting-kit.md)
 
 ### [PlayReady for Windows](Overview/playready-for-windows.md)
 
 ### [PlayReady and Silverlight](Overview/silverlight.md)
 
-### [PlayReady Product Versions](Overview/playready-product-versions.md)
+### [PlayReady Product Versions](Overview/product-versions.md)
 
 ## [Encryption](Overview/encryption.md)
 
@@ -48,21 +48,21 @@
 
 ### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
 
-## [PlayReady Servers](Overview/playready-servers.md)
+## [PlayReady Servers](Overview/servers.md)
 
 ### [PlayReady License Server](Overview/license-server.md)
 
 ### [Best Practices for License Policies](Overview/policies-best-practices.md)
 
-### [PlayReady Domain Server](Overview/domains.md)
+### [PlayReady Domain Server](Overview/domain-server.md)
 
-### [PlayReady Metering Server](Overview/metering.md)
+### [PlayReady Metering Server](Overview/metering-server.md)
 
-### [PlayReady Secure Stop Server](Overview/secure-stop.md)
+### [PlayReady Secure Stop Server](Overview/secure-stop-server.md)
 
-### [PlayReady Secure Delete](Overview/secure-delete.md)
+### [PlayReady Secure Delete](Overview/secure-delete-server.md)
 
-## [PlayReady Clients](Overview/playready-clients.md)
+## [PlayReady Clients](Overview/clients.md)
 
 ### [PlayReady Client Architectures](Overview/client-architectures.md)
 
@@ -72,7 +72,7 @@
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
-## [PlayReady Communication Protocols](Overview/playready-communication-protocols.md)
+## [PlayReady Communication Protocols](Overview/communication-protocols.md)
 
 ### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
 

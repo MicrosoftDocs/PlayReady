@@ -1,6 +1,6 @@
 ---
 author:
-title: PlayReady Metering
+title: PlayReady Metering Server
 description: Metering is the process for counting the number of times content is played.
 ms.assetid: "fec11f72-95f0-a80c-83cd-beafe53b4a57"
 kindex: metering, about PlayReady
@@ -15,7 +15,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady Metering
+# PlayReady Metering Server
 
 
 *Metering* is the process for counting the number of times content is played. Metering is important because it allows a subscription content service provider to offer content on this basis. For example, in North America, if a song is transferred to a "blind" system, in which there will be no monitoring of the usage, a "mechanical royalty" of approximately 8 cents per song is required. On the other hand, if the licensee monitors content usage and reports it, the licensee pays a reduced mechanical royalty of 1 cent for each *play*. This can make a significant difference during transfers of large catalogs of music (for example, 10,000 songs). Even extremely heavy music-listening is likely to generate only 2,000 plays per month ($20 in royalties), whereas the mechanical royalty for these 10,000 songs would have been $800. There is therefore an economic incentive to "meter" content under this circumstance.
@@ -70,24 +70,9 @@ The metering process performs the following steps, as illustrated in the figure:
 
 PlayReady incorporates a protocol to get the metering certificate from the license server.
 
+
+
 <a id="ID4EXC"></a>
-
-
-
-## Initiators
-
-
-PlayReady follows the principles of service orientation, in that a service is a passive piece of code you interact with through messages. As such, services wait for incoming messages before doing any work. Clients are the "initiators" that send messages to services to request work. The communication between server and client is then orchestrated through "endpoints" that the server exposes. These endpoints have three main properties:
-
-   *  An address that signifies where messages are sent
-
-   *  A binding that defines how to send the message
-
-   *  The contract that describes what the message contains
-
-
-<a id="ID4END"></a>
-
 
 
 ## Collecting and updating metering information

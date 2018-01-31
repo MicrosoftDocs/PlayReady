@@ -29,7 +29,7 @@ Microsoft PlayReady content access technology provides platforms for protecting 
 
 [License Persistence](license-persistence.md)
  
-[Client Security Level](security-level.md)
+[Security Level](security-level.md)
 
 [License and Policies](license-and-policies.md)
   

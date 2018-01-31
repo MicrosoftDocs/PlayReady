@@ -30,7 +30,7 @@ Note that the service can deliver multiple licenses in one single license respon
 In a subscription model where a large number of content pieces are played (for example, in a music service where the user downloads thousands of tracks to play offline), the client has to manage thousands of different licenses, one for each content. Because this is a subscription service (for example, it requires a monthly renewal), the licenses that are delivered have an expiration at the renewal date of the monthly subscription, and the user expects all the licenses to be renewed when the monthly fee is paid again.
 
 
-To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. A leaf license may be metered because mechanical royalties (pay per play) tend to be lower when content play counts are monitored. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](license-chaining.md).
+To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](license-chaining.md).
 
 
  ![Subscription Content](../images/image26_9.jpg)
@@ -38,16 +38,11 @@ To optimize this scenario, the service should use chained licenses. Each piece o
 
 The subscription content scenario performs the following steps, as illustrated in the figure.
 
-   1. The service provider transfers unprotected content to the content packaging server.
+   1. The service provider transfers unprotected content to the content packaging server. The service provider transfers the license to the license server.
 
-      The service provider configures the content for metering and transfers the license to the license server.
-
-   1. The service provider transfers protected content to a Web server for distribution. If the subscription service uses metering, the client must acquire a metering certificate before playing back content.
+   1. The service provider transfers protected content to a Web server for distribution.
 
    1. When the client is ready, it can acquire subscription content and a license that expires when the subscription ends.
-
-   1. The client reports metering data to the metering aggregation server for royalty payments.
-
 
 
 The most common delivery mechanisms for subscription content is to stream the protected content from a Web service, or to download the content onto a local device and then play the content.
