@@ -32,7 +32,7 @@ Client developers can choose amongst two types of PlayReady Trusted Clocks in th
 
 
 ## PlayReady Secure Clock
-A *PlayReady Secure Clock* is "a hardware real-time clock that has been designed to resist unauthorized access at the level defined in the Robustness Rules", as defined in the [Defined Terms document for the Compliance and Robutness Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/)
+A *PlayReady Secure Clock* is "a hardware real-time clock that has been designed to resist unauthorized access at the level defined in the Robustness Rules", as defined in the <a href="https://www.microsoft.com/playready/licensing/compliance/" target="_blank">Defined Terms document for the Compliance and Robustness Rules for PlayReady Products</a>.
 
 Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), a *PlayReady Secure Clock* must use a *PlayReady Secure Clock Service* to set its value. Microsoft operates some [*PlayReady Secure Clock Services*](secure-clock-services.md) that device makers can use for this purpose.
 
