@@ -1,6 +1,6 @@
 ---
 author:
-title: PlayReady DRM Plugin for Android Microsoft Specification
+title: PlayReady DRM Plugin for Android Specification
 description: This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
 kindex: PlayReady, DRM Plugin for Android specification
@@ -13,7 +13,7 @@ ms.technology: xboxone
 ---
 
 
-# PlayReady DRM Plugin for Android Microsoft Specification
+# PlayReady DRM Plugin for Android Specification
 
 
 This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
