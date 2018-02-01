@@ -18,15 +18,15 @@ The Security Level is a property of a PlayReady Client, and every license delive
 
 ## The Security Level of a Client
 
-The PlayReady Client Security Level is a property of the client (device or application) that defines how robust the client is against unauthorized use. The higher the Security Level is, the better the client is robust or hardened.
+The PlayReady Client Security Level is a property of the client (device or application) that defines how robust the client is against unauthorized use. The higher the Security Level is, the more robust the client has claimed to be.
 
 PlayReady currently defines three levels:
 
 |Security Level|Purpose|Client Implementation|Version|
 | --- | --- | --- | --- |
 |SL150|For clients under development or under test. <p/>Not suitable for commercial content in a commercial scenario.|Any implementation is acceptable. Assets, Client Secrets, or Content Secrets are not protected at all against unauthorized use.|Any|
-|SL2000|For devices and applications with the standard security consuming commercial content.|For devices and applications.<p/>Assets, Client Secrets, or Content Secrets are protected through software or hardware means.|Any|
-|SL3000|For devices with the highest security consuming the highest quality of commercial content.|For devices only.<p/>Assets, Client Secrets, and Content Secrets are protected through hardware means, using a Trusted Execution Environment (TEE) of the processor. Conformant to a superset of Compliance and Robustness requirements.|PlayReady 3.0 or higher|
+|SL2000|For hardened devices and applications consuming commercial content.|For devices and applications.<p/>Assets, Client Secrets, or Content Secrets are protected through software or hardware means.|Any|
+|SL3000|For hardened devices with the highest security consuming the highest quality of commercial content.|For devices only.<p/>Assets, Client Secrets, and Content Secrets are protected through hardware means, using a Trusted Execution Environment (TEE) of the processor. Conformant to a superset of Compliance and Robustness requirements.|PlayReady 3.0 or higher|
 
 <br />
 Illustration of a SL2000 device or application. The Final Product is hardened and verified against unauthorized use.
