@@ -55,7 +55,7 @@ One of the common restrictions is the absolute time date expiration policy. Ever
 
 A practical example is a user on a client playing content from a monthly subscription service. The monthly renewal day of the service for this user is the 15th of the month. The user starts playback on the 2nd of the month (the 2nd of November, 2017). The license server will give the right to the user until the 15th of the month, and include an Expiration policy set to 11/16/2017, 0:00am. Whenever the user pays the subscription fee for the next month, the service will issue another license with an Expiration date set one month later. 
 
-This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that does include this policy MUST: 
+This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that includes this policy MUST: 
 
   *  Have a PlayReady Trusted Clock System to have a trusted time. A PlayReady Secure Clock or a PlayReady Anti-Rollback Clock are two acceptable forms of PlayReady Trusted Clock Systems for PlayReady Clients.
   *  Have this PlayReady Trusted Clock set.
@@ -72,7 +72,7 @@ Another common restriction is the begin date policy. If it is present, the clien
 
 For business models that require content to be used only for a limited amount of time, such as in a rental scenario, an end date is required to indicate when the license expires and the content can no longer be played (for example, the content can only be played until 5pm EST, May 15, 2018). This is sufficient for a rental scenario. However, specifying a begin date with the end date is a natural impedance to clock rollback attacks.
 
-This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that does include this policy MUST: 
+This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that includes this policy MUST: 
 
   *  Have a PlayReady Trusted Clock System to have a trusted time. A PlayReady Secure Clock or a PlayReady Anti-Rollback Clock are two acceptable forms of PlayReady Trusted Clock Systems for PlayReady Clients.
   *  Have this PlayReady Trusted Clock set.

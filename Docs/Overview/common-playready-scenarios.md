@@ -19,6 +19,10 @@ ms.technology: drm
 This section contains PlayReady implementation scenarios that illustrate the typical ways PlayReady is applied to business practices.
 
 > [!NOTE]
+> These scenarios can be supported on all platforms, all operating systems, whether Windows, iOS, Android, Linux, or other custom OS types. There might be limitations for applications built on these platforms depending on what functionalities are integrated in the platform though.
+
+
+> [!NOTE]
 > The scenarios described in these topics offer one way of enabling a business scenario. There are alternative ways of implementing these PlayReady scenarios.
 
 ## In this section

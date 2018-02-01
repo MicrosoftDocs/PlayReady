@@ -16,15 +16,21 @@ ms.technology: drm
 # PlayReady DRM Plugin for Android Specification
 
 
-This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
+
 
 <a id="ID4ER"></a>
 
 ## 1. Introduction
 
-The goal of this specification is to establish guidance for OEMs to implement PlayReady 3.0 based digital rights management (DRM) plug-ins on Android. For reference see [https://developer.android.com/reference/android/media/MediaDrm.html](https://developer.android.com/reference/android/media/MediaDrm.html).
+This specification establishes guidance for OEMs to implement PlayReady 4.0 based digital rights management (DRM) plug-ins on Android. For reference see [https://developer.android.com/reference/android/media/MediaDrm.html](https://developer.android.com/reference/android/media/MediaDrm.html).
 
 This specification provides information on how the plug-in APIs map to PlayReady calls.
+
+### 1.1. Change History
+
+| Version | Change |
+| --- | --- |
+| May 2016 | Initial version |
 
 ## 2. Interfaces
 

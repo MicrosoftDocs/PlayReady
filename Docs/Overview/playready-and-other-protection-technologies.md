@@ -69,6 +69,12 @@ Here is the content flow in the overall system: 
 
 For additional information about the MPEG Common Encryption Standard, see: 
 
+   * <a href="https://en.wikipedia.org/wiki/MPEG_Common_Encryption" target="_blank">MPEG Common Encryption</a>
+   * <a href="https://w3c.github.io/encrypted-media/format-registry/stream/mp4.html" target="_blank">ISO Common Encryption ('cenc') Protection Scheme for ISO Base Media File Format Stream Format</a>
+   * <a href="https://www.w3.org/TR/2014/WD-encrypted-media-20140828/cenc-format.html" target="_blank">ISO Common Encryption EME Stream Format and Initialization Data</a>
+
+--
+
    *  [MPEG Common Encryption](https://en.wikipedia.org/wiki/MPEG_Common_Encryption)
    *  [ISO Common Encryption ('cenc') Protection Scheme for ISO Base Media File Format Stream Format](https://w3c.github.io/encrypted-media/format-registry/stream/mp4.html)
    *  [ISO Common Encryption EME Stream Format and Initialization Data](https://www.w3.org/TR/2014/WD-encrypted-media-20140828/cenc-format.html)
