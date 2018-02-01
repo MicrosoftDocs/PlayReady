@@ -100,5 +100,6 @@
 
 ### [PlayReady DRM Plugin for Android Specification](Specifications/playready-drm-plugin-for-android-specification.md)
 
-## [Glossary](Overview/glossary.md)
+## [Additional Documentation](Overview/additional-documentation.md)
 
+## [Glossary and Abbreviations](Overview/glossary-and-abbreviations.md)

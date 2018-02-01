@@ -15,9 +15,20 @@ ms.technology: drm
 
 # PlayReady Header Specification
 
+## 1. Introduction
 This specification applies to any end product created with the PlayReady Server Software Development Kit, PlayReady Device Porting Kit, PlayReady PC Software Development Kit, PlayReady iOS SDK, PlayReady Android SDK, Microsoft® Silverlight™, and Microsoft device platform (Windows, Windows Phone, Xbox).
 
-## 1. PlayReady Object (PRO)
+### 1.1. Change History
+
+| Version | Change |
+| --- | --- |
+| November 1, 2017 | Add the Syntax Requirements section. Fix multiples examples with incorrect attribute order (attributes must be in alphabetical order)<p/>|
+| July 12, 2017 | Add PlayReady Header 4.3.0.0 section, supported starting with PlayReady version 4.<p/>Add syntax requirement that all XML nodes must be explicitely closed by a closing tag |
+| April 10, 2015 | Add PlayReady Header 4.2.0.0 section, supported starting with PlayReady version 3 |
+| September, 2011 | Add PlayReady Header 4.1.0.0 section, supported starting with PlayReady version 2 |
+| August 2008 | Initial version documenting the PlayReady Header 4.0.0.0 supported in PlayReady version 1 |
+
+## 2. PlayReady Object (PRO)
 
 The PlayReady Object (PRO) contains the following fields.
 
@@ -27,7 +38,7 @@ The PlayReady Object (PRO) contains the following fields.
 | PlayReady Object Record Count| WORD| 16| Specifies the number of PlayReady Object Records in the PlayReady Object.|
 | PlayReady Object Records| BYTE array| Varies|Contains a variable number of records that contain information related to licenses and license acquisition.|
 
-### 1.1 PlayReady Object Records
+### 2.1 PlayReady Object Records
 
 The PlayReady Object consists of additional sub-objects called PlayReady Object Records. PlayReady Object Records contain the following fields.
 
@@ -47,7 +58,7 @@ The Record Type field has one of the following values.
 | 0x0002| Reserved.|
 | 0x0003| Indicates an Embedded License Store (ELS).|
 
-### 1.2. PlayReady Object Examples
+### 2.2. PlayReady Object Examples
 
 The following structure is a fragmented MP4 file with a PlayReady Object that contains a PlayReady Header:
 
@@ -57,11 +68,11 @@ The following structure is a fragmented MP4 file with a PlayReady Object that co
 
 ![PlayReady Header and ELS in MP4](../images/header_els_mp4.png)
 
-## 2. PlayReady Header (PRH)
+## 3. PlayReady Header (PRH)
 
 The PlayReady Header (PRH) is used by a client to locate or acquire a license for the piece of content it is stored in. It is encoded using UTF-16.
 
-### 2.1. Version support matrix
+### 3.1. Version support matrix
 
 <table>
     <tr>
@@ -101,12 +112,12 @@ The PlayReady Header (PRH) is used by a client to locate or acquire a license fo
     </tr>
 </table>
 
-### 2.2. Syntax Requirements
+### 3.2. Syntax Requirements
 
-#### 2.2.1. Canonicalized
+#### 3.2.1. Canonicalized
 The XML must be canonicalized.
 
-#### 2.2.2. All Node and Attributes names are case-sensitive
+#### 3.2.2. All Node and Attributes names are case-sensitive
 
 <table>
     <tr>
@@ -120,7 +131,7 @@ The XML must be canonicalized.
     </tr>
 </table>
 
-#### 2.2.3. Closing tags must be explicit
+#### 3.2.3. Closing tags must be explicit
 
 All XML nodes must be explicitly closed by a closing tag including those in nodes inside the CUSTOMATTRIBUTES node.
 
@@ -138,7 +149,7 @@ All XML nodes must be explicitly closed by a closing tag including those in node
     </tr>
 </table>
 
-#### 2.2.4. Namespace attributes
+#### 3.2.4. Namespace attributes
 
 All namespace attributes must be before non-namespaces attributes.
 
@@ -155,7 +166,7 @@ Header" version="4.3.0.0"&gt;</td>
     </tr>
 </table>
 
-#### 2.2.5.	Alphabetical order
+#### 3.2.5.	Alphabetical order
 
 All attributes must be in alphabetical order including those in nodes inside the CUSTOMATTRIBUTES node.
 
@@ -170,11 +181,11 @@ All attributes must be in alphabetical order including those in nodes inside the
     </tr>
 </table>
 
-### 2.3. v4.3.0.0
+### 3.3. v4.3.0.0
 
 PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, including the Common Encryption modes CBC1 and CBCS. and also increases the interoperability of PlayReady clients with other DRM systems, as well as existing content.
 
-#### 2.3.1. Differences with other versions
+#### 3.3.1. Differences with other versions
 
 Starting with version 4.0, PlayReady SDKs and are able to process the PlayReady Header versions 4.0, 4.1, 4.2 and 4.3. PlayReady SDKs prior to version 4.0 will return an "unsupported version" error when provided with v4.3 headers.
 
@@ -186,7 +197,7 @@ The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2
      *  When the **ALGID** elements are present, and there is more than one **KID** element in the **KIDS** element, all the **ALGID** values must be the same.
      *  When the **ALGID** element is set to “AESCBC”, the **CHECKSUM** attribute must not be included.
 
-#### 2.3.2. Examples
+#### 3.3.2. Examples
 
 The following is an example of a PlayReady Header 4.3.0.0 with AESCBC keys:
 
@@ -222,7 +233,7 @@ The following is an example of a PlayReady Header 4.3.0.0 with a missing ALGID:
 </WRMHEADER>
 ```
 
-#### 2.3.3.	Format
+#### 3.3.3.	Format
 
 The PlayReady Header v4.3.0.0 has the following syntax.
 
@@ -271,11 +282,11 @@ The tags are described below.
 | CUSTOMATTRIBUTES| No| The content author can add custom XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.
 
-### 2.4. v4.2.0.0
+### 3.4. v4.2.0.0
 
 PlayReady Header v4.2.0.0 was introduced with PlayReady version 3.0 in April 2015 to allow multiple KIDs in a single header. This means that multiple keys can be used to encrypt a single asset, for example when the audio tracks must be encrypted with a different key than the video tracks.
 
-#### 2.4.1. Differences with other versions
+#### 3.4.1. Differences with other versions
 
 PlayReady 3.0 SDKs and later clients are able to process both the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.2 headers. When using the v4.2 header, the client has to know what server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
 
@@ -285,7 +296,7 @@ The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1
   *  The **KID** element located inside the **PROTECTINFO** element has been renamed to **KIDS** and is still optional.
   *  Multiple **KID** elements are located inside the **KIDS** element.
 
-#### 2.4.2. Example
+#### 3.4.2. Example
 
 PlayReady Header 4.2.0.0 with two AESCTR keys:
 
@@ -304,7 +315,7 @@ PlayReady Header 4.2.0.0 with two AESCTR keys:
 </WRMHEADER>
 ```
 
-#### 2.4.3. Format
+#### 3.4.3. Format
 
 The PlayReady Header v4.2.0.0 has the following syntax.
 
@@ -354,11 +365,11 @@ The tags are described below.
 | DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND”. When this tag is present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
  
-### 2.5. v4.1.0.0
+### 3.5. v4.1.0.0
 
 PlayReady Header v4.1.0.0 was introduced with PlayReady version 2.0 in September 2011 to support live linear streams with scalable leaf licenses embedded in the stream. This type of stream requires clients to bind a scalable root license without knowledge of the content encryption key that will be used in the decryptor.
 
-#### 2.5.1. Differences with other versions
+#### 3.5.1. Differences with other versions
 
 PlayReady 2.0 SDKs and later clients are able to process both the v4.0 and v4.1 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.1 headers.
 
@@ -371,7 +382,7 @@ The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0
   *  The **KEYLEN** element has been removed. The **KEYLEN** attribute was previously used to disambiguate cocktail licenses with different length keys. The v4.1 header will break the ability to support anything but 8-byte cocktail keys. If you use cocktail keys that aren't 8-byte, you must use v4.0 headers.
   *  The **ALGID** and **CHECKSUM** elements have been removed since their data is contained within attributes of the **KID** element.
 
-#### 2.5.2. Format
+#### 3.5.2. Format
 
 The PlayReady Header v4.1.0.0 has the following syntax.
 
@@ -422,11 +433,11 @@ Notes for v4.1:
   *  The PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
   *  It is recommended that the size of this field should not exceed 1 KB.
 
-### 2.6. v4.0.0.0
+### 3.6. v4.0.0.0
 
 PlayReady Header v4.0.0.0 was introduced with PlayReady version 1.0 in 2008 and allows a single AESCTR key to support AES encrypted content, or a COCKTAIL key to support WMDRM encrypted content.
 
-#### 2.6.1. Examples
+#### 3.6.1. Examples
 
 PlayReady Header 4.0.0.0:
 
@@ -453,7 +464,7 @@ Base64-encoded PlayReady Object containing a PlayReady Header 4.0.0.0:
 XAMAAAEAAQBSAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AcQA1AEgAZwBDAFQAagA0ADAAawBHAGUATgBWAGgAVABIADkARwBlAHgAdwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgB3ACsATwBaAFYAcgA4AHYAegByAFEAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAHIAbwBmAGYAaQBjAGkAYQBsAHMAaQB0AGUALgBrAGUAeQBkAGUAbABpAHYAZQByAHkALgBtAGUAZABpAGEAcwBlAHIAdgBpAGMAZQBzAC4AdwBpAG4AZABvAHcAcwAuAG4AZQB0AC8AUABsAGEAeQBSAGUAYQBkAHkALwA8AC8ATABBAF8AVQBSAEwAPgA8AEMAVQBTAFQATwBNAEEAVABUAFIASQBCAFUAVABFAFMAPgA8AEkASQBTAF8ARABSAE0AXwBWAEUAUgBTAEkATwBOAD4AOAAuADAALgAxADcAMAA1AC4AMQA5ADwALwBJAEkAUwBfAEQAUgBNAF8AVgBFAFIAUwBJAE8ATgA+ADwALwBDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=
 ```
 
-#### 2.6.2. Format
+#### 3.6.2. Format
 
 The PlayReady Header v4.0.0.0 has the following syntax.
 
@@ -514,7 +525,7 @@ Since version 1.5, PlayReady Server SDK treats the **CHECKSUM** as optional.
 PlayReady Porting Kit 1.2 out of the box requires the **CHECKSUM**.
 PlayReady Porting Kit 2.0 treats the **CHECKSUM** as optional.
  
-## 3. Embedded License Store (ELS)
+## 4. Embedded License Store (ELS)
 
 It is good practice to add an empty Embedded License Store to the PlayReady Object under the following conditions:
 
@@ -531,7 +542,7 @@ This allows a PlayReady client to further embed a domain-bound license in the Pl
 
 <a id="keychecksum"></a>
 
-## 4. Key Checksum Algorithm
+## 5. Key Checksum Algorithm
 
 The checksum algorithm in the PlayReady Header is intended to protect against mismatched keys. In the early days of DRM, songs were encrypted with incorrectly labeled keys. This resulted in white noise being played back when the songs were decrypted. And if the songs were played back loud enough, the playback equipment was destroyed. With the checksum, the content key can be verified as the key that was used to encrypt the file. The algorithm works as follows:
 
@@ -550,7 +561,7 @@ For an **ALGID** value set to “COCKTAIL”, perform the following steps:
 4.	The first 7 bytes of the buffer are extracted and base64 encoded.
 5.	After these steps are performed, the base64-encoded bytes are used as the checksum.
 
-## 5. CUSTOMATTRIBUTES
+## 6. CUSTOMATTRIBUTES
 
 A service provider can add proprietary XML inside the **CUSTOMATTRIBUTES** element of the PlayReady Header. Any tags used inside the **CUSTOMATTRIBUTES** element are guaranteed to not clash with future tags defined by Microsoft.
 
@@ -558,7 +569,7 @@ Microsoft code does not act on any XML inside this element. The service provider
 
 It is recommended that the size of this field should not exceed 1 kilobyte (KB).
 
-## 6. Content Key Seed Algorithm
+## 7. Content Key Seed Algorithm
 
 Services implementing PlayReady must maintain a Key Management System (KMS) to store and manage content keys. Specifically, the values of {KID, Content Key} is stored for each content asset that is managed by the service. These values are stored at encryption time, and retrieved at license issuance time.
 
