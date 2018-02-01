@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: PlayReady Device Porting Kit
 description: PlayReady Device Porting Kit contains ANSI C source code designed to help developers create portable devices for use with digital content protected with PlayReady technology.
 ms.assetid: "a480bc16-79f3-a8b5-c63a-c07cba4ed963"
 kindex: PlayReady Device Porting Kit, overview
 kindex: overview, PlayReady Device Porting Kit
 keywords:  overview PlayReady Device Porting Kit,  PlayReady Device Porting Kit overview
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: Key and Key IDs (KIDs)
 description: Every media file protected by PlayReady has a PlayReady Object, which contains several pieces of information that PlayReady needs.
 ms.assetid: "cb010bd9-14d4-b6fb-60d4-48a37caa379f"
 kindex: key and key IDs (KIDs)
 kindex: KIDs, overview
 keywords: key and key IDs (KIDs),  overview KIDs
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

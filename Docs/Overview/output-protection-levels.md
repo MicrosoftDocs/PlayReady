@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: Output Protection Levels
 description: This topic describes some of the general behavior of output protection levels.
 ms.assetid: "538c8046-99bf-f922-321f-4425f02d8bbd"
 kindex: output protection levels, about
 kindex: about, output protection levels
 keywords:  about output protection levels,  output protection levels about
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

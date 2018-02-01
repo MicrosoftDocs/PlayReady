@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: PlayReady Server SDK
 description: PlayReady Server Software Development Kit (SDK) is a collection of APIs that make it easier for developers to create PlayReady license delivery, domain, metering, secure stop, and secure delete services.
 ms.assetid: "7de2da30-5f9d-3167-a180-2d01a50c6ea7"
 kindex: PlayReady Server SDK, overview
 kindex: overview, PlayReady Server SDK
 keywords:  overview PlayReady Server SDK,  PlayReady Server SDK overview
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
