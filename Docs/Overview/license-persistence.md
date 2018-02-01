@@ -14,7 +14,7 @@ ms.technology: drm
 ---
 
 
-# Persistent, Non-persistent licenses
+# License Persistence
 
 
 License servers built using PlayReady Server SDK issue licenses to clients. These licenses contain policy information for the content with which they are associated. Licenses may be issued over any transport, but typically licenses are issued over the Web.
@@ -28,7 +28,7 @@ PlayReady licenses can be:
 
    *  Non-persistent
 
-      Non-persistent licenses are stored in volatile memory and only last for as long as the current session. Generally, non-persistent licenses are used for immediate playback of content and will require another license when playback begins again. Non-persistent licenses are also known as in-memory licenses
+      Non-persistent licenses are stored in volatile memory and only last for as long as the current session. Generally, non-persistent licenses are used for immediate playback of content and will require another license when playback begins again. Non-persistent licenses are also known as in-memory licenses, or in-memory-only licenses.
 
 
 

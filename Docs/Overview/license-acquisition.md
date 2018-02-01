@@ -114,5 +114,5 @@ Transactions typically occur on the Internet, through HTTP or HTTPS, or on a clo
 They can also be implemented asynchronously, for example with a client posting somewhere the challenge, and a server processing this challenge, generating a response and posting that response in some other location.
 
 > [!NOTE]
-> PlayReady does not support, however, license broadcasting, meaning servers sending licenses to clients on a broadcast network.
+> PlayReady does not support license broadcasting, meaning servers sending licenses to clients on a broadcast network.
 

@@ -13,7 +13,7 @@ As of 2017, thousands of services around the world and more than four billion de
 
 PlayReady 3.0 and later supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) supports other types of content, such as executable applications and ebooks. 
 
-The latest version of PlayReady, PlayReady 4.0, was released in October of 2017. It added support for a whole class of content, content encrypted in AES-CBC mode, in addition to the content encrypted in AES-CTR mode. Content encrypted in AES-CTR has been supported since PlayReady version 1. Learn more about the different versions of PlayReady [here](Overview/playready-product-versions.md). We recommend that services update their license servers to the latest version available, and device makers do the same. However, at all times, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [PlayReady Product Versions](Overview/playready-product-versions.md) to learn more about the inter-operability of PlayReady clients and servers.
+The latest version of PlayReady, PlayReady 4.0, was released in October of 2017. It added support for a whole class of content, content encrypted in AES-CBC mode, in addition to the content encrypted in AES-CTR mode. Content encrypted in AES-CTR has been supported since PlayReady version 1. Learn more about the different versions of PlayReady [here](Overview/product-versions.md). We recommend that services update their license servers to the latest version available, and device makers do the same. However, at all times, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [PlayReady Product Versions](Overview/product-versions.md) to learn more about the inter-operability of PlayReady clients and servers.
 
 
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
@@ -72,6 +72,24 @@ The latest version of PlayReady, PlayReady 4.0, was released in October of 2017.
         </div>
         </a>
     </li>
+        <li>
+        <a href="https://www.microsoft.com/playready/features/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_get-started.svg" alt="PlayReady for iOS or Android" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>PlayReady for iOS or Android</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
     <li>
         <a href="http://test.playready.microsoft.com/">
         <div class="cardSize">
@@ -97,17 +115,36 @@ The latest version of PlayReady, PlayReady 4.0, was released in October of 2017.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="/media/common/i_tools.svg" alt="PlayReady White Papers" />
+                            <img src="/media/common/i_learn-about.svg" alt="PlayReady White Papers" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>PlayReady White Papers and Specifications</h3>
+                        <h3>PlayReady White Papers</h3>
                     </div>
                 </div>
             </div>
         </div>
         </a>
     </li>
+        <li>
+        <a href="https://www.microsoft.com/PlayReady/licensing/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="PlayReady Licensing Options" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>PlayReady Licensing Options</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+
   </ul>
 
 ---

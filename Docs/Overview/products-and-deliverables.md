@@ -61,7 +61,7 @@ Complete information about certificates and how to obtain different types of cer
 
 PlayReady Server SDK is delivered as two Microsoft MSI files that contain the libraries, samples, and tools required to develop a PlayReady license server, PlayReady domain server, PlayReady metering server, PlayReady secure stop server, or PlayReady secure delete server. In addition, you will also be supplied with the PlayReady documentation and any additional current information in the PlayReady Server SDK readme file.
 
-For more information on PlayReady Server SDK, see [PlayReady Server SDK](playready-server-sdk.md).
+For more information on PlayReady Server SDK, see [PlayReady Server SDK](server-sdk.md).
 
 ### PlayReady Server on Azure
 
@@ -89,7 +89,7 @@ Silverlight is a deprecated application framework running on Windows 7 and Mac O
 
 PlayReady Device Porting Kit is delivered as a Microsoft MSI file that contains the libraries, samples, tools, and source code required to create portable devices for use with digital content that was protected with PlayReady technology.
 
-For more information on PlayReady Device Porting Kit, see [PlayReady Device Porting Kit](playready-porting-kit.md).
+For more information on PlayReady Device Porting Kit, see [PlayReady Device Porting Kit](device-porting-kit.md).
 
 ### PlayReady documentation
 

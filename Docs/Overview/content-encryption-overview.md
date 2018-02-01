@@ -108,7 +108,6 @@ It is up to the content provider to ensure that their audio and video content ha
 ## Protected non-audio/video content
 
 
-PlayReady allows you to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, a cell phone game), pictures (for example, cell phone wallpaper), or sounds (for example, cell phone ring tones). This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
+PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
 
-
-Envelope packaging of content enables interesting scenarios that are new to PlayReady. For example, a cell phone video game publisher can create a game and package it using an envelope. That game can be distributed over the Web or super distributed from one game purchaser to another. Before the user can play the game, the user must purchase a license.
+These non audio/video content types are no longer supported in PlayReady 3.0 and later. 

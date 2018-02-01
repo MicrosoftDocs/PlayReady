@@ -13,8 +13,10 @@ ms.technology: drm
 ---
 
 # Security Level
+The Security Level is a property of a PlayReady Client, and every license delivered to a client has a property indicating the minimum Security Level required from a client to allow bind this license.
 
-## Client Security Level
+
+## The Security Level of a Client
 
 The PlayReady Client Security Level is a property of the client (device or application) that defines how robust the client is against unauthorized use. The higher the Security Level is, the better the client is robust or hardened.
 
