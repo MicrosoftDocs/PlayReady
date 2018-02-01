@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: License Chaining
 description: In a license chain, the leaf license contains the content key, and the root license is bound to the computer or device.
 ms.assetid: "170f664b-757b-3677-c5a0-754c5f0ec08a"
 kindex: license chaining, about
 kindex: about, license chaining
 keywords: playready license chaining,  license chaining about
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

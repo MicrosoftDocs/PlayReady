@@ -1,5 +1,5 @@
 ---
-author:
+author: rolandlefranc
 title: Best Practices for License Policies
 description: This section describes best practices for programming license policies in PlayReady.
 ms.assetid: "bfbd5264-5ac4-0359-8a6f-b8bb3db19285"
@@ -7,10 +7,10 @@ kindex: best practices, license policies
 kindex: policies, best practices for license
 kindex: license, best practices for license policies
 keywords:  license policies best practices,  best practices for license policies,  best practices for license policies license
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
-ms.prod: xbox
-ms.technology: xboxone
+ms.prod: playready
+ms.technology: drm
 ---
 
 

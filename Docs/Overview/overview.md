@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: PlayReady Overview
 description: Microsoft PlayReady content access technology provides platforms for protecting digital content from unauthorized usage.
 ms.assetid: "e3af1d6c-e65f-d73c-821b-f506704599d5"
 kindex: introduction, to Microsoft PlayReady content access technology
 kindex: content access technology, introduction to Microsoft PlayReady
 keywords:  to Microsoft PlayReady content access technology introduction,  introduction to Microsoft PlayReady content access technology
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

@@ -1,11 +1,11 @@
 ---
-author:
+author: rolandlefranc
 title: Glossary and Abbreviations
 description: Contains a glossary of PlayReady terms and abbreviations.
 ms.assetid: "07554286-539a-072a-14d9-81200b223c50"
 kindex: glossary
 keywords: glossary
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

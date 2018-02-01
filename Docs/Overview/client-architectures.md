@@ -1,12 +1,12 @@
 ---
-author:
+author: rolandlefranc
 title: PlayReady Client Architectures
 description: This topic provides a brief description on the different ways to implement a DRM client in a device and how to develop applications using DRM.
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
 kindex: clients, architecture
 kindex: PlayReady, client architecture
 keywords: client, architecture, options
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
