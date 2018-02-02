@@ -32,7 +32,7 @@ A device that embeds a DRM client (by using the Content Decryption Module (CDM))
 
    *  On Android, the [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady DRM Plugin for Android Microsoft Specification](../Specifications/playready-drm-plugin-for-android-specification.md) for more information.
 
-There is another possible deployment model&mdash;developing the porting kit in the application. How you do this is entirely up to you (that is, whether you develop it yourself, or use an SDK supplied by a [PlayReady Partner](https://www.microsoft.com/playready/partners/), and will not be discussed in this document.
+There is another possible deployment model &mdash; developing the porting kit in the application. How you do this is entirely up to you (that is, whether you develop it yourself, or use an SDK supplied by a [PlayReady Partner](https://www.microsoft.com/playready/partners/)), and will not be discussed in this document.
 
 The following table shows the current availability and percentage of units that ship PlayReady in non-Windows clients.
 
