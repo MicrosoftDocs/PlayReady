@@ -195,8 +195,12 @@ PlayReady DRM enables developers to create UWP apps capable of providing PlayRea
 
 ## In this section
 
-[Content Encryption and Delivery](content-encryption-and-delivery.md)
+[PlayReady Server SDK](server-sdk.md)
 
-[PlayReady Content Encryption Overview](content-encryption-overview.md)
+[PlayReady Device Porting Kit](device-porting-kit.md)
 
-[PlayReady Content Encryption Modes](content-encryption-modes.md)
+[PlayReady for Windows](playready-for-windows.md)
+
+[PlayReady and Silverlight](silverlight.md)
+
+[PlayReady Product Versions](product-versions.md)

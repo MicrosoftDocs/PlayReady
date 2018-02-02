@@ -144,3 +144,7 @@ To enable this scenario, PlayReady Server SDK allows developers to specify addit
 
 ![PlayReady Export](../images/playready_export.png) 
 
+> [!NOTE]
+> Once exported to a content protection B, content is controlled by the rules of the content protection B. That is, after export from PlayReady to another technology, it is no longer subject to the PlayReady Compliance and Robustness Rules.
+
+

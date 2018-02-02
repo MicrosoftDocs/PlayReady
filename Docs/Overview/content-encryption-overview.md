@@ -46,11 +46,14 @@ This topic provides an overview of the encryption mechanisms and file format con
 The following AES encryption modes are supported:
 
 
-  * **AES 128 CTR mode**&mdash;PlayReady systems can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CTR mode of operation. These include the Common Encryption modes CENC (Common Encryption Scheme) and CENS (Common Encryption Scheme using a pattern of unencrypted/encryption bytes), which are defined in ISO/IEC 23001-7.
+  * **AES 128 CTR mode** &mdash; PlayReady systems can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CTR mode of operation. These include the Common Encryption modes CENC (Common Encryption Scheme) and CENS (Common Encryption Scheme using a pattern of unencrypted/encryption bytes), which are defined in ISO/IEC 23001-7.
 
-  * **AES 128 CBC mode**&mdash;PlayReady systems starting with version 4.0 can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CBC mode of operation. These include the Common Encryption modes CBC1 and CBCS as defined in ISO/IEC 23001-7, and any other format that is encrypted with an AES 128 content key in CBC mode.
+  * **AES 128 CBC mode** &mdash; PlayReady systems starting with version 4.0 can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CBC mode of operation. These include the Common Encryption modes CBC1 and CBCS as defined in ISO/IEC 23001-7, and any other format that is encrypted with an AES 128 content key in CBC mode.
 
 
+> [!NOTE]
+> PlayReady systems with version 1.X, 2.X and 3.X can only protect files encrypted in CTR mode (CENC). CENS is not supported.
+> PlayReady systens with version 4.0 and higher can protect files encrypted in CTR mode (CENC and CENS) and in CBC mode (CBC1 and CBCS).
 
 
 ### ECC algorithms
@@ -58,9 +61,9 @@ The following AES encryption modes are supported:
 
 Microsoft PlayReady systems use ECC (Elliptical curve cryptography) for encrypting content keys and signing protocol messages.
 
-  * **ECC ElGamal algorithm**&mdash;Used for encrypted content keys.
-  * **ECDSA**(Elliptic curve digital signature algorithm)&mdash;Used for signing messages wherever applicable in the PlayReady protocols.
-  * **NIST**&mdash;Microsoft PlayReady systems use standard NIST algorithms for ECC encryption where applicable and is currently using the P-256 elliptic curve.
+  * **ECC ElGamal algorithm** &mdash; Used for encrypted content keys.
+  * **ECDSA** (Elliptic curve digital signature algorithm) &mdash; Used for signing messages wherever applicable in the PlayReady protocols.
+  * **NIST** &mdash; Microsoft PlayReady systems use standard NIST algorithms for ECC encryption where applicable and is currently using the P-256 elliptic curve.
 
 
 
