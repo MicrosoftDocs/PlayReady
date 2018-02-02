@@ -100,8 +100,8 @@ After a client retrieves a protected file, that client needs to acquire a licens
 Each license contains the following information:
 
    *  The content encryption key.
-   *  The rights and conditions of the license.
-   *  Optional attributes, such as a name and description of the license.
+   *  The rights of the license
+   *  The right restrictions and right modifiers, also known as the conditions of the license
 
 Before a client can decrypt the content associated with a license, it must retrieve the policy from the license. The content protection information within the license is encrypted using a client's public key or a client's domain's public key encryption information. The license is considered "bound" to the client or domain that has the private key for decrypting the content protection information.
 
