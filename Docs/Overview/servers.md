@@ -24,7 +24,7 @@ For more information about PlayReady domains, see [PlayReady License Server](lic
 
 ## PlayReady Domain server
 
-An optional PlayReady domain server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients,including mobile device clients.
+An optional PlayReady domain server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients, including mobile device clients.
 
 > [!NOTE]
 > A PlayReady domain is not the same as network or Web domains.

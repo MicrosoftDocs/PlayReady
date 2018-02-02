@@ -54,9 +54,9 @@ The following table lists the compatibility between the various PlayReady Device
 
 &nbsp;
 
-Even though PlayReady v3.x based clients work against a server running Server SDK v2.1 or v2.9, Microsoft recommends that customers running Server SDK v1.5.2 upgrade to Server SDK v3.0 instead of upgrading to Server SDK v2.1 or v2.9. This will ensure that you are on a much more supportable path.
+Even though PlayReady v3.X/4.X based clients work against a server running Server SDK v2.1 or v2.9, Microsoft recommends that customers running Server SDK v1.5.2 upgrade to the latest version of the Server SDK instead of upgrading to Server SDK v2.1 or v2.9. This will ensure that you are on a much more supportable path. The latest version available as of January 2018 is Server SDK 4.0
 
 
-For more information on PlayReady Device Porting Kit and PlayReady Server SDK compatibility and migration considerations, see the *Compatibility and Migration Considerations for PlayReady 3.0* white paper on the [PlayReady Documents](https://www.microsoft.com/playready/documents/) website.
+For more information on PlayReady Device Porting Kit and PlayReady Server SDK compatibility and migration considerations, see the *Compatibility and Migration Considerations for PlayReady 3.0/4.0* white paper on the [PlayReady Documents](https://www.microsoft.com/playready/documents/) website.
 
 

@@ -40,7 +40,7 @@
 
 ### [PlayReady Product Versions](Overview/product-versions.md)
 
-## [Encryption](Overview/encryption.md)
+## [Content Encryption](Overview/content-encryption.md)
 
 ### [Content Encryption and Delivery](Overview/content-encryption-and-delivery.md)
 

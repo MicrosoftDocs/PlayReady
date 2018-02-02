@@ -27,7 +27,7 @@ The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
 ![Common Encryption Modes](../images/ciphermodes.jpg)
 
-PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the key that has been mainly supported by PlayReady clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady clients. However, Common Encryption modes CENS and CBC1 are allowed.
+PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady clients. However, Common Encryption modes CENS and CBC1 are allowed.
 
 ## Support for AES CBC and CBCS
 
@@ -148,7 +148,7 @@ The following figure shows a content flow, where the license request is using th
 
 ### Why the ALGID value is missing
 
-We recommend that encryptors always include the same ALGID value in the PlayReady Header that they included when they processed the content.
+Microsoft recommends that encryptors always include the same ALGID value in the PlayReady Header that they included when they processed the content.
 
 In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. Clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
 
@@ -184,7 +184,7 @@ Examples:
 * Generating a license with a CBC key when the incoming license request does not indicate support for AES CBC, will throw an exception.
 
 >[!IMPORTANT]
->Services must not encrypt a content in CTR mode and in CBC mode using the same {KID, Ck}. 
+>Services must not encrypt a single piece of content in CTR mode and in CBC mode using the same {KID, Ck}. 
 >  *  For functional reasons, a client acquiring both a license for {KID, Ck, AESCTR} and for {KID, Ck, AESCBC} would not function. 
 >  *  For robustness reasons, an attacker having access to the same content encrypted with the same key both in CBC and CTR modes could more easily decrypt content without authorization.
 

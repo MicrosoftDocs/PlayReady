@@ -42,14 +42,16 @@ The client on the consumer's portable device or personal computer provides funct
 Domain, metering, secure stop, and secure delete support is also included with PlayReady Server SDK.
 
 <a id="ID4EUB"></a>
+<a id="proactivereactive"></a>
 
 
 ## Proactive, Reactive license acquisition
 
 There are two modes for license acquisition:
 
-   *  *Proactive license acquisition*&mdash;Your application explicitly creates a license acquirer and uses it to proactively acquire a license. Proactive license acquisition is typically used to acquire a root license or a persistent license.
-   *  *Reactive license acquisition*&mdash;When the PlayReady media player plays back protected content that does not yet have a usable license, it automatically uses the associated license acquirer to acquire the license before resuming the playback. Reactive license acquisition can be used to acquire simple or leaf licenses (both persistent and non-persistent).
+   *  **Proactive license acquisition** &mdash; The client application explicitly initiates a license request before playback begins. This is typically a scenario where the system is programmed such that the application has browsed content, and would take the time to "proactively" acquire the license before any playback session is started. After the license is received, playback can start at any time. The application could start playback immediately, or there are cases where the license would be acquired days before the content is actually played, typically in an offline playback scenario.
+   *  **Reactive license acquisition** &mdash; The client application doesn't explicitely acquire a license before content is played back. After playback is initiated, the PlayReady media player plays back looks for an existing PlayReady license that can decrypt this content. If it does not find any usable license, it automatically uses the associated license acquirer object to acquire the license before resuming the playback.
+
 
 The following figure gives an architectural overview of content protection and license acquisition.
 

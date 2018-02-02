@@ -57,7 +57,7 @@ There are two ways to generate a KID and key, including:
 
    *  Using a *Key Management System* (KMS), where the service randomly generates each KID and key value and stores them, and can simply look up the key value that corresponds to the KID provided by the client. <br/>
    *  Using the *PlayReady key seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value), and for each piece of content that requires a key, generates a random KID. Using the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady function, listed in the PlayReady Header Object specification at [https://www.microsoft.com/playready/documents/](https://www.microsoft.com/playready/documents/), section 6. For convenience, here is the algorithm: <br/>
-      ```cpp
+      ```cs
       byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
       {
         const int DRM_AES_KEYSIZE_128 = 16;
@@ -143,10 +143,20 @@ The key used to protect the media file and the key in the license are the same; 
 ## Sharing keys between files or tracks
 
 
-Just as a real key can unlock more than one door, a PlayReady key can unlock more than one digital media file. Content packagers and license issuers can specify (rather than generate) a KID for any media file. During the packaging process, the content packager can specify the same key identifier for multiple media files, and the same key is generated for each file. For example, you might want to use the same key to lock all the songs from one album so that one license can be used to unlock all the files. In general, however, it is recommended that you use a different key for each file to be as secure as possible.
+Just as a real key can unlock more than one door, it is technically possible to use one PlayReady key to unlock multiple tracks in one file, or even multiple files in a collection of assets. During the packaging process, the content packager can specify the same key identifier for multiple tracks or multiple media files, and the same key is used for them all.
 
+For example, with a multi-quality video asset with 4K, HD, and SD video tracks and several audio tracks, the encryptor has the flexibility to define one key per track, or one key for all the tracks.
 
-Or rather than use one key to unlock multiple files, you might use one key to unlock multiple tracks on a single file, such as the 4K, HD, and SD video tracks, the audio tracks, and so on. However, it is now common practice to protect each track in a file with a different key. This offers greater security than protecting a file with just one key.
+Clients will need a license for each of the keys that they have the right to decrypt. Note that delivering multiple licenses can be done by a license server in a single license response.
+
+In a single asset with multiple tracks, the decision between one key for all tracks or a key for each track is done by the service managing the content, and based on the following criteria:
+- more keys brings more complexity but allows specify at license delivery time what tracks the service want to allow a particular client to decrypt
+- less keys is less complex but does not allow specify at license delivery time what tracks the service want to allow a particular client to decrypt
+- some clients may have limitation that they do not support multiple keys for a single asset
+
+> [!NOTE]
+> While PlayReady keys can unlock more than one digital media file, Microsoft is strongly against this.  Using unique keys across all files provides greater security than protecting files with the same key.
+
 
 <a id="ID4EEE"></a>
 
@@ -170,5 +180,5 @@ A single license response can also carry multiple licenses and thus multiple key
 
  [PlayReady Header Specification](http://www.microsoft.com/playready/documents/)
 
- [Encryption](encryption.md)
+ [Content Encryption](content-encryption.md)
 

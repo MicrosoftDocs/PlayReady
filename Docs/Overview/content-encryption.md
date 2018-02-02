@@ -13,7 +13,7 @@ ms.technology: drm
 ---
 
 
-# Encryption
+# PlayReady Content Encryption
 
 PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in clients. With this technology, content owners and services distributing high-valued content can monetize their content with full control over their business model.
 
@@ -21,7 +21,7 @@ Several different types of encryption are used to protect content. Microsoft Pla
 
 ## In this section
 
-[Content Encryption and Delivery](content-encryption-and-delivery.md)
+[PlayReady Content Encryption and Delivery](content-encryption-and-delivery.md)
 
 [PlayReady Content Encryption Overview](content-encryption-overview.md)
 
