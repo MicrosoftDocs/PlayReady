@@ -3,9 +3,7 @@ author: rolandlefranc
 title: PlayReady Header Specification
 description: This specification applies to any end product created with any of the PlayReady technologies.
 ms.assetid: "5DC27BBD-0ADA-48CD-B1CB-5D46A7059DB4"
-kindex: header, PlayReady specification
-kindex: specification, PlayReady header
-keywords:
+keywords: PlayReady header specification
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -23,7 +21,7 @@ This specification applies to any end product created with the PlayReady Server 
 | Version | Change |
 | --- | --- |
 | November 1, 2017 | Add the Syntax Requirements section. Fix multiples examples with incorrect attribute order (attributes must be in alphabetical order)<p/>|
-| July 12, 2017 | Add PlayReady Header 4.3.0.0 section, supported starting with PlayReady version 4.<p/>Add syntax requirement that all XML nodes must be explicitely closed by a closing tag |
+| July 12, 2017 | Add PlayReady Header 4.3.0.0 section, supported starting with PlayReady version 4.<p/>Add syntax requirement that all XML nodes must be explicitly closed by a closing tag |
 | April 10, 2015 | Add PlayReady Header 4.2.0.0 section, supported starting with PlayReady version 3 |
 | September, 2011 | Add PlayReady Header 4.1.0.0 section, supported starting with PlayReady version 2 |
 | August 2008 | Initial version documenting the PlayReady Header 4.0.0.0 supported in PlayReady version 1 |

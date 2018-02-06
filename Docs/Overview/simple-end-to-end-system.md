@@ -3,9 +3,7 @@ author: rolandlefranc
 title: Simple End to End System
 description: In typical use, Microsoft PlayReady protects content by providing licenses for media files.
 ms.assetid: "121F7DEA-A0D1-4279-9BBF-D8EBEA1F894C"
-kindex: purpose, of PlayReady
-kindex: PlayReady, basic purpose
-keywords:  to Microsoft PlayReady content access technology introduction,  introduction to Microsoft PlayReady content access technology
+keywords: playready end to end, playready introduction
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -26,7 +24,7 @@ The following illustration contains a high-level look at an end-to-end video ser
 
 On the left side of the illustration you can see the service has some servers to stream the video (content distribution network). There are also some servers that let the users browse the content and choose the content they want to play (user interface). In addition, there are some servers that allow the users to log in and be authenticated, as well as pay for content (authenticate, pay). And, there is also a PlayReady license server.
 
-On the right side of the illustation are the clients. The clients could be Windows applications, smartphone applications, or specific devices such as set top boxes, network receivers, and so on. Some of these clients may come with a PlayReady integrated client in their players, for example, the OEM may have integrated PlayReady in the operating system or in the hardware. Others could come with a client integrated in the application that is published in the app store. There are many different options for players to integrate PlayReady on the client side.
+On the right side of the illustration are the clients. The clients could be Windows applications, smartphone applications, or specific devices such as set top boxes, network receivers, and so on. Some of these clients may come with a PlayReady integrated client in their players, for example, the OEM may have integrated PlayReady in the operating system or in the hardware. Others could come with a client integrated in the application that is published in the app store. There are many different options for players to integrate PlayReady on the client side.
 
 This topic is going to focus on what PlayReady does for a service, as shown in the following figure.
 
@@ -71,7 +69,7 @@ The following figure contains one asset - an audio/video file - that has not bee
 
    8. Then, the license server is going to request the value of the key, based on the KeyID, from the key management system that stores the keys, and the key management system is going to respond to that request. Just to reiterate, PlayReady does not supply the components of the key management system, so there will be a request coming from the PlayReady license server to whatever component the service has built to store the keys.
 
-   9. The key is going to be recieved by the license server and the license server can deliver the license. The secure PlayReady license response includes the value of the key and a list of rights and right restrictions for the client to enforce.
+   9. The key is going to be received by the license server and the license server can deliver the license. The secure PlayReady license response includes the value of the key and a list of rights and right restrictions for the client to enforce.
 
       Although this demonstration shows the PlayReady license server only delivering one key, it is possible that the license server will deliver a stack of licenses in one license response. Multiple licenses could be included in one transaction, with each license supplying one key if the content is protected with multiple keys or if the service wants to deliver multiple keys in advance because, for example, the service knows that the user is going to listen to eight tracks in a row.
 

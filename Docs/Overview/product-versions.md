@@ -3,10 +3,7 @@ author: rolandlefranc
 title: PlayReady Product Versions
 description: Feature availability for each version of the PlayReady products.
 ms.assetid: "b1fe306d-2ef3-565a-ae60-cea1592ce0e8"
-kindex: product versions, about PlayReady
-kindex: versions, about PlayReady product
-kindex: about, PlayReady product versions
-keywords:  about PlayReady product versions,  about PlayReady product versions,  PlayReady product versions about
+keywords: PlayReady product versions
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
