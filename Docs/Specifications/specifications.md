@@ -3,8 +3,7 @@ author: rolandlefranc
 title: Specifications
 description: This section contains a list of public specifications that provide background information on PlayReady content access technology.
 ms.assetid: "d8bbd962-4195-1966-c89b-f38074c1d6d6"
-kindex: specifications
-keywords: specifications
+keywords: PlayReady specifications, PlayReady whitepapers, specs
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

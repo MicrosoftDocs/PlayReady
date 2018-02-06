@@ -3,8 +3,7 @@ author: rolandlefranc
 title: Glossary and Abbreviations
 description: Contains a glossary of PlayReady terms and abbreviations.
 ms.assetid: "07554286-539a-072a-14d9-81200b223c50"
-kindex: glossary
-keywords: glossary
+keywords: glossary, playready
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -38,7 +37,7 @@ The following high-level terms are used throughout this documentation.
 | Content header| Part of the file structure of a PlayReady encrypted file that contains information necessary for a client to decrypt and render the content data. In a packaged file, a content header contains the key identifier, content key, license acquisition URL, and license user interface URL. This content header can also include attributes defined by the content provider.|
 | CR| Compliance Rules for PlayReady Products.|
 | CR&RR| Compliance and Robustness Rules.|
-| Cryptographically Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
+| Cryptographicly Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
 | CTR mode | An AES encryption mode. Counter (CTR) mode turns a block cipher into a stream cipher. |
 | Customer | Company that uses PlayReady to build a service or client.|
 | Decrypt | To convert encrypted content back into its original form. |
@@ -110,7 +109,7 @@ The following high-level terms are used throughout this documentation.
 | Service | Service that provides protected content to users.|
 | Service provider | A Media, or Video, or Audio Service Provider is a  company that provides a media, video, or audio service to its subscribers or customers. An example is Netflix providing a video playback service to its users in exchange for a monthly subscription fee.|
 | SL| Security level.|
-| SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and CLients. Payloads are XML carried over HTTP or HTTPS |
+| SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and Clients. Payloads are XML carried over HTTP or HTTPS |
 | SOC | System on a Chip.  An integrated circuit (or chip) that integrates a large number of components |
 | Stream| Digital media that is in the process of being delivered in a continuous flow across a network.|
 | Super distribution| A process by which users help to increase the distribution and sales of packaged files by sharing them with other users.|

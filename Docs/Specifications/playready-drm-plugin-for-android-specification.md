@@ -3,9 +3,7 @@ author: rolandlefranc
 title: PlayReady DRM Plugin for Android Specification
 description: This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
-kindex: PlayReady, DRM Plugin for Android specification
-kindex: specification, PlayReady DRM Plugin for Android
-keywords:  DRM Plugin for Android specification PlayReady,  PlayReady DRM Plugin for Android specification
+keywords: DRM Plugin for Android specification
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -499,7 +497,7 @@ ErrorExit:
 ### getSecureStop(s)
 
 
-Apps can call the **getSeucreStop** method to generate a secure stop challenge for the specified secure stop ID. Alternatively, the app can call **getSecureStops** to generate a challenge for all the existing secure stop sessions.
+Apps can call the **getSecureStop** method to generate a secure stop challenge for the specified secure stop ID. Alternatively, the app can call **getSecureStops** to generate a challenge for all the existing secure stop sessions.
 
 
 Prior to generating the secure stop challenge, the app must provide the publisher certificate by calling [setPropertyByteArray](#setpropertybytearray) and passing **SecureStopPublisherCert**.
