@@ -3,9 +3,7 @@ author: rolandlefranc
 title: PlayReady Client Architectures
 description: This topic provides a brief description on the different ways to implement a DRM client in a device and how to develop applications using DRM.
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
-kindex: clients, architecture
-kindex: PlayReady, client architecture
-keywords: client, architecture, options
+keywords: PlayReady, client architecture
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -32,7 +30,7 @@ A device that embeds a DRM client (by using the Content Decryption Module (CDM))
 
    *  On Android, the [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady DRM Plugin for Android Microsoft Specification](../Specifications/playready-drm-plugin-for-android-specification.md) for more information.
 
-There is another possible deployment model&mdash;developing the porting kit in the application. How you do this is entirely up to you (that is, whether you develop it yourself, or use an SDK supplied by a [PlayReady Partner](https://www.microsoft.com/playready/partners/), and will not be discussed in this document.
+There is another possible deployment model &mdash; developing the porting kit in the application. How you do this is entirely up to you (that is, whether you develop it yourself, or use an SDK supplied by a [PlayReady Partner](https://www.microsoft.com/playready/partners/)), and will not be discussed in this document.
 
 The following table shows the current availability and percentage of units that ship PlayReady in non-Windows clients.
 

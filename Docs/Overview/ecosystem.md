@@ -3,9 +3,7 @@ author: rolandlefranc
 title: PlayReady Ecosystem
 description: This sections describes the PlayReady ecosystem.
 ms.assetid: "dfb65490-8a56-fdda-a81d-b106ad0c69bb"
-kindex: PlayReady ecosystem, about the Microsoft
-kindex: about the, Microsoft PlayReady ecosystem
-keywords:  about the Microsoft PlayReady ecosystem,  Microsoft PlayReady ecosystem about the
+keywords: about the Microsoft PlayReady ecosystem, PlayReady ecosystem
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -43,7 +41,11 @@ The following figure shows the icons used throughout this document that symboliz
 Customized application servers enable interoperation with the clients. Service providers use the PlayReady Server Software Development Kit (SDK) to build servers with service-specific business logic. For example, a subscription service would customize servers to have a service-specific license. The license might include expiration times and license issuance restrictions that tie to a specific data backend that has subscriber information. By using the PlayReady Server SDK, the customized server builder can be confident the service will protect content and issue licenses that work with PlayReady system clients.
 
 
-PlayReady servers include license servers, domain controllers, metering servers, secure stop servers, and secure delete servers. In addition to the PlayReady servers, you may also have a content packager to encrypt and encode your content, as well as a Web server, Streaming backend and CDN to distribute the content on the Web. The following figure shows the icons used throughout this document to represent the different servers.
+PlayReady servers include license servers, domain controllers, metering servers, secure stop servers, and secure delete servers. These servers are all developed on the same PlayReady Server SDK.
+
+In addition, a service also has a content packager to encrypt and encode content, and a Streaming backend and CDN to distribute the content on the network.
+
+The following figure shows the icons used throughout this document to represent the different servers.
 
 
 ![PlayReady Servers](../images/image26_1.jpg)
@@ -58,7 +60,9 @@ PlayReady servers include license servers, domain controllers, metering servers,
 ## Content and license flow
 
 
-In PlayReady systems, a content packaging service encrypts content and stores it on a Web server. That content is then transferred to clients that acquire content decryption information from a license server. The following figure depicts content and license flow for license acquisition (LA). Gray arrows indicate unlicensed content transfers and content transfers with a license. Black arrows indicate protected content transfer without a license, and white arrows indicate license transfer.
+In PlayReady systems, a content packaging service encrypts content and stores it on a Web server. Clients acquire this encrypted content through streaming or download. Clients also acquire a PlayReady license from a license server which contains the information needed to decrypt content for rendering.
+
+The following figure depicts content and license flow for license acquisition (LA). Gray arrows indicate unlicensed content transfers and content transfers with a license. Black arrows indicate protected content transfer without a license, and white arrows indicate license transfer.
 
 
 ![Content License Flow](../images/image26_2.jpg)

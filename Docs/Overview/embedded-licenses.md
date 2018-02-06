@@ -1,11 +1,9 @@
 ---
-author:
+author: rolandlefranc
 title: Embedded Licenses
 description: PlayReady allows an application to store the license for a DRM-protected content file in the PlayReady Object of the content file itself.
 ms.assetid: "97eab5cb-afc4-fde8-91d2-904213fb3b54"
-kindex: licenses, about embedded
-kindex: about, embedded licenses
-keywords:  about embedded licenses,  embedded licenses about
+keywords:  about embedded licenses
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

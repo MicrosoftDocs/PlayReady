@@ -3,9 +3,7 @@ author: rolandlefranc
 title: PlayReady Servers
 description: This topic describes the different types of PlayReady Servers.
 ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
-kindex: server, PlayReady license
-kindex: license, PlayReady server
-keywords: license, server
+keywords: playready servers
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -24,7 +22,7 @@ For more information about PlayReady domains, see [PlayReady License Server](lic
 
 ## PlayReady Domain server
 
-An optional PlayReady domain server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients,including mobile device clients.
+An optional PlayReady domain server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients, including mobile device clients.
 
 > [!NOTE]
 > A PlayReady domain is not the same as network or Web domains.

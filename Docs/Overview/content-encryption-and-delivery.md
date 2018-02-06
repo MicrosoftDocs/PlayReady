@@ -3,10 +3,7 @@ author: rolandlefranc
 title: Content Encryption and Delivery
 description: The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks.
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
-kindex: content, encryption and delivery
-kindex: encryption, and content delivery
-kindex: content, encryption and delivery
-keywords: content, encryption, delivery
+keywords: playready content encryption, encryption and delivery
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -64,11 +61,10 @@ The simplest way to encrypt these assets would be to use a single content key to
 
 ![Content Assets and Encryption Keys (I)](../images/assets_and_encryption_keys_1.png)
 
-##### Note: proactive versus reactive license acquisition
 
-PlayReady has a concept of *proactive* versus *reactive* license acquisitions. A proactive license acquisition occurs when the client initiates a license request before playback begins. This is typically a scenario where the system is programmed such that the application has browsed content, and would take the time to "proactively" acquire the license before any playback session is started. After the license is received, playback can start at any time. The application could start playback immediately, or there are cases where the license would be acquired days before the content is actually played, typically in an on the fly scenario.
+>[!NOTE]
+>PlayReady Clients can acquire licenses proactively or reactively. See the [License Acquisition](license-acquisition.md#proactivereactive) page for a description of these two modes.
 
-In reactive license acquisition, the application doesn't acquire a license before the content is played back. Instead the application will start playback and rely on the player to actually discover that the content is encrypted and is missing the key, because a license has not been acquired previously. The player will "reactively" acquire a license for this content before it can start decryption and playback.
 
 ### Encrypting the asset with two keys, dedicating one to the highest quality 
 

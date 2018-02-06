@@ -3,11 +3,7 @@ author: rolandlefranc
 title: Scenario Rental Content
 description: In rental content, the license delivered for the content specifies an expiration date and time.
 ms.assetid: "30da1be6-dfdc-d98e-261b-cc86c7e6da02"
-kindex: scenarios, rental content
-kindex: rental content scenario
-kindex: streaming, rental content
-kindex: download and play, rental content
-keywords:  rental content scenarios, rental content scenario,  rental content streaming,  rental content download and play
+keywords: rental content scenario, rental content scenario,  rental content streaming,  rental content download and play
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -33,13 +29,13 @@ A typical example would be:
 
    *  The license delivered to the user includes the following restrictions:
 
-      *  Right&mdash;Play
+      *  Right &mdash; Play (right to decrypt content to render on a screen)
 
-      *  Begin Time&mdash;January 5, 2018 at 8 PM
+      *  Begin Time &mdash; January 5, 2018 at 7:55 PM (the begin time is slightly in the past to account for any minor clock difference between client and server)
 
-      *  Expiration Time&mdash;February 5, 2018 at 8PM
+      *  Expiration Time &mdash; February 5, 2018 at 8:00 PM (a month later)
 
-      *  Expiration After First Play&mdash;48 hours
+      *  Expiration After First Play &mdash; 48 hours (2 full days after user has started to play)
 
 
 
@@ -80,7 +76,7 @@ When streaming rental media, content continuously plays back while it's being tr
 
    *  PlayReady supports many kinds of protocols. There is no restriction for any protocol. However, clients usually support one or many of the following standards: SSTP (Smooth Streaming), DASH (Dynamic Adaptive Streaming over HTTP), HLS (HTTP Live Streaming). In addition to these protocols, it is perfectly acceptable and doable for a service that controls both its backend and clients to implement a different protocol, for example multicast TS on a closed network.
 
-   *  The format of the content is typically H264 + AAC, or H265 + AAC, but all other codecs are allowed by PlayReady. However, for some of them the service may have to build the tools.
+   *  The format of the content is typically H264 + AAC, or H265 + AAC, but all other codecs are allowed by PlayReady.
 
    *  Streaming rental content can use either a persistent or non-persistent license.
 

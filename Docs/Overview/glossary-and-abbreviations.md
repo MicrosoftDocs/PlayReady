@@ -3,8 +3,7 @@ author: rolandlefranc
 title: Glossary and Abbreviations
 description: Contains a glossary of PlayReady terms and abbreviations.
 ms.assetid: "07554286-539a-072a-14d9-81200b223c50"
-kindex: glossary
-keywords: glossary
+keywords: glossary, playready
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -29,18 +28,24 @@ The following high-level terms are used throughout this documentation.
 | CA | Certificate Authority. An entity that issues digital certificates and provides trust into certificate chains |
 | CAS | Conditional Access System |
 | CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher. |
+| CBCS | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode. |
+| CDM | See Content Decryption Module. |
+| CENC | See Common Encryption (CENC). Also refers to one of the encryption modes of the Common Encryption standard. |
 | Certificate | A digitally-signed binary document used to grant and revoke privileges to devices and computers to perform specific operations.|
 | Certificate revocation list (CRL)| A list that maintains the information necessary to disable a device from being able to acquire licenses and play protected content.|
 | Challenge| A request from a client. A challenge contains information about the client, a list of requested rights, and other information about the content, including the content header and key identifier. |
 | Clear content| A media file that is not encrypted.|
 | Client | Content receiver. May be a device or an application.|
+| Common Encryption (CENC) | An MPEG Standard that defines encryption and container formats for protected media content. |
+| Content Decryption Module (CDM) | The client component that provides the DRM functionality, including decryption. |
 | Content (protected)| Videos, movies, audio, music, ebooks, executables. May be downloaded and/or streamed.|
 | Content header| Part of the file structure of a PlayReady encrypted file that contains information necessary for a client to decrypt and render the content data. In a packaged file, a content header contains the key identifier, content key, license acquisition URL, and license user interface URL. This content header can also include attributes defined by the content provider.|
 | CR| Compliance Rules for PlayReady Products.|
 | CR&RR| Compliance and Robustness Rules.|
-| Cryptographically Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
+| Cryptographicly Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
 | CTR mode | An AES encryption mode. Counter (CTR) mode turns a block cipher into a stream cipher. |
 | Customer | Company that uses PlayReady to build a service or client.|
+| DASH | See MPEG-DASH. |
 | Decrypt | To convert encrypted content back into its original form. |
 | Deployment certificate| An XML string used to ensure the server is running a licensed copy of PlayReady Server SDK.|
 | Device| Usually refers to a physical unit such as mobile phones, set-top boxes, and portable media players.|
@@ -53,14 +58,18 @@ The following high-level terms are used throughout this documentation.
 | DT | Defined Terms for PlayReady Compliance and Robustness Rules.|
 | ECC | Elliptic curve cryptography.|
 | Embedded license store (ELS)| A record for storing embedded licenses.|
-| Encrypt| To programmatically disguise content to hide its substance.|
+| EME | See Encrypted Media Extensions. |
+| Encrypt | To programmatically disguise content to hide its substance.|
+| Encrypted Media Extensions (EME) | A W3C Standard for HTML interfaces that allow HTML5 applications to do DRM operations. See [https://www.w3.org/TR/encrypted-media/](https://www.w3.org/TR/encrypted-media/). |
 | Extensible policies| License rights and restrictions added on to the existing extensible media rights (XMR) policy system to create special policies applicable to specific subsets of the PlayReady ecosystem. These policies are client enforced, and client implementers must elect to enable support for extensible policies.|
 | Extensible media rights (XMR)| A binary schema used for representing licenses within PlayReady.|
 | Hashed data store (HDS)| A file also know as PlayReady data store, that contains all licenses, certificates, and related content access protection data associated with a particular client. This file is created by the PlayReady Client runtime when a device is first started and individualized.
+| HLS | HTTP Live Streaming. An adaptive streaming protocol which was introduced by Apple. |
 | Individualization| The process of updating the PlayReady runtime on the client, allowing licenses to be bound to the client. This process increases security by making it difficult to corrupt more than one player at a time.|
 | IV (Initialization Vector) | A block of bits enabling multiple instances of a stream or block cipher to produce unique streams despite using the same encryption key. |
 | Key | A piece of data that is required to unlock a packaged media file. This key is included in a separate license.|
-| Key identifier (KID) | A value that identifies the key for a protected media file.|
+| Key Identifier (KID) | A value that identifies the key for a protected media file.|
+| Key Rotation | A technique that seamlessly changes the encryption keys of a stream at specific times. PlayReady support Scalable Licenses which allow implement a very frequent and effective key rotation. |
 | Leaf license | The element of a license chain that contains the content key and is bound to a root license.|
 | License | Data attached to protected content that describes how the content can be used. A license is a data structure that contains, but is not limited to, policies and an encrypted content key.|
 | License acquisition | The process of obtaining a license to play a packaged media file. The client attempts to obtain a license from a license acquisition URL, which is specified in the packaged media file.|
@@ -76,6 +85,7 @@ The following high-level terms are used throughout this documentation.
 | Metering identifier (MID) | The value that identifies the specific license for which content is being metered.|
 | Metering response | A confirmation from a metering aggregation service that metering data was successfully reported by a client.|
 | Metering server | A computer that monitors the number of times an action has been performed on specific content.|
+| MPEG DASH | Dynamic Adaptive Streaming over HTTP. An adaptive streaming protocol which is a MPEG standard. |
 | MSI installer| A Windows installer file.|
 | ODM | Original Design Manufacturer. A company that designs and manufactures a product that is branded by another firm for sale |
 | OEM | Original Equipment Manufacturer. A company that produces devices using their own brand |
@@ -91,9 +101,10 @@ The following high-level terms are used throughout this documentation.
 | PlayReady Device Porting Kit| The portion of PlayReady content access and protection technology used for designing PlayReady applications for devices such as mobile phones, set-top boxes, and portable media players.|
 | PlayReady Server SDK| The portion of PlayReady content access and protection technology used for designing applications and plug-ins for use on a license server, a metering server, a domain controller, a secure stop server, and a secure delete server.|
 | Policy| The description in the license of the actions permitted or the restrictions on the content.|
-| Private key| The secret half of a public/private key pair used in cryptography. Private keys are typically used to encrypt a symmetric session key, digitally sign a message, or decrypt a message that has been encrypted with the corresponding public key.|
+| Private key| The secret half of a public/private key pair used in cryptography. Private keys are typically used to digitally sign a message that can be verified with the corresponding public key, or decrypt a message that has been encrypted with the corresponding public key.|
 | Protect| To encrypt files with a key and add information such as the license acquisition URL.|
-| Public key| The non-secret half of a public/private key pair used in cryptography. Public keys are typically used to encrypt sessions, files, and messages, which are then decrypted using the corresponding private key.|
+| PSSH box | Protection System Specific Header box. An object defined in the Common Encryption Standard that carries DRM specific information. |
+| Public key| The non-secret half of a public/private key pair used in cryptography. Public keys are typically used to encrypt sessions, files, and messages, which are then decrypted using the corresponding private key, or verify the digital signature of a message signed using the corresponding private key.|
 | Restrictions| An attribute of a license that specifies the conditions under which a client cannot use a media file.|
 | Revenue tracking| A process that logs the number of times a specific license is issued to play a media file.|
 | Revocation| A process identifying clients that have compromised security, and preventing them from getting access to additional licenses for decrypting content that has been protected.|
@@ -110,8 +121,9 @@ The following high-level terms are used throughout this documentation.
 | Service | Service that provides protected content to users.|
 | Service provider | A Media, or Video, or Audio Service Provider is a  company that provides a media, video, or audio service to its subscribers or customers. An example is Netflix providing a video playback service to its users in exchange for a monthly subscription fee.|
 | SL| Security level.|
-| SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and CLients. Payloads are XML carried over HTTP or HTTPS |
+| SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and Clients. Payloads are XML carried over HTTP or HTTPS |
 | SOC | System on a Chip.  An integrated circuit (or chip) that integrates a large number of components |
+| SSTP | Smooth Streaming Transport Protocol. An adaptive streaming protocol which was introduced by Microsoft. |
 | Stream| Digital media that is in the process of being delivered in a continuous flow across a network.|
 | Super distribution| A process by which users help to increase the distribution and sales of packaged files by sharing them with other users.|
 | User| Person who consumes content from a service on a client.|

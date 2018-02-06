@@ -3,11 +3,7 @@ author: rolandlefranc
 title: PlayReady and Other Protection Technologies
 description: PlayReady systems are able to interoperate with other content protection systems.
 ms.assetid: "4bd6d175-18c2-1014-3762-73379579bbc5"
-kindex: content, about moving PlayReady
-kindex: moving, about PlayReady content
-kindex: about, moving PlayReady content
-kindex: PlayEnabler, moving PlayReady content
-keywords:  PlayReady and other protection technologies
+keywords:  PlayReady and other content protection technologies, interoperate, play enablers, copy enablers
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -143,4 +139,8 @@ For example, a user uses a computer to acquire subscription content that is prot
 To enable this scenario, PlayReady Server SDK allows developers to specify additional content protection formats for export in an inclusive list. This inclusive list is created per license by adding **GUID**s that correspond to the permitted content protection formats (adding **GUID**s to the inclusive list is accomplished with the **PlayEnabler** class). These **GUID**s and their associated rights mappings are defined in the PlayReady Server SDK Compliance Rules that accompanied your license agreement from Microsoft. The client sending content may only export the content to those content protection systems specified in the license inclusive list. 
 
 ![PlayReady Export](../images/playready_export.png) 
+
+> [!NOTE]
+> Once exported to a content protection B, content is controlled by the rules of the content protection B. That is, after export from PlayReady to another technology, it is no longer subject to the PlayReady Compliance and Robustness Rules.
+
 
