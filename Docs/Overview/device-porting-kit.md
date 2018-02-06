@@ -38,13 +38,17 @@ The porting kit provides the following features:
 
    *  License acquisition.
 
+   *  License management and binding for decryption.
+
    *  Metering.
 
-   *  Domain join and leave for devices.
+   *  Domain join, leave and management for groups of devices.
 
    *  Secure Stop.
 
-   *  Secure clock/anti-rollback clock.
+   *  Secure Delete
+
+   *  Secure clock and Anti-Rollback clock.
 
    *  Chained licenses.
 
@@ -59,8 +63,9 @@ The porting kit provides the following features:
 
 ## Components
 
+The Porting Kit is delivered as a Microsoft MSI file that contains the libraries, samples, tools, and source code required to create devices for use with digital content that was protected with PlayReady technology.
 
-The porting kit includes the following components:
+The Porting Kit includes the following components:
 
    *  The source code form of PlayReady.
 
@@ -71,19 +76,7 @@ The porting kit includes the following components:
    *  Test media.
 
 
+## See also
 
-<a id="ID4ETC"></a>
-
-
-
-## Architecture
-
-
-The following figure shows the PlayReady PK architecture components that Microsoft provides with the porting kit.
-
-
-![Porting Kit Architecture](../images/image26_20.jpg)
-
-
-When building a device based on PlayReady Device Porting Kit, a device builder will adapt the functionality in the OEM APIs in order to enable the functionality that Microsoft provides in the PlayReady APIs. Once these APIs are implemented, the device builder can create an application that enables PlayReady operations on the portable device.
-
+ [Integrating PlayReady in Devices](integrating-in-devices.md)
+ 

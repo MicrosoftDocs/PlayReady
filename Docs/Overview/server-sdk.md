@@ -39,7 +39,7 @@ PlayReady Server SDK:
 
    *  Provides secure delete support.
 
-   *  Includes .Net based development.
+   *  Includes C# .Net based development.
 
 
 
@@ -48,6 +48,8 @@ PlayReady Server SDK:
 
 
 ## Components
+
+PlayReady Server SDK is delivered as two Microsoft MSI files that contain the libraries, samples, and tools required to develop a PlayReady license server, PlayReady domain server, PlayReady metering server, PlayReady secure stop server, or PlayReady secure delete server. In addition, you will also be supplied with the PlayReady documentation and any additional current information in the PlayReady Server SDK readme file.
 
 
 PlayReady Server SDK includes the following components:
