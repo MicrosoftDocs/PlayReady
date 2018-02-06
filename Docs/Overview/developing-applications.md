@@ -17,7 +17,14 @@ ms.technology: drm
 
 A lot of OEMs have licensed the PlayReady Porting Kit, integrated it in their devices, and made it available to application developers as part of their SDK.
 
+![PlayReady Client Embedded in Device](../images/client_level_os_soc.png)
+
+
 For example, Microsoft ensures all Windows 10 devices include a PlayReady client integrated in the Windows OS itself, or in the chip's firmware of the device (TEE), and exposes it through UWP APIs to application developers, but also Android TV device makers do the same.
+
+Such devices include Windows devices using the UWP API, Andoid device using the Java DrmManagerClient API, Linux devices using various interfaces, and embedded web browsers using Javascript EME API.
+
+![PlayReady Client APIs on devices](../images/client_apis.png)
 
 On these devices, application developers do not need to license PlayReady, or manipulate PlayReady code or certificate. They just use the SDK provided by the OEM on the platform and run PlayReady operations from within their app, like AcquireLicense(KID), etc.
 
@@ -125,7 +132,6 @@ This topic provides an overview of the different PlayReady Client architectures 
 
 The following figure shows the client implementation options available using PlayReady.
 
-![PlayReady Client Options](../images/client_options.png)
 
 A device that embeds a DRM client (by using the Content Decryption Module (CDM)), exposes an API to applications that have different forms. Some of these forms are:
 
