@@ -33,29 +33,6 @@ Here is a figurative view of these levels of product integration, and its transl
 
 The following sections describe the parts of PlayReady that are supplied by Microsoft.
 
-### License to use PlayReady
-
-If you are an original equipment manufacturer (OEM), a PlayReady client developer, or a PlayReady service provider, you must first obtain a PlayReady license from Microsoft before you can begin developing your product. This will entitle you to receive from Microsoft all of the material you will need to create your product, whether it is an integrated circuit with built-in PlayReady functionality, a device including a PlayReady client in the operating system or the silicon, a PlayReady application running on iOS or Android, or a PlayReady server supplying licenses for specific content.
-
-There are separate licenses depending on what type of PlayReady product you intend to produce. For example, there are licenses for distributing a device, developing a downloadable software application, or developing server applications or deploying a PlayReady service to end-users. For more information about all of the licensing options for the various parts of PlayReady, see [PlayReady Licensing Options](https://www.microsoft.com/playready/licensing/).
-
-These licenses provide additional benefits including intellectual property rights, intellectual property protection, and indemnification.
-
-If you are a content provider using third party PlayReady clients and PlayReady servers, you do not need a license from Microsoft to encrypt your content with a PlayReady Header. In addition, if you are an encryptor developer, you do not need a license from Microsoft to include a PlayReady Header insertion function in your encryptor code. See [Developing and operating a PlayReady packager](#playreadypackager) for more information.
-
-### Compliance and Robustness Rules
-
-Microsoft edits and publishes the PlayReady Compliance Rules and the PlayReady Robustness Rules, the requirements of which all PlayReady Final Products distributed on the market must satisfy, as specified in the PlayReady license agreement(s) customers sign with Microsoft. Compliance Rules specify the required behaviors of PlayReady implementations, and describe how content may be accessed and passed using specific policy rules. Robustness Rules specify different data and functions in PlayReady Products and the levels of robustness required to protect them against unauthorized use and attacks. For more information, see the [PlayReady Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/).
-
-### Certificates and Certificate Authority
-
-A certificate is a digitally-signed binary document used to grant and revoke privileges to devices and servers to perform specific operations. PlayReady customers can request several different types of certificates depending on their needs.
-
-Certificates generally fall into two main categories: server certificates and client certificates. Server certificates allow a Customer to run the PlayReady Server SDK; client or device certificates allow devices to play content. There are also test client certificates, which are only used for test devices and can be revoked at any time.
-
-Microsoft owns the PlayReady Certificate Authority (PlayReady CA) including the PlayReady top level CA certificates, which gives Microsoft the authority to deliver PlayReady certificates to its customers, and revoke them whenever it is required to keep the ecosystem functional and secure.
-
-Complete information about certificates and how to obtain different types of certificates is contained in the PlayReady Documentation Help file that is supplied to PlayReady licensees.
 
 ### PlayReady Server SDK
 
@@ -63,11 +40,6 @@ PlayReady Server SDK is delivered as two Microsoft MSI files that contain the li
 
 For more information on PlayReady Server SDK, see [PlayReady Server SDK](server-sdk.md).
 
-### PlayReady Server on Azure
-
-Microsoft Azure Media Services (AMS) provides a service for encrypting content and delivering PlayReady DRM licenses, called Content Protection. Media Services also provides APIs that let you configure the rights and restrictions that you want for the PlayReady DRM runtime to enforce when a user plays back protected content. When a user requests PlayReady protected content, the player application will request a license from the AMS license service. The AMS license service will issue a license to the player if it is authorized. A PlayReady license contains the decryption key that can be used by the client player to decrypt and stream the content.
-
-For more information about PlayReady on Azure, see [Announcing Azure Media Services Live Streaming With PlayReady encryption capability](https://azure.microsoft.com/en-us/blog/announcing-azure-media-services-live-streaming-with-playready-encryption-capability/) and the Azure [Protecting Content Overview](https://docs.microsoft.com/en-us/azure/media-services/media-services-content-protection-overview).
 
 <a id="prwindows"></a>
 
@@ -91,55 +63,6 @@ PlayReady Device Porting Kit is delivered as a Microsoft MSI file that contains 
 
 For more information on PlayReady Device Porting Kit, see [PlayReady Device Porting Kit](device-porting-kit.md).
 
-### PlayReady documentation
-
-Microsoft supplies all of the documentation that describes how to develop and deploy many types of PlayReady clients and servers. The following list contains the various sources for PlayReady documentation. Some of these sources are public, whereas others can only be observed by PlayReady licensees.
-
-   *  [PlayReady Public Documents](https://www.microsoft.com/playready/documents/)
-
-      Contains white papers and public technical specifications for PlayReady. This website is public and can be viewed by anyone.
-
-   *  [PlayReady for Windows 10](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk)
-
-      Describes how to implement a PlayReady client on Windows 10. This website location is public and can be viewed by anyone.
-
-   *  [Developing PlayReady Windows 8.1 Store and Web Apps](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn468834.aspx)
-
-      Describes how to implement a PlayReady client on Window 8.1. This website location is public and can be viewed by anyone.
-
-   *  PlayReady Documentation
-
-      Describes how to implement PlayReady servers and clients, including all of the API documentation associated with both. This Help file is provided to you after you have signed a licensing agreement with Microsoft.
-
-   *  [PlayReady Training Slides](http://wmlalicensing.com)
-
-      Provides training slides (Knowledge Base) that describe how to implement PlayReady clients and servers. This website is restricted to licensees.
-
-   *  [PlayReady Video Tutorials](http://test.playready.microsoft.com/Doc/VideoTutorials)
-
-      Provides video training and PlayReady conference videos that describe in detail aspects of PlayReady implementation. This website is restricted to licensees and requires an authorization token.
-
-### PlayReady Test Server
-
-The PlayReady Test Server website includes documentation and test tools for PlayReady developers to test your products. Whether you are a PlayReady licensee or a non-licensee, an OEM, SOC vendor, a client developer, and application developer, an encoder vendor, or a service developer, this website provides you with the following tools:
-
-   *  A test license service
-   *  Test video content (audio and video)
-   *  Test audio content
-   *  Test applications (HTML/JS, Silverlight)
-
-> [!NOTE]
-> Content and licenses delivered from this website are public and do not provide the level of security required for a production service.
-
-The PlayReady Test Server is provided as an optional service to PlayReady developers. You do not need to use this service to test or certify your PlayReady implementations. For more information, see the [PlayReady Test Server](http://test.playready.microsoft.com/) website.
-
-<a id="securetime"></a>
-
-### Secure clock service
-
-Microsoft runs secure clock services that allow PlayReady clients to request the current time and securely set their internal clock to enforce PlayReady time-based policies, such as content rental expiration.
-
-Microsoft runs multiple versions of these services depending on the version and security level of the client requesting the time.
 
 <a id="whatyousupply"></a>
 
@@ -154,17 +77,6 @@ This company can, however, share roles with third parties:
 
 See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page for more information.
 
-
-<a id="playreadypackager"></a>
-
-## Developing and operating a PlayReady packager
-
-If you are developing an encoder utilizing PlayReady technologies, you will need to include a PlayReady Header in the encrypted content. The PlayReady Header contains information about the content being played back, including the key identifiers (KIDs) that identify the keys used to encrypt the data, the default license acquisition URL of the PlayReady license server, and any custom data that you want to include. The key and KID used to encrypt the content must be shared with the PlayReady license server that will be issuing the licenses for that specific content, typically through a Key Management System.
-
-For more information about encrypting content and the PlayReady Header, see [Content Encryption and Delivery](content-encryption-and-delivery.md) and the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/).
-
->[!NOTE]
->Microsoft does not provide a Key Management System with PlayReady.
 
 ## Developing and operating a PlayReady Client
 
@@ -189,18 +101,28 @@ If you are designing a device with PlayReady installed in hardware or PlayReady 
 
 For general information about developing hardware-based PlayReady, see [Hardware versus software DRM](security-level.md#hardwarevssoftware).
 
-### Windows or Xbox application
-
-PlayReady DRM enables developers to create UWP apps capable of providing PlayReady content to the user while enforcing the access rules defined by the content provider. If you are designing an application that runs on Windows or Xbox, see [PlayReady DRM](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk).
-
 ## In this section
 
 [PlayReady Server SDK](server-sdk.md)
 
+[PlayReady Server on Azure](server-on-azure.md)
+
 [PlayReady Device Porting Kit](device-porting-kit.md)
 
-[PlayReady for Windows](playready-for-windows.md)
+[PlayReady on Windows](playready-on-windows.md)
+
+[PlayReady on Xbox](playready-on-xbox.md)
 
 [PlayReady and Silverlight](silverlight.md)
 
 [PlayReady Product Versions](product-versions.md)
+
+[License to Use Playready](license-to-use-playready.md)
+
+[PlayReady Compliance and Robustness Rules](compliance-and-robustness-rules.md)
+
+[PlayReady Certificates and Certificate Authority](certificates.md)
+
+[PlayReady Secure Clock Services](secure-clock-services.md)
+
+[PlayReady Test Server](test-server.md)

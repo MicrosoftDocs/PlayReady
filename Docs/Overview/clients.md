@@ -19,9 +19,9 @@ This topic provides a brief description of the different ways to implement a Pla
 
 ## In this section
 
-[PlayReady Client Architectures](client-architectures.md)
- 
-[PlayReady Trusted Clocks](trusted-clocks.md) 
+[Developing Applications using PlayReady](developing-applications.md)
+
+[Integrating PlayReady in Devices](integrating-in-devices.md)
 
 [PlayReady Individualization](individualization.md) 
 

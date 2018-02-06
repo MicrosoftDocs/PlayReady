@@ -1,9 +1,9 @@
 ---
 author: rolandlefranc
-title: PlayReady and Silverlight
+title: PlayReady in Silverlight
 description: This topic discusses PlayReady support in Silverlight applications.
 ms.assetid: "cfce96cc-41c3-cd90-f872-66a503fcfb13"
-kindex: PlayReady and Silverlight
+kindex: PlayReady in Silverlight
 keywords:
 ms.author: rolefran
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady and Silverlight
+# PlayReady in Silverlight
 
 ## Web plug-ins phasing out
 

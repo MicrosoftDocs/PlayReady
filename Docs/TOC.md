@@ -28,17 +28,31 @@
 
 ### [Scenario: Live TV](Overview/scenario-live-tv.md)
 
-## [PlayReady Products and Deliverables](Overview/products-and-deliverables.md)
+## [PlayReady Products, Deliverables and Services](Overview/products-deliverables-services.md)
 
 ### [PlayReady Server SDK](Overview/server-sdk.md)
 
+###[PlayReady Server on Azure](Overview/server-on-azure.md)
+
 ### [PlayReady Device Porting Kit](Overview/device-porting-kit.md)
 
-### [PlayReady for Windows](Overview/playready-for-windows.md)
+### [PlayReady on Windows](Overview/playready-on-windows.md)
 
-### [PlayReady and Silverlight](Overview/silverlight.md)
+### [PlayReady on Xbox](Overview/playready-on-xbox.md)
+
+### [PlayReady in Silverlight](Overview/silverlight.md)
 
 ### [PlayReady Product Versions](Overview/product-versions.md)
+
+### [License to Use Playready](Overview/license-to-use-playready.md)
+
+### [PlayReady Compliance and Robustness Rules](Overview/compliance-and-robustness-rules.md)
+
+### [PlayReady Certificates and Certificate Authority](Overview/certificates.md)
+
+### [PlayReady Secure Clock Services](Overview/secure-clock-services.md)
+
+### [PlayReady Test Server](Overview/test-server.md)
 
 ## [Content Encryption](Overview/content-encryption.md)
 
@@ -47,6 +61,8 @@
 ### [PlayReady Content Encryption Overview](Overview/content-encryption-overview.md)
 
 ### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
+
+###[Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
 
 ## [PlayReady Servers](Overview/servers.md)
 
@@ -64,9 +80,9 @@
 
 ## [PlayReady Clients](Overview/clients.md)
 
-### [PlayReady Client Architectures](Overview/client-architectures.md)
+### [Developing Applications using PlayReady](Overview/developing-applications.md)
 
-### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
+### [Integrating PlayReady in Devices](Overview/integrating-in-devices.md)
 
 ### [PlayReady Individualization](Overview/individualization.md)
 
@@ -82,6 +98,8 @@
 
 ## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
+### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
+
 ### [License Chaining](Overview/license-chaining.md)
 
 ### [Embedded Licenses](Overview/embedded-licenses.md)
@@ -92,7 +110,7 @@
 
 ### [Licenses Restricted by Extensible Policy](Overview/licenses-restricted-by-extensible-policy.md)
 
-### [PlayReady and Other Protection Techologies](Overview/playready-and-other-protection-technologies.md)
+### [PlayReady and Other Protection Technologies](Overview/playready-and-other-protection-technologies.md)
 
 ## [Specifications](Specifications/specifications.md)
 

@@ -35,7 +35,7 @@ The following table shows the feature availability for each version of the PlayR
 >|Mar'15|**3.0** | - SL3000<br/>- Multiple Keys<br/>- [Secure Stop](secure-stop-server.md)<br/>- Improvements for non-persistent licenses|3.0|  3.0.4019 | 3.0.2726 | &mdash; | &mdash; | &mdash;  |
 >|Sep'16|**3.2** | [Secure Time](trusted-clocks.md) (Secure Clock Service in the TEE)|&mdash;|3.2.4242| 3.2.4242 | Deprecated | No further enhancements | Deprecated |
 >|Apr'17|**3.3** | - New CDMi module<br/>- Fix for vulnerabilities in the PK header parser |&mdash;|3.3.4474| 3.3.4475 | &mdash;| &mdash;| &mdash;|
->|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, including CBC1, CBCS, and CENS.<br/>- [Secure Delete](secure-delete-server.md) support | 4.0.5117 | 4.0.5102 | 4.0| No longer distributed (see [PlayReady on Windows](products-and-deliverables.md#prwindows))| &mdash;| No longer distributed|
+>|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, including CBC1, CBCS, and CENS.<br/>- [Secure Delete](secure-delete-server.md) support | 4.0.5117 | 4.0.5102 | 4.0| No longer distributed (see [PlayReady on Windows](playready-on-windows.md))| &mdash;| No longer distributed|
 
 
 &nbsp;

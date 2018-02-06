@@ -17,6 +17,8 @@ This section covers more advanced features in the PlayReady technology.
 
 ## In this section
 
+[PlayReady Trusted Clocks](trusted-clocks.md) 
+
 [License Chaining](license-chaining.md)
 
 [Embedded Licenses](embedded-licenses.md)

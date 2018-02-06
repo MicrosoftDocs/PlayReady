@@ -10,6 +10,10 @@ keywords: PlayReady, licensing, playable content license
 ## Secure audio/video content against unauthorized use, and help monetize content
 Microsoft PlayReady is a set of technologies that can be used to distribute audio/video content securely over a network, and prevent the unauthorized use of this content. This technology is used for defining, incorporating, and enforcing rights for digital media. The service provider and content provider can control the expiration date, the number of times a user can play the content file, the resolution of the content that can be played on a screen, the type of screen that content is rendered to, and many other control settings. PlayReady technologies can be incorporated into media applications on televisions, set top boxes, mobile phones, tablets, personal computers, and other devices to enforce the content access rules defined by the content owners.
 
+> [!IMPORTANT NOTE]
+> If this documentation differs from the language included in the [Licensing Agreements](https://www.microsoft.com/playready/licensing/), in the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) document or the [Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) document, those documents take precedence.
+
+
 ## Widely deployed
 Microsoft PlayReady is the Widest Deployed Content Protection Technology in the World. PlayReady runs on all sorts of devices and apps, and all operating systems. Thousands of services around the world and more than four billion devices use PlayReady. 
 
@@ -23,7 +27,11 @@ PlayReady can work on non-Windows platforms (such as iOS and Android) and is use
 As of 2018, the latest version of PlayReady is 4.0, released in October 2017. It adds support for content encrypted in AES-CBC mode, in addition to the content already supported in AES-CTR mode. Find more about the different versions of PlayReady [here](Overview/product-versions.md). We recommend that services and device manufactureres update to the latest version available. However, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](Overview/product-versions.md) to learn more about the interoperability of PlayReady clients and servers.
 
 PlayReady 3.0 and later supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) support other types of content, such as executable applications and ebooks. 
+<br/>
+<br/>
+<br/>
 
+<h2>Links to other Sources of Documentation</h2>
 
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
@@ -158,7 +166,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
 
 ---
 
-<h2>UWP Reference</h2>
+<h2>Programming Reference</h2>
 
 <ul class="panelContent cardsFTitle">
     <li>

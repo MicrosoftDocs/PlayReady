@@ -109,6 +109,8 @@ A typical example with a PlayReady Client version 3 would be:
     5. The client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start now.
 <br/>
 <br/>
+
+
 ## Time Restrictions in Subscription Licenses
 
 
