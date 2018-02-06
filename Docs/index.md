@@ -10,7 +10,7 @@ keywords: PlayReady, licensing, playable content license
 ## Secure audio/video content against unauthorized use, and help monetize content
 Microsoft PlayReady is a set of technologies that can be used to distribute audio/video content securely over a network, and prevent the unauthorized use of this content. This technology is used for defining, incorporating, and enforcing rights for digital media. The service provider and content provider can control the expiration date, the number of times a user can play the content file, the resolution of the content that can be played on a screen, the type of screen that content is rendered to, and many other control settings. PlayReady technologies can be incorporated into media applications on televisions, set top boxes, mobile phones, tablets, personal computers, and other devices to enforce the content access rules defined by the content owners.
 
-> [!IMPORTANT NOTE]
+> [!NOTE]
 > If this documentation differs from the language included in the [Licensing Agreements](https://www.microsoft.com/playready/licensing/), in the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) document or the [Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) document, those documents take precedence.
 
 

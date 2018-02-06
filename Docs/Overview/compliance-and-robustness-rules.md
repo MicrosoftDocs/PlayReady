@@ -16,7 +16,7 @@ ms.technology: drm
 Microsoft edits and publishes the PlayReady Compliance Rules and the PlayReady Robustness Rules, the requirements of which all PlayReady Final Products distributed on the market must satisfy, as specified in the PlayReady license agreement(s) customers sign with Microsoft.
 
 
-> [!IMPORTANT NOTE]
+> [!NOTE]
 > If this documentation differs from the language included in the [Licensing Agreements](https://www.microsoft.com/playready/licensing/), in the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) document or the [Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) document, those documents take precedence.
 
 

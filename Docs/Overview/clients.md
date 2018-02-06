@@ -14,8 +14,7 @@ ms.technology: drm
 
 
 # PlayReady Clients
-This topic provides a brief description of the different ways to implement a PlayReady client in a device or in an application when the application runs on a device which doesn't contain one. It also describes how to develop applications using PlayReady DRM.
-
+This topic provides a description of the different ways to implement a PlayReady client in a device or in an application. Regarding application development, there may be two cases depending on whether the device embeds a PlayReady client (like Windows 10) or whether the device does not embed a PlayReady in the OS or in the chip (like iOS).
 
 ## In this section
 
