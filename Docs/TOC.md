@@ -92,9 +92,7 @@
 
 ### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
 
-### [PlayReady Secure Clock Services for PlayReady Clients](Overview/secure-clock-services.md)
-
-### [OEM or App Vendor Services for PlayReady Clients](Overview/client-playready-services.md)
+### [OEM/App Vendor Services for PlayReady Clients](Overview/client-playready-services.md)
 
 ## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
@@ -118,6 +116,6 @@
 
 ### [PlayReady DRM Plugin for Android Specification](Specifications/playready-drm-plugin-for-android-specification.md)
 
-## [Additional Documentation](Overview/additional-documentation.md)
+## [Additional Information](Overview/additional-information.md)
 
 ## [Glossary and Abbreviations](Overview/glossary-and-abbreviations.md)

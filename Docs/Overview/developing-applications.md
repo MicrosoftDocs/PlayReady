@@ -130,6 +130,7 @@ The integration of a PlayReady Client in the application requires the applicatio
 
 This development requires expertise to harden the application including the PlayReady code and the PlayReady secrets (keys, certificates). Most application developers decide to use a PlayReady SDK developed and maintained by a [Microsoft Partner](https://www.microsoft.com/playready/partners/)).
 
+<a id="developing_applications_windows_xbox"></a>
 
 ## Developing Applications using PlayReady on Windows, Xbox
 

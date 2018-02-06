@@ -29,3 +29,7 @@ Some Microsoft Partners provide SDKs to run PlayReady on Windows 7 and Mac OS, b
 
 > [!NOTE]
 > The PlayReady Desktop PC SDK, designed for Desktop PC applications and previously used for Windows 7 applications, is deprecated and should not be used.
+
+## See also
+
+[Developing Applications using PlayReady on Windows, Xbox](developing-applications.md#developing_applications_windows_xbox)

@@ -1,9 +1,9 @@
 ---
 author:
-title: Additional Documentation
-description: PlayReady Additional Documentation
+title: Additional Information
+description: PlayReady Additional Information
 ms.assetid: "6fb880fa-b2b1-bae3-064b-0e0345d6edf8"
-keywords:  PlayReady Documentation
+keywords:  PlayReady Information
 ms.author:
 ms.topic: conceptual
 ms.prod: playready
@@ -11,11 +11,11 @@ ms.technology: drm
 ---
 
 
-# Additional Documentation
+# Additional Information
 
 <br/>
 
-## Additional Documentation available to the Public
+## Additional Information available to the Public
 
 In addition to the pages on this website, the PlayReady team provides the following documentation:
 
@@ -26,7 +26,7 @@ In addition to the pages on this website, the PlayReady team provides the follow
 <br/>
 <br/>
 
-## Additional Documentation available to the Licensees
+## Additional Information available to the Licensees
 
 - Documentation restricted to PlayReady Licensees (CHM)
 
