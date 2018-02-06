@@ -1,12 +1,9 @@
 ---
 author: rolandlefranc
-title: PlayReady Products and Deliverables
+title: PlayReady Products, Deliverables and Services
 description: PlayReady is a very versatile technology that is designed to allow the development of clients on virtually any processor, any platform, any operating system (OS), and any environment.
 ms.assetid: "53B49621-E528-43FA-B054-BB38442DF666"
-kindex: PlayReady, products and deliverables
-kindex: products, PlayReady
-kindex: deliverables, PlayReady
-keywords:  products, deliverables, license, certificates, Azure, Windows, documentation, test server, secure clock
+keywords:  playready, products, deliverables, services, license
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -14,7 +11,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady Products and Deliverables
+# PlayReady Products, Deliverables and Services
 
 PlayReady is a very versatile technology that is designed to allow the development of clients on virtually any processor, any platform, any operating system (OS), and any environment, and develop and deploy clients by the licensees or their partners, whether they are "System on a Chip" (SOC) vendors, third party developers, original design manufacturers (ODMs), or original equipment manufacturers (OEMs). A common scenario is an SOC vendor preparing the PlayReady library for their processor XYZ, and the OEMs passing this library from the SOC vendor and the certificates they received from Microsoft to their ODM, to manufacture and distribute a device that includes an operational PlayReady client.
 
