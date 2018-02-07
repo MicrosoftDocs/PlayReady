@@ -3,7 +3,6 @@ author: rolandlefranc
 title: Licenses
 description: After a client retrieves a protected file, that client needs to acquire a license before it can perform actions that use that content.
 ms.assetid: "EF3BEE65-8412-4A9A-8AA9-A3F6AF2E3D92"
-kindex: licenses
 keywords: playready licenses, key, policies, encryption, decrypt
 ms.author: rolefran
 ms.topic: conceptual
