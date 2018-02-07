@@ -44,7 +44,7 @@
 
 ### [PlayReady Product Versions](Overview/product-versions.md)
 
-### [License to Use Playready](Overview/license-to-use-playready.md)
+### [License to Use PlayReady](Overview/license-to-use-playready.md)
 
 ### [PlayReady Compliance and Robustness Rules](Overview/compliance-and-robustness-rules.md)
 

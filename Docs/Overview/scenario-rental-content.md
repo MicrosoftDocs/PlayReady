@@ -3,11 +3,7 @@ author: rolandlefranc
 title: Scenario Rental Content
 description: In rental content, the license delivered for the content specifies an expiration date and time.
 ms.assetid: "30da1be6-dfdc-d98e-261b-cc86c7e6da02"
-kindex: scenarios, rental content
-kindex: rental content scenario
-kindex: streaming, rental content
-kindex: download and play, rental content
-keywords:  rental content scenarios, rental content scenario,  rental content streaming,  rental content download and play
+keywords: rental content scenario, rental content scenario,  rental content streaming,  rental content download and play
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

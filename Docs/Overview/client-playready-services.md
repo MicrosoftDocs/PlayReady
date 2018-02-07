@@ -3,10 +3,7 @@ author: rolandlefranc
 title: "OEM or App Vendor Services for PlayReady Clients"
 description: ""
 ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
-kindex: SOAP, PlayReady protocols
-kindex: protocols, PlayReady communication
-kindex: communication, PlayReady SOAP
-keywords:
+keywords: SOAP, PlayReady protocols, PlayReady communication
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

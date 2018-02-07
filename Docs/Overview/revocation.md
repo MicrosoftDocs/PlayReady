@@ -3,8 +3,6 @@ author: rolandlefranc
 title: PlayReady Revocation
 description: When Microsoft identifies a client with compromised security, the device may be revoked and added to a revocation list.
 ms.assetid: "09869289-666b-272e-1cc2-97079cb71204"
-kindex: revocation, about
-kindex: about, revocation
 keywords: playready revocation,  revocation list
 ms.author: rolefran
 ms.topic: conceptual
@@ -32,7 +30,5 @@ Microsoft builds and maintains the revocation list and its versioning structure.
 
 **PlayReady Revocation List: [http://go.microsoft.com/fwlink/?LinkId=110086](http://go.microsoft.com/fwlink/?LinkId=110086)**
 
-## Requirement for PlayReady Servers
-
-Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), companies operating a PlayReady Server "must update the PlayReady Server Software Development Kit certificate revocation lists for each PlayReady Server once a week". This ensures any compromised client gets its license requests declined in a reasonnable timeframe after its addition by Microsoft to the Revocation List.
+Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), companies operating a PlayReady Server "must update the PlayReady Server Software Development Kit certificate revocation lists for each PlayReady Server once a week". This ensures any compromised client gets its license requests declined in a reasonable time frame after its addition by Microsoft to the Revocation List.
 

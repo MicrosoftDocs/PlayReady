@@ -3,10 +3,7 @@ author: rolandlefranc
 title: Persistent and Non-persistent Licenses
 description: License servers built using PlayReady Server SDK issue licenses to clients.
 ms.assetid: "3da1f73f-e8a0-aa6a-a9cf-24a74226311b"
-kindex: license, generation and issuance
-kindex: generating, licenses
-kindex: issuing, licenses
-keywords:  about generation and issuance license,  license generation and issuance about
+keywords: playready generation and license persistence
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

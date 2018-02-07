@@ -3,9 +3,7 @@ author: rolandlefranc
 title: PlayReady Ecosystem
 description: This sections describes the PlayReady ecosystem.
 ms.assetid: "dfb65490-8a56-fdda-a81d-b106ad0c69bb"
-kindex: PlayReady ecosystem, about the Microsoft
-kindex: about the, Microsoft PlayReady ecosystem
-keywords:  about the Microsoft PlayReady ecosystem,  Microsoft PlayReady ecosystem about the
+keywords: about the Microsoft PlayReady ecosystem, PlayReady ecosystem
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

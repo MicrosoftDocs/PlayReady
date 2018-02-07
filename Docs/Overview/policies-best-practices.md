@@ -3,10 +3,7 @@ author: rolandlefranc
 title: Best Practices for License Policies
 description: This section describes best practices for programming license policies in PlayReady.
 ms.assetid: "bfbd5264-5ac4-0359-8a6f-b8bb3db19285"
-kindex: best practices, license policies
-kindex: policies, best practices for license
-kindex: license, best practices for license policies
-keywords:  license policies best practices,  best practices for license policies,  best practices for license policies license
+keywords: playready license policies best practices
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -70,8 +67,8 @@ A typical example with a PlayReady Client version 2 would be:
 
    1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Android phone running an app built on PlayReady 2.5.
 
-   2. The Android app initiates a license request to the license server. The phone clock indicates 7:56PM and the license server clock is on 8:00PM
-   
+   2. The Android app initiates a license request to the license server. The phone clock indicates 7:56PM and the license server clock is on 8:00PM.
+
    3. The license server receives the license request, detects that the client is version 2, and generates the license with:
 
       *  Play Right
@@ -79,8 +76,8 @@ A typical example with a PlayReady Client version 2 would be:
       *  Begin Time = local server time minus 5 minutes = January 5, 2018 at 7:55 PM
 
       *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
-      
-    4. The license server sends the license back to the client
+
+    4. The license server sends the license back to the client.
 
     5. The client starts playback. The phone clock is still 7:56PM and is past the license's BeginDate which is 7:55PM, so playback can actually start now.
 
@@ -89,13 +86,14 @@ A typical example with a PlayReady Client version 3 would be:
 
    1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Windows 10 computer running an UWP app.
 
-   2. The UWP app initiates a license request to the license server. The PC clock indicates 7:56PM and the license server clock is on 8:00PM
-   
+   2. The UWP app initiates a license request to the license server. The PC clock indicates 7:56PM and the license server clock is on 8:00PM.
+
    3. The license server receives the license request, detects that the client is version 3, and checks for the value of the client clock:
+
       *  if the client clock value is no further than the license server clock value than 1 hour, proceed and generate the license
 
       *  if not, deny the license request and send a message to the client app to request that clock is set to the right value
-      
+
    4. The license server generates the license with:
 
       *  Play Right
@@ -103,8 +101,8 @@ A typical example with a PlayReady Client version 3 would be:
       *  Begin Time = client time contained in the license request = January 5, 2018 at 7:56 PM
 
       *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
-      
-    4. The license server sends the license back to the client
+
+    4. The license server sends the license back to the client.
 
     5. The client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start now.
 <br/>

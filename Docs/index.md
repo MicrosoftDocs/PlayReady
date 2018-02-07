@@ -15,7 +15,7 @@ Microsoft PlayReady is a set of technologies that can be used to distribute audi
 
 
 ## Widely deployed
-Microsoft PlayReady is the Widest Deployed Content Protection Technology in the World. PlayReady runs on all sorts of devices and apps, and all operating systems. Thousands of services around the world and more than four billion devices use PlayReady. 
+Microsoft PlayReady is the Widest Deployed Content Protection Technology in the World. PlayReady runs on all sorts of devices and apps, and all operating systems. Thousands of services around the world and more than four billion devices use PlayReady.
 
 Microsoft PlayReady content protection is proven, versatile and scalable. The development of Microsoft PlayReady DRM technology is the culmination of over 14 years of research and development, significant patent portfolio with more than $2B invested in content protection technology. Microsoft provides valuable and reliable IP protection to over a thousand licensees from all parts of the ecosystem to deliver millions of secured, premium content and assets.
 What makes PlayReady so effective in an ever evolving marketplace is Microsoft’s direct collaboration with the media industry leaders, content providers, OEMs, Service and Network Providers to develop features and functionality for premium entertainment scenarios.

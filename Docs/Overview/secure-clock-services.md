@@ -3,7 +3,7 @@ author: rolandlefranc
 title: "PlayReady Secure Clock Services for PlayReady Clients"
 description: ""
 ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
-keywords: protocols, secure clock, secure time, SOAP 
+keywords: secure clock services for playready clients
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
