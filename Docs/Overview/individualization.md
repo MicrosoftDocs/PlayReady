@@ -1,7 +1,7 @@
 ---
 author: rolandlefranc
 title: PlayReady Individualization
-description: Individualization is the process of updating the PlayReady runtime on the client computer, allowing licenses to be bound to the client computer.
+description: Individualization is the process of updating the PlayReady runtime on the Client computer, allowing licenses to be bound to the Client computer.
 ms.assetid: "2d0eed43-5a52-a642-ff7f-aa1927766e5a"
 keywords: playready individualization, license
 ms.author: rolefran
@@ -14,7 +14,7 @@ ms.technology: drm
 # PlayReady Individualization
 
 
-Individualization is the process of updating the PlayReady runtime on the client computer, allowing licenses to be bound to the client computer.
+Individualization is the process of updating the PlayReady runtime on the Client computer, allowing licenses to be bound to the Client computer.
 
 
 Individualization must be performed on a personal computer before most DRM-related operations will be allowed.

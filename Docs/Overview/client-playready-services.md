@@ -13,8 +13,8 @@ ms.technology: drm
 # OEM or App Vendor Services for PlayReady Clients
 
 
-OEMs or App Vendors releasing PlayReady Clients may design their device or application so as to contact a service when they perform PlayReady operations. A very common scenario is the remote provisioning service, which delivers a unique device certificate to a client the first time it performs a PlayReady operation.
+OEMs or App Vendors releasing PlayReady Clients may design their device or application so as to contact a service when they perform PlayReady operations. A very common scenario is the remote provisioning service, which delivers a unique device certificate to a Client the first time it performs a PlayReady operation.
 
-These services are specific to the client, owned by the device maker or app developer, and use ad-hoc protocols.
+These services are specific to the Client, owned by the device maker or app developer, and use ad-hoc protocols.
 
-Microsoft operates some of these services for the clients that it owns, including Windows 10, Windows 8.1, Xbox, Silverlight.
+Microsoft operates some of these services for the Clients that it owns, including Windows 10, Windows 8.1, Xbox, Silverlight.

@@ -44,5 +44,5 @@ In addition to the pages on this website, the PlayReady team provides the follow
 
 - [PlayReady Training Slides](http://wmlalicensing.com)
 
-  Provides training slides (Knowledge Base) that describe how to implement PlayReady clients and servers. This website is restricted to licensees.
+  Provides training slides (Knowledge Base) that describe how to implement PlayReady Clients and Servers. This website is restricted to licensees.
 

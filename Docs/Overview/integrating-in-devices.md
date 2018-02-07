@@ -1,9 +1,9 @@
 ---
 author: rolandlefranc
 title: Integrating PlayReady in Devices
-description: This topic provides a brief description on the different ways to implement a DRM client in a device and how to develop applications using DRM.
+description: This topic provides a brief description on the different ways to implement a DRM Client in a device and how to develop applications using DRM.
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
-keywords: client, architecture, porting kit, pk, dpk, integration, embedded
+keywords: Client, architecture, porting kit, pk, dpk, integration, embedded
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -43,7 +43,7 @@ The following figure shows the PlayReady PK components and how they fit in a dev
     2. Fix any non conformance found. Re-test.
     3. Optionally use a third party security house or test house
 
-4. Prepare the device secrets (model-level client certificate and associated private keys, or unit-level client certificate provisioning service)
+4. Prepare the device secrets (model-level Client Certificate and associated private keys, or unit-level Client Certificate provisioning service)
 
 5. Manufacture and distribute the device to the market
 
