@@ -47,10 +47,21 @@ PlayReady Secure Delete allows service providers to receive secure acknowledgeme
 
 For more information about PlayReady Secure Delete, see [PlayReady Secure Delete](secure-delete-server.md).
 
-## Development and operation by a third party
+## Development and operation by the licensee or a third party
 
-You can either develop and deploy these servers yourself, or these services can be provided to you from third parties, such as a [PlayReady Partner](https://www.microsoft.com/playready/partners/). All of these servers must be deployed on a server running Windows Server. You do not need to deploy each type of server on their own machine; instead multiple PlayReady server types can be run on the same physical machine.
+A company, typically a service provider, with an active PlayReady Server licensing agreement can access the PlayReady Server SDK and use it to develop and operate a PlayReady server (license server, domain controller, metering server, secure stop server, or secure delete server).
 
+All of these servers must be deployed on a physical or virtual server running Windows Server. You do not need to deploy each type of server on their own machine; instead multiple PlayReady server types can be run on the same physical machine.
+
+This company can, however, share roles with third parties:
+
+  *  PlayReady Server Development partners &mdash; these companies can develop the logic of a PlayReady server on behalf of the customer.
+
+  *  PlayReady application service provider (ASP) partners &mdash; these companies can develop and operate, or operate a PlayReady server on behalf of the customer. This server may be connected to the customer’s backend logic and Key Management System in different ways to provide a complete DRM system.
+
+See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page for more information.
+
+<br/>
 
 ## In this section
 

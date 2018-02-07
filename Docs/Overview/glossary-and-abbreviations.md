@@ -65,7 +65,9 @@ The following high-level terms are used throughout this documentation.
 | Extensible media rights (XMR)| A binary schema used for representing licenses within PlayReady.|
 | Hashed data store (HDS)| A file also know as PlayReady data store, that contains all licenses, certificates, and related content access protection data associated with a particular client. This file is created by the PlayReady Client runtime when a device is first started and individualized.
 | HLS | HTTP Live Streaming. An adaptive streaming protocol which was introduced by Apple. |
+| IIS | See Internet Information Services. |
 | Individualization| The process of updating the PlayReady runtime on the client, allowing licenses to be bound to the client. This process increases security by making it difficult to corrupt more than one player at a time.|
+| Internet Information Services | Web server created by Microsoft for use on Windows Server |
 | IV (Initialization Vector) | A block of bits enabling multiple instances of a stream or block cipher to produce unique streams despite using the same encryption key. |
 | Key | A piece of data that is required to unlock a packaged media file. This key is included in a separate license.|
 | Key Identifier (KID) | A value that identifies the key for a protected media file.|
