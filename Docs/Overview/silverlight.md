@@ -11,7 +11,7 @@ ms.technology: drm
 ---
 
 
-# PlayReady and Silverlight
+# PlayReady in Silverlight
 
 ## Web plug-ins phasing out
 
