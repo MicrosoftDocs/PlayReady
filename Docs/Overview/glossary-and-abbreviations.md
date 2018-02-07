@@ -42,7 +42,7 @@ The following high-level terms are used throughout this documentation.
 | Content header| Part of the file structure of a PlayReady encrypted file that contains information necessary for a client to decrypt and render the content data. In a packaged file, a content header contains the key identifier, content key, license acquisition URL, and license user interface URL. This content header can also include attributes defined by the content provider.|
 | CR| Compliance Rules for PlayReady Products.|
 | CR&RR| Compliance and Robustness Rules.|
-| Cryptographicly Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
+| Cryptographically Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
 | CTR mode | An AES encryption mode. Counter (CTR) mode turns a block cipher into a stream cipher. |
 | Customer | Company that uses PlayReady to build a service or client.|
 | DASH | See MPEG-DASH. |
