@@ -61,7 +61,35 @@ This company can, however, share roles with third parties:
 
 See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page for more information.
 
-<br/>
+## PlayReady Server Sample
+
+Here is the description of the PlayReady Server SOAP interface, available at **[http://test.playready.microsoft.com/service/rightsmanager.asmx](http://test.playready.microsoft.com/service/rightsmanager.asmx)**
+
+```
+RightsManager
+
+The following operations are supported. For a formal definition, please review the Service Description. 
+
+  - AcknowledgeLicense 
+
+  - AcquireLicense 
+
+  - AcquirePackagingData 
+
+  - GetMeteringCertificate 
+
+  - JoinDomain 
+
+  - LeaveDomain 
+
+  - ProcessDeleteLicenseData 
+
+  - ProcessMeteringData 
+
+  - ProcessSecureStopData
+```
+
+&nbsp;
 
 ## In this section
 
@@ -76,3 +104,9 @@ See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page 
 [PlayReady Secure Stop Server](secure-stop-server.md)
 
 [PlayReady Secure Delete](secure-delete-server.md)
+
+
+## See also
+[PlayReady Test Server](http://test.playready.microsoft.com/)
+
+[PlayReady Test License Server](http://test.playready.microsoft.com/service/rightsmanager.asmx)
