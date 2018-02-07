@@ -3,7 +3,7 @@ author: rolandlefranc
 title: PlayReady Clients
 description:
 ms.assetid: "83200B8C-6C24-4ACE-95D6-28C1C5B3C412"
-keywords: Clients, playready
+keywords: clients, playready
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

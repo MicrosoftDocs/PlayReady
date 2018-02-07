@@ -3,7 +3,7 @@ author: rolandlefranc
 title: PlayReady DRM Plugin for Android Specification
 description: This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
-keywords: DRM Plugin for Android specification
+keywords: drm, plugin, android, java, specification, PlayReadyDrmPlugin, PlayReadyDRMPlugin
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

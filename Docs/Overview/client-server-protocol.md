@@ -3,7 +3,7 @@ author: rolandlefranc
 title: PlayReady Client-Server Protocol
 description: Most communication between a PlayReady Client and a PlayReady Server are managed through the use of Simple Object Access Protocol (SOAP) messages.
 ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
-keywords: SOAP, PlayReady Client Server protocols
+keywords: soap, playready client server protocols
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

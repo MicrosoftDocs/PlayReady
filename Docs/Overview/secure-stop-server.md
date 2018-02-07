@@ -3,7 +3,7 @@ author: rolandlefranc
 title: PlayReady Secure Stop Server
 description: PlayReady Secure Stop is a feature that provides the means for a PlayReady device to confidently assert to a media streaming service that media playback has stopped for any given piece of content.
 ms.assetid: "A269D7DC-57B8-4B78-A91E-1DD9707FA6FE"
-keywords: Secure Stop Server, license
+keywords: secure, stop, server, license
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready

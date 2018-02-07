@@ -99,7 +99,7 @@ The following high-level terms are used throughout this documentation.
 | PFPL, FPL | PlayReady Final Product Licensee. A company that has signed a PlayReady Final Product License with Microsoft |
 | Player | A Client program or control that receives digital media content streamed from a Server or played from local files. Windows Media Player is an example of a player.|
 | PK | PlayReady Device Porting Kit |
-| PlayReady CA | PlayReady Certificate Authority. Microsoft is the Certificate Authority for PlayReady Client and Server certificates |
+| PlayReady CA | PlayReady Certificate Authority. Microsoft is the Certificate Authority for PlayReady Client and Server Certificates |
 | PlayReady Device Porting Kit| The portion of PlayReady content access and protection technology used for designing PlayReady applications for devices such as mobile phones, set-top boxes, and portable media players.|
 | PlayReady Server SDK| The portion of PlayReady content access and protection technology used for designing applications and plug-ins for use on a License Server, a metering Server, a domain controller, a secure stop Server, and a secure delete Server.|
 | Policy| The description in the license of the actions permitted or the restrictions on the content.|

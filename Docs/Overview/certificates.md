@@ -3,7 +3,7 @@ author: rolandlefranc
 title: PlayReady Certificates and Certificate Authority
 description: PlayReady Compliance and Robustness Rules
 ms.assetid: "6fb880fa-b2b1-bae3-064b-0e0345d6edf8"
-keywords:  PlayReady Certificates and Certificate Authority
+keywords:  PlayReady, certificates, certificate authority, authority, ca
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -16,7 +16,7 @@ ms.technology: drm
 
 A certificate is a digitally-signed binary document used to grant and revoke privileges to devices and Servers to perform specific operations. PlayReady customers can request several different types of certificates depending on their needs.
 
-Certificates generally fall into two main categories: Server certificates and Client Certificates. Server certificates allow a Customer to run the PlayReady Server SDK; Client or device certificates allow devices to play content. There are also test Client Certificates, which are only used for test devices and can be revoked at any time.
+Certificates generally fall into two main categories: Server Certificates and Client Certificates. Server Certificates allow a Customer to run the PlayReady Server SDK; Client or Device Certificates allow devices to play content. There are also test Client Certificates, which are only used for test devices and can be revoked at any time.
 
 
 ## PlayReady Certificate Authority
