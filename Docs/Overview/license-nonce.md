@@ -18,7 +18,7 @@ A PlayReady Client includes a random **GUID** called the License Nonce in every 
 
 If the Server delivers a license response with only non-persistent licenses, it includes in the licenses a rights identifier that contains the license request's License Nonce.
 
-When adding the licenses received to the In-Memory-Only data store, the Client verifies that the license's rights identifier matches the license request's License Nonce, and rejects the licenses that don't match.
+When adding the licenses received to the In-Memory-Only data store, the client verifies that the license's rights identifier matches the license request's License Nonce, and rejects the licenses that don't match.
 
 This mechanism is designed this way for PlayReady robustness reasons, and avoids instances of an attacker replaying non-persistent licenses over and over to get an indefinite play right to a certain key identifier (KID).
 

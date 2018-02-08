@@ -14,9 +14,9 @@ ms.technology: drm
 # License Acquisition
 
 
-To play protected content, a valid license for the content must be available. If there is no valid license for the content, the license must be acquired. During license acquisition, a Client acquires its license from a License Server or from a proxy Server. The license acquisition Client is a media player on a mobile device, such as a phone or tablet, or on a personal computer. Clients for license acquisition connect directly to a License Server and request licenses for content they have acquired.
+To play protected content, a valid license for the content must be available. If there is no valid license for the content, the license must be acquired. During license acquisition, a client acquires its license from a License Server or from a proxy Server. The license acquisition client is a media player on a mobile device, such as a phone or tablet, or on a personal computer. Clients for license acquisition connect directly to a License Server and request licenses for content they have acquired.
 
-In the context of license acquisition, the License Server and the packaging Server are considered to be DRM Servers. Portable devices and personal computers capable of license acquisition are considered to be Clients.
+In the context of license acquisition, the License Server and the packaging Server are considered to be DRM Servers. Portable devices and personal computers capable of license acquisition are considered to be clients.
 
 
 ## Server and Client interactions for license acquisition
@@ -29,7 +29,7 @@ On the Server side, PlayReady Server SDK provides functionality for:
 
 
 
-The Client on the consumer's portable device or personal computer provides functionality for:
+The client on the consumer's portable device or personal computer provides functionality for:
 
    *  License acquisition<br/>
    *  Usage rules enforcement<br/>
@@ -47,8 +47,8 @@ Domain, Metering, Secure Stop, and Secure Delete support is also included with P
 
 There are two modes for license acquisition:
 
-   *  **Proactive license acquisition** &mdash; The Client application explicitly initiates a license request before playback begins. This is typically a scenario where the system is programmed such that the application has browsed content, and would take the time to "proactively" acquire the license before any playback session is started. After the license is received, playback can start at any time. The application could start playback immediately, or there are cases where the license would be acquired days before the content is actually played, typically in an offline playback scenario.
-   *  **Reactive license acquisition** &mdash; The Client application doesn't explicitely acquire a license before content is played back. After playback is initiated, the PlayReady media player plays back looks for an existing PlayReady license that can decrypt this content. If it does not find any usable license, it automatically uses the associated license acquirer object to acquire the license before resuming the playback.
+   *  **Proactive license acquisition** &mdash; The client application explicitly initiates a license request before playback begins. This is typically a scenario where the system is programmed such that the application has browsed content, and would take the time to "proactively" acquire the license before any playback session is started. After the license is received, playback can start at any time. The application could start playback immediately, or there are cases where the license would be acquired days before the content is actually played, typically in an offline playback scenario.
+   *  **Reactive license acquisition** &mdash; The client application doesn't explicitly acquire a license before content is played back. After playback is initiated, the PlayReady media player plays back looks for an existing PlayReady license that can decrypt this content. If it does not find any usable license, it automatically uses the associated license acquirer object to acquire the license before resuming the playback.
 
 
 The following figure gives an architectural overview of content protection and license acquisition.
@@ -73,7 +73,7 @@ License acquisition follows these steps, as illustrated in the figure:
 
 
 
-At this point, the player will have the content in a usable form. Any policy enabled by the license can be used. For example, if the license enables "play," the license acquisition Client can play the content.
+At this point, the player will have the content in a usable form. Any policy enabled by the license can be used. For example, if the license enables "play," the license acquisition client can play the content.
 
 
 
@@ -93,7 +93,7 @@ The following figure shows the basic steps to reactively acquire a license.
 
 &nbsp;
 
-After a Client retrieves a protected file, that Client needs to acquire a license before it can perform actions that use that content. Licenses store the information necessary to access the associated content and store the rules by which that content can be accessed. Users must acquire their own licenses to play protected content, even if the protected content was copied from someone who already had a license for it. Licenses contain the encryption key to decrypt the corresponding content or, in the case of chained licenses, contain an intermediary key. Licenses also contain rights and other properties that specify the use of the content. For example, the license determines the number of times a protected file can be played, and whether the license ever expires. These properties are configured in the license separately from the protected file.
+After a client retrieves a protected file, that client needs to acquire a license before it can perform actions that use that content. Licenses store the information necessary to access the associated content and store the rules by which that content can be accessed. Users must acquire their own licenses to play protected content, even if the protected content was copied from someone who already had a license for it. Licenses contain the encryption key to decrypt the corresponding content or, in the case of chained licenses, contain an intermediary key. Licenses also contain rights and other properties that specify the use of the content. For example, the license determines the number of times a protected file can be played, and whether the license ever expires. These properties are configured in the license separately from the protected file.
 
 Each license contains the following information:
 
@@ -101,18 +101,18 @@ Each license contains the following information:
    *  The rights of the license
    *  The right restrictions and right modifiers, also known as the conditions of the license
 
-Before a Client can decrypt the content associated with a license, it must retrieve the policy from the license. The content protection information within the license is encrypted using a Client's public key or a Client's domain's public key encryption information. The license is considered "bound" to the Client or domain that has the private key for decrypting the content protection information.
+Before a client can decrypt the content associated with a license, it must retrieve the policy from the license. The content protection information within the license is encrypted using a client's public key or a client's domain's public key encryption information. The license is considered "bound" to the client or domain that has the private key for decrypting the content protection information.
 
 Clients acquire licenses either directly from License Servers or through a proxy Server.
 
 # Transport for license acquisition
 PlayReady license acquisitions all require a transaction between the Client and the Server:
-1. A challenge generated by the Client and sent to the Server
-2. A response generated by the Server and sent to the Client
+1. A challenge generated by the client and sent to the Server
+2. A response generated by the Server and sent to the client
 
 Transactions typically occur on the Internet, through HTTP or HTTPS, or on a closed network. The protocol used are based on SOAP and can be customized.
-They can also be implemented asynchronously, for example with a Client posting somewhere the challenge, and a Server processing this challenge, generating a response and posting that response in some other location.
+They can also be implemented asynchronously, for example with a client posting somewhere the challenge, and a Server processing this challenge, generating a response and posting that response in some other location.
 
 > [!NOTE]
-> PlayReady does not support license broadcasting, meaning Servers sending licenses to Clients on a broadcast network.
+> PlayReady does not support license broadcasting, meaning Servers sending licenses to clients on a broadcast network.
 

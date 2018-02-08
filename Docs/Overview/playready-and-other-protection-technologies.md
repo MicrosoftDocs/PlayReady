@@ -29,7 +29,7 @@ PlayReady systems are able to interoperate with other content protection systems
 
 ## Common Encryption
 
-A service provider may encrypt a content file once with a content key (CK) and deliver this CK to different Clients using different content protection technologies. By doing this, a single protected asset can be served a set of heterogenous Clients, which saves storage and content delivery network (CDN) costs compared to a system where specific protected content is served to each type of Client. 
+A service provider may encrypt a content file once with a content key (CK) and deliver this CK to different clients using different content protection technologies. By doing this, a single protected asset can be served a set of heterogenous clients, which saves storage and content delivery network (CDN) costs compared to a system where specific protected content is served to each type of client. 
  
 Let's take the example of a service delivering protected content to PlayReady Clients (first content protection technology) and to DRM B Clients (second content protection technology). The content is a fragmented MP4 file (fMP4, ISOBMFF) or an adaptive streaming asset based on fragmented MP4 files (such as DASH, Smooth Streaming, or HLS), and the encryption format used is the ISO/IEC 23001-7:2016 Standard. 
  
@@ -83,11 +83,11 @@ For additional information about the MPEG Common Encryption Standard, see: 
 
 A **PlayEnabler** represents a technology that content from a PlayReady Client is allowed to play to. For example: 
 
-   *  A Client playing PlayReady-protected content and passing the audio/video to an AirPlay receiver, using the AirPlay link protection.
-   *  A Client playing PlayReady-protected content and passing the audio/video to Unknown Output.
-   *  A Client playing PlayReady-protected content and passing the audio/video to a network receiver, protected using DTCP-IP.
+   *  A client playing PlayReady-protected content and passing the audio/video to an AirPlay receiver, using the AirPlay link protection.
+   *  A client playing PlayReady-protected content and passing the audio/video to Unknown Output.
+   *  A client playing PlayReady-protected content and passing the audio/video to a network receiver, protected using DTCP-IP.
 
-A PlayEnabler object is an optional right that a license may contain, if it's set by the service provider when creating the license. If it is present, the Client is allowed to play and pass the audio/video signal to the corresponding output. Note that a PlayEnabler involves an Export operation if passing to the corresponding output requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
+A PlayEnabler object is an optional right that a license may contain, if it's set by the service provider when creating the license. If it is present, the client is allowed to play and pass the audio/video signal to the corresponding output. Note that a PlayEnabler involves an Export operation if passing to the corresponding output requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
 
 
 ## CopyEnablers
@@ -101,10 +101,10 @@ A **CopyEnabler**  represents a technology that content from a PlayReady Client 
 
 For example, a PlayReady Client may decrypt PlayReady content to re-encrypt it using CSS and burn a video DVD. This operation makes a copy of the content (the original PlayReady protect content file still exist on the device, but a copy has been created in a DVD), and involves transcription (PlayReady decryption and CSS re-encryption).
 
-A CopyEnabler object is an optional right that a license may contain. If it is present, the Client is allowed to copy the content to the corresponding format and storage. Note that a CopyEnabler involves an Export operation if making the corresponding copy requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
+A CopyEnabler object is an optional right that a license may contain. If it is present, the client is allowed to copy the content to the corresponding format and storage. Note that a CopyEnabler involves an Export operation if making the corresponding copy requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
 
 > [!NOTE]
-> CopyEnablers were supported up to PlayReady 2.X. They are no longer supported by Clients 3.0 and above.
+> CopyEnablers were supported up to PlayReady 2.X. They are no longer supported by PlayReady Clients 3.0 and above.
 
 
 ## MoveEnablers
@@ -116,10 +116,10 @@ A **MoveEnabler** represents a technology that content from a PlayReady Client i
 
 For example, a PlayReady Client may decrypt PlayReady content to re-encrypt it using CPRM and store it onto a CPRM enabled drive, then deleting the original PlayReady protected content and license. This operation moves the content (the original PlayReady protect content file no longer exist on the device, but a copy has been created on the Content Protection for Recordable Media (CPRM)-enabled drive), and involves transcription (PlayReady decryption and CSS re-encryption). 
 
-A MoveEnabler object is an optional right that a license may contain. If it is present, the Client is allowed to move the content to the corresponding format and storage. Note that a MoveEnabler involves an Export operation if making the corresponding destination format requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
+A MoveEnabler object is an optional right that a license may contain. If it is present, the client is allowed to move the content to the corresponding format and storage. Note that a MoveEnabler involves an Export operation if making the corresponding destination format requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
 
 > [!NOTE]
-> MoveEnablers were supported up to PlayReady 2.X. They are no longer supported by Clients 3.0 and above.
+> MoveEnablers were supported up to PlayReady 2.X. They are no longer supported by PlayReady Clients 3.0 and above.
 
 
 ## Import and Export
@@ -128,7 +128,7 @@ Some system of devices may change the format of the protected content AND its as
 
 ![Content Protection Transcription](../images/content_protection_A_to_B.png) 
 
-PlayReady Import designates an operation where content is initially protected using a Content Protection A technology and then protected using PlayReady, typically in a transcriptor. What that means is the encryption keys of the protected content are protected in a Content Protection A license when they get in the device, and are protected in a PlayReady license when they get out of that device. It may involve transcrypting the content (decrypting the content, and re-encrypting the content using different keys), or simply repackaging the encryption keys from the Content Protection A license format to the PlayReady license format. It may also involve transcribing the rights and right restrictions from Content Protection X technology to PlayReady extensible media rights (XMR). 
+PlayReady Import designates an operation where content is initially protected using a Content Protection A technology and then protected using PlayReady, typically in a transcryptor. What that means is the encryption keys of the protected content are protected in a Content Protection A license when they get in the device, and are protected in a PlayReady license when they get out of that device. It may involve transcrypting the content (decrypting the content, and re-encrypting the content using different keys), or simply repackaging the encryption keys from the Content Protection A license format to the PlayReady license format. It may also involve transcribing the rights and right restrictions from Content Protection X technology to PlayReady extensible media rights (XMR). 
 
 ![PlayReady Import](../images/playready_import.png) 
 
@@ -136,7 +136,7 @@ PlayReady Export designates an operation where content is initially protected us
 
 For example, a user uses a computer to acquire subscription content that is protected with PlayReady and then wants to stream that content to a playback device on a network that only supports DTCP-IP. To play the content protected with PlayReady on that device, the protected content must be exported to DTCP-IP. 
 
-To enable this scenario, PlayReady Server SDK allows developers to specify additional content protection formats for export in an inclusive list. This inclusive list is created per license by adding **GUID**s that correspond to the permitted content protection formats (adding **GUID**s to the inclusive list is accomplished with the **PlayEnabler** class). These **GUID**s and their associated rights mappings are defined in the PlayReady Server SDK Compliance Rules that accompanied your license agreement from Microsoft. The Client sending content may only export the content to those content protection systems specified in the license inclusive list. 
+To enable this scenario, PlayReady Server SDK allows developers to specify additional content protection formats for export in an inclusive list. This inclusive list is created per license by adding **GUID**s that correspond to the permitted content protection formats (adding **GUID**s to the inclusive list is accomplished with the **PlayEnabler** class). These **GUID**s and their associated rights mappings are defined in the PlayReady Server SDK Compliance Rules that accompanied your license agreement from Microsoft. The client sending content may only export the content to those content protection systems specified in the license inclusive list. 
 
 ![PlayReady Export](../images/playready_export.png) 
 

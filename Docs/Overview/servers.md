@@ -11,18 +11,18 @@ ms.technology: drm
 ---
 
 # PlayReady Servers
-PlayReady Servers can take different forms depending on whether they are programmed to deliver licenses, or manage PlayReady domains of Clients, or receive and aggregate metering data from Clients, etc. These logical Servers are all developed in C# based on the same PlayReady Server SDK, and a single Server application can implement one or several of the PlayReady Server functionalities.
+PlayReady Servers can take different forms depending on whether they are programmed to deliver licenses, or manage PlayReady domains of clients, or receive and aggregate metering data from clients, etc. These logical Servers are all developed in C# based on the same PlayReady Server SDK, and a single Server application can implement one or several of the PlayReady Server functionalities.
 
 
 ## PlayReady License Server
 
-A PlayReady License Server allows process incoming license acquisition requests from Clients, generate licenses, and issue them in a license acquisition response back to Clients.
+A PlayReady License Server allows process incoming license acquisition requests from clients, generate licenses, and issue them in a license acquisition response back to clients.
 
 For more information about PlayReady domains, see [PlayReady License Server](license-Server.md).
 
 ## PlayReady Domain Server
 
-An optional PlayReady domain Server allows you to manage content access for multiple Clients through a single entity. Domains provide simplified and more robust service access for multiple Clients, including mobile device Clients.
+An optional PlayReady domain Server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients, including mobile device clients.
 
 > [!NOTE]
 > A PlayReady domain is not the same as network or Web domains.
@@ -43,7 +43,7 @@ For more information about PlayReady Secure Stop, see [PlayReady Secure Stop Ser
 
 ## PlayReady Secure Delete Server
 
-PlayReady Secure Delete allows service providers to receive secure acknowledgement of license deletion. This optional feature provides a PlayReady Secure Delete Server with a means to track which licenses are available and which have been deleted on a particular Client.
+PlayReady Secure Delete allows service providers to receive secure acknowledgement of license deletion. This optional feature provides a PlayReady Secure Delete Server with a means to track which licenses are available and which have been deleted on a particular client.
 
 For more information about PlayReady Secure Delete, see [PlayReady Secure Delete](secure-delete-Server.md).
 
@@ -68,23 +68,23 @@ Here is the description of the PlayReady Server SOAP interface, available at **[
 ```
 RightsManager
 
-The following operations are supported. For a formal definition, please review the Service Description. 
+The following operations are supported. For a formal definition, please review the Service Description.
 
-  - AcknowledgeLicense 
+  - AcknowledgeLicense
 
-  - AcquireLicense 
+  - AcquireLicense
 
-  - AcquirePackagingData 
+  - AcquirePackagingData
 
-  - GetMeteringCertificate 
+  - GetMeteringCertificate
 
-  - JoinDomain 
+  - JoinDomain
 
-  - LeaveDomain 
+  - LeaveDomain
 
-  - ProcessDeleteLicenseData 
+  - ProcessDeleteLicenseData
 
-  - ProcessMeteringData 
+  - ProcessMeteringData
 
   - ProcessSecureStopData
 ```

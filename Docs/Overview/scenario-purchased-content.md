@@ -35,11 +35,11 @@ The purchased content scenario performs the following steps:
 
       When distributing protected content, the content owner must use License Servers to indicate rights to be included in licenses issued for the content. These rules (and information needed to determine the content key) are given to a License Server, which then has all the information necessary to create licenses for that content.
 
-   1. On the consumer/media consumer side, users browse the content store and download or stream content using their devices. The Client determines when protected content requires a license.
+   1. On the consumer/media consumer side, users browse the content store and download or stream content using their devices. The client determines when protected content requires a license.
 
-   1. The Client then sends a license request to a License Server.
+   1. The client then sends a license request to a License Server.
 
-   1. Based on specific business rules, the License Server issues a license for that particular piece of content. The License Server may require customer identification or payment before issuing a license. The license contains the content key, which allows the Client's media player to access the content.
+   1. Based on specific business rules, the License Server issues a license for that particular piece of content. The License Server may require customer identification or payment before issuing a license. The license contains the content key, which allows the client's media player to access the content.
 
    1. The user can play the content, according to the conditions specified in the license.
 

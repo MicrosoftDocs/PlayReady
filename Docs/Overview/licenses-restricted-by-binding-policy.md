@@ -14,7 +14,7 @@ ms.technology: drm
 # Licenses Restricted by Binding Policy
 
 
-Licenses may be bound to entities such as a Client or a domain. Client binding&mdash;that is, machine-binding, binding a license to a personal computer, a smartTV, a mobile phone, or any other connected device&mdash;is the simplest form of license binding.
+Licenses may be bound to entities such as a client or a domain. Client binding&mdash;that is, machine-binding, binding a license to a personal computer, a smartTV, a mobile phone, or any other connected device&mdash;is the simplest form of license binding.
 
 <a id="ID4E5"></a>
 
@@ -23,7 +23,7 @@ Licenses may be bound to entities such as a Client or a domain. Client binding&m
 ## Client binding
 
 
-Each PlayReady Client is uniquely identified to the License Server by a machine or application certificate, generically called a PlayReady Client Certificate. This certificate contains an ID number and one or several asymmetric key pairs. License Servers receive this certificate as part of each license request. During the generation of the license to be returned to the Client, the License Server will bind and encrypt the license information towards the Client public key found in the Client Certificate, so that the Client can use its private key to decrypt and access the license information. This license information includes the content encryption key, which allows the Client to decrypt content using that license.
+Each PlayReady Client is uniquely identified to the License Server by a machine or application certificate, generically called a PlayReady Client Certificate. This certificate contains an ID number and one or several asymmetric key pairs. License Servers receive this certificate as part of each license request. During the generation of the license to be returned to the client, the License Server will bind and encrypt the license information towards the client public key found in the client Certificate, so that the client can use its private key to decrypt and access the license information. This license information includes the content encryption key, which allows the client to decrypt content using that license.
 
 
 The simplest form of license binding is when a License Server binds the license to the machine itself.
@@ -35,10 +35,10 @@ The simplest form of license binding is when a License Server binds the license 
 ## Domain binding
 
 
-Alternatively, License Servers can bind the license to an abstract group of Clients, named a PlayReady domain (PlayReady domains are not the same as NTFS domains). This domain also has the same type of certificate, including an ID, and an asymmetric key pair.
+Alternatively, License Servers can bind the license to an abstract group of clients, named a PlayReady domain (PlayReady domains are not the same as NTFS domains). This domain also has the same type of certificate, including an ID, and an asymmetric key pair.
 
 
-If a Client (device or application) receives a domain-bound license, it needs to join the related domain (for example, acquire from the service a domain certificate) to be able to access the license information. A Client joining a domain requires a HTTP transaction similar to a license acquisition, called a domain join operation.
+If a client (device or application) receives a domain-bound license, it needs to join the related domain (for example, acquire from the service a domain certificate) to be able to access the license information. A client joining a domain requires a HTTP transaction similar to a license acquisition, called a domain join operation.
 
 <a id="ID4EQB"></a>
 

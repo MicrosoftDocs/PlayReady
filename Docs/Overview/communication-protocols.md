@@ -12,7 +12,7 @@ ms.technology: drm
 
 # PlayReady Communication Protocols
 
-PlayReady Clients communicate with PlayReady Servers to acquire licenses and perform additional operations related to the management of rights set by services for Clients. Clients also communicate with other services that allow them to function according to the [PlayReady Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) (for example, to a secure clock service, which provides the trusted time and allows the Client to enforce time restrictions).
+PlayReady Clients communicate with PlayReady Servers to acquire licenses and perform additional operations related to the management of rights set by services for clients. PlayReady Clients also communicate with other services that allow them to function according to the [PlayReady Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) (for example, to a secure clock service, which provides the trusted time and allows the client to enforce time restrictions).
 
 ![PlayReady Communication Protocols](../images/comm_protocol.png)
 

@@ -154,7 +154,7 @@ Some Android device models embed a PlayReady Client integrated by the OEM, some 
 
 Developing an application for the models embedding one is as simple as using the SDK from these devices. They will typically expose the PlayReady Client through the Java  [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady DRM Plugin for Android Microsoft Specification](../Specifications/playready-drm-plugin-for-android-specification.md) for more information.
 
-Developing an application for the models which don't embed a PlayReady Client requires the integration of the PlayReady Client in the application itself. 
+Developing an application for the models which don't embed a PlayReady Client requires the integration of the PlayReady Client in the application itself.
 
 Microsoft Partners develop PlayReady SDKs for various platforms from the PlayReady Porting Kit, and make them available to application developers. If you have the project of an application using PlayReady on these operating systems, please contact directly the listed [Microsoft Partners](https://www.microsoft.com/playready/partners/) for proposals and quotes.
 

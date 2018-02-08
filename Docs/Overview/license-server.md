@@ -14,17 +14,17 @@ ms.technology: drm
 # PlayReady License Server
 
 
-The process of obtaining a license to play back PlayReady protected content is handled by a PlayReady License Server. The PlayReady Server contains the handler that authorizes playback of PlayReady protected Client. It does this by providing the encryption key that unlocks the encrypted content that the Client requests to play. In addition, the PlayReady License Server response contains the rights and rights restrictions for that content.
+The process of obtaining a license to play back PlayReady protected content is handled by a PlayReady License Server. The PlayReady Server contains the handler that authorizes playback of PlayReady protected client. It does this by providing the encryption key that unlocks the encrypted content that the client requests to play. In addition, the PlayReady License Server response contains the rights and rights restrictions for that content.
 
-The following figure shows the steps that describe how a Client gets a license from a PlayReady license service.
+The following figure shows the steps that describe how a client gets a license from a PlayReady license service.
 
 ![Video Service Architecture](../images/video_service_arch.png)
 
-  1.  The Client obtains media to be played back.
-  2.  The Client initiates a license request from the PlayReady license service. The Client can either proactively request the license before playing back the content, or reactively request the license once it discovers a license is required after playback begins.
-  3.  The PlayReady License Server receives the request from the Client and processes the license request.
-  4.  The PlayReady License Server sends the response to the request back to the Client. The license response will contain the key to unlock the encrypted media, along with a set of rights and rights restrictions that specify exactly what can be played back.
-  5.  The Client receives the license response, parses the rights and rights restrictions, and begins playback.
+  1.  The client obtains media to be played back.
+  2.  The client initiates a license request from the PlayReady license service. The client can either proactively request the license before playing back the content, or reactively request the license once it discovers a license is required after playback begins.
+  3.  The PlayReady License Server receives the request from the client and processes the license request.
+  4.  The PlayReady License Server sends the response to the request back to the client. The license response will contain the key to unlock the encrypted media, along with a set of rights and rights restrictions that specify exactly what can be played back.
+  5.  The client receives the license response, parses the rights and rights restrictions, and begins playback.
 
 ## Development and Deployment of a PlayReady License Server
 
@@ -36,7 +36,7 @@ A PlayReady License Server can be developed and deployed in numerous ways:
 
   *  Develop the License Server yourself or through a third party.
   *  Operate the License Server yourself or through an application service provider (ASP).
-  *  Deploy on a physical Server or a virtual Server 
+  *  Deploy on a physical Server or a virtual Server
   *  Deploy on the premises, in a private cloud, or in a public cloud.
 
 &nbsp;

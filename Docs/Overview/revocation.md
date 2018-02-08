@@ -15,10 +15,10 @@ ms.technology: drm
 
 ## What is PlayReady Revocation
 
-Revocation is a process to identify Clients that have compromised security, and prevent those Clients from getting access to additional licenses for decrypting content that has been protected.
+Revocation is a process to identify clients that have compromised security, and prevent those clients from getting access to additional licenses for decrypting content that has been protected.
 
 
-When Microsoft identifies a Client with compromised security, the device may be revoked and added to a revocation list. The revocation list is periodically downloaded by the License Servers that issue licenses for protected content. License Servers use this revocation list to deny licenses to devices that have been revoked, thereby preventing the device from playing newly protected content.
+When Microsoft identifies a client with compromised security, the device may be revoked and added to a revocation list. The revocation list is periodically downloaded by the License Servers that issue licenses for protected content. License Servers use this revocation list to deny licenses to devices that have been revoked, thereby preventing the device from playing newly protected content.
 
 
 Revocation lists are refreshed on devices when they are not up to date. The revocation list may also be issued with licenses. The DRM component on the device checks this revocation list before transferring content to other devices. By preventing communication with revoked components, revoked applications no longer work. Once revoked, the only way to fix the situation is to replace the revoked element or remove the revoked component from a newer version of the revocation list.
@@ -32,5 +32,5 @@ Microsoft builds and maintains the revocation list and its versioning structure.
 
 ## Requirement for PlayReady Servers
 
-Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), companies operating a PlayReady Server "must update the PlayReady Server Software Development Kit certificate revocation lists for each PlayReady Server once a week". This ensures any compromised Client gets its license requests declined in a reasonnable timeframe after its addition by Microsoft to the Revocation List.
+Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), companies operating a PlayReady Server "must update the PlayReady Server Software Development Kit certificate revocation lists for each PlayReady Server once a week". This ensures any compromised client gets its license requests declined in a reasonable time frame after its addition by Microsoft to the Revocation List.
 

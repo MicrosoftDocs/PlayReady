@@ -21,7 +21,7 @@ This section describes best practices for programming license policies when usin
 ## Using BeginDate with EndDate
 
 
-One of the many business models PlayReady supports is content rental &mdash; content that can only be used for a limited period (for example, content may be used until 5pm EST, October 15, 2016). This is accomplished by issuing Clients a PlayReady license with the EndDate set to the time and date the license is to expire.
+One of the many business models PlayReady supports is content rental &mdash; content that can only be used for a limited period (for example, content may be used until 5pm EST, October 15, 2016). This is accomplished by issuing clients a PlayReady license with the EndDate set to the time and date the license is to expire.
 
 
 An EndDate is sufficient to create a rental license; however it is a better practice to also include a BeginDate in the license. A BeginDate specifies that the associated content cannot be used before the specified date. The combination of a BeginDate with the EndDate is a natural impedance to clock rollback attacks, where users backup and restore the entire PlayReady data store to avoid clock rollback events.
@@ -58,9 +58,9 @@ In summary, when specifying an EndDate in a PlayReady license, it is best practi
 
 ## Setting a BeginDate value that works for the Client
 
-When adding a BeginDate to a license, it is good practice to set it a little bit in the past, for PlayReady Clients version 1 or 2. The reason is that there might be a minor clock difference between the Server generating this licnese and the Client receiving it, and the intend of the Server is that the Client can use the license as soon as it receives it.
+When adding a BeginDate to a license, it is good practice to set it a little bit in the past, for PlayReady Clients version 1 or 2. The reason is that there might be a minor clock difference between the Server generating this license and the client receiving it, and the intend of the Server is that the client can use the license as soon as it receives it.
 
-For PlayReady Clients 3 and higher, Client sends its clock value to the License Server along the license request, and the Server can set BeginDate and other time restrictions with respect to that value, under the condition that it is close to the time value known to the License Server.
+For PlayReady Clients 3 and higher, client sends its clock value to the License Server along the license request, and the Server can set BeginDate and other time restrictions with respect to that value, under the condition that it is close to the time value known to the License Server.
 
 <br/>
 A typical example with a PlayReady Client version 2 would be:
@@ -69,7 +69,7 @@ A typical example with a PlayReady Client version 2 would be:
 
    2. The Android app initiates a license request to the License Server. The phone clock indicates 7:56PM and the License Server clock is on 8:00PM.
 
-   3. The License Server receives the license request, detects that the Client is version 2, and generates the license with:
+   3. The License Server receives the license request, detects that the client is version 2, and generates the license with:
 
       *  Play Right
 
@@ -77,9 +77,9 @@ A typical example with a PlayReady Client version 2 would be:
 
       *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
 
-    4. The License Server sends the license back to the Client.
+    4. The License Server sends the license back to the client.
 
-    5. The Client starts playback. The phone clock is still 7:56PM and is past the license's BeginDate which is 7:55PM, so playback can actually start now.
+    5. The client starts playback. The phone clock is still 7:56PM and is past the license's BeginDate which is 7:55PM, so playback can actually start now.
 
 <br/><br/>
 A typical example with a PlayReady Client version 3 would be:
@@ -88,11 +88,11 @@ A typical example with a PlayReady Client version 3 would be:
 
    2. The UWP app initiates a license request to the License Server. The PC clock indicates 7:56PM and the License Server clock is on 8:00PM.
 
-   3. The License Server receives the license request, detects that the Client is version 3, and checks for the value of the Client clock:
+   3. The License Server receives the license request, detects that the PlayReady Client is version 3, and checks for the value of the client clock:
 
-      *  if the Client clock value is no further than the License Server clock value than 1 hour, proceed and generate the license
+      *  if the client clock value is no further than the License Server clock value than 1 hour, proceed and generate the license
 
-      *  if not, deny the license request and send a message to the Client app to request that clock is set to the right value
+      *  if not, deny the license request and send a message to the client app to request that clock is set to the right value
 
    4. The License Server generates the license with:
 
@@ -102,9 +102,9 @@ A typical example with a PlayReady Client version 3 would be:
 
       *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
 
-    4. The License Server sends the license back to the Client.
+    4. The License Server sends the license back to the client.
 
-    5. The Client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start now.
+    5. The client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start now.
 <br/>
 <br/>
 

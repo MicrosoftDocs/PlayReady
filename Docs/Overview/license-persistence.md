@@ -14,7 +14,7 @@ ms.technology: drm
 # License Persistence
 
 
-License Servers built using PlayReady Server SDK issue licenses to Clients. These licenses contain policy information for the content with which they are associated. Licenses may be issued over any transport, but typically licenses are issued over the Web.
+License Servers built using PlayReady Server SDK issue licenses to clients. These licenses contain policy information for the content with which they are associated. Licenses may be issued over any transport, but typically licenses are issued over the Web.
 
 
 PlayReady licenses can be:

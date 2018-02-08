@@ -13,7 +13,7 @@ ms.technology: drm
 
 # PlayReady Test Server
 
-The PlayReady Test Server website includes documentation and test tools for PlayReady developers to test your products. Whether you are a PlayReady licensee or a non-licensee, an OEM, SOC vendor, a Client developer, and application developer, an encoder vendor, or a service developer, this website provides you with the following tools:
+The PlayReady Test Server website includes documentation and test tools for PlayReady developers to test your products. Whether you are a PlayReady licensee or a non-licensee, an OEM, SOC vendor, a client developer, and application developer, an encoder vendor, or a service developer, this website provides you with the following tools:
 
    *  A test license service
    *  Test video content (video and audio tracks)

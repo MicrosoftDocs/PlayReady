@@ -14,9 +14,9 @@ ms.technology: drm
 # PlayReady Trusted Clocks
 
 
-A *PlayReady Trusted Clock* is a general term for a clock that is used to enforce time-based limitations set to PlayReady protected content on PlayReady Clients. Any Client that implements a trusted clock ensures that the Client that restricts playback to a beginning date and time, an expiration date and time, or expiration date and time after first play cannot be tampered with using hacking tools to a level defined in the <a href="https://www.microsoft.com/playready/licensing/compliance/" target="_blank">Robustness Rules for PlayReady Products</a>.
+A *PlayReady Trusted Clock* is a general term for a clock that is used to enforce time-based limitations set to PlayReady protected content on PlayReady Clients. Any client that implements a trusted clock ensures that the client that restricts playback to a beginning date and time, an expiration date and time, or expiration date and time after first play cannot be tampered with using hacking tools to a level defined in the <a href="https://www.microsoft.com/playready/licensing/compliance/" target="_blank">Robustness Rules for PlayReady Products</a>.
 
-Microsoft does not require Client developers to use a trusted clock. However, Clients without a trusted clock won't be allowed to manage license with time based policies, including expiration. Because this scenario is very common in the industry (like rental or subscription), Microsoft does recommend implementing a secure clock in every Client.
+Microsoft does not require client developers to use a trusted clock. However, clients without a trusted clock won't be allowed to manage license with time based policies, including expiration. Because this scenario is very common in the industry (like rental or subscription), Microsoft does recommend implementing a Secure Clock in every client.
 
 Client developers can choose amongst two types of PlayReady Trusted Clocks in their design. They both allow manage licenses with time-based policies:
 1. *PlayReady Secure Clock*

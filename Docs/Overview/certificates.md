@@ -16,7 +16,7 @@ ms.technology: drm
 
 A certificate is a digitally-signed binary document used to grant and revoke privileges to devices and Servers to perform specific operations. PlayReady customers can request several different types of certificates depending on their needs.
 
-Certificates generally fall into two main categories: Server Certificates and Client Certificates. Server Certificates allow a Customer to run the PlayReady Server SDK; Client or Device Certificates allow devices to play content. There are also test Client Certificates, which are only used for test devices and can be revoked at any time.
+Certificates generally fall into two main categories: *Server Certificates* and *Client Certificates*. Server Certificates allow a Customer to run the PlayReady Server SDK; *Client* or *Device* Certificates allow devices to play content. There are also test Client Certificates, which are only used for test devices and can be revoked at any time.
 
 
 ## PlayReady Certificate Authority

@@ -31,7 +31,7 @@ PlayReady Clients starting with version 4.0 support AES CBC keys, which support 
 
 ## Support for AES CBC and CBCS
 
-All Clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for Clients, though, and signaled to License Servers through an additional property in the license acquisition protocol.
+All clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for clients, though, and signaled to License Servers through an additional property in the license acquisition protocol.
 
 &nbsp;
 
@@ -54,7 +54,7 @@ All Clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 ## Signaling the ALGID in the PlayReady Header
 
-The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a Client to decrypt this content. The PlayReady Header has its own specification and versioning. Download the specification [here](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF).
+The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. Download the specification [here](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF).
 
 &nbsp;
 
@@ -150,13 +150,13 @@ The following figure shows a content flow, where the license request is using th
 
 Microsoft recommends that encryptors always include the same ALGID value in the PlayReady Header that they included when they processed the content.
 
-In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. Clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
+In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
 
-In some scenarios, the Client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the Client makes a license request by using HTML5 EME APIs.
+In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request by using HTML5 EME APIs.
 
 ### How the Client handles a missing ALGID
 
-If the Client initiates a license request based on an incoming PlayReady Header, then the ALGID value in the license request is going to reflect the value found in the header because the license acquisition challenge includes a copy of the PlayReady Header. In this case:
+If the client initiates a license request based on an incoming PlayReady Header, then the ALGID value in the license request is going to reflect the value found in the header because the license acquisition challenge includes a copy of the PlayReady Header. In this case:
 
 - For all PlayReady Headers v4.2 or lower, the ALGID value is required and must be valid.
 - For PlayReady Headers v4.3 or higher, the ALGID value can be present and valid, or missing.
@@ -179,12 +179,12 @@ Examples:
 ## Limitations
 
 * A PlayReady Header must use only one ALGID value for all the KID elements. In other words, all the keys used to encrypt the different tracks and qualities of an asset must be AES CTR or AES CBC. If the ALGID is missing on any KID element, it must be missing from all KID elements.
-* Generating a license with a CBC key when the incoming Client Certificate is Windows and SL2000 throws an exception. This is because Windows Clients support CBC only on SL3000 units. It may be possible to deliver a license with a CBC key to a SL2000 Client, however, if  this Client is PlayReady version 4.0 minimum and declares support for the CBC mode.
+* Generating a license with a CBC key when the incoming Client Certificate is Windows and SL2000 throws an exception. This is because Windows Clients support CBC only on SL3000 units. It may be possible to deliver a license with a CBC key to a SL2000 Client, however, if  this client is PlayReady version 4.0 minimum and declares support for the CBC mode.
 * Generating a license with a CBC key when the incoming Client Certificate is a device that uses a Porting Kit version prior to 4.0 will throw an exception.
 * Generating a license with a CBC key when the incoming license request does not indicate support for AES CBC, will throw an exception.
 
 >[!IMPORTANT]
 >Services must not encrypt a single piece of content in CTR mode and in CBC mode using the same {KID, Ck}. 
->  *  For functional reasons, a Client acquiring both a license for {KID, Ck, AESCTR} and for {KID, Ck, AESCBC} would not function. 
+>  *  For functional reasons, a client acquiring both a license for {KID, Ck, AESCTR} and for {KID, Ck, AESCBC} would not function. 
 >  *  For robustness reasons, an attacker having access to the same content encrypted with the same key both in CBC and CTR modes could more easily decrypt content without authorization.
 
