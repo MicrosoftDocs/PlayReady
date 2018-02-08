@@ -68,7 +68,7 @@ The following structure is a fragmented MP4 file with a PlayReady Object that co
 
 ## 3. PlayReady Header (PRH)
 
-The PlayReady Header (PRH) is used by a client to locate or acquire a license for the piece of content it is stored in. It is encoded using UTF-16.
+The PlayReady Header (PRH) is used by a Client to locate or acquire a license for the piece of content it is stored in. It is encoded using UTF-16.
 
 ### 3.1. Version support matrix
 
@@ -81,28 +81,28 @@ The PlayReady Header (PRH) is used by a client to locate or acquire a license fo
         <th>PlayReady Header v4.0.0.0</th>
     </tr>
     <tr>
-        <td>PlayReady 4.0 SDK based clients</td>
+        <td>PlayReady 4.0 SDK based Clients</td>
         <td align="center">✔</td>
         <td align="center">✔</td>
         <td align="center">✔</td>
         <td align="center">✔</td>
     </tr>
     <tr>
-        <td>PlayReady 3.0 SDK based clients</td>
+        <td>PlayReady 3.0 SDK based Clients</td>
         <td></td>
         <td align="center">✔</td>
         <td align="center">✔</td>
         <td align="center">✔</td>
     </tr>
     <tr>
-        <td>PlayReady 2.x SDK based clients</td>
+        <td>PlayReady 2.x SDK based Clients</td>
         <td></td>
         <td></td>
         <td align="center">✔</td>
         <td align="center">✔</td>
     </tr>
     <tr>
-        <td>PlayReady 1.x SDK based clients</td>
+        <td>PlayReady 1.x SDK based Clients</td>
         <td></td>
         <td></td>
         <td></td>
@@ -181,7 +181,7 @@ All attributes must be in alphabetical order including those in nodes inside the
 
 ### 3.3. v4.3.0.0
 
-PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, including the Common Encryption modes CBC1 and CBCS. and also increases the interoperability of PlayReady clients with other DRM systems, as well as existing content.
+PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, including the Common Encryption modes CBC1 and CBCS. and also increases the interoperability of PlayReady Clients with other DRM systems, as well as existing content.
 
 #### 3.3.1. Differences with other versions
 
@@ -269,7 +269,7 @@ The tags are described below.
 
 | Tag name| Required| Description|
 | --- | --- | --- |
-| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.3.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the client code was written, then the client code must fail, because it implies that the header contains mandatory tags that the client does not understand. If the version is less than or equal to that for which the client code was written, than the client code can safely skip any tags or attributes that it does not understand.|
+| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.3.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the Client code was written, then the Client code must fail, because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, than the Client code can safely skip any tags or attributes that it does not understand.|
 | DATA| No| Container element for header data, including third-party tags. No more than one **DATA** element may be included in the **WRMHEADER** element.|
 | PROTECTINFO| No| Specifies zero or one **KIDS** element. No more than one **PROTECTINFO** element may be included in the **DATA** element.|
 | KIDS| No| Specifies one or more **KID** elements that may be used for creating decryptor objects for the associated content. Either one or zero **KIDS** elements may exist under the **PROTECTINFO** node.|
@@ -278,7 +278,7 @@ The tags are described below.
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DS_ID| No| Service ID for the domain service. Only up to one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | CUSTOMATTRIBUTES| No| The content author can add custom XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.
+| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.
 
 ### 3.4. v4.2.0.0
 
@@ -286,7 +286,7 @@ PlayReady Header v4.2.0.0 was introduced with PlayReady version 3.0 in April 201
 
 #### 3.4.1. Differences with other versions
 
-PlayReady 3.0 SDKs and later clients are able to process both the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.2 headers. When using the v4.2 header, the client has to know what server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
+PlayReady 3.0 SDKs and later Clients are able to process both the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.2 headers. When using the v4.2 header, the Client has to know what Server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
 
 The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1.0.0:
 
@@ -351,7 +351,7 @@ The tags are described below.
 
 |Tag name| Required| Description|
 | --- | --- | --- |
-| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.2.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the client code was written, then the client code must fail, because it implies that the header contains mandatory tags that the client does not understand. If the version is less than or equal to that for which the client code was written, than the client code can safely skip any tags or attributes that it does not understand.|
+| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.2.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the Client code was written, then the Client code must fail, because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, than the Client code can safely skip any tags or attributes that it does not understand.|
 | DATA| No| Container element for header data, including third-party tags. Only up to one **DATA** element may be included in the **WRMHEADER** element.|
 | PROTECTINFO| No| Specifies zero or one **KIDS** element. No more than one **PROTECTINFO** element may be included in the **DATA** element.|
 | KIDS| No| Specifies one or more **KID** elements that may be used for creating decryptor objects for the associated content. Either one or zero **KIDS** elements may exist under the **PROTECTINFO** node.|
@@ -360,16 +360,16 @@ The tags are described below.
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND”. When this tag is present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
+| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND”. When this tag is present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
  
 ### 3.5. v4.1.0.0
 
-PlayReady Header v4.1.0.0 was introduced with PlayReady version 2.0 in September 2011 to support live linear streams with scalable leaf licenses embedded in the stream. This type of stream requires clients to bind a scalable root license without knowledge of the content encryption key that will be used in the decryptor.
+PlayReady Header v4.1.0.0 was introduced with PlayReady version 2.0 in September 2011 to support live linear streams with scalable leaf licenses embedded in the stream. This type of stream requires Clients to bind a scalable root license without knowledge of the content encryption key that will be used in the decryptor.
 
 #### 3.5.1. Differences with other versions
 
-PlayReady 2.0 SDKs and later clients are able to process both the v4.0 and v4.1 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.1 headers.
+PlayReady 2.0 SDKs and later Clients are able to process both the v4.0 and v4.1 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.1 headers.
 
 The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0.0.0:
 
@@ -414,7 +414,7 @@ The tags are described below.
 
 | Tag name| Required| Description|
 | --- | --- | --- |
-| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.1.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the client code was written, then the client code must fail, because it implies that the header contains mandatory tags that the client does not understand. If the version is less than or equal to that for which the client code was written, than the client code can safely skip any tags or attributes that it does not understand.|
+| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.1.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the Client code was written, then the Client code must fail, because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, than the Client code can safely skip any tags or attributes that it does not understand.|
 | DATA| No| Container element for header data, including third-party tags. No more than one **DATA** element may be included in the **WRMHEADER** element.|
 | PROTECTINFO| No| Specifies zero or one **KID** elements that may be used for creating decryptor objects for the associated content. No more than one **PROTECTINFO** element may be included in the **DATA** element.|
 | KID| No| Contains all key data for a given license. Either one or zero **KID** elements may exist under the **PROTECTINFO** node. The **KID** element contains the following attributes.<br/><br/>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.<br/><br/>**ALGID**: Required. Specifies the encryption algorithm. Must be set to either: "AESCTR", or "COCKTAIL"<br/><br/>**CHECKSUM**: Optional. Contains a checksum calculated using the KID VALUE and content key. Refer to the [Key Checksum Algorithm](#keychecksum) section of this document for details.<br/><br/>If this node exists in the WRMHeader XML then its data value must be empty.|
@@ -422,7 +422,7 @@ The tags are described below.
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. Only up to one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the client machine, prior to setting up the media graph. Only up to one **DECRYPTORSETUP** element may be included in the **DATA** element.|
+| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. Only up to one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
 Notes for v4.1:
 
@@ -500,7 +500,7 @@ The following table describes the different tags.
 
 | Tag name| Required| Description|
 | --- | --- | --- |
-| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and one version attribute. The version for the header is "4.0.0.0".<br/><br/>Semantics for packager:<br/>Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. The version of the PlayReady Header must be set to the highest of the versions of the mandatory tags and attributes present in the header.<br/><br/>Semantics for client:<br/>If the version is greater than that for which the client code was written, then the client code must fail because it implies that the header contains mandatory tags that the client does not understand. If the version is less than or equal to that for which the client code was written, then the client code can safely skip any tags or attributes it does not understand.|
+| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and one version attribute. The version for the header is "4.0.0.0".<br/><br/>Semantics for packager:<br/>Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. The version of the PlayReady Header must be set to the highest of the versions of the mandatory tags and attributes present in the header.<br/><br/>Semantics for Client:<br/>If the version is greater than that for which the Client code was written, then the Client code must fail because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, then the Client code can safely skip any tags or attributes it does not understand.|
 | DATA| Yes| Container element for header data, including third-party tags.|
 | PROTECTINFO| Yes| Specifies the type of encryption using the **KEYLEN** and **ALGID** child elements.|
 | KEYLEN| Yes| Specifies the size of the content key. Must be set to 16 if **ALGID** is set to "AESCTR" and 7 if **ALGID** is set to "COCKTAIL".|
@@ -530,7 +530,7 @@ It is good practice to add an empty Embedded License Store to the PlayReady Obje
   *  The PlayReady Object is to be inserted into a content file.
   * The content may be used in a context of PlayReady domains with embedded licenses.
 
-This allows a PlayReady client to further embed a domain-bound license in the PlayReady Object by simply populating the existing Embedded License Store and saves the effort of having to re-header the entire file with a new PlayReady Object of a larger size than that of the initial one.
+This allows a PlayReady Client to further embed a domain-bound license in the PlayReady Object by simply populating the existing Embedded License Store and saves the effort of having to re-header the entire file with a new PlayReady Object of a larger size than that of the initial one.
 
 >[!NOTE]
 >It is recommended that you do not include an empty Embedded License Store in a PlayReady Object, aimed at being inserted as a base-64 string in a Smooth Streaming Client Manifest.
@@ -563,7 +563,7 @@ For an **ALGID** value set to “COCKTAIL”, perform the following steps:
 
 A service provider can add proprietary XML inside the **CUSTOMATTRIBUTES** element of the PlayReady Header. Any tags used inside the **CUSTOMATTRIBUTES** element are guaranteed to not clash with future tags defined by Microsoft.
 
-Microsoft code does not act on any XML inside this element. The service provider’s backend or their client side code are the only ones who typically interpret the value of this element. For example, let’s say a white label service represents front-end services AAA, BBB, CCC. Such a service can encrypt its content library only once (since that is an expensive operation), but when it serves out content to an end-user, it can set the **CUSTOMATTRIBUTES** to the name of the specific front-end service that the end-user subscribes to. When the end user requests a license for that content, this enables the white label service to determine which front-end service the end-user subscribes to, so that it can issue a different license.
+Microsoft code does not act on any XML inside this element. The service provider’s backend or their Client side code are the only ones who typically interpret the value of this element. For example, let’s say a white label service represents front-end services AAA, BBB, CCC. Such a service can encrypt its content library only once (since that is an expensive operation), but when it serves out content to an end-user, it can set the **CUSTOMATTRIBUTES** to the name of the specific front-end service that the end-user subscribes to. When the end user requests a license for that content, this enables the white label service to determine which front-end service the end-user subscribes to, so that it can issue a different license.
 
 It is recommended that the size of this field should not exceed 1 kilobyte (KB).
 

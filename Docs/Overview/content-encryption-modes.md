@@ -27,11 +27,11 @@ The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
 ![Common Encryption Modes](../images/ciphermodes.jpg)
 
-PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady clients. However, Common Encryption modes CENS and CBC1 are allowed.
+PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady Clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady Clients. However, Common Encryption modes CENS and CBC1 are allowed.
 
 ## Support for AES CBC and CBCS
 
-All clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for clients, though, and signaled to license servers through an additional property in the license acquisition protocol.
+All clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for clients, though, and signaled to License Servers through an additional property in the license acquisition protocol.
 
 &nbsp;
 
@@ -154,7 +154,7 @@ In a standard scenario, the encryptor encrypts content and generates the PlayRea
 
 In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request by using HTML5 EME APIs.
 
-### How the client handles a missing ALGID
+### How the Client handles a missing ALGID
 
 If the client initiates a license request based on an incoming PlayReady Header, then the ALGID value in the license request is going to reflect the value found in the header because the license acquisition challenge includes a copy of the PlayReady Header. In this case:
 
@@ -165,7 +165,7 @@ If the client initiates a license request based on an incoming PlayReady Header,
 
 All licenses delivered through a license response MUST include a valid ALGID value.
 
-If ALGID is unspecified in the incoming license request, the license server must get this information from the backend of the service and put the right value in the license response.
+If ALGID is unspecified in the incoming license request, the License Server must get this information from the backend of the service and put the right value in the license response.
 
 ## Initialization Vectors (IVs)
 
@@ -179,8 +179,8 @@ Examples:
 ## Limitations
 
 * A PlayReady Header must use only one ALGID value for all the KID elements. In other words, all the keys used to encrypt the different tracks and qualities of an asset must be AES CTR or AES CBC. If the ALGID is missing on any KID element, it must be missing from all KID elements.
-* Generating a license with a CBC key when the incoming client certificate is Windows and SL2000 throws an exception. This is because Windows clients support CBC only on SL3000 units. It may be possible to deliver a license with a CBC key to a SL2000 client, however, if  this client is PlayReady version 4.0 minimum and declares support for the CBC mode.
-* Generating a license with a CBC key when the incoming client certificate is a device that uses a Porting Kit version prior to 4.0 will throw an exception.
+* Generating a license with a CBC key when the incoming Client Certificate is Windows and SL2000 throws an exception. This is because Windows Clients support CBC only on SL3000 units. It may be possible to deliver a license with a CBC key to a SL2000 Client, however, if  this client is PlayReady version 4.0 minimum and declares support for the CBC mode.
+* Generating a license with a CBC key when the incoming Client Certificate is a device that uses a Porting Kit version prior to 4.0 will throw an exception.
 * Generating a license with a CBC key when the incoming license request does not indicate support for AES CBC, will throw an exception.
 
 >[!IMPORTANT]

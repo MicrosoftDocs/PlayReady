@@ -1,7 +1,7 @@
 ---
 author: rolandlefranc
 title: Security Level
-description: The PlayReady Client Security Level is a property of the client (device or application) that defines how robust the client is against unauthorized use.
+description: The PlayReady Client Security Level is a property of the Client (device or application) that defines how robust the Client is against unauthorized use.
 ms.assetid: "352220F0-2566-431E-8CC3-DC649B5E3CF2"
 keywords: security level
 ms.author: rolefran
@@ -49,8 +49,8 @@ The Security Level is a property of the client defined during the development cy
 
 License Servers can adjust the licenses, or license properties, delivered to clients based on their Security Level, by two methods.
 
-   1. The Security Level is a property of the Client Certificate embedded in the client at manufacturing time. When a client acquires a license from a license server, it provides in the license request a copy of its client certificate. The license server receives this request and can check for the security level of the client before it delivers licenses to them. It can include logic to deliver different licenses for different clients. For example, a SL3000 client will have access to a higher resolution than the SL2000 client, and receive different licenses than than the other client. Or, it will have access to a different catalog, including theatrical releases.
+   1. The Security Level is a property of the Client Certificate embedded in the client at manufacturing time. When a client acquires a license from a License Server, it provides in the license request a copy of its Client Certificate. The License Server receives this request and can check for the security level of the client before it delivers licenses to them. It can include logic to deliver different licenses for different clients. For example, a SL3000 Client will have access to a higher resolution than the SL2000 Client, and receive different licenses than than the other client. Or, it will have access to a different catalog, including theatrical releases.
 
-   2. In addition, every license delivered includes a property called MinimumSecurityLevel, which is set to 150, 2000, or 3000 by the license server. A license server delivering a license to a client sets this value in the license. Clients binding a license verify if their own Client Security Level is equal or greater than the MinimumSecurityLevel value of the license. If it isn't, they refuse to bind and play.
+   2. In addition, every license delivered includes a property called MinimumSecurityLevel, which is set to 150, 2000, or 3000 by the License Server. A License Server delivering a license to a client sets this value in the license. Clients binding a license verify if their own Client Security Level is equal or greater than the MinimumSecurityLevel value of the license. If it isn't, they refuse to bind and play.
 
 ![Illustration of the security levels](../images/security_level.png)

@@ -1,7 +1,7 @@
 ---
 author: rolandlefranc
 title: License and Policies
-description: During license acquisition, the client sends a challenge to the PlayReady license server containing the content header and information about the user's device.
+description: During license acquisition, the client sends a challenge to the PlayReady License Server containing the content header and information about the user's device.
 ms.assetid: "BD5E39E2-20B2-42A5-9D4F-D109DD4E67DE"
 keywords: playready license, policy, policies
 ms.author: rolefran
@@ -13,18 +13,18 @@ ms.technology: drm
 
 # License and Policies
 
-During license acquisition, the client sends a challenge to the PlayReady license server containing the content header and information about the user's device. Once the challenge is received by the PlayReady license server, the server parses the challenge and begins to populate the license response. The response will include the content key (CK) originally used to encrypt the content that corresponds to the key identifier (KID) sent in the license challenge, or several of them. In addition, the license response will return the PlayReady policies (rights and restrictions) under which the content can be played. 
+During license acquisition, the client sends a challenge to the PlayReady License Server containing the content header and information about the user's device. Once the challenge is received by the PlayReady License Server, the Server parses the challenge and begins to populate the license response. The response will include the content key (CK) originally used to encrypt the content that corresponds to the key identifier (KID) sent in the license challenge, or several of them. In addition, the license response will return the PlayReady policies (rights and restrictions) under which the content can be played. 
 
 ![License Request and Response](../images/license_request_response.png)
 
-A PlayReady policy describes the actions permitted and/or required with respect to PlayReady content and restrictions on those actions as described in the PlayReady license associated with the PlayReady content. PlayReady policies are defined in the PlayReady Compliance Rules (CR). The service provider must incorporate the mandatory policies and choose which of the optional policies to use, and have these policies integrated into the license handler on the PlayReady license server. These policies can be rights, such as the Play right, or restrictions, such as the Minimum Security Level, Output Protection Level, expiration after first play, and so on. 
+A PlayReady policy describes the actions permitted and/or required with respect to PlayReady content and restrictions on those actions as described in the PlayReady license associated with the PlayReady content. PlayReady policies are defined in the PlayReady Compliance Rules (CR). The service provider must incorporate the mandatory policies and choose which of the optional policies to use, and have these policies integrated into the license handler on the PlayReady License Server. These policies can be rights, such as the Play right, or restrictions, such as the Minimum Security Level, Output Protection Level, expiration after first play, and so on. 
 
 Note that a license response may contain multiple licenses. Each license contains one and only one Content Key {KID, CK} and a set of associated policies.
  
-When the client receives the license response from the PlayReady license server, it must be able to parse the content key and the policies sent back in the licenses it receives. The PlayReady client must be able to follow the policies sent in the license response and play back content if all the mandatory policies are met, or halt play back if any of the mandatory policies are not met. 
+When the client receives the license response from the PlayReady License Server, it must be able to parse the content key and the policies sent back in the licenses it receives. The PlayReady Client must be able to follow the policies sent in the license response and play back content if all the mandatory policies are met, or halt play back if any of the mandatory policies are not met. 
 
 >[!NOTE]
->If the client supports PlayReady Device Porting Kit v3.0 and higher, the PlayReady license server will not provide a license that requires the Copy, Execute, or Read rights.
+>If the client supports PlayReady Device Porting Kit v3.0 and higher, the PlayReady License Server will not provide a license that requires the Copy, Execute, or Read rights.
 
 For more information about PlayReady policies, see the [PlayReady Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) and the [Defined Terms for PlayReady Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/). 
 
@@ -42,7 +42,7 @@ The PlayReady Compliance Rules contain a full list of right modifiers (extension
  
   *  **Action**&mdash;specifies the action of the policy (for example, engage HDCP encryption on the HDMI output). 
   *  **Optional**&mdash;specifies if the client must engage the action or must try to engage the action (for example, Output Control for Uncompressed Digital Video Content 250, see CR 3.6.5).
-  *  **Must Understand**&mdash;specifies if a client is allowed to bind a license and decrypt content even if it does not understand the policy. Applicable for clients of a lower version (for example, a PlayReady 2.X client) receiving a license including PlayReady policy introduced in a future version (for example, a PlayReady 3.X server, see CR 2.4).
+  *  **Must Understand**&mdash;specifies if a client is allowed to bind a license and decrypt content even if it does not understand the policy. Applicable for clients of a lower version (for example, a PlayReady 2.X Client) receiving a license including PlayReady policy introduced in a future version (for example, a PlayReady 3.X Server, see CR 2.4).
   *  **Best Effort**&mdash;another way to specify if the client must engage the action or must try to engage the action (for example, Macrovision Best Effort, see CR 2.4).
 
 The following sections list some of the more commonly used right modifiers.
@@ -51,7 +51,7 @@ The following sections list some of the more commonly used right modifiers.
 
 One of the common restrictions is the absolute time date expiration policy. Every license may include an absolute time date expiration policy. If it is present, the client must stop binding this license and decrypting content if the current date time is after that value.
 
-A practical example is a user on a client playing content from a monthly subscription service. The monthly renewal day of the service for this user is the 15th of the month. The user starts playback on the 2nd of the month (the 2nd of November, 2017). The license server will give the right to the user until the 15th of the month, and include an Expiration policy set to 11/16/2017, 0:00am. Whenever the user pays the subscription fee for the next month, the service will issue another license with an Expiration date set one month later. 
+A practical example is a user on a client playing content from a monthly subscription service. The monthly renewal day of the service for this user is the 15th of the month. The user starts playback on the 2nd of the month (the 2nd of November, 2017). The License Server will give the right to the user until the 15th of the month, and include an Expiration policy set to 11/16/2017, 0:00am. Whenever the user pays the subscription fee for the next month, the service will issue another license with an Expiration date set one month later. 
 
 This policy is by definition a Must Understand and Mandatory (meaning, not Best Effort) policy, so a client that binds a license that includes this policy MUST: 
 
@@ -62,7 +62,7 @@ This policy is by definition a Must Understand and Mandatory (meaning, not Best 
   *  Not bind the license if the current time is past the Expiration value. 
  
 >[!NOTE]
->Whenever a license server sets an Absolute Expiration policy in a license, Microsoft strongly recommends that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](policies-best-practices.md) for more details.
+>Whenever a License Server sets an Absolute Expiration policy in a license, Microsoft strongly recommends that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](policies-best-practices.md) for more details.
 
 ### Begin Date Policy 
 
@@ -90,7 +90,7 @@ Besides scenarios in which content can be played back depending on a begin time 
 
 ### Security Level Policy
 
-PlayReady clients all have a property set in their Unit-level Client Certificate called the Client Security Level. When a license server sends a license to a client, it includes in the license the MinimumSecurityLevel policy and sets its value to 150, 2000, or 3000. This value means that the license can be bound and content can be decrypted only on clients that have this Security Level, or a higher one.
+PlayReady Clients all have a property set in their Unit-level Client Certificate called the Client Security Level. When a License Server sends a license to a client, it includes in the license the MinimumSecurityLevel policy and sets its value to 150, 2000, or 3000. This value means that the license can be bound and content can be decrypted only on clients that have this Security Level, or a higher one.
 
 See the [Client Security Level](security-level.md#securitylevelpolicy) page for more information about that policy.
 
@@ -98,7 +98,7 @@ See the [Client Security Level](security-level.md#securitylevelpolicy) page for 
 
 A service may want to allow a client to decrypt and render content, but restrict how it flows to external outputs, like HDMI outputs. The service may want to do this because there might be recorders plugged to the HDMI cable, capable of making a very good copy of the original content.
 
-PlayReady has all sorts of Output Protection controls for analog, digital, and wireless outputs. One of the most common is the HDCP policy for HDMI outputs (see CR 3.6.5). Depending on the value the license server sets for this policy, which may be 100, 250, 270, 300 (see CR 6.7), the client must try to engage, or must engage HDCP on the HDMI outputs when playing back on these outputs. 
+PlayReady has all sorts of Output Protection controls for analog, digital, and wireless outputs. One of the most common is the HDCP policy for HDMI outputs (see CR 3.6.5). Depending on the value the License Server sets for this policy, which may be 100, 250, 270, 300 (see CR 6.7), the client must try to engage, or must engage HDCP on the HDMI outputs when playing back on these outputs. 
 
 For example, if the license includes an Output Control for Uncompressed Digital Video Content set to 300 (also known as Digital Video OPL 300), the client MUST engage HDCP on the HDMI output when playing content. If the client cannot engage HDCP (any version) on an HDMI output, it has two options: 
 

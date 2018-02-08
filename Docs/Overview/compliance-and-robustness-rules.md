@@ -26,7 +26,7 @@ Compliance Rules (CRs) specify the required behaviors of PlayReady implementatio
 - the definition of the rights that a PlayReady license can contain (right to play a movie)
 - the definition of the right modifiers that a PlayReady license can contain (expiratoin, output limitation, etc.)
 - requirements on companies operating a PlayReady License Server (update Revocation Lists frequently)
-- requirements on companies distributing devices embedding a PlayReady client stack (how these devices are allowed to manipulate PlayReady keys and decrypted content)
+- requirements on companies distributing devices embedding a PlayReady Client stack (how these devices are allowed to manipulate PlayReady keys and decrypted content)
 
 
 ## PlayReady Robustness Rules

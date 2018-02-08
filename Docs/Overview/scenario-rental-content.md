@@ -14,7 +14,7 @@ ms.technology: drm
 # Scenario: Rental Content
 
 
-For rental content, the license delivered for the content specifies an expiration date and time. After this date and time occurs, the content may still be on the user's device, and the license may still also be persisting in the user's device's data store, but the PlayReady client in the user's device will use the device's clock system to verify if the license is still valid, and enforce the expiration set by the service in the license.
+For rental content, the license delivered for the content specifies an expiration date and time. After this date and time occurs, the content may still be on the user's device, and the license may still also be persisting in the user's device's data store, but the PlayReady Client in the user's device will use the device's clock system to verify if the license is still valid, and enforce the expiration set by the service in the license.
 
 
 In addition, it is a recommended good practice to set a begin date and time (typically the date and time that the user paid for the content). This will help protect the system in some cases where the user would be able to roll back the clock of their device.
@@ -31,7 +31,7 @@ A typical example would be:
 
       *  Right &mdash; Play (right to decrypt content to render on a screen)
 
-      *  Begin Time &mdash; January 5, 2018 at 7:55 PM (the begin time is slightly in the past to account for any minor clock difference between client and server)
+      *  Begin Time &mdash; January 5, 2018 at 7:55 PM (the begin time is slightly in the past to account for any minor clock difference between client and Server)
 
       *  Expiration Time &mdash; February 5, 2018 at 8:00 PM (a month later)
 
@@ -44,7 +44,7 @@ A typical example would be:
 Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](trusted-clocks.md).
 
 
-The following figure indicates the interactions between clients and servers in the rental content scenario.
+The following figure indicates the interactions between clients and Servers in the rental content scenario.
 
 
  ![Rental Content](../images/image26_10.jpg)
@@ -54,13 +54,13 @@ The rental content scenario performs the following steps, as illustrated in the 
 
    1. Content that will be distributed to clients is protected with Microsoft PlayReady technology.
 
-   1. The service provider transfers content protection information to a license server.
+   1. The service provider transfers content protection information to a License Server.
 
-   1. The service provider transfers protected content to a server for distribution over the Web.
+   1. The service provider transfers protected content to a Server for distribution over the Web.
 
    1. A client requests content for streaming or download.
 
-   1. The client acquires a license and either begins streaming or downloading the content from the content server using an Internet protocol such as SSTP, DASH, HLS, or HTTP. While the client is streaming or downloading the content, it can decrypt the content and the decrypted content can be continuously played back.
+   1. The client acquires a license and either begins streaming or downloading the content from the content Server using an Internet protocol such as SSTP, DASH, HLS, or HTTP. While the client is streaming or downloading the content, it can decrypt the content and the decrypted content can be continuously played back.
 
 
 
@@ -72,9 +72,9 @@ The most common delivery mechanisms for rental content is to stream the protecte
 ## Streaming rental content
 
 
-When streaming rental media, content continuously plays back while it's being transferred from the Web server. The following technical aspects should be considered when implementing rental content that is streamed to user devices.
+When streaming rental media, content continuously plays back while it's being transferred from the Web Server. The following technical aspects should be considered when implementing rental content that is streamed to user devices.
 
-   *  PlayReady supports many kinds of protocols. There is no restriction for any protocol. However, clients usually support one or many of the following standards: SSTP (Smooth Streaming), DASH (Dynamic Adaptive Streaming over HTTP), HLS (HTTP Live Streaming). In addition to these protocols, it is perfectly acceptable and doable for a service that controls both its backend and clients to implement a different protocol, for example multicast TS on a closed network.
+   *  PlayReady supports many kinds of protocols. There is no restriction for any protocol. However, PlayReady Clients usually support one or many of the following standards: SSTP (Smooth Streaming), DASH (Dynamic Adaptive Streaming over HTTP), HLS (HTTP Live Streaming). In addition to these protocols, it is perfectly acceptable and doable for a service that controls both its backend and clients to implement a different protocol, for example multicast TS on a closed network.
 
    *  The format of the content is typically H264 + AAC, or H265 + AAC, but all other codecs are allowed by PlayReady.
 

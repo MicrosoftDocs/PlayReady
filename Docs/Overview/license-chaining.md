@@ -17,7 +17,7 @@ ms.technology: drm
 A simple license is bound to the computer or device and contains the content key to unlock the content. In a license chain, the leaf license contains the content key, and the root license is bound to the computer or device. License chaining allows faster, more efficient coordination of large numbers of licenses. This is useful in any situation when a large number of content files will be downloaded, such as a music subscription service.
 
 
-Although it is possible to link thousands of files to a single license, there are many reasons to use a different license for each file:
+Although it is possible to link thousands of files to a single license, there are many reasons to use a different license for each file. Here are a few:
 
    *  Each content file may be encrypted with a different key, for greater security.
 

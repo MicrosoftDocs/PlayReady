@@ -56,28 +56,28 @@ This example shows how BeginDate naturally helps reduce the feasibility of the d
 
 In summary, when specifying an EndDate in a PlayReady license, it is best practice to also include a BeginDate.
 
-## Setting a BeginDate value that works for the client
+## Setting a BeginDate value that works for the Client
 
-When adding a BeginDate to a license, it is good practice to set it a little bit in the past, for PlayReady Clients version 1 or 2. The reason is that there might be a minor clock difference between the server generating this licnese and the client receiving it, and the intend of the server is that the client can use the license as soon as it receives it.
+When adding a BeginDate to a license, it is good practice to set it a little bit in the past, for PlayReady Clients version 1 or 2. The reason is that there might be a minor clock difference between the Server generating this license and the client receiving it, and the intend of the Server is that the client can use the license as soon as it receives it.
 
-For PlayReady Clients 3 and higher, client sends its clock value to the license server along the license request, and the server can set BeginDate and other time restrictions with respect to that value, under the condition that it is close to the time value known to the license server.
+For PlayReady Clients 3 and higher, client sends its clock value to the License Server along the license request, and the Server can set BeginDate and other time restrictions with respect to that value, under the condition that it is close to the time value known to the License Server.
 
 <br/>
 A typical example with a PlayReady Client version 2 would be:
 
    1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Android phone running an app built on PlayReady 2.5.
 
-   2. The Android app initiates a license request to the license server. The phone clock indicates 7:56PM and the license server clock is on 8:00PM.
+   2. The Android app initiates a license request to the License Server. The phone clock indicates 7:56PM and the License Server clock is on 8:00PM.
 
-   3. The license server receives the license request, detects that the client is version 2, and generates the license with:
+   3. The License Server receives the license request, detects that the client is version 2, and generates the license with:
 
       *  Play Right
 
-      *  Begin Time = local server time minus 5 minutes = January 5, 2018 at 7:55 PM
+      *  Begin Time = local Server time minus 5 minutes = January 5, 2018 at 7:55 PM
 
       *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
 
-    4. The license server sends the license back to the client.
+    4. The License Server sends the license back to the client.
 
     5. The client starts playback. The phone clock is still 7:56PM and is past the license's BeginDate which is 7:55PM, so playback can actually start now.
 
@@ -86,23 +86,23 @@ A typical example with a PlayReady Client version 3 would be:
 
    1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Windows 10 computer running an UWP app.
 
-   2. The UWP app initiates a license request to the license server. The PC clock indicates 7:56PM and the license server clock is on 8:00PM.
+   2. The UWP app initiates a license request to the License Server. The PC clock indicates 7:56PM and the License Server clock is on 8:00PM.
 
-   3. The license server receives the license request, detects that the client is version 3, and checks for the value of the client clock:
+   3. The License Server receives the license request, detects that the PlayReady Client is version 3, and checks for the value of the client clock:
 
-      *  if the client clock value is no further than the license server clock value than 1 hour, proceed and generate the license
+      *  if the client clock value is no further than the License Server clock value than 1 hour, proceed and generate the license
 
       *  if not, deny the license request and send a message to the client app to request that clock is set to the right value
 
-   4. The license server generates the license with:
+   4. The License Server generates the license with:
 
       *  Play Right
 
-      *  Begin Time = client time contained in the license request = January 5, 2018 at 7:56 PM
+      *  Begin Time = Client time contained in the license request = January 5, 2018 at 7:56 PM
 
       *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
 
-    4. The license server sends the license back to the client.
+    4. The License Server sends the license back to the client.
 
     5. The client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start now.
 <br/>
@@ -115,10 +115,10 @@ A typical example with a PlayReady Client version 3 would be:
 PlayReady supports a subscription business model in which users pay a monthly fee in return for access to a large content catalog offered by the service.
 
 
-In this scenario, PlayReady license servers issue leaf licenses for each content file, and a single root license. In order for PlayReady to access the content, both its leaf license and the root license (the license chain) are necessary. Both licenses must contain the action being performed on the content (for example, play) and both licenses must be valid (not expired, and so on).
+In this scenario, PlayReady License Servers issue leaf licenses for each content file, and a single root license. In order for PlayReady to access the content, both its leaf license and the root license (the license chain) are necessary. Both licenses must contain the action being performed on the content (for example, play) and both licenses must be valid (not expired, and so on).
 
 
-Because there is only one root license, and potentially hundreds or thousands of leaf licenses for any particular content catalog, leaf licenses should include very few (if any) restrictions, and the root license should contain time restrictions and be refreshed periodically (for example, monthly). When a subscription is about to lapse, the license server only needs to issue one license and all content will be updated with the new effective expiration date. If policy in the leaf licenses contains time-based policy, all leaf licenses would need to be re-issued to prevent the content from expiring, which would be a large performance requirement for servers.
+Because there is only one root license, and potentially hundreds or thousands of leaf licenses for any particular content catalog, leaf licenses should include very few (if any) restrictions, and the root license should contain time restrictions and be refreshed periodically (for example, monthly). When a subscription is about to lapse, the License Server only needs to issue one license and all content will be updated with the new effective expiration date. If policy in the leaf licenses contains time-based policy, all leaf licenses would need to be re-issued to prevent the content from expiring, which would be a large performance requirement for Servers.
 
 
 In summary, if content is supposed to expire using license chains, only the root license should contain the time-based policy.

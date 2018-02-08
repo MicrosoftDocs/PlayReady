@@ -23,10 +23,10 @@ ms.technology: drm
 ## Metering architecture
 
 
-Metered content uses a license with a metering identifier (MID) to track content usage. When content with a metered license is played, it updates entries in the metering store. The license contains the MID, and this allows the information to be grouped by MID. Usage data is grouped by the key identifier (KID)&mdash;if there is a different KID for each content file, each usage of that file is reported. Metering is turned on once for an entire license. At that point, every right will increment a separate entry in the store. Metering can be enabled on any device.
+Metered content uses a license with a metering identifier (MID) to track content usage. When content with a metered license is played, it updates entries in the metering store. The license contains the MID, and this allows the information to be grouped by MID. Usage data is grouped by the key identifier (KID) &mdash; if there is a different KID for each content file, each usage of that file is reported. Metering is turned on once for an entire license. At that point, every right will increment a separate entry in the store. Metering can be enabled on any device.
 
 
-To perform metering, a device transmits its metering data to a metering aggregation server. Furthermore, the media player application may perform additional scheduling calculations to restrict metering reporting cycles to regular intervals, such as every two weeks.
+To perform metering, a device transmits its metering data to a metering aggregation Server. Furthermore, the media player application may perform additional scheduling calculations to restrict metering reporting cycles to regular intervals, such as every two weeks.
 
 
 The following figure illustrates the basic metering architecture.
@@ -64,7 +64,7 @@ The metering process performs the following steps, as illustrated in the figure:
 ## Metering certificate acquisition
 
 
-PlayReady incorporates a protocol to get the metering certificate from the license server.
+PlayReady incorporates a protocol to get the metering certificate from the License Server.
 
 
 

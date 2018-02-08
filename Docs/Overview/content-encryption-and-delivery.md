@@ -22,7 +22,7 @@ This topic describes various ways to encrypt and deliver your content using Play
 
 The process of encrypting clear content consists of defining one or several encryption keys, using these keys to encrypt the bytes that constitute the content itself, and inserting a DRM header in the content (in the files of the content, or in the manifest if the content has one).
 
-All encrypted content protected by PlayReady must have a PlayReady Header inserted in the encrypted file. This PlayReady Header is used by a PlayReady client to locate or acquire a license for that particular piece of content. A PlayReady Header is composed of XML strings that are encoded using UTF-16. It includes the key identifiers (KIDs) that are used to encrypt the content, a default URL that the client will use to acquire a license from if no other is provided, and any custom attributes.  
+All encrypted content protected by PlayReady must have a PlayReady Header inserted in the encrypted file. This PlayReady Header is used by a PlayReady Client to locate or acquire a license for that particular piece of content. A PlayReady Header is composed of XML strings that are encoded using UTF-16. It includes the key identifiers (KIDs) that are used to encrypt the content, a default URL that the client will use to acquire a license from if no other is provided, and any custom attributes.  
 
 Any packager that packages clear content needs to implement a PlayReady Header generator to build the header and embed it in the encrypted content. The PlayReady Header must be implemented according to the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/). There are multiple ways to create a PlayReady Header generator in your packager: 
 
@@ -57,7 +57,7 @@ Let's take for example, an adaptive streaming asset, as shown in the figure belo
 
 ### Encrypting the asset with just one key
 
-The simplest way to encrypt these assets would be to use a single content key to encrypt everything (typically subtitles are not encrypted - it's not against any rule, but they are usually kept in the clear). Using one content key makes life easy for the license server because the license server has to deliver one key {KID, CK}. This key would typically be acquired by the client before playback occurred.
+The simplest way to encrypt these assets would be to use a single content key to encrypt everything (typically subtitles are not encrypted - it's not against any rule, but they are usually kept in the clear). Using one content key makes life easy for the License Server because the License Server has to deliver one key {KID, CK}. This key would typically be acquired by the client before playback occurred.
 
 ![Content Assets and Encryption Keys (I)](../images/assets_and_encryption_keys_1.png)
 
@@ -97,11 +97,11 @@ Note that this license rotation is not very scalable: every time the encryption 
 
 ### Changing the encryption keys frequently&mdash;scalable key rotation 
 
-There is an advanced mechanism in PlayReady called scalable key rotation (as opposed to license rotation). This method stores an embedded license store (ELS) in the stream of the actual content. In this mechanism, the key used to encrypt the A2 fragment itself is called the leaf key {kidA2, ckA2}, and is delivered in the ELS of the fragment A2, being itself encrypted with a separate key that is the same for all the fragments of track A, called the root key {kidRA, ckRA}. If you are familiar with MPEG-2 TS and the Control Word encryption, this is a similar mechanism except for the encryption is much stronger and is also more flexible.
+There is an advanced mechanism in PlayReady called scalable key rotation (as opposed to license rotation). This method stores an Embedded License Store (ELS) in the stream of the actual content. In this mechanism, the key used to encrypt the A2 fragment itself is called the leaf key {kidA2, ckA2}, and is delivered in the ELS of the fragment A2, being itself encrypted with a separate key that is the same for all the fragments of track A, called the root key {kidRA, ckRA}. If you are familiar with MPEG-2 TS and the Control Word encryption, this is a similar mechanism except for the encryption is much stronger and is also more flexible.
 
-Let's say this asset is live linear TV. When the client attempts playback, it finds kidRA in the PlayReady Header of the stream manifest, and requests a license for kidRA. The license server returns a root license for the root key {kidRA, ckRA}. Then the client parses the fragment A1 and discovers the ELS in the header of the fragment. Parsing this ELS, it finds the leaf license {kidA1, ckA1} in this ELS. Using the root key {kidRA, ckRA} and the leaf license {kidA1, ckA1}, it can get the value of ckA1, and decrypt and render the fragment A1. 
+Let's say this asset is live linear TV. When the client attempts playback, it finds kidRA in the PlayReady Header of the stream manifest, and requests a license for kidRA. The License Server returns a root license for the root key {kidRA, ckRA}. Then the client parses the fragment A1 and discovers the ELS in the header of the fragment. Parsing this ELS, it finds the leaf license {kidA1, ckA1} in this ELS. Using the root key {kidRA, ckRA} and the leaf license {kidA1, ckA1}, it can get the value of ckA1, and decrypt and render the fragment A1. 
 
-The PlayReady scalable key rotation feature is extremely scalable because it does not require the clients to hit the license server every time the encryption keys are changed. It keeps the volume of license requests to the lowest possible, as a client only needs one root license from the license server per stream, or track. It allows encryption keys to rotate as frequently as every fragment, typically every 2 seconds if necessary. 
+The PlayReady scalable key rotation feature is extremely scalable because it does not require the clients to hit the License Server every time the encryption keys are changed. It keeps the volume of license requests to the lowest possible, as a client only needs one root license from the License Server per stream, or track. It allows encryption keys to rotate as frequently as every fragment, typically every 2 seconds if necessary. 
 
 ![Content Assets and Encryption Keys (V)](../images/assets_and_encryption_keys_5.png)
 

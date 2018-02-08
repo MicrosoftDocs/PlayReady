@@ -17,7 +17,7 @@ ms.technology: drm
 Microsoft PlayReady enables scenarios in which a content owner sells subscriptions to a catalog of music or video using an online media store.
 
 
-Because a PlayReady server doesn't include any business logic but can, however, be linked to any business logic backend (through web services), the delivery of PlayReady licenses for subscription content can be the same as for rental content. So, the client will request individual licenses for each piece of content (video, music) that has to be played.
+Because a PlayReady Server doesn't include any business logic but can, however, be linked to any business logic backend (through web services), the delivery of PlayReady licenses for subscription content can be the same as for rental content. So, the client will request individual licenses for each piece of content (video, music) that has to be played.
 
 
 Note that the service can deliver multiple licenses in one single license response for optimization purposes. For example,in a scenario where the client is playing an episode of a series, the client requests a license for the episode one when the user selects that video. The service may want to deliver licenses for all the episodes of the series at once in order to lower the gap between episodes. Delivering multiple licenses is even more beneficial for music when playing multiple tracks without any gaps.
@@ -34,9 +34,9 @@ To optimize this scenario, the service should use chained licenses. Each piece o
 
 The subscription content scenario performs the following steps, as illustrated in the figure.
 
-   1. The service provider transfers unprotected content to the content packaging server. The service provider transfers the license to the license server.
+   1. The service provider transfers unprotected content to the content packaging Server. The service provider transfers the license to the License Server.
 
-   1. The service provider transfers protected content to a Web server for distribution.
+   1. The service provider transfers protected content to a Web Server for distribution.
 
    1. When the client is ready, it can acquire subscription content and a license that expires when the subscription ends.
 
@@ -53,10 +53,10 @@ The most common delivery mechanisms for subscription content is to stream the pr
 In a subscription scenario, where the subscription allows a certain maximum number of concurrent streams (for example, three streams), the service may want to leverage PlayReady Secure Stop to enforce this number.
 
 
-With adaptive streaming protocols over HTTP, the stream is HTTP cached and the streaming origin server gets all the streaming requests. As a consequence, it is non-trivial for the service to count how many clients currently play one stream.
+With adaptive streaming protocols over HTTP, the stream is HTTP cached and the streaming origin Server gets all the streaming requests. As a consequence, it is non-trivial for the service to count how many clients currently play one stream.
 
 
-PlayReady Secure Stop solves this problem. PlayReady Secure Stop allows a service to be notified when a client stops playing a stream. Combined with non-persistent licenses, which allow the service to be notified when a client start playing a stream, it allows the service to count in real time how many clients play a stream, or a collection of streams, under a particular account, and enforce this number.
+PlayReady Secure Stop solves this problem. PlayReady Secure Stop allows a service to be notified when a client stops playing a stream. Combined with non-persistent licenses, which allow the service to be notified when a client starts playing a stream, it allows the service to count in real time how many clients play a stream, or a collection of streams, under a particular account, and enforce this number.
 
 <a id="ID4EUC"></a>
 

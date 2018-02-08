@@ -32,7 +32,7 @@
 
 ### [PlayReady Server SDK](Overview/server-sdk.md)
 
-###[PlayReady Server on Azure](Overview/server-on-azure.md)
+###[PlayReady Server on Azure](Overview/Server-on-azure.md)
 
 ### [PlayReady Device Porting Kit](Overview/device-porting-kit.md)
 
@@ -52,7 +52,7 @@
 
 ### [PlayReady Secure Clock Services](Overview/secure-clock-services.md)
 
-### [PlayReady Test Server](Overview/test-server.md)
+### [PlayReady Test Server](Overview/test-Server.md)
 
 ## [Content Encryption](Overview/content-encryption.md)
 
@@ -92,7 +92,7 @@
 
 ### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
 
-### [OEM/App Vendor Services for PlayReady Clients](Overview/client-playready-services.md)
+### [OEM/App Vendor Services for PlayReady Clients](Overview/Client-playready-services.md)
 
 ## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 

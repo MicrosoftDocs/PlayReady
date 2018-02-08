@@ -1,9 +1,9 @@
 ---
 author: rolandlefranc
 title: Integrating PlayReady in Devices
-description: This topic provides a brief description on the different ways to implement a DRM client in a device and how to develop applications using DRM.
+description: This topic provides a brief description on the different ways to implement a DRM Client in a device and how to develop applications using DRM.
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
-keywords: client, architecture, porting kit, pk, dpk, integration, embedded
+keywords: client, device, architecture, porting kit, pk, dpk, integration, embedded
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -13,9 +13,9 @@ ms.technology: drm
 
 # Integrating PlayReady in Devices
 
-This topic provides an overview of the process for a device maker to integrate a PlayReady Client in his device.
+This topic provides an overview of the process for a device maker to integrate a PlayReady Client with a device.
 
-The imtegration of a PlayReady Client in a device is great value. It ensures applications will have access to the best content protection on the device and make easier the implementation of all sorts of video and audio services on the device.
+The integration of a PlayReady Client in a device is great value. It ensures applications will have access to the best content protection on the device and make easier the implementation of all sorts of video and audio services on the device.
 
 
 ## Architecture
@@ -37,13 +37,13 @@ The following figure shows the PlayReady PK components and how they fit in a dev
     3. Integrate the DPK with the video and audio player
     4. Create an application that enables PlayReady operations on the device, or an API exposed in a SDK that will allow multiple application developers to use them.
 
-3. Validate the port with respect to the Compliance and Robustness Rules requirements. 
+3. Validate the port with respect to the Compliance and Robustness Rules requirements.
 
     1. Test the device towards all applicable requirements.
     2. Fix any non conformance found. Re-test.
     3. Optionally use a third party security house or test house
 
-4. Prepare the device secrets (model-level client certificate and associated private keys, or unit-level client certificate provisioning service)
+4. Prepare the device secrets (model-level Client Certificate and associated private keys, or unit-level Client Certificate provisioning service)
 
 5. Manufacture and distribute the device to the market
 

@@ -14,16 +14,16 @@ ms.technology: drm
 # License Acquisition
 
 
-To play protected content, a valid license for the content must be available. If there is no valid license for the content, the license must be acquired. During license acquisition, a client acquires its license from a license server or from a proxy server. The license acquisition client is a media player on a mobile device, such as a phone or tablet, or on a personal computer. Clients for license acquisition connect directly to a license server and request licenses for content they have acquired.
+To play protected content, a valid license for the content must be available. If there is no valid license for the content, the license must be acquired. During license acquisition, a client acquires its license from a License Server or from a proxy Server. The license acquisition client is a media player on a mobile device, such as a phone or tablet, or on a personal computer. Clients for license acquisition connect directly to a License Server and request licenses for content they have acquired.
 
-In the context of license acquisition, the license server and the packaging server are considered to be DRM servers. Portable devices and personal computers capable of license acquisition are considered to be clients.
+In the context of license acquisition, the License Server and the packaging Server are considered to be DRM Servers. Portable devices and personal computers capable of license acquisition are considered to be clients.
 
 
-## Server and client interactions for license acquisition
+## Server and Client interactions for license acquisition
 
 This section examines the component interactions for license acquisition.
 
-On the server side, PlayReady Server SDK provides functionality for:
+On the Server side, PlayReady Server SDK provides functionality for:
 
    *  License generation/issuance<br/>
 
@@ -37,7 +37,7 @@ The client on the consumer's portable device or personal computer provides funct
 
 
 
-Domain, metering, secure stop, and secure delete support is also included with PlayReady Server SDK.
+Domain, Metering, Secure Stop, and Secure Delete support is also included with PlayReady Server SDK.
 
 <a id="ID4EUB"></a>
 <a id="proactivereactive"></a>
@@ -48,7 +48,7 @@ Domain, metering, secure stop, and secure delete support is also included with P
 There are two modes for license acquisition:
 
    *  **Proactive license acquisition** &mdash; The client application explicitly initiates a license request before playback begins. This is typically a scenario where the system is programmed such that the application has browsed content, and would take the time to "proactively" acquire the license before any playback session is started. After the license is received, playback can start at any time. The application could start playback immediately, or there are cases where the license would be acquired days before the content is actually played, typically in an offline playback scenario.
-   *  **Reactive license acquisition** &mdash; The client application doesn't explicitely acquire a license before content is played back. After playback is initiated, the PlayReady media player plays back looks for an existing PlayReady license that can decrypt this content. If it does not find any usable license, it automatically uses the associated license acquirer object to acquire the license before resuming the playback.
+   *  **Reactive license acquisition** &mdash; The client application doesn't explicitly acquire a license before content is played back. After playback is initiated, the PlayReady media player plays back looks for an existing PlayReady license that can decrypt this content. If it does not find any usable license, it automatically uses the associated license acquirer object to acquire the license before resuming the playback.
 
 
 The following figure gives an architectural overview of content protection and license acquisition.
@@ -60,15 +60,15 @@ The following figure gives an architectural overview of content protection and l
 License acquisition follows these steps, as illustrated in the figure:
 
    1. The content provider uses a license key seed and key identifier to generate a key.<br/>
-   1. The content provider places the key identifier and the URL of the license server in the content header and then protects the file by encrypting it with the key.<br/>
+   1. The content provider places the key identifier and the URL of the License Server in the content header and then protects the file by encrypting it with the key.<br/>
    1. The content provider delivers the protected file to the user.<br/>
    1. The user's media player queries the DRM component of the user's device to determine whether the protected file can be played.<br/>
-   1. The DRM component searches the license store on the user's device for a valid license to play the file.<br/>
-   1. If the DRM component fails to find the necessary license, it requests a license from the license server. The license challenge used to request the license contains the content header and information about the user's device.<br/>
-   1. The license server uses the shared license key seed and the key identifier to generate the same content key that was generated by the content provider in step 1. The license server then encrypts the key.<br/>
-   1. The license server creates a license, adds the encrypted content key to the license, and signs the license by using the private signing key.<br/>
-   1. The license server delivers the signed license to the user's device.<br/>
-   1. The DRM component on the user's device verifies the signature and expiration date of the certificate, and places the license in the license store.<br/>
+   1. The DRM component searches the License Store on the user's device for a valid license to play the file.<br/>
+   1. If the DRM component fails to find the necessary license, it requests a license from the License Server. The license challenge used to request the license contains the content header and information about the user's device.<br/>
+   1. The License Server uses the shared license key seed and the key identifier to generate the same content key that was generated by the content provider in step 1. The License Server then encrypts the key.<br/>
+   1. The License Server creates a license, adds the encrypted content key to the license, and signs the license by using the private signing key.<br/>
+   1. The License Server delivers the signed license to the user's device.<br/>
+   1. The DRM component on the user's device verifies the signature and expiration date of the certificate, and places the license in the License Store.<br/>
    1. The DRM component decrypts packets of the requested content and sends them to the player.<br/>
 
 
@@ -103,16 +103,17 @@ Each license contains the following information:
 
 Before a client can decrypt the content associated with a license, it must retrieve the policy from the license. The content protection information within the license is encrypted using a client's public key or a client's domain's public key encryption information. The license is considered "bound" to the client or domain that has the private key for decrypting the content protection information.
 
-Clients acquire licenses either directly from license servers or through a proxy server.
+Clients acquire licenses either directly from License Servers or through a proxy Server.
 
 # Transport for license acquisition
-PlayReady license acquisitions all require a transaction between the client and the server:
-1. A challenge generated by the client and sent to the server
-2. A response generated by the server and sent to the client
+
+PlayReady license acquisitions all require a transaction between the client and the Server:
+1. A challenge generated by the client and sent to the Server
+2. A response generated by the Server and sent to the client
 
 Transactions typically occur on the Internet, through HTTP or HTTPS, or on a closed network. The protocol used are based on SOAP and can be customized.
-They can also be implemented asynchronously, for example with a client posting somewhere the challenge, and a server processing this challenge, generating a response and posting that response in some other location.
+They can also be implemented asynchronously, for example with a client posting somewhere the challenge, and a Server processing this challenge, generating a response and posting that response in some other location.
 
 > [!NOTE]
-> PlayReady does not support license broadcasting, meaning servers sending licenses to clients on a broadcast network.
+> PlayReady does not support license broadcasting, meaning Servers sending licenses to clients on a broadcast network.
 

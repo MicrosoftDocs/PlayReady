@@ -1,7 +1,7 @@
 ---
 author: rolandlefranc
 title: Persistent and Non-persistent Licenses
-description: License servers built using PlayReady Server SDK issue licenses to clients.
+description: License Servers built using PlayReady Server SDK issue licenses to Clients.
 ms.assetid: "3da1f73f-e8a0-aa6a-a9cf-24a74226311b"
 keywords: playready generation and license persistence
 ms.author: rolefran
@@ -14,14 +14,14 @@ ms.technology: drm
 # License Persistence
 
 
-License servers built using PlayReady Server SDK issue licenses to clients. These licenses contain policy information for the content with which they are associated. Licenses may be issued over any transport, but typically licenses are issued over the Web.
+License Servers built using PlayReady Server SDK issue licenses to clients. These licenses contain policy information for the content with which they are associated. Licenses may be issued over any transport, but typically licenses are issued over the Web.
 
 
 PlayReady licenses can be:
 
    *  Persistent
 
-      Persistent licenses are stored in non-volatile memory (for example, in the local license store on a hard drive or in a NAND memory) and last for the lifetime of the store or until a time-based restriction is reached. Generally, persistent licenses can either be used immediately or can be stored to be used in the future, and can be used to play back content for the life of the license. In addition, persistent licenses can be used to play back downloaded content while the device is offline.
+      Persistent licenses are stored in non-volatile memory (for example, in the local License Store on a hard drive or in a NAND memory) and last for the lifetime of the store or until a time-based restriction is reached. Generally, persistent licenses can either be used immediately or can be stored to be used in the future, and can be used to play back content for the life of the license. In addition, persistent licenses can be used to play back downloaded content while the device is offline.
 
    *  Non-persistent
 

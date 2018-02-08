@@ -3,7 +3,7 @@ author: rolandlefranc
 title: Developing Applications using PlayReady
 description: This topic provides a description of the different ways to develop applications using PlayReady DRM.
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
-keywords: client, application, development, uwp, android, xbox, sdk
+keywords: Client, application, development, uwp, android, xbox, sdk
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -20,7 +20,7 @@ A lot of OEMs have licensed the PlayReady Porting Kit, integrated it in their de
 ![PlayReady Client Embedded in Device](../images/client_level_os_soc.png)
 
 
-For example, Microsoft ensures all Windows 10 devices include a PlayReady client integrated in the Windows OS itself, or in the chip's firmware of the device (TEE), and exposes it through UWP APIs to application developers, but also Android TV device makers do the same. These devices use various APIs to expose the PlayReady Client to applications, including:
+For example, Microsoft ensures all Windows 10 devices include a PlayReady Client integrated in the Windows OS itself, or in the chip's firmware of the device (TEE), and exposes it through UWP APIs to application developers, but also Android TV device makers do the same. These devices use various APIs to expose the PlayReady Client to applications, including:
   - the Universal Windows Platform API on PCs, Xbox
   - the Java DrmManagerClient API on Android devices
   - various interfaces on Linux devices
@@ -40,7 +40,7 @@ An application developed with this model is not royalty-bearing.
 <br/>
 
 
-The following table shows the current availability of a PlayReady client on various devices.
+The following table shows the current availability of a PlayReady Client on various devices.
 
 <table>
   <tr>
@@ -120,7 +120,7 @@ The following table shows the current availability of a PlayReady client on vari
 
 ## Devices **not** including a PlayReady Client
 
-Some OEMs have made the choice to not embed a PlayReady client in their device, or to embed it but not make it available to application developers through their SDK.
+Some OEMs have made the choice to not embed a PlayReady Client in their device, or to embed it but not make it available to application developers through their SDK.
 
 ![PlayReady Client Not Embedded in Device](../images/client_level_app.png)
 
@@ -138,14 +138,14 @@ Microsoft develops and distributes a PlayReady Client in every Windows 10, 8.1, 
 
 Application developers can create Universal Windows Platform (UWP) applications capable of providing PlayReady content to the user while enforcing the access rules defined by the content provider. An application can freely use this built-in PlayReady Client in Windows 8, 8.1, or 10, without signing any agreement with Microsoft, and without the need of any PlayReady certificate, or any PlayReady fee or royalty due.
 
-Windows 10 PlayReady documentation can be found at [PlayReady for Windows 10](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk) and at [Windows.​Media.​Protection.​Play​Ready Namespace](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Protection.PlayReady) . Samples of PlayReady Windows 10 applications can be found as part of the [UWP Samples collection](https://github.com/Microsoft/Windows-universal-samples) and at [PlayReady sample Universal Windows Apps for Windows 10 (Javascript/C#/EME)](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
+Windows 10 PlayReady documentation can be found at [PlayReady for Windows 10](https://msdn.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk) and at [Windows.​Media.​Protection.​Play​Ready Namespace](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Protection.PlayReady) . Samples of PlayReady Windows 10 applications can be found as part of the [UWP Samples collection](https://github.com/Microsoft/Windows-universal-samples) and at [PlayReady sample Universal Windows Apps for Windows 10 (Javascript/C#/EME)](https://code.msdn.microsoft.com/windowsapps/PlayReady-samples-for-124a3738).
 
 You can also create PlayReady Windows Store and Web applications for Windows 8.1. Windows 8.1 PlayReady documentation can be found at [Developing PlayReady Windows Store and Web Apps](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn468834.aspx). Samples of PlayReady Windows 8.1 applications can be found at [PlayReady sample for Windows 8.1 Store apps](https://code.msdn.microsoft.com/windowsapps/PlayReady-sample-for-bb3065e7).
 
 <br/>
 Some PlayReady Partners provide SDKs to run PlayReady on Windows 7 and Mac OS, based on Electron, Xamarin, or other technologies. You can contact these [PlayReady Partners](https://www.microsoft.com/playready/partners) directly for more information.
 
-Silverlight is a deprecated application framework running on Windows 7 and Mac OS that includes a fully functional PlayReady client. It runs in browsers with limitations, and can also run out of browsers to provide standalone apps on Windows 7 and Mac OS.
+Silverlight is a deprecated application framework running on Windows 7 and Mac OS that includes a fully functional PlayReady Client. It runs in browsers with limitations, and can also run out of browsers to provide standalone apps on Windows 7 and Mac OS.
 
 
 ## Developing Applications using PlayReady on Android
@@ -154,7 +154,7 @@ Some Android device models embed a PlayReady Client integrated by the OEM, some 
 
 Developing an application for the models embedding one is as simple as using the SDK from these devices. They will typically expose the PlayReady Client through the Java  [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady DRM Plugin for Android Microsoft Specification](../Specifications/playready-drm-plugin-for-android-specification.md) for more information.
 
-Developing an application for the models which don't embed a PlayReady Client requires the integration of the PlayReady Client in the application itself. 
+Developing an application for the models which don't embed a PlayReady Client requires the integration of the PlayReady Client in the application itself.
 
 Microsoft Partners develop PlayReady SDKs for various platforms from the PlayReady Porting Kit, and make them available to application developers. If you have the project of an application using PlayReady on these operating systems, please contact directly the listed [Microsoft Partners](https://www.microsoft.com/playready/partners/) for proposals and quotes.
 

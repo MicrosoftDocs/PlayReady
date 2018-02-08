@@ -47,27 +47,27 @@ The following high-level terms are used throughout this documentation.
 | Customer | Company that uses PlayReady to build a service or client.|
 | DASH | See MPEG-DASH. |
 | Decrypt | To convert encrypted content back into its original form. |
-| Deployment certificate| An XML string used to ensure the server is running a licensed copy of PlayReady Server SDK.|
+| Deployment certificate| An XML string used to ensure the Server is running a licensed copy of PlayReady Server SDK.|
 | Device| Usually refers to a physical unit such as mobile phones, set-top boxes, and portable media players.|
 | Digital rights management (DRM)| A technology that provides a persistent level of protection to digital content by encrypting it with a cryptographic key. Authorized recipients (or end users) must acquire a license to unlock and consume the content.|
 | Domain (PlayReady domain)| A PlayReady entity that lets you manage content access for multiple clients. A PlayReady domain is not the same as network or Web domains.|
 | Domain (CA) certificate| An XML string used to sign domain certificates issued to clients.|
-| Domain controller| A PlayReady server that manages domain membership. A domain controller determines what the domain represents (a user, a family, or a group of users, for example) and holds a list of entities that are associated with it.|
+| Domain controller| A PlayReady Server that manages domain membership. A domain controller determines what the domain represents (a user, a family, or a group of users, for example) and holds a list of entities that are associated with it.|
 | DPK | PlayReady Device Porting Kit |
 | DRM | Digital Rights Management technology. PlayReady is the leading DRM |
 | DT | Defined Terms for PlayReady Compliance and Robustness Rules.|
 | ECC | Elliptic curve cryptography.|
-| Embedded license store (ELS)| A record for storing embedded licenses.|
+| Embedded License Store (ELS)| A record for storing embedded licenses.|
 | EME | See Encrypted Media Extensions. |
 | Encrypt | To programmatically disguise content to hide its substance.|
 | Encrypted Media Extensions (EME) | A W3C Standard for HTML interfaces that allow HTML5 applications to do DRM operations. See [https://www.w3.org/TR/encrypted-media/](https://www.w3.org/TR/encrypted-media/). |
-| Extensible policies| License rights and restrictions added on to the existing extensible media rights (XMR) policy system to create special policies applicable to specific subsets of the PlayReady ecosystem. These policies are client enforced, and client implementers must elect to enable support for extensible policies.|
+| Extensible policies| License rights and restrictions added on to the existing extensible media rights (XMR) policy system to create special policies applicable to specific subsets of the PlayReady ecosystem. These policies are client enforced, and client implementors must elect to enable support for extensible policies.|
 | Extensible media rights (XMR)| A binary schema used for representing licenses within PlayReady.|
 | Hashed data store (HDS)| A file also know as PlayReady data store, that contains all licenses, certificates, and related content access protection data associated with a particular client. This file is created by the PlayReady Client runtime when a device is first started and individualized.
 | HLS | HTTP Live Streaming. An adaptive streaming protocol which was introduced by Apple. |
 | IIS | See Internet Information Services. |
 | Individualization| The process of updating the PlayReady runtime on the client, allowing licenses to be bound to the client. This process increases security by making it difficult to corrupt more than one player at a time.|
-| Internet Information Services | Web server created by Microsoft for use on Windows Server |
+| Internet Information Services | Web Server created by Microsoft for use on Windows Server |
 | IV (Initialization Vector) | A block of bits enabling multiple instances of a stream or block cipher to produce unique streams despite using the same encryption key. |
 | Key | A piece of data that is required to unlock a packaged media file. This key is included in a separate license.|
 | Key Identifier (KID) | A value that identifies the key for a protected media file.|
@@ -78,15 +78,15 @@ The following high-level terms are used throughout this documentation.
 | License acquisition URL (LAURL) | The URL that points to the first Web page that appears in the license acquisition process. A license acquisition URL is included in each packaged media file; when a user tries to play a media file that is not licensed, the player opens the license acquisition URL to acquire a license.|
 | License chain | A license for digital media content that is composed of connected elements that include a root license and one or more leaf licenses, each of which contains a subset of rights for the content.|
 | License key seed | A shared secret value that is used to generate keys to encrypt media files.|
-| Licenser/license server | Function in the service back end that issues PlayReady licenses. Developed by the service based on the Microsoft PlayReady Server SDK.|
-| License store | An area on a device where licenses are stored. The license store is usually a part of the HDS |
+| Licenser/License Server | Function in the service back end that issues PlayReady licenses. Developed by the service based on the Microsoft PlayReady Server SDK.|
+| License Store | An area on a device where licenses are stored. The License Store is usually a part of the HDS |
 | Metering | The process for counting the number of times content is played.|
 | Metering aggregation service/ Metering Server | A service that collects and processes metering data from clients |
 | Metering certificate | An XML string that contains the metering identifier and URL for a metering aggregation service.|
 | Metering challenge | Metering data from a client, indicating how many times protected digital media files were used. The metering challenge is sent to a metering aggregation service by the client.|
 | Metering identifier (MID) | The value that identifies the specific license for which content is being metered.|
 | Metering response | A confirmation from a metering aggregation service that metering data was successfully reported by a client.|
-| Metering server | A computer that monitors the number of times an action has been performed on specific content.|
+| Metering Server | A computer that monitors the number of times an action has been performed on specific content.|
 | MPEG DASH | Dynamic Adaptive Streaming over HTTP. An adaptive streaming protocol which is a MPEG standard. |
 | MSI installer| A Windows installer file.|
 | ODM | Original Design Manufacturer. A company that designs and manufactures a product that is branded by another firm for sale |
@@ -97,11 +97,11 @@ The following high-level terms are used throughout this documentation.
 | Partner | Company that resells products including PlayReady functionality to customers.|
 | PIPL, IPL | PlayReady Intermediate Product Licensee. A company that has signed a PlayReady Intermediate Product License with Microsoft |
 | PFPL, FPL | PlayReady Final Product Licensee. A company that has signed a PlayReady Final Product License with Microsoft |
-| Player | A client program or control that receives digital media content streamed from a server or played from local files. Windows Media Player is an example of a player.|
+| Player | A client program or control that receives digital media content streamed from a Server or played from local files. Windows Media Player is an example of a player.|
 | PK | PlayReady Device Porting Kit |
-| PlayReady CA | PlayReady Certificate Authority. Microsoft is the Certificate Authority for PlayReady client and server certificates |
+| PlayReady CA | PlayReady Certificate Authority. Microsoft is the Certificate Authority for PlayReady Client and Server Certificates |
 | PlayReady Device Porting Kit| The portion of PlayReady content access and protection technology used for designing PlayReady applications for devices such as mobile phones, set-top boxes, and portable media players.|
-| PlayReady Server SDK| The portion of PlayReady content access and protection technology used for designing applications and plug-ins for use on a license server, a metering server, a domain controller, a secure stop server, and a secure delete server.|
+| PlayReady Server SDK| The portion of PlayReady content access and protection technology used for designing applications and plug-ins for use on a License Server, a Metering Server, a domain controller, a Secure Stop Server, and a Secure Delete Server.|
 | Policy| The description in the license of the actions permitted or the restrictions on the content.|
 | Private key| The secret half of a public/private key pair used in cryptography. Private keys are typically used to digitally sign a message that can be verified with the corresponding public key, or decrypt a message that has been encrypted with the corresponding public key.|
 | Protect| To encrypt files with a key and add information such as the license acquisition URL.|
@@ -117,13 +117,13 @@ The following high-level terms are used throughout this documentation.
 | RR| Robustness Rules for PlayReady Products.|
 | SDK| Software development kit.|
 | Secrets | <b>Content secrets</b>: Content encryption key. <b>Client secrets</b>: Device unique private key, device PlayReady TEE key. |
-| Secure clock| A hardware clock that can only be set by specific routines – it cannot be set by the user.|
-| Secure delete| The process by which service providers receive a secure acknowledgement when a persistent license is deleted by the application on the client.|
-| Secure stop| The process by which a client can confidently assert to a media streaming service that media playback has stopped for any given piece of content.|
+| Secure Clock| A hardware clock that can only be set by specific routines – it cannot be set by the user.|
+| Secure Delete| The process by which service providers receive a secure acknowledgement when a persistent license is deleted by the application on the client.|
+| Secure Stop| The process by which a client can confidently assert to a media streaming service that media playback has stopped for any given piece of content.|
 | Service | Service that provides protected content to users.|
 | Service provider | A Media, or Video, or Audio Service Provider is a  company that provides a media, video, or audio service to its subscribers or customers. An example is Netflix providing a video playback service to its users in exchange for a monthly subscription fee.|
-| SL| Security level.|
-| SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and Clients. Payloads are XML carried over HTTP or HTTPS |
+| SL| Security Level.|
+| SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and clients. Payloads are XML carried over HTTP or HTTPS |
 | SOC | System on a Chip.  An integrated circuit (or chip) that integrates a large number of components |
 | SSTP | Smooth Streaming Transport Protocol. An adaptive streaming protocol which was introduced by Microsoft. |
 | Stream| Digital media that is in the process of being delivered in a continuous flow across a network.|

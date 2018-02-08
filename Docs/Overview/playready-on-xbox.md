@@ -13,7 +13,7 @@ ms.technology: drm
 
 # PlayReady on Xbox
 
-PlayReady DRM enables developers to create UWP apps capable of providing PlayReady content to the user while enforcing the access rules defined by the content provider. If you are designing an application that runs on Xbox, see [PlayReady DRM](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk).
+PlayReady DRM enables developers to create UWP apps capable of providing PlayReady content to the user while enforcing the access rules defined by the content provider. If you are designing an application that runs on Xbox, see [PlayReady DRM](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk).
 
 ## See also
 

@@ -8,7 +8,7 @@ keywords: PlayReady, licensing, playable content license
 # Microsoft PlayReady
 
 ## Secure audio/video content against unauthorized use, and help monetize content
-Microsoft PlayReady is a set of technologies that can be used to distribute audio/video content securely over a network, and prevent the unauthorized use of this content. This technology is used for defining, incorporating, and enforcing rights for digital media. The service provider and content provider can control the expiration date, the number of times a user can play the content file, the resolution of the content that can be played on a screen, the type of screen that content is rendered to, and many other control settings. PlayReady technologies can be incorporated into media applications on televisions, set top boxes, mobile phones, tablets, personal computers, and other devices to enforce the content access rules defined by the content owners.
+Microsoft PlayReady is a set of technologies that can be used to distribute audio/video content more securely over a network, and help prevent the unauthorized use of this content. This technology is used for defining, incorporating, and enforcing rights for digital media. The service provider and content provider can control the expiration date, the number of times a user can play the content file, the resolution of the content that can be played on a screen, the type of screen that content is rendered to, and many other control settings. PlayReady technologies can be incorporated into media applications on televisions, set top boxes, mobile phones, tablets, personal computers, and other devices to enforce the content access rules defined by the content owners.
 
 > [!NOTE]
 > If this documentation differs from the language included in the [Licensing Agreements](https://www.microsoft.com/playready/licensing/), in the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) document or the [Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) document, those documents take precedence.
@@ -24,7 +24,7 @@ PlayReady can work on non-Windows platforms (such as iOS and Android) and is use
 
 
 ## Versions
-As of 2018, the latest version of PlayReady is 4.0, released in October 2017. It adds support for content encrypted in AES-CBC mode, in addition to the content already supported in AES-CTR mode. Find more about the different versions of PlayReady [here](Overview/product-versions.md). We recommend that services and device manufactureres update to the latest version available. However, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](Overview/product-versions.md) to learn more about the interoperability of PlayReady clients and servers.
+As of 2018, the latest version of PlayReady is 4.0, released in October 2017. It adds support for content encrypted in AES-CBC mode, in addition to the content already supported in AES-CTR mode. Find more about the different versions of PlayReady [here](Overview/product-versions.md). We recommend that services and device manufacturers update to the latest version available. However, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](Overview/product-versions.md) to learn more about the interoperability of PlayReady Clients and PlayReady Servers.
 
 PlayReady 3.0 and later supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) support other types of content, such as executable applications and ebooks. 
 <br/>
@@ -54,7 +54,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
         </a>
     </li>
     <li>
-        <a href="https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk">
+        <a href="https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

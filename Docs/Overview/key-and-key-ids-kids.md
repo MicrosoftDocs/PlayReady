@@ -36,7 +36,7 @@ Within each PRO is a *PlayReady Header*, which gives a client the information ne
 ```
 
 
-The part that interests us is the `<KIDS>` element, which contains one or more `<KID>` elements. A KID (Key ID) contains a globally unique identifier (GUID) that the client uses to ask the server for a corresponding key, and an ALGID, which is then used to decrypt the file. The KID is public, since it's contained in the PRO, but the key itself is a secret to the service, and the relationship between key and KID is known only to the service.
+The part that interests us is the `<KIDS>` element, which contains one or more `<KID>` elements. A KID (Key ID) contains a globally unique identifier (GUID) that the client uses to ask the Server for a corresponding key, and an ALGID, which is then used to decrypt the file. The KID is public, since it's contained in the PRO, but the key itself is a secret to the service, and the relationship between key and KID is known only to the service.
 
 
 
@@ -145,7 +145,7 @@ Just as a real key can unlock more than one door, it is technically possible to 
 
 For example, with a multi-quality video asset with 4K, HD, and SD video tracks and several audio tracks, the encryptor has the flexibility to define one key per track, or one key for all the tracks.
 
-Clients will need a license for each of the keys that they have the right to decrypt. Note that delivering multiple licenses can be done by a license server in a single license response.
+Clients will need a license for each of the keys that they have the right to decrypt. Note that delivering multiple licenses can be done by a License Server in a single license response.
 
 In a single asset with multiple tracks, the decision between one key for all tracks or a key for each track is done by the service managing the content, and based on the following criteria:
 - more keys brings more complexity but allows specify at license delivery time what tracks the service want to allow a particular client to decrypt
@@ -165,9 +165,9 @@ In a single asset with multiple tracks, the decision between one key for all tra
 
 A single license response can also carry multiple licenses and thus multiple keys to unlock multiple files or tracks in one transaction. This is more efficient than creating multiple responses for multiple licenses, since it only involves one transaction. This can be useful for different scenarios:
 
-   *  One media file is encrypted using multiple keys. For example, the video track is encrypted using Key1, and the audio track is encrypted using Key2. When a client requests a license for KID1, the license server issues a license response including licenses for KID1 and KID2, so the client has all the keys to decrypt the video and audio tracks of the file. <br/>
-   *  Each song on an album is encrypted using a different key, but a customer has acquired the rights for all of them. When the customer starts playing the first song, the license server issues a license response including one license for each song on the album, so the client has all the keys needed to play the entire album seamlessly. <br/>
-   *  The key for a channel on live TV is expected to change every 24 hours. When playback starts, the server sends a license response including the license for the current key, but also a license with the next key, so when the key changes, the client will already have the next key and the change happens seamlessly. <br/>
+   *  One media file is encrypted using multiple keys. For example, the video track is encrypted using Key1, and the audio track is encrypted using Key2. When a client requests a license for KID1, the License Server issues a license response including licenses for KID1 and KID2, so the client has all the keys to decrypt the video and audio tracks of the file. <br/>
+   *  Each song on an album is encrypted using a different key, but a customer has acquired the rights for all of them. When the customer starts playing the first song, the License Server issues a license response including one license for each song on the album, so the client has all the keys needed to play the entire album seamlessly. <br/>
+   *  The key for a channel on live TV is expected to change every 24 hours. When playback starts, the Server sends a license response including the license for the current key, but also a license with the next key, so when the key changes, the client will already have the next key and the change happens seamlessly. <br/>
 
 
 <a id="ID4E4E"></a>

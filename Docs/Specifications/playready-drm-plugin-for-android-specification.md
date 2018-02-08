@@ -3,7 +3,7 @@ author: rolandlefranc
 title: PlayReady DRM Plugin for Android Specification
 description: This specification describes the requirements for incorporating PlayReady digital rights management (DRM) in an Android app.
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
-keywords: DRM Plugin for Android specification
+keywords: drm, plugin, android, java, specification, PlayReadyDrmPlugin, PlayReadyDRMPlugin
 ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
@@ -73,13 +73,13 @@ The following steps describe a simple playback scenario:
 
 Apps will use this method to pass parameters to PlayReady that are not otherwise possible due to the current design of the plug-in APIs.
 
-   *  **DeviceStoreName**&mdash;The app must set the location of the device store as a property prior to opening a session. Then PlayReady will look up the **DeviceStoreName** property upon initializing the DRM Manager during calls to [openSession](#opensession). The path to the device store must be accessible to the app like the app's private data directory. The property should point to a &lt;path/filename> that should hold the HDS.
+   *  **DeviceStoreName** &mdash; The app must set the location of the device store as a property prior to opening a session. Then PlayReady will look up the **DeviceStoreName** property upon initializing the DRM Manager during calls to [openSession](#opensession). The path to the device store must be accessible to the app like the app's private data directory. The property should point to a &lt;path/filename> that should hold the HDS.
 
-   *  **LicenseChallengeCustomData**&mdash;The app can optionally set this property prior to calls to [getKeyRequest](#getkeyrequest), where PlayReady will look up the property and compose a license acquisition challenge and include the custom data in the request.
+   *  **LicenseChallengeCustomData** &mdash; The app can optionally set this property prior to calls to [getKeyRequest](#getkeyrequest), where PlayReady will look up the property and compose a license acquisition challenge and include the custom data in the request.
 
-   *  **SecureStopCustomData**&mdash;The app can optionally set this property prior to a call to generate the secure stop challenge. PlayReady will look up the property and compose the secure stop challenge and include the custom data in the request.
+   *  **SecureStopCustomData** &mdash; The app can optionally set this property prior to a call to generate the Secure Stop challenge. PlayReady will look up the property and compose the Secure Stop challenge and include the custom data in the request.
 
-   *  **SelectKID**&mdash;In situations where the app has acquired multiple in-memory licenses in a single batch, it can specify a base64 encoded KID for binding.
+   *  **SelectKID** &mdash; In situations where the app has acquired multiple in-memory licenses in a single batch, it can specify a base64 encoded KID for binding.
 
 
 ```cpp
@@ -252,7 +252,7 @@ ContentHeader&mdash;The app can either pass the content header in the *initData*
 LicenseChallengeCustomData&mdash;The app may pass the challenge custom data in the *optionalParameters* parameter with the string key "LicenseChallengeCustomData". Alternatively, the method can pick up the **LicenseChallengeCustomData** if the app has already set it as a property.
 
 
-The method will populate the *defaultUrl* if available in the content header as well as the request to be sent to the license server.
+The method will populate the *defaultUrl* if available in the content header as well as the request to be sent to the License Server.
 
 ```cpp
 status_t PlayReadyDrmPlugin::getKeyRequest(
@@ -416,7 +416,7 @@ ErrorExit:
 ### provideKeyResponse
 
 
-Once a `KeyRequest (LicenseChallenge)` has been sent by the app to the license server, the app should pass the `KeyResponse (LicenseResponse)` to the plug-in.
+Once a `KeyRequest (LicenseChallenge)` has been sent by the app to the License Server, the app should pass the `KeyResponse (LicenseResponse)` to the plug-in.
 
 ```cpp
 status_t PlayReadyDrmPlugin::provideKeyResponse(
@@ -506,7 +506,7 @@ Prior to generating the secure stop challenge, the app must provide the publishe
 Optionally the app can also provide **SecureStopCustomData** to be included as a part of the secure stop challenge.
 
 
-After the secure stop challenge is created, the app should send it to the server and provide back the secure stop response to the [releaseSecureStops](#releasesecurestops) method.
+After the secure stop challenge is created, the app should send it to the Server and provide back the secure stop response to the [releaseSecureStops](#releasesecurestops) method.
 
 ```cpp
 DRM_RESULT PlayReadyDrmPlugin::_getSecureStop(
@@ -596,7 +596,7 @@ ErrorExit:
 ### releaseSecureStops
 
 
-Once the app receives the secure stop response from the server, the message should be passed down to the plug-in to remove the secure stop information from storage.
+Once the app receives the secure stop response from the Server, the message should be passed down to the plug-in to remove the secure stop information from storage.
 
 ```cpp
 status_t PlayReadyDrmPlugin::releaseSecureStops(
