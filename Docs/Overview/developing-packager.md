@@ -29,7 +29,7 @@ Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is all
 For more information, see [Content Encryption and Delivery](content-encryption-and-delivery.md)
 
 
-## Generating of the PlayReady Header
+## Generating the PlayReady Header
 
 The packager needs to include a PlayReady Header in the encrypted content.
 
@@ -60,13 +60,13 @@ For more information about generating the PlayReady Header, see the [PlayReady H
 
 &nbsp;
 
-## Inserting the PlayReady Header in the protected content
+## Inserting the PlayReady Header in protected content
 
 The packager needs to insert the PlayReady Header it has generated into the content. It will typically be inserted either in the header of the content files, or in the manifest of streaming assets.
 
 &nbsp;
 
-### Inserting the PlayReady Header in protected content files
+### Inserting the PlayReady Header in content files
 
 For MP4 ISO files, Microsoft recommends following the ISO format specification and inserting the PlayReady Header in a PSSH box.
 
@@ -74,7 +74,7 @@ For MP4 ISO files, Microsoft recommends following the ISO format specification a
 
 &nbsp;
 
-### Inserting the PlayReady Header in protected streaming manifests
+### Inserting the PlayReady Header in streaming manifests
 
 For adaptive streaming assets, Microsoft recommends inserting the PlayReady Header in the manifest of the asset.
 

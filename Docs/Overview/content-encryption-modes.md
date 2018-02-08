@@ -150,7 +150,7 @@ The following figure shows a content flow, where the license request is using th
 
 Microsoft recommends that encryptors always include the same ALGID value in the PlayReady Header that they included when they processed the content.
 
-In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
+In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. Clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
 
 In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request by using HTML5 EME APIs.
 

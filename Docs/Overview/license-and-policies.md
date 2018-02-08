@@ -1,7 +1,7 @@
 ---
 author: rolandlefranc
 title: License and Policies
-description: During license acquisition, the Client sends a challenge to the PlayReady License Server containing the content header and information about the user's device.
+description: During license acquisition, the client sends a challenge to the PlayReady License Server containing the content header and information about the user's device.
 ms.assetid: "BD5E39E2-20B2-42A5-9D4F-D109DD4E67DE"
 keywords: playready license, policy, policies
 ms.author: rolefran

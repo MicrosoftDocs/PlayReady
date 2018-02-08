@@ -22,7 +22,7 @@ For more information about PlayReady domains, see [PlayReady License Server](lic
 
 ## PlayReady Domain Server
 
-An optional PlayReady domain Server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients, including mobile device clients.
+An optional PlayReady Domain Server allows you to manage content access for multiple clients through a single entity. Domains provide simplified and more robust service access for multiple clients, including mobile device clients.
 
 > [!NOTE]
 > A PlayReady domain is not the same as network or Web domains.
@@ -31,7 +31,7 @@ For more information about PlayReady domains, see [PlayReady Domain Server](doma
 
 ## PlayReady Metering Server
 
-An optional PlayReady metering Server provides a process that indicates how many times specific content has been played. For example, you could use this metering aggregation service in a subscription scenario to track content usage and charge the use appropriately.
+An optional PlayReady Metering Server provides a process that indicates how many times specific content has been played. For example, you could use this metering aggregation service in a subscription scenario to track content usage and charge the use appropriately.
 
 For more information about PlayReady metering, see [PlayReady Metering Server](metering-Server.md).
 

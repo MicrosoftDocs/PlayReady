@@ -101,7 +101,7 @@ The following high-level terms are used throughout this documentation.
 | PK | PlayReady Device Porting Kit |
 | PlayReady CA | PlayReady Certificate Authority. Microsoft is the Certificate Authority for PlayReady Client and Server Certificates |
 | PlayReady Device Porting Kit| The portion of PlayReady content access and protection technology used for designing PlayReady applications for devices such as mobile phones, set-top boxes, and portable media players.|
-| PlayReady Server SDK| The portion of PlayReady content access and protection technology used for designing applications and plug-ins for use on a License Server, a metering Server, a domain controller, a secure stop Server, and a secure delete Server.|
+| PlayReady Server SDK| The portion of PlayReady content access and protection technology used for designing applications and plug-ins for use on a License Server, a Metering Server, a domain controller, a Secure Stop Server, and a Secure Delete Server.|
 | Policy| The description in the license of the actions permitted or the restrictions on the content.|
 | Private key| The secret half of a public/private key pair used in cryptography. Private keys are typically used to digitally sign a message that can be verified with the corresponding public key, or decrypt a message that has been encrypted with the corresponding public key.|
 | Protect| To encrypt files with a key and add information such as the license acquisition URL.|
@@ -117,12 +117,12 @@ The following high-level terms are used throughout this documentation.
 | RR| Robustness Rules for PlayReady Products.|
 | SDK| Software development kit.|
 | Secrets | <b>Content secrets</b>: Content encryption key. <b>Client secrets</b>: Device unique private key, device PlayReady TEE key. |
-| Secure clock| A hardware clock that can only be set by specific routines – it cannot be set by the user.|
-| Secure delete| The process by which service providers receive a secure acknowledgement when a persistent license is deleted by the application on the client.|
-| Secure stop| The process by which a client can confidently assert to a media streaming service that media playback has stopped for any given piece of content.|
+| Secure Clock| A hardware clock that can only be set by specific routines – it cannot be set by the user.|
+| Secure Delete| The process by which service providers receive a secure acknowledgement when a persistent license is deleted by the application on the client.|
+| Secure Stop| The process by which a client can confidently assert to a media streaming service that media playback has stopped for any given piece of content.|
 | Service | Service that provides protected content to users.|
 | Service provider | A Media, or Video, or Audio Service Provider is a  company that provides a media, video, or audio service to its subscribers or customers. An example is Netflix providing a video playback service to its users in exchange for a monthly subscription fee.|
-| SL| Security level.|
+| SL| Security Level.|
 | SOAP | Simple object access protocol. The protocol used by default between PlayReady Servers and clients. Payloads are XML carried over HTTP or HTTPS |
 | SOC | System on a Chip.  An integrated circuit (or chip) that integrates a large number of components |
 | SSTP | Smooth Streaming Transport Protocol. An adaptive streaming protocol which was introduced by Microsoft. |
