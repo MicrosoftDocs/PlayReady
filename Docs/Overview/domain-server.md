@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady Domain Server
 description: You can manage content access for multiple Clients through a single entity, called a PlayReady domain.
-ms.assetid: "6fb880fa-b2b1-bae3-064b-0e0345d6edf8"
+ms.assetid: "0F53EB0C-1BF0-4949-8889-244AE669A28D"
 keywords: about PlayReady domains,  PlayReady domain server
 ms.author: rolefran
 ms.topic: conceptual

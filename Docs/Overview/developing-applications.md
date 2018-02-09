@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: Developing Applications using PlayReady
 description: This topic provides a description of the different ways to develop applications using PlayReady DRM.
-ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
+ms.assetid: "D90F1658-B12F-4424-9D44-DE9F5FC5B892"
 keywords: Client, application, development, uwp, android, xbox, sdk
 ms.author: rolefran
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady License Server
 description: The process of obtaining a license to play back PlayReady protected content is handled by a PlayReady License Server.
-ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
+ms.assetid: "57039377-25D5-4F70-97C8-E62E47DC75CE"
 keywords: PlayReady License Server
 ms.author: rolefran
 ms.topic: conceptual

@@ -1,10 +1,10 @@
 ---
-author:
+author: rolandlefranc
 title: Additional Information
 description: PlayReady Additional Information
-ms.assetid: "6fb880fa-b2b1-bae3-064b-0e0345d6edf8"
+ms.assetid: "6097924C-700B-4D88-960F-B54170568750"
 keywords:  PlayReady Information
-ms.author:
+ms.author: rolefran
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
