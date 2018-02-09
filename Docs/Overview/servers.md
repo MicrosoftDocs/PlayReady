@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady Servers
 description: This topic describes the different types of PlayReady Servers.
-ms.assetid: "C23CC7D6-BB81-41D7-8E6F-347B526129BB"
+ms.assetid: "ECD043B6-9F4B-4801-A3AE-9FD822DCD9E4"
 keywords: playready servers
 ms.author: rolefran
 ms.topic: conceptual

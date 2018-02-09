@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady Test Server
 description: PlayReady Test Server
-ms.assetid: "01e7b2ed-2204-9f0c-9d2d-901b4fe5f7c0"
+ms.assetid: "D8A54F3A-CF84-4352-A9A4-DB244826F5A3"
 keywords:  PlayReady, Test, Server
 ms.author: rolefran
 ms.topic: conceptual

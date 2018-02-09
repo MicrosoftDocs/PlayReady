@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady Compliance and Robustness Rules
 description: PlayReady Compliance and Robustness Rules
-ms.assetid: "6fb880fa-b2b1-bae3-064b-0e0345d6edf8"
+ms.assetid: "90172919-D79B-45CE-969D-028BABB5BBA2"
 keywords:  PlayReady Compliance and Robustness Rules
 ms.author: rolefran
 ms.topic: conceptual

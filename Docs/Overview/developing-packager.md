@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: Developing and Operating a PlayReady Packager
 description: Developing and Operating a PlayReady Packager
-ms.assetid: "01e7b2ed-2204-9f0c-9d2d-901b4fe5f7c0"
+ms.assetid: "CFAF35FD-CCBE-49EF-B4CE-708FBCDE298A"
 keywords:  PlayReady, Packager, Encryptor
 ms.author: rolefran
 ms.topic: conceptual

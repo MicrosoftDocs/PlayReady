@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: License to use PlayReady
 description: License to use PlayReady
-ms.assetid: "6fb880fa-b2b1-bae3-064b-0e0345d6edf8"
+ms.assetid: "42BA7CE6-6A6A-46BA-A1F9-B21AD1CA4E3D"
 keywords:  License, License to use, PlayReady
 ms.author: rolefran
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady on Windows
 description: Microsoft provides a PlayReady PC SDK integrated in the Windows SDK.
-ms.assetid: "01e7b2ed-2204-9f0c-9d2d-901b4fe5f7c0"
+ms.assetid: "FD3B96CD-5A5C-4CE9-AA7E-00DF10993B00"
 keywords:  Windows, UWP, PC, Windows 10, Mac OS, PC SDK
 ms.author: rolefran
 ms.topic: conceptual

@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: PlayReady on Xbox
 description: PlayReady on Xbox
-ms.assetid: "01e7b2ed-2204-9f0c-9d2d-901b4fe5f7c0"
+ms.assetid: "67839EA4-58C4-4C71-AB40-B149F7CE1B84"
 keywords:  Windows, UWP, Xbox, PlayReady
 ms.author: rolefran
 ms.topic: conceptual

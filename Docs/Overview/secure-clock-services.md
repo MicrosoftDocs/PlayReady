@@ -2,7 +2,7 @@
 author: rolandlefranc
 title: "PlayReady Secure Clock Services for PlayReady Clients"
 description: ""
-ms.assetid: "27BE5F0E-C171-4091-BACE-A029C6FE53B5"
+ms.assetid: "89366FFF-30B0-4158-A056-848A2A8248FB"
 keywords: secure clock services for playready clients
 ms.author: rolefran
 ms.topic: conceptual
