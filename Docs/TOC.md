@@ -1,3 +1,7 @@
+---
+ms.assetid: "0CC2B333-B7A9-42BB-8245-8E59011D78E1"
+---
+
 # [Microsoft PlayReady](index.md)
 
 ## [PlayReady Overview](Overview/overview.md)

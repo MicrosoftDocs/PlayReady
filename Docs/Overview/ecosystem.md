@@ -62,7 +62,7 @@ The following figure shows the icons used throughout this document to represent 
 
 In PlayReady systems, a content packaging service encrypts content and stores it on a Web Server. Clients acquire this encrypted content through streaming or download. Clients also acquire a PlayReady license from a License Server, which contains the information needed to decrypt content for rendering.
 
-The following figure depicts content and license flow for license acquisition (LA). Gray arrows indicate unlicensed content transfers and content transfers with a license. Black arrows indicate protected content transfer without a license, and white arrows indicate license transfer.
+The following figure depicts content and license flow for license acquisition (LA). The gray arrow indicates clear content transfer, black arrows indicate protected content transfer without a license, and white arrows indicate license transfers.
 
 
 ![Content License Flow](../images/image26_2.jpg)

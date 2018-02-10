@@ -50,7 +50,7 @@ The following table shows the current availability of a PlayReady Client on vari
   </tr>
   <tr>
     <td>Windows 10</td>
-    <td>Yes. Windows SDK. UWP or Web app in Edge</td>
+    <td>Yes. Windows SDK. UWP or Web app in Microsoft Edge</td>
     <td></td>
   </tr>
   <tr>
