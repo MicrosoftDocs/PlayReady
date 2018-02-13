@@ -16,7 +16,7 @@ ms.technology: drm
 
 Implementing Content Protection for Live and On-Demand Profiles of Dynamic Adaptive Streaming over HTTP (ISO/IEC 23009-1) using Common Encryption (ISO/IEC 23001-7) and Microsoft PlayReady.<br/><p style="text-align: center;">October 8, 2014<br/>Version 1.2</p>
 
-[Download PDF](../images/MPEG DASH PlayReady 1.2 - 2014-10-08.pdf)
+[Download PDF](../images/MPEG-DASH-PlayReady-1.2-2014-10-08.pdf)
 
 >Abstract:
 The ISO/IEC 23009-1 ISO Base Media File Format On-Demand and Live DASH Profiles can be used with the ISO/IEC 23001-7, “Common Encryption in ISO base media file format files” specification. Microsoft PlayReady supports both ISO/IEC 23001-7 and ISO/IEC 23009-1. This specification details how to create an ISO/IEC 23009-1 Media Presentation Description file signaling the use of Microsoft PlayReady for ISO/IEC 14496-12 media representations for both Live and On-Demand adaptive streaming scenarios.
