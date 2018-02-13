@@ -24,9 +24,9 @@ The process of encrypting clear content consists of defining one or several encr
 
 All encrypted content protected by PlayReady must have a PlayReady Header inserted in the encrypted file. This PlayReady Header is used by a PlayReady Client to locate or acquire a license for that particular piece of content. A PlayReady Header is composed of XML strings that are encoded using UTF-16. It includes the key identifiers (KIDs) that are used to encrypt the content, a default URL that the client will use to acquire a license from if no other is provided, and any custom attributes.  
 
-Any packager that packages clear content needs to implement a PlayReady Header generator to build the header and embed it in the encrypted content. The PlayReady Header must be implemented according to the [PlayReady Header Object Specification](https://www.microsoft.com/playready/documents/). There are multiple ways to create a PlayReady Header generator in your packager: 
+Any packager that packages clear content needs to implement a PlayReady Header generator to build the header and embed it in the encrypted content. The PlayReady Header must be implemented according to the [PlayReady Header Specification](../Specifications/playready-header-specification.md). There are multiple ways to create a PlayReady Header generator in your packager: 
 
-  *  Develop it yourself based on the *PlayReady Header Object Specification*. 
+  *  Develop it yourself based on the *PlayReady Header Specification*. 
   *  Use the PlayReady Server SDK API that generates a PlayReady Header. 
   *  Use the Windows 10 API that generates a PlayReady Header. 
   *  Use the PlayReady Device Porting Kit API that generates a PlayReady Header. 

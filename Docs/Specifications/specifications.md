@@ -18,6 +18,8 @@ This section contains a list of public specifications that provide background in
 
 ## In this section
 
-[PlayReady Header Object Specification](playready-header-specification.md)
+[PlayReady Header Specification](playready-header-specification.md)
 
 [PlayReady DRM Plug-in for Android Microsoft Specification](playready-drm-plugin-for-android-specification.md)
+
+[PlayReady DASH Specification](mpeg-dash-playready.md)

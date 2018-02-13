@@ -56,7 +56,7 @@ Here is an example of a PlayReady Header, which may be inserted in the header of
 ```
 
 
-For more information about generating the PlayReady Header, see the [PlayReady Header Object Specification](../Specifications/playready-header-specification.md).
+For more information about generating the PlayReady Header, see the [PlayReady Header Specification](../Specifications/playready-header-specification.md).
 
 &nbsp;
 
