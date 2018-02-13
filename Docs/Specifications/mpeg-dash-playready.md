@@ -451,7 +451,7 @@ void Swap(ref byte[] bytes, int pos1, int pos2)
 ## 3. Media Presentation Description Example
 
 <a id="correct-pro"></a>
-## 3.1 Correct PRO in Initialization Segment or Media Content
+### 3.1 Correct PRO in Initialization Segment or Media Content
 
 See section 2.1.1 above.
 
