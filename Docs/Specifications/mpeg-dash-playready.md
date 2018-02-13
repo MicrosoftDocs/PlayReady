@@ -16,7 +16,7 @@ Implementing Content Protection for Live and On-Demand Profiles of Dynamic Adapt
 
 **Current Version**
 
-The current version is **version 1.3** published on **January 15, 2018**<br/>
+The current version is **version 1.3** published on **February 15, 2018**<br/>
 Please refer to the [Change History](#change-history) for more information.
 
 
@@ -178,7 +178,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 | | | |
 |:--|:--|:--|
-| Version 1.3 | January 15, 2018 | Clarify support for 16-byte Initialization Vectors (16-byte IVs). |
+| Version 1.3 | February 15, 2018 | Clarify support for 16-byte Initialization Vectors (16-byte IVs). |
 | Version 1.2 | October 8, 2014 | 1) Changes for CENC 2nd edition<br/>2) Changes relating to the DASH MPD ContentProtection Descriptor elements<br/>3) Changes in the Terminology for terms addition and clarifications<br/>4) Changes in normative and informative references to refer the latest version<br/>5) Clarify the KID representation and endianness in the ISOBFF boxes, PRO, and PlayReady license. |
 | Version 1.1 | February 18, 2013 | Clarify PlayReady SystemID representation.<br/>The PlayReady SystemID is 9a04f079-9840-4286-ab92-e65be0885f95.<br/>Big endian representation = {0x9A, 0x04, 0xF0, 0x79, 0x98, 0x40, 0x42, 0x86, 0xAB, 0x92, 0xE6, 0x5B, 0xE0, 0x88, 0x5F, 0x95}.<br/>Little endian representation = {0x79, 0xF0, 0x04, 0x9A, 0x40,  0x98, 0x86, 0x42, 0xAB, 0x92, 0xE6, 0x5B, 0xE0, 0x88, 0x5F, 0x95}. |
 | Version 1.0 | July 17, 2012 | Initial version |
