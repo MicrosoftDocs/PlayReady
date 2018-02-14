@@ -28,13 +28,13 @@ The following figure shows the PlayReady PK components and how they fit in a dev
 
 ## Process for development, integration and self-certification
 
-1. License the PlayReady Porting Kit (DPK) from Microsoft
+1. License the PlayReady Porting Kit (PK) from Microsoft
 
-2. Port the DPK onto the platform
+2. Port the PK onto the platform
 
-    1. Compile the DPK for the platform
-    2. Adapt the functionality in the OEM functions of the DPK to the platform, to provide the basic services needed by the DPK (memory, clock, encryption accelerators, video path, etc.)
-    3. Integrate the DPK with the video and audio player
+    1. Compile the PK for the platform
+    2. Adapt the functionality in the OEM functions of the DPK to the platform, to provide the basic services needed by the PK (memory, clock, encryption accelerators, video path, etc.)
+    3. Integrate the PK with the video and audio player
     4. Create an application that enables PlayReady operations on the device, or an API exposed in a SDK that will allow multiple application developers to use them.
 
 3. Validate the port with respect to the Compliance and Robustness Rules requirements.
