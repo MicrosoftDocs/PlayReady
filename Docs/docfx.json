@@ -34,7 +34,9 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/playready/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "titleSuffix": "PlayReady", 
+      "extendBreadcrumb": true,
+      "uhfHeaderId": "MSDocsHeader-Dev_Games"
     },
     "fileMetadata": {},
     "template": [],
