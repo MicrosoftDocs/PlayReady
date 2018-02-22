@@ -152,9 +152,9 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 | | |
 |:--|:--|
-| [CENC] | *ISO/IEC FDIS 23001-7:2014, Second Edition, “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”.* |
-| [DASH] | *ISO/IEC 23009-1:2014, Second Edition, “Information technology — Dynamic adaptive streaming over HTTP (DASH) — Part 1: Media presentation description and segment formats”,* [http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip) |
-| [EME] | *“Encrypted Media Extensions”, RFC Working Draft* [http://www.w3.org/TR/encrypted-media/](http://www.w3.org/TR/encrypted-media/) |
+| [CENC] | *ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*, [https://www.iso.org/standard/68042.html](https://www.iso.org/standard/68042.html) |
+| [DASH] | *ISO/IEC 23009-1:2014, Second Edition, “Information technology — Dynamic adaptive streaming over HTTP (DASH) — Part 1: Media presentation description and segment formats”*, [http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip) |
+| [EME] | *“Encrypted Media Extensions”, W3C Recommendation 18 September 2017* [http://www.w3.org/TR/encrypted-media/](http://www.w3.org/TR/encrypted-media/) |
 | [PRH] | *“Microsoft PlayReady Header*, see [PlayReady Header Specification](playready-header-specification.md) |
 | [PRO] | *“Microsoft PlayReady Object*, see [PlayReady Header Specification](playready-header-specification.md) |
 | [RFC2119] | “Key *words for use in RFCs to Indicate Requirement* Levels”, S. Bradner, March 1997, [http://www.ietf.org/rfc/rfc2119](http://www.ietf.org/rfc/rfc2119)   |

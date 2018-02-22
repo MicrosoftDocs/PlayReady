@@ -22,4 +22,4 @@ This section contains a list of public specifications that provide background in
 
 [PlayReady Plug-in for Android Microsoft Specification](playready-plugin-for-android-specification.md)
 
-[PlayReady DASH Specification](mpeg-dash-playready.md)
+[DASH Content Protection using PlayReady](mpeg-dash-playready.md)

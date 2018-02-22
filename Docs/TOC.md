@@ -116,7 +116,7 @@
 
 ### [PlayReady Plugin for Android Specification](Specifications/playready-plugin-for-android-specification.md)
 
-### [PlayReady DASH Specification](Specifications/mpeg-dash-playready.md)
+### [DASH Content Protection using PlayReady](Specifications/mpeg-dash-playready.md)
 
 ## [Additional Information](Overview/additional-information.md)
 
