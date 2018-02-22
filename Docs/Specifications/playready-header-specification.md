@@ -577,7 +577,7 @@ PlayReady provides a convenient way to avoid a complex KMS. The Content Key Seed
 
 The following is the PlayReady standard algorithm:
 
-```cpp
+```cs
 byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
 {
     const int DRM_AES_KEYSIZE_128 = 16;

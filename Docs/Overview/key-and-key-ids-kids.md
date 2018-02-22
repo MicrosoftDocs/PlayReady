@@ -54,7 +54,8 @@ Content encryption keys in PlayReady systems are AES-128 CTR and AES-128 CBC key
 There are two ways to generate a KID and key, including:
 
    *  Using a *Key Management System* (KMS), where the service randomly generates each KID and key value and stores them, and can simply look up the key value that corresponds to the KID provided by the client. <br/>
-   *  Using the *PlayReady key seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value), and for each piece of content that requires a key, generates a random KID. Using the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady function, listed in the PlayReady Header Object specification at [https://www.microsoft.com/playready/documents/](https://www.microsoft.com/playready/documents/), section 6. For convenience, here is the algorithm: <br/>
+   *  Using the *PlayReady key seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value), and for each piece of content that requires a key, generates a random KID. Using the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady function, listed in the [PlayReady Header Specification](../Specifications/playready-header-specification.md)
+, section 7. For convenience, here is the algorithm: <br/>
       ```cs
       byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
       {

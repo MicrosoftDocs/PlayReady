@@ -112,9 +112,11 @@
 
 ## [Specifications](Specifications/specifications.md)
 
-### [PlayReady Header Object Specification](Specifications/playready-header-specification.md)
+### [PlayReady Header Specification](Specifications/playready-header-specification.md)
 
-### [PlayReady DRM Plugin for Android Specification](Specifications/playready-drm-plugin-for-android-specification.md)
+### [PlayReady Plugin for Android Specification](Specifications/playready-plugin-for-android-specification.md)
+
+### [DASH Content Protection using PlayReady](Specifications/mpeg-dash-playready.md)
 
 ## [Additional Information](Overview/additional-information.md)
 
