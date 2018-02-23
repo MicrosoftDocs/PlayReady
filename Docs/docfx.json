@@ -36,7 +36,10 @@
       "breadcrumb_path": "/playready/breadcrumb/toc.json",
       "titleSuffix": "PlayReady", 
       "extendBreadcrumb": true,
-      "uhfHeaderId": "MSDocsHeader-Dev_Games"
+      "uhfHeaderId": "MSDocsHeader-Dev_Games",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/PlayReady",
+      "feedback_product_url": "https://wpdev.uservoice.com"   
     },
     "fileMetadata": {},
     "template": [],
