@@ -156,7 +156,7 @@ Silverlight is a deprecated application framework running on Windows 7 and Mac O
 
 While many Android device models embed a PlayReady Client integrated by the OEM, others do not.
 
-Developing an application for the models which embedd one is as simple as using the SDK from these devices. They will typically expose the PlayReady Client through the Java  [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady Plugin for Android Microsoft Specification](../Specifications/playready-plugin-for-android-specification.md) for more information.
+Developing an application for the models which embed one is as simple as using the SDK from these devices. They will typically expose the PlayReady Client through the Java  [**DrmManagerClient** class](https://developer.android.com/reference/android/drm/DrmManagerClient.html). See the [PlayReady Plugin for Android Microsoft Specification](../Specifications/playready-plugin-for-android-specification.md) for more information.
 
 Developing an application for the models which don't embed a PlayReady Client requires the integration of the PlayReady Client in the application itself.
 
