@@ -5,6 +5,7 @@ description: PlayReady is a very versatile technology that is designed to allow 
 ms.assetid: "53B49621-E528-43FA-B054-BB38442DF666"
 keywords:  playready, products, deliverables, services, license
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

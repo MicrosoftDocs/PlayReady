@@ -5,6 +5,7 @@ description: This section describes best practices for programming license polic
 ms.assetid: "bfbd5264-5ac4-0359-8a6f-b8bb3db19285"
 keywords: playready license policies best practices
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

@@ -5,6 +5,7 @@ description: Every media file protected by PlayReady has a PlayReady Object, whi
 ms.assetid: "cb010bd9-14d4-b6fb-60d4-48a37caa379f"
 keywords: key and key IDs, (KIDs), wrmheader, playready object
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

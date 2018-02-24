@@ -5,6 +5,7 @@ description: Microsoft PlayReady content access technology provides platforms fo
 ms.assetid: "e3af1d6c-e65f-d73c-821b-f506704599d5"
 keywords: introduction to Microsoft PlayReady content access technology
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

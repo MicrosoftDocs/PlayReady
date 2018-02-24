@@ -5,6 +5,7 @@ description: PlayReady Clients communicate with PlayReady Servers to acquire lic
 ms.assetid: "1CB607F6-FBE2-4EE9-8721-529D6BFFF9F1"
 keywords: PlayReady communication protocols
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

@@ -1,10 +1,11 @@
 ---
 author: rolandlefranc
 title: PlayReady Clients
-description:
+description: PlayReady Clients may be embedded in a device and used by an application, or be embedded in the application itself
 ms.assetid: "83200B8C-6C24-4ACE-95D6-28C1C5B3C412"
 keywords: clients, playready
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

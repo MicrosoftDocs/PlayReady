@@ -5,6 +5,7 @@ description: The PlayReady Secure Delete feature allows service providers to rec
 ms.assetid: "012a9779-4bc0-450f-a1ec-ef93c9d25a8e"
 keywords: secure, delete, server, license, deletion, remove
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

@@ -5,6 +5,7 @@ description: Implementing Content Protection for Live and On-Demand Profiles of 
 ms.assetid: "938d107a-8f4c-43ab-a78a-9ef0e419e05d"
 keywords: drm, specification, PlayReady, content protection
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -130,27 +131,27 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 #### 1.3.2 Abbreviations and Acronyms
 
-| | |
+| Abbr. | Meaning |
 |:--|:--|
-| CP  | [Content  Protection](#CP) |
-| DASH  | [Dynamic Adaptive Streaming over HTTP](#DASH)  |
-| ELS  | [Embedded License Store](#ELS)  |
-| GUID  | [Globally Unique Identifier](#GUID)  |
-| KID  | [Key Identifier](#KID)   |
-| LAURL  | [License Acquisition URL](#LAURL)  |
-| MPD  | [Media Presentation Description](#MPD)  |
-| PRH  | [PlayReady Header](#PRH)  |
-| PRO  | [PlayReady Object](#PRO)  |
-| SAP  | [Stream Access Point](#SAP)  |
-| UUID  | [Universally Unique Identifier](#UUID)   |
-| VOD  | [Video On Demand](#VOD)  |
+| CP  | Content Protection |
+| DASH  | Dynamic Adaptive Streaming over HTTP |
+| ELS  | Embedded License Store |
+| GUID  | Globally Unique Identifier |
+| KID  | Key Identifier |
+| LAURL  | License Acquisition URL |
+| MPD  | Media Presentation Description |
+| PRH  | PlayReady Header |
+| PRO  | PlayReady Object |
+| SAP  | Stream Access Point  |
+| UUID  | Universally Unique Identifier   |
+| VOD  | Video On Demand  |
 
 <a id="references"></a>
 ### 1.4 References
 
 #### 1.4.1 Normative References
 
-| | |
+| Code |  Normative Reference |
 |:--|:--|
 | [CENC] | *ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*, [https://www.iso.org/standard/68042.html](https://www.iso.org/standard/68042.html) |
 | [DASH] | *ISO/IEC 23009-1:2014, Second Edition, “Information technology — Dynamic adaptive streaming over HTTP (DASH) — Part 1: Media presentation description and segment formats”*, [http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip) |
@@ -165,10 +166,10 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 <a id="info-ref"></a>
 #### 1.4.2 Informational References
 
-| | |
+| Code | Informational Reference |
 |:--|:--|
-| [CPSID] | *DASH Industry Forum, “Protection System-specific Identifiers”,*  [http://dashif.org/identifiers/content-protection/](http://dashif.org/identifiers/content-protection/)  |
-| [DASHIF] | *DASH Industry Forum, “Guidelines for Implementation: DASH-AVC/264 Interoperability Points”, August 15, 2013, Version 2.0,* [http://dashif.org/w/2013/08/DASH-AVC-264-v2.00-hd-mca.pdf](http://dashif.org/w/2013/08/DASH-AVC-264-v2.00-hd-mca.pdf)   |
+| [CPSID] | *DASH Industry Forum, “Protection System-specific Identifiers”,*  [http://dashif.org/identifiers/protection/](http://dashif.org/identifiers/protection/)  |
+| [DASHIF] | *DASH Industry Forum, “Guidelines for Implementation: DASH-IF Interoperability Points”, September 07, 2017, Version 4.1,* [http://dashif.org/wp-content/uploads/2017/09/DASH-IF-IOP-v4.1-clean.pdf](http://dashif.org/wp-content/uploads/2017/09/DASH-IF-IOP-v4.1-clean.pdf)   |
 | [ISOBFF] | *ISO/IEC 14496-12, Fourth Edition (Corrected version 2012-09-15), “Information technology – Coding of audio-visual objects – Part 12: ISO Base Media File Format”,* [http://standards.iso.org/ittf/PubliclyAvailableStandards/c061988_ISO_IEC_14496-12_2012.zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c061988_ISO_IEC_14496-12_2012.zip)   |
 
 [Back to top](#top)
@@ -176,7 +177,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 <a id="change-history"></a>
 ### 1.5 Change History
 
-| | | |
+| Version | Date | Details |
 |:--|:--|:--|
 | Version 1.3 | February 15, 2018 | Clarify support for 16-byte Initialization Vectors (16-byte IVs). |
 | Version 1.2 | October 8, 2014 | 1) Changes for CENC 2nd edition<br/>2) Changes relating to the DASH MPD ContentProtection Descriptor elements<br/>3) Changes in the Terminology for terms addition and clarifications<br/>4) Changes in normative and informative references to refer the latest version<br/>5) Clarify the KID representation and endianness in the ISOBFF boxes, PRO, and PlayReady license. |
@@ -215,7 +216,7 @@ The second descriptor type indicates the UUID string for a particular DRM system
 
 > **Note** The ‘pssh’ box includes a SystemID, a UUID [[X.667](#references)] that uniquely identifies the content protection system. The PlayReady SystemID is 9a04f079-9840-4286-ab92-e65be0885f95.
 
-SystemID values for DRM systems are registered at:  [http://dashif.org/identifiers/content-protection/](http://dashif.org/identifiers/content-protection/)
+SystemID values for DRM systems are registered at:  [http://dashif.org/identifiers/protection/](http://dashif.org/identifiers/protection/)
 
 Each AdaptationSet element MAY list multiple DRM Descriptors to indicate that licenses are available for multiple DRM systems.  Each DRM system can specify elements and attributes in their own namespace and make them optional or required in Descriptors using their SystemID.
 
@@ -239,7 +240,7 @@ In the case of PlayReady, a PlayReady Object (PRO) [[PRO](#references)] can be c
 
 If there is an Initialization Segment containing the correct PRO, or if the media content includes a PlayReady ‘pssh’ box with the correct PRO, then the following ContentProtection Descriptor element with PlayReady Content Protection System-specific identifier [[CPSID](#info-ref)] SHOULD be used in an AdaptationSet element in an MPD to indicate the availability of a PlayReady license:
 
-```
+```xml
 <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value=”MSPR 2.0”/>
 ```
 
@@ -247,7 +248,9 @@ PlayReady supports the Common Encryption [[CENC](#references)] standard . When t
 
 The following ContentProtection Descriptor element SHALL be present in each protected Adaptation Set, and a single instance indicates the encryption scheme for all DRMs that support the ‘cenc’ scheme.
 
+```xml
 <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc"/>
+```
 
 #### 2.1.2 Including a PlayReady Object in the MPD
 

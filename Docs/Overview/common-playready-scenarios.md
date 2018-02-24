@@ -5,6 +5,7 @@ description: This section contains PlayReady implementation scenarios that illus
 ms.assetid: "717563b9-92bd-bf66-63ab-8b6f7d7ba795"
 keywords:  common PlayReady scenarios
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

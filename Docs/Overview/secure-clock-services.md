@@ -1,10 +1,11 @@
 ---
 author: rolandlefranc
 title: "PlayReady Secure Clock Services for PlayReady Clients"
-description: ""
+description: A Secure Clock Service allows a PlayReady Client to acquire time and enforce license expirations
 ms.assetid: "89366FFF-30B0-4158-A056-848A2A8248FB"
 keywords: secure clock services for playready clients
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
