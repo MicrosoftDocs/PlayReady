@@ -44,7 +44,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://docs.microsoft.com/en-us/playready/overview/overview">
+        <a href="overview/overview">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
