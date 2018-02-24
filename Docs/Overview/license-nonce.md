@@ -5,6 +5,7 @@ description: A PlayReady Client includes a random GUID called the license nonce 
 ms.assetid: "9F5227F8-83AD-4B6D-A4E3-B06183879629"
 keywords: playready license nonce
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

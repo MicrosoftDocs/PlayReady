@@ -5,6 +5,7 @@ description: Contains a glossary of PlayReady terms and abbreviations.
 ms.assetid: "07554286-539a-072a-14d9-81200b223c50"
 keywords: glossary, playready
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

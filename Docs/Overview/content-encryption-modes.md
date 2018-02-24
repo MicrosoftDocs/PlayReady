@@ -5,6 +5,7 @@ description: This topic provides an overview about content encryption modes in P
 ms.assetid: "4fcd8a74-5416-44f0-972d-532feab7bfde"
 keywords: content encryption,  content key, encryption overview, cbc, ctr, cipher block chaining, counter
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: playreadydpk
@@ -71,7 +72,7 @@ The PlayReady Header is an XML document usually included in the header of a cont
 
 The following is an example of a PlayReady Header v4.2.
 
-```
+```xml
 <WRMHEADER
           version="4.2.0.0"
           xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
@@ -91,7 +92,7 @@ The following is an example of a PlayReady Header v4.2.
 
 The ALGID (algorithm identifier) is a property of the KID element, and specifies the encryption algorithm that was used to encrypt the content. Starting with PlayReady Header version 4.2, the ALGID is required and must be set to either “AESCTR” or “COCKTAIL”. However, starting with version 4.3, the ALGID can also be set to the value “AESCBC” . The following example shows a PlayReady Header version 4.3 with the ALGID values set to "AESCBC".
 
-```
+```xml
 <WRMHEADER
           version="4.3.0.0"
           xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
@@ -117,7 +118,7 @@ The following figure shows a content flow, where the license request is based on
 
 Starting with the PlayReady Header version 4.3, the ALGID may be missing. The following example shows a PlayReady Header version 4.3 with ALGID values missing.
 
-```
+```xml
 <WRMHEADER
           version="4.3.0.0"
           xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">

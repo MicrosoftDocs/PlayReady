@@ -5,6 +5,7 @@ description: This specification describes the requirements for incorporating Pla
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
 keywords: playready, drm, plugin, android, java, specification, PlayReadyDrmPlugin, PlayReadyDRMPlugin
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
@@ -12,8 +13,6 @@ ms.technology: drm
 
 
 # PlayReady Plugin for Android Specification
-
-
 
 
 <a id="ID4ER"></a>
@@ -32,7 +31,7 @@ This specification provides information on how the plug-in APIs map to PlayReady
 
 ## 2. Interfaces
 
-[PlayReadyDrmPlugin](#playreadyplugin) provides the implementation for the DRM plug-in interface. **PlayReadyDrmPlugin** is responsible for wrapping the DRM Manager APIs and doing the proper translation for the parameters as specified by the interface into a format that PlayReady can operate on.
+[PlayReadyDrmPlugin](#playreadydrmplugin) provides the implementation for the DRM plug-in interface. **PlayReadyDrmPlugin** is responsible for wrapping the DRM Manager APIs and doing the proper translation for the parameters as specified by the interface into a format that PlayReady can operate on.
 
 ![PlayReadyDRMPlugin interface](../images/DrmPlugin.jpg)
 

@@ -5,6 +5,7 @@ description: A PlayReady Trusted Clock is a general term for a clock that is use
 ms.assetid: "5ab667e2-7eb9-df4c-798e-ee3a4b9106a2"
 keywords: playready trusted clock, secure clock, anti-rollback clock
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

@@ -5,6 +5,7 @@ description: After a Client retrieves a protected file, that Client needs to acq
 ms.assetid: "EF3BEE65-8412-4A9A-8AA9-A3F6AF2E3D92"
 keywords: playready licenses, key, policies, encryption, decrypt
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

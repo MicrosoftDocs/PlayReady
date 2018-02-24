@@ -5,6 +5,7 @@ description: In typical use, Microsoft PlayReady protects content by providing l
 ms.assetid: "121F7DEA-A0D1-4279-9BBF-D8EBEA1F894C"
 keywords: playready end to end, playready introduction
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

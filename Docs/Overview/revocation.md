@@ -5,6 +5,7 @@ description: When Microsoft identifies a Client with compromised security, the d
 ms.assetid: "09869289-666b-272e-1cc2-97079cb71204"
 keywords: playready revocation,  revocation list
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

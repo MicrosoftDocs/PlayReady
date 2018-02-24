@@ -1,9 +1,16 @@
 ---
+author: rolandlefranc
+title:  Microsoft PlayReady Documentation
+description: PlayReady Product documentation
 layout: LandingPage
 description: Documentation for Microsoft PlayReady
 ms.assetid: "1C6257BD-0C75-4D47-84F5-F738759C039D"
-title:  Microsoft PlayReady Documentation
 keywords: PlayReady, licensing, playable content license
+ms.author: rolefran
+ms.date: 02/01/2018
+ms.topic: conceptual
+ms.prod: playready
+ms.technology: drm
 ---
 
 # Microsoft PlayReady
@@ -37,7 +44,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="https://review.docs.microsoft.com/en-us/playready/overview/playready-overview">
+        <a href="https://docs.microsoft.com/en-us/playready/overview/overview">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

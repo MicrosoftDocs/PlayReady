@@ -5,6 +5,7 @@ description: PlayReady systems are able to interoperate with other content prote
 ms.assetid: "4bd6d175-18c2-1014-3762-73379579bbc5"
 keywords:  PlayReady and other content protection technologies, interoperate, playenablers, play enablers, copyenablers, copyenablers, moveenablers, move enablers, import, export
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

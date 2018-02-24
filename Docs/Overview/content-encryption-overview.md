@@ -5,6 +5,7 @@ description: This topic provides an overview of the encryption mechanisms and fi
 ms.assetid: "002abfe2-5478-33da-9fd9-6a1b28f24cdd"
 keywords:  PlayReady content encryption overview,  PlayReady protects content
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

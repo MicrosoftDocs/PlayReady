@@ -5,6 +5,7 @@ description: Microsoft PlayReady enables scenarios in which a content owner sell
 ms.assetid: "635ac0f9-99cd-365d-3349-f1fd12d2f408"
 keywords: subscription content scenario
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm

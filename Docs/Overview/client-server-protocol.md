@@ -5,6 +5,7 @@ description: Most communication between a PlayReady Client and a PlayReady Serve
 ms.assetid: "3EC7CBF9-8E17-4F9A-849D-14C2C482D62E"
 keywords: soap, playready client server protocols
 ms.author: rolefran
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.prod: playready
 ms.technology: drm
