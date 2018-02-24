@@ -44,24 +44,6 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
 <!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="overview/overview">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/en-us/media/common/i_overview.svg" alt="PlayReady Overview" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady Overview</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
         <a href="https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk">
         <div class="cardSize">
             <div class="cardPadding">
