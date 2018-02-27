@@ -1,0 +1,48 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/playready/breadcrumb/toc.json",
+      "titleSuffix": "PlayReady", 
+      "extendBreadcrumb": true,
+      "uhfHeaderId": "MSDocsHeader-Dev_Games",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/PlayReady",
+      "feedback_product_url": "mailto:AskPlayReady@microsoft.com"   
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "PlayReady"
+  }
+}
