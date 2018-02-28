@@ -22,6 +22,7 @@
           "**/*.png",
           "**/*.jpg",
           "**/*.gif",
+          "**/*.svg",
           "**/*.pdf"
         ],
         "exclude": [
@@ -39,7 +40,7 @@
       "uhfHeaderId": "MSDocsHeader-Dev_Games",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/PlayReady",
-      "feedback_product_url": "mailto:AskPlayReady@microsoft.com"   
+      "feedback_product_url": "mailto:AskPlayReady@microsoft.com"
     },
     "fileMetadata": {},
     "template": [],
