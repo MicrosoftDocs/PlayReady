@@ -38,9 +38,10 @@
       "titleSuffix": "PlayReady", 
       "extendBreadcrumb": true,
       "uhfHeaderId": "MSDocsHeader-Dev_Games",
+      "searchScope": ["PlayReady"],
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/PlayReady",
-      "feedback_product_url": "mailto:AskPlayReady@microsoft.com"
+      "feedback_product_url": "mailto:askplayready@microsoft.com"
     },
     "fileMetadata": {},
     "template": [],
