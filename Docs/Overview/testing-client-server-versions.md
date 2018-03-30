@@ -36,7 +36,7 @@ The recommended syntax is the [Query String Syntax](http://test.playready.micros
 
 Note that not all of the policy parameters will work with each of the service versions. For example, MaxResDecode only works with services developed with the Server SDK 3.0 or higher.  
 
-To assist in capability testing, the following tests can be used with the different versioned license services to cover four unique licensing scenarios. These scenarios demonstrate how to use the Query String syntax in your tests. However, you can use any of other syntaxes linked above if they are more appropriate for your case.  
+To assist in capability testing, the following tests can be used with the different versioned license services to cover four unique licensing scenarios. These scenarios demonstrate how to use the Query String syntax in your tests. However, you can use any of the other syntaxes linked above if they are more appropriate for your case.  
 
 
 ## Scenario 1: non-persistent licenses 
