@@ -21,4 +21,4 @@ This section contains a series of programming guides for developers working with
 
 [How to encrypt content](how-to-package-mp4-based.md)
 
-[How to generate a PlayReady Header](how-generate-playready-header.md)
+[How to generate a PlayReady Header](how-to-generate-playready-header.md)

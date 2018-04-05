@@ -122,7 +122,7 @@
 
 ### [How to package mp4-based content](Programming/how-to-package-mp4-based.md)
 
-### [How to generate a PlayReady Header](Programming/how-generate-playready-header.md)
+### [How to generate a PlayReady Header](Programming/how-to-generate-playready-header.md)
 
 ## [Additional Information](Overview/additional-information.md)
 
