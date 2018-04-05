@@ -120,7 +120,7 @@
 
 ## [Programming Guide](Programming/programming-guide.md)
 
-### [How to encrypt mp4-based content](Programming/how-to-package-mp4-based.md)
+### [How to package mp4-based content](Programming/how-to-package-mp4-based.md)
 
 ### [How to generate a PlayReady Header](Programming/how-generate-playready-header.md)
 
