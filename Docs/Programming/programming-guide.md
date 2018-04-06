@@ -22,3 +22,7 @@ This section contains a series of programming guides for developers working with
 [How to encrypt content](how-to-package-mp4-based.md)
 
 [How to generate a PlayReady Header](how-to-generate-playready-header.md)
+
+[How to Migrate from Previous Versions of the PK and Server](how-to-migrate.md)
+
+[How to Test PlayReady Clients with Versions of the PlayReady Server SDK](how-to-test-client-server-versions.md)

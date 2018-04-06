@@ -1,9 +1,9 @@
 ---
-author: v-doklo
-title: Testing PlayReady Clients with Versions of the PlayReady Server SDK
+author: dougklopfenstein
+title: How to Test PlayReady Clients with Versions of the PlayReady Server SDK
 description: Contains scenarios for testing various client versions with various server versions.
 ms.assetid: "8607D297-DD0F-4EE5-AE74-342935DE9C39"
-keywords: compatibility, migration, PlayReady, content protection
+keywords: compatibility, testing, clients, Server SDK, content protection
 ms.author: v-doklo
 ms.date: 03/30/2018
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.technology: drm
 ---
  
 
-# Testing PlayReady Clients with Versions of the PlayReady Server SDK 
+# How to Test PlayReady Clients with Versions of the PlayReady Server SDK 
 
 The PlayReady testing website contains a set of license services that use current and legacy versions of the Server SDK. These license services can be used to assist in the testing of client compatibility. For example, when updating a client to PK 4.0 the client can be tested against previous service versions to review compatibility.  
 

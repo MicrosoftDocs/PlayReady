@@ -44,8 +44,6 @@
 
 ### [PlayReady Product Versions](Overview/product-versions.md)
 
-### [Testing PlayReady Clients with Versions of the PlayReady Server SDK](Overview/testing-client-server-versions.md)
-
 ### [License to Use PlayReady](Overview/license-to-use-playready.md)
 
 ### [PlayReady Compliance and Robustness Rules](Overview/compliance-and-robustness-rules.md)
@@ -125,6 +123,10 @@
 ### [How to package mp4-based content](Programming/how-to-package-mp4-based.md)
 
 ### [How to generate a PlayReady Header](Programming/how-to-generate-playready-header.md)
+
+### [How to Migrate from Previous Versions of the PK and Server](Programming/how-to-migrate.md)
+
+### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Programming/how-to-test-client-server-versions.md)
 
 ## [Additional Information](Overview/additional-information.md)
 
