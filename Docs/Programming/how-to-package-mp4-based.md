@@ -295,12 +295,13 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 - Keys changing anytime between two adjacent segments. the rotation could be at program boudary or very frequent (up to every segment)
 - One single key for all tracks and representations, or different keys for different tracks or representations, for each rotation.
 
-The PlayReady Header (PRH) contains the KID (PRH version 4.0.0.0 or 4.1.0.0) or the KIDs (PRH version 4.2.0.0 or higher) and is located either in the manifest, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence.
-Having the PRH in the first segment's pssh box is not supported.
+The PlayReady Header (PRH) contains the KID for the scalable root license (PRH version 4.0.0.0 or higher) and is located either in the manifest, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence. It can also be missing if the application does a proactive license acquisition for the root scalable license.
 
 #### Supported
 - Supported natively in Windows 10 since version 1709 (type 1 playback)
 - Supported in Windows 10 using a in-app frame parser is supported since version 1507 (type 3 playback)
+- Broken in Windows Version 1709 and Version 1803
+- Will be supported in the next verions 1809 and higher
 
 #### Asset Manifest
 ```xml
@@ -334,6 +335,14 @@ Having the PRH in the first segment's pssh box is not supported.
 
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+
+
+# [Smooth Rotating Keys](#tab/case8)
+
+
+
+# [HLS Rotating Keys](#tab/case9)
+
 
 
 ## MPEG-TS formats
