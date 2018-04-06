@@ -81,18 +81,30 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 
 
 
-## Supported Formats
+## Formats Supported on Windows
 
-# [DASH 1 Key](#tab/case1)
+Internal note (will be removed):
+- TH1 - Version 1507 - Jul 2015
+- TH2 - Version 1511 - Nov 2015
+- RS1 - Version 1607 (Anniversary Update) - Jul 2016
+- RS2 - Version 1703 (Creators Update) - Mar 2017
+- RS3 - Version 1709 (Fall Creators Update) - Sep 2017
+- RS4 - Version 1803 - Apr 2018
+- RS5 - Version 1810 - Oct 2018
+
+# [DASH Fixed Keys](#tab/case1)
 
 - mp4 based asset
 - DASH manifest
-- Fixed Key along the asset
-- Single Key for all tracks
-- PlayReady Header in the manifest at the AdaptationSet level
+- Fixed keys along the asset
+- One single key for all tracks and representations, or different keys for different tracks or representations
+
+The PlayReady Header (PRH) contains the KID (PRH version 4.0.0.0 or 4.1.0.0) or the KIDs (PRH version 4.2.0.0 or higher) and is located either in the manifest, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence.
+Having the PRH in the first segment's pssh box is not supported.
 
 #### Supported
-- Supported on Windows since version xyz
+- Supported natively in Windows 10 since version 1709 (type 1 playback)
+- Supported in Windows 10 using a in-app frame parser is supported since version 1507 (type 3 playback)
 
 #### Asset Manifest
 ```xml
@@ -125,16 +137,19 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [Smooth 1 Key](#tab/case2)
+# [Smooth Fixed Keys](#tab/case2)
 
-- mp4 based asset
+- mp4 based asset (PIFF files)
 - Smooth Streaming manifest
-- Fixed Key along the asset
-- Single Key for all tracks
-- PlayReady Header in the manifest at the top level
+- Fixed keys along the asset
+- One single key for all tracks and qualities, or different keys for different tracks or qualities
+
+The PlayReady Header (PRH) contains the KID (PRH version 4.0.0.0 or 4.1.0.0) or the KIDs (PRH version 4.2.0.0 or higher) and is located either in the manifest, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence.
+Having the PRH in the first segment's pssh box is not supported.
 
 #### Supported
-- Supported on Windows since version xyz
+- Supported natively in Windows 10 since version 1809 (type 1 playback)
+- Supported in Windows 10 using a in-app frame parser is supported since version 1507 (type 3 playback)
 
 #### Asset Manifest
 ```xml
@@ -173,16 +188,19 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [HLS 1 Key](#tab/case3)
+# [HLS Fixed Keys](#tab/case3)
 
-- mp4 based asset
+- mp4 based asset (ISO files)
 - HLS playlist
-- Fixed Key along the asset
-- Single Key for all tracks
-- PlayReady Header in the playlist using a the EXT-X-PLAYREADYHEADER tag
+- Fixed keys along the asset
+- One single key for all tracks and representations, or different keys for different tracks or representations
+
+The PlayReady Header (PRH) contains the KID (PRH version 4.0.0.0 or 4.1.0.0) or the KIDs (PRH version 4.2.0.0 or higher) and is located either in the playlist using a the EXT-X-PLAYREADYHEADER tag, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence.
+Having the PRH in the first segment's pssh box is not supported.
 
 #### Supported
-- Supported on Windows since version xyz
+- Supported natively in Windows 10 since version 1709 (type 1 playback)
+- Supported in Windows 10 using a in-app frame parser is supported since version 1507 (type 3 playback)
 
 #### Asset Manifest
 ```M
@@ -214,12 +232,118 @@ QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [DASH Multiple Keys](#tab/case5)
-
 # [DASH Multi Period Keys](#tab/case6)
+
+- mp4 based asset (ISO files)
+- DASH manifest
+- Keys changing across DASH periods
+- One single key for all tracks and representations, or different keys for different tracks or representations, for each period.
+
+The PlayReady Header (PRH) contains the KID (PRH version 4.0.0.0 or 4.1.0.0) or the KIDs (PRH version 4.2.0.0 or higher) and is located either in the manifest, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence.
+Having the PRH in the first segment's pssh box is not supported.
+
+#### Supported
+- Supported natively in Windows 10 since version 1709 (type 1 playback)
+- Supported in Windows 10 using a in-app frame parser is supported since version 1507 (type 3 playback)
+
+#### Asset Manifest
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD ...>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+      <mspr:pro>...</mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
+        <SegmentList duration="4000" timescale="1000">
+          <Initialization sourceURL="video/avc1/init.mp4"/>
+          <SegmentURL media="video/avc1/seg-1.mp4"/>
+
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+      <mspr:pro>...</mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
+        <SegmentList duration="4000" timescale="1000">
+          <Initialization sourceURL="video/avc1/init.mp4"/>
+          <SegmentURL media="video/avc1/seg-1.mp4"/>
+```
+#### Asset Files
+```
+[init segment] separate file for a dash stream. Includes only the moov box
+  [moov] 
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for other DRM
+
+[any segment]
+  [moof] movie fragment header
+    [traf] track fragment
+      [senc] sample encryption box. Includes Sample Initialization Vectors
+  [mdat] movie fragment data
+```
+
+#### Test Vectors
+See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+
 
 # [DASH Rotating Keys](#tab/case7)
 
+- mp4 based asset (ISO files)
+- DASH manifest
+- Keys changing anytime between two adjacent segments. the rotation could be at program boudary or very frequent (up to every segment)
+- One single key for all tracks and representations, or different keys for different tracks or representations, for each rotation.
+
+The PlayReady Header (PRH) contains the KID (PRH version 4.0.0.0 or 4.1.0.0) or the KIDs (PRH version 4.2.0.0 or higher) and is located either in the manifest, or in the init segment's pssh box. If there is a PRH in the manifest and in the init segment, the one in the manifest takes precedence.
+Having the PRH in the first segment's pssh box is not supported.
+
+#### Supported
+- Supported natively in Windows 10 since version 1709 (type 1 playback)
+- Supported in Windows 10 using a in-app frame parser is supported since version 1507 (type 3 playback)
+
+#### Asset Manifest
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD ...>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+      <mspr:pro>...</mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
+        <SegmentList duration="4000" timescale="1000">
+          <Initialization sourceURL="video/avc1/init.mp4"/>
+          <SegmentURL media="video/avc1/seg-1.mp4"/>
+```
+
+#### Asset Files
+```
+[init segment] separate file for a dash stream. Includes only the moov box
+  [moov] 
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for other DRM
+
+[any segment]
+  [moof] movie fragment header
+    [traf] track fragment
+      [senc] sample encryption box. Includes Sample Initialization Vectors
+    [pssh] pssh box for PlayReady. Includes an Embedded License Store (ELS) including scalable leaf licenses
+  [mdat] movie fragment data
+```
+
+#### Test Vectors
+See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+
+
+## MPEG-TS formats
+
+Some services use the MPEG2-TS format for their streams, mostly because it was previously required on other platforms (e.g. iOS) or because it was the canonical format to do multicast or broadcast on closed networks.
+Since 2008, there has been may different variants of this format, involving a complete encryption of the TS elementary streams, or a partial encryption. Microsoft has published in 2012 a recommendation on this format, as part of the PlayReady documentation reserved to PlayReady licensed companies.
+
+This format is not supported on Windows, although some variants may play on Windows if the app does the stream parsing and provides individual frames to decrypt and decode to the Windows APIs.
+
+Going forward, multicast or broadcast using PlayReady should be done with mp4-based formats with Common Encryption.
 
 
 ## See also
