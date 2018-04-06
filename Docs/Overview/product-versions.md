@@ -36,7 +36,7 @@ The following table shows the feature availability for each version of the PlayR
 >|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, including CBC1, CBCS, and CENS.<br/>- [Secure Delete](secure-delete-Server.md) support | 4.0.5117 | 4.0.5102 | 4.0| No longer distributed (see [PlayReady on Windows](playready-on-windows.md))|
 
 
-
+                       
 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
