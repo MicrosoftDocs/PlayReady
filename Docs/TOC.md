@@ -130,4 +130,6 @@
 
 ## [Additional Information](Overview/additional-information.md)
 
+## [Support Options](support-options.md)
+
 ## [Glossary and Abbreviations](Overview/glossary-and-abbreviations.md)
