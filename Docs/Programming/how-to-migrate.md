@@ -51,7 +51,7 @@ It is strongly recommended that OEMs upgrade their devices to PK4.0 released in 
 
 1. Download the PK 4.0 from Microsoft. 
 
-1. Get support from Microsoft's partners or directly from Microsoft on [https://connect.microsoft.com/playready](https://connect.microsoft.com/playready).
+1. Get support from Microsoft's partners or directly from Microsoft by sending email to AskDRM@microsoft.com.
 
 1. Implement PK 4.0 and release your product. 
 
