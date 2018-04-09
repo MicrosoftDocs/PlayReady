@@ -17,7 +17,7 @@ ms.technology: drm
 
 Starting in March 2018, Microsoft provides technical support to licensed companies by answering questions sent by email to AskDRM@microsoft.com.
 
-![Sending email to AskDRM](/images/send-to-askdrm.png)
+![Sending email to AskDRM](images/send-to-askdrm.png)
 
 [!NOTE] The [Collaborate Portal](https://developer.microsoft.com/en-us/dashboard/collaborate) and [Connect Portal](https://connect.microsoft.com/) are retired. 
 
@@ -33,7 +33,7 @@ through:
 * the WMLA Portal: https://wmlalicensing.com
 * Email to: wmlalicensing@microsoft.com
 
-![Website home page for WMLA licensing](/images/website-wmlalicensing-home.png)
+![Website home page for WMLA licensing](images/website-wmlalicensing-home.png)
 
 
 ## Business Discussions
