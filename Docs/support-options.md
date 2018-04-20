@@ -15,11 +15,12 @@ ms.technology: drm
 
 ## Technical Support, March 2018 and beyond
 
-Starting in March 2018, Microsoft provides technical support to licensed companies by answering questions sent by email to AskDRM@microsoft.com.
+Starting in March 2018, Microsoft provides technical support to licensed companies by answering questions sent by email to [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com).
 
 ![Sending email to AskDRM](images/send-to-askdrm.png)
 
-[!NOTE] The [Collaborate Portal](https://developer.microsoft.com/en-us/dashboard/collaborate) and [Connect Portal](https://connect.microsoft.com/) are retired. 
+>[!NOTE]
+>The **Collaborate Portal** and **Connect Portal** are retired. 
 
 ## Operations Support
 
@@ -30,12 +31,12 @@ Microsoft provides support for operations about:
 
 through:
 
-* the WMLA Portal: https://wmlalicensing.com
-* Email to: wmlalicensing@microsoft.com
+* the WMLA Portal: [https://wmlalicensing.com](https://wmlalicensing.com){:target="_blank"}
+* Email to: [wmlalicensing@microsoft.com](mailto:wmlalicensing@microsoft.com)
 
 ![Website home page for WMLA licensing](images/website-wmlalicensing-home.png)
 
 
 ## Business Discussions
 
-All conversations regarding business inquiries about PlayReady should be emailed in English to playready@microsoft.com. 
+All conversations regarding business inquiries about PlayReady should be emailed in English to [playready@microsoft.com](mailto:playready@microsoft.com). 
