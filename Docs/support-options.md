@@ -31,7 +31,7 @@ Microsoft provides support for operations about:
 
 through:
 
-* the WMLA Portal: [https://wmlalicensing.com](https://wmlalicensing.com){:target="_blank"}
+* the WMLA Portal: [https://wmlalicensing.com](https://wmlalicensing.com)
 * Email to: [wmlalicensing@microsoft.com](mailto:wmlalicensing@microsoft.com)
 
 ![Website home page for WMLA licensing](images/website-wmlalicensing-home.png)
