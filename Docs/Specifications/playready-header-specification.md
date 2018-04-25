@@ -522,7 +522,7 @@ Notes for v4.0:
 Since version 1.5, PlayReady Server SDK treats the **CHECKSUM** as optional.
 PlayReady Porting Kit 1.2 out of the box requires the **CHECKSUM**.
 PlayReady Porting Kit 2.0 treats the **CHECKSUM** as optional.
- 
+
 ## 4. Embedded License Store (ELS)
 
 It is good practice to add an empty Embedded License Store to the PlayReady Object under the following conditions:
