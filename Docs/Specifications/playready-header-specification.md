@@ -522,12 +522,12 @@ Notes for v4.0:
 Since version 1.5, PlayReady Server SDK treats the **CHECKSUM** as optional.
 PlayReady Porting Kit 1.2 out of the box requires the **CHECKSUM**.
 PlayReady Porting Kit 2.0 treats the **CHECKSUM** as optional.
- 
+
 ## 4. Embedded License Store (ELS)
 
 It is good practice to add an empty Embedded License Store to the PlayReady Object under the following conditions:
 
-  *  The PlayReady Object is to be inserted into a content file.
+  * The PlayReady Object is to be inserted into a content file.
   * The content may be used in a context of PlayReady domains with embedded licenses.
 
 This allows a PlayReady Client to further embed a domain-bound license in the PlayReady Object by simply populating the existing Embedded License Store and saves the effort of having to re-header the entire file with a new PlayReady Object of a larger size than that of the initial one.
