@@ -88,6 +88,8 @@
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
+### [PlayReady Secure Stop](Overview/secure-stop-pk.md)
+
 ## [PlayReady Communication Protocols](Overview/communication-protocols.md)
 
 ### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
