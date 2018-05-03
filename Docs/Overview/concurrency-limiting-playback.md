@@ -12,7 +12,7 @@ ms.technology: drm
 ---
 
 
-# Stream concurrency limiting
+# Concurrency Limiting Playback
 
 Two PlayReady functionalities can be used by a service to limit the number of concurrent playback across devices from a user account.
 

@@ -62,7 +62,7 @@
 
 ### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
 
-###[Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
+### [Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
 
 ## [PlayReady Servers](Overview/servers.md)
 
@@ -76,7 +76,7 @@
 
 ### [PlayReady Secure Stop Server](Overview/secure-stop-server.md)
 
-### [PlayReady Secure Delete](Overview/secure-delete-server.md)
+### [PlayReady Secure Delete Server](Overview/secure-delete-server.md)
 
 ## [PlayReady Clients](Overview/clients.md)
 
@@ -88,17 +88,23 @@
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
-### [PlayReady Secure Stop](Overview/secure-stop-pk.md)
-
 ## [PlayReady Communication Protocols](Overview/communication-protocols.md)
 
 ### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
 
 ### [OEM/App Vendor Services for PlayReady Clients](Overview/Client-playready-services.md)
 
-## [PlayReady Advanced Topics](Overview/advanced-topics.md)
+## [PlayReady Features](Overview/playready-features.md)
+
+### [PlayReady Secure Delete](Overview/secure-delete-pk.md)
+
+### [PlayReady Secure Stop](Overview/secure-stop-pk.md)
+
+### [Concurrency Limiting Playback](Overview/concurrency-limiting-playback.md)
 
 ### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
+
+## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
 ### [License Chaining](Overview/license-chaining.md)
 
