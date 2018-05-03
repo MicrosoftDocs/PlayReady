@@ -88,12 +88,6 @@
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
-## [PlayReady Communication Protocols](Overview/communication-protocols.md)
-
-### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
-
-### [OEM/App Vendor Services for PlayReady Clients](Overview/Client-playready-services.md)
-
 ## [PlayReady Features](Overview/playready-features.md)
 
 ### [PlayReady Secure Delete](Overview/secure-delete-pk.md)
@@ -115,6 +109,8 @@
 ### [Licenses Restricted by Binding Policy](Overview/licenses-restricted-by-binding-policy.md)
 
 ### [Licenses Restricted by Extensible Policy](Overview/licenses-restricted-by-extensible-policy.md)
+
+### [PlayReady Communication Protocols](Overview/communication-protocols.md)
 
 ### [PlayReady and Other Protection Technologies](Overview/playready-and-other-protection-technologies.md)
 
