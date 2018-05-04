@@ -12,7 +12,7 @@ ms.technology: drm
 ---
 
 
-# Concurrency Limiting Playback
+# Concurrency Limiting
 
 With PlayReady, a service can limit the number of concurrent playback sessions across devices from a user account. For example, if Mr. Smith pays for a 2-stream maximum plan at Service Contoso, the service needs to keep count of how many clients are currently streaming content.
 
@@ -34,6 +34,6 @@ Limited Duration Licenses (LDL) are PlayReady licenses with short duration (e.g.
 
 LDLs use short duration licenses that are renewed frequently. When a player plays a stream, it receives a license for only 1 minute. This license includes the RealTimeExpiration restriction which requires the player to check for expiration in real time during a playback session (applies to PlayReady 3.0 or higher). The license is then renewed 30 seconds later through a proactive license acquisition, triggered by the app. At the end of the first minute, the player binds automatically and seamlessly to the second license, for another minute of playback.
 
-We recommend that Delete restrictions in the licenses are in place, in order for the licenses to be flushed out of the client periodically.
+Because licenses expire every minute, it is good practice to manually clean up the data store (HDS) by using the Removal Date Object. We recommend that clean up occurs periodically (at least every hour), in order to quickly remove cluttered licenses.
 
-Also, tell if the licenses should be persistent or non persistent
+Note that even though LDLs can be persistent or non-persistent, we recommend implementing LDLs as non-persistent. LDLs expire within one minute of delivery, so its using LDLs as persistent licenses would take up a substantial amount of resources. However, if you do decide to implement LDLs as persistent licenses, we suggest you apply the Removal Date Object in order to maintain a clean data store.

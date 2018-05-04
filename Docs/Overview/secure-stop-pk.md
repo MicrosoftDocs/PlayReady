@@ -19,6 +19,8 @@ Introduced in PlayReady version 3.0, *PlayReady Secure Stop* is a feature that p
 
 A Secure Stop event is reported to a Secure Stop Server by the client when media playback stops, either at the end of the media or because the user stopped the media presentation somewhere in the middle. A Secure Stop is also reported when the previous session ends unexpectedly (for example, due to a system or application crash).
 
+> Note: Secure Stop applies only to non-persistent licenses.
+
 ## Secure Stop 2
 
 In PlayReady version 4.2, *PlayReady Secure Stop 2* provides more security by adding a SecureStopAESKey, generated with a new license. That key is used during the SecureStop challenge to stop the playback session in the TEE, and the server checks for signatures upon regeneration of the key.
