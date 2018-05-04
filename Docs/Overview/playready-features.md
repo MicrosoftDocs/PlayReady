@@ -22,7 +22,7 @@ This section covers PlayReady features in the PlayReady technology.
 
 [PlayReady Secure Stop](secure-stop-pk.md)
 
-[Concurrency Limiting Playback](concurrency-limiting-playback.md)
+[Concurrency Limiting Playback](concurrency-limiting.md)
 
 [PlayReady Trusted Clocks](trusted-clocks.md) 
 
