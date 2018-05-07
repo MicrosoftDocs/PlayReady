@@ -54,7 +54,7 @@
 
 ### [PlayReady Test Server](Overview/test-Server.md)
 
-## [Content Encryption](Overview/content-encryption.md)
+## [Packaging Content](Overview/packaging-content.md)
 
 ### [Content Encryption and Delivery](Overview/content-encryption-and-delivery.md)
 
@@ -62,7 +62,11 @@
 
 ### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
 
-###[Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
+### [Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
+
+### [How to package mp4-based content](Programming/how-to-package-mp4-based.md)
+
+### [How to generate a PlayReady Header](Programming/how-to-generate-playready-header.md)
 
 ## [PlayReady Servers](Overview/servers.md)
 
@@ -110,6 +114,10 @@
 
 ### [PlayReady and Other Protection Technologies](Overview/playready-and-other-protection-technologies.md)
 
+### [How to Migrate from Previous Versions of the PK and Server](Programming/how-to-migrate.md)
+
+### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Programming/how-to-test-client-server-versions.md)
+
 ## [Specifications](Specifications/specifications.md)
 
 ### [PlayReady Header Specification](Specifications/playready-header-specification.md)
@@ -117,16 +125,6 @@
 ### [PlayReady Plugin for Android Specification](Specifications/playready-plugin-for-android-specification.md)
 
 ### [DASH Content Protection using PlayReady](Specifications/mpeg-dash-playready.md)
-
-## [Programming Guide](Programming/programming-guide.md)
-
-### [How to package mp4-based content](Programming/how-to-package-mp4-based.md)
-
-### [How to generate a PlayReady Header](Programming/how-to-generate-playready-header.md)
-
-### [How to Migrate from Previous Versions of the PK and Server](Programming/how-to-migrate.md)
-
-### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Programming/how-to-test-client-server-versions.md)
 
 ## [Additional Information](Overview/additional-information.md)
 
