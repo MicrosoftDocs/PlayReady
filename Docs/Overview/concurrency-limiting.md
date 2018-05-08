@@ -36,4 +36,4 @@ LDLs use short duration licenses that are renewed frequently. When a player play
 
 Because licenses expire every minute, it is good practice to manually clean up the data store (HDS) by using the Removal Date Object. We recommend that clean up occurs periodically (at least every hour), in order to quickly remove cluttered licenses.
 
-Note that even though LDLs can be persistent or non-persistent, we recommend implementing LDLs as non-persistent. LDLs expire within one minute of delivery, so its using LDLs as persistent licenses would take up a substantial amount of resources. However, if you do decide to implement LDLs as persistent licenses, we suggest you apply the Removal Date Object in order to maintain a clean data store.
+Note that even though LDLs can be persistent or non-persistent, we recommend implementing LDLs as non-persistent. LDLs expire within one minute of delivery, so using LDLs as persistent licenses would take up a substantial amount of resources. However, if you do decide to implement LDLs as persistent licenses, we suggest you apply the Removal Date Object in order to maintain a clean data store.
