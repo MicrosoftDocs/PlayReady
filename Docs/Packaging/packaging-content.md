@@ -20,14 +20,18 @@ Several different types of encryption are used to protect content. Microsoft Pla
 
 ## In this section
 
-[PlayReady Content Encryption and Delivery](content-encryption-and-delivery.md)
+[Preparing a Packager for PlayReady](Packaging/preparing-a-packager-for-playready.md)
 
-[PlayReady Content Encryption Overview](content-encryption-overview.md)
+[Developing a PlayReady Packager](Packaging/developing-a-packager.md)
 
-[PlayReady Content Encryption Modes](content-encryption-modes.md)
+[Operating a PlayReady Packager](Packaging/operating-a-packager.md)
 
-[Developing and Operating a PlayReady Packager](developing-packager.md)
+[Content Encryption and Delivery](Packaging/content-encryption-and-delivery.md)
 
-[How to package mp4-based content](Programming/how-to-package-mp4-based.md)
+[How to package mp4-based content](Packaging/how-to-package-mp4-based.md)
 
-[How to generate a PlayReady Header](Programming/how-to-generate-playready-header.md)
+[How to generate a PlayReady Header](Packaging/how-to-generate-playready-header.md)
+
+[PlayReady Content Encryption Overview](Packaging/content-encryption-overview.md)
+
+[PlayReady Content Encryption Modes](Packaging/content-encryption-modes.md)
