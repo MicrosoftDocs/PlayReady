@@ -12,7 +12,7 @@ ms.technology: drm
 ---
 
 
-# Secure Delete scenario
+# PlayReady Secure Delete
 
 The following figure illustrates a Secure Delete flow.
 
