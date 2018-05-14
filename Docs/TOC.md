@@ -92,9 +92,9 @@
 
 ### [PlayReady Secure Delete](Overview/secure-delete-pk.md)
 
-### [Concurrency Limiting](Overview/concurrency-limiting.md)
-
 ### [PlayReady Secure Stop](Overview/secure-stop-pk.md)
+
+### [Concurrency Limiting](Overview/concurrency-limiting.md)
 
 ### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
 
