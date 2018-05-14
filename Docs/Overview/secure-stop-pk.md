@@ -32,4 +32,4 @@ There are two primary scenarios for sending a Secure Stop challenge:
    *  When the media playback stops either at the end, or because the user stopped the media presentation somewhere in the middle.
    *  When the previous session ends unexpectedly (for example, due to a system or app crash). The app will need to query, either at startup or shutdown, for any outstanding Secure Stop sessions and send challenge(s) separate from any other media playback.
 
-![](../images/securestop.gif)
+![](../images/secure_stop.gif)
