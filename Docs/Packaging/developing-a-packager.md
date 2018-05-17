@@ -16,7 +16,9 @@ ms.technology: drm
 
 If you have decided to develop your own PlayReady Packager, you will need to decide how you want the packager to work, based on how you want your content stored and delivered. The following list provides the necessary steps required to add PlayReady functionality to your packager.
 
-1. Choose your encryption format. Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). For more information, see [PlayReady Content Encryption Modes](content-encryption-modes.md).
+1. Choose your encryption format. Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) and CTR (Counter Mode) modes, as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms. 
+
+   Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). For more information, see [PlayReady Content Encryption Modes](content-encryption-modes.md).
 
 2. Choose how you are going to encrypt your content. For more information, see [Using encryption keys](content-encryption-and-delivery.md#using-encryption-keys).
 
@@ -26,9 +28,9 @@ If you have decided to develop your own PlayReady Packager, you will need to dec
 
    Your packager should include some kind of key generator that creates the Key Value used to encrypt and decrypt your content. In addition, the key generator should associate a Key ID to the Key Value. The Key Value remains a secret, and the Key ID is public and is inserted in the PlayReady header in your content.
 
-   You will either need to develop a key management system to store multiple Key Values and their associated Key IDs, or license one from a third party. The key management system could be a database or any other type of storage system, but must be secure to prevent anyone from accessing the key values without authorization. Microsoft does not supply a key management system with PlayReady. Alternatively, you can use the KeySeed mechanism supplied with PlayReady in place of the key management system.
+   You will either need to develop a key management system to store multiple Key Values and their associated Key IDs, or license one from a third party. The key management system could be a database or any other type of storage system, but must be secure to prevent anyone from accessing the key values without authorization. Microsoft does not supply a key management system with PlayReady. Alternatively, you can use the KeySeed mechanism supplied with PlayReady in place of the key management system (the KeySeed mechanism must be incorporated in your packager and in the PlayReady Server that supplies the licences for decrypting the content).
 
-5. Choose how you are going to insert a PlayReady Object (including the PlayReady header) in your encrypted content. For more information, see [How to generate a PlayReady Header](how-to-generate-playready-header.md).
+5. Choose how you are going to insert a PlayReady Object (including the PlayReady header and/or the embedded license store) in your encrypted content. For more information, see [How to generate a PlayReady Header](how-to-generate-playready-header.md).
 
 6. Choose how you are going to provide the key values and key IDs to a PlayReady Server, which will then distribute the key values to PlayReady clients. 
 

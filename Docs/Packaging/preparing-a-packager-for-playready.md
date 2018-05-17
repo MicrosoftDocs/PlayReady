@@ -14,49 +14,51 @@ ms.technology: drm
 
 # Preparing a Packager for PlayReady
 
-Companies developing an encoder or a packager (also known as encryptor) utilizing PlayReady technologies need to integrate two functionalities in their product:
+There are several considerations you should examine before you begin incorporating PlayReady in your packager to protect content. Note that developing a packager that provides PlayReady protection for content you want to encrypt:
 
-* One that encrypts content in a PlayReady compatible encryption format.
+* Does not require a licensing agreement from Microsoft. 
 
-* Another that generates a PlayReady Header and inserts it in the encrypted content.
+* There are no fees to Microsoft associated with inserting PlayReady in your content.
 
->[!NOTE]
->A PlayReady licensing agreement is not necessary to build a PlayReady encoder or packager. In addition, there is no royalty applicable to PlayReady encoders or packagers.
+* There are no royalty payments to Microsoft applicable to PlayReady encoders or packagers.
 
-## Outline
+Therefore, you do not need to allocate any time in your budget for these tasks.
 
-Do you need a PlayReady license - no
+## Development time
 
-Are there any fees to insert PlayReady in content - no
+The development time for incorporating the PlayReady functionality in your packager will depend on the development and testing of the following components:
 
-Are there any royalty payments - no
+* Packager&mdash;packaging the content using the key value supplied by the key generator.
 
-Encrypt using more than one DRM - yes
+* Key Generator&mdash;generating the key value used to encrypt the content (along with its associated KeyID).
 
-Need to store keys - key management system (yes), Key Seed (no)
+* Key Management System&mdash;storing the key value and its associated KeyId (not required if using the KeySeed mechanism).
 
-Need to generate keys - yes (key generator)
+* PlayReady Server&mdash;supplying the key value to the client that is requesting content using the KeyID embedded in the PlayReady Header of the encrypted content.
 
-Need PlayReady Server - yes (your own or partner's)
+## Development considerations
 
-    Used to supply the key value for your content
+The basic development considerations for incorporating PlayReady in your packager are:
 
-    If your own, you need a PlayReady deployment certificate
+* A function must be provided to generate the key value and KeyID used to package the content. This functionality is not provided by PlayReady.
 
-    Are there any fees for the PlayReady Server SDK - no
+* Some means of storing the key values and KeyIDs (a key management system) or a KeySeed mechanism. This functionality is not provided by PlayReady.
 
-    Are there any royalty payments - no
+* Optional packaging using more than one DRM.
 
-    Describe how to get the deployment certificate and how long it takes
+* A method of communicating the key values and KeyIDs to a PlayReady license server.
 
-Development time
+You will need to allocate time in your budget for these tasks. For more information on development considerations, see [Developing a PlayReady Packager](developing-a-packager.md).
 
-	Packager
+## Additional considerations
 
-	Key Generator
+The key value and KeyID used to package content using your packager must be supplied to a PlayReady license server, which will then be queried by the client for the key value associated with the KeyID. Depending on how you accomplish this, you will need to budget for the following extra development: 
 
-	Key Management System
+* If you are using a third-party license server, you will need to allocate in your budget the time and expense of acquiring the rights to use the third-party PlayReady license server.
 
-	Server (optional)
+* If you are planning to use your own PlayReady server, you need to consider the following extra development expenses:
 
-    Testing
+  * You must allocate the time required to request and receive a PlayReady deployment certificate. For more information about the process and timeline for obtaining a PlayReady deployment certificate, see the [PlayReady Licensing Process](http://public.wmlalicensing.com/public/#licensingprocess) web page, and look under the "Agreements *without* Fees/Royalties" heading. (A PlayReady server does not require any fees or royalties.)
+
+  * Any development beyond supplying the key value for the KeyID sent by the client (such as rights and right restrictions) must also be budgetted (which is beyond the scope of this topic).
+
