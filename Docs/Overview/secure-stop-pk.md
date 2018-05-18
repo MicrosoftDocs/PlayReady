@@ -41,11 +41,48 @@ A service may use the SecureStop feature to enforce playback across multiple cli
 
 The following table shows the Server App logic on different Client Security Level and Secure Stop versions.
 
-| Client Version | SecureStop Server Logic |
-| -- | -- | -- | -- | -- |
-| PlayReady version 2.0+<br>SL2000 | Server does not receive any SecureStop message from the client. Use app logic to do this. |
-| PlayReady version 3.0+ <br>SL3000 (Example: Windows 10 App) | Server receives a SecureStop1 message from the client. <br><span style="color:red">The robustness of this message against attacks is higher than simple app logic.</span> |
-| PlayReady version 4.2+ <br>SL3000 | Server receives a SecureStop2 message from the client. A malicious SecureStop2 message from this client would require an attack in the client’s Trusted Execution Environment (TEE). <br><span style="color:red">The robustness of this message against attacks is higher than SecureStop1.</span> |
+<style>
+table {
+    border: none;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #0000FF;
+    color: white;
+}
+</style>
+
+<table>
+  <tr>
+    <th>Client Version</th>
+    <th>SecureStop Server Logic</th>
+    <th>Robustness</th>
+  </tr>
+  <tr>
+    <td>PlayReady version 2.0+<br>SL2000</td>
+    <td>Server does not receive any SecureStop message from the client. Use app logic to do this.</td>
+    <td>Low</td>
+  </tr>
+  <tr>
+    <td>PlayReady version 3.0+ <br>SL3000 (Example: Windows 10 App)</td>
+    <td>Server receives a SecureStop1 message from the client. <br><span style="color:red">The robustness of this message against attacks is higher than simple app logic.</span></td>
+    <td>Medium</td>
+  </tr>
+  <tr>
+    <td>PlayReady version 4.2+ <br>SL3000</td>
+    <td>Server receives a SecureStop2 message from the client. A malicious SecureStop2 message from this client would require an attack in the client’s Trusted Execution Environment (TEE). <br><span style="color:red">The robustness of this message against attacks is higher than SecureStop1.</span></td>
+    <td>High</td>
+  </tr>
+</table>
+
 
 
 ## See also
