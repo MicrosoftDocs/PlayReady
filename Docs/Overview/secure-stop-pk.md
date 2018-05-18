@@ -19,7 +19,7 @@ Introduced in PlayReady version 3.0, *PlayReady Secure Stop* is a feature that p
 
 ## Secure Stop overview
 
-A Secure Stop event is reported to a Secure Stop Server by the client when media playback stops, either at the end of the media or because the user stopped the media presentation somewhere in the middle. A Secure Stop is also reported when the previous session ends unexpectedly (for example, due to a system or application crash).
+A Secure Stop event is reported to a Secure Stop Server by the client when media playback stops, either at the end of the media or because the user stopped the media presentation somewhere in the middle. When a Secure Stop event is reported, and at the time the Secure Stop event is recorded, the PlayReady Client ensures that the content key is erased from memory. A Secure Stop is also reported when the previous session ends unexpectedly (for example, due to a system or application crash).
 
 > [!NOTE]
 > Secure Stop applies only to non-persistent licenses.
@@ -31,24 +31,21 @@ There are two primary scenarios for sending a Secure Stop challenge:
    *  When the media playback stops either at the end, or because the user stopped the media presentation somewhere in the middle.
    *  When the previous session ends unexpectedly (for example, due to a system or app crash). The app will need to query, either at startup or shutdown, for any outstanding Secure Stop sessions and send challenge(s) separate from any other media playback.
 
-For information about Secure Stop in the PlayReady Client SDK, see the *[Add secure stop](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk#add-secure-stop)* section in the [PlayReady DRM](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk) article.
+For information about Secure Stop in UWP apps, see the *[Add secure stop](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk#add-secure-stop)* section in the [PlayReady DRM](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk) article.
 
 ## Secure Stop 2
 
-In PlayReady version 4.2, *PlayReady Secure Stop 2* provides more security by adding a SecureStopAESKey, generated with a new license. That key is used during the SecureStop challenge to stop the playback session in the TEE, and the server checks for signatures upon regeneration of the key.
+In PlayReady version 4.2, *PlayReady Secure Stop 2* provides more security by enforcing the Secure Stop functionality on the client in the Trusted Execution Environment (TEE) at Security Level 3000.
 
 A service may use the SecureStop feature to enforce playback across multiple clients belonging to a same user account. Depending on the configuration of a particular client in that user account, the service will receive slightly different messages form the client.
 
 The following table shows the Server App logic on different Client Security Level and Secure Stop versions.
 
-| Client SL | SecureStop1 | SecureStop2 | Example | Server view |
+| Client Version | SecureStop Server Logic |
 | -- | -- | -- | -- | -- |
-| 2000 | disabled | disabled | None | Use app logic as fallback |
-| 2000 | enabled | disabled | | |
-| 2000 | enabled | enabled | None | &mdash; |
-| 3000 | disabled | disabled | | Use app logic as fallback |
-| 3000 | enabled | disabled | | |
-| 3000 | enabled | enabled | | The server knows for sure that the playback sessions received in the SecureStop challenge has been stopped by the TEE, making it more difficult for an attacker. |
+| PlayReady version 2.0+<br>SL2000 | Server does not receive any SecureStop message from the client. Use app logic to do this. |
+| PlayReady version 3.0+ <br>SL3000 (Example: Windows 10 App) | Server receives a SecureStop1 message from the client. <br><span style="color:red">The robustness of this message against attacks is higher than simple app logic.</span> |
+| PlayReady version 4.2+ <br>SL3000 | Server receives a SecureStop2 message from the client. A malicious SecureStop2 message from this client would require an attack in the client’s Trusted Execution Environment (TEE). <br><span style="color:red">The robustness of this message against attacks is higher than SecureStop1.</span> |
 
 
 ## See also
