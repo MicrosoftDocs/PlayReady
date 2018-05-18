@@ -28,21 +28,25 @@ Therefore, you do not need to allocate any time in your budget for these tasks.
 
 The development time for incorporating the PlayReady functionality in your packager will depend on the development and testing of the following components:
 
-* Packager&mdash;packaging the content using the key value supplied by the key generator.
+* Packager&mdash;packages the content using the key value supplied by the key generator and the PlayReady Object created by the PlayReady header generator.
 
-* Key Generator&mdash;generating the key value used to encrypt the content (along with its associated KeyID).
+* Key Generator&mdash;generates the key value used to encrypt the content (along with its associated KeyID).
 
-* Key Management System&mdash;storing the key value and its associated KeyId (not required if using the KeySeed mechanism).
+* PlayReady Header Generator&mdash;generates the PlayReady Object (including the PlayReady Header and/or an embedded license store).
 
-* PlayReady Server&mdash;supplying the key value to the client that is requesting content using the KeyID embedded in the PlayReady Header of the encrypted content.
+* Key Management System&mdash;stores the key value and its associated KeyId (not required if using the KeySeed mechanism).
+
+* PlayReady Server&mdash;supplies the key value to the client that is requesting content using the KeyID embedded in the PlayReady Header of the encrypted content.
 
 ## Development considerations
 
 The basic development considerations for incorporating PlayReady in your packager are:
 
-* A function must be provided to generate the key value and KeyID used to package the content. This functionality is not provided by PlayReady.
+* A function must be developed to generate the key value and KeyID used to package the content.
 
-* Some means of storing the key values and KeyIDs (a key management system) or a KeySeed mechanism. This functionality is not provided by PlayReady.
+* A function must be developed to generate the PlayReady Object, insert the key value and KeyID into the header, include the URL of the PlayReady license server, and include any custom value you require for your encrypted content. This function must follow the requirements outlined in the [PlayReady Header Specification](../Specifications/playready-header-specification.md).
+
+* Some means of storing the key values and KeyIDs (a key management system) or a KeySeed mechanism.
 
 * Optional packaging using more than one DRM.
 
