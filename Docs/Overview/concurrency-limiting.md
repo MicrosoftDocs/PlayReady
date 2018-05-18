@@ -32,11 +32,13 @@ For more information, see [Scenario: Subscription Content](scenario-subscription
 
 Limited Duration Licenses (LDL) are PlayReady licenses with short duration (e.g. expires one minute after delivery) and with the RealTimeExpiration restriction enabled. *RealTimeExpiration restriction enabled* means that the player is required to enforce the expiration not only at the beginning of a playback session, but also at regular intervals during playback. For more info, see the *Section 7.13* of the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/).
 
-LDLs use short duration licenses that are renewed frequently. When a player plays a stream, it receives a license for only 1 minute. This license includes the RealTimeExpiration restriction which requires the player to check for expiration in real time during a playback session (applies to PlayReady 3.0 or higher). The license is then renewed 30 seconds later through a proactive license acquisition, triggered by the app. At the end of the first minute, the player binds automatically and seamlessly to the second license, for another minute of playback.
+LDLs use short duration licenses that are renewed frequently. When a player plays a stream, let's say that it receives a license for only 1 minute. This license includes the RealTimeExpiration restriction which requires the player to check for expiration in real time during a playback session (applies to PlayReady 3.0 or higher). The license is then renewed 30 seconds later through a proactive license acquisition, triggered by the app. At the end of the first minute, the player binds automatically and seamlessly to the second license, for another minute of playback.
 
-Because licenses expire every minute, it is good practice to manually clean up the data store (HDS) by using the *Removal Date Object*. We recommend that clean up occurs periodically (at least every hour), in order to quickly remove cluttered licenses.
+Because licenses expire every minute in this case, it is good practice to manually clean up the data store (HDS) by using the Removal Date Object. It is up to the license server to include this extra policy in the license that is delivered to the client.
 
-Note that even though LDLs can be persistent or non-persistent, we recommend implementing LDLs as non-persistent. LDLs expire within one minute of delivery, so using LDLs in a persistent way would take up a substantial amount of resources. However, if you do decide to implement LDLs as persistent licenses, we suggest you apply the *Removal Date Object* in order to maintain a clean data store.
+We recommend that device makers design their devices to clean up the license store periodically (e.g. every day or at every boot), in order to quickly remove cluttered licenses.
+
+Note that even though LDLs can be persistent or non-persistent, we recommend implementing LDLs as non-persistent. For example, if LDLs expire within one minute of delivery, using LDLs in a persistent way would take up a substantial amount of resources. However, if you do decide to implement LDLs as persistent licenses, we suggest you apply the *Removal Date Object* in order to maintain a clean data store.
 
 ## See also
 
