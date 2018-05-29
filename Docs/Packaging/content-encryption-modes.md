@@ -55,7 +55,7 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 ## Signaling the ALGID in the PlayReady Header
 
-The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. Download the specification [here](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF).
+The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. For more information, see [PlayReady Header Specification](playready-header-specification.md).
 
 &nbsp;
 

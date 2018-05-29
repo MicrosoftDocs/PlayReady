@@ -32,6 +32,10 @@ This section covers more advanced features in the PlayReady technology.
 
 [PlayReady and Other Protection Technologies](playready-and-other-protection-technologies.md) 
 
+[How to Migrate from Previous Versions of the PK and Server](Advanced/how-to-migrate.md)
+
+[How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Advanced/how-to-test-client-server-versions.md)
+
 
 
 

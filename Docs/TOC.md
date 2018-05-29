@@ -54,15 +54,23 @@
 
 ### [PlayReady Test Server](Overview/test-Server.md)
 
-## [Content Encryption](Overview/content-encryption.md)
+## [Packaging Content](Packaging/packaging-content.md)
 
-### [Content Encryption and Delivery](Overview/content-encryption-and-delivery.md)
+### [Preparing a Packager for PlayReady](Packaging/preparing-a-packager-for-playready.md)
 
-### [PlayReady Content Encryption Overview](Overview/content-encryption-overview.md)
+### [Developing a PlayReady Packager](Packaging/developing-a-packager.md)
 
-### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
+### [Operating a PlayReady Packager](Packaging/operating-a-packager.md)
 
-###[Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
+### [Content Encryption and Delivery](Packaging/content-encryption-and-delivery.md)
+
+### [How to package mp4-based content](Packaging/how-to-package-mp4-based.md)
+
+### [How to generate a PlayReady Header](Packaging/how-to-generate-playready-header.md)
+
+### [PlayReady Content Encryption Overview](Packaging/content-encryption-overview.md)
+
+### [PlayReady Content Encryption Modes](Packaging/content-encryption-modes.md)
 
 ## [PlayReady Servers](Overview/servers.md)
 
@@ -110,6 +118,10 @@
 
 ### [PlayReady and Other Protection Technologies](Overview/playready-and-other-protection-technologies.md)
 
+### [How to Migrate from Previous Versions of the PK and Server](Advanced/how-to-migrate.md)
+
+### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Advanced/how-to-test-client-server-versions.md)
+
 ## [Specifications](Specifications/specifications.md)
 
 ### [PlayReady Header Specification](Specifications/playready-header-specification.md)
@@ -119,5 +131,7 @@
 ### [DASH Content Protection using PlayReady](Specifications/mpeg-dash-playready.md)
 
 ## [Additional Information](Overview/additional-information.md)
+
+## [Support Options](support-options.md)
 
 ## [Glossary and Abbreviations](Overview/glossary-and-abbreviations.md)
