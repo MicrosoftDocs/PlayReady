@@ -111,6 +111,27 @@ Note that HDCP Type 1 is supported starting with HDCP version 2.1, so engaging H
 ### Other Policies 
 PlayReady supports dozens if not hundreds of different policies beyond the ones described on this page. Please read the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) for the complete definition of the supported policies.
 
+The following table contains a complete map of the Output Protections defined in the Compliance Rules and the corresponding test server policies. 
+
+| Policy | CR Section|
+|:--- |:--- |
+| Output Control for Compressed Digital Audio Content | [CRs section 3.6.2](http://www.microsoft.com/playReady/licensing/compliance) |
+| Explicit Digital Audio Output Restriction | [CRs section 3.6.2.8](http://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Uncompressed Digital Audio Content | [CRs section 3.6.3](http://www.microsoft.com/playReady/licensing/compliance) |
+| Explicit Digital Audio Output Restriction | [CRs section 3.6.3.8](http://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Compressed Digital Video Content | [CRs section 3.6.4](http://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Uncompressed Digital Video Content | [CRs section 3.6.5](http://www.microsoft.com/playReady/licensing/compliance) |
+| Maximum Decode Resolution | [CRs section 3.6.5.7.1](http://www.microsoft.com/playReady/licensing/compliance) |
+| HDCP Type Restriction | [CRs section 3.6.5.7.2](http://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Analog Television Outputs | [CRs section 3.6.6](http://www.microsoft.com/playReady/licensing/compliance) |
+| Extended Output Controls for Analog Television Outputs CGMS-A | [CRs section 3.6.7.1](http://www.microsoft.com/playReady/licensing/compliance) |
+| Extended Output Controls for Analog Television Outputs AGCCS | [CRs section 3.6.7.2](http://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Analog Computer Monitor Output | [CRs section 3.6.8](http://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Analog Component Video Output | [CRs section 3.6.9](http://www.microsoft.com/playReady/licensing/compliance) |
+| Digital Video Only Content | [CRs section 3.6.11](http://www.microsoft.com/playReady/licensing/compliance) |
+| Passing to Unknown Output | [CRs section 3.9.1](http://www.microsoft.com/playReady/licensing/compliance) |
+| Passing constrained resolution to Unknown Output | [CRs section 3.9.2](http://www.microsoft.com/playReady/licensing/compliance) |  
+
 
 ## XMR Specification 
 
