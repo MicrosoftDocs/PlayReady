@@ -84,7 +84,7 @@
 
 ### [PlayReady Secure Stop Server](Overview/secure-stop-server.md)
 
-### [PlayReady Secure Delete](Overview/secure-delete-server.md)
+### [PlayReady Secure Delete Server](Overview/secure-delete-server.md)
 
 ## [PlayReady Clients](Overview/clients.md)
 
@@ -96,15 +96,17 @@
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
-## [PlayReady Communication Protocols](Overview/communication-protocols.md)
+## [PlayReady Features](Overview/playready-features.md)
 
-### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
+### [PlayReady Secure Delete](Overview/secure-delete-pk.md)
 
-### [OEM/App Vendor Services for PlayReady Clients](Overview/Client-playready-services.md)
+### [PlayReady Secure Stop](Overview/secure-stop-pk.md)
 
-## [PlayReady Advanced Topics](Overview/advanced-topics.md)
+### [Concurrency Limiting](Overview/concurrency-limiting.md)
 
 ### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
+
+## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
 ### [License Chaining](Overview/license-chaining.md)
 
@@ -115,6 +117,8 @@
 ### [Licenses Restricted by Binding Policy](Overview/licenses-restricted-by-binding-policy.md)
 
 ### [Licenses Restricted by Extensible Policy](Overview/licenses-restricted-by-extensible-policy.md)
+
+### [PlayReady Communication Protocols](Overview/communication-protocols.md)
 
 ### [PlayReady and Other Protection Technologies](Overview/playready-and-other-protection-technologies.md)
 
