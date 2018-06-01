@@ -55,66 +55,7 @@ Content encryption keys in PlayReady systems are AES-128 CTR and AES-128 CBC key
 There are two ways to generate a KID and key, including:
 
    *  Using a *Key Management System* (KMS), where the service randomly generates each KID and key value and stores them, and can simply look up the key value that corresponds to the KID provided by the client. <br/>
-   *  Using the *PlayReady key seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value), and for each piece of content that requires a key, generates a random KID. Using the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady function, listed in the [PlayReady Header Specification](../Specifications/playready-header-specification.md)
-, section 7. For convenience, here is the algorithm: <br/>
-      ```cs
-      byte[] GeneratePlayReadyContentKey(byte[] keySeed, Guid keyId)
-      {
-        const int DRM_AES_KEYSIZE_128 = 16;
-        byte[] contentKey = new byte[DRM_AES_KEYSIZE_128];
-
-        //
-        // Truncate the key seed to 30 bytes, key seed must be at least 30 bytes long.
-        //
-        byte[] truncatedKeySeed = new byte[30];
-        Array.Copy(keySeed, truncatedKeySeed, truncatedKeySeed.Length);
-
-        //
-        // Get the keyId as a byte array
-        //
-        byte[] keyIdAsBytes = keyId.ToByteArray();
-
-        //
-        // Create sha_A_Output buffer. It is the SHA of the truncatedKeySeed and the keyIdAsBytes
-        //
-        SHA256Managed sha_A = new SHA256Managed();
-        sha_A.TransformBlock(truncatedKeySeed, 0, truncatedKeySeed.Length, truncatedKeySeed, 0);
-        sha_A.TransformFinalBlock(keyIdAsBytes, 0, keyIdAsBytes.Length);
-        byte[] sha_A_Output = sha_A.Hash;
-
-        //
-        // Create sha_B_Output buffer. It is the SHA of the truncatedKeySeed, the keyIdAsBytes, and
-        // the truncatedKeySeed again.
-        //
-        SHA256Managed sha_B = new SHA256Managed();
-        sha_B.TransformBlock(truncatedKeySeed, 0, truncatedKeySeed.Length, truncatedKeySeed, 0);
-        sha_B.TransformBlock(keyIdAsBytes, 0, keyIdAsBytes.Length, keyIdAsBytes, 0);
-        sha_B.TransformFinalBlock(truncatedKeySeed, 0, truncatedKeySeed.Length);
-        byte[] sha_B_Output = sha_B.Hash;
-
-        //
-        // Create sha_C_Output buffer. It is the SHA of the truncatedKeySeed, the keyIdAsBytes,
-        // the truncatedKeySeed again, and the keyIdAsBytes again.
-        //
-        SHA256Managed sha_C = new SHA256Managed();
-        sha_C.TransformBlock(truncatedKeySeed, 0, truncatedKeySeed.Length, truncatedKeySeed, 0);
-        sha_C.TransformBlock(keyIdAsBytes, 0, keyIdAsBytes.Length, keyIdAsBytes, 0);
-        sha_C.TransformBlock(truncatedKeySeed, 0, truncatedKeySeed.Length, truncatedKeySeed, 0);
-        sha_C.TransformFinalBlock(keyIdAsBytes, 0, keyIdAsBytes.Length);
-        byte[] sha_C_Output = sha_C.Hash;
-
-        for (int i = 0; i < DRM_AES_KEYSIZE_128; i++)
-        {
-          contentKey[i] = Convert.ToByte(sha_A_Output[i] ^ sha_A_Output[i + DRM_AES_KEYSIZE_128]
-                                        ^ sha_B_Output[i] ^ sha_B_Output[i + DRM_AES_KEYSIZE_128]
-                                        ^ sha_C_Output[i] ^ sha_C_Output[i + DRM_AES_KEYSIZE_128]);
-        }
-
-        return contentKey;
-      }
-      ```
-
-
+   *  Using the *PlayReady Key Seed* mechanism. With this mechanism, the service determines a constant value called the key seed (a 30-byte random value), and for each piece of content that requires a key, generates a random KID. Using the Server SDK, you can generate a key by providing the 128 bits of the key, or the key seed and KID. The key will be inferred by a PlayReady algorithm specified [here](../Specifications/playready-key-seed.md).
 
 
 No matter how you generate the key, you must be able to verify that it corresponds to the correct KID and then encrypt the content.

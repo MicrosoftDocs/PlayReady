@@ -15,7 +15,7 @@ ms.technology: drm
 # Content Packaging and Delivery
 
 
-The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks. To do this, your content must first be encrypted, and an associated PlayReady Header be inserted in the content. The system that does this operation is the encryptor, also known as the packager, which is sometimes integrated with the encoder. 
+The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks. To do this, your content must first be encrypted, and an associated PlayReady Header be inserted in the content. The system that does this operation is the packager, also known as the encryptor, which is sometimes integrated with the encoder. 
 
 This topic describes various ways to encrypt and deliver your content using PlayReady.
 
@@ -33,6 +33,14 @@ Any packager that packages clear content needs to implement a PlayReady Header g
   *  Use the PlayReady Device Porting Kit API that generates a PlayReady Header. 
 
 Your encrypted content can contain multiple DRM headers, including PlayReady Headers along with third-party DRM headers. For more information on how this works, see [Using encryption tools](#encryptiontools).
+
+### Content Type
+PlayReady can be used to protect audio and video content. Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264), or High Efficiency Video Coding (HEVC) H.265 standards, the AV1 standard, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
+
+PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
+
+These non audio/video content types are no longer supported in PlayReady 3.0 and later. 
+
 
 ## Encryption tools
 
@@ -106,21 +114,6 @@ The PlayReady scalable key rotation feature is extremely scalable because it doe
 
 ![Content Assets and Encryption Keys (V)](../images/assets_and_encryption_keys_5.png)
 
-
-## Protected audio and video content
-
-
-It is up to the content provider to ensure that their audio and video content has been protected using third party packagers and encoders, and that the encrypted content has been packaged using the appropriate PlayReady Objects. Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264) or High Efficiency Video Coding (HEVC) H.265 standards, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
-
-
-
-
-## Protected non-audio/video content
-
-
-PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
-
-These non audio/video content types are no longer supported in PlayReady 3.0 and later. 
 
 ## See also
 

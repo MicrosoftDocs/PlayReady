@@ -128,6 +128,8 @@
 
 ### [PlayReady Header Specification](Specifications/playready-header-specification.md)
 
+### [PlayReady Key Seed](Specifications/playready-key-seed.md)
+
 ### [PlayReady Plugin for Android Specification](Specifications/playready-plugin-for-android-specification.md)
 
 ### [DASH Content Protection using PlayReady](Specifications/mpeg-dash-playready.md)

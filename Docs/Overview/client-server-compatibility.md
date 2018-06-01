@@ -263,11 +263,11 @@ The versioned services are listed in the table below.
 
 | **SDK Version**  | **License Service URL**  | 
 |:--|:--|
-| **SDK 1.52**  | [http://playready.directtaps.net/svc/pr152/rightsmanager.asmx](http://playready.directtaps.net/svc/pr152/rightsmanager.asmx) [ ](http://playready.directtaps.net/svc/pr152/rightsmanager.asmx)  | 
-| **SDK 2.0**  | [http://playready.directtaps.net/svc/pr20/rightsmanager.asmx](http://playready.directtaps.net/svc/pr20/rightsmanager.asmx) [ ](http://playready.directtaps.net/svc/pr20/rightsmanager.asmx)  | 
-| **SDK 2.1**  | [http://playready.directtaps.net/svc/pr21/rightsmanager.asmx](http://playready.directtaps.net/svc/pr21/rightsmanager.asmx) [ ](http://playready.directtaps.net/svc/pr21/rightsmanager.asmx)  | 
-| **SDK 2.9**  | [http://playready.directtaps.net/svc/pr29/rightsmanager.asmx](http://playready.directtaps.net/svc/pr29/rightsmanager.asmx) [ ](http://playready.directtaps.net/svc/pr29/rightsmanager.asmx)  | 
-| **SDK 3.0**  | [http://playready.directtaps.net/svc/pr30/rightsmanager.asmx](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx) [ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx)  | 
+| **SDK 1.52**  | [http://test.playready.microsoft.com/directtaps/svc/pr152/rightsmanager.asmx](http://test.playready.microsoft.com/directtaps/svc/pr152/rightsmanager.asmx) [ ](http://test.playready.microsoft.com/directtaps/svc/pr152/rightsmanager.asmx)  | 
+| **SDK 2.0**  | [http://test.playready.microsoft.com/directtaps/svc/pr20/rightsmanager.asmx](http://test.playready.microsoft.com/directtaps/svc/pr20/rightsmanager.asmx) [ ](http://test.playready.microsoft.com/directtaps/svc/pr20/rightsmanager.asmx)  | 
+| **SDK 2.1**  | [http://test.playready.microsoft.com/directtaps/svc/pr21/rightsmanager.asmx](http://test.playready.microsoft.com/directtaps/svc/pr21/rightsmanager.asmx) [ ](http://test.playready.microsoft.com/directtaps/svc/pr21/rightsmanager.asmx)  | 
+| **SDK 2.9**  | [http://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx](http://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx) [ ](http://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx)  | 
+| **SDK 3.0**  | [http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx) [ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx)  | 
  
 
 These versioned services can utilize the parameters listed on the PlayReady test site for testing specific policies:[ ](http://playready.azurewebsites.net/Home/TestService) [http://playready.azurewebsites.net/Home/TestService](http://playready.azurewebsites.net/Home/TestService) [ ](http://playready.azurewebsites.net/Home/TestService) 
@@ -287,7 +287,7 @@ Test Steps:
 
 1. Test a license request from the client using the following URL: {versioned *license service* URL}?UseSimpleNonPersistentLicense=1 
 
-ex:[ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) 
+ex:[ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) 
 
 1. Validate a license is returned and that playback is successful. 
 
@@ -304,7 +304,7 @@ Test Steps:
 
 {versioned license service URL}?PlayRight=1&FirstPlayExpiration=60 
 
-This parameter will direct the license service to return a license that expires 60 seconds after its first played. ex:[ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60) [http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60) [ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60) 
+This parameter will direct the license service to return a license that expires 60 seconds after its first played. ex:[ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60) [http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60) [ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60) 
 
 1. Validate that a license is returned and that playback is successful. Add or change the time based policy parameters as listed on the test site to test other persistent scenarios.  
 
@@ -319,7 +319,7 @@ Test Steps:
 
 Base64: **uPeXHrR3K0icGCpYMBGsZw==**  
 
-1. Test the client using the following URL to request a license: {versioned license service URL} **without any parameters** ex:[ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [http://playready.directtaps.net/svc/pr30/rightsmanager.asmx](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [ ](http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) 
+1. Test the client using the following URL to request a license: {versioned license service URL} **without any parameters** ex:[ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) [ ](http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?UseSimpleNonPersistentLicense=1) 
 
 1. Validate that a license is returned and that playback is successful. In this scenario a single response from the service should contain two licenses. One of them will be a root license and the other a leaf license. The licenses should expire 5 minutes after being issued to the client. 
 
@@ -338,7 +338,7 @@ The test client will using the following URL for joining the domain and acquirin
 
 {versioned license service url}?AccountID=A/uHOj7F+UaM+Jlny2obFA== 
 
-ex:[ ](http://playready.directtaps.nehttp/playready.directtaps.net/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==) [http://playready.directtaps.net/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==](http://playready.directtaps.nehttp/playready.directtaps.net/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==) [ ](http://playready.directtaps.nehttp/playready.directtaps.net/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==) 
+ex:[ ](http://playready.directtaps.nehttp/test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==) [http://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==](http://playready.directtaps.nehttp/test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==) [ ](http://playready.directtaps.nehttp/test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx?AccountID=A/uHOj7F+UaM+Jlny2obFA==) 
 
 1. Have the test client generate and send a JoinDomain challenge and validate that there is a domain certificate is in the service response.  
 

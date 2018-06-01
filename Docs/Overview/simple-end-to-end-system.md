@@ -50,7 +50,7 @@ The following figure contains one asset - an audio/video file - that has not bee
 
    2. The key and KeyID are designed at encryption time, and are stored in a key management system, which is typically some kind of database. PlayReady does not provide the key management system, so it is up to the service or partner that builds the service with the broadcaster to supply the key management system.
 
-   3. In addition to storing the key and KeyID in the key management system, you will also need to fit the KeyID to an encryptor, which then generates a header. This header is formatted by the service or partner according to the [PlayReady Header Specification](../Specifications/playready-header-specification.md), and then fitted in the clear in the content file header.
+   3. In addition to storing the key and KeyID in the key management system, you will also need to fit the KeyID to a packager, which then generates a header. This header is formatted by the service or partner according to the [PlayReady Header Specification](../Specifications/playready-header-specification.md), and then fitted in the clear in the content file header.
 
       At this point, the audio and video will be encrypted using the KeyID, and you will have an encrypted content file that is ready to be delivered to a client.
 
