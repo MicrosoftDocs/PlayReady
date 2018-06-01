@@ -42,7 +42,7 @@ A typical example would be:
 
 
 
-Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](trusted-clocks.md).
+Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](../Features/trusted-clocks.md).
 
 
 The following figure indicates the interactions between clients and Servers in the rental content scenario.

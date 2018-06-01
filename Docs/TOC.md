@@ -96,15 +96,15 @@
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
-## [PlayReady Features](Overview/playready-features.md)
+## [PlayReady Features](Features/playready-features.md)
 
-### [PlayReady Secure Delete](Overview/secure-delete-pk.md)
+### [PlayReady Secure Delete](Features/secure-delete-pk.md)
 
-### [PlayReady Secure Stop](Overview/secure-stop-pk.md)
+### [PlayReady Secure Stop](Features/secure-stop-pk.md)
 
-### [Concurrency Limiting](Overview/concurrency-limiting.md)
+### [Concurrency Limiting](Features/concurrency-limiting.md)
 
-### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
+### [PlayReady Trusted Clocks](Features/trusted-clocks.md)
 
 ## [PlayReady Advanced Topics](Overview/advanced-topics.md)
 
