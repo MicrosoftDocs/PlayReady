@@ -21,4 +21,4 @@ A Secure Stop event is reported to a Secure Stop Server by the client when media
 
 ## See also
 
-[PlayReady Secure Stop](secure-stop-pk.md)
+[PlayReady Secure Stop](../Features/secure-stop-pk.md)

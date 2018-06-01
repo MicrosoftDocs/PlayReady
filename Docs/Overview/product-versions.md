@@ -31,7 +31,7 @@ The following table shows the feature availability for each version of the PlayR
 >|Nov'13|**2.9** | - LicenseTemplateHandlerChaining sample<br/>- Support for iOS and Android| 2.9.1995| &mdash;| &mdash; | &mdash; |
 >|May'14|**2.11** | - MPEG-DASH<br/>- Updated PlayReady-ND test transmitter<br/>- Updates to PlayReady Client SDK for iOS<br/>- Updates to PlayReady Client SDK for Android| &mdash; | 2.11.2155| &mdash; | &mdash; |
 >|Mar'15|**3.0** | - SL3000<br/>- Multiple Keys<br/>- [Secure Stop](secure-stop-Server.md)<br/>- Improvements for non-persistent licenses|3.0|  3.0.4019 | 3.0.2726 | &mdash; |
->|Sep'16|**3.2** | [Secure Time](trusted-clocks.md) (Secure Clock Service in the TEE)|&mdash;|3.2.4242| 3.2.4242 | Deprecated |
+>|Sep'16|**3.2** | [Secure Time](../Features/trusted-clocks.md) (Secure Clock Service in the TEE)|&mdash;|3.2.4242| 3.2.4242 | Deprecated |
 >|Apr'17|**3.3** | - New CDMi module<br/>- Fix for vulnerabilities in the PK header parser |&mdash;|3.3.4474| 3.3.4475 | &mdash;|
 >|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, including CBC1, CBCS, and CENS.<br/>- [Secure Delete](secure-delete-Server.md) support | 4.0.5117 | 4.0.5102 | 4.0| No longer distributed (see [PlayReady on Windows](playready-on-windows.md))|
 

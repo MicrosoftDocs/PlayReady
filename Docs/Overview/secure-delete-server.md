@@ -24,4 +24,4 @@ Introduced in PlayReady version 4.0, *PlayReady Secure Delete* is a feature that
 
 ## See also
 
-[PlayReady Secure Delete](secure-delete-pk.md)
+[PlayReady Secure Delete](../Features/secure-delete-pk.md)
