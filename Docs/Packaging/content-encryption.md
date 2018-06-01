@@ -17,7 +17,7 @@ ms.technology: drm
 This topic provides an overview of the encryption algorithms used to protect content in the PlayReady ecosystem.
 
 > [!NOTE]
-> See [Glossary](glossary-and-abbreviations.md) for encryption terms and definitions.
+> See [Glossary](../Overview/glossary-and-abbreviations.md) for encryption terms and definitions.
 
 ## Encryption basics
 

@@ -14,7 +14,7 @@ ms.technology: playreadydpk
 # PlayReady Content Encryption Modes
 
 
-This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption](content-encryption.md). See [Glossary](glossary-and-abbreviations.md) for encryption terms and definitions.
+This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption](content-encryption.md). See [Glossary](../Overview/glossary-and-abbreviations.md) for encryption terms and definitions.
 
 PlayReady version 1.0 introduced AES-128 CTR content encryption mode, in addition to the Microsoft-specific COCKTAIL encryption mode previously used in WMDRM (Windows Media Digital Rights Management). *AES-128 CTR* content encryption mode uses AES keys, with a length of 128 bits used on the content files in Counter Mode (CTR).
 
@@ -55,7 +55,7 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 ## Signaling the ALGID in the PlayReady Header
 
-The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. For more information, see [PlayReady Header Specification](playready-header-specification.md).
+The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. For more information, see [PlayReady Header Specification](../Specifications/playready-header-specification.md).
 
 &nbsp;
 
