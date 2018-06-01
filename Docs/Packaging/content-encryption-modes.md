@@ -14,7 +14,7 @@ ms.technology: playreadydpk
 # PlayReady Content Encryption Modes
 
 
-This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption Overview](content-encryption-overview.md). See [Glossary](glossary-and-abbreviations.md) for encryption terms and definitions.
+This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption](content-encryption.md). See [Glossary](glossary-and-abbreviations.md) for encryption terms and definitions.
 
 PlayReady version 1.0 introduced AES-128 CTR content encryption mode, in addition to the Microsoft-specific COCKTAIL encryption mode previously used in WMDRM (Windows Media Digital Rights Management). *AES-128 CTR* content encryption mode uses AES keys, with a length of 128 bits used on the content files in Counter Mode (CTR).
 
@@ -22,7 +22,7 @@ Starting with version 4.0, PlayReady systems support AES 128 bit keys in both Co
 
 This change ensures that services using PlayReady can fully take advantage of a unique stream and file format across all devices. In addition, Microsoft supports the CMAF (Common Media Application Format) standard, as defined in [ISO/IEC FDIS 23000-19](https://www.iso.org/standard/71975.html).
 
-## Common encryption modes
+## Common Encryption modes
 
 The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
@@ -43,7 +43,7 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 |PlayReady Client 2.5|supported|supported| not supported |
 |PlayReady Client 3.0| not supported |supported| not supported |
 |PlayReady Client 3.3| not supported |supported| not supported |
-|PlayReady Client 4.0| not supported |supported|supported, optional|
+|PlayReady Client 4.0| not supported |supported|supported |
 
 &nbsp;
 

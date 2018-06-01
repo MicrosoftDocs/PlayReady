@@ -22,7 +22,7 @@ The PlayReady Header contains information about the content being played back, i
 >[!NOTE]
 >Microsoft does not provide a Key Management System with PlayReady.
 
-Here is an example of a PlayReady Header, which may be inserted in the header of a fragmented MP4 file, typically for On-Demand content:
+Here is an example of a PlayReady Header, which may be inserted in the header of a fragmented MP4 file, typically for On-Demand content. It includes the list of KIDs (the IDs of the content encryption keys) that are needed for a client to decrypt the content. It is the most common way to signal these KIDs for an On-Demand file or stream. 
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
@@ -39,17 +39,21 @@ Here is an example of a PlayReady Header, which may be inserted in the header of
 </WRMHEADER>
 ```
 
-Here is an example of a PlayReady Header, for Live Linear content:
+Here is an example of a PlayReady Header, for Live Linear content. It does not include any KID because, in this example, the content encryption keys (and their associated KIDs) will change sometimes (either frequently, or at program boundary, or every hour, or every day, etc.). The KIDs needed for the content stream will be signalled in the fragment headers, and it is not necessary to include any of them in the stream top level PlayReady Header. The property DECRYPTORSETUP is set to ONDEMAND, which means the PlayReady Header and Decryptor will be set on demand, meaning when the client will actually need to start decrypting a fragment - and at this point, the client will have access to another PlayReady Header in the fragment header to figure out what KID is involved. Note: it does not mean ONDEMAND for On-Demand content, it is actually the opposite.
 
 ```xml
-To do
-<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER version="4.2.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+  <DATA>
+   <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
+  </DATA>
 </WRMHEADER>
 ```
 
 There are multiple ways to create a PlayReady Header generator in your packager. The following sections describe, in general, how you can generate a PlayReady Header. 
 
 ## Method 1 - Build your own code based on the PlayReady Header Specification
+
+The [PlayReady Object Specification](../Specifications/playready-header-specification.md) and [PlayReady Header Specification](../Specifications/playready-header-specification.md) are completely public so it is possible, and quite simple, to write code that generates a PlayReady Object and a PlayReady Header.
 
 Before you can create the PlayReady Header: 
 

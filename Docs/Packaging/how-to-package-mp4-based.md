@@ -1,9 +1,9 @@
 ---
 author: rolandlefranc
-title: How to encrypt content for PlayReady
+title: How to package mp4 based content for PlayReady
 description: This page describes how to encrypt or package audio video content to prepare for consumption by a PlayReady client
 ms.assetid: "7DF4D94C-1962-49B9-A369-0803EB886235"
-keywords: PlayReady Encryption, PlayReady Packaging, Programming Guide
+keywords: Packaging, PlayReady Packaging, PlayReady Encryption, mp4, mpeg 4, Programming Guide
 ms.author: rolefran
 ms.date: 04/01/2018
 ms.topic: conceptual
@@ -19,7 +19,7 @@ The packager needs to encrypt the content. Any encryption format that uses AES-1
 
 To ensure support on Windows and other Microsoft endpoints, Microsoft recommends using Common Encryption: CENC or CBCS. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
 
-For more information, see [Content Encryption and Delivery](content-encryption-and-delivery.md)
+For more information, see [Content Encryption and Delivery](content-packaging-and-delivery.md)
 
 ## Inserting a PlayReady Header into the content
 

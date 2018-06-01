@@ -1,6 +1,6 @@
 ---
 author: rolandlefranc
-title: Content Encryption and Delivery
+title: Content Packaging and Delivery
 description: The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks.
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
 keywords: playready content encryption, encryption and delivery
@@ -12,14 +12,14 @@ ms.technology: drm
 ---
 
 
-# Content Encryption and Delivery
+# Content Packaging and Delivery
 
 
-The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks. To do this, your content must first be encrypted, and an associated PlayReady Header be inserted in the content. The system that does this operation is the encryptor, also known as the packager, which is sometimes integrated with the encoder. You can either design this system yourself, or you could contract with a [PlayReady Partner](https://www.microsoft.com/playready/partners/) to supply this functionality for you. 
+The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks. To do this, your content must first be encrypted, and an associated PlayReady Header be inserted in the content. The system that does this operation is the encryptor, also known as the packager, which is sometimes integrated with the encoder. 
 
 This topic describes various ways to encrypt and deliver your content using PlayReady.
 
-## Packaging PlayReady content&mdash;Encrypting and inserting the DRM header 
+## Packaging PlayReady content &mdash; Encrypting and inserting the DRM header 
 
 The process of encrypting clear content consists of defining one or several encryption keys, using these keys to encrypt the bytes that constitute the content itself, and inserting a DRM header in the content (in the files of the content, or in the manifest if the content has one).
 
@@ -105,6 +105,22 @@ Let's say this asset is live linear TV. When the client attempts playback, it fi
 The PlayReady scalable key rotation feature is extremely scalable because it does not require the clients to hit the License Server every time the encryption keys are changed. It keeps the volume of license requests to the lowest possible, as a client only needs one root license from the License Server per stream, or track. It allows encryption keys to rotate as frequently as every fragment, typically every 2 seconds if necessary. 
 
 ![Content Assets and Encryption Keys (V)](../images/assets_and_encryption_keys_5.png)
+
+
+## Protected audio and video content
+
+
+It is up to the content provider to ensure that their audio and video content has been protected using third party packagers and encoders, and that the encrypted content has been packaged using the appropriate PlayReady Objects. Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264) or High Efficiency Video Coding (HEVC) H.265 standards, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
+
+
+
+
+## Protected non-audio/video content
+
+
+PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
+
+These non audio/video content types are no longer supported in PlayReady 3.0 and later. 
 
 ## See also
 
