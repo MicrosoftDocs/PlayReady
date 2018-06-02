@@ -27,6 +27,11 @@ Companies developing a standalone packager (or a packaging function in an encode
 >[!IMPORTANT]
 >Developing or operating a PlayReady packager can be done without signing any PlayReady licensing agreement with Microsoft, and without paying any fee or royalty to Microsoft for the PlayReady technology.
 
+The following video provide an overall look at packaging PlayReady protected content.
+
+[![Packaging PlayReady Content Part 1](../images/packaging_1.jpg)](https://trainpr.streaming.mediaservices.windows.net/1d6fe34f-22bc-48bf-9d19-8b8a389dd97b/Packaging%20PlayReady%20Content%20Part.ism/manifest(format=mpd-time-csf))
+
+
 ## In this section
 
 [Content Packaging and Delivery](content-packaging-and-delivery.md)
