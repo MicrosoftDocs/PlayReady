@@ -119,7 +119,7 @@ A single license response can also carry multiple licenses and thus multiple key
 
 ## See also
 
- [PlayReady Header Specification](http://www.microsoft.com/playready/documents/)
+ [PlayReady Header Specification](../Specifications/playready-header-specification.md)
 
- [Packaging Content](packaging-content.md)
+ [Packaging Content](../Packaging/packaging-content.md)
 

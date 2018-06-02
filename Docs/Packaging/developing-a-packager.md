@@ -19,16 +19,16 @@ There are several considerations you should examine before you begin incorporati
 * There are no fees to Microsoft associated with inserting PlayReady in your content.
 * There are no royalty payments to Microsoft applicable to PlayReady encoders or packagers.
 
-Therefore, you do not need to allocate any time or budget for these tasks.
+Therefore, you do not need to allocate any time or budget for these items.
 
 >[!NOTE]
 >Some [Microsoft PlayReady Partners](https://www.microsoft.com/playready/partners/) can develop a PlayReady packager for your company if you're not willing to develop it yourself.
 
-## Development time
+## Development Overview
 
 The development time for incorporating the PlayReady functionality in your packager will depend on the development and testing of the following components:
 
-* Key Generator &mdash; generates the key value used to encrypt the content (along with its associated KeyID). If you use the KeySeed mechanism, this generator needs to implement the function defined [here](../Specifications/playready-header-specification?branch=master#7-content-key-seed-algorithm)
+* Key Generator &mdash; generates the key value used to encrypt the content (along with its associated KeyID). If you use the KeySeed mechanism, this generator needs to implement the function defined [here](../Specifications/playready-key-seed.md)
 
 * PlayReady Header Generator &mdash; generates the PlayReady Object (including the PlayReady Header and/or an Embedded License Store). This PlayReady Header includes the KeyID or the list of KIDs, the default URL of the PlayReady license server, and any custom value you require for your protected content. This function must follow the requirements outlined in the [PlayReady Header Specification](../Specifications/playready-header-specification.md).
 
@@ -37,7 +37,7 @@ The development time for incorporating the PlayReady functionality in your packa
 * Key Management System &mdash; stores the key value and its associated KeyId (not required if using the KeySeed mechanism).
 
 
-# Developing a PlayReady Packager
+## Developing a PlayReady Packager
 
 If you have decided to develop your own PlayReady Packager, you will need to decide how you want the packager to work, based on how you want your content stored and delivered. The following list provides the necessary steps required to add PlayReady functionality to your packager.
 
@@ -51,7 +51,7 @@ If you have decided to develop your own PlayReady Packager, you will need to dec
 
 4. Choose how you are going to generate and store content keys (Key Value and Key ID). 
 
-   Your packager should include some kind of key generator that creates the Key Value used to encrypt and decrypt your content. In addition, the key generator should associate a Key ID to the Key Value. The Key Value remains a secret, and the Key ID is public and is inserted in the PlayReady header in your content.
+   Your packager should include some kind of key generator that creates the Key Value used to encrypt and decrypt your content. The key generator should associate a Key ID to the Key Value. The Key Value remains a secret, and the Key ID is public and is inserted in the PlayReady header in your content. If the packager does not include a key generator, you need to develop or source one separately.
 
    You will either need to develop a key management system to store multiple Key Values and their associated Key IDs, or license one from a third party. The key management system could be a database or any other type of storage system, but must be secure to prevent anyone from accessing the key values without authorization. Microsoft does not supply a key management system with PlayReady. Alternatively, you can use the KeySeed mechanism supplied with PlayReady in place of the key management system (the KeySeed mechanism must be incorporated in your packager and in the PlayReady Server that supplies the licences for decrypting the content).
 
@@ -59,7 +59,9 @@ If you have decided to develop your own PlayReady Packager, you will need to dec
 
 6. Choose how you are going to provide the key values and key IDs to a PlayReady Server, which will then distribute the key values to PlayReady clients. 
 
-    You can create your own PlayReady Server (requires a license from PlayReady&mdash;however no fees or royalties are collected by Microsoft for your development or use of a PlayReady Server), or you can use a PlayReady Server provided or operated by a third party. Whether you develop your own PlayReady Server or the PlayReady Server is provided or operated by a third party, you must be able to communicate the key values and the key IDs to the server in a timely manner for the client to be able to play back your content efficiently. In addition, you will need to include the URL of the PlayReady Server that manages the licenses for your content in the PlayReady Header that's inserted in your content at packaging time.
+    You can develop your own PlayReady License Server (requires a license from PlayReady &mdash; however no fees or royalties are collected by Microsoft for your development or use of a PlayReady Server), or you can use a PlayReady Server provided or operated by a third party. Whether you develop your own PlayReady Server or the PlayReady Server is provided or operated by a third party, you must be able to communicate the key values and the key IDs to the server in a timely manner for the client to be able to play back your content efficiently.
+    
+7. Choose how the clients are going to contact the PlayReady License Server to acquire the content encryption keys. The client apps must be aware of the PlayReady License Server URL (also known as License Acquisition URL, or LA URL) when they need to acquire a license. The client apps could be programmed to have that LA URL value hardcoded, or retrieve it dynamically from the server. If the client app doesn't have this LA URL value, it will use the LA URL value found in the content's PlayReady Header, which is the default LA URL. Although it is not required, it is very common for services to include a default LA URL value in the content's PLayRedy Header at packaging time.
 
 ## See also
 [PlayReady Test Server Content](http://test.playready.microsoft.com/)

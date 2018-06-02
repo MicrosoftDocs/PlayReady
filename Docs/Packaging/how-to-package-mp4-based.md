@@ -88,11 +88,11 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 - mp4 based asset
 - DASH manifest
 - Fixed Key along the asset
-- Single Key for all tracks
-- PlayReady Header in the manifest at the AdaptationSet level
+- Single Key for all tracks and representations
+- PlayReady Header in the manifest at the AdaptationSet level, or in the DASH init segment
 
 #### Supported
-- Supported on Windows since version xyz
+- Supported on Windows 10 Fall Creators Update (released October 2017) and above
 
 #### Asset Manifest
 ```xml
@@ -125,7 +125,96 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [Smooth 1 Key](#tab/case2)
+# [DASH Multiple Keys](#tab/case2)
+
+
+- mp4 based asset
+- DASH manifest
+- Fixed Key along the asset
+- Different Keys for the different tracks and representations. For example, use a different key for all the video tracks above 1080p, to restrict access to the 4K resolution to some clients.
+- PlayReady Header in the manifest at the AdaptationSet level, or in the DASH init segment. The single PlayReady Header contains a list of all the KIDs used for all the tracks and representations of the stream.
+
+#### Supported
+- Supported on Windows 10 Fall Creators Update (released October 2017) and above
+
+#### Asset Manifest
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD ...>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+      <mspr:pro>...</mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
+        <SegmentList duration="4000" timescale="1000">
+          <Initialization sourceURL="video/avc1/init.mp4"/>
+          <SegmentURL media="video/avc1/seg-1.mp4"/>
+```
+#### Asset Files
+```
+[init segment] separate file for a dash stream. Includes only the moov box
+  [moov] 
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for other DRM
+
+[any segment]
+  [moof] movie fragment header
+    [traf] track fragment
+      [senc] sample encryption box. Includes Sample Initialization Vectors
+  [mdat] movie fragment data
+```
+
+#### Test Vectors
+See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+
+# [DASH Multi Period Keys](#tab/case3)
+
+# [DASH Rotating Keys](#tab/case4)
+
+# [HLS 1 Key](#tab/case5)
+
+- mp4 based asset
+- HLS playlist
+- Fixed Key along the asset
+- Single Key for all tracks
+- PlayReady Header in the playlist using a the EXT-X-PLAYREADYHEADER tag
+
+#### Supported
+- Encryption mode SAMPLE-AES, CBC mode, with a key delivered by PlayReady: supported on the Xbox One, One S, One X since the update of January 2018
+- Encryption mode SAMPLE-AES-CTR, CTR mode, with a key delivered by Playready: supported on Windows 10 April 2018 Update (released April 2018) and above
+
+#### Asset Manifest
+```M
+#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-PLAYREADYHEADER:XAMAAAEAAQBSAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4ANABSAHAAbABiACsAVABiAE4ARQBTADgAdABHAGsATgBGAFcAVABFAEgAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBLAEwAagAzAFEAegBRAFAALwBOAEEAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAHIAbwBmAGYAaQBjAGkAYQBsAHMAaQB0AGUALgBrAGUAeQBkAGUAbABpAHYAZQByAHkALgBtAGUAZABpAGEAcwBlAHIAdgBpAGMAZQBzAC4AdwBpAG4AZABvAHcAcwAuAG4AZQB0AC8AUABsAGEAeQBSAGUAYQBkAHkALwA8AC8ATABBAF8AVQBSAEwAPgA8AEMAVQBTAFQATwBNAEEAVABUAFIASQBCAFUAVABFAFMAPgA8AEkASQBTAF8ARABSAE0AXwBWAEUAUgBTAEkATwBOAD4AOAAuADAALgAxADcAMQAzAC4AMQAzADwALwBJAEkAUwBfAEQAUgBNAF8AVgBFAFIAUwBJAE8ATgA+ADwALwBDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="aac_UND_2_128",DEFAULT=YES,URI="QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)"
+#EXT-X-STREAM-INF:BANDWIDTH=1138489,RESOLUTION=640x288,CODECS="avc1.640015,mp4a.40.2",AUDIO="audio"
+QualityLevels(970010)/Manifest(video,format=m3u8-aapl)
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=1138489,RESOLUTION=640x288,CODECS="avc1.640015",URI="QualityLevels(970010)/Manifest(video,format=m3u8-aapl,type=keyframes)"
+#EXT-X-STREAM-INF:BANDWIDTH=2376263,RESOLUTION=960x428,CODECS="avc1.64001e,mp4a.40.2",AUDIO="audio"
+QualityLevels(2181139)/Manifest(video,format=m3u8-aapl)
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=2376263,RESOLUTION=960x428,CODECS="avc1.64001e",URI="QualityLevels(2181139)/Manifest(video,format=m3u8-aapl,type=keyframes)"
+#EXT-X-STREAM-INF:BANDWIDTH=3513624,RESOLUTION=1280x572,CODECS="avc1.64001f,mp4a.40.2",AUDIO="audio"
+QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
+```
+### Asset Files
+```
+[representation] mp4 file for each track*representation
+  [moov] 
+    [pssh] pssh box for PlayReady. Includs a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for other DRM
+  [moof] movie fragment header
+    [traf] track fragment
+      [uuid]
+        [senc] sample encryption box. Includes Sample Initialization Vectors
+  [mdat] movie fragment data
+```
+#### Test Vectors
+See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+
+# [Smooth 1 Key](#tab/case6)
 
 - mp4 based asset
 - Smooth Streaming manifest
@@ -172,54 +261,6 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 ```
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
-
-# [HLS 1 Key](#tab/case3)
-
-- mp4 based asset
-- HLS playlist
-- Fixed Key along the asset
-- Single Key for all tracks
-- PlayReady Header in the playlist using a the EXT-X-PLAYREADYHEADER tag
-
-#### Supported
-- Supported on Windows since version xyz
-
-#### Asset Manifest
-```M
-#EXTM3U
-#EXT-X-VERSION:4
-#EXT-X-PLAYREADYHEADER:XAMAAAEAAQBSAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4ANABSAHAAbABiACsAVABiAE4ARQBTADgAdABHAGsATgBGAFcAVABFAEgAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBLAEwAagAzAFEAegBRAFAALwBOAEEAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAHIAbwBmAGYAaQBjAGkAYQBsAHMAaQB0AGUALgBrAGUAeQBkAGUAbABpAHYAZQByAHkALgBtAGUAZABpAGEAcwBlAHIAdgBpAGMAZQBzAC4AdwBpAG4AZABvAHcAcwAuAG4AZQB0AC8AUABsAGEAeQBSAGUAYQBkAHkALwA8AC8ATABBAF8AVQBSAEwAPgA8AEMAVQBTAFQATwBNAEEAVABUAFIASQBCAFUAVABFAFMAPgA8AEkASQBTAF8ARABSAE0AXwBWAEUAUgBTAEkATwBOAD4AOAAuADAALgAxADcAMQAzAC4AMQAzADwALwBJAEkAUwBfAEQAUgBNAF8AVgBFAFIAUwBJAE8ATgA+ADwALwBDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="aac_UND_2_128",DEFAULT=YES,URI="QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)"
-#EXT-X-STREAM-INF:BANDWIDTH=1138489,RESOLUTION=640x288,CODECS="avc1.640015,mp4a.40.2",AUDIO="audio"
-QualityLevels(970010)/Manifest(video,format=m3u8-aapl)
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=1138489,RESOLUTION=640x288,CODECS="avc1.640015",URI="QualityLevels(970010)/Manifest(video,format=m3u8-aapl,type=keyframes)"
-#EXT-X-STREAM-INF:BANDWIDTH=2376263,RESOLUTION=960x428,CODECS="avc1.64001e,mp4a.40.2",AUDIO="audio"
-QualityLevels(2181139)/Manifest(video,format=m3u8-aapl)
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=2376263,RESOLUTION=960x428,CODECS="avc1.64001e",URI="QualityLevels(2181139)/Manifest(video,format=m3u8-aapl,type=keyframes)"
-#EXT-X-STREAM-INF:BANDWIDTH=3513624,RESOLUTION=1280x572,CODECS="avc1.64001f,mp4a.40.2",AUDIO="audio"
-QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
-```
-### Asset Files
-```
-[representation] mp4 file for each track*representation
-  [moov] 
-    [pssh] pssh box for PlayReady. Includs a PRO including a PRH with KID and LA_URL
-    [pssh] pssh box for other DRM
-  [moof] movie fragment header
-    [traf] track fragment
-      [uuid]
-        [senc] sample encryption box. Includes Sample Initialization Vectors
-  [mdat] movie fragment data
-```
-#### Test Vectors
-See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
-
-# [DASH Multiple Keys](#tab/case5)
-
-# [DASH Multi Period Keys](#tab/case6)
-
-# [DASH Rotating Keys](#tab/case7)
-
 
 
 ## See also
