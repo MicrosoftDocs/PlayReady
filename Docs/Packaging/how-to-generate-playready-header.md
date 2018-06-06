@@ -65,6 +65,59 @@ The PlayReady Header generator needs to have input parameters such as:
 
 You can now create the PlayReady header using standard XML commands (such as XMLWriter, XMLDocument, or XDocument). The following code sample demonstrates how to create a PlayReady Header used for On-Demand content. 
 
+# [CPP](#tab/cpp)
+``` cpp
+// This function gets values from the key management system and your specified encryption mode
+// (and optionally the domainID), creates a PlayReady Header, and adds the header to a 
+// PlayReady Object and stores them in a file in UTF-16 little endian format
+
+void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string domainID)
+{
+	// The string parameters include the following:
+	// KeyID1, KeyID2 - The key identifiers - these values are returned from the key management system or
+	//                                        the KeySeed mechanism
+	// encryptMode - the encryption mode used to encrypt content, can be AESCTR or AESCBC
+	// domainID - the optional domain service identifier (only used for domains)
+
+	string xmlString = "<WRMHEADER xmlns=\"http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader\" version=\"4.3.0.0\"><DATA><PROTECTINFO><KIDS><KID ALGID=\"";
+	xmlString.append(encryptMode);
+	xmlString.append("\" VALUE=\"");
+	xmlString.append(KeyID1);
+	xmlString.append("\"></KID><KID ALGID=\"");
+	xmlString.append(encryptMode);
+	xmlString.append("\" VALUE=\"");
+	xmlString.append(KeyID2);
+	xmlString.append("\"></KID></KIDS></PROTECTINFO><LA_URL>http://rm.contoso.com/rightsmanager.asmx</LA_URL><DS_ID>");
+	xmlString.append(domainID);
+	xmlString.append("</DS_ID></DATA></WRMHEADER>");
+
+	// Convert the PlayReady header to UFT-16 format
+	//
+	wstring_convert<std::codecvt_utf8_utf16<wchar_t>> convert;
+	wstring utf16XML = convert.from_bytes(XMLString);
+
+	// Get the length of the PlayReady Header
+	int32_t headerLength = XMLString.size();
+	// Get the length of the PlayReady Object
+	int objectLength = headerLength + 10;
+	// Get the number of PlayReady object records (in this case, 1)
+	int recordCount = 1;
+	// Get the record type (in this case, a PlayReady Header)
+	// If this was an embedded license store, this value would be 3
+	int recordType = 1;
+
+	// Write the PlayReady Object and PlayReady Header to a file
+	wofstream wofs("C:\\Temp\\PRHeaderObject.txt", ios::binary);
+	wofs.imbue(locale(wofs.getloc(),
+			  new codecvt_utf16<wchar_t, 0x10ffff, little_endian>));
+	wofs.write(reinterpret_cast<const wchar_t *>(&objectLength), 2);
+	wofs.write(reinterpret_cast<const wchar_t *>(&recordCount), 1);
+	wofs.write(reinterpret_cast<const wchar_t *>(&recordType), 1);
+	wofs.write(reinterpret_cast<const wchar_t *>(&headerLength), 1);
+	wofs <<  utf16XML;
+}
+```
+# [C#](#tab/cs)
 ``` cs
 public string buildRMHeader(string KeyID1, string KeyID2, string encryptMode, string domainID)
 {
