@@ -304,10 +304,13 @@ Individual playlist
 
 #### Supported
 
-As for HLS Static Keys, the master playlist and the individual playlists must contain #EXT-X-SESSION_KEY and #EXT-X-KEY tags.
-The indivual playlists contain one #EXT-X-KEY tag each time the encryption key changes.
+As with HLS Static Keys, the master playlist and the individual playlists must contain `#EXT-X-SESSION_KEY` and `#EXT-X-KEY` tags.
+The indivual playlists contain one `#EXT-X-KEY` tag at the top of the playlist. These tags contains PROs that reference the KIDs used for the PlayReady Root Licenses for the asset.
 
-NOTE: this HLS Changing Keys is supported in Windows 10 and the Xbox only for On-Demand content, where it is possible to list in EXT-X-SESSION_KEY tag of the master playlist *all* the KIDs that are used in the entire asset.
+The MP4 segments contain in the fragment header `moof/uuid/pssh` a PlayReady Leaf License embedded in the content, whenever the content key rotates. These PlayReady Leaf Licenses are bound to the PlayReady Root Licenses of the asset.
+
+- 'cbcs' encryption mode: supported on the Xbox One, One S, One X since the update of January 2018
+- 'cenc' encryption mode: supported on Windows 10 and the Xbox One, One S, One X since the update of April 2018 ("April 2018 Update")
 
 #### Sample
 
