@@ -83,7 +83,7 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 
 ## Supported Formats
 
-# [DASH 1 Key](#tab/case1)
+# [DASH Static Keys](#tab/case1)
 
 - mp4 based asset
 - DASH manifest
@@ -94,7 +94,10 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 #### Supported
 - Supported on Windows 10 Fall Creators Update (released October 2017) and above
 
-#### Asset Manifest
+#### Sample
+
+DASH manifest
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <MPD ...>
@@ -108,7 +111,9 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
           <Initialization sourceURL="video/avc1/init.mp4"/>
           <SegmentURL media="video/avc1/seg-1.mp4"/>
 ```
-#### Asset Files
+
+MP4 file structure
+
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
   [moov] 
@@ -125,7 +130,7 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [DASH Multiple Keys](#tab/case2)
+# [DASH Changing Keys](#tab/case2)
 
 
 - mp4 based asset
@@ -168,8 +173,6 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [DASH Multi Period Keys](#tab/case3)
-
 # [DASH Rotating Keys](#tab/case4)
 
 ```xml
@@ -182,19 +185,47 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
   <StreamIndex ...
 ```
 
-# [HLS 1 Key](#tab/case5)
+# [HLS Static Keys](#tab/case5)
 
 - mp4 based asset
-- HLS playlist
+- HLS master playlist (m3u8) and individual playlists (m3u8) for the different tracks and bitrates
 - Fixed Key along the asset
-- Single Key for all tracks
-- PlayReady Header in the playlist using a the EXT-X-PLAYREADYHEADER tag
+- Same key for all tracks and bitrates, or different keys for each track and bitrate
 
 #### Supported
-- Encryption mode SAMPLE-AES, CBC mode, with a key delivered by PlayReady: supported on the Xbox One, One S, One X since the update of January 2018
-- Encryption mode SAMPLE-AES-CTR, CTR mode, with a key delivered by Playready: supported on Windows 10 April 2018 Update (released April 2018) and above
+- 'cbcs' encryption mode, with keys delivered by PlayReady: supported on the Xbox One, One S, One X since the update of January 2018
+  - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the 'EXT-X-KEY:METHOD=SAMPLE-AES' syntax:
+  #EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the 'EXT-X-KEY:METHOD=SAMPLE-AES' syntax:
+  #EXT-X-SESSION_KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
 
-#### Asset Manifest
+- 'cenc' encryption mode, with keys delivered by PlayReady: supported on Windows 10 and the Xbox One, One S, One X since the update of April 2018 ("April 2018 Update")
+  - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the 'EXT-X-KEY:METHOD=SAMPLE-AES-CTR' syntax:
+  #EXT-X-KEY:METHOD=SAMPLE-AES-CTR,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the 'EXT-X-KEY:METHOD=SAMPLE-AES-CTR' syntax:
+  #EXT-X-SESSION_KEY:METHOD=SAMPLE-AES-CTR,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+
+#### Sample
+
+Master playlist
+
+```M
+#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-SESSION_KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+```
+
+Individual playlist
+```M
+#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+```
+
+#### EXT-X-PLAYREADYHEADER syntax
+
+Some developers have used the EXT-X-PLAYREADYHEADER keyword in HLS playlists since 2010 to develop MPEG2-TS based PlayReady systems before MP4 file based HLS became prevalent. This synatx is not supported natively in Windows 10 or the Xbox in any version. It might be possible through to develop player applications that do the playlist parsing by themselves and can play these assets in a Windows or Xbox app.
+
 ```M
 #EXTM3U
 #EXT-X-VERSION:4
@@ -209,33 +240,86 @@ QualityLevels(2181139)/Manifest(video,format=m3u8-aapl)
 #EXT-X-STREAM-INF:BANDWIDTH=3513624,RESOLUTION=1280x572,CODECS="avc1.64001f,mp4a.40.2",AUDIO="audio"
 QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 ```
-### Asset Files
-```
-[representation] mp4 file for each track*representation
-  [moov] 
-    [pssh] pssh box for PlayReady. Includs a PRO including a PRH with KID and LA_URL
-    [pssh] pssh box for other DRM
-  [moof] movie fragment header
-    [traf] track fragment
-      [uuid]
-        [senc] sample encryption box. Includes Sample Initialization Vectors
-  [mdat] movie fragment data
-```
+
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [Smooth 1 Key](#tab/case6)
+# [HLS Changing Keys](#tab/case6)
+
+- mp4 based asset
+- HLS master playlist (m3u8) and individual playlists (m3u8) for the different tracks and bitrates
+- Keys changing from time to time over the duration of the asset
+- Same key for all tracks and bitrates, or different keys for each track and bitrate
+
+#### Supported
+
+As for HLS Static Keys, the master playlist and the individual playlists must contain #EXT-X-SESSION_KEY and #EXT-X-KEY tags.
+The indivual playlists contain one #EXT-X-KEY tag each time the encryption key changes.
+
+NOTE: this HLS Changing Keys is supported in Windows 10 and the Xbox only for On-Demand content, where it is possible to list in EXT-X-SESSION_KEY tag of the master playlist *all* the KIDs that are used in the entire asset.
+
+#### Sample
+
+Master playlist
+
+```M
+#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-SESSION_KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+```
+
+Individual playlist
+```M
+#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+
+#EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+
+#EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+```
+
+# [HLS Rotating Keys](#tab/case7)
+
+- mp4 based asset
+- HLS master playlist (m3u8) and individual playlists (m3u8) for the different tracks and bitrates
+- Keys changing from time to time or frequently over the duration of the asset, delivered using PlayReady Embedded Licenses in the MP4 segments
+- Same key for all tracks and bitrates, or different keys for each track and bitrate
+
+#### Supported
+
+As for HLS Static Keys, the master playlist and the individual playlists must contain #EXT-X-SESSION_KEY and #EXT-X-KEY tags.
+The indivual playlists contain one #EXT-X-KEY tag each time the encryption key changes.
+
+NOTE: this HLS Changing Keys is supported in Windows 10 and the Xbox only for On-Demand content, where it is possible to list in EXT-X-SESSION_KEY tag of the master playlist *all* the KIDs that are used in the entire asset.
+
+#### Sample
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# [Smooth Static Keys](#tab/case8)
 
 - mp4 based asset
 - Smooth Streaming manifest
 - Fixed Key along the asset
-- Single Key for all tracks
+- Single Key for all tracks and representations, or different keys per track and representation
 - PlayReady Header in the manifest at the top level
 
 #### Supported
-- Supported on Windows since version xyz
+- Supported on Windows 10 since the update of April 2018 ("April 2018 Update")
 
-#### Asset Manifest
+#### Sample
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SmoothStreamingMedia MajorVersion="2" MinorVersion="1" Duration="1209510000">
@@ -272,7 +356,7 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
-# [Smooth Rotating Keys](#tab/case7)
+# [Smooth Rotating Keys](#tab/case9)
 
 Here is the Smooth Streaming Manifest extracted from the test stream `http://playready.directtaps.net/media/live/channel01.isml/Manifest`
 
