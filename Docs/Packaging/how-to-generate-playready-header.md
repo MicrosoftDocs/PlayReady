@@ -95,21 +95,21 @@ void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string doma
 	xmlString.append("</DS_ID></DATA></WRMHEADER>");
 
 	// Convert the PlayReady header to UFT-16 format
-	wstring_convert<std::codecvt_utf8_utf16<wchar_t>> convert;
+	wstring_convert<codecvt_utf8_utf16<wchar_t>> convert;
 	wstring utf16XML = convert.from_bytes(xmlString);
 
 	// Calculate the length of the PlayReady Header
-	int32_t headerLength = utf16XML.size();
+	int32_t headerLength = (utf16XML.size() * sizeof(wchar_t));
 	// Calculate the length of the PlayReady Object
-	int objectLength = headerLength + 10;
+	int32_t objectLength = headerLength + 10;
 	// Set the number of PlayReady object records (in this case, 1)
-	int recordCount = 1;
+	int16_t recordCount = 1;
 	// Set the record type (in this case, a PlayReady Header)
 	// If this was an embedded license store, this value would be 3
-	int recordType = 1;
+	int16_t recordType = 1;
 
 	// Write the PlayReady Object and PlayReady Header to a file
-	wofstream wofs("C:\\Temp\\PRHeaderObject.txt", ios::binary);
+	wofstream wofs("C:\\Temp\\PRObject.txt", ios::binary);
 	wofs.imbue(locale(wofs.getloc(),
 			  new codecvt_utf16<wchar_t, 0x10ffff, little_endian>));
 	wofs.write(reinterpret_cast<const wchar_t *>(&objectLength), 2);
