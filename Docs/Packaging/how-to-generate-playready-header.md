@@ -39,7 +39,10 @@ Here is an example of a PlayReady Header, which may be inserted in the header of
 </WRMHEADER>
 ```
 
-Here is an example of a PlayReady Header, for Live Linear content. It does not include any KID because the content encryption keys (and their associated KIDs) will change sometimes (e.g. very frequently, or at program boundary, or every hour, or every day). The KIDs used for the content stream will be signalled in the fragment headers, and it is not necessary to include any of them in the stream top level PlayReady Header. The property DECRYPTORSETUP is set to ONDEMAND, which means the PlayReady Header and Decryptor will be set on demand, meaning when the client will actually need to start decrypting a fragment - and at this point, the client will have access to another PlayReady Header in the fragment header to figure out what KID is involved. Note: DECRYPTORSETUP = ONDEMAND does not mean the content is served On-Demand, it is actually the opposite.
+Here is an example of a PlayReady Header, for Live Linear content. It does not include any KID because the content encryption keys (and their associated KIDs) will change sometimes (for example, very frequently, or at program boundary, or every hour, or every day). The KIDs used for the content stream will be signalled in the fragment headers, and it is not necessary to include any of them in the stream top level PlayReady Header. The property DECRYPTORSETUP is set to ONDEMAND, which means the PlayReady Header and Decryptor will be set on demand, meaning when the client will actually need to start decrypting a fragment - and at this point, the client will have access to another PlayReady Header in the fragment header to figure out what KID is involved. 
+
+>[!NOTE]
+>DECRYPTORSETUP = ONDEMAND does not mean the content is served On-Demand, it is actually the opposite.
 
 ```xml
 <WRMHEADER version="4.2.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
@@ -63,13 +66,13 @@ The PlayReady Header generator needs to have input parameters such as:
   * Defaut LA URL - the default URL of the PlayReady License Server that will be issuing licenses, if known at packaging time.
   * Default Domain Service Identifier, if the service is using domains.
 
-You can now create the PlayReady header using standard XML commands (such as XMLWriter, XMLDocument, or XDocument). The following code sample demonstrates how to create a PlayReady Header used for On-Demand content. 
+You can now create the PlayReady Header. The following code sample demonstrates how to create a PlayReady Object that contains a PlayReady Header used for On-Demand content. 
 
-# [CPP](#tab/cpp)
+# [C++](#tab/cpp)
 ``` cpp
 // This function gets values from the key management system and your specified encryption mode
-// (and optionally the domainID), creates a PlayReady Header, and adds the header to a 
-// PlayReady Object and stores them in a file in UTF-16 little endian format
+// (and optionally the domainID), creates a PlayReady Header, adds the header to a 
+// PlayReady Object, and stores them in a file in UTF-16 little endian format
 
 void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string domainID)
 {
@@ -92,17 +95,16 @@ void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string doma
 	xmlString.append("</DS_ID></DATA></WRMHEADER>");
 
 	// Convert the PlayReady header to UFT-16 format
-	//
 	wstring_convert<std::codecvt_utf8_utf16<wchar_t>> convert;
-	wstring utf16XML = convert.from_bytes(XMLString);
+	wstring utf16XML = convert.from_bytes(xmlString);
 
-	// Get the length of the PlayReady Header
-	int32_t headerLength = XMLString.size();
-	// Get the length of the PlayReady Object
+	// Calculate the length of the PlayReady Header
+	int32_t headerLength = utf16XML.size();
+	// Calculate the length of the PlayReady Object
 	int objectLength = headerLength + 10;
-	// Get the number of PlayReady object records (in this case, 1)
+	// Set the number of PlayReady object records (in this case, 1)
 	int recordCount = 1;
-	// Get the record type (in this case, a PlayReady Header)
+	// Set the record type (in this case, a PlayReady Header)
 	// If this was an embedded license store, this value would be 3
 	int recordType = 1;
 
@@ -119,42 +121,57 @@ void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string doma
 ```
 # [C#](#tab/cs)
 ``` cs
-public string buildRMHeader(string KeyID1, string KeyID2, string encryptMode, string domainID)
+// This function gets values from the key management system and your specified encryption
+// mode (and optionally the domainID), creates a PlayReady Header, adds the header to a 
+// PlayReady Object, and stores them in a file in UTF-16 little endian format
+
+public void buildRMHeader(string KeyID1, string KeyID2, string encryptMode, string domainID)
 {
-    // The string parameters are values returned from the key management system and include the following:
-    // KeyID1, KeyID2 - The key identifiers
+    // The string parameters are values include the following:
+    // KeyID1, KeyID2 - The key identifiers - these values are returned from the key management
+    //                                        system or the KeySeed mechanism
     // encryptMode - the encryption mode used to encrypt content, can be AESCTR or AESCBC
     // domainID - the optional domain service identifier (only used for domains)
 
-    StringBuilder sb = new StringBuilder();
-    XmlWriterSettings xws = new XmlWriterSettings();
-    xws.OmitXmlDeclaration = true;
+    string prHeader;
 
-    using (XmlWriter xw = XmlWriter.Create(sb, xws))
-    {
-        XElement root = new XElement("WRMHEADER",
-            new XAttribute("xmlns", "http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader"),
-            new XAttribute("version", "4.3.0.0"),
-            new XElement("DATA",
-                new XElement("PROTECTINFO",
-                    new XElement("KIDS",
-                        new XElement("KID",
-                            new XAttribute("ALGID", encryptMode),
-                            new XAttribute("VALUE", KeyID1)
-                        ),
-                        new XElement("KID",
-                            new XAttribute("ALGID", encryptMode),
-                            new XAttribute("VALUE", KeyID2)
-                        )
-                    )
-                ),
-                new XElement("LA_URL", "http://rm.contoso.com/rightsmanager.asmx"),
-                new XElement("DS_ID", domainID)
-            )
-        );
-        root.Save(xw);
-    }
-    return(sb.ToString());
+    // Create the PlayReady Header
+    prHeader = "<WRMHEADER xmlns=\"http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader\" version=\"4.3.0.0\"><DATA><PROTECTINFO><KIDS><KID ALGID=\"";
+    prHeader += encryptMode;
+    prHeader += "\" VALUE=\"";
+    prHeader += KeyID1;
+    prHeader += "\"></KID><KID ALGID=\"";
+    prHeader += encryptMode;
+    prHeader += "\" VALUE=\"";
+    prHeader += KeyID2;
+    prHeader += "\"></KID></KIDS></PROTECTINFO><LA_URL>http://rm.contoso.com/rightsmanager.asmx</LA_URL><DS_ID>";
+    prHeader += domainID;
+    prHeader += "</DS_ID></DATA></WRMHEADER>";
+
+    // Convert the PlayReady Header to UTF-16 little endian
+    byte[] headerBytes = System.Text.Encoding.Unicode.GetBytes(prHeader);
+
+    // Calculate the length of the PlayReady Header
+    Int16 headerLength = (short)headerBytes.Length;
+    // Calculate the length of the  PlayReady Object
+    Int32 proLength = headerLength + 10;
+    // Set the number of PlayReady object records (in this case, 1)
+    Int16 recordCount = 1;
+	  // Set the record type (in this case, a PlayReady Header)
+	  // If this was an embedded license store, this value would be 3
+    Int16 recordType = 1;
+
+    // Embed the PlayReady Header in the PlayReady Object
+    byte[] pro = new byte[proLength];
+    System.Buffer.BlockCopy(BitConverter.GetBytes(proLength), 0, pro, 0, 4);
+    System.Buffer.BlockCopy(BitConverter.GetBytes(recordCount), 0, pro, 4, 2);
+    System.Buffer.BlockCopy(BitConverter.GetBytes(recordType), 0, pro, 6, 2);
+    System.Buffer.BlockCopy(BitConverter.GetBytes(headerLength), 0, pro, 8, 2);
+    System.Buffer.BlockCopy(headerBytes, 0, pro, 10, headerLength);
+
+    // Write the PlayReady Object to a file
+
+    System.IO.File.WriteAllBytes("C:\\Temp\\PRObject.txt", pro);
 }
 ```
 
@@ -173,5 +190,5 @@ Things you need before you begin.
   2. You have to know the encryption type (AESCTR or AESCBC).
   3. Create the PlayReady header inside the PlayReady object using the Windows 10 PlayReadyHeaderContentHeader class.
 
-As in the previous methods, you will need the KeyID(s) that were generated by the key management system, the encryption type (AESCTR or AESCBC), the URL of the PlayReady license server,and optionally, the domain service identifier.
+As in the previous methods, you will need the KeyID(s) that were generated by the key management system, the encryption type (AESCTR or AESCBC), the URL of the PlayReady license server,and optionally the domain service identifier.
 
