@@ -61,11 +61,11 @@ The Record Type field has one of the following values.
 
 The following structure is a fragmented MP4 file with a PlayReady Object that contains a PlayReady Header:
 
-![PlayReady Header in MP4](../images/pr_header_mp4.png)
+![PlayReady Header in MP4](../images/pro_with_prh.png)
 
 The following structure is a fragmented MP4 file with a PlayReady Object that contains a PlayReady Header and a PlayReady Embedded License Store:
 
-![PlayReady Header and ELS in MP4](../images/header_els_mp4.png)
+![PlayReady Header and ELS in MP4](../images/pro_with_els.png)
 
 ## 3. PlayReady Header (PRH)
 
@@ -182,7 +182,7 @@ All attributes must be in alphabetical order including those in nodes inside the
 
 ### 3.3. v4.3.0.0
 
-PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, including the Common Encryption modes CBC1 and CBCS. and also increases the interoperability of PlayReady Clients with other DRM systems, as well as existing content.
+PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, in particulat for the Common Encryption modes 'cbcs'. It also increases the interoperability of PlayReady Clients with other DRM systems, as well as existing content.
 
 #### 3.3.1. Differences with other versions
 

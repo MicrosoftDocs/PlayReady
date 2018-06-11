@@ -28,9 +28,9 @@ The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
 ![Common Encryption Modes](../images/ciphermodes.jpg)
 
-PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady Clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady Clients. However, Common Encryption modes CENS and CBC1 are allowed.
+PlayReady Clients starting with version 4.0 support AES CBC keys, which allows support the Common Encryption mode 'cbcs'. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady Clients, which allows support the Common Encryption mode 'cenc'. Note that Common Encryption modes 'cens' and 'cbc1' are allowed and technically doable in a PlayReady ecosystem, but not supported.
 
-## Support for AES CBC and CBCS
+## Support for AES CBC and 'cbcs'
 
 All clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for clients, though, and signaled to License Servers through an additional property in the license acquisition protocol.
 

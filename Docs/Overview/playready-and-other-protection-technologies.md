@@ -73,7 +73,7 @@ For additional information about the MPEG Common Encryption Standard, see: 
 --
 
    *  [MPEG Common Encryption](https://en.wikipedia.org/wiki/MPEG_Common_Encryption)
-   *  [ISO Common Encryption ('cenc') Protection Scheme for ISO Base Media File Format Stream Format](https://w3c.github.io/encrypted-media/format-registry/stream/mp4.html)
+   *  [ISO Common Encryption (CENC) Protection Scheme for ISO Base Media File Format Stream Format](https://w3c.github.io/encrypted-media/format-registry/stream/mp4.html)
    *  [ISO Common Encryption EME Stream Format and Initialization Data](https://www.w3.org/TR/2014/WD-encrypted-media-20140828/cenc-format.html)
 
 > [!NOTE]
