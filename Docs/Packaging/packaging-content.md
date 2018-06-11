@@ -29,7 +29,8 @@ Companies developing a standalone packager (or a packaging function in an encode
 
 The following video provide an overall look at packaging PlayReady protected content.
 
-[![Packaging PlayReady Content Part 1](../images/video-packaging-2.jpg)](https://trainpr.streaming.mediaservices.windows.net/1d6fe34f-22bc-48bf-9d19-8b8a389dd97b/Packaging%20PlayReady%20Content%20Part.ism/manifest(format=mpd-time-csf))
+<p></p>
+<video width="1280" height="720" controls> <source src="https://trainpr.streaming.mediaservices.windows.net/1d6fe34f-22bc-48bf-9d19-8b8a389dd97b/Packaging PlayReady Content Part.ism/manifest(format=mpd-time-csf)" type="video/mp4"></video>
 
 
 ## In this section
