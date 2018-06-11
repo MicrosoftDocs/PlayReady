@@ -17,7 +17,7 @@ ms.technology: drm
 
 The packager needs to encrypt the content. Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the Compliance Rules. 
 
-To ensure support on Windows and other Microsoft endpoints, Microsoft recommends using Common Encryption: CENC or CBCS. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
+To ensure support on Windows and other Microsoft endpoints, Microsoft recommends using Common Encryption: 'cenc' or 'cbcs'. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
 
 For more information, see [Content Encryption and Delivery](content-packaging-and-delivery.md)
 
@@ -49,7 +49,7 @@ For MP4 ISO files, Microsoft recommends following the ISO format specification a
 
 **Example of a MP4 file containing a PlayReady Header**
 
-![PlayReady Header in MP4](../images/pr_header_mp4.png)
+![PlayReady Header in MP4](../images/pro_with_prh.png)
 
 For adaptive streaming assets, Microsoft recommends inserting the PlayReady Header in the manifest of the asset.
 

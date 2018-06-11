@@ -28,7 +28,7 @@ The purchased content scenario performs the following steps:
 
    1. The service provider transfers unprotected content to the content packager.
 
-   1. The content packager protects the file by using an encryption format that is compatible with PlayReady (for example, MPEG Common Encryption CENC CTR).
+   1. The content packager protects the file by using an encryption format that is compatible with PlayReady (for example, MPEG Common Encryption 'cenc').
 
       This "packaged" file may then be distributed using a variety of methods.
 
