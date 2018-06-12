@@ -69,7 +69,7 @@ The PlayReady Header generator needs to have input parameters such as:
 You can now create the PlayReady Header. The following code sample demonstrates how to create a PlayReady Object that contains a PlayReady Header used for On-Demand content. 
 
 # [C++](#tab/cpp)
-``` cpp
+```
 // This function gets values from the key management system and your specified encryption mode
 // (and optionally the domainID), creates a PlayReady Header, adds the header to a 
 // PlayReady Object, and stores them in a file in UTF-16 little endian format
@@ -120,7 +120,7 @@ void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string doma
 }
 ```
 # [C#](#tab/cs)
-``` cs
+```
 // This function gets values from the key management system and your specified encryption
 // mode (and optionally the domainID), creates a PlayReady Header, adds the header to a 
 // PlayReady Object, and stores them in a file in UTF-16 little endian format
@@ -174,6 +174,7 @@ public void buildRMHeader(string KeyID1, string KeyID2, string encryptMode, stri
     System.IO.File.WriteAllBytes("C:\\Temp\\PRObject.txt", pro);
 }
 ```
+---
 
 ## Method 2 - Use the PlayReady Server API
 
