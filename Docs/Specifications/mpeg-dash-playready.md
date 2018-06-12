@@ -108,13 +108,13 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 | License | A PlayReady data structure that includes policies and an encrypted content key. |
 | License Acquisition URL (LAURL)  | The License Acquisition PlayReady web service URL.  |
 | License Chain  | A License Chain consists of a Root License and a Leaf License. A Leaf License may have multiple Root Licenses and a Root License may have multiple Leaf Licenses. A License Chain exists for each pair.  |
-| Live Profile  | The ISO Base media file format live profile (see section 8.4 of [[DASH](#references)]). The Live Profile is optimized for live encoding, where each movie fragment may be requested immediately after it is encoded using a template generated URL.  |
+| Live Profile  | The ISO Base media file format live profile (see section 8.4 of [[DASH](#references)]). The Live Profile is optimized for live encoding, where each movie segment may be requested immediately after it is encoded using a template generated URL.  |
 | Media Presentation  | Collection of metadata and media data that can be downloaded and rendered as a media presentation, as defined in ISO/IEC 23009-1. |
 | Media Presentation Description (MPD)  | Formal XML document description of a Media Presentation defined in ISO/IEC 23009-1. |
 | Media Segment  | A DASH Segment that complies with a media format and enables playback, perhaps combined with other Media Segments and/or an Initialization Segment.  |
 | Movie box (‘moov’)  | In the ISO Base Media File Format, the box whose sub-boxes define the metadata for a media presentation [[ISOBFF](#info-ref)]. |
 | Movie Fragment box (‘moof’) | In the ISO Base Media File Format, the Movie Fragment box extends the media presentation in time [[ISOBFF](#info-ref)], and is contained in a DASH Media Segment. |
-| On Demand Profile  | The ISO Base media file format On Demand profile (see section 8.3 of [[DASH](#references)]). The On Demand Profile provides basic support for On-Demand content. Each Representation is provided as a single Segment, Subsegments are aligned across an Adaptation Set’s Representations, and Subsegments begin with a Stream Access Point corresponding to a movie fragment.  |
+| On Demand Profile  | The ISO Base media file format On Demand profile (see section 8.3 of [[DASH](#references)]). The On Demand Profile provides basic support for On-Demand content. Each Representation is provided as a single Segment, Subsegments are aligned across an Adaptation Set’s Representations, and Subsegments begin with a Stream Access Point corresponding to a movie segment.  |
 | Period  | Interval of a Media Presentation. |
 | PlayReady Object (PRO)  | A binary object containing a variable number of records, including optionally PRH and ELS records. These records contain information related to licenses and license acquisition (see [[PRO](#references)]). |
 | Protection System Specific Header box (‘pssh’)  | In the ISO Base Media File Format, the Protection System Specific Header box contains metadata needed by a specific Content Protection system to acquire a license and decrypt the media content [[ISOBFF](#info-ref)]. |
@@ -124,7 +124,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 | Segment | In DASH, an element in an MPD that references a media resource with an HTTP-URL and optional byte range. |
 | Segment Index  | Time range to byte range index mapping within a Media Segment separate from the MPD, defined as an ISO Media ‘sidx’ box. |
 | Stream Access Point (SAP)  | The position in a Representation which enables Media Segment playback using only the Representation data from that position forward. |
-| Subsegment  | In DASH, this is a unit within a Media Segment indexed by a Segment Index.  A movie fragment is addressed as a Subsegment in DASH On Demand Profile, but a Segment in DASH Live Profile. |
+| Subsegment  | In DASH, this is a unit within a Media Segment indexed by a Segment Index.  A movie segment is addressed as a Subsegment in DASH On Demand Profile, but a Segment in DASH Live Profile. |
 | Track Encryption box |In the ISO Base Media File Format, the Track Encryption box (‘tenc’) describes the default encryption parameters for a track [[CENC](#references)], [[ISOBFF](#info-ref)]. |
 | UUID  | A mathematically unique identifier represented as a number or string as specified in [[X.667](#X667)] |
 | Video On Demand (VOD)  | System enabling the End-user to select and watch video content on demand. Both the DASH Live Profile and DASH On Demand Profile can be used for VOD presentation. |
@@ -287,9 +287,9 @@ The following rule MUST be followed when including a PlayReady ‘pssh’ box an
 
 #### 2.1.3 Including Track Encryption Box Fields in the MPD
 
-Common Encryption indicates the key used to encrypt each media sample (or not used) with key identifier(s) (KID) in each movie fragment.  Some information, such as the default_KID in the Track Encryption Box (‘tenc’) is useful to signal in the MPD to determine what license is required.
+Common Encryption indicates the key used to encrypt each media sample (or not used) with key identifier(s) (KID) in each movie segment.  Some information, such as the default_KID in the Track Encryption Box (‘tenc’) is useful to signal in the MPD to determine what license is required.
 
-There may be Media Presentation Periods which are unencrypted, followed by Periods which are encrypted. Media files and streams may include both encrypted and unencrypted sections.  In addition, the Key Identifier (KID) may change from Period to Period, or from section to section.  Key changes in sections of a track are signaled using ISO Media sample group and sample group description boxes in each movie fragment.  See [[CENC](#references)] for more information on sample groups and access to Initialization Vectors and subsample encryption ranges using ‘saio’ and ‘saiz’ boxes pointing to Sample Auxiliary Information.
+There may be Media Presentation Periods which are unencrypted, followed by Periods which are encrypted. Media files and streams may include both encrypted and unencrypted sections.  In addition, the Key Identifier (KID) may change from Period to Period, or from section to section.  Key changes in sections of a track are signaled using ISO Media sample group and sample group description boxes in each movie segment.  See [[CENC](#references)] for more information on sample groups and access to Initialization Vectors and subsample encryption ranges using ‘saio’ and ‘saiz’ boxes pointing to Sample Auxiliary Information.
 
 The default settings for Common Encryption information are encoded in each track’s Track Encryption box (‘tenc’) (see [[ISOBFF](#info-ref)] and [[CENC](#references)]) stored in a Track Box (‘trak’) in an ISO file header and Initialization Segment. The default Key Identifier (KID) in the Track Encryption Box (default_KID field) SHOULD also be communicated in the ContentProtection Descriptor element associated with the Media Presentation Adaptation Set.  The cenc:default_KID may be used to identify a license that can decrypt the Media Segments referenced by the parent AdaptationSet element.
 
@@ -354,7 +354,7 @@ The PlayReady Object (PRO) [[PRO](#references)] MAY be included in the encoded m
 
 A ‘pssh’ box may be inserted in the Movie box (‘moov’) or the Movie Fragment box (‘moof’).  For example, a ‘pssh’ box may be inserted in the ‘moov’ box to enable the use of Initialization Segments ([[DASH](#references)], section 5.3.9.5.2).  A ‘pssh’ box may be inserted in each ‘moof’ box to convey Leaf Licenses indexed by KID for key rotation.
 
-Sample Group and Sample Auxiliary Information SHALL be stored within any movie fragment that references it.  A Sample Group Description Box (‘sgdp’) SHALL be present in each ‘moof’ box when a Sample To Group Box (‘sbgp’) is present.  Sample Auxiliary Information Offset Box (‘saio’) and Sample Auxiliary Information Size Box (‘saiz’) SHALL be present in each movie fragment of every track containing a Track Encryption Box (‘tenc’), with valid pointers to Sample Auxiliary Information.
+Sample Group and Sample Auxiliary Information SHALL be stored within any movie segment that references it.  A Sample Group Description Box (‘sgdp’) SHALL be present in each ‘moof’ box when a Sample To Group Box (‘sbgp’) is present.  Sample Auxiliary Information Offset Box (‘saio’) and Sample Auxiliary Information Size Box (‘saiz’) SHALL be present in each movie segment of every track containing a Track Encryption Box (‘tenc’), with valid pointers to Sample Auxiliary Information.
 
 #### 2.2.1 General
 

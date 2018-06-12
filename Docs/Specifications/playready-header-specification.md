@@ -59,13 +59,13 @@ The Record Type field has one of the following values.
 
 ### 2.2. PlayReady Object Examples
 
-The following structure is a fragmented MP4 file with a PlayReady Object that contains a PlayReady Header:
+Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header:
 
-![PlayReady Header in MP4](../images/pro_with_prh.png)
+![PlayReady Object in MP4](../images/pro_with_prh.png)
 
-The following structure is a fragmented MP4 file with a PlayReady Object that contains a PlayReady Header and a PlayReady Embedded License Store:
+Here is the HEX view of this MP4 file:
 
-![PlayReady Header and ELS in MP4](../images/pro_with_els.png)
+![PlayReady Object Hex Dump](../images/pro_with_prh_hexdump3.png)
 
 ## 3. PlayReady Header (PRH)
 

@@ -45,7 +45,8 @@ The following video provide an overall look at packaging PlayReady protected con
 
 [Operating a PlayReady Packager](operating-a-packager.md)
 
-[How to package mp4 based content](how-to-package-mp4-based.md)
-
 [How to generate a PlayReady Header](how-to-generate-playready-header.md)
 
+[How to package MP4-based content](how-to-package-mp4-based.md)
+
+[MP4-based Formats Supported by PlayReady Clients](mp4-based-formats-supported-by-playready-clients.md)

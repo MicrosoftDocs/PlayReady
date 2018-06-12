@@ -38,6 +38,7 @@ The following high-level terms are used throughout this documentation.
 | Challenge| A request from a client. A challenge contains information about the client, a list of requested rights, and other information about the content, including the content header and key identifier. |
 | Clear content| A media file that is not encrypted.|
 | Client | Content receiver. May be a device or an application.|
+| CMAF | Common Media Application Format. Multimedia format, specified in ISO/IEC 23000-19:2018 |
 | Common Encryption (CENC) | An MPEG Standard that defines encryption and container formats for protected media content. |
 | Content Decryption Module (CDM) | The client component that provides the DRM functionality, including decryption. |
 | Content (protected)| Videos, movies, audio, music, ebooks, executables. May be downloaded and/or streamed.|

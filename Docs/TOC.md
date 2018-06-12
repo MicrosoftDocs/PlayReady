@@ -66,9 +66,11 @@
 
 ### [Operating a PlayReady Packager](Packaging/operating-a-packager.md)
 
-### [How to package mp4-based content](Packaging/how-to-package-mp4-based.md)
-
 ### [How to generate a PlayReady Header](Packaging/how-to-generate-playready-header.md)
+
+### [How to package MP4-based content](Packaging/how-to-package-mp4-based.md)
+
+### [MP4-based Formats Supported by PlayReady Clients](Packaging/mp4-based-formats-supported-by-playready-clients.md)
 
 ## [PlayReady Servers](Overview/servers.md)
 

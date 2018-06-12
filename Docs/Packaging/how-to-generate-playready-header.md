@@ -22,7 +22,7 @@ The PlayReady Header contains information about the content being played back, i
 >[!NOTE]
 >Microsoft does not provide a Key Management System with PlayReady.
 
-Here is an example of a PlayReady Header, which may be inserted in the header of a fragmented MP4 file, typically for On-Demand content. It includes the list of KIDs (the IDs of the content encryption keys) that are needed for a client to decrypt the content. It is the most common way to signal these KIDs for an On-Demand file or stream. 
+Here is an example of a PlayReady Header, which may be inserted in the header of a segmented MP4 file, typically for On-Demand content. It includes the list of KIDs (the IDs of the content encryption keys) that are needed for a client to decrypt the content. It is the most common way to signal these KIDs for an On-Demand file or stream. 
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
@@ -39,7 +39,7 @@ Here is an example of a PlayReady Header, which may be inserted in the header of
 </WRMHEADER>
 ```
 
-Here is an example of a PlayReady Header, for Live Linear content. It does not include any KID because the content encryption keys (and their associated KIDs) will change sometimes (for example, very frequently, or at program boundary, or every hour, or every day). The KIDs used for the content stream will be signalled in the fragment headers, and it is not necessary to include any of them in the stream top level PlayReady Header. The property DECRYPTORSETUP is set to ONDEMAND, which means the PlayReady Header and Decryptor will be set on demand, meaning when the client will actually need to start decrypting a fragment - and at this point, the client will have access to another PlayReady Header in the fragment header to figure out what KID is involved. 
+Here is an example of a PlayReady Header, for Live Linear content. It does not include any KID because the content encryption keys (and their associated KIDs) will change sometimes (for example, very frequently, or at program boundary, or every hour, or every day). The KIDs used for the content stream will be signalled in the segment headers, and it is not necessary to include any of them in the stream top level PlayReady Header. The property DECRYPTORSETUP is set to ONDEMAND, which means the PlayReady Header and Decryptor will be set on demand, meaning when the client will actually need to start decrypting a segment - and at this point, the client will have access to another PlayReady Header in the segment header to figure out what KID is involved. 
 
 >[!NOTE]
 >DECRYPTORSETUP = ONDEMAND does not mean the content is served On-Demand, it is actually the opposite.
