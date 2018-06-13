@@ -13,8 +13,11 @@ ms.technology: drm
 
 # MP4-based Formats Supported by PlayReady Clients
 
+## Formats
+
 # [DASH Static Keys](#tab/case1)
 
+#### Format
 - MP4 based asset. CMAF preferred.
 - DASH manifest.
 - Same keys along the asset - Keys not changing over time.
@@ -22,14 +25,23 @@ ms.technology: drm
 
 #### Supported
 
-The DASH manifest contains a PRO in each AdaptationSet, or in the DASH init segment of each representation
+Supported in version 1705 or higher with the `<mspr:pro>` tag for On-Demand assets. 
 
-- Supported on Windows 10 Fall Creators Update (released October 2017) and above
+Supported in version 1607 or higher with the `<mspr:pro>` tag for Live assets.
 
+The DASH manifest contains a PlayReady Object including a PlayReady Header using the `<mspr:pro>` tag in the `<Period>` node. If different keys are used for different tracks or bitrates, the DASH manifest may have multiple PlayReady Objects in the multiple `<AdaptationSet>` or `<Representation>` nodes instead.
+
+Note: it is possible to insert the PlayReady Objects inside the init segments of the different `<AdaptationSet>` nodes. If PlayReady Objects are found both in the init segments and in the manifest, the ones in the manifest take precedence.
+
+<br />
+
+DASH manifests with a standard `<cenc:pssh>` tag for On-Demand and Live assets is supported in version RS5 or higher. In this case, the entire content of a pssh box armoured in base 64 is included in the manifest. It is not just a PlayReady Object.
+
+For increased compatibility, Microsoft recommends to generate DASH manifests that include the PlayReady Objects duplicated in the `<mspr:pro>` and `<cenc:pssh>` tags.
 
 #### Sample
 
-DASH Manifest
+DASH Manifest with a `<mspr:pro>` tag
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,12 +57,30 @@ DASH Manifest
           <SegmentURL media="video/avc1/seg-1.mp4"/>
 ```
 
+DASH Manifest with a `<mspr:pro>` and a `<cenc:pssh>` tag
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD ...>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value=”MSPR 2.0”>
+      <cenc:pssh>
+        <!--base64-encoded PlayReady ‘pssh’ complete box-->
+      </cenc:pssh>
+      <mspr:pro>
+        <!--base64-encoded PlayReady object -->
+      </mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
+```
+
 MP4 files
 
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
   [moov] 
-    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL (optional)
     [pssh] pssh box for other DRM
 
 [any segment]
@@ -63,16 +93,20 @@ MP4 files
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
+
+
 # [DASH Changing Keys](#tab/case2)
 
+#### Format
 - MP4 based asset.
 - DASH manifest.
 - Keys changing from time to time over the duration of the asset, by periods.
 - Same single key for all tracks and representations (bitrates), or different keys for different tracks and representations (bitrates).
 
 #### Supported
-- Supported on Windows 10 Fall Creators Update (released October 2017) and above
-- PlayReady Header in the manifest at the AdaptationSet level, or in the DASH init segment. The single PlayReady Header contains a list of all the KIDs used for all the tracks and representations of the stream.
+Constrained Multi Period DASH is supported in version 1803 and higher.
+
+The DASH manifest contains multiple `<Period>` nodes, which are constrained (e.g. have all the same characteristics like the number of tracks, etc.). In each of these `<Period>` nodes, there are PlayReady Objects inserted at the `<Period>`, `<AdaptationSet>` or `<Representation>` level as different encryption keys are used.
 
 #### Sample
 
@@ -90,6 +124,14 @@ DASH Manifest
         <SegmentList duration="4000" timescale="1000">
           <Initialization sourceURL="video/avc1/init.mp4"/>
           <SegmentURL media="video/avc1/seg-1.mp4"/>
+    ...
+  </Period>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+      <mspr:pro>...</mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+
 ```
 
 MP4 files
@@ -97,7 +139,7 @@ MP4 files
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
   [moov] 
-    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL (optional)
     [pssh] pssh box for other DRM
 
 [any segment]
@@ -112,15 +154,20 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 
 # [DASH Rotating Keys](#tab/case3)
 
+#### Format
 - MP4 based asset.
 - DASH manifest.
 - Keys changing from time to time or frequently over the duration of the asset, delivered using PlayReady Embedded Licenses inserted in the stream.
 - Same single key for all tracks and representations (bitrates), or different keys for different tracks and representations (bitrates).
 
 #### Supported
+DASH with Key Rotation using Embedded Licenses is supported in version 1803 or higher.
 
-...
+The manifest or the init segment includes the special `<DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>` PlayReady Header.
 
+The MP4 segments contain in the fragment header `moof/pssh` a PlayReady Leaf License embedded in the content, whenever the content key rotates. These PlayReady Leaf Licenses are bound to the PlayReady Root Licenses of the asset.
+
+The application must include logic to proactively request the Root Licenses.
 
 #### Sample
 
@@ -134,9 +181,12 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
   <StreamIndex ...
 ```
 
+
+
 # [HLS Static Keys](#tab/case4)
 
-- MP4 based asset.
+#### Format
+- MP4 based asset. CMAF preferred.
 - HLS master playlist (m3u8) and individual playlists (m3u8) for the different tracks and bitrates.
 - Same keys along the asset - Keys not changing over time.
 - Same single key for all tracks and bitrates, or different keys for different tracks and bitrates.
@@ -144,12 +194,13 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 #### Supported
 - 'cbcs' encryption mode, with keys delivered by PlayReady: supported on the Xbox One, One S, One X since the update of January 2018
   - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `EXT-X-KEY:METHOD=SAMPLE-AES` tag.
-   - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-KEY:METHOD=SAMPLE-AES` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
+  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-SESSION-KEY:METHOD=SAMPLE-AES` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
 
-- 'cenc' encryption mode, with keys delivered by PlayReady: supported on Windows 10 and the Xbox One, One S, One X since the update of April 2018 ("April 2018 Update")
+- 'cenc' encryption mode, with keys delivered by PlayReady: supported on Windows 10 and the Xbox One, One S, One X in version 1803 or higher.
   - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `EXT-X-KEY:METHOD=SAMPLE-AES-CTR` tag.
-  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-KEY:METHOD=SAMPLE-AES-CTR` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
+  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-SESSION-KEY:METHOD=SAMPLE-AES-CTR` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
 
+Note: the HLS tag `EXT-X-PLAYREADYHEADER` is supported in version 1803 and higher for legacy purposes. Microsoft still recommends to use the standard `EXT-X-KEY` tag in HLS playlists.
 
 #### Sample
 
@@ -158,7 +209,7 @@ Master playlist
 ```M
 #EXTM3U
 #EXT-X-VERSION:4
-#EXT-X-SESSION_KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+#EXT-X-SESSION-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
 ```
 
 Individual playlist
@@ -168,9 +219,13 @@ Individual playlist
 #EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
 ```
 
-#### EXT-X-PLAYREADYHEADER syntax
+#### EXT-X-PLAYREADYHEADER syntax for MP4-based content
 
-Some developers have used the `EXT-X-PLAYREADYHEADER` tag in HLS playlists since 2010 to develop MPEG2-TS based PlayReady systems before MP4 file based HLS became prevalent. This synatx is not supported natively in Windows 10 or the Xbox in any version. It might be possible through to develop player applications that do the playlist parsing by themselves and can play these assets in a Windows or Xbox app.
+Because the non-standard `EXT-X-PLAYREADYHEADER` tag has been used in HLS playlists to carry the PlayReady Header for some time, Windows 10 and the Xbox support this tag in HLS playlists in version 1803 or higher.
+
+#### EXT-X-PLAYREADYHEADER syntax for MPEG2-TS-based content
+
+Some developers have used the `EXT-X-PLAYREADYHEADER` tag in HLS playlists since 2010 to develop MPEG2-TS based PlayReady systems before MP4 file based HLS became prevalent. This format is not supported in Windows 10 or the Xbox in any version. It might be possible though to develop a player application that does the playlist and container parsing and can play these assets in a Windows or Xbox app.
 
 ```M
 #EXTM3U
@@ -190,19 +245,23 @@ QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 #### Test Vectors
 See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
 
+
+
 # [HLS Changing Keys](#tab/case5)
 
-- MP4 based asset.
+#### Format
+- MP4 based asset. CMAF preferred.
 - HLS master playlist (m3u8) and individual playlists (m3u8) for the different tracks and bitrates.
 - Keys changing from time to time over the duration of the asset, by periods.
 - Same single key for all tracks and bitrates, or different keys for different tracks and bitrates.
 
 #### Supported
 
-As for HLS Static Keys, the master playlist and the individual playlists must contain #EXT-X-SESSION_KEY and #EXT-X-KEY tags.
-The indivual playlists contain one #EXT-X-KEY tag each time the encryption key changes.
+**On-Demand:** HLS assets with keys changing from time to time is supported for On-Demand content as HLS Static Keys. The master playlist and the individual playlists must contain `#EXT-X-SESSION-KEY` and `#EXT-X-KEY` tags.
+The indivual playlists contain one `#EXT-X-KEY` tag every time the encryption keys change.
 
-NOTE: this HLS Changing Keys is supported in Windows 10 and the Xbox only for On-Demand content, where it is possible to list in EXT-X-SESSION_KEY tag of the master playlist *all* the KIDs that are used in the entire asset.
+**Live:** HLS assets with keys changing is not supported for Live content where the encryption keys are not *all* present in the playlists when playback starts. It is possible to build an application that supports it though. The application has logic to sniff the playlists while they're refreshed, and to request the licenses for the encryption keys needed after rotation.
+
 
 #### Sample
 
@@ -211,7 +270,7 @@ Master playlist
 ```M
 #EXTM3U
 #EXT-X-VERSION:4
-#EXT-X-SESSION_KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
+#EXT-X-SESSION-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
 ```
 
 Individual playlist
@@ -225,54 +284,59 @@ Individual playlist
 #EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
 ```
 
+
+
 # [HLS Rotating Keys](#tab/case6)
 
-- MP4 based asset.
+#### Format
+- MP4 based asset. CMAF preferred.
 - HLS master playlist (m3u8) and individual playlists (m3u8) for the different tracks and bitrates.
 - Keys changing from time to time or frequently over the duration of the asset, delivered using PlayReady Embedded Licenses inserted in the stream.
 - Same single key for all tracks and bitrates, or different keys for different tracks and bitrates.
 
 #### Supported
 
-As with HLS Static Keys, the master playlist and the individual playlists must contain `#EXT-X-SESSION_KEY` and `#EXT-X-KEY` tags.
-The indivual playlists contain one `#EXT-X-KEY` tag at the top of the playlist. These tags contains PROs that reference the KIDs used for the PlayReady Root Licenses for the asset.
+HLS assets with rotating keys using Embedded Licenses is supported for On-Demand and Live content in version 1803 and higher.
+
+The master playlist and the individual playlists contain `#EXT-X-SESSION-KEY` and `#EXT-X-KEY` tags, which include the special `<DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>` PlayReady Header.
 
 The MP4 segments contain in the fragment header `moof/uuid/pssh` a PlayReady Leaf License embedded in the content, whenever the content key rotates. These PlayReady Leaf Licenses are bound to the PlayReady Root Licenses of the asset.
 
-- 'cbcs' encryption mode: supported on the Xbox One, One S, One X since the update of January 2018
-- 'cenc' encryption mode: supported on Windows 10 and the Xbox One, One S, One X since the update of April 2018 ("April 2018 Update")
+The application must include logic to proactively request the Root Licenses.
 
 #### Sample
 
+```M
+TBD 
+```
 
+PlayReady Header in the master playlist and the individual playlists:
 
-
-
-
-
-
-
-
-
-
-
+```xml
+<WRMHEADER version="4.2.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+  <DATA>
+    <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
+  </DATA>
+</WRMHEADER>
+```
 
 # [Smooth Static Keys](#tab/case7)
 
-- MP4 based asset.
+#### Format
+- MP4 based asset. PIFF format.
 - Smooth Streaming manifest.
 - Same keys along the asset - Keys not changing over time.
-- Same single key for all tracks and representations (bitrates), or different keys for different tracks and representations (bitrates).
+- Same single key for all tracks (`<StreamIndex>`)and bitrates  (`<QualityLevel>`), or different keys for the different tracks (`<StreamIndex>`) and the different bitrates (`<QualityLevel>`).
 
 #### Supported
-A PRO containing all the KIDs used for the entire asset is inserted in the manifest in the top level node using this syntax:
+Smooth Streaming with PlayReady playback is supported in version 1803 and higher. In earlier versions, it is possible to build an application that plays them, by parsing the manifest and the segments programmatically. SDKs like the [Smooth Streaming SDK](https://marketplace.visualstudio.com/items?itemName=Cenkd.MicrosoftUniversalSmoothStreamingClientSDK), or the [HASplayer](https://github.com/Orange-OpenSource/hasplayer.js/wiki) can be used to implement this parsing and logic.
+
+A PlayReady Object containing all the KIDs used for the entire asset is inserted in the manifest in the top level node (`<SmoothStreamingMedia>`) using this syntax:
 `<Protection><ProtectionHeader SystemID="9a04f079-9840-4286-ab92-e65be0885f95">...</ProtectionHeader><Protection>`
--> Do we support different PRH for each track in the manifest?
 
-Alternately, the asset may contain no PRO in the manifest, but have it inserted in the header of the first fragment of each track
+When different keys are used for the different tracks (`<StreamIndex>`) or the different bitrates (`<QualityLevel>`), the PlayReady Object is still inserted in the top level node of the manifest (`SmoothStreamingMedia`); the PlayReady Object contains a PlayReady Header version 4.2.0.0 minimum, listing multiple KIDs.
 
-
-- Playback of Smooth Streaming with PlayReady is supported natively on Windows 10 and the Xbox One/One S/One X since the update of April 2018 ("April 2018 Update"). Applications parsing the manifest themselves may support these assets on earlier versions of Windows 10.
+Note: Smooth Streaming assets don't include an init segment like DASH assets.
 
 #### Sample
 
@@ -303,10 +367,7 @@ Smooth Streaming manifest
 ### Asset Files
 
 ```
-[representation] MP4 file for each track*representation
-  [moov] 
-    [pssh] pssh box for PlayReady. Includs a PRO including a PRH with KID and LA_URL
-    [pssh] pssh box for other DRM
+[representation] MP4 file for each track or bitrate
   [moof] movie fragment header
     [traf] track fragment
       [uuid]
@@ -318,19 +379,18 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 
 # [Smooth Rotating Keys](#tab/case9)
 
-- MP4 based asset.
+#### Format
+- MP4 based asset. PIFF format.
 - Smooth Streaming manifest.
 - Keys changing from time to time or frequently over the duration of the asset, delivered using PlayReady Leaf Licenses embedded in the stream, bound to PlayReady Root Licenses.
-- Same single key for all tracks and representations (bitrates), or different keys for different tracks and representations (bitrates).
+- Same single key for all tracks (`<StreamIndex>`)and bitrates  (`<QualityLevel>`), or different keys for the different tracks (`<StreamIndex>`) and the different bitrates (`<QualityLevel>`).
 
 #### Supported
-A PRO containing all the KIDs of the root licenses used for the entire asset is inserted in the manifest in the top level node using this syntax:
-`<Protection><ProtectionHeader SystemID="9a04f079-9840-4286-ab92-e65be0885f95">...</ProtectionHeader><Protection>`
+Smooth Streaming with PlayReady playback with Embedded Licenses is supported in version 1803 and higher.
 
-Alternately, the asset may contain no PRO in the manifest, but have it inserted in the header of the first fragment of each track (TRUE???)
+The manifest includes the special `<DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>` PlayReady Header, using this syntax: `<Protection><ProtectionHeader SystemID="9a04f079-9840-4286-ab92-e65be0885f95">...</ProtectionHeader><Protection>`.
 
-
-- Playback of Smooth Streaming with PlayReady is supported natively on Windows 10 and the Xbox One/One S/One X since the update of April 2018 ("April 2018 Update"). Applications parsing the manifest themselves may support these assets on earlier versions of Windows 10.
+The MP4 files include Embedded Licenses included in `pssh` boxes. The application must implement the logic to proactively acquire the PlayReady Root Licenses needed for the Embedded Leaf Licenses.
 
 #### Sample
 
@@ -350,15 +410,25 @@ The manifest includes the PlayReady Header:
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
 <DATA>
-  <CUSTOMATTRIBUTES>
-    <IIS_DRM_VERSION>7.1.1572.18</IIS_DRM_VERSION>
-  </CUSTOMATTRIBUTES>
   <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
 </DATA>
 </WRMHEADER>
 ```
 ---
 
+## Quick Media Format Support history for Windows 10 and Xbox One
+
+|Release Date|Version, Build Number and Codename|New features|
+| --- | --- | --- | --- | --- |
+|July 2015|1507 (v10.0.10240.0) TH1|DASH playback for On-Demand content using the `<mspr:pro>` tag.<br/>|
+|November 2015|1511 (v10.0.1586.0) TH2||
+|August 2016|1607 (v10.0.14393.0) RS1|DASH playback for Live content with refreshed manifests.|
+|April 2017|1703 (v10.0.15063.0) RS2||
+|October 2017|1709 (v10.0.16299.0) RS3|HLS playback using the `EXT-X-KEY` tag for 'cbcs' (only Xbox).|
+|April 2018|1803 (v10.0.17134.0) RS4|DASH playback for constrained multi-period content.<br/> HLS playback using the `EXT-X-KEY` tag for 'cenc'.<br/> HLS playback using the `EXT-X-PLAYREADYHEADER` tag in m3u8 (for legacy).<br/> Smooth Streaming playback.|
+|-|RS5|DASH playback using the `<cenc:pssh>` tag.|
+
 ## See also
+
 [PlayReady Test Server Content](http://test.playready.microsoft.com/)
 

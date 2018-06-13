@@ -47,7 +47,7 @@ Here is an example of a PlayReady Header
 
 When a PlayReady client needs to play protected content, it will request a license for the content if it hasn't got any yet. To initiate the license request, the app developer may have provisioned the app with hardcoded or dynamic values for the KID array, LA_URL, and the behavior in case of a license request denial. The app has overriden the KID or KA_URL default values. If he hasn't, the client is expected to do the license request based on the default values found in the content header itself.
 
-For MP4 ISO files, Microsoft recommends following the ISO format specification and inserting the PlayReady Header in a PSSH box.
+For MP4 ISO files, Microsoft recommends following the ISO format specification and inserting the PlayReady Header in a 'pssh' box.
 
 **Example of a MP4 file containing a PlayReady Object**
 
@@ -59,7 +59,7 @@ Here is the HEX view of this file:
 
 ![PlayReady Object Hex Dump](../images/pro_with_prh_hexdump3.png)
 
-Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header and another PlayRady Object that contains a PlayReady Embedded License Store:
+Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header and another PlayReady Object that contains a PlayReady Embedded License Store:
 
 ![PlayReady Header and ELS in MP4](../images/pro_with_els.png)
 
@@ -93,5 +93,7 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 ```
 
 ## See also
+
 [Supported Formats](mp4-based-formats-supported-by-playready-clients.md)
+
 [PlayReady Test Server Content](http://test.playready.microsoft.com/)

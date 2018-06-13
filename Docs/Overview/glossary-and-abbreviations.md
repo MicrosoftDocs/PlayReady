@@ -108,7 +108,7 @@ The following high-level terms are used throughout this documentation.
 | Policy| The description in the license of the actions permitted or the restrictions on the content.|
 | Private key| The secret half of a public/private key pair used in cryptography. Private keys are typically used to digitally sign a message that can be verified with the corresponding public key, or decrypt a message that has been encrypted with the corresponding public key.|
 | Protect| To encrypt files with a key and add information such as the license acquisition URL.|
-| PSSH box | Protection System Specific Header box. An object defined in the Common Encryption Standard that carries DRM specific information. |
+| 'pssh' box | Protection System Specific Header box. An object defined in the Common Encryption Standard that carries DRM specific information. |
 | Public key| The non-secret half of a public/private key pair used in cryptography. Public keys are typically used to encrypt sessions, files, and messages, which are then decrypted using the corresponding private key, or verify the digital signature of a message signed using the corresponding private key.|
 | Restrictions| An attribute of a license that specifies the conditions under which a client cannot use a media file.|
 | Revenue tracking| A process that logs the number of times a specific license is issued to play a media file.|
