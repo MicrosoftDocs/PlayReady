@@ -357,6 +357,7 @@ The manifest includes the PlayReady Header:
 </DATA>
 </WRMHEADER>
 ```
+---
 
 ## See also
 [PlayReady Test Server Content](http://test.playready.microsoft.com/)
