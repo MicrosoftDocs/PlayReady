@@ -52,7 +52,7 @@ Basically, you could either create your own packager, or you could work with any
 
 ## Using encryption tools
 
-The process to encrypt an asset with multiple DRMs or common technologies is Common Encryption. This process is basically the same as described in [Basic encryption and licensing process](../Overview/simple-end-to-end-system.md#basicprocess), except that the particular key that is going to be used to encrypt the asset is going to be published in a header for PlayReady (and this header is not going to include the value of the keys, but is going to include the value of the KIDs). Then other headers are going to be potentially included in the asset for other DRMs. All those headers will have their own syntax that designates the KIDs or the information required to ultimately access the content keys. But the content keys for this asset are going to be the same for all the DRMs.
+Playready supports the ISO IEC common encryption standard. This process is the same as described in [Basic encryption and licensing process](../Overview/simple-end-to-end-system.md#basicprocess), except headers will be included for other DRMs – each as the payload of the Protection System Specific Header (‘pssh’) box, identified by that DRM’s SystemID. All those headers will have their own syntax that designates the KIDs or the information required to ultimately access the content keys. And the content keys for this asset are going to be the same for all the DRMs.
 
 ![Common Encryption Diagram](../images/common_encryption_diagram.png)
 

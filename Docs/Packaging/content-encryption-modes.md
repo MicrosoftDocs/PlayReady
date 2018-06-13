@@ -26,17 +26,17 @@ This change ensures that services using PlayReady can fully take advantage of a 
 
 The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
-![Common Encryption Modes](../images/ciphermodes.jpg)
+![Common Encryption Modes](../images/common_encryption_modes.png)
 
 PlayReady Clients starting with version 4.0 support AES CBC keys, which allows support the Common Encryption mode 'cbcs'. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady Clients, which allows support the Common Encryption mode 'cenc'. Note that Common Encryption modes 'cens' and 'cbc1' are allowed and technically doable in a PlayReady ecosystem, but not supported.
 
-## Support for AES CBC and 'cbcs'
+## Support for the ‘cbcs’ AES-CBC Encryption Scheme
 
 All clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for clients, though, and signaled to License Servers through an additional property in the license acquisition protocol.
 
 &nbsp;
 
-| |COCKTAIL|AES CTR|AES CBC|
+| |COCKTAIL|'cenc'|'cbcs'|
 |--|--|--|--|
 |PlayReady Client 1.0|supported|supported| not supported |
 |PlayReady Client 2.0|supported|supported| not supported |
@@ -49,8 +49,8 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 **Notes:**
 
-* Windows 10 computers equipped with an Intel Icelake processor or later and supporting HWDRM (SL3000) will support AES CBC starting in 2018.
-* All Xbox units upgraded with the latest update will support AES CBC in 2018.
+* Windows 10 computers equipped with an Intel Icelake processor or later and supporting HWDRM (SL3000) will support 'cbcs' starting in 2018.
+* All Xbox One units upgraded with version 1709 or higher support 'cbcs'.
 * All PlayReady License Servers starting with version 4.0 support issuing licenses with CBC keys.
 
 ## Signaling the ALGID in the PlayReady Header
