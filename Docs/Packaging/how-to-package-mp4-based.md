@@ -17,9 +17,9 @@ ms.technology: drm
 
 The packager needs to encrypt the content. Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the Compliance Rules. 
 
-MP4-based formats are recommended. CMAF is the preferred MP4-based format for PlayReady Clients, Windows 10 and the Xbox.
+MP4-based formats are recommended. CMAF is the preferred MP4-based format for PlayReady Clients, Windows 10 and the Xbox One.
 
-To ensure support on Windows and other Microsoft endpoints, Microsoft recommends using Common Encryption: 'cenc' or 'cbcs'. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
+Microsoft supports the two common encryption schemes which have broad industry acceptance– the ‘cbcs’ AES-CBC and ‘cenc’ AES-CTR protection schemes. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
 
 For more information, see [Content Encryption and Delivery](content-packaging-and-delivery.md)
 
@@ -49,7 +49,7 @@ When a PlayReady client needs to play protected content, it will request a licen
 
 For MP4 ISO files, Microsoft recommends following the ISO format specification and inserting the PlayReady Header in a 'pssh' box.
 
-**Example of a MP4 file containing a PlayReady Object**
+**Example of an MP4 file containing a PlayReady Object**
 
 Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header:
 

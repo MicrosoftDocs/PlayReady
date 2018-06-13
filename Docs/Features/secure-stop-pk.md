@@ -87,4 +87,4 @@ th {
 
 ## See also
 
-[Secure Stop Sever](https://docs.microsoft.com/en-us/playready/overview/secure-stop-server)
+[Secure Stop Server](https://docs.microsoft.com/en-us/playready/overview/secure-stop-server)

@@ -111,10 +111,11 @@ The PlayReady Header (PRH) is used by a Client to locate or acquire a license fo
     </tr>
 </table>
 
-Note (4): Xbox One version 1709 or higher are PlayReady 4.X Clients.
-Note (3): Windows 10 all versions and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (e.g. Smart TVs) released after 2017 are PlayReady 3.X Clients.
-Note (2): Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (e.g. Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
-Note (1): Most non-Windows devices (e.g. Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
+Notes:
+  * (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
+  * (3) Windows 10 all versions and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (e.g. Smart TVs) released after 2017 are PlayReady 3.X Clients.
+  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (e.g. Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+  * (1) Most non-Windows devices (e.g. Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 
 ### 3.2. Syntax Requirements
 

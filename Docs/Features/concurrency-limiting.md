@@ -30,7 +30,7 @@ For more information, see [Scenario: Subscription Content](scenario-subscription
 
 ## Using Limited Duration Licenses
 
-Limited Duration Licenses (LDL) are PlayReady licenses with short duration (e.g. expires one minute after delivery) and with the RealTimeExpiration restriction enabled. *RealTimeExpiration restriction enabled* means that the player is required to enforce the expiration not only at the beginning of a playback session, but also at regular intervals during playback. For more info, see the *Section 7.13* of the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/).
+Limited Duration Licenses (LDL) are PlayReady licenses with short duration (e.g. expires one minute after delivery) and with the RealTimeExpiration restriction enabled. *RealTimeExpiration restriction enabled* means that the player is required to enforce the expiration not only at the beginning of a playback session, but also at regular intervals during playback. For more info, see the *Definition 1.182* of the [Defined Terms for the Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/).
 
 LDLs use short duration licenses that are renewed frequently. When a player plays a stream, let's say that it receives a license for only 1 minute. This license includes the RealTimeExpiration restriction which requires the player to check for expiration in real time during a playback session (applies to PlayReady 3.0 or higher). The license is then renewed 30 seconds later through a proactive license acquisition, triggered by the app. At the end of the first minute, the player binds automatically and seamlessly to the second license, for another minute of playback.
 

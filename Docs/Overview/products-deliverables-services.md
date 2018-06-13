@@ -45,7 +45,7 @@ Here is a figurative view of these levels of product integration, and its transl
 
 [PlayReady Product Versions](product-versions.md)
 
-[License to Use Playready](license-to-use-playready.md)
+[License to Use PlayReady](license-to-use-playready.md)
 
 [PlayReady Compliance and Robustness Rules](compliance-and-robustness-rules.md)
 

@@ -61,13 +61,18 @@ The PlayReady Header is an XML document usually included in the header of a cont
 
 | |PlayReady Header 4.3|PlayReady Header 4.2|PlayReady Header 4.1|PlayReady Header 4.0|
 |--|--|--|--|--|
-|PlayReady Client 1.0| | | |&#10004;|
-|PlayReady Client 2.0| | |&#10004;|&#10004;|
-|PlayReady Client 2.5| | |&#10004;|&#10004;|
-|PlayReady Client 3.0| |&#10004;|&#10004;|&#10004;|
-|PlayReady Client 3.3| |&#10004;|&#10004;|&#10004;|
-|PlayReady Client 4.0|&#10004;|&#10004;|&#10004;|&#10004;|
+|PlayReady Client 4.0<br/> (see note 4)|&#10004;|&#10004;|&#10004;|&#10004;|
+|PlayReady Client 3.3<br/> (see note 3)| |&#10004;|&#10004;|&#10004;|
+|PlayReady Client 3.0<br/> (see note 3)| |&#10004;|&#10004;|&#10004;|
+|PlayReady Client 2.5<br/> (see note 2)| | |&#10004;|&#10004;|
+|PlayReady Client 2.0<br/> (see note 2)| | |&#10004;|&#10004;|
+|PlayReady Client 1.0<br/> (see note 1)| | | |&#10004;|
 
+Notes:
+  * (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
+  * (3) Windows 10 all versions and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (e.g. Smart TVs) released after 2017 are PlayReady 3.X Clients.
+  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (e.g. Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+  * (1) Most non-Windows devices (e.g. Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 &nbsp;
 
 The following is an example of a PlayReady Header v4.2.
