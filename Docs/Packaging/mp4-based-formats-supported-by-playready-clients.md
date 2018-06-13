@@ -29,16 +29,19 @@ Supported in version 1705 or higher with the `<mspr:pro>` tag for On-Demand asse
 
 Supported in version 1607 or higher with the `<mspr:pro>` tag for Live assets.
 
-Supported in version RS5 or higher with the `<cenc:pssh>` tag for On-Demand and Live assets. For increased compatibility, Microsoft recommends to generate DASH manifests that include the PlayReady Objects duplicated in the `<mspr:pro>` and `<cenc:pssh>` tags.
-
-<br/>
 The DASH manifest contains a PlayReady Object including a PlayReady Header using the `<mspr:pro>` tag in the `<Period>` node. If different keys are used for different tracks or bitrates, the DASH manifest may have multiple PlayReady Objects in the multiple `<AdaptationSet>` or `<Representation>` nodes instead.
 
 Note: it is possible to insert the PlayReady Objects inside the init segments of the different `<AdaptationSet>` nodes. If PlayReady Objects are found both in the init segments and in the manifest, the ones in the manifest take precedence.
 
+<br />
+
+DASH manifests with a standard `<cenc:pssh>` tag for On-Demand and Live assets is supported in version RS5 or higher. In this case, the entire content of a pssh box armoured in base 64 is included in the manifest. It is not just a PlayReady Object.
+
+For increased compatibility, Microsoft recommends to generate DASH manifests that include the PlayReady Objects duplicated in the `<mspr:pro>` and `<cenc:pssh>` tags.
+
 #### Sample
 
-DASH Manifest
+DASH Manifest with a `<mspr:pro>` tag
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -52,6 +55,24 @@ DASH Manifest
         <SegmentList duration="4000" timescale="1000">
           <Initialization sourceURL="video/avc1/init.mp4"/>
           <SegmentURL media="video/avc1/seg-1.mp4"/>
+```
+
+DASH Manifest with a `<mspr:pro>` and a `<cenc:pssh>` tag
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD ...>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value=”MSPR 2.0”>
+      <cenc:pssh>
+        <!--base64-encoded PlayReady ‘pssh’ complete box-->
+      </cenc:pssh>
+      <mspr:pro>
+        <!--base64-encoded PlayReady object -->
+      </mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
 ```
 
 MP4 files
