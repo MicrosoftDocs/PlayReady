@@ -25,10 +25,16 @@ ms.technology: drm
 
 #### Supported
 
-The DASH manifest contains a PRO in each AdaptationSet, or in the DASH init segment of each representation
+Supported in version 1705 or higher with the `<mspr:pro>` tag for On-Demand assets. 
 
-- Supported on Windows 10 Fall Creators Update (released October 2017) and above
+Supported in version 1607 or higher with the `<mspr:pro>` tag for Live assets.
 
+Supported in version RS5 or higher with the `<cenc:pssh>` tag for On-Demand and Live assets. For increased compatibility, Microsoft recommends to generate DASH manifests that include the PlayReady Objects duplicated in the `<mspr:pro>` and `<cenc:pssh>` tags.
+
+<br/>
+The DASH manifest contains a PlayReady Object including a PlayReady Header using the `<mspr:pro>` tag in the `<Period>` node. If different keys are used for different tracks or bitrates, the DASH manifest may have multiple PlayReady Objects in the multiple `<AdaptationSet>` or `<Representation>` nodes instead.
+
+Note: it is possible to insert the PlayReady Objects inside the init segments of the different `<AdaptationSet>` nodes. If PlayReady Objects are found both in the init segments and in the manifest, the ones in the manifest take precedence.
 
 #### Sample
 
@@ -53,7 +59,7 @@ MP4 files
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
   [moov] 
-    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL (optional)
     [pssh] pssh box for other DRM
 
 [any segment]
@@ -77,8 +83,9 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 - Same single key for all tracks and representations (bitrates), or different keys for different tracks and representations (bitrates).
 
 #### Supported
-- Supported on Windows 10 Fall Creators Update (released October 2017) and above
-- PlayReady Header in the manifest at the AdaptationSet level, or in the DASH init segment. The single PlayReady Header contains a list of all the KIDs used for all the tracks and representations of the stream.
+Constrained Multi Period DASH is supported in version 1803 and higher.
+
+The DASH manifest contains multiple `<Period>` nodes, which are constrained (e.g. have all the same characteristics like the number of tracks, etc.). In each of these `<Period>` nodes, there are PlayReady Objects inserted at the `<Period>`, `<AdaptationSet>` or `<Representation>` level as different encryption keys are used.
 
 #### Sample
 
@@ -96,6 +103,14 @@ DASH Manifest
         <SegmentList duration="4000" timescale="1000">
           <Initialization sourceURL="video/avc1/init.mp4"/>
           <SegmentURL media="video/avc1/seg-1.mp4"/>
+    ...
+  </Period>
+  <Period>
+    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+      <mspr:pro>...</mspr:pro>
+    </ContentProtection>
+    <AdaptationSet ...>
+
 ```
 
 MP4 files
@@ -103,7 +118,7 @@ MP4 files
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
   [moov] 
-    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL
+    [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL (optional)
     [pssh] pssh box for other DRM
 
 [any segment]
@@ -125,9 +140,13 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
 - Same single key for all tracks and representations (bitrates), or different keys for different tracks and representations (bitrates).
 
 #### Supported
+DASH with Key Rotation using Embedded Licenses is supported in version 1803 or higher.
 
-...
+The manifest or the init segment includes the special `<DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>` PlayReady Header.
 
+The MP4 segments contain in the fragment header `moof/pssh` a PlayReady Leaf License embedded in the content, whenever the content key rotates. These PlayReady Leaf Licenses are bound to the PlayReady Root Licenses of the asset.
+
+The application must include logic to proactively request the Root Licenses.
 
 #### Sample
 
@@ -156,7 +175,7 @@ See [Test Content on the Test Server](http://test.playready.microsoft.com/Conten
   - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `EXT-X-KEY:METHOD=SAMPLE-AES` tag.
   - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-SESSION-KEY:METHOD=SAMPLE-AES` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
 
-- 'cenc' encryption mode, with keys delivered by PlayReady: supported on Windows 10 and the Xbox One, One S, One X since the update of April 2018 ("April 2018 Update")
+- 'cenc' encryption mode, with keys delivered by PlayReady: supported on Windows 10 and the Xbox One, One S, One X in version 1803 or higher.
   - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `EXT-X-KEY:METHOD=SAMPLE-AES-CTR` tag.
   - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-SESSION-KEY:METHOD=SAMPLE-AES-CTR` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
 
@@ -370,9 +389,6 @@ The manifest includes the PlayReady Header:
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
 <DATA>
-  <CUSTOMATTRIBUTES>
-    <IIS_DRM_VERSION>7.1.1572.18</IIS_DRM_VERSION>
-  </CUSTOMATTRIBUTES>
   <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
 </DATA>
 </WRMHEADER>
