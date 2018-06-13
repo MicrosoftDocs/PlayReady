@@ -395,7 +395,7 @@ The manifest includes the PlayReady Header:
 ```
 ---
 
-## Quick Media Support history for Windows 10 and the Xbox One, One S, One X
+## Quick Media Format Support history for Windows 10 and Xbox One
 
 |Release Date|Version, Build Number and Codename|New features|
 | --- | --- | --- | --- | --- |
