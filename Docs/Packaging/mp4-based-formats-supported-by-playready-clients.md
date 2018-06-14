@@ -25,9 +25,9 @@ ms.technology: drm
 
 #### Supported
 
-Supported in version 1705 or higher with the `<mspr:pro>` tag for On-Demand assets. 
+Supported in version 1507 or higher with the `<mspr:pro>` tag for the Live Profile with static manifests (On-Demand content). 
 
-Supported in version 1607 or higher with the `<mspr:pro>` tag for Live assets.
+Supported in version 1703 or higher with the `<mspr:pro>` tag for the Live Profile with dynamic manifests (Live content).
 
 The DASH manifest contains a PlayReady Object including a PlayReady Header using the `<mspr:pro>` tag in the `<Period>` node. If different keys are used for different tracks or bitrates, the DASH manifest may have multiple PlayReady Objects in the multiple `<AdaptationSet>` or `<Representation>` nodes instead.
 
@@ -193,14 +193,14 @@ The application must include logic to proactively request the Root Licenses.
 
 #### Supported
 - 'cbcs' encryption mode, with keys delivered by PlayReady: supported on the Xbox One, One S, One X since the update of January 2018
-  - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `EXT-X-KEY:METHOD=SAMPLE-AES` tag.
-  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-SESSION-KEY:METHOD=SAMPLE-AES` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
+  - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `#EXT-X-KEY:METHOD=SAMPLE-AES` tag.
+  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `#EXT-X-SESSION-KEY:METHOD=SAMPLE-AES` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
 
 - 'cenc' encryption mode, with keys delivered by PlayReady: supported on Windows 10 and the Xbox One, One S, One X in version 1803 or higher.
-  - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `EXT-X-KEY:METHOD=SAMPLE-AES-CTR` tag.
-  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `EXT-X-SESSION-KEY:METHOD=SAMPLE-AES-CTR` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
+  - Each individual playlist must include a PRO that contains a PRH that contains the KID of the playlist, using the `#EXT-X-KEY:METHOD=SAMPLE-AES-CTR` tag.
+  - The master playlist must include a PRO that contains a PRH that contains all the KIDs used in all the playlists, using the `#EXT-X-SESSION-KEY:METHOD=SAMPLE-AES-CTR` tag. Although this tag is not required by the standard, it is required for Windows 10 and the Xbox One/One S/One X to play.
 
-Note: the HLS tag `EXT-X-PLAYREADYHEADER` is supported in version 1803 and higher for legacy purposes. Microsoft still recommends to use the standard `EXT-X-KEY` tag in HLS playlists.
+Note: the HLS tag `#EXT-X-PLAYREADYHEADER` is supported in version 1803 and higher for legacy purposes. Microsoft still recommends to use the standard `#EXT-X-KEY` tag in HLS playlists.
 
 #### Sample
 
@@ -219,13 +219,13 @@ Individual playlist
 #EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,xAEAAAEAAQC6ATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AdgBHAFYAagBOAEsAZwBZAE0ARQBxAHAATwBMAGgAMQBWAGQAUgBUADAAQQA9AD0APAAvAEsASQBEAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA="
 ```
 
-#### EXT-X-PLAYREADYHEADER syntax for MP4-based content
+#### #EXT-X-PLAYREADYHEADER syntax for MP4-based content
 
-Because the non-standard `EXT-X-PLAYREADYHEADER` tag has been used in HLS playlists to carry the PlayReady Header for some time, Windows 10 and the Xbox support this tag in HLS playlists in version 1803 or higher.
+Because the non-standard `#EXT-X-PLAYREADYHEADER` tag has been used in HLS playlists to carry the PlayReady Header for some time, Windows 10 and the Xbox support this tag in HLS playlists in version 1803 or higher.
 
-#### EXT-X-PLAYREADYHEADER syntax for MPEG2-TS-based content
+#### #EXT-X-PLAYREADYHEADER syntax for MPEG2-TS-based content
 
-Some developers have used the `EXT-X-PLAYREADYHEADER` tag in HLS playlists since 2010 to develop MPEG2-TS based PlayReady systems before MP4 file based HLS became prevalent. This format is not supported in Windows 10 or the Xbox in any version. It might be possible though to develop a player application that does the playlist and container parsing and can play these assets in a Windows or Xbox app.
+Some developers have used the `#EXT-X-PLAYREADYHEADER` tag in HLS playlists since 2010 to develop MPEG2-TS based PlayReady systems before MP4 file based HLS became prevalent. This format is not supported in Windows 10 or the Xbox in any version. It might be possible though to develop a player application that does the playlist and container parsing and can play these assets in a Windows or Xbox app.
 
 ```M
 #EXTM3U
@@ -420,12 +420,12 @@ The manifest includes the PlayReady Header:
 
 |Release Date|Version, Build Number and Codename|New features|
 | --- | --- | --- | --- | --- |
-|July 2015|1507 (v10.0.10240.0) TH1|DASH playback for On-Demand content using the `<mspr:pro>` tag.<br/>|
+|July 2015|1507 (v10.0.10240.0) TH1|DASH playback for Live Profile with static manifests using the `<mspr:pro>` tag.<br/>|
 |November 2015|1511 (v10.0.1586.0) TH2||
-|August 2016|1607 (v10.0.14393.0) RS1|DASH playback for Live content with refreshed manifests.|
-|April 2017|1703 (v10.0.15063.0) RS2||
-|October 2017|1709 (v10.0.16299.0) RS3|HLS playback using the `EXT-X-KEY` tag for 'cbcs' (only Xbox).|
-|April 2018|1803 (v10.0.17134.0) RS4|DASH playback for constrained multi-period content.<br/> HLS playback using the `EXT-X-KEY` tag for 'cenc'.<br/> HLS playback using the `EXT-X-PLAYREADYHEADER` tag in m3u8 (for legacy).<br/> Smooth Streaming playback.|
+|August 2016|1607 (v10.0.14393.0) RS1||
+|April 2017|1703 (v10.0.15063.0) RS2|DASH playback for Live Profile with dynamic manifests.|
+|October 2017|1709 (v10.0.16299.0) RS3|HLS playback using the `#EXT-X-KEY` tag for 'cbcs' (only Xbox).|
+|April 2018|1803 (v10.0.17134.0) RS4|DASH playback for constrained multi-period content.<br/> HLS playback using the `#EXT-X-KEY` tag for 'cenc'.<br/> HLS playback using the `#EXT-X-PLAYREADYHEADER` tag in m3u8 (for legacy).<br/> Smooth Streaming playback.|
 |-|RS5|DASH playback using the `<cenc:pssh>` tag.|
 
 ## See also
