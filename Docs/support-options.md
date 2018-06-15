@@ -22,12 +22,13 @@ Starting in March 2018, Microsoft provides technical support to licensed compani
 >[!NOTE]
 >The **Collaborate Portal** and **Connect Portal** are retired. 
 
-## Operations Support
+## Licensing Operations
 
-Microsoft provides support for operations about:
+Microsoft provides legal agreement administration and support for the following:
 
-* PlayReady Licensing Agreements management
-* PlayReady Certificates request and delivery
+* PlayReady Licensing Agreement(s) management
+* PlayReady Certificate and Deliverables (PK and SDK) fulfillment
+* PlayReady royalty reporting and invoicing support 
 
 through:
 
