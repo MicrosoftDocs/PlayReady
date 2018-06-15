@@ -39,26 +39,6 @@ DASH manifests with a standard `<cenc:pssh>` tag for On-Demand and Live assets i
 
 For increased compatibility, Microsoft recommends to generate DASH manifests that include the PlayReady Objects duplicated in the `<mspr:pro>` and `<cenc:pssh>` tags.
 
-#### Sample
-
-DASH Manifest with a `<mspr:pro>` tag
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<MPD ...>
-  <Period>
-    <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
-      <mspr:pro>...</mspr:pro>
-    </ContentProtection>
-    <AdaptationSet ...>
-      <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
-        <SegmentList duration="4000" timescale="1000">
-          <Initialization sourceURL="video/avc1/init.mp4"/>
-          <SegmentURL media="video/avc1/seg-1.mp4"/>
-```
-
-DASH Manifest with a `<mspr:pro>` and a `<cenc:pssh>` tag
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <MPD ...>
@@ -74,6 +54,31 @@ DASH Manifest with a `<mspr:pro>` and a `<cenc:pssh>` tag
     <AdaptationSet ...>
       <Representation bandwidth="315108" codecs="avc1.64002A" frameRate="25" height="720" id="video/avc1" scanType="progressive" width="1280">
 ```
+
+#### Sample
+
+DASH Manifest with a `<mspr:pro>` tag, for a 'cenc' encrypted asset
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:mspr="urn:microsoft:playready" mediaPresentationDuration="PT1H58M29.077S" minBufferTime="PT3S">
+    <Period>
+        <AdaptationSet id="1" group="1" profiles="ccff" bitstreamSwitching="false" segmentAlignment="true" contentType="video" mimeType="video/mp4" codecs="avc1.640028" maxWidth="1920" maxHeight="1080" startWithSAP="1">
+            <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="80AA1CD0-A71D-4F86-A939-05FAF9B0CDC5"/>
+            <ContentProtection schemeIdUri="urn:uuid:9A04F079-9840-4286-AB92-E65BE0885F95" value="2.0" cenc:default_KID="80AA1CD0-A71D-4F86-A939-05FAF9B0CDC5">
+                <mspr:pro>TgMAAAEAAQBEAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AMABCAHkAcQBnAEIAMgBuAGgAawArAHAATwBRAFgANgArAGIARABOAHgAUQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBJAEkAdgBrAGEATgBOAGIAMwBtAGMAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwB0AHIAYQBpAG4AcAByAC4AawBlAHkAZABlAGwAaQB2AGUAcgB5AC4AYwBlAG4AdAByAGEAbAB1AHMALgBtAGUAZABpAGEALgBhAHoAdQByAGUALgBuAGUAdAAvAFAAbABhAHkAUgBlAGEAZAB5AC8APAAvAEwAQQBfAFUAUgBMAD4APABDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTAD4APABJAEkAUwBfAEQAUgBNAF8AVgBFAFIAUwBJAE8ATgA+ADgALgAwAC4AMQA4ADAANQAuADMAMwA8AC8ASQBJAFMAXwBEAFIATQBfAFYARQBSAFMASQBPAE4APgA8AC8AQwBVAFMAVABPAE0AQQBUAFQAUgBJAEIAVQBUAEUAUwA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
+            </ContentProtection>
+            <SegmentTemplate timescale="10000000" media="QualityLevels($Bandwidth$)/Fragments(video=$Time$,format=mpd-time-csf)" initialization="QualityLevels($Bandwidth$)/Fragments(video=i,format=mpd-time-csf)">
+                <SegmentTimeline>
+                    <S d="20000000" r="3553"/>
+                    <S d="10000000"/>
+                </SegmentTimeline>
+            </SegmentTemplate>
+            <Representation id="1_V_video_1" bandwidth="2984405" width="1920" height="1080"/>
+            <Representation id="1_V_video_2" bandwidth="2603504" width="1920" height="1080"/>
+```
+
+DASH Manifest with a `<mspr:pro>` and a `<cenc:pssh>` tag
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -95,6 +100,24 @@ DASH Manifest with a `<mspr:pro>` and a `<cenc:pssh>` tag
     </SegmentTemplate>
 
     <Representation id="1_V_video_1" bandwidth="6000000" width="1920" height="1080"/>
+```
+
+DASH Manifest with a `<mspr:pro>` tag, for a 'cbcs' encrypted asset
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="static" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:mspr="urn:microsoft:playready" mediaPresentationDuration="PT10M56.907S" minBufferTime="PT4S">
+  <Period>
+    <AdaptationSet id="1" group="1" profiles="ccff" bitstreamSwitching="true" segmentAlignment="true" contentType="video" mimeType="video/mp4" codecs="avc1.640028" maxWidth="1920" maxHeight="1080" startWithSAP="1">
+        <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="10000000-1000-1000-1000-100000000001"/>
+        <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
+            <mspr:pro>PABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMwAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcAA6AC8ALwBlAHgAcABlAHIAaQBtAGUAbgB0AGEAbAAxAC4AYQB6AHUAcgBlAHcAZQBiAHMAaQB0AGUAcwAuAG4AZQB0AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBjAGYAZwA9ACgAYwBrADoAVwAzADEAYgBmAFYAdAA5AFcAMwAxAGIAZgBWAHQAOQBXADMAMQBiAGYAUQA9AD0ALABjAGsAdAA6AEEARQBTADEAMgA4AEIAaQB0AEMAQgBDACkAPAAvAEwAQQBfAFUAUgBMAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAFMAPgA8AEsASQBEACAAQQBMAEcASQBEAD0AIgBBAEUAUwBDAEIAQwAiACAAVgBBAEwAVQBFAD0AIgBBAEEAQQBBAEUAQQBBAFEAQQBCAEEAUQBBAEIAQQBBAEEAQQBBAEEAQQBRAD0APQAiAD4APAAvAEsASQBEAD4APAAvAEsASQBEAFMAPgA8AC8AUABSAE8AVABFAEMAVABJAE4ARgBPAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+        </ContentProtection>
+        <SegmentTemplate timescale="10000000" media="video/bbb_sunflower_1080p_60fps_normal_VIDEO$Number$.mp4"  initialization="video/bbb_sunflower_1080p_60fps_normal_VIDEO0.mp4">
+          <SegmentTimeline>
+            <S d="83166700" />
+            <S d="79166700" />
+            <S d="80333300" />
 ```
 
 MP4 files
