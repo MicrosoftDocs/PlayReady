@@ -1,7 +1,7 @@
 ---
 author: rolandlefranc
 title: Content Packaging and Delivery
-description: The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks.
+description: The basic capability of PlayReady is to protect content from unauthorized use.
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
 keywords: playready content encryption, encryption and delivery
 ms.author: rolefran
@@ -15,7 +15,7 @@ ms.technology: drm
 # Content Packaging and Delivery
 
 
-The basic capability of PlayReady is to protect content from unauthorized use, or unwanted malicious attacks. To do this, your content must first be encrypted, and an associated PlayReady Header be inserted in the content. The system that does this operation is the packager, also known as the encryptor, which is sometimes integrated with the encoder. 
+The basic capability of PlayReady is to protect content from unauthorized use. To do this, your content must first be encrypted, and an associated PlayReady Header be inserted in the content. The system that does this operation is the packager, also known as the encryptor, which is sometimes integrated with the encoder. 
 
 This topic describes various ways to encrypt and deliver your content using PlayReady.
 
@@ -23,7 +23,7 @@ This topic describes various ways to encrypt and deliver your content using Play
 
 The process of encrypting clear content consists of defining one or several encryption keys, using these keys to encrypt the bytes that constitute the content itself, and inserting a DRM header in the content (in the files of the content, or in the manifest if the content has one).
 
-All encrypted content protected by PlayReady must have a PlayReady Header inserted in the encrypted file. This PlayReady Header is used by a PlayReady Client to locate or acquire a license for that particular piece of content. A PlayReady Header is composed of XML strings that are encoded using UTF-16. It includes the key identifiers (KIDs) that are used to encrypt the content, a default URL that the client will use to acquire a license from if no other is provided, and any custom attributes.  
+All encrypted content protected by PlayReady must have a PlayReady Header inserted in the encrypted file. This PlayReady Header is used by a PlayReady Client to locate or acquire a license for that particular piece of content. A PlayReady Header is composed of XML that is encoded in UTF-16. It includes the key identifiers (KIDs) that are used to encrypt the content, a default URL that the client will use to acquire a license from if no other is provided, and any custom attributes.  
 
 Any packager that packages clear content needs to implement a PlayReady Header generator to build the header and embed it in the encrypted content. The PlayReady Header must be implemented according to the [PlayReady Header Specification](../Specifications/playready-header-specification.md). There are multiple ways to create a PlayReady Header generator in your packager: 
 
@@ -35,7 +35,7 @@ Any packager that packages clear content needs to implement a PlayReady Header g
 Your encrypted content can contain multiple DRM headers, including PlayReady Headers along with third-party DRM headers. For more information on how this works, see [Using encryption tools](#encryptiontools).
 
 ### Content Type
-PlayReady can be used to protect audio and video content. Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264), or High Efficiency Video Coding (HEVC) H.265 standards, the AV1 standard, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
+PlayReady can be used to protect audio and video content. The most common types of encoding use with PlayReady are MPEG-4 AVC (H.264), High Efficiency Video Coding (HEVC) H.265 standards, and the AV1 standard. PlayReady is not limited to these standards and can be used with any audio and video format that is supported on the client device.
 
 PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
 
@@ -44,7 +44,7 @@ These non audio/video content types are no longer supported in PlayReady 3.0 and
 
 ## Encryption tools
 
-Microsoft does not include a packager in the PlayReady deliverables. Instead, PlayReady works with Standards in which services commonly use common encryption. Therefore the encryption format is not PlayReady specific, rather it's a function of the file format. The most widely used encryption format today is the Common Encryption ISO Standard format, **ISO/IEC 23001-7**.
+Microsoft does not include a packager as part of the PlayReady deliverables. PlayReady instead provides specifications based on common encryption standards for use by encoders. Therefore the encryption format is not PlayReady specific, rather it's a function of the file format. The most widely used encryption format today is the Common Encryption ISO Standard format, **ISO/IEC 23001-7**.
 
 Basically, you could either create your own packager, or you could work with any type of open source encryptor (such as ffmpeg). In addition, you could work with a professional encoder company if you want to encrypt content with PlayReady (such as Harmonic, Elemental, Ericsson, Wowza, Allegro). Azure Media Services also provides a packaging functionality for clear content.
 
