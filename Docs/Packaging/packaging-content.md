@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: Packaging Content
 description: PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in Clients.
 ms.assetid: "4B45DCD6-73FE-45B4-A5DF-926942695B7B"

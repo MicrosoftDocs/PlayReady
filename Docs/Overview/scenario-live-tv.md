@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: Scenario Live TV
 description: In the live TV scenario, a service sends live streams to users and users' Clients on the Internet or in a closed network.
 ms.assetid: "9c919b0f-c860-9d89-1297-16922e8de0e4"

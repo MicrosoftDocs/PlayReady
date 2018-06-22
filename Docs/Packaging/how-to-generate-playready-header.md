@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: How to generate a PlayReady Header
 description: This page describes how to generate a PlayReady Header in order to encrypt or package audio video content
 ms.assetid: "D2F152D4-D0EC-4B32-9A50-A296670F4563"

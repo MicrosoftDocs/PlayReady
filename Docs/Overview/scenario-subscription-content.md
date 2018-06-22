@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: Scenario Subscription Content
 description: Microsoft PlayReady enables scenarios in which a content owner sells subscriptions to a catalog of music or video using an online media store.
 ms.assetid: "635ac0f9-99cd-365d-3349-f1fd12d2f408"

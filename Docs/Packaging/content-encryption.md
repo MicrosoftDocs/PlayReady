@@ -1,5 +1,5 @@
 ﻿---
-author: rolandlefranc
+author: dougklopfenstein
 title: PlayReady Content Encryption
 description: This topic provides an overview of the encryption algorithms used to protect content in the PlayReady ecosystem.
 ms.assetid: "002abfe2-5478-33da-9fd9-6a1b28f24cdd"

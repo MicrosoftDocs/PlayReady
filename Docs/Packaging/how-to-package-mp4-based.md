@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: How to package MP4-based content for PlayReady
 description: This page describes how to encrypt or package audio video content to prepare for consumption by a PlayReady client
 ms.assetid: "7DF4D94C-1962-49B9-A369-0803EB886235"

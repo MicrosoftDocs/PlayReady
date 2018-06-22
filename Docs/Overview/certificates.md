@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: PlayReady Certificates and Certificate Authority
 description: PlayReady Compliance and Robustness Rules
 ms.assetid: "5522351E-5935-4F94-8F40-F051CAD77CC2"
