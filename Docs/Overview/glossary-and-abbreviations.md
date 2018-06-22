@@ -46,7 +46,10 @@ The following high-level terms are used throughout this documentation.
 | CR| Compliance Rules for PlayReady Products.|
 | CR&RR| Compliance and Robustness Rules.|
 | Cryptographically Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
-| CTR mode | An AES encryption mode. Counter (CTR) mode turns a block cipher into a stream cipher. |
+| CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher.
+|
+| CTR mode | An AES encryption mode. Counter (CTR) mode turns a block cipher into a stream cipher.
+ |
 | Customer | Company that uses PlayReady to build a service or client.|
 | DASH | See MPEG-DASH. |
 | Decrypt | To convert encrypted content back into its original form. |
@@ -110,6 +113,7 @@ The following high-level terms are used throughout this documentation.
 | Policy| The description in the license of the actions permitted or the restrictions on the content.|
 | Private key| The secret half of a public/private key pair used in cryptography. Private keys are typically used to digitally sign a message that can be verified with the corresponding public key, or decrypt a message that has been encrypted with the corresponding public key.|
 | Protect| To encrypt files with a key and add information such as the license acquisition URL.|
+| Protected content| Videos, movies, audio, music, ebooks, executables. May be downloaded and/or streamed.|
 | 'pssh' box | Protection System Specific Header box. An object defined in the Common Encryption Standard that carries DRM specific information. |
 | Public key| The non-secret half of a public/private key pair used in cryptography. Public keys are typically used to encrypt sessions, files, and messages, which are then decrypted using the corresponding private key, or verify the digital signature of a message signed using the corresponding private key.|
 | Restrictions| An attribute of a license that specifies the conditions under which a client cannot use a media file.|

@@ -20,9 +20,15 @@ ms.technology: drm
 
 In addition to the pages on this website, the PlayReady team provides the following documentation:
 
-- [Whitepapers](https://www.microsoft.com/playready/documents/)
+- [PlayReady for Windows 10](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk) Documentation
 
-  Contains whitepapers and public technical specifications for PlayReady. This website is public and can be viewed by anyone.
+- [PlayReady for Windows 8.1](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn468834(v=ieb.10)) Documentation
+
+- [PlayReady Test Server](http://test.playready.microsoft.com/) with a test license server and test content
+
+- PlayReady Product [Home Page](https://www.microsoft.com/PlayReady/)
+
+- Additional [Whitepapers](https://www.microsoft.com/playready/documents/)
 
 <br/>
 <br/>
@@ -47,3 +53,6 @@ In addition to the pages on this website, the PlayReady team provides the follow
 
   Provides training slides (Knowledge Base) that describe how to implement PlayReady Clients and PlayReady Servers. This website is restricted to licensees.
 
+- [PlayReady Licensing Portal](http://wmlalicensing.com)
+
+  Provides information and operations about licensing agreements and certificates
