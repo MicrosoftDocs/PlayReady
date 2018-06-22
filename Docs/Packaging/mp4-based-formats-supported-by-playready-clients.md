@@ -111,7 +111,7 @@ DASH Manifest with a `<mspr:pro>` tag, for a 'cbcs' encrypted asset
     <AdaptationSet id="1" group="1" profiles="ccff" bitstreamSwitching="true" segmentAlignment="true" contentType="video" mimeType="video/mp4" codecs="avc1.640028" maxWidth="1920" maxHeight="1080" startWithSAP="1">
         <ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc" cenc:default_KID="10000000-1000-1000-1000-100000000001"/>
         <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95" value="2.0" cenc:default_KID="10000000-1000-1000-1000-100000000001">
-            <mspr:pro>PABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMwAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcAA6AC8ALwBlAHgAcABlAHIAaQBtAGUAbgB0AGEAbAAxAC4AYQB6AHUAcgBlAHcAZQBiAHMAaQB0AGUAcwAuAG4AZQB0AC8AcgBpAGcAaAB0AHMAbQBhAG4AYQBnAGUAcgAuAGEAcwBtAHgAPwBjAGYAZwA9ACgAYwBrADoAVwAzADEAYgBmAFYAdAA5AFcAMwAxAGIAZgBWAHQAOQBXADMAMQBiAGYAUQA9AD0ALABjAGsAdAA6AEEARQBTADEAMgA4AEIAaQB0AEMAQgBDACkAPAAvAEwAQQBfAFUAUgBMAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAFMAPgA8AEsASQBEACAAQQBMAEcASQBEAD0AIgBBAEUAUwBDAEIAQwAiACAAVgBBAEwAVQBFAD0AIgBBAEEAQQBBAEUAQQBBAFEAQQBCAEEAUQBBAEIAQQBBAEEAQQBBAEEAQQBRAD0APQAiAD4APAAvAEsASQBEAD4APAAvAEsASQBEAFMAPgA8AC8AUABSAE8AVABFAEMAVABJAE4ARgBPAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+            <mspr:pro>uAIAAAEAAQCuAjwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADMALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAOgAvAC8AZQB4AHAAZQByAGkAbQBlAG4AdABhAGwAMQAuAGEAegB1AHIAZQB3AGUAYgBzAGkAdABlAHMALgBuAGUAdAAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4AD8AYwBmAGcAPQAoAGMAawA6AFcAMwAxAGIAZgBWAHQAOQBXADMAMQBiAGYAVgB0ADkAVwAzADEAYgBmAFEAPQA9ACwAYwBrAHQAOgBBAEUAUwAxADIAOABCAGkAdABDAEIAQwApADwALwBMAEEAXwBVAFIATAA+ADwAUABSAE8AVABFAEMAVABJAE4ARgBPAD4APABLAEkARABTAD4APABLAEkARAAgAEEATABHAEkARAA9ACIAQQBFAFMAQwBCAEMAIgAgAFYAQQBMAFUARQA9ACIAQQBBAEEAQQBFAEEAQQBRAEEAQgBBAFEAQQBCAEEAQQBBAEEAQQBBAEEAUQA9AD0AIgA+ADwALwBLAEkARAA+ADwALwBLAEkARABTAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</mspr:pro>
         </ContentProtection>
         <SegmentTemplate timescale="10000000" media="video/bbb_sunflower_1080p_60fps_normal_VIDEO$Number$.mp4"  initialization="video/bbb_sunflower_1080p_60fps_normal_VIDEO0.mp4">
           <SegmentTimeline>
@@ -210,11 +210,15 @@ DASH with Key Rotation using Embedded Licenses is supported in version 1803 or h
 
 The manifest or the init segment includes the special `<DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>` PlayReady Header.
 
-The MP4 segments contain in the fragment header `moof/pssh` a PlayReady Leaf License embedded in the content, whenever the content key rotates. These PlayReady Leaf Licenses are bound to the PlayReady Root Licenses of the asset.
+The init segment optionally contains the default KID(s) used in the box Track Encryption box `tenc` (`moov/trak/mdia/minf/stbl/stsd/sinf/schi/tenc`).
+
+Whenever the content key rotates, the MP4 segment contain the new KID(s) used by the segment in the Sample Group Description Box `sgpd` box (`moof/traf/sgpd/seig`). And it also contains in the fragment header `moof/pssh` a PlayReady Leaf License embedded in the content. These PlayReady Leaf Licenses are bound to the PlayReady Root Licenses of the asset.
 
 The application must include logic to proactively request the Root Licenses.
 
 #### Sample
+
+DASH manifest
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -226,6 +230,27 @@ The application must include logic to proactively request the Root Licenses.
   <StreamIndex ...
 ```
 
+MP4 files
+
+```
+[any segment where the key(s) rotate(s)]
+  [moof] movie fragment header
+    [traf] track fragment
+      [sgpd] Sample Group Description box
+        [seig] List of the KID(s) for this fragment and beyond
+  [mdat] movie fragment data
+```
+
+Example of a MP4 segment file when the key rotates
+
+```
+  [moof]
+    [traf]
+      [sgpd] 00 00 00 2C 73 67 70 64 01 00 00 00 73 65 69 67          ...,sgpd....seig
+             00 00 00 14 00 00 00 01 00 00 01 08 57 48 35 6D          ............WH5m
+             82 C0 40 54 81 BC FD 89 45 2E FF ED                      ..@T....E...
+  [mdat] 
+```
 
 
 # [HLS Static Keys](#tab/case4)
@@ -352,7 +377,18 @@ The application must include logic to proactively request the Root Licenses.
 #### Sample
 
 ```M
-TBD 
+#EXTM3U
+#EXT-X-VERSION:4
+#EXT-X-KEY:METHOD=SAMPLE-AES,KEYFORMAT="com.microsoft.playready",KEYFORMATVERSIONS="1",URI="data:text/plain;charset=UTF-16;base64,8AEAAAEAAQDmATwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADEALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTAD4APABJAEkAUwBfAEQAUgBNAF8AVgBFAFIAUwBJAE8ATgA+ADcALgAxAC4AMQA1ADcAMgAuADEAOAA8AC8ASQBJAFMAXwBEAFIATQBfAFYARQBSAFMASQBPAE4APgA8AC8AQwBVAFMAVABPAE0AQQBUAFQAUgBJAEIAVQBUAEUAUwA+ADwARABFAEMAUgBZAFAAVABPAFIAUwBFAFQAVQBQAD4ATwBOAEQARQBNAEEATgBEADwALwBEAEUAQwBSAFkAUABUAE8AUgBTAEUAVABVAFAAPgA8AC8ARABBAFQAQQA+ADwALwBXAFIATQBIAEUAQQBEAEUAUgA+AA=="
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="aac_UND_2_128",DEFAULT=YES,URI="QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)"
+#EXT-X-STREAM-INF:BANDWIDTH=1138489,RESOLUTION=640x288,CODECS="avc1.640015,mp4a.40.2",AUDIO="audio"
+QualityLevels(970010)/Manifest(video,format=m3u8-aapl)
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=1138489,RESOLUTION=640x288,CODECS="avc1.640015",URI="QualityLevels(970010)/Manifest(video,format=m3u8-aapl,type=keyframes)"
+#EXT-X-STREAM-INF:BANDWIDTH=2376263,RESOLUTION=960x428,CODECS="avc1.64001e,mp4a.40.2",AUDIO="audio"
+QualityLevels(2181139)/Manifest(video,format=m3u8-aapl)
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=2376263,RESOLUTION=960x428,CODECS="avc1.64001e",URI="QualityLevels(2181139)/Manifest(video,format=m3u8-aapl,type=keyframes)"
+#EXT-X-STREAM-INF:BANDWIDTH=3513624,RESOLUTION=1280x572,CODECS="avc1.64001f,mp4a.40.2",AUDIO="audio"
+QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 ```
 
 PlayReady Header in the master playlist and the individual playlists:
@@ -459,6 +495,29 @@ The manifest includes the PlayReady Header:
 </DATA>
 </WRMHEADER>
 ```
+
+PIFF file
+
+```
+[any fragment where the key(s) rotate(s)]
+  [moof] movie fragment header
+    [traf] track fragment
+      [sgpd] Sample Group Description box
+        [seig] List of the KID(s) for this fragment and beyond
+  [mdat] movie fragment data
+```
+
+Example of a MP4 fragment header when the key rotates
+
+```
+  [moof]
+    [traf]
+      [sgpd] 00 00 00 2C 73 67 70 64 01 00 00 00 73 65 69 67          ...,sgpd....seig
+             00 00 00 14 00 00 00 01 00 00 01 08 57 48 35 6D          ............WH5m
+             82 C0 40 54 81 BC FD 89 45 2E FF ED                      ..@T....E...
+  [mdat] 
+```
+
 ---
 
 ## Quick Media Format Support history for Windows 10 and Xbox One
