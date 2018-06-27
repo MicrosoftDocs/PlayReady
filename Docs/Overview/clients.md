@@ -30,6 +30,6 @@ This topic provides a description of the different ways to implement a PlayReady
 
 [Integrating PlayReady in Devices](integrating-in-devices.md)
 
-[PlayReady Individualization](individualization.md) 
+[PlayReady Initialization](initialization.md) 
 
 [PlayReady Revocation](revocation.md) 

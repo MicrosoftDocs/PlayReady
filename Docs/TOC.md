@@ -92,7 +92,7 @@
 
 ### [Integrating PlayReady in Devices](Overview/integrating-in-devices.md)
 
-### [PlayReady Individualization](Overview/individualization.md)
+### [PlayReady Initialization](Overview/initialization.md)
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
