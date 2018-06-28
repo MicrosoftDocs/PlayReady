@@ -39,7 +39,7 @@ Steps:
 The packager just packages and protects the content. It does not define the policies that will be sent to clients by the PlayReady License Server.
 
 
-Once the content is protected, the service can define any set of PlayReady policies to be sent to any client independantly, by inserting them in the license generated for that particular client.
+Once the content is protected, the service can define any set of PlayReady policies to be sent to any client independently, by inserting them in the license generated for that particular client.
 
 That means, the same piece of content, once protected, and identified with its KID or list of KIDs, can be served to a client A with a certain set of playback policies (e.g. play on internal screen, up to the 4K resolution, for 48 hours maximum), while served to a client B with a different set of playback policies (e.g. play on internal and external screens, up to the 1080p resolution maximum, with no time limitation).
 

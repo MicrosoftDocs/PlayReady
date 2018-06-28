@@ -100,7 +100,7 @@ Now, the service may have a more complex map of rights to enforce. Some clients,
 
 In some scenarios, the service wants to change the encryption keys occasionally, typically at program boundaries. For example, a live linear stream has multiple periods with free to air content that you want everyone to have access to, followed by some content that is restricted to subscribers. Changing the encryption keys at program boundaries allows the service to deliver the free to air keys {KIDi1, CKi1} to all users without any restrictions, and deliver the content keys {kidi2, cki2} only to the subscribers that have successfully logged in the service.
 
-Note that this license rotation is not very scalable: every time the encryption keys change, all clients request the new encryption keys using their own license request. This can result is a high peak of license requests in systems with a large number of clients. 
+Note that this license rotation is not very scalable: every time the encryption keys change, all clients request the new encryption keys using their own license request. This can result in a high peak of license requests in systems with a large number of clients. 
 
 ![Content Assets and Encryption Keys (IV)](../images/assets_and_encryption_keys_4.png)
 

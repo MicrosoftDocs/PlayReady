@@ -54,7 +54,7 @@ The following AES encryption modes are supported:
 
 > [!NOTE]
 > PlayReady systems with version 1.X, 2.X and 3.X can only protect files encrypted in CTR mode (Common Encryption mode 'cenc'). 'cens' is not supported.
-> PlayReady systens with version 4.0 and higher can protect files encrypted in CTR mode (Common Encryption modes 'cenc') and in CBC mode (Common Encryption modes 'cbcs'). The other modes 'cens' and 'cbc1' are not supported.
+> PlayReady systems with version 4.0 and higher can protect files encrypted in CTR mode (Common Encryption modes 'cenc') and in CBC mode (Common Encryption modes 'cbcs'). The other modes 'cens' and 'cbc1' are not supported.
 
 
 ### ECC algorithms
