@@ -30,6 +30,8 @@ This topic provides a description of the different ways to implement a PlayReady
 
 [Integrating PlayReady in Devices](integrating-in-devices.md)
 
+[Developing PlayReady Security Level 3000 Clients](developing-sl3000-products.md)
+
 [PlayReady Initialization](initialization.md) 
 
 [PlayReady Revocation](revocation.md) 

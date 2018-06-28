@@ -92,6 +92,8 @@
 
 ### [Integrating PlayReady in Devices](Overview/integrating-in-devices.md)
 
+### [Developing PlayReady Security Level 3000 Clients](Overview/developing-sl3000-products.md)
+
 ### [PlayReady Initialization](Overview/initialization.md)
 
 ### [PlayReady Revocation](Overview/revocation.md)
