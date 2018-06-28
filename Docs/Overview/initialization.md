@@ -49,15 +49,15 @@ Although this unit-level PlayReady Client Certificate includes a Client ID, this
 
 ## When PlayReady Client Initialization is performed
 
-This initialization may be performed in factory before the device is distributed to end users, or performed over the Internet the first time a device is booted, or the first time an application is run.
+This initialization may be performed at the factory before the device is distributed to end users, performed over the Internet the first time a device is booted, or performed the first time an application is run.
 
 Another initialization may also be performed again at regular intervals (like every month) or at particular events (like every time the device gets a major OS update), or very frequently (like every time the device boots). An application should not make any assumptions regarding how often a device is re-initialized (or re-individualized / re-activated / re-provisioned).
 
 
-## Specific case of Windows 10 devices and Xbox
+## Windows 10 devices and Xbox
 
 Windows 10 and Xbox One / One S / One X use PlayReady Remote Provisioning, per application. 
 
-It means, the device will at some point contact a Microsoft server (`xxx.microsoft.com`) to retrieve the *PlayReady Client Initialization data* over the Internet, typically the first time an application requiring DRM is run. And this provisioning is done separately for each application. For web apps running in Microsoft Edge, the provisioning is done separately for each web app.
+It means the device will, at some point, contact a Microsoft server (`xxx.microsoft.com`) to retrieve the PlayReady Client Initialization data over the Internet, typically the first time an application requiring DRM is run. This provisioning is done separately for each application. For web apps running in Microsoft Edge, provisioning is done separately for each web domain.
 
-In addition, as stated above, re-provisioning may occur at any time: every month on some devices, or at every reboot on other, or less frequently on some others. An application should not make any assumptions regarding how often a device is re-provisioned, and should not use the PlayReady Client Initialization data (including the PlayReady Client Certificate, or the Client ID) to uniquely identify a unit.
+In addition, as stated above, re-provisioning may occur at any time: every month on some devices, at every reboot on others, or less frequently on others. An application should not make any assumptions regarding how often a device is re-provisioned, and it should not use the PlayReady Client Initialization data (including the PlayReady Client Certificate or the Client ID) to uniquely identify a unit.
