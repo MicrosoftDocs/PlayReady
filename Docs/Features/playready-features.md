@@ -18,6 +18,10 @@ This section covers PlayReady features in the PlayReady technology.
 
 ## In this section
 
+[PlayReady Domains](domains.md)
+
+[PlayReady Metering](metering.md)
+
 [PlayReady Secure Delete](secure-delete-pk.md)
 
 [PlayReady Secure Stop](secure-stop-pk.md)

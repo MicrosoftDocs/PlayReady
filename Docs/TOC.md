@@ -100,6 +100,10 @@
 
 ## [PlayReady Features](Features/playready-features.md)
 
+### [PlayReady Domains](Features/domains.md)
+
+### [PlayReady Metering](Features/metering.md)
+
 ### [PlayReady Secure Delete](Features/secure-delete-pk.md)
 
 ### [PlayReady Secure Stop](Features/secure-stop-pk.md)
