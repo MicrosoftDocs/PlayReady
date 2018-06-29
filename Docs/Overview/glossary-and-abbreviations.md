@@ -33,8 +33,8 @@ The following high-level terms are used throughout this documentation.
 | CAS | Conditional Access System. |
 | CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher. |
 | 'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. |
-| CDM | See Content Decryption Module. |
-| CENC | See Common Encryption (CENC). |
+| CDM | See [Content Decryption Module](#contdecrypt). |
+| CENC | See [Common Encryption (CENC)](#commencrypt). |
 | 'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. |
 | Certificate | A digitally-signed binary document used to grant and revoke privileges to devices and computers to perform specific operations.|
 | Certificate revocation list (CRL)| A list that maintains the information necessary to disable a device from being able to acquire licenses and play protected content.|
@@ -43,21 +43,21 @@ The following high-level terms are used throughout this documentation.
 | Clear content| A media file that is not encrypted.|
 | Client | Content receiver. May be a device or an application.|
 | CMAF | Common Media Application Format. A multimedia format specified in ISO/IEC 23000-19:2018. |
-| Common Encryption (CENC) | An MPEG Standard that defines encryption and container formats for protected media content. |
+| <a id="commencrypt"></a>Common Encryption (CENC) | An MPEG Standard that defines encryption and container formats for protected media content. |
 | Company Certificate | A Certificate unique to a Company issued by Microsoft for the purpose of issuing other Device/Model Certificates. |
-| Compliance Rules | Compliance Rules specify the required behaviors of PlayReady implementations and the software accessing the implementations. Compliance Rules describe how content may be accessed and passed using specific policy rules. |
-| Content Decryption Module (CDM) | The client component that provides the DRM functionality, including decryption. |
+| <a id="comply"></a>Compliance Rules | Compliance Rules specify the required behaviors of PlayReady implementations and the software accessing the implementations. Compliance Rules describe how content may be accessed and passed using specific policy rules. |
+| <a id="contdecrypt"></a>Content Decryption Module (CDM) | The client component that provides the DRM functionality, including decryption. |
 | Content (protected)| Videos, movies, audio, music, ebooks, executables. May be downloaded and/or streamed.|
 | Content header| Part of the file structure of a PlayReady encrypted file that contains information necessary for a client to decrypt and render the content data. In a packaged file, a content header contains the key identifier, content key, license acquisition URL, and license user interface URL. This content header can also include attributes defined by the content provider.|
 | Content Key | A symmetric key used to encrypt and decrypt Content. |
 | Content Protection Functions | Functions related to protection of Content, including but not limited to authentication, encryption, decryption, Device Certificate signing, output protection, Metering, Secure Clock, Content revocation, key management, rights enforcement, or storing/updating information in the PlayReady Data Stores as such term is described and required in the Microsoft Implementation, to the extent such functions are implemented in a PlayReady Final Product. |
-| CR | See Compliance Rules. |
+| CR | See [Compliance Rules](#comply). |
 | CR&RR | Compliance and Robustness Rules.|
 | Cryptographically Random | Unpredictable, in that no polynomial-time algorithm, given any sequence of bits, can guess the succeeding *K* bits with probability greater than ½^*K* + 1/*P*(*K*) for any (positive) polynomial *P* and sufficiently large *K*. |
 | CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher. |
 | CTR mode | An AES encryption mode. Counter (CTR) mode turns a block cipher into a stream cipher. |
 | Customer | Company that uses PlayReady to build a service or client.|
-| DASH | See MPEG-DASH. |
+| DASH | See [MPEG-DASH](#mpegdash). |
 | Decrypt | To convert encrypted content back into its original form. |
 | Deployment certificate| An XML string used to ensure the Server is running a licensed copy of PlayReady Server SDK.|
 | Device| Usually refers to a physical unit such as mobile phones, set-top boxes, and portable media players.|
@@ -71,23 +71,23 @@ The following high-level terms are used throughout this documentation.
 | DT | Defined Terms for PlayReady Compliance and Robustness Rules.|
 | ECC | Elliptic curve cryptography.|
 | Embedded License Store (ELS)| A record for storing embedded licenses.|
-| EME | See Encrypted Media Extensions. |
+| EME | See [Encrypted Media Extensions](#eme). |
 | Encrypt | To programmatically disguise content to hide its substance.|
-| Encrypted Media Extensions (EME) | A W3C Standard for HTML interfaces that allow HTML5 applications to do DRM operations. See [https://www.w3.org/TR/encrypted-media/](https://www.w3.org/TR/encrypted-media/). |
+| <a id="eme"></a>Encrypted Media Extensions (EME) | A W3C Standard for HTML interfaces that allow HTML5 applications to do DRM operations. See [https://www.w3.org/TR/encrypted-media/](https://www.w3.org/TR/encrypted-media/). |
 | Enhanced Content Protection (ECP) | Content protection measures over and beyond those generally considered sufficient to obtain HD content in the past. |
 | Extensible policies| License rights and restrictions added on to the existing extensible media rights (XMR) policy system to create special policies applicable to specific subsets of the PlayReady ecosystem. These policies are client enforced, and client implementors must elect to enable support for extensible policies.|
-| Extensible media rights (XMR)| A binary schema used for representing licenses within PlayReady.|
-| Final Product | See PFPL. |
-| FPL | See PFPL. |
+| <a id="xmr"></a>Extensible media rights (XMR)| A binary schema used for representing licenses within PlayReady.|
+| Final Product | See [PFPL](#pfpl). |
+| FPL | See [PFPL](#pfpl). |
 | Full Ultra-High Definition Content (Full UHD) | UHD content with Full 4K resolution&mdash;4096 x 2160 pixels.  |
 | Hashed data store (HDS)| A file also know as a PlayReady data store, that contains all licenses, certificates, and related content access protection data associated with a particular client. This file is created by the PlayReady Client runtime when a device is first started and individualized.
 | HLS | HTTP Live Streaming. An adaptive streaming protocol that was introduced by Apple. |
-| IIS | See Internet Information Services. |
+| IIS | See [Internet Information Services](#iis). |
 | Initialization | The process of updating the PlayReady runtime on the client, allowing licenses to be bound to the client. This process increases security by making it difficult to corrupt more than one player at a time.|
 | Integrated Circuit (IC) | A set of electronic circuits on one small plate ("chip") of semiconductor material, normally silicon. |
-| Internet Information Services | Web Server created by Microsoft for use on Windows Server. |
-| Intermediate Product | See PIPL. |
-| IPL | See PIPL. |
+| <a id="iis"></a>Internet Information Services | Web Server created by Microsoft for use on Windows Server. |
+| Intermediate Product | See [PIPL](#pipl). |
+| IPL | See [PIPL](#pipl). |
 | IV (Initialization Vector) | A block of bits enabling multiple instances of a stream or block cipher to produce unique streams despite using the same encryption key. |
 | Key | A piece of data that is required to unlock a packaged media file. This key is included in a separate license.|
 | Key Identifier (KID) | A value that identifies the key for a protected media file.|
@@ -109,7 +109,7 @@ The following high-level terms are used throughout this documentation.
 | Metering response | A confirmation from a metering aggregation service that metering data was successfully reported by a client.|
 | Metering Server | A computer that monitors the number of times an action has been performed on specific content.|
 | Microsoft Implementation | The implementation of PlayReady Functionality provided to a Company as source code, binaries, technical documentation, tools, and/or sample files under the Company’s PlayReady Agreement. |
-| MPEG DASH | Dynamic Adaptive Streaming over HTTP. An adaptive streaming protocol which is an MPEG standard. |
+| <a id="mpegdash"></a>MPEG DASH | Dynamic Adaptive Streaming over HTTP. An adaptive streaming protocol which is an MPEG standard. |
 | MSI installer| A Windows installer file.|
 | NIST algorithms | Algorithms standardized by the National Institute of Standards and Technology of the United States of America. |
 | ODM | Original Design Manufacturer. A company that designs and manufactures a product that is branded by another firm for sale. |
@@ -119,8 +119,8 @@ The following high-level terms are used throughout this documentation.
 | Packaging| The process by which clear content is encrypted to protect it from unlicensed use.|
 | Partner | Company that resells products including PlayReady functionality to customers.|
 | Personally Identifiable Information | Any information that can be used to identify, contact, or locate end users of PlayReady. |
-| PIPL, IPL | PlayReady Intermediate Product Licensee. A company that has signed a PlayReady Intermediate Product License with Microsoft. |
-| PFPL, FPL | PlayReady Final Product Licensee. A company that has signed a PlayReady Final Product License with Microsoft. |
+| <a id="pipl"></a>PIPL, IPL | PlayReady Intermediate Product Licensee. A company that has signed a PlayReady Intermediate Product License with Microsoft. |
+| <a id="pfpl"></a>PFPL, FPL | PlayReady Final Product Licensee. A company that has signed a PlayReady Final Product License with Microsoft. |
 | Player | A client program or control that receives digital media content streamed from a Server or played from local files. Windows Media Player is an example of a player.|
 | PK | PlayReady Device Porting Kit. |
 | PlayReady CA | PlayReady Certificate Authority. Microsoft is the Certificate Authority for PlayReady Client and Server Certificates. |
@@ -153,7 +153,7 @@ The following high-level terms are used throughout this documentation.
 | SDK| Software development kit.|
 | Secrets | <b>Content secrets</b>: Content encryption key. <b>Client secrets</b>: Device unique private key, device PlayReady TEE key. |
 | Secure Clock| A hardware clock that can only be set by specific routines&mdash;it cannot be set by the user.|
-| Secure Code | Any code that is authorized to execute inside the TEE.  |
+| Secure Code | Any code that is authorized to execute inside the [TEE](#tee).  |
 | Secure Delete| The process by which service providers receive a secure acknowledgement when a persistent license is deleted by the application on the client.|
 | Secure Stop| The process by which a client can confidently assert to a media streaming service that media playback has stopped for any given piece of content.|
 | Service | Service that provides protected content to users.|
@@ -162,14 +162,14 @@ The following high-level terms are used throughout this documentation.
 | SL2000 | PlayReady Security Level 2000. |
 | SL3000 | PlayReady Security Level 3000. |
 | SOAP | Simple Object Access Protocol. The protocol used by default between PlayReady Servers and clients. Payloads are XML carried over HTTP or HTTPS. |
-| SOC | See System on a Chip (Soc). |
+| SOC | See [System on a Chip (Soc)](#soc). |
 | SSTP | Smooth Streaming Transport Protocol. An adaptive streaming protocol that was introduced by Microsoft. |
 | Standard Definition Content (SD) | Video with a resolution of 640x480. See High Definition and Ultra-High Definition. |
 | Stream| Digital media that is in the process of being delivered in a continuous flow across a network.|
 | Super distribution| A process by which users help to increase the distribution and sales of packaged files by sharing them with other users.|
-| System on a Chip (SoC) | An integrated circuit (IC) that integrates all components of a computer or other electronic system into a single chip. It may contain digital, analog, mixed-signal, and often radio-frequency functions—all on a single chip substrate. |
-| Trusted Execution Environment (TEE) | A hardware-enforced secure processing environment on a device that: (i) provides a Hardware Root of Trust, (ii) provides a Secure Boot process, (iii) runs only authenticated code that has been approved for use within the secure processing environment, (iv) provides for Secure Execution of PlayReady functionality, and (v) provides a Secure Media Pipeline and has a Certificate Security Level of 3000. |
+| <a id="soc"></a>System on a Chip (SoC) | An integrated circuit (IC) that integrates all components of a computer or other electronic system into a single chip. It may contain digital, analog, mixed-signal, and often radio-frequency functions—all on a single chip substrate. |
+| <a id="tee"></a>Trusted Execution Environment (TEE) | A hardware-enforced secure processing environment on a device that: (i) provides a Hardware Root of Trust, (ii) provides a Secure Boot process, (iii) runs only authenticated code that has been approved for use within the secure processing environment, (iv) provides for Secure Execution of PlayReady functionality, and (v) provides a Secure Media Pipeline and has a Certificate Security Level of 3000. |
 | <a id="ultrahigh"></a>Ultra-High Definition Content (UHD) | Ultra-High Definition content. This is generally defined as content with a resolution of 3840x2160, that is, 4K content. However, this may also be used to include content with any of these following advanced features: Early-window content, Enhanced Chroma, Increased frame rate. |
 | User| Person who consumes content from a service on a client. |
 | UWP | Universal Windows Platform. |
-| XMR| See extensible media rights (XMR). |
+| XMR| See [extensible media rights (XMR)](#xmr). |
