@@ -30,7 +30,7 @@ Companies developing a standalone packager (or a packaging function in an encode
 The following video provides an overall look at packaging PlayReady protected content.
 
 <p></p>
-<video width="1280" height="720" controls> <source src="https://trainpr.streaming.mediaservices.windows.net/ea7e412d-179e-4085-a8ef-d44f41e81705/Packaging%20PlayReady%20Content%20Part.ism/manifest(format=mpd-time-csf)" type="video/mp4"></video>
+<video width="1280" height="720" preload="auto" controls> <source src="https://trainpr.streaming.mediaservices.windows.net/ea7e412d-179e-4085-a8ef-d44f41e81705/Packaging%20PlayReady%20Content%20Part.ism/manifest(format=mpd-time-csf)" type="video/mp4"></video>
 
 
 The following video provides a particular look at packaging PlayReady protected content with rotating keys leveraging PlayReady Embedded Licenses.
