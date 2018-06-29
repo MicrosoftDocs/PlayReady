@@ -19,4 +19,4 @@ There are separate licenses depending on what type of PlayReady product you inte
 
 These licenses provide additional benefits including intellectual property rights, intellectual property protection, and indemnification.
 
-If you are a content provider using third party PlayReady Clients and PlayReady Servers, you do not need a license from Microsoft to encrypt your content with a PlayReady Header. In addition, if you are an encryptor developer, you do not need a license from Microsoft to include a PlayReady Header insertion function in your encryptor code. See [Developing and operating a PlayReady packager](developing-packager.md) for more information.
+If you are a content provider using third party PlayReady Clients and PlayReady Servers, you do not need a license from Microsoft to encrypt your content with a PlayReady Header. In addition, if you are an encryptor developer, you do not need a license from Microsoft to include a PlayReady Header insertion function in your encryptor code. See [Packaging Content](packaging-content.md) for more information.

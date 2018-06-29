@@ -18,8 +18,6 @@ This section covers more advanced features in the PlayReady technology.
 
 ## In this section
 
-[PlayReady Trusted Clocks](trusted-clocks.md) 
-
 [License Chaining](license-chaining.md)
 
 [Embedded Licenses](embedded-licenses.md)
@@ -31,6 +29,10 @@ This section covers more advanced features in the PlayReady technology.
 [Licenses Restricted by Extensible Policy](licenses-restricted-by-extensible-policy.md) 
 
 [PlayReady and Other Protection Technologies](playready-and-other-protection-technologies.md) 
+
+[How to Migrate from Previous Versions of the PK and Server](../Advanced/how-to-migrate.md)
+
+[How to Test PlayReady Clients with Versions of the PlayReady Server SDK](../Advanced/how-to-test-client-server-versions.md)
 
 
 

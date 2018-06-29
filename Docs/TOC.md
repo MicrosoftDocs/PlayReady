@@ -54,15 +54,23 @@
 
 ### [PlayReady Test Server](Overview/test-Server.md)
 
-## [Content Encryption](Overview/content-encryption.md)
+## [Packaging Content](Packaging/packaging-content.md)
 
-### [Content Encryption and Delivery](Overview/content-encryption-and-delivery.md)
+### [Content Packaging and Delivery](Packaging/content-packaging-and-delivery.md)
 
-### [PlayReady Content Encryption Overview](Overview/content-encryption-overview.md)
+### [PlayReady Content Encryption](Packaging/content-encryption.md)
 
-### [PlayReady Content Encryption Modes](Overview/content-encryption-modes.md)
+### [PlayReady Content Encryption Modes](Packaging/content-encryption-modes.md)
 
-###[Developing and Operating a PlayReady Packager](Overview/developing-packager.md)
+### [Developing a PlayReady Packager](Packaging/developing-a-packager.md)
+
+### [Operating a PlayReady Packager](Packaging/operating-a-packager.md)
+
+### [How to generate a PlayReady Header](Packaging/how-to-generate-playready-header.md)
+
+### [How to package MP4-based content](Packaging/how-to-package-mp4-based.md)
+
+### [MP4-based Formats Supported by PlayReady Clients](Packaging/mp4-based-formats-supported-by-playready-clients.md)
 
 ## [PlayReady Servers](Overview/servers.md)
 
@@ -76,7 +84,7 @@
 
 ### [PlayReady Secure Stop Server](Overview/secure-stop-server.md)
 
-### [PlayReady Secure Delete](Overview/secure-delete-server.md)
+### [PlayReady Secure Delete Server](Overview/secure-delete-server.md)
 
 ## [PlayReady Clients](Overview/clients.md)
 
@@ -84,19 +92,27 @@
 
 ### [Integrating PlayReady in Devices](Overview/integrating-in-devices.md)
 
-### [PlayReady Individualization](Overview/individualization.md)
+### [Developing PlayReady Security Level 3000 Clients](Overview/developing-sl3000-products.md)
+
+### [PlayReady Initialization](Overview/initialization.md)
 
 ### [PlayReady Revocation](Overview/revocation.md)
 
-## [PlayReady Communication Protocols](Overview/communication-protocols.md)
+## [PlayReady Features](Features/playready-features.md)
 
-### [PlayReady Client-Server Protocol](Overview/client-server-protocol.md)
+### [PlayReady Domains](Features/domains.md)
 
-### [OEM/App Vendor Services for PlayReady Clients](Overview/Client-playready-services.md)
+### [PlayReady Metering](Features/metering.md)
+
+### [PlayReady Secure Delete](Features/secure-delete-pk.md)
+
+### [PlayReady Secure Stop](Features/secure-stop-pk.md)
+
+### [Concurrency Limiting](Features/concurrency-limiting.md)
+
+### [PlayReady Trusted Clocks](Features/trusted-clocks.md)
 
 ## [PlayReady Advanced Topics](Overview/advanced-topics.md)
-
-### [PlayReady Trusted Clocks](Overview/trusted-clocks.md)
 
 ### [License Chaining](Overview/license-chaining.md)
 
@@ -108,11 +124,19 @@
 
 ### [Licenses Restricted by Extensible Policy](Overview/licenses-restricted-by-extensible-policy.md)
 
+### [PlayReady Communication Protocols](Overview/communication-protocols.md)
+
 ### [PlayReady and Other Protection Technologies](Overview/playready-and-other-protection-technologies.md)
+
+### [How to Migrate from Previous Versions of the PK and Server](Advanced/how-to-migrate.md)
+
+### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Advanced/how-to-test-client-server-versions.md)
 
 ## [Specifications](Specifications/specifications.md)
 
 ### [PlayReady Header Specification](Specifications/playready-header-specification.md)
+
+### [PlayReady Key Seed](Specifications/playready-key-seed.md)
 
 ### [PlayReady Plugin for Android Specification](Specifications/playready-plugin-for-android-specification.md)
 
@@ -120,4 +144,8 @@
 
 ## [Additional Information](Overview/additional-information.md)
 
+## [Support Options](support-options.md)
+
 ## [Glossary and Abbreviations](Overview/glossary-and-abbreviations.md)
+
+## [Normative References](Overview/normative-references.md)

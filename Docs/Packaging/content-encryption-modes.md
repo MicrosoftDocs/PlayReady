@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: PlayReady Content Encryption Modes
 description: This topic provides an overview about content encryption modes in PlayReady systems.
 ms.assetid: "4fcd8a74-5416-44f0-972d-532feab7bfde"
@@ -14,7 +14,7 @@ ms.technology: playreadydpk
 # PlayReady Content Encryption Modes
 
 
-This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption Overview](content-encryption-overview.md). See [Glossary](glossary-and-abbreviations.md) for encryption terms and definitions.
+This topic provides an overview about content encryption modes in PlayReady systems. For an overview about PlayReady and content encryption, see [PlayReady Content Encryption](content-encryption.md). See [Glossary](../Overview/glossary-and-abbreviations.md) for encryption terms and definitions.
 
 PlayReady version 1.0 introduced AES-128 CTR content encryption mode, in addition to the Microsoft-specific COCKTAIL encryption mode previously used in WMDRM (Windows Media Digital Rights Management). *AES-128 CTR* content encryption mode uses AES keys, with a length of 128 bits used on the content files in Counter Mode (CTR).
 
@@ -22,52 +22,57 @@ Starting with version 4.0, PlayReady systems support AES 128 bit keys in both Co
 
 This change ensures that services using PlayReady can fully take advantage of a unique stream and file format across all devices. In addition, Microsoft supports the CMAF (Common Media Application Format) standard, as defined in [ISO/IEC FDIS 23000-19](https://www.iso.org/standard/71975.html).
 
-## Common encryption modes
+## Common Encryption modes
 
 The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
-![Common Encryption Modes](../images/ciphermodes.jpg)
+![Common Encryption Modes](../images/common_encryption_modes.png)
 
-PlayReady Clients starting with version 4.0 support AES CBC keys, which support Common Encryption modes CBC1 and CBCS. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady Clients. Starting with version 4.0, the Common Encryption mode CBCS will also be mainly supported by PlayReady Clients. However, Common Encryption modes CENS and CBC1 are allowed.
+PlayReady Clients starting with version 4.0 support AES CBC keys, which allows support for the Common Encryption mode 'cbcs', in addition to AES CTR keys for the Common Encryption mode 'cenc'. Prior to version 4.0, AES CTR was the mode that had been mainly supported by PlayReady Clients, which allows support for the Common Encryption mode 'cenc'. Note that Common Encryption modes 'cens' and 'cbc1' are allowed and technically doable in a PlayReady ecosystem, but not supported.
 
-## Support for AES CBC and CBCS
+## Support for the ‘cbcs’ AES-CBC Encryption Scheme
 
 All clients built on or after PlayReady PK version 4.0 may support CBC keys. Support is optional for clients, though, and signaled to License Servers through an additional property in the license acquisition protocol.
 
 &nbsp;
 
-| |COCKTAIL|AES CTR|AES CBC|
+| |COCKTAIL|'cenc'|'cbcs'|
 |--|--|--|--|
 |PlayReady Client 1.0|supported|supported| not supported |
 |PlayReady Client 2.0|supported|supported| not supported |
 |PlayReady Client 2.5|supported|supported| not supported |
 |PlayReady Client 3.0| not supported |supported| not supported |
 |PlayReady Client 3.3| not supported |supported| not supported |
-|PlayReady Client 4.0| not supported |supported|supported, optional|
+|PlayReady Client 4.0| not supported |supported|supported |
 
 &nbsp;
 
 **Notes:**
 
-* Windows 10 computers equipped with an Intel Icelake processor or later and supporting HWDRM (SL3000) will support AES CBC starting in 2018.
-* All Xbox units upgraded with the latest update will support AES CBC in 2018.
+* Windows 10 computers equipped with an Intel Ice Lake processor or later and supporting HWDRM (SL3000) will support 'cbcs' starting in 2018.
+* All Xbox One units upgraded with version 1709 or higher support 'cbcs'.
 * All PlayReady License Servers starting with version 4.0 support issuing licenses with CBC keys.
 
 ## Signaling the ALGID in the PlayReady Header
 
-The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. Download the specification [here](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF).
+The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed for a client to decrypt this content. The PlayReady Header has its own specification and versioning. For more information, see [PlayReady Header Specification](../Specifications/playready-header-specification.md).
 
 &nbsp;
 
 | |PlayReady Header 4.3|PlayReady Header 4.2|PlayReady Header 4.1|PlayReady Header 4.0|
 |--|--|--|--|--|
-|PlayReady Client 1.0| | | |&#10004;|
-|PlayReady Client 2.0| | |&#10004;|&#10004;|
-|PlayReady Client 2.5| | |&#10004;|&#10004;|
-|PlayReady Client 3.0| |&#10004;|&#10004;|&#10004;|
-|PlayReady Client 3.3| |&#10004;|&#10004;|&#10004;|
-|PlayReady Client 4.0|&#10004;|&#10004;|&#10004;|&#10004;|
+|PlayReady Client 4.0<br/> (see note 4)|&#10004;|&#10004;|&#10004;|&#10004;|
+|PlayReady Client 3.3<br/> (see note 3)| |&#10004;|&#10004;|&#10004;|
+|PlayReady Client 3.0<br/> (see note 3)| |&#10004;|&#10004;|&#10004;|
+|PlayReady Client 2.5<br/> (see note 2)| | |&#10004;|&#10004;|
+|PlayReady Client 2.0<br/> (see note 2)| | |&#10004;|&#10004;|
+|PlayReady Client 1.0<br/> (see note 1)| | | |&#10004;|
 
+Notes:
+  * (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
+  * (3) Windows 10 all versions and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (e.g. Smart TVs) released after 2017 are PlayReady 3.X Clients.
+  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+  * (1) Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 &nbsp;
 
 The following is an example of a PlayReady Header v4.2.
@@ -153,7 +158,7 @@ Microsoft recommends that encryptors always include the same ALGID value in the 
 
 In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. Clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
 
-In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request by using HTML5 EME APIs.
+In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request using HTML5 EME APIs.
 
 ### How the Client handles a missing ALGID
 

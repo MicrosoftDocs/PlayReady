@@ -1,9 +1,9 @@
 ﻿---
-author: rolandlefranc
-title: PlayReady Content Encryption Overview
-description: This topic provides an overview of the encryption mechanisms and file format concepts used to protect content in the PlayReady ecosystem.
+author: dougklopfenstein
+title: PlayReady Content Encryption
+description: This topic provides an overview of the encryption algorithms used to protect content in the PlayReady ecosystem.
 ms.assetid: "002abfe2-5478-33da-9fd9-6a1b28f24cdd"
-keywords:  PlayReady content encryption overview,  PlayReady protects content
+keywords:  PlayReady content encryption,  PlayReady protects content, ECC, RSA, AES
 ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.technology: drm
 ---
 
 
-# PlayReady Content Encryption Overview
+# PlayReady Content Encryption
 
-This topic provides an overview of the encryption mechanisms and file format concepts used to protect content in the PlayReady ecosystem.
+This topic provides an overview of the encryption algorithms used to protect content in the PlayReady ecosystem.
 
 > [!NOTE]
-> See [Glossary](glossary-and-abbreviations.md) for encryption terms and definitions.
+> See [Glossary](../Overview/glossary-and-abbreviations.md) for encryption terms and definitions.
 
 ## Encryption basics
 
@@ -47,14 +47,14 @@ This topic provides an overview of the encryption mechanisms and file format con
 The following AES encryption modes are supported:
 
 
-  * **AES 128 CTR mode** &mdash; PlayReady systems can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CTR mode of operation. These include the Common Encryption modes CENC (Common Encryption Scheme) and CENS (Common Encryption Scheme using a pattern of unencrypted/encryption bytes), which are defined in ISO/IEC 23001-7.
+  * **AES 128 CTR mode** &mdash; PlayReady systems can protect files and streams where the samples are encrypted in full or where only a pattern of the samples are encrypted, in CTR mode of operation. These include the Common Encryption modes 'cenc' (Common Encryption Scheme) and 'cens' (Common Encryption Scheme using a pattern of unencrypted/encrypted bytes), which are defined in ISO/IEC 23001-7.
 
-  * **AES 128 CBC mode** &mdash; PlayReady systems starting with version 4.0 can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CBC mode of operation. These include the Common Encryption modes CBC1 and CBCS as defined in ISO/IEC 23001-7, and any other format that is encrypted with an AES 128 content key in CBC mode.
+  * **AES 128 CBC mode** &mdash; PlayReady systems starting with version 4.0 can protect files and streams that are either fully or partially encrypted with an AES 128 content key, in CBC mode of operation. These include the Common Encryption modes 'cbc1' and 'cbcs' as defined in ISO/IEC 23001-7, and any other format that is encrypted with an AES 128 content key in CBC mode.
 
 
 > [!NOTE]
-> PlayReady systems with version 1.X, 2.X and 3.X can only protect files encrypted in CTR mode (CENC). CENS is not supported.
-> PlayReady systens with version 4.0 and higher can protect files encrypted in CTR mode (CENC and CENS) and in CBC mode (CBC1 and CBCS).
+> PlayReady systems with version 1.X, 2.X and 3.X can only protect files encrypted in CTR mode (Common Encryption mode 'cenc'). 'cens' is not supported.
+> PlayReady systems with version 4.0 and higher can protect files encrypted in CTR mode (Common Encryption modes 'cenc') and in CBC mode (Common Encryption modes 'cbcs'). The other modes 'cens' and 'cbc1' are not supported.
 
 
 ### ECC algorithms
@@ -80,7 +80,7 @@ For signing licenses, transient keys or data, PlayReady systems use AES OMAC1, w
 ## Runtime and performance considerations
 
 
-When content playback is triggered, the PlayReady Client must perform some steps before initial playback can begin. This includes finding a license, binding, or interpreting the license, decrypting the content key, and finally, preparing decrypt the content. The PlayReady Client stack takes time to bind a license to a piece of content, and this operation is required prior to starting the content decryption and rendering. This means that the time to bind a license impacts the time to first frame when starting a playback, or the gap between tracks. The client developer as well as the application developer might want to consider optimizing their code for runtime and performance issues, to reduce the time to first frame, and allow gapless playback.
+When content playback is triggered, the PlayReady Client must perform some steps before initial playback can begin. This includes finding a license, binding, or interpreting the license, decrypting the content key, and finally, preparing to decrypt the content. The PlayReady Client stack takes time to bind a license to a piece of content, and this operation is required prior to starting the content decryption and rendering. This means that the time to bind a license impacts the time to first frame when starting a playback, or the gap between tracks. The client developer as well as the application developer might want to consider optimizing their code for runtime and performance issues, to reduce the time to first frame, and allow gapless playback.
 
 Protected containers use symmetric key encryption to encrypt the bulk of content. However, public key encryption is used within the license. This is because the license contains the content’s symmetric key, and the Server uses the client’s public key to encrypt the content’s symmetric key.
 
@@ -89,29 +89,3 @@ When it is time to decrypt the content, the client's private key is used to decr
 Private key decryption is more intensive computationally, than symmetric decryption; therefore, interpreting the license is computationally intensive. Once the license has been properly handled, the symmetric key is decrypted and the content may be decrypted using small and fast algorithms.
 
 For applications or devices that are resource-constrained, start-up requires significant time and resources. Once that is complete, however, the resources are freed, decryption may proceed efficiently, and few CPU cycles or system resources are required.
-
-
-
-
-## PlayReady Header
-
-
-The PlayReady Header is an XML fragment that is inserted in the protected content header. The PlayReady Header contains information such as the [key identifier](key-and-key-ids-kids.md) or key identifers (KIDs) of the keys used to encrypt the content, and the default Server URL for license acquisition (LA). Additional information may be added, such as the content ID (CID), owner ID, and other operator-specific data. Other optional information describing additional business rules may be stored in the PlayReady Header. For more information about the PlayReady Header and the PlayReady Object, see the [PlayReady Header Specification](https://www.microsoft.com/playready/documents/).
-
-
-
-
-## Protected audio and video content
-
-
-It is up to the content provider to ensure that their audio and video content has been protected using third party packagers and encoders, and that the encrypted content has been packaged using the appropriate PlayReady Objects. Although the most common type of content encoding conforms to the MPEG-4 AVC (H.264) or High Efficiency Video Coding (HEVC) H.265 standards, packaging and encoding of audio and video content to be protected by PlayReady is not limited to these standards.
-
-
-
-
-## Protected non-audio/video content
-
-
-PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
-
-These non audio/video content types are no longer supported in PlayReady 3.0 and later. 

@@ -16,7 +16,7 @@ ms.technology: drm
 
 This topic provides an overview of the process for a device maker to integrate a PlayReady Client with a device.
 
-The integration of a PlayReady Client in a device is great value. It ensures applications will have access to the best content protection on the device and make easier the implementation of all sorts of video and audio services on the device.
+The integration of a PlayReady Client in a device is of great value. It ensures applications will have access to the best content protection on the device and make the implementation of all sorts of video and audio services on the device easier.
 
 
 ## Architecture
@@ -29,26 +29,26 @@ The following figure shows the PlayReady PK components and how they fit in a dev
 
 ## Process for development, integration and self-certification
 
-1. License the PlayReady Porting Kit (PK) from Microsoft
+1. License the PlayReady Porting Kit (PK) from Microsoft.
 
-2. Port the PK onto the platform
+2. Port the PK onto the platform.
 
-    1. Compile the PK for the platform
-    2. Adapt the functionality in the OEM functions of the DPK to the platform, to provide the basic services needed by the PK (memory, clock, encryption accelerators, video path, etc.)
-    3. Integrate the PK with the video and audio player
-    4. Create an application that enables PlayReady operations on the device, or an API exposed in a SDK that will allow multiple application developers to use them.
+    1. Compile the PK for the platform.
+    2. Adapt the functionality in the OEM functions of the PK to the platform, to provide the basic services needed by the PK (memory, clock, encryption accelerators, video path, and so on).
+    3. Integrate the PK with the video and audio player.
+    4. Create an application that enables PlayReady operations on the device, or an API exposed in an SDK that will allow multiple application developers to use them.
 
 3. Validate the port with respect to the Compliance and Robustness Rules requirements.
 
     1. Test the device towards all applicable requirements.
-    2. Fix any non conformance found. Re-test.
-    3. Optionally use a third party security house or test house
+    2. Fix any non-conformance found. Re-test.
+    3. Optionally use a third party security house or test house.
 
-4. Prepare the device secrets (model-level Client Certificate and associated private keys, or unit-level Client Certificate provisioning service)
+4. Prepare the device secrets (model-level Client Certificate and associated private keys, or unit-level Client Certificate provisioning service).
 
-5. Manufacture and distribute the device to the market
+5. Manufacture and distribute the device to the market.
 
-6. Quarterly report volumes to Microsoft and pay royalties
+6. Quarterly, report volumes to Microsoft and pay royalties.
 
 
 ### Integrating a PlayReady-enabled Chip in a Device

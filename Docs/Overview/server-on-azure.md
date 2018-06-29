@@ -24,7 +24,7 @@ For more information about PlayReady on Azure, see [Announcing Azure Media Servi
 
 All types of PlayReady Servers developed on top of PlayReady Server SDK can run in Azure App Services (also known as Web App), and leverage the full power of Platform as a Service (PaaS).
 
-App Services are scalable, reliable and geo-redundant. They require minimal maintenance.
+App Services are scalable, reliable, and geo-redundant. They require minimal maintenance.
 
 
 ## PlayReady Servers in Virtual Machines

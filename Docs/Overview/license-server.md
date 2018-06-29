@@ -31,16 +31,12 @@ The following figure shows the steps that describe how a client gets a license f
 
 You are not required to develop and deploy your own PlayReady license service. You can obtain these services from a third party, such as a [PlayReady Partner](https://www.microsoft.com/playready/partners/). However, if you do decide to develop your own PlayReady license service, Microsoft provides the PlayReady Server Software Development Kit (SDK) free of charge to those who want to program their own PlayReady License Server. Note that a PlayReady License Server only runs on Windows Server.
 
-&nbsp;
-
 A PlayReady License Server can be developed and deployed in numerous ways:
 
   *  Develop the License Server yourself or through a third party.
   *  Operate the License Server yourself or through an application service provider (ASP).
-  *  Deploy on a physical Server or a virtual Server
+  *  Deploy on a physical Server or a virtual Server.
   *  Deploy on the premises, in a private cloud, or in a public cloud.
-
-&nbsp;
 
 PlayReady Server SDK provides the following functionality for License Servers:
 
@@ -50,7 +46,7 @@ PlayReady Server SDK provides the following functionality for License Servers:
 
 ## Samples
 
-Here is a license request sample:
+The following is a license request sample:
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -129,7 +125,7 @@ Here is a license request sample:
 
 &nbsp;
 
-Here is a license response sample:
+The following is a license response sample:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

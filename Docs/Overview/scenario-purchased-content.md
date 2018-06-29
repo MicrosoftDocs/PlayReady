@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: Scenario Purchased Content
 description: In the purchased content scenario, a content owner sells media to consumers using an online media store.
 ms.assetid: "75bf75de-b445-a957-f804-948a235048e7"
@@ -28,7 +28,7 @@ The purchased content scenario performs the following steps:
 
    1. The service provider transfers unprotected content to the content packager.
 
-   1. The content packager protects the file by using an encryption format that is compatible with PlayReady (for example, MPEG Common Encryption CENC CTR).
+   1. The content packager protects the file by using an encryption format that is compatible with PlayReady (for example, MPEG Common Encryption 'cenc').
 
       This "packaged" file may then be distributed using a variety of methods.
 
@@ -52,4 +52,4 @@ The figure above illustrates either a download-and-play model or a streaming mod
 Optionally, purchased content can be shared across devices using domains and embedded licenses. For more information, see [PlayReady Domains](domain-Server.md) and [Embedded Licenses](embedded-licenses.md).
 
 
-For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-individualization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.
+For content that was purchased to own, users expect the content to play indefinitely on their devices. Services would most likely issue licenses for this content with no expiration at all. However, because users change devices frequently, and because each device may change its PlayReady identity some time (when a re-initialization is run, or when a device is completely reinstalled), services should be ready at any time to re-issue licenses for purchased content that was previously delivered to a user or a device.

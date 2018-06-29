@@ -62,7 +62,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
         </a>
     </li>
     <li>
-        <a href="https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn468834.aspx">
+        <a href="https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn468834(v=ieb.10)">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

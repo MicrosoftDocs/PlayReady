@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: Scenario Subscription Content
 description: Microsoft PlayReady enables scenarios in which a content owner sells subscriptions to a catalog of music or video using an online media store.
 ms.assetid: "635ac0f9-99cd-365d-3349-f1fd12d2f408"
@@ -21,13 +21,13 @@ Microsoft PlayReady enables scenarios in which a content owner sells subscriptio
 Because a PlayReady Server doesn't include any business logic but can, however, be linked to any business logic backend (through web services), the delivery of PlayReady licenses for subscription content can be the same as for rental content. So, the client will request individual licenses for each piece of content (video, music) that has to be played.
 
 
-Note that the service can deliver multiple licenses in one single license response for optimization purposes. For example,in a scenario where the client is playing an episode of a series, the client requests a license for the episode one when the user selects that video. The service may want to deliver licenses for all the episodes of the series at once in order to lower the gap between episodes. Delivering multiple licenses is even more beneficial for music when playing multiple tracks without any gaps.
+Note that the service can deliver multiple licenses in one single license response for optimization purposes. For example, in a scenario where the client is playing an episode of a series, the client requests a license for episode one when the user selects that video. The service may want to deliver licenses for all the episodes of the series at once in order to lower the gap between episodes. Delivering multiple licenses is even more beneficial for music when playing multiple tracks without any gaps.
 
 
 In a subscription model where a large number of content pieces are played (for example, in a music service where the user downloads thousands of tracks to play offline), the client has to manage thousands of different licenses, one for each content. Because this is a subscription service (for example, it requires a monthly renewal), the licenses that are delivered have an expiration at the renewal date of the monthly subscription, and the user expects all the licenses to be renewed when the monthly fee is paid again.
 
 
-To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](license-chaining.md).
+To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](license-chaining.md) and [Trusted Clocks](trusted-clocks.md).
 
 
  ![Subscription Content](../images/image26_9.jpg)
@@ -51,7 +51,7 @@ The most common delivery mechanisms for subscription content is to stream the pr
 ## Streaming subscription content
 
 
-In a subscription scenario, where the subscription allows a certain maximum number of concurrent streams (for example, three streams), the service may want to leverage PlayReady Secure Stop to enforce this number.
+In a subscription scenario, where the subscription allows a certain maximum number of concurrent streams (for example, three streams), the service may want to leverage [PlayReady Secure Stop](secure-stop-pk.md) to enforce this number.
 
 
 With adaptive streaming protocols over HTTP, the stream is HTTP cached and the streaming origin Server gets all the streaming requests. As a consequence, it is non-trivial for the service to count how many clients currently play one stream.
@@ -72,7 +72,7 @@ The following technical aspects should be considered when implementing subscript
 
    *  Other advantages of download delivery is to allow content consumption in environments with zero or low connectivity (for example, subways, commuter trains, airplanes, and so on).
 
-   *  Services that want to do content push may want to leverage PlayReady metering. PlayReady metering allows a service to deliver a persistent license and get notified afterwards if the content has actually been played. Based on this information, the service can push content to a device and pay content owners, or invoice users, based on their actual consumption. Typically, this functionality would be helpful in the following scenario:
+   *  Services that want to do content push may want to leverage [PlayReady metering](metering-server.md). PlayReady metering allows a service to deliver a persistent license and get notified afterwards if the content has actually been played. Based on this information, the service can push content to a device and pay content owners, or invoice users, based on their actual consumption. Typically, this functionality would be helpful in the following scenario:
 
       1. A user has a subscription for a video service.
 

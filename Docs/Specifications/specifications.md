@@ -21,6 +21,8 @@ This section contains a list of public specifications that provide background in
 
 [PlayReady Header Specification](playready-header-specification.md)
 
+[PlayReady Key Seed](playready-key-seed.md)
+
 [PlayReady Plug-in for Android Microsoft Specification](playready-plugin-for-android-specification.md)
 
 [DASH Content Protection using PlayReady](mpeg-dash-playready.md)

@@ -1,5 +1,5 @@
 ---
-author: rolandlefranc
+author: dougklopfenstein
 title: Scenario Rental Content
 description: In rental content, the license delivered for the content specifies an expiration date and time.
 ms.assetid: "30da1be6-dfdc-d98e-261b-cc86c7e6da02"
@@ -42,7 +42,7 @@ A typical example would be:
 
 
 
-Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](trusted-clocks.md).
+Because rental content generally requires start and expiration times, the client will be required to support some type of PlayReady trusted clock. For more information, see [Trusted Clocks](../Features/trusted-clocks.md).
 
 
 The following figure indicates the interactions between clients and Servers in the rental content scenario.
@@ -101,7 +101,7 @@ Rental content can also be downloaded to the client before playback can begin. T
 
 The following technical aspects should be considered when implementing rental content that is downloaded and played.
 
-   *  The content may be downloaded as a simple file through HTTP, if the content is already authored in the right format for the device. Another option is that the client retrieves the successive fragments of an adaptive streaming asset over the streaming protocol (SSTP, DASH, HLS, other) and packs them all on the device's local storage for further play back, in the form of a single fragmented file or a collection of fragment files. The latter allows more sophisticated scenarios like late binding, which is the ability for a client to select different tracks based on its preferences. For example, pick one video quality among multiple qualities, one particular audio track, or a subtitle track, independent of the initial content authoring on the backend.
+   *  The content may be downloaded as a simple file through HTTP, if the content is already authored in the right format for the device. Another option is that the client retrieves the successive segments of an adaptive streaming asset over the streaming protocol (SSTP, DASH, HLS, other) and packs them all on the device's local storage for further play back, in the form of a single segmented file or a collection of segment files. The latter allows more sophisticated scenarios like late binding, which is the ability for a client to select different tracks based on its preferences. For example, pick one video quality among multiple qualities, one particular audio track, or a subtitle track, independent of the initial content authoring on the backend.
 
    *  Download and play rental content can also use either a persistent or non-persistent license. Typically, a predelivery persistent license would be preferred.
 

@@ -41,12 +41,12 @@ by CENC. This represents the most broadly interoperable solution across browsers
 and devices going forward.
 
 ## Continue to run your Silverlight applications
-Given the growing restrictions to run Silverlight applications in modern browsers, users may find difficult to use Silverlight in-browser applications.
-One way to continue offering an existing Silverlight application  on Windows 7 and MacOS to users is to turn it into a Silverlight out-of-browser application, installed with a standalone installer (installer.exe). To do this:
+Given the growing restrictions to run Silverlight applications in modern browsers, users may find it difficult to use Silverlight in-browser applications.
+One way to continue offering an existing Silverlight application on Windows 7 and MacOS to users is to turn it into a Silverlight out-of-browser application, installed with a standalone installer (installer.exe). To do this:
 
-  * Change the application configuration to OUt-Of-Browser
+  * Change the application configuration to Out-Of-Browser.
   * Develop a standalone installer to help users get through the hurdle of installing the application on supported browsers and browser versions.
 
 ## New applications should use an SDK
-Our recommended approach to develop Windows 7 and MacOS applications using PlayReady is to use a PlayReady SDK provided by a Microsoft partner. The SDK may be an Electron SDK, or any other type for Windows or Mac native applications. For more information, see the [list of PlayReady partners](https://www.microsoft.com/playready/partners/).
+Our recommended approach for developing Windows 7 and MacOS applications using PlayReady is to use a PlayReady SDK provided by a Microsoft partner. The SDK may be an Electron SDK, or any other type for Windows or Mac native applications. For more information, see the [list of PlayReady partners](https://www.microsoft.com/playready/partners/).
 
