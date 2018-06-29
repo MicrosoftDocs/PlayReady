@@ -15,7 +15,7 @@ ms.technology: drm
 # PlayReady Header Specification
 
 ## 1. Introduction
-This specification applies to any end product created with the PlayReady Server Software Development Kit, PlayReady Device Porting Kit, PlayReady iOS SDK, PlayReady Android SDK, Microsoft® Silverlight™, and Microsoft device platform (Windows, Windows Phone, Xbox).
+This specification applies to any end product created with the PlayReady Server SDK, PlayReady Device Porting Kit, Windows, Xbox, Windows Phone, and Silverlight.
 
 ### 1.1. Change History
 
