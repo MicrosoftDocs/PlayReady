@@ -1,5 +1,5 @@
 ---
-author: dougklopfenstein
+author:
 title: Content Packaging and Delivery
 description: The basic capability of PlayReady is to protect content from unauthorized use.
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
@@ -30,14 +30,13 @@ Any packager that packages clear content needs to implement a PlayReady Header g
   *  Develop it yourself based on the *PlayReady Header Specification*. 
   *  Use the PlayReady Server SDK API that generates a PlayReady Header. 
   *  Use the Windows 10 API that generates a PlayReady Header. 
-  *  Use the PlayReady Device Porting Kit API that generates a PlayReady Header. 
 
 Your encrypted content can contain multiple DRM headers, including PlayReady Headers along with third-party DRM headers. For more information on how this works, see [Using encryption tools](#encryptiontools).
 
 ### Content Type
-PlayReady can be used to protect audio and video content. The most common types of encoding use with PlayReady are MPEG-4 AVC (H.264), High Efficiency Video Coding (HEVC) H.265 standards, and the AV1 standard. PlayReady is not limited to these standards and can be used with any audio and video format that is supported on the client device.
+PlayReady can be used to protect audio and video content. The most common types of encoding used with PlayReady are MPEG-4 AVC (H.264), High Efficiency Video Coding (HEVC) H.265 standards, and the AV1 standard. PlayReady is not limited to these standards and can be used with any audio and video format that is supported on the client device.
 
-PlayReady version 1 and 2 allows to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
+PlayReady version 1 and 2 allows you to create a protected package containing content that is not limited to audio or video payloads. These packages, referred to as envelopes, can contain files such as a collection of data files and executables (for example, an application distributed by an application store), pictures (for example, screen wallpaper), or ebooks. This content is packaged by encapsulating the files into an envelope file, which can be decrypted in a manner similar to audio/video content.
 
 These non audio/video content types are no longer supported in PlayReady 3.0 and later. 
 
@@ -52,21 +51,21 @@ Basically, you could either create your own packager, or you could work with any
 
 ## Using encryption tools
 
-PlayReady supports the ISO IEC common encryption standard. This process is the same as described in [Basic encryption and licensing process](../Overview/simple-end-to-end-system.md#basicprocess), except headers will be included for other DRMs – each as the payload of the Protection System Specific Header (‘pssh’) box, identified by that DRM’s SystemID. All those headers will have their own syntax that designates the KIDs or the information required to ultimately access the content keys. And the content keys for this asset are going to be the same for all the DRMs.
+PlayReady supports the ISO IEC common encryption standard. This process is the same as described in [Basic encryption and licensing process](../Overview/simple-end-to-end-system.md#basicprocess), except headers will be included for other DRMs &mdash; each as the payload of the Protection System Specific Header (‘pssh’) box, identified by that DRM’s SystemID. All those headers will have their own syntax that designates the KIDs or the information required to ultimately access the content keys. And the content keys for this asset are going to be the same for all the DRMs.
 
 ![Common Encryption Diagram](../images/common_encryption_diagram.png)
 
 ## Using encryption keys
 
-There are many different ways to encrypt your assets. The simplest one to the most sophisticated one depends on how much complexity you want to bring in the system and what the needs of the service are.
+There are many different ways to encrypt your assets. The simplest one to the most sophisticated one depends on how much complexity you want to design in the system and what the needs of the service are.
 
-Let's take for example, an adaptive streaming asset, as shown in the figure below. It has four different video qualities, one audio track, and one subtitle track. It is encoded in segmented MP4 files, with segments of 2.0 seconds each. It is one asset that is served in multiple different formats depending on what the client would prefer to play back. Smooth Streaming, HLS, and DASH are the most common variants. During playback, the client (the video player) is going to successively download the segments of the asset over the network, selecting for each playback time the video segment from the adequate video track, in order to keep playback quality as high as possible, given the constraints of the network bandwidth, the playback speed, and other limited resources like the player capabilities. This logic is known as adaptive streaming playback, governed by some heuristics rules implemented in the player. 
+Let's take for example, an adaptive streaming asset, as shown in the figure below. It has four different video qualities, one audio track, and one subtitle track. It is encoded in segmented MP4 files, with segments of 2.0 seconds each. It is one asset that is served in multiple formats depending on what the client would prefer to play back. Smooth Streaming, HLS, and DASH are the most common variants. During playback, the client (the video player) is going to successively download the segments of the asset over the network, selecting for each playback time the video segment from the adequate video track, in order to keep playback quality as high as possible, given the constraints of the network bandwidth, the playback speed, and other limited resources like the player capabilities. This logic is known as adaptive streaming playback, governed by some heuristics rules implemented in the player. 
 
 ![Content Assets and Playback](../images/content_assets_and_playback.png)
 
 ### Encrypting the asset with just one key
 
-The simplest way to encrypt these assets would be to use a single content key to encrypt everything (typically subtitles are not encrypted - it's not against any rule, but they are usually kept in the clear). Using one content key makes life easy for the License Server because the License Server has to deliver one key {KID, CK}. This key would typically be acquired by the client before playback occurred.
+The simplest way to encrypt these assets would be to use a single content key to encrypt everything (typically subtitles are not encrypted &mdash; it's not against any rule, but they are usually kept in the clear). Using one content key makes life easy for the License Server because the License Server has to deliver one key {KID, CK}. This key would typically be acquired by the client before playback occurred.
 
 ![Content Assets and Encryption Keys (I)](../images/assets_and_encryption_keys_1.png)
 
@@ -88,7 +87,7 @@ Using this additional complexity, the service can ensure that some clients will 
 
 ### Encrypting the asset with one key per track
 
-Now, the service may have a more complex map of rights to enforce. Some clients, depending on their screen size, their robustness, their outputs, and their location, may be allowed to access only some video tracks, some video qualities, and some audio tracks. To ensure the service has full flexibility in enforcing an arbitrary set of restrictions in the future, it may encrypt an asset with a content key specific to each track. For example:
+The service may have a more complex map of rights to enforce. Some clients, depending on their screen size, their robustness, their outputs, and their location, may be allowed to access only some video tracks, some video qualities, and some audio tracks. To ensure the service has full flexibility in enforcing an arbitrary set of restrictions in the future, it may encrypt an asset with a content key specific to each track. For example:
 
   *  A client that is allowed to play only 720p will be delivered a PlayReady license including {kid1, ck1}, {kid2, ck2}, and {kidA, ckA}. 
   *  A client that is allowed to play up to 4K will be delivered a PlayReady license including {kid1, ck1}, {kid2, ck2}, {kid3, ck3}, {kid4, ck4}, and {kidA, ckA}. 
@@ -108,9 +107,9 @@ Note that this license rotation is not very scalable: every time the encryption 
 
 There is an advanced mechanism in PlayReady called scalable key rotation (as opposed to license rotation). This method stores an Embedded License Store (ELS) in the stream of the actual content. In this mechanism, the key used to encrypt the A2 segment itself is called the leaf key {kidA2, ckA2}, and is delivered in the ELS of the segment A2, being itself encrypted with a separate key that is the same for all the segments of track A, called the root key {kidRA, ckRA}. If you are familiar with MPEG-2 TS and the Control Word encryption, this is a similar mechanism except for the encryption is much stronger and is also more flexible.
 
-Let's say this asset is live linear TV. When the client attempts playback, it finds kidRA in the PlayReady Header of the stream manifest, and requests a license for kidRA. The License Server returns a root license for the root key {kidRA, ckRA}. Then the client parses the segment A1 and discovers the ELS in the header of the segment. Parsing this ELS, it finds the leaf license {kidA1, ckA1} in this ELS. Using the root key {kidRA, ckRA} and the leaf license {kidA1, ckA1}, it can get the value of ckA1, and decrypt and render the segment A1. 
+Let's say this asset is live linear TV. When the client attempts playback, it finds kidRA in the PlayReady Header of the stream manifest, and requests a license for kidRA. The License Server returns a root license for the root key {kidRA, ckRA}. Then the client parses segment A1 and discovers the ELS in the header of the segment. Parsing this ELS, it finds the leaf license {kidA1, ckA1} in this ELS. Using the root key {kidRA, ckRA} and the leaf license {kidA1, ckA1}, it can get the value of ckA1, and decrypt and render the segment A1. 
 
-The PlayReady scalable key rotation feature is extremely scalable because it does not require the clients to hit the License Server every time the encryption keys are changed. It keeps the volume of license requests to the lowest possible, as a client only needs one root license from the License Server per stream, or track. It allows encryption keys to rotate as frequently as every segment, typically every 2 seconds if necessary. 
+The PlayReady scalable key rotation feature is extremely scalable because it does not require clients to contact the License Server every time the encryption keys are changed. It keeps the volume of license requests to the lowest possible, as a client only needs one root license from the License Server per stream, or track. It allows encryption keys to rotate as frequently as every segment, typically every two seconds if necessary. 
 
 ![Content Assets and Encryption Keys (V)](../images/assets_and_encryption_keys_5.png)
 

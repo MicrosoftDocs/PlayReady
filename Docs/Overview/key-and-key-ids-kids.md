@@ -70,7 +70,7 @@ No matter how you generate the key, you must be able to verify that it correspon
 When a client makes a license request, it sends the content's PlayReady Header to the license issuer. The license issuer extracts the KID and determines the corresponding key value, using one of the methods described above&mdash;if it uses the key seed mechanism, it just regenerates the key based on the KID and key seed. Then it generates a license including this key, which it sends back to the client in a *license response*.
 
 
-For example, let's say you have a video file. The encoder generates a random KID `123`, which it inserts into the file's PlayReady Header. The encoder also generates a random key value `ABC` to correspond with the KID `123`, and stores them both in the KMS. The encoder asks the KMS for the correct key to encrypt the file with, and encrypts the file with the key `ABC`. When the customer tries to play the file, the client asks the license issuer for a license that corresponds to the KID `123`. The license issuer looks up the KID in the KMS, and responds with a license including the key `ABC`, which allows the client to unlock the file, and the customer to watch it.
+For example, let's say you have a video file. The packager for this content generates a random KID `123`, which it inserts into the file's PlayReady Header. The packager also generates a random key value `ABC` to correspond with the KID `123`, and stores them both in the KMS. The packager asks the KMS for the correct key to encrypt the file with, and encrypts the file with the key `ABC`. When the customer tries to play the file, the client asks the license issuer for a license that corresponds to the KID `123`. The license issuer looks up the KID in the KMS, and responds with a license including the key `ABC`, which allows the client to unlock the file, and the customer to watch it.
 
 > [!NOTE]
 > The license sent by the license issuer to the client (in our example, the license containing the key `ABC`) is encrypted; an attacker can't intercept the key value.
@@ -91,12 +91,12 @@ For example, with a multi-quality video asset with 4K, HD, and SD video tracks a
 Clients will need a license for each of the keys that they have the right to decrypt. Note that delivering multiple licenses can be done by a License Server in a single license response.
 
 In a single asset with multiple tracks, the decision between one key for all tracks or a key for each track is done by the service managing the content, and based on the following criteria:
-- more keys brings more complexity but allows specify at license delivery time what tracks the service want to allow a particular client to decrypt
-- less keys is less complex but does not allow specify at license delivery time what tracks the service want to allow a particular client to decrypt
-- some clients may have limitation that they do not support multiple keys for a single asset
+  * More keys brings more complexity but allows you to specify at license delivery time what tracks the service wants to allow a particular client to decrypt.
+  * Less keys is less complex but does not allow you to specify at license delivery time what tracks the service wants to allow a particular client to decrypt.
+  * Some clients may have the limitation that they do not support multiple keys for a single asset.
 
 > [!NOTE]
-> While PlayReady keys can unlock more than one digital media file, Microsoft is strongly against this.  Using unique keys across all files provides greater security than protecting files with the same key.
+> While PlayReady keys can unlock more than one digital media file, Microsoft is strongly against this. Using unique keys across all files provides greater security than protecting files with the same key.
 
 
 <a id="ID4EEE"></a>
@@ -108,9 +108,9 @@ In a single asset with multiple tracks, the decision between one key for all tra
 
 A single license response can also carry multiple licenses and thus multiple keys to unlock multiple files or tracks in one transaction. This is more efficient than creating multiple responses for multiple licenses, since it only involves one transaction. This can be useful for different scenarios:
 
-   *  One media file is encrypted using multiple keys. For example, the video track is encrypted using Key1, and the audio track is encrypted using Key2. When a client requests a license for KID1, the License Server issues a license response including licenses for KID1 and KID2, so the client has all the keys to decrypt the video and audio tracks of the file. <br/>
-   *  Each song on an album is encrypted using a different key, but a customer has acquired the rights for all of them. When the customer starts playing the first song, the License Server issues a license response including one license for each song on the album, so the client has all the keys needed to play the entire album seamlessly. <br/>
-   *  The key for a channel on live TV is expected to change every 24 hours. When playback starts, the Server sends a license response including the license for the current key, but also a license with the next key, so when the key changes, the client will already have the next key and the change happens seamlessly. <br/>
+   *  One media file is encrypted using multiple keys. For example, the video track is encrypted using Key1, and the audio track is encrypted using Key2. When a client requests a license for KID1, the License Server issues a license response including licenses for KID1 and KID2, so the client has all the keys to decrypt the video and audio tracks of the file.
+   *  Each song on an album is encrypted using a different key, but a customer has acquired the rights for all of them. When the customer starts playing the first song, the License Server issues a license response including one license for each song on the album, so the client has all the keys needed to play the entire album seamlessly.
+   *  The key for a channel on live TV is expected to change every 24 hours. When playback starts, the Server sends a license response including the license for the current key, but also a license with the next key, so when the key changes, the client will already have the next key and the change happens seamlessly.
 
 
 <a id="ID4E4E"></a>

@@ -41,11 +41,11 @@ The porting kit provides the following features:
 
    *  Metering.
 
-   *  Domain join, leave and management for groups of devices.
+   *  Domain join, leave, and management for groups of devices.
 
    *  Secure Stop.
 
-   *  Secure Delete
+   *  Secure Delete.
 
    *  Secure clock and Anti-Rollback clock.
 

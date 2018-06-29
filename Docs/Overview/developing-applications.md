@@ -21,25 +21,21 @@ Many leading OEMs have licensed PlayReady and have implemented a player (based o
 ![PlayReady Client Embedded in Device](../images/client_level_os_soc.png)
 
 
-For example, Microsoft ensures all Windows 10 devices include a PlayReady Client integrated in the Windows OS itself, or in the chip's firmware of the device (TEE), and exposes it through UWP APIs to application developers, but also many Android TV device makers do the same. These devices use various APIs to expose the PlayReady Client to applications, including:
-  - the Universal Windows Platform API on PCs, Xbox
-  - the Java DrmManagerClient API on Android devices
-  - various interfaces on Linux devices
-  - the Javascript EME API on modern web browsers
-  - the CE-HTML HbbTV API on old embedded web browsers
+For example, Microsoft ensures all Windows 10 devices include a PlayReady Client integrated in the Windows OS itself, or in the chip's firmware of the device (TEE), and exposes it through UWP APIs to application developers. But many Android TV device makers do the same. These devices use various APIs to expose the PlayReady Client to applications, including:
 
-<br />
+  * The Universal Windows Platform API on PCs, Xbox
+  * The Java DrmManagerClient API on Android devices
+  * Various interfaces on Linux devices
+  * The Javascript EME API on modern web browsers
+  * The CE-HTML HbbTV API on old embedded web browsers
+
 
 ![PlayReady Client APIs on devices](../images/client_apis.png)
 
-<br />
 
-On these devices, application developers do not need to license PlayReady, or manipulate the PlayReady code or certificate. They just use the SDK provided by the OEM on the platform and run PlayReady operations from within their app, like AcquireLicense(KID), etc.
+On these devices, application developers do not need to license PlayReady, or manipulate the PlayReady code or certificate. They just use the SDK provided by the OEM on the platform and run PlayReady operations from within their app, like AcquireLicense(KID), and so on.
 
 An application developed with this model is not royalty-bearing.
-
-<br/>
-
 
 The following table shows the current availability of a PlayReady Client on various devices.
 
@@ -116,8 +112,6 @@ The following table shows the current availability of a PlayReady Client on vari
   </tr>
 </table>
 
-<br/>
-
 
 ## Devices **not** including a PlayReady Client
 
@@ -127,9 +121,9 @@ Some OEMs have made the choice to not embed a PlayReady Client in their device, 
 
 On these devices, application developers can still run PlayReady operations from within their app, but they need to integrate the PlayReady Client in their application, including PlayReady code and certificates.
 
-The integration of a PlayReady Client in the application requires the application developer to license PlayReady and use an implementation based on the PlayReady Porting Kit in the application.  A company that develops using PlayReady source code must hold a PlayReady Device Development and Intermediate Product Distribution License.
+The integration of a PlayReady Client in the application requires the application developer to license PlayReady and use an implementation based on the PlayReady Device Porting Kit in the application. A company that develops using PlayReady source code must hold a PlayReady Device Development and Intermediate Product Distribution License.
 
-This development requires expertise to harden the application including the PlayReady code and the PlayReady secrets (keys, certificates). Most application developers decide to use a PlayReady SDK developed and maintained by a [Microsoft Partner](https://www.microsoft.com/playready/partners/)).
+This development requires expertise to harden the application, including the PlayReady code and the PlayReady secrets (keys, certificates). Most application developers decide to use a PlayReady SDK developed and maintained by a [Microsoft Partner](https://www.microsoft.com/playready/partners/)).
 
 <a id="developing_applications_windows_xbox"></a>
 
@@ -161,14 +155,14 @@ Developing an application for the models which embed one is as simple as using t
 
 Developing an application for the models which don't embed a PlayReady Client requires the integration of the PlayReady Client in the application itself.
 
-Microsoft Partners develop PlayReady SDKs for Android from the PlayReady Porting Kit, and make them available to application developers. If you have the project of an application using PlayReady on Android, please contact directly the listed [Microsoft Partners](https://www.microsoft.com/playready/partners/) for proposals and quotes.
+Microsoft Partners develop PlayReady SDKs for Android from the PlayReady Porting Kit, and make them available to application developers. If you have a project to develop an application using PlayReady on Android, you can directly contact the listed [Microsoft Partners](https://www.microsoft.com/playready/partners/) for proposals and quotes.
 
 
 ## Developing Applications using PlayReady on iOS, AppleTV OS, MacOS
 
-Apple products do not ship with an embedded PlayReady Client. Though, it is possible to distribute applications for these platforms that integrate a PlayReady Client in the application itself.
+Apple products do not ship with an embedded PlayReady Client. However, it is possible to distribute applications for these platforms that integrate a PlayReady Client in the application itself.
 
-Microsoft Partners can also develop PlayReady SDKs for Apple based OS platforms from the PlayReady Porting Kit, and make them available to application developers. If you have the project of an application using PlayReady on iOS for example, please contact directly the listed [Microsoft Partners](https://www.microsoft.com/playready/partners/) for proposals and quotes.
+Microsoft Partners can also develop PlayReady SDKs for Apple-based OS platforms from the PlayReady Porting Kit, and make them available to application developers. If you have a project to develop an application using PlayReady on iOS for example, you can directly contact the listed [Microsoft Partners](https://www.microsoft.com/playready/partners/) for proposals and quotes.
 
 
 ## Developing Applications using PlayReady in a Web Browser

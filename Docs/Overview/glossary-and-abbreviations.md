@@ -18,7 +18,7 @@ The following high-level terms are used throughout this documentation.
 
 | Term| Definition|
 | --- | --- |
-| 4K | This is generally defined as content with a resolution of 3840x2160. See also Ultra-High Definition (UHD). |
+| 4K | This is generally defined as content with a resolution of 3840x2160. See also [Ultra-High Definition (UHD)](#ultrahigh). |
 | AES | The Advanced Encryption Standard. Typically used to encrypt content protected by PlayReady |
 | AES 128 Content Key | Symmetric key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bit (or 16 bytes), in either mode. |
 | AES 128 CBC Content Key | Symmetric Key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bit (or 16 bytes), in CBC mode. Consider the content key as the compound object { Key Value, ALGID }. |
@@ -169,6 +169,10 @@ The following high-level terms are used throughout this documentation.
 | Super distribution| A process by which users help to increase the distribution and sales of packaged files by sharing them with other users.|
 | System on a Chip (SoC) | An integrated circuit (IC) that integrates all components of a computer or other electronic system into a single chip. It may contain digital, analog, mixed-signal, and often radio-frequency functions—all on a single chip substrate. |
 | Trusted Execution Environment (TEE) | A hardware-enforced secure processing environment on a device that: (i) provides a Hardware Root of Trust, (ii) provides a Secure Boot process, (iii) runs only authenticated code which has been approved for use within the secure processing environment, (iv) provides for Secure Execution of PlayReady functionality, and (v) provides a Secure Media Pipeline and has a Certificate Security Level of 3000. |
+<<<<<<< HEAD
 | Ultra-High Definition Content (UHD) | Ultra-High Definition content. This is generally defined as content with a resolution of 3840x2160 – i.e. 4K content. However, this may also be used to include content with any of these following advanced features: Early-window content, Enhanced Chroma, Increased frame rate. See Full High Definition, Ultra-High Definition and Full 4K Content. || User| Person who consumes content from a service on a client.|
+=======
+| <a id="ultrahigh"></a>Ultra-High Definition Content (UHD) | Ultra-High Definition content. This is generally defined as content with a resolution of 3840x2160 – i.e. 4K content. However, this may also be used to include content with any of these following advanced features: Early-window content, Enhanced Chroma, Increased frame rate. See Full High Definition, Ultra-High Definition and Full 4K Content. || User| Person who consumes content from a service on a client.|
+>>>>>>> dk-working
 | UWP | Universal Windows Platform |
 | XMR| See extensible media rights (XMR).|

@@ -42,27 +42,27 @@ Here is the content flow in the overall system: 
 
 2.  The service packages the clear file: 
 
-    a.  Encrypts the video and audio frames using CK and outputs the protected file.
+    1.  Encrypts the video and audio frames using CK and outputs the protected file.
 
-    b.  Generates a PlayReady Header including the KID, based on the PlayReady specifications, and includes it in the header of the protected file.
+    2.  Generates a PlayReady Header including the KID, based on the PlayReady specifications, and includes it in the header of the protected file.
 
-    c.  Generates a DRM B Header, based on DRM B specifications, and includes it in the header of the protected file.
+    3.  Generates a DRM B Header, based on DRM B specifications, and includes it in the header of the protected file.
 
 3.  The service delivers the protected file to the PlayReady Client:
 
-    a.  The PlayReady Client parses the protected content and discovers the PlayReady Header (among other headers).
+    1.  The PlayReady Client parses the protected content and discovers the PlayReady Header (among other headers).
 
-    b.  The PlayReady Client uses the PlayReady Header information to request a license from the service's PlayReady License Server, which returns a license containing the CK.
+    2.  The PlayReady Client uses the PlayReady Header information to request a license from the service's PlayReady License Server, which returns a license containing the CK.
 
-    c.   The PlayReady Client uses the CK to decrypt the protected content and render it.
+    3.  The PlayReady Client uses the CK to decrypt the protected content and render it.
 
 4.  The service delivers the protected file to the DRM B Client:
 
-    a.  The DRM B Client parses the protected content, discovers the DRM B Header (among other headers).
+    1.  The DRM B Client parses the protected content, discovers the DRM B Header (among other headers).
 
-    b.  The DRM B Client uses the DRM B Header information to request a license from the service's DRM B License Server, which returns a license containing the CK.
+    2.  The DRM B Client uses the DRM B Header information to request a license from the service's DRM B License Server, which returns a license containing the CK.
 
-    c.  The DRM B Client uses the CK to decrypt the protected content and render it.
+    3.  The DRM B Client uses the CK to decrypt the protected content and render it.
 
 For additional information about the MPEG Common Encryption Standard, see: 
 
@@ -85,7 +85,7 @@ For additional information about the MPEG Common Encryption Standard, see: 
 A **PlayEnabler** represents a technology that content from a PlayReady Client is allowed to play to. For example: 
 
    *  A client playing PlayReady-protected content and passing the audio/video to an AirPlay receiver, using the AirPlay link protection.
-   *  A client playing PlayReady-protected content and passing the audio/video to Unknown Output.
+   *  A client playing PlayReady-protected content and passing the audio/video to an Unknown Output.
    *  A client playing PlayReady-protected content and passing the audio/video to a network receiver, protected using DTCP-IP.
 
 A PlayEnabler object is an optional right that a license may contain, if it's set by the service provider when creating the license. If it is present, the client is allowed to play and pass the audio/video signal to the corresponding output. Note that a PlayEnabler involves an Export operation if passing to the corresponding output requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
@@ -98,9 +98,7 @@ A **CopyEnabler**  represents a technology that content from a PlayReady Client 
 > [!NOTE]
 > This is not the operation of copying PlayReady protected content from one location to another, which does not require any right. This is the operation of copying the protected content AND the right or license to play it.
 
- 
-
-For example, a PlayReady Client may decrypt PlayReady content to re-encrypt it using CSS and burn a video DVD. This operation makes a copy of the content (the original PlayReady protect content file still exist on the device, but a copy has been created in a DVD), and involves transcription (PlayReady decryption and CSS re-encryption).
+For example, a PlayReady Client may decrypt PlayReady content to re-encrypt it using CSS and burn a video DVD. This operation makes a copy of the content (the original PlayReady protected content file still exists on the device, but a copy has been created in a DVD), and involves transcription (PlayReady decryption and CSS re-encryption).
 
 A CopyEnabler object is an optional right that a license may contain. If it is present, the client is allowed to copy the content to the corresponding format and storage. Note that a CopyEnabler involves an Export operation if making the corresponding copy requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
 
@@ -115,7 +113,7 @@ A **MoveEnabler** represents a technology that content from a PlayReady Client i
 > [!NOTE]
 > This is not the operation of moving PlayReady protected content from one location to another, which does not require any right. This is the operation of moving the protected content AND the right or license to play it.
 
-For example, a PlayReady Client may decrypt PlayReady content to re-encrypt it using CPRM and store it onto a CPRM enabled drive, then deleting the original PlayReady protected content and license. This operation moves the content (the original PlayReady protect content file no longer exist on the device, but a copy has been created on the Content Protection for Recordable Media (CPRM)-enabled drive), and involves transcription (PlayReady decryption and CSS re-encryption). 
+For example, a PlayReady Client may decrypt PlayReady content to re-encrypt it using Content Protection for Recordable Media (CPRM) and store it on a CPRM enabled drive, then delete the original PlayReady protected content and license. This operation moves the content (the original PlayReady protected content file no longer exists on the device, but a copy has been created on the CPRM-enabled drive), and involves transcription (PlayReady decryption and CSS re-encryption). 
 
 A MoveEnabler object is an optional right that a license may contain. If it is present, the client is allowed to move the content to the corresponding format and storage. Note that a MoveEnabler involves an Export operation if making the corresponding destination format requires transcription (that is, PlayReady decryption and re-encryption with a different encryption key and format). 
 

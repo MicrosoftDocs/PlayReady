@@ -32,7 +32,7 @@ It is strongly recommended that OEMs upgrade their devices to PK4.0 released in 
 | **Pros**  | **Cons - Attention points**  | 
 |:--|:--|
 | Can support SL3000 | Not compatible with Server SDK 1.X |
-| Can implement latest functionalities like SecureStop, SecureDelete, MaxResDecode, etc. |
+| Can implement latest functionalities like SecureStop, SecureDelete, MaxResDecode, and so on |
 | Better Codebase |
 | Ensure new license policies as requested by content owners can be enforced | 
  
@@ -67,7 +67,7 @@ A service upgrade will usually not involve any code changes, but just a recompil
 
 #### Compiling and deploying an updated license handler will need to take into account the following: 
 
-* The project will need to remove references to the old PlayReady libraries and reference the new one prior to recompiling. 
+* The project will need to remove references to the old PlayReady libraries and reference the new ones prior to recompiling. 
 
 * The newer Server SDKs require .NET 4.0 or greater. When upgrading the license service handler from an early version such as 1.52, the target framework will need to be updated in the project properties to that of 4.0 or greater. 
 
@@ -88,7 +88,7 @@ A service upgrade will usually not involve any code changes, but just a recompil
 
 ### Supporting different Server SDK versions for a Service 
 
-It's recommended to migrate to the latest version of the SDK soon after its released. In some cases, however, a service may want to run multiple versions of the Server SDK. This can be due to maintaining legacy and archive services and endpoints that are not easily updated. In this case a service can point new clients to an updated license service while leaving the legacy service untouched. For example, a service may have a number of legacy devices within their ecosystem running a client built with PlayReady PK 1.2. Their new devices are developed using the PlayReady PK 4.0. The new client would need to point to a license service built with Server SDK 2.0 or greater. If both the legacy and new devices use the same application (such as an HTML based app platform), then logic will need to be added to the application to detect the version of the client. The client application can then direct license requests to a newer license service. 
+Microsoft recommends that you migrate to the latest version of the SDK soon after its released. In some cases, however, a service may want to run multiple versions of the Server SDK. This can be due to maintaining legacy and archive services and endpoints that are not easily updated. In this case a service can point new clients to an updated license service while leaving the legacy service untouched. For example, a service may have a number of legacy devices within their ecosystem running a client built with PlayReady PK 1.2. Their new devices are developed using the PlayReady PK 4.0. The new client would need to point to a license service built with Server SDK 2.0 or greater. If both the legacy and new devices use the same application (such as an HTML based app platform), then logic will need to be added to the application to detect the version of the client. The client application can then direct license requests to a newer license service. 
 
 The recommended migration is to update the license service to the latest version of the Server SDK. This can provide compatibility across all devices for many services. A service will need to test across clients to validate compatibility. 
 

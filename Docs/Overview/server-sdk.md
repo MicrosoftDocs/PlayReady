@@ -77,7 +77,7 @@ The following figure shows how the PlayReady Server SDK components interact in t
 
 As shown in the figure, a PlayReady Client interacts with PlayReady Server SDK by following these steps:
 
-   1. The client sends a SOAP message to the Server to initiate an operation.
+   1. The client sends a Simple Object Access Protocol (SOAP) message to the Server to initiate an operation.
 
    1. The SOAP message passes through the Internet Information Services (IIS) and ASP.net components to reach a Web service entry point.
 

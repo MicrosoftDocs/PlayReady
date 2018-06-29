@@ -14,7 +14,7 @@ ms.technology: drm
 
 # PlayReady Product Versions
 
-The following table shows the feature availability for each version of the PlayReady products. Click a version number in the table for more details on the specific features available for that release.
+The following table shows the feature availability for each version of the PlayReady products.
 
 &nbsp;
 >[!div class="mx-tdBreakAll"]
@@ -40,7 +40,7 @@ The following table shows the feature availability for each version of the PlayR
 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
-PlayReady license services maintain backward compatibility for legacy PlayReady devices. For example, a new license service developed with the PlayReady Server SDK 4.0 can deliver licenses to a legacy device which was developed using the PlayReady Device Porting Kit (PK) 1.2 from its initial release (2008).  
+PlayReady license services maintain backward compatibility for legacy PlayReady devices. For example, a new license service developed with the PlayReady Server SDK 4.0 can deliver licenses to a legacy device thatwas developed using the PlayReady Device Porting Kit (PK) 1.2 from its initial release (2008).  
 
 There are, however, some nuances in compatibility as services and devices move into the PlayReady 3.0 and higher releases. PlayReady Clients developed with the 3.0 and higher Device Porting Kit cannot obtain licenses from a license service built prior to the 2011 release of the Server SDK 2.0. Services running earlier versions of the Server SDK will need to upgrade to be compatible with PlayReady 3.0 and higher. 
 

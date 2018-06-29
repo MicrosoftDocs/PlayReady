@@ -28,7 +28,7 @@ The ISO standard ISO/IEC 23001-7 defines four Common Encryption modes.
 
 ![Common Encryption Modes](../images/common_encryption_modes.png)
 
-PlayReady Clients starting with version 4.0 support AES CBC keys, which allows support the Common Encryption mode 'cbcs', in addition to AES CTR keys for the Common Encryption mdoe 'cenc'. Prior to version 4.0, AES CTR is the mode that has been mainly supported by PlayReady Clients, which allows support the Common Encryption mode 'cenc'. Note that Common Encryption modes 'cens' and 'cbc1' are allowed and technically doable in a PlayReady ecosystem, but not supported.
+PlayReady Clients starting with version 4.0 support AES CBC keys, which allows support for the Common Encryption mode 'cbcs', in addition to AES CTR keys for the Common Encryption mode 'cenc'. Prior to version 4.0, AES CTR was the mode that had been mainly supported by PlayReady Clients, which allows support for the Common Encryption mode 'cenc'. Note that Common Encryption modes 'cens' and 'cbc1' are allowed and technically doable in a PlayReady ecosystem, but not supported.
 
 ## Support for the ‘cbcs’ AES-CBC Encryption Scheme
 
@@ -55,7 +55,7 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 ## Signaling the ALGID in the PlayReady Header
 
-The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed, for a client to decrypt this content. The PlayReady Header has its own specification and versioning. For more information, see [PlayReady Header Specification](../Specifications/playready-header-specification.md).
+The PlayReady Header is an XML document usually included in the header of a content file or stream. It describes the PlayReady attributes needed for a client to decrypt this content. The PlayReady Header has its own specification and versioning. For more information, see [PlayReady Header Specification](../Specifications/playready-header-specification.md).
 
 &nbsp;
 
@@ -71,8 +71,8 @@ The PlayReady Header is an XML document usually included in the header of a cont
 Notes:
   * (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
   * (3) Windows 10 all versions and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (e.g. Smart TVs) released after 2017 are PlayReady 3.X Clients.
-  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (e.g. Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
-  * (1) Most non-Windows devices (e.g. Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
+  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+  * (1) Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 &nbsp;
 
 The following is an example of a PlayReady Header v4.2.
@@ -158,7 +158,7 @@ Microsoft recommends that encryptors always include the same ALGID value in the 
 
 In a standard scenario, the encryptor encrypts content and generates the PlayReady Header in the content. The encryptor knows which AES mode it used for encryption; thus, it includes this information in the ALGID property of the PlayReady Header. Clients initiate license requests based on PlayReady Headers parsed out of real content, so the ALGID value is present and valid.
 
-In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request by using HTML5 EME APIs.
+In some scenarios, the client initiates a license request based on a simple KID value (a 128-bit GUID). In this case, the ALGID value in the PlayReady Header inserted in the license request is going to be missing (also known as unspecified). One example is when the client makes a license request using HTML5 EME APIs.
 
 ### How the Client handles a missing ALGID
 

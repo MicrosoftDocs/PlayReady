@@ -17,18 +17,18 @@ ms.technology: drm
 
 The packager needs to encrypt the content. Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the Compliance Rules. 
 
-MP4-based formats are recommended. CMAF is the preferred MP4-based format for PlayReady Clients, Windows 10 and the Xbox One.
+MP4-based formats are recommended. CMAF is the preferred MP4-based format for PlayReady Clients, Windows 10, and Xbox One.
 
-Microsoft supports the two common encryption schemes which have broad industry acceptance– the ‘cbcs’ AES-CBC and ‘cenc’ AES-CTR protection schemes. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
+Microsoft supports the two common encryption schemes which have broad industry acceptance &mdash; the ‘cbcs’ AES-CBC and ‘cenc’ AES-CTR protection schemes. See [*ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*](https://www.iso.org/standard/68042.html)
 
 For more information, see [Content Encryption and Delivery](content-packaging-and-delivery.md)
 
-## Inserting a PlayReady Header into the content
+## Inserting a PlayReady Header in the content
 
-The packager needs to insert the PlayReady Header it has generated into the content. It is typically inserted either in the header of the content files, or in the manifest of streaming assets.
+The packager needs to insert the PlayReady Header it has generated in the content. It is typically inserted either in the header of the content files, or in the manifest of streaming assets.
 
-This header includes default values for information that is needed by a PlayReady client to request a license for this particular content piece.
-For example, a PlayReady client needs to know what Key IDs (KIDs) are used in the asset, so it can request for the key values. It also needs to know the address of a license server that will deliver this license. It optionally needs to know which webpage to render to the user in case a license request is declined by the license server (the user may be directed to a payment page).
+This header includes default values for information that are needed by a PlayReady client to request a license for this particular content piece.
+For example, a PlayReady client needs to know what Key IDs (KIDs) are used in the asset so it can request the key values. It also needs to know the address of a license server that will deliver this license. It optionally needs to know which webpage to render to the user in case a license request is declined by the license server (the user may be directed to a payment page).
 
 Here is an example of a PlayReady Header
 ```xml
@@ -45,13 +45,13 @@ Here is an example of a PlayReady Header
 </WRMHEADER>
 ```
 
-When a PlayReady client needs to play protected content, it will request a license for the content if it hasn't got any yet. To initiate the license request, the app developer may have provisioned the app with hardcoded or dynamic values for the KID array, LA_URL, and the behavior in case of a license request denial. The app has overriden the KID or KA_URL default values. If he hasn't, the client is expected to do the license request based on the default values found in the content header itself.
+When a PlayReady client needs to play protected content, it will request a license for the content if it hasn't got any yet. To initiate the license request, the app developer may have provisioned the app with hardcoded or dynamic values for the KID array, LA_URL, and the behavior in case of a license request denial. The app has overriden the KID or LA_URL default values. If the developer hasn't, the client is expected to do the license request based on the default values found in the content header itself.
 
 For MP4 ISO files, Microsoft recommends following the ISO format specification and inserting the PlayReady Header in a 'pssh' box.
 
 **Example of an MP4 file containing a PlayReady Object**
 
-Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header:
+The following figure shows a segmented MP4 file with a PlayReady Object that contains a PlayReady Header:
 
 ![PlayReady Header in MP4](../images/pro_with_prh.png)
 
@@ -59,7 +59,7 @@ Here is the HEX view of this file:
 
 ![PlayReady Object Hex Dump](../images/pro_with_prh_hexdump3.png)
 
-Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header and another PlayReady Object that contains a PlayReady Embedded License Store:
+The following figure shows a segmented MP4 file with a PlayReady Object that contains a PlayReady Header, and another PlayReady Object that contains a PlayReady Embedded License Store:
 
 ![PlayReady Header and ELS in MP4](../images/pro_with_els.png)
 

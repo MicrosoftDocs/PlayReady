@@ -13,7 +13,7 @@ ms.technology: drm
 
 # Developing PlayReady Security Level 3000 Clients
 
-## Introduction 
+## 1. Introduction 
 
 This page is intended to serve as a step-by-step guide for PlayReady Licensees seeking SL3000 Compliance for PlayReady Intermediate or Final Products. The document outlines the end-to-end process for Intermediate and Final Products and details the requirements for SL3000 Conformant Intermediate Products.
 
@@ -29,13 +29,13 @@ There is no such section detailing the requirements for Final Products, because 
 
 A PlayReady Security Level is a publicly available and widely understood definition of robustness for PlayReady Products. While products may exceed the robustness requirements for a specific PlayReady Security Level, it establishes the minimum bar that must be met by a product in order to consume content requiring the defined level of protection. The [PlayReady Compliance and Robustness Rules](http://www.microsoft.com/playready/licensing/compliance/) updated in April 2015 introduce the PlayReady Security Level 3000 (SL3000), and requirements for PlayReady TEE implementations to meet the hardware security requirements for PlayReady Enhanced Content Protection. PlayReady SL3000 is designed to be sufficient to meet the security standards for a wide range of content producers, including premium Hollywood content.
 
-PlayReady SL3000 Self-Assessment is intended to assist PlayReady Licensees in obtaining distribution rights for UHD (4K), other types of Enhanced Content (e.g. HDR, 3D, etc.), and new Enhanced Content Delivery Models (e.g., early window).
+PlayReady SL3000 Self-Assessment is intended to assist PlayReady Licensees in obtaining distribution rights for UHD (4K), other types of Enhanced Content (for example, HDR, 3D, and so on), and new Enhanced Content Delivery Models (for example, early window).
 
-The security of a PlayReady Product depends critically on the robustness of the PlayReady implementation. A security review, including hardware and firmware, is required for Intermediate Products to qualify for SL3000. The security review is based on the SL3000 Requirements, outlined in Section 4 of this document. This security review must be documented, and the documentation communicated to companies building a Final Products based on this Intermediate Product. This security review can be conducted by a third-party test house, or by the implementer themselves (the IPL).
+The security of a PlayReady Product depends critically on the robustness of the PlayReady implementation. A security review, including hardware and firmware, is required for Intermediate Products to qualify for SL3000. The security review is based on the SL3000 Requirements, outlined in Section 3 of this document. This security review must be documented, and the documentation communicated to companies building a Final Products based on this Intermediate Product. This security review can be conducted by a third-party test house, or by the implementer themselves (the IPL).
 
 ![PlayReady SL3000 IPL Design](../images/sl3000_design_ipl.png)
 
-PlayReady Final Products are not required to be reviewed by a third-party test house to qualify for SL3000 Compliance. However, Final Products that wish to ship with an SL3000 Certificate may only do so when they meet the requirements for SL3000 Compliant Final Products.  This requires the Final Product to utilize an SL3000 Conformant Intermediate Product and conform to the SL3000 Compliance and Robustness rules. 
+PlayReady Final Products are not required to be reviewed by a third-party test house to qualify for SL3000 Compliance. However, Final Products that wish to ship with an SL3000 Certificate may only do so when they meet the requirements for SL3000 Compliant Final Products. This requires the Final Product to utilize an SL3000 Conformant Intermediate Product and conform to the SL3000 Compliance and Robustness rules. 
 
 ![PlayReady SL3000 FPL Design](../images/sl3000_design_fpl.png)
 
@@ -44,11 +44,11 @@ PlayReady Final Products are not required to be reviewed by a third-party test h
 The security of a PlayReady Product depends critically on the robustness of the PlayReady implementation. As such, Microsoft has defined requirements in the [PlayReady Compliance and Robustness rules](http://www.microsoft.com/playready/licensing/compliance/) that all PlayReady Intermediate Products MUST meet or exceed before they can be distributed to Final Product Licensees. The checklist below is a tool for IPLs to document the security review they’ve run on their product before they distribute it. This security review documentation must be communicated to companies building a Final Product based on this Intermediate Product.
 
 The requirements are broken into 5 categories: 
- 1)	CA: Content Accessibility
- 2)	CPR: Content Protection Robustness
- 3)	PKR: PlayReady Device Porting Kit Robustness
- 4)	TEER: PlayReady Trusted Execution Environment (TEE) Robustness
- 5)	TEEC: PlayReady Trusted Execution Environment (TEE) Compliance
+ 1.	CA: Content Accessibility
+ 2.	CPR: Content Protection Robustness
+ 3.	PKR: PlayReady Device Porting Kit Robustness
+ 4.	TEER: PlayReady Trusted Execution Environment (TEE) Robustness
+ 5.	TEEC: PlayReady Trusted Execution Environment (TEE) Compliance
 
 ### SL3000 Requirements for Intermediate Products Test Report – Check List
 
@@ -56,9 +56,9 @@ The requirements are broken into 5 categories:
 
 | Requirement	| Underlying Rule | Title | Requirement | Testing Procedure(s) Overview & Resource Usage | Result |
 | --- | --- | --- | --- | --- | --- |
-| CA-1.1 | RR 2.2.1 | Product Design - TEE | PlayReady Product is clearly designed such that is uses a PlayReady Trusted Execution Environment (TEE). | Architecture Review and Code Review | - |
+| CA-1.1 | RR 2.2.1 | Product Design - TEE | PlayReady Product is clearly designed such that it uses a PlayReady Trusted Execution Environment (TEE). | Architecture Review and Code Review | - |
 | CA-1.2 | RR 2.2.1 | Product Design - TEE | PlayReady Product only uses Content Protection Functions implemented by a PlayReady TEE. |  Architecture Review and Code Review | - |
-| CA-2.1 | RR 2.2.2.1 | Decrypted Content | Decrypted A/V Content must not be readable or be placed outside the PlayReady Trusted Execution Environment.  Decrypted A/V Content must not be available to code running outside the PlayReady TEE | Architecture Review and Code Review. Penetration Tests under tools XYZ | - |
+| CA-2.1 | RR 2.2.2.1 | Decrypted Content | Decrypted A/V Content must not be readable or be placed outside the PlayReady Trusted Execution Environment.  Decrypted A/V Content must not be available to code running outside the PlayReady TEE. | Architecture Review and Code Review. Penetration Tests under tools XYZ | - |
 | CA-2.2 | RR 2.2.2.2 | Application Secrets | Application Secrets must not be available in contiguous cleartext memory except when in use to decrypt Content and/or keying material.  Application Secrets must not be available to code running outside the PlayReady Trusted Execution Environment. | Architecture Review and Code Review | - |
 | CA-3 | RR 2.2.3 | Video Transmission | PlayReady Products must be clearly designed such that when the video portion of Compressed or Uncompressed decrypted A/V Content is transmitted, such data is secure from unauthorized interception using Widely Available Tools, Specialized Tools, or Professional Software Tools and can only with difficulty be intercepted using Professional Hardware Tools. The level of difficulty applicable to Professional Hardware Tools is such that a typical consumer should not be able to use Professional Hardware Tools, with or without instructions, to intercept such data without risk of serious damage to the product or personal injury. | Architecture Review and Code Review | - |
 | CPR-1.1 | RR 3.1.2 | Device Secrets, Protocol Secrets, and Application Secrets | Implemented Content Protection Functions and characteristics set forth in Section 1.2.1 (Discover, reveal, and/or use without authority the Device Secrets, Protocol Secrets, and/or Application Secrets) of the PlayReady Robustness Rules: cannot be defeated or circumvented using Widely Available Tools, Specialized Tools, Professional Software Tools, or any software running outside the PlayReady Trusted Execution Environment. | Architecture Review and Code Review. Penetration Tests under tools XYZ | - |
@@ -105,5 +105,9 @@ The requirements are broken into 5 categories:
 | TEEC-6.1 | CR 19.6.2 | Secure Clock | Secure Clock implemented within PlayReady TEE does not provide a valid time upon being reset. | Etc. | - |
 | TEEC-6.2 | CR 19.6.2 | Secure Clock | Secure Clock can only be set from within the PlayReady TEE. | Etc. | - |
 | TEEC-6.3 | CR 19.6.2 | Secure Clock | Secure Clock can be set on a regular basis. | Etc. | - |
+<<<<<<< HEAD
 | TEEC-6.4 | CR 19.6.3 | Secure Clock | PlayReady TEE reporting that is supports a Secure Clock, uses such Secure Clock to enforce license expiration. | Etc. | - |
+=======
+| TEEC-6.4 | CR 19.6.3 | Secure Clock | PlayReady TEE reporting that it supports a Secure Clock, uses such Secure Clock to enforce license expiration. | Etc. | - |
+>>>>>>> dk-working
 | TEEC-7 | CR 19.8.1 | Key History | Upon updating or changing a key, PlayReady TEE is able to recover all previous keys to decrypt stored content. | Etc. | - |

@@ -20,8 +20,6 @@ Service providers can track which licenses are currently stored and which licens
 Service providers can issue a specific number of persistent licenses to a client, and track the count of licenses on that client’s machine. 
 The Secure Delete feature also satisfies the Encrypted Media Extensions (EME) specification requirement as defined in September 2017, which specifies that a record of license deletion must be sent to the server upon license deletion. 
 
-&nbsp;
-
 The following figure illustrates a Secure Delete flow.
 
 ![secure delete](../images/playready_secure_delete.jpg)

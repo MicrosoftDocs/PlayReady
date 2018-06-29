@@ -24,8 +24,7 @@ Most communication between a PlayReady Client and a PlayReady Server are managed
 
 These SOAP messages can be exchanged over HTTP or HTTPS.
 
-Note that service providers may wrap the protocol into their own custom protocol if they desire. The PlayReady Server SDK, as well as most PlayReady Clients allow access and manipulate the SOAP challenges and responses and extend them or wrap them into another type of protocol.
-
+Note that service providers may wrap the protocol into their own custom protocol if they desire. The PlayReady Server SDK, as well as most PlayReady Clients, allows access to and manipulation of the SOAP challenges and responses to extend them or wrap them in another type of protocol.
 
 Examples of the challenge and response SOAP messages can also be found on a PlayReady Server after installing and configuring IIS for PlayReady.
 

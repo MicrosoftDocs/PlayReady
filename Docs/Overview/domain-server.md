@@ -14,7 +14,7 @@ ms.technology: drm
 
 # PlayReady Domain Server
 
-*PlayReady Domains* is a feature that allows services deliver licenses that are bound to a group (domain) of devices, not just one device. By doing that, devices can then share the content and the license bound to a domain between them, without involving the use of a license server again. The service has full control over what devices are in a certain domain, and how large the domains are.
+*PlayReady Domains* are a feature that allows services to deliver licenses that are bound to a group (domain) of devices, not just one device. By doing that, devices can then share the content and the license bound to a domain between them, without involving the use of a license server again. The service has full control over what devices are in a certain domain, and how large the domains are.
 
 
 A *PlayReady Domain Server*, also known as a *PlayReady Domain Controller*, is a server that receives PlayReady transactions from PlayReady clients to join a domain, leave a domain, or renew their domain certificate.

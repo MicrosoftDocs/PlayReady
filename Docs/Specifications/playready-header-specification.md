@@ -15,7 +15,7 @@ ms.technology: drm
 # PlayReady Header Specification
 
 ## 1. Introduction
-This specification applies to any end product created with the PlayReady Server Software Development Kit, PlayReady Device Porting Kit, PlayReady PC Software Development Kit, PlayReady iOS SDK, PlayReady Android SDK, Microsoft® Silverlight™, and Microsoft device platform (Windows, Windows Phone, Xbox).
+This specification applies to any end product created with the PlayReady Server Software Development Kit, PlayReady Device Porting Kit, PlayReady iOS SDK, PlayReady Android SDK, Microsoft® Silverlight™, and Microsoft device platform (Windows, Windows Phone, Xbox).
 
 ### 1.1. Change History
 
@@ -59,11 +59,11 @@ The Record Type field has one of the following values.
 
 ### 2.2. PlayReady Object Examples
 
-Here is a segmented MP4 file with a PlayReady Object that contains a PlayReady Header:
+The following figure shows a segmented MP4 file with a PlayReady Object that contains a PlayReady Header:
 
 ![PlayReady Object in MP4](../images/pro_with_prh.png)
 
-Here is the HEX view of this MP4 file:
+The following figure shows the HEX view of this MP4 file:
 
 ![PlayReady Object Hex Dump](../images/pro_with_prh_hexdump3.png)
 
@@ -113,9 +113,9 @@ The PlayReady Header (PRH) is used by a Client to locate or acquire a license fo
 
 Notes:
   * (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
-  * (3) Windows 10 all versions and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (e.g. Smart TVs) released after 2017 are PlayReady 3.X Clients.
-  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (e.g. Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
-  * (1) Most non-Windows devices (e.g. Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
+  * (3) Windows 10 (all versions) and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (for example, Smart TVs) released after 2017 are PlayReady 3.X Clients.
+  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+  * (1) Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 
 ### 3.2. Syntax Requirements
 
@@ -192,13 +192,13 @@ PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September
 
 #### 3.3.1. Differences with other versions
 
-Starting with version 4.0, PlayReady SDKs and are able to process the PlayReady Header versions 4.0, 4.1, 4.2 and 4.3. PlayReady SDKs prior to version 4.0 will return an "unsupported version" error when provided with v4.3 headers.
+Starting with version 4.0, PlayReady SDKs and Clients are able to process PlayReady Header versions 4.0, 4.1, 4.2 and 4.3. PlayReady SDKs prior to version 4.0 will return an "unsupported version" error when provided with v4.3 headers.
 
 The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2.0.0:
 
   *  The **WRMHEADER** element’s version attribute is set to the string “4.3.0.0”.
   *  The **ALGID** element located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
-     *  The **ALGID** element located inside the **KID** element may be missing, in a license acquisition request. We recommend that the **ALGID** element has a valid value in the header included in the content.
+     *  The **ALGID** element located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** element has a valid value in the header included in the content.
      *  When the **ALGID** elements are present, and there is more than one **KID** element in the **KIDS** element, all the **ALGID** values must be the same.
      *  When the **ALGID** element is set to “AESCBC”, the **CHECKSUM** attribute must not be included.
 
@@ -293,7 +293,7 @@ PlayReady Header v4.2.0.0 was introduced with PlayReady version 3.0 in April 201
 
 #### 3.4.1. Differences with other versions
 
-PlayReady 3.0 SDKs and later Clients are able to process both the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.2 headers. When using the v4.2 header, the Client has to know what Server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
+PlayReady 3.0 SDKs and later Clients are able to process the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.2 headers. When using the v4.2 header, the Client has to know what Server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
 
 The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1.0.0:
 
@@ -534,7 +534,7 @@ PlayReady Porting Kit 2.0 treats the **CHECKSUM** as optional.
 It is good practice to add an empty Embedded License Store to the PlayReady Object under the following conditions:
 
   *  The PlayReady Object is to be inserted into a content file.
-  * The content may be used in a context of PlayReady domains with embedded licenses.
+  *  The content may be used in a context of PlayReady domains with embedded licenses.
 
 This allows a PlayReady Client to further embed a domain-bound license in the PlayReady Object by simply populating the existing Embedded License Store and saves the effort of having to re-header the entire file with a new PlayReady Object of a larger size than that of the initial one.
 
@@ -557,12 +557,15 @@ For an **ALGID** value set to “AESCTR”, the 16-byte Key ID is encrypted with
 For an **ALGID** value set to “COCKTAIL”, perform the following steps:
 
 1.	A 21-byte buffer is created.
+
 2.	The content key is put in the buffer and the rest of the buffer is filled with zeros.
+
 3.	For five iterations:
 
     a.	buffer = SHA-1 (buffer).
 
 4.	The first 7 bytes of the buffer are extracted and base64 encoded.
+
 5.	After these steps are performed, the base64-encoded bytes are used as the checksum.
 
 ## 6. CUSTOMATTRIBUTES

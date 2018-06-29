@@ -1,5 +1,5 @@
 ---
-author: dougklopfenstein
+author: 
 title: Packaging Content
 description: PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in Clients.
 ms.assetid: "4B45DCD6-73FE-45B4-A5DF-926942695B7B"
@@ -16,13 +16,13 @@ ms.technology: drm
 
 PlayReady helps secure encrypted content by distributing and controlling the use of content encryption keys over networks and in clients. With this technology, content owners and services distributing high-valued content can monetize their content with full control over their business model.
 
-The packager is an appliance, or a software or a cloud service that takes a piece of video and audio in the clear and protects it with PlayReady. It encrypts it. The packager is sometimes also called the encryptor. The packager is frequently integrated in the encoder, but it may be a separate function that runs on the output of the encoder.
+The packager is an appliance, or a software or a cloud service that takes a piece of video and audio in the clear and protects it with PlayReady and encrypts it. The packager is sometimes also called the encryptor. The packager is frequently integrated in the encoder, but it may be a separate function that runs on the output of the encoder.
 
 Companies developing a standalone packager (or a packaging function in an encoder) utilizing PlayReady technologies need to integrate two functionalities in their product:
 
 * One that encrypts content in a PlayReady compatible encryption format.
 
-* Another that generates a PlayReady Header and inserts it in the encrypted content.
+* Another that generates a PlayReady Object (along with its associated PlayReady Header) and inserts it in the encrypted content.
 
 >[!IMPORTANT]
 >Developing or operating a PlayReady packager can be done without signing any PlayReady licensing agreement with Microsoft, and without paying any fee or royalty to Microsoft for the PlayReady technology.

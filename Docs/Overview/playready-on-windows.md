@@ -18,7 +18,7 @@ ms.technology: drm
 For Universal Windows Platform (UWP) applications, Microsoft provides a PlayReady SDK integrated in the Windows SDK. For more information about PlayReady on UWP applications, see the documentation on the [Windows Dev Center](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/mt429381.aspx).
 
 
-For Windows Store applications (Windows 8.1), Microsoft also provides a PlayReady SDK. For Windows 8.1 reference, see [Developing PlayReady Windows Store and Web Apps](https://msdn.microsoft.com/en-us/library/windows/apps/dn468834.aspx).
+For Windows Store applications (Windows 8.1), Microsoft also provides a PlayReady SDK. For the Windows 8.1 reference, see [Developing PlayReady Windows Store and Web Apps](https://msdn.microsoft.com/en-us/library/windows/apps/dn468834.aspx).
 
 
 ## PlayReady on Window 7, MacOS

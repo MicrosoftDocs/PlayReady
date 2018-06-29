@@ -14,7 +14,7 @@ ms.technology: drm
 
 # PlayReady Key Seed
 
-Services implementing PlayReady must maintain a Key Management System (KMS) to store and manage content keys. Specifically, the values of {KID, Content Key} is stored for each content asset that is managed by the service. These values are stored at encryption time, and retrieved at license issuance time.
+Services implementing PlayReady must maintain a Key Management System (KMS) to store and manage content keys. Specifically, the values of {KID, Content Key} are stored for each content asset that is managed by the service. These values are stored at encryption time, and retrieved at license issuance time.
 
 PlayReady provides a convenient way to avoid a complex KMS. The *Content Key Seed algorithm* allows derivation of different content keys for a collection of content assets, from a varying KID and a fixed Key Seed:
 

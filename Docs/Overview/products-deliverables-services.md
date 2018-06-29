@@ -20,7 +20,7 @@ Likewise, on the Server side, PlayReady is very flexible to allow the developmen
 
 PlayReady Customers, whether they are service providers, device makers, or application developers, are not required to develop either their PlayReady Client or Server themselves. Instead, they may obtain these services or products from third-party developers, that we refer to as PlayReady partners.
 
-This topic discusses the parts of PlayReady that are supplied by Microsoft and the parts that can be developed and deployed by the customers themselves, or their third party partners.
+This section discusses the parts of PlayReady that are supplied by Microsoft and the parts that can be developed and deployed by the customers themselves, or their third party partners.
 
 Here is a figurative view of these levels of product integration, and its translation to a PlayReady Client Product:
 

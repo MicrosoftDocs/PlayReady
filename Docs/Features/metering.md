@@ -18,7 +18,7 @@ ms.technology: drm
 *Metering* is the process for counting the number of times content is played. Metering is important because it allows a subscription content service provider to offer content on this basis. For example, in North America, if a song is transferred to a "blind" system, in which there will be no monitoring of the usage, a "mechanical royalty" of approximately 8 cents per song is required. On the other hand, if the licensee monitors content usage and reports it, the licensee pays a reduced mechanical royalty of 1 cent for each *play*. This can make a significant difference during transfers of large catalogs of music (for example, 10,000 songs). Even extremely heavy music-listening is likely to generate only 2,000 plays per month ($20 in royalties), whereas the mechanical royalty for these 10,000 songs would have been $800. There is therefore an economic incentive to "meter" content under this circumstance.
 
 > [!NOTE]
-> The rates indicated in this section as examples. Actual rates may vary depending on agreements between content owners and service providers. 
+> The rates indicated in this section are examples. Actual rates may vary depending on agreements between content owners and service providers. 
 
 <a id="ID4EZ"></a>
 
@@ -30,7 +30,7 @@ ms.technology: drm
 Metered content uses a license with a metering identifier (MID) to track content usage. When content with a metered license is played, it updates entries in the metering store. The license contains the MID, and this allows the information to be grouped by MID. Usage data is grouped by the key identifier (KID) &mdash; if there is a different KID for each content file, each usage of that file is reported. Metering is turned on once for an entire license. At that point, every right will increment a separate entry in the store. Metering can be enabled on any device.
 
 
-To perform metering, a device transmits its metering data to a metering aggregation Server. Furthermore, the media player application may perform additional scheduling calculations to restrict metering reporting cycles to regular intervals, such as every two weeks.
+To perform metering, a device transmits its metering data to a metering aggregation server. Furthermore, the media player application may perform additional scheduling calculations to restrict metering reporting cycles to regular intervals, such as every two weeks.
 
 
 The following figure illustrates the basic metering architecture.

@@ -14,13 +14,15 @@ ms.technology: drm
 
 # Normative References
 
-The following standards are referenced in the PlayReady documentation
+The following standards are referenced in the PlayReady documentation:
 
-   *  [AAC]
-      : *ISO 14496-3: Information technology*&mdash;*Coding of audio-visual objects*&mdash;*Part 3: Audio*
+[AAC]
+: *ISO 14496-3: Information technology*&mdash;*Coding of audio-visual objects*&mdash;*Part 3: Audio*
+^     
 
-   *  [AES]
-      : Advanced Encryption Standard, Federal Information Processing Standards Publication 197, FIPS-197, [http://www.nist.gov](http://www.nist.gov){:target="_blank"}
+[AES]
+: Advanced Encryption Standard, Federal Information Processing Standards Publication 197, FIPS-197, [http://www.nist.gov](http://www.nist.gov)
+^
 
    *  [AVCFF]
       : *ISO 14496-15: Information technology*&mdash;*Coding of audio-visual objects*&mdash;*Part 15: Advanced Video Coding*

@@ -22,15 +22,15 @@ There are several considerations you should examine before you begin incorporati
 Therefore, you do not need to allocate any time or budget for these items.
 
 >[!NOTE]
->Some [Microsoft PlayReady Partners](https://www.microsoft.com/playready/partners/) can develop a PlayReady packager for your company if you're not willing to develop it yourself.
+>Some [Microsoft PlayReady Partners](https://www.microsoft.com/playready/partners/) can develop a PlayReady packager for your company if you don't want to develop it yourself.
 
 ## Development Overview
 
 The development time for incorporating the PlayReady functionality in your packager will depend on the development and testing of the following components:
 
-* Key Generator &mdash; generates the key value used to encrypt the content (along with its associated KeyID). If you use the KeySeed mechanism, this generator needs to implement the function defined [here](../Specifications/playready-key-seed.md)
+* Key Generator &mdash; generates the key value used to encrypt the content (along with its associated KeyID). If you use the KeySeed mechanism, this generator needs to implement the function as defined in the [PlayReady Key Seed](../Specifications/playready-key-seed.md) specification.
 
-* PlayReady Header Generator &mdash; generates the PlayReady Object (including the PlayReady Header and/or an Embedded License Store). This PlayReady Header includes the KeyID or the list of KIDs, the default URL of the PlayReady license server, and any custom value you require for your protected content. This function must follow the requirements outlined in the [PlayReady Header Specification](../Specifications/playready-header-specification.md).
+* PlayReady Header Generator &mdash; generates the PlayReady Object (including the PlayReady Header and/or an Embedded License Store). This PlayReady Header includes the KeyID or the list of KeyIDs, the default URL of the PlayReady license server, and any custom value you require for your protected content. This function must follow the requirements outlined in the [PlayReady Header Specification](../Specifications/playready-header-specification.md).
 
 * Packager &mdash; packages the content using the key value supplied by the key generator and the PlayReady Object created by the PlayReady header generator.
 

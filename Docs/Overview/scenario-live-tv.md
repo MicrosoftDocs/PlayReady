@@ -24,7 +24,7 @@ The client may be a TV set, a phone application, a tablet, a PC, or any PlayRead
 Standard PlayReady licenses may be used. In this case, a channel in a bundle will have its own KID and encryption key, and clients willing to consume this channel request a PlayReady license for this KID.
 
 
-In many cases, the service may want to change (that is, rotate) the encryption key of each channel sometimes, typically every 24 hours, every week, or every month. Simple PlayReady licenses can manage this scenario; however the client will have to reacquire a license for a channel every time the channel's key rotates, which might not be seamless (the user will experience a short drop out).
+In many cases, the service may want to change (that is, rotate) the encryption key of each channel occasionally, typically every 24 hours, every week, or every month. Simple PlayReady licenses can manage this scenario; however the client will have to reacquire a license for a channel every time the channel's key rotates, which might not be seamless (the user will experience a short drop out).
 
 
 In addition, the service may have dozens, hundreds, or thousands or channels available, and hundreds of different combinations (bundles) available to users depending on the level that they pay, and their geography.
@@ -42,7 +42,7 @@ Note that PlayReady scalable licenses with key rotation also allows you to imple
 
    *  A live subscriber of the service gets a scalable license that gives access to all the leaf licenses of this channel. This user pays a subscription fee per month.
 
-   *  A non subscriber downloads a particular program and acquires a simple license for this particular program. This user pays a single fee per program downloaded, which may vary depending on the rights he paid for (such as download to own, rent for 48 hours, rent in 4K quality for 48 hours, and so on).
+   *  A non-subscriber downloads a particular program and acquires a simple license for this particular program. This user pays a single fee per program downloaded, which may vary depending on the rights the user paid for (such as download to own, rent for 48 hours, rent in 4K quality for 48 hours, and so on).
 
 
 <a id="ID4EMB"></a>

@@ -37,7 +37,7 @@ For information about Secure Stop in UWP apps, see the *[Add secure stop](https:
 
 In PlayReady version 4.2, *PlayReady Secure Stop 2* provides more security by enforcing the Secure Stop functionality on the client in the Trusted Execution Environment (TEE) at Security Level 3000.
 
-A service may use the SecureStop feature to enforce playback across multiple clients belonging to a same user account. Depending on the configuration of a particular client in that user account, the service will receive slightly different messages form the client.
+A service may use the SecureStop feature to enforce playback across multiple clients belonging to a same user account. Depending on the configuration of a particular client in that user account, the service will receive slightly different messages from the client.
 
 The following table shows the Server App logic on different Client Security Level and Secure Stop versions.
 

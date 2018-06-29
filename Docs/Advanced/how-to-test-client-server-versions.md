@@ -77,11 +77,11 @@ Test Steps:
 
 ## Scenario 3: chained licenses 
 
-Root bound licenses are used by some subscription services most commonly for music. With the root bound scenario, several leaf licenses can be bound to a single root license. When the root license expires then the leaf licenses are no longer useable unless a new root is reissued. 
+Root bound licenses are used by some subscription services, most commonly for music. With the root bound scenario, several leaf licenses can be bound to a single root license. When the root license expires, the leaf licenses are no longer useable unless a new root is reissued. 
 
 Test Steps: 
 
-1. Package the content using the KeySeed noted on PlayReady test site and the following KeyID:  
+1. Package the content using the KeySeed noted on the PlayReady test site using the following KeyID:  
 
    Base64: **uPeXHrR3K0icGCpYMBGsZw==**  
 
@@ -91,31 +91,31 @@ Test Steps:
    
    ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==)](http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==)) 
 
-1. Validate that a license is returned and that playback is successful. In this scenario a single response from the service should contain two licenses. One of them will be a root license and the other a leaf license. The licenses should expire 5 minutes after being issued to the client. 
+1. Validate that a license is returned and that playback is successful. In this scenario a single response from the service should contain two licenses. One of them will be a root license and the other a leaf license. The licenses should expire five minutes after being issued to the client. 
 
 
 ## Scenario 4: domain-bound license 
 
-Domain are not as commonly used by services. PlayReady domains provide both a way for service to manage the number of active devices in an account and for devices within the account to share content and licenses offline. 
+Domains are not as commonly used by services. PlayReady domains provide both a way for a service to manage the number of active devices in an account and for devices within the account to share content and licenses offline. 
 
-1. Package the content using the KeySeed noted on PlayReady test site and the following KeyID:  
+1. Package the content using the KeySeed noted on the PlayReady test site using the following KeyID:  
 
    Base64: **m1HAERIu8E+uABCZY4TX2g==** 
 
-   The test client will using the following URL for joining the domain and acquiring a license: 
+   The test client will use the following URL for joining the domain and acquiring a license: 
 
    {*versioned license service url*}?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==) 
 
    ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==)](http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==))
 
-1. Have the test client generate and send a JoinDomain challenge and validate that there is a domain certificate is in the service response.  
+1. Have the test client generate and send a JoinDomain challenge and validate that there is a domain certificate in the service response.  
 
-1. Have the test client send a license request to the service using the same URL including the accountID. 
+1. Have the test client send a license request to the service using the same URL, including the accountID. 
 
 1. Validate that a license is returned and that playback is successful. A LeaveDomain request can additionally be sent to the license service to reset the scenario. 
 
 
 ## More information 
 
-For more information, please visit the PlayReady website: [http://www.microsoft.com/playready/](http://www.microsoft.com/playready/) and  the PlayReady test site: [http://test.playready.microsoft.com/](http://test.playready.microsoft.com/) 
+For more information, visit the PlayReady website at [http://www.microsoft.com/playready/](http://www.microsoft.com/playready/) and  the PlayReady test site at [http://test.playready.microsoft.com/](http://test.playready.microsoft.com/). 
 
