@@ -29,7 +29,9 @@ Revocation lists are refreshed on devices when they are not up to date. The revo
 
 Microsoft builds and maintains the revocation list and its versioning structure. PlayReady customers can download this list from the following link:
 
-**PlayReady Revocation List: [http://go.microsoft.com/fwlink/?LinkId=110086](http://go.microsoft.com/fwlink/?LinkId=110086)**
+**PlayReady Revocation List(https): [https://aka.ms/revinfo](https://aka.ms/revinfo)**
+
+**PlayReady Revocation List(http): [http://go.microsoft.com/fwlink/?LinkId=110086](http://go.microsoft.com/fwlink/?LinkId=110086)**
 
 ## Requirement for PlayReady Servers
 
