@@ -993,7 +993,6 @@ bool isCryptoSchemeSupported(const uint8_t uuid[16])
 {
   return (!memcmp(uuid, playready_uuid, sizeof(playready_uuid)));
 }
-
 ```
 
 <a id="sessionmanager"></a>

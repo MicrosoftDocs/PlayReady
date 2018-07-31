@@ -127,11 +127,11 @@ The XML must be canonicalized.
 <table>
     <tr>
         <td>• Supported</td>
-        <td>&lt;KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="&gt;&lt;/KID&gt;</td>
+        <td>&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;</td>
     <tr>
         <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;KID value="PV1LM/VEVk+kEOB8qqcWDg=="&gt;&lt;/KID&gt;<br/>
-            &lt;kid VALUE="PV1LM/VEVk+kEOB8qqcWDg=="&gt;&lt;/kid&gt;
+        <td style="border: none">&lt;KID value=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;<br/>
+            &lt;kid VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/kid&gt;
         </td>
     </tr>
 </table>
@@ -143,14 +143,14 @@ All XML nodes must be explicitly closed by a closing tag including those in node
 <table>
     <tr>
         <td>• Supported</td>
-        <td>&lt;KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="&gt;&lt;/KID&gt;<br/>
-            &lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute="Foo"&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;
+        <td>&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;<br/>
+            &lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute=&quot;Foo&quot;&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;
         </td>
     </tr>
     <tr>
         <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="/&gt;
-&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute="Foo"/&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
+        <td style="border: none">&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;/&gt;
+&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute=&quot;Foo&quot;/&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
     </tr>
 </table>
 
@@ -161,13 +161,13 @@ All namespace attributes must be before non-namespaces attributes.
 <table>
     <tr>
         <td>• Supported</td>
-        <td>&lt;WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReady
-Header" version="4.3.0.0"&gt;</td>
+        <td>&lt;WRMHEADER xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/2007/03/PlayReady" data-raw-source="http://schemas.microsoft.com/DRM/2007/03/PlayReady">http://schemas.microsoft.com/DRM/2007/03/PlayReady</a>
+Header&quot; version=&quot;4.3.0.0&quot;&gt;</td>
     </tr>
     <tr>
         <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;WRMHEADER version="4.3.0.0" xmlns="http://schemas.microsoft.com/DRM/
-2007/03/PlayReadyHeader"&gt;</td>
+        <td style="border: none">&lt;WRMHEADER version=&quot;4.3.0.0&quot; xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/" data-raw-source="http://schemas.microsoft.com/DRM/">http://schemas.microsoft.com/DRM/</a>
+2007/03/PlayReadyHeader&quot;&gt;</td>
     </tr>
 </table>
 
@@ -178,11 +178,11 @@ All attributes must be in alphabetical order including those in nodes inside the
 <table>
     <tr>
         <td>• Supported</td>
-        <td>&lt;KID ALGID="AESCBC" VALUE="PV1LM/VEVk+kEOB8qqcWDg=="&gt;&lt;/KID&gt;<br/>&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode BarAttribute="Bar" FooAttribute="Foo"&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
+        <td>&lt;KID ALGID=&quot;AESCBC&quot; VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;<br/>&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode BarAttribute=&quot;Bar&quot; FooAttribute=&quot;Foo&quot;&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
     </tr>
     <tr>
         <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;KID VALUE="PV1LM/VEVk+kEOB8qqcWDg==" ALGID="AESCBC"&gt;&lt;/KID&gt;<br/>&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute="Foo" BarAttribute="Bar"&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
+        <td style="border: none">&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot; ALGID=&quot;AESCBC&quot;&gt;&lt;/KID&gt;<br/>&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute=&quot;Foo&quot; BarAttribute=&quot;Bar&quot;&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
     </tr>
 </table>
 

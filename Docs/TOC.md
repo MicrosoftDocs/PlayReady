@@ -32,7 +32,7 @@
 
 ### [PlayReady Server SDK](Overview/server-sdk.md)
 
-###[PlayReady Server on Azure](Overview/Server-on-azure.md)
+### [PlayReady Server on Azure](Overview/Server-on-azure.md)
 
 ### [PlayReady Device Porting Kit](Overview/device-porting-kit.md)
 
