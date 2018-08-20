@@ -1,0 +1,2289 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/1/s/target_repo/Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/CryptoPlugin.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/CryptoPlugin.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/DrmPlugin.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/DrmPlugin.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/HowToWriteMarkdownPoster.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/HowToWriteMarkdownPoster.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/Simple_Playback.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/Simple_Playback.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/Simple_Playback_Layers.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/Simple_Playback_Layers.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/algid-e2e.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/algid-e2e.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/algid-missing.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/algid-missing.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/anti_rollback_clock.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/anti_rollback_clock.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/assets_and_encryption_keys_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/assets_and_encryption_keys_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/assets_and_encryption_keys_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/assets_and_encryption_keys_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/assets_and_encryption_keys_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/assets_and_encryption_keys_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/assets_and_encryption_keys_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/assets_and_encryption_keys_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/assets_and_encryption_keys_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/assets_and_encryption_keys_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/authenticating_the_user.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/authenticating_the_user.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/azure_media_services_content_protection_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/azure_media_services_content_protection_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/azure_media_services_content_protection_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/azure_media_services_content_protection_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/azure_media_services_content_protection_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/azure_media_services_content_protection_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/caution.gif",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/caution.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/client_apis.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/client_apis.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/client_level_app.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/client_level_app.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/client_level_app_os_soc.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/client_level_app_os_soc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/client_level_os_soc.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/client_level_os_soc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/client_security_level.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/client_security_level.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/comm_protocol.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/comm_protocol.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/commit_changes.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/commit_changes.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/common_encryption.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/common_encryption.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/common_encryption_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/common_encryption_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/common_encryption_modes.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/common_encryption_modes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/content_assets_and_playback.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/content_assets_and_playback.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/content_delivery.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/content_delivery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/content_protection_A_to_B.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/content_protection_A_to_B.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/detect-playready-3-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/detect-playready-3-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/edit-application-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/edit-application-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/edit-in-github.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/edit-in-github.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/edit_button.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/edit_button.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/edit_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/edit_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/encrypting_the_content_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/encrypting_the_content_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/encryption_tools.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/encryption_tools.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/howtowritemarkdownposter.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/howtowritemarkdownposter.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_0.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_0.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_10.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_10.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_11.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_11.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_13.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_13.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_15.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_15.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_16.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_16.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_18.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_18.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_19.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_19.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_7.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_7.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_8.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_8.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/image26_9.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/image26_9.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/license_acquisition.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/license_acquisition.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/license_request_response.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/license_request_response.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/license_store.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/license_store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/microsoft-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/microsoft-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/migration-recommended.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/migration-recommended.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/migration-second-license-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/migration-second-license-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/migration-service-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/migration-service-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/note.gif",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/note.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/opl1.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/opl1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/opl2.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/opl2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/packager_operation.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/packager_operation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pencil_button.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pencil_button.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pk-server-compatibility.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pk-server-compatibility.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pk_in_device.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pk_in_device.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playready_encryption.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playready_encryption.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playready_export.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playready_export.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playready_import.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playready_import.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playready_secure_delete.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playready_secure_delete.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playready_server_implementations.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playready_server_implementations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playready_services.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playready_services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playreadyproactivela.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playreadyproactivela.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/playreadyreactivela.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/playreadyreactivela.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/preview_changes.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/preview_changes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pro_with_els.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pro_with_els.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pro_with_prh.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pro_with_prh.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pro_with_prh_hexdump1.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pro_with_prh_hexdump1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/pro_with_prh_hexdump3.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/pro_with_prh_hexdump3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/product_integration.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/product_integration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/propose.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/propose.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/reference-rmcore.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/reference-rmcore.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/secure_clock.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/secure_clock.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/secure_stop.gif",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/secure_stop.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/security_level.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/security_level.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/security_level_2000.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/security_level_2000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/security_level_3000.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/security_level_3000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/send-to-askdrm.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/send-to-askdrm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/signup-for-github-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/signup-for-github-button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/sl-different-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/sl-different-policies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/sl-equals-2000.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/sl-equals-2000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/sl-greater-than-2000.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/sl-greater-than-2000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/sl3000_design_fpl.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/sl3000_design_fpl.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/sl3000_design_ipl.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/sl3000_design_ipl.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/sl3000_design_report1.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/sl3000_design_report1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/target-framework.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/target-framework.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/video-packaging-1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/video-packaging-1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/video-packaging-2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/video-packaging-2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/video-play-button-1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/video-play-button-1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/video-play-button-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/video-play-button-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/video_service_arch.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/video_service_arch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/video_service_architecture.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/video_service_architecture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "PlayReady/images/website-wmlalicensing-home.png",
+      "output": {
+        "resource": {
+          "relative_path": "PlayReady/images/website-wmlalicensing-home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/CryptoPlugin.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/CryptoPlugin.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/DrmPlugin.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/DrmPlugin.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/HowToWriteMarkdownPoster.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "images/HowToWriteMarkdownPoster.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Simple_Playback.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Simple_Playback.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Simple_Playback_Layers.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/Simple_Playback_Layers.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algid-e2e.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/algid-e2e.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/algid-missing.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/algid-missing.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/anti_rollback_clock.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/anti_rollback_clock.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/assets_and_encryption_keys_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assets_and_encryption_keys_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/assets_and_encryption_keys_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assets_and_encryption_keys_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/assets_and_encryption_keys_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assets_and_encryption_keys_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/assets_and_encryption_keys_4.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assets_and_encryption_keys_4.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/assets_and_encryption_keys_5.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/assets_and_encryption_keys_5.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/authenticating_the_user.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/authenticating_the_user.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azure_media_services_content_protection_1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azure_media_services_content_protection_1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azure_media_services_content_protection_2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azure_media_services_content_protection_2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azure_media_services_content_protection_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azure_media_services_content_protection_3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/caution.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/caution.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/client_apis.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/client_apis.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/client_level_app.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/client_level_app.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/client_level_app_os_soc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/client_level_app_os_soc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/client_level_os_soc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/client_level_os_soc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/client_security_level.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/client_security_level.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/comm_protocol.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/comm_protocol.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/commit_changes.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/commit_changes.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/common_encryption.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/common_encryption.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/common_encryption_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/common_encryption_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/common_encryption_modes.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/common_encryption_modes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/content_assets_and_playback.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/content_assets_and_playback.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/content_delivery.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/content_delivery.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/content_protection_A_to_B.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/content_protection_A_to_B.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/detect-playready-3-client.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/detect-playready-3-client.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edit-application-pool.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/edit-application-pool.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edit-in-github.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/edit-in-github.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edit_button.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/edit_button.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edit_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/edit_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/encrypting_the_content_file.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/encrypting_the_content_file.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/encryption_tools.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/encryption_tools.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/howtowritemarkdownposter.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/howtowritemarkdownposter.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_0.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_0.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_10.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_10.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_11.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_11.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_13.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_13.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_15.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_15.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_16.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_16.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_18.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_18.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_19.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_19.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_7.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_7.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_8.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_8.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image26_9.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/image26_9.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/license_acquisition.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/license_acquisition.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/license_request_response.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/license_request_response.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/license_store.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/license_store.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/microsoft-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/microsoft-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/migration-recommended.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/migration-recommended.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/migration-second-license-service.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/migration-second-license-service.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/migration-service-proxy.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/migration-service-proxy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/note.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/note.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/opl1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/opl1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/opl2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/opl2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/packager_operation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/packager_operation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pencil_button.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/pencil_button.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pk-server-compatibility.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pk-server-compatibility.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pk_in_device.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pk_in_device.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playready_encryption.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/playready_encryption.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playready_export.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/playready_export.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playready_import.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/playready_import.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playready_secure_delete.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/playready_secure_delete.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playready_server_implementations.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/playready_server_implementations.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playready_services.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/playready_services.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playreadyproactivela.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/playreadyproactivela.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/playreadyreactivela.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/playreadyreactivela.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/preview_changes.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/preview_changes.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pro_with_els.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pro_with_els.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pro_with_prh.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pro_with_prh.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pro_with_prh_hexdump1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pro_with_prh_hexdump1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pro_with_prh_hexdump3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pro_with_prh_hexdump3.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/product_integration.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/product_integration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/propose.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/propose.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/reference-rmcore.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/reference-rmcore.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/secure_clock.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/secure_clock.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/secure_stop.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/secure_stop.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/security_level.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/security_level.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/security_level_2000.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/security_level_2000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/security_level_3000.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/security_level_3000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/send-to-askdrm.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/send-to-askdrm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/signup-for-github-button.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/signup-for-github-button.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sl-different-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sl-different-policies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sl-equals-2000.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sl-equals-2000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sl-greater-than-2000.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sl-greater-than-2000.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sl3000_design_fpl.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sl3000_design_fpl.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sl3000_design_ipl.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sl3000_design_ipl.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/sl3000_design_report1.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/sl3000_design_report1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-framework.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-framework.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/video-packaging-1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/video-packaging-1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/video-packaging-2.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/video-packaging-2.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/video-play-button-1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/video-play-button-1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/video-play-button-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/video-play-button-2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/video_service_arch.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/video_service_arch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/video_service_architecture.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/video_service_architecture.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/website-wmlalicensing-home.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/website-wmlalicensing-home.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

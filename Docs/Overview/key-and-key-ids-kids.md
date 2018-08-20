@@ -33,7 +33,6 @@ Within each PRO is a *PlayReady Header*, which gives a client the information ne
   <LA_URL>http://test.playready.microsoft.com/service/rightsmanager.asmx</LA_URL>
   </DATA>
 </WRMHEADER>
-
 ```
 
 
@@ -96,7 +95,7 @@ In a single asset with multiple tracks, the decision between one key for all tra
   * Some clients may have the limitation that they do not support multiple keys for a single asset.
 
 > [!NOTE]
-> While PlayReady keys can unlock more than one digital media file, Microsoft is strongly against this. Using unique keys across all files provides greater security than protecting files with the same key.
+> While PlayReady keys can unlock more than one digital media file, Microsoft is strongly against this. Using unique keys across all files provides greater security than protecting files with the same key.
 
 
 <a id="ID4EEE"></a>

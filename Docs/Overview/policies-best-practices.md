@@ -65,46 +65,46 @@ For PlayReady Clients 3 and higher, the client sends its clock value to the Lice
 
 A typical example with a PlayReady Client version 2 would be:
 
-   1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Android phone running an app built on PlayReady 2.5.
+1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Android phone running an app built on PlayReady 2.5.
 
-   2. The Android app initiates a license request to the License Server. The phone clock indicates 7:56PM and the License Server clock is on 8:00PM.
+2. The Android app initiates a license request to the License Server. The phone clock indicates 7:56PM and the License Server clock is on 8:00PM.
 
-   3. The License Server receives the license request, detects that the client is version 2, and generates the license with:
+3. The License Server receives the license request, detects that the client is version 2, and generates the license with:
 
-      *  Play Right
+   *  Play Right
 
-      *  Begin Time = local Server time minus 5 minutes = January 5, 2018 at 7:55 PM
+   *  Begin Time = local Server time minus 5 minutes = January 5, 2018 at 7:55 PM
 
-      *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
+   *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
 
-    4. The License Server sends the license back to the client.
+   4. The License Server sends the license back to the client.
 
-    5. The client starts playback. The phone clock is still 7:56PM and is past the license's BeginDate which is 7:55PM, so playback can actually start immediately.
+   5. The client starts playback. The phone clock is still 7:56PM and is past the license's BeginDate which is 7:55PM, so playback can actually start immediately.
 
 
 A typical example with a PlayReady Client version 3 would be:
 
-   1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Windows 10 computer running an UWP app.
+1. A user rents content on Friday, January 5, 2018 around 8 PM, on an Windows 10 computer running an UWP app.
 
-   2. The UWP app initiates a license request to the License Server. The PC clock indicates 7:56PM and the License Server clock is on 8:00PM.
+2. The UWP app initiates a license request to the License Server. The PC clock indicates 7:56PM and the License Server clock is on 8:00PM.
 
-   3. The License Server receives the license request, detects that the PlayReady Client is version 3, and checks for the value of the client clock:
+3. The License Server receives the license request, detects that the PlayReady Client is version 3, and checks for the value of the client clock:
 
-      *  If the client clock value is no further off than the License Server clock value than 1 hour, proceed and generate the license.
+   *  If the client clock value is no further off than the License Server clock value than 1 hour, proceed and generate the license.
 
-      *  If not, deny the license request and send a message to the client app to request that the clock be set to the right value.
+   *  If not, deny the license request and send a message to the client app to request that the clock be set to the right value.
 
-   4. The License Server generates the license with:
+4. The License Server generates the license with:
 
-      *  Play Right
+   *  Play Right
 
-      *  Begin Time = Client time contained in the license request = January 5, 2018 at 7:56 PM
+   *  Begin Time = Client time contained in the license request = January 5, 2018 at 7:56 PM
 
-      *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
+   *  Expiration Time, Expiration After First Play, other right restrictions like Output Protections
 
-    4. The License Server sends the license back to the client.
+   4. The License Server sends the license back to the client.
 
-    5. The client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start immediately.
+   5. The client starts playback. The PC clock is still 7:56PM and equal or past the license's BeginDate which is 7:56PM, so playback can actually start immediately.
 
 
 

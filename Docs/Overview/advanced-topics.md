@@ -21,7 +21,7 @@ This section covers more advanced features in the PlayReady technology.
 [License Chaining](license-chaining.md)
 
 [Embedded Licenses](embedded-licenses.md)
- 
+ 
 [License Nonce](license-nonce.md) 
 
 [Licenses Restricted by Binding Policy](licenses-restricted-by-binding-policy.md) 

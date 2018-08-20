@@ -1,4 +1,4 @@
-﻿---
+---
 author: dougklopfenstein
 title: PlayReady Content Encryption
 description: This topic provides an overview of the encryption algorithms used to protect content in the PlayReady ecosystem.

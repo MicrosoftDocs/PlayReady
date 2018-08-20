@@ -1,4 +1,4 @@
-﻿---
+---
 author: rolandlefranc
 title: PlayReady and Other Protection Technologies
 description: PlayReady systems are able to interoperate with other content protection systems.
@@ -31,9 +31,9 @@ PlayReady systems are able to interoperate with other content protection systems
 ## Common Encryption
 
 A service provider may encrypt a content file once with a content key (CK) and deliver this CK to different clients using different content protection technologies. By doing this, a single protected asset can be served a set of heterogenous clients, which saves storage and content delivery network (CDN) costs compared to a system where specific protected content is served to each type of client. 
- 
+ 
 Let's take the example of a service delivering protected content to PlayReady Clients (first content protection technology) and to DRM B Clients (second content protection technology). The content is a segmented MP4 file (fMP4, ISOBMFF) or an adaptive streaming asset based on segmented MP4 files (such as DASH, Smooth Streaming, or HLS), and the encryption format used is the ISO/IEC 23001-7:2016 Standard. 
- 
+ 
 Here is the content flow in the overall system: 
 
 ![Content Flow Diagram](../images/common_encryption.png)

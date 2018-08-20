@@ -54,17 +54,17 @@ The following table lists the compatibility between the various PlayReady Device
 
 <table>
   <tr style="border: 0; border-collapse: collapse;">
-    <td style="border: 0; border-collapse: collapse;">\*</td>
+    <td style="border: 0; border-collapse: collapse;"><em></td>
     <td style="border: 0; border-collapse: collapse;">Some PK 1.2 clients did not support revocation which is required in Server SDK 2.x+. This is not common.
     </td>
   </tr>
   <tr style="border: 0; border-collapse: collapse;">
-    <td style="border: 0; border-collapse: collapse;">\*\*</td>
+    <td style="border: 0; border-collapse: collapse;"></em><em></td>
     <td style="border: 0; border-collapse: collapse;">PK 3.0 and higher clients cannot use a Server SDK prior to version 2.0 to get a media playback license.
     </td>
   </tr>
   <tr style="border: 0; border-collapse: collapse;">
-    <td style="border: 0; border-collapse: collapse; vertical-align:top">\*\*\*</td>
+    <td style="border: 0; border-collapse: collapse; vertical-align:top"></em>**</td>
     <td style="border: 0; border-collapse: collapse;">PK 3.0 and higher clients can use license servers using a 2.X SDK, but can only obtain a license with a SL2000 security level. In addition, new features, such as support for version 4.2 headers (multiple keys) and policies such as Secure Stop and MaxResDecode, are not available when creating a license. There have been issues with chained licenses (root/leaf) on some PK 3.0 clients with Server SDK 2.0. Services will need to test clients to validate compatibility. There are a set of scenarios at the end of this document that can assist in testing.</td>
   </tr>
 </table>
