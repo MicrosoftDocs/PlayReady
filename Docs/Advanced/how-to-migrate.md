@@ -49,11 +49,11 @@ It is strongly recommended that OEMs upgrade their devices to PK4.0 released in 
     
     * If they run a server SDK v1.X based license server, they can migrate their license server or add a newer license server for the new clients - based on server SDK 2.0+ (latest version is recommended).  
 
-1. Download the PK 4.0 from Microsoft. 
+2. Download the PK 4.0 from Microsoft. 
 
-1. Get support from Microsoft's partners or directly from Microsoft by sending email to AskDRM@microsoft.com.
+3. Get support from Microsoft's partners or directly from Microsoft by sending email to AskDRM@microsoft.com.
 
-1. Implement PK 4.0 and release your product. 
+4. Implement PK 4.0 and release your product. 
 
 
 ## Migrations Notes for Services  
