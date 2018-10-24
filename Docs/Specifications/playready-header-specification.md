@@ -188,7 +188,7 @@ All attributes must be in alphabetical order including those in nodes inside the
 
 ### 3.3. v4.3.0.0
 
-PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, in particulat for the Common Encryption modes 'cbcs'. It also increases the interoperability of PlayReady Clients with other DRM systems, as well as existing content.
+PlayReady Header v4.3.0.0 was introduced with PlayReady version 4.0 in September 2017 to support AESCBC keys in a header. This support allows encryption of content in CBC mode, in particular for the Common Encryption modes 'cbcs'. It also increases the interoperability of PlayReady Clients with other DRM systems, as well as existing content.
 
 #### 3.3.1. Differences with other versions
 
