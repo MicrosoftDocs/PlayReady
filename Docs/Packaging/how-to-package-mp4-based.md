@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title: How to package MP4-based content for PlayReady
 description: This page describes how to encrypt or package audio video content to prepare for consumption by a PlayReady client
 ms.assetid: "7DF4D94C-1962-49B9-A369-0803EB886235"
 keywords: Packaging, PlayReady Packaging, PlayReady Encryption, MP4, mpeg 4, CMAF, Windows 10, Xbox
-ms.author: rolefran
 ms.date: 04/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # How to package MP4-based content for PlayReady

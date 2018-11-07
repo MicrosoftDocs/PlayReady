@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: DASH Content Protection using Microsoft PlayReady
 description: Implementing Content Protection for Live and On-Demand Profiles of Dynamic Adaptive Streaming over HTTP (ISO/IEC 23009-1) using Common Encryption (ISO/IEC 23001-7) and Microsoft PlayReady.
 ms.assetid: "938d107a-8f4c-43ab-a78a-9ef0e419e05d"
 keywords: drm, specification, PlayReady, content protection
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # DASH Content Protection using Microsoft PlayReady

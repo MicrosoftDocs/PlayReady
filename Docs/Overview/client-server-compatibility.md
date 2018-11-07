@@ -5,10 +5,8 @@ description: Most versions of PlayReady Clients and PlayReady Servers interopera
 ms.assetid: "9A903AA9-BBAD-424D-9740-9C8C1D7E5F45"
 keywords: client, server, compatibility, migration
 ms.author: timrule
-ms.date: 02/01/2016
+ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # PlayReady Client-Server Compatibility and Migration Considerations

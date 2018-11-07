@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Client Initialization
 description: Client Initialization is the process of updating the PlayReady runtime on client, allowing licenses to be bound to the client.
 ms.assetid: "2d0eed43-5a52-a642-ff7f-aa1927766e5a"
 keywords: initialization, provisioning, activation, individualization
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

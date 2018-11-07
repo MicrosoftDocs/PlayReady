@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: License Acquisition
 description: To play protected content, a valid license for the content must be available.
 ms.assetid: "bfd615d3-0dfc-b261-b346-456e7aa617a5"
 keywords: playready license acquisition
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

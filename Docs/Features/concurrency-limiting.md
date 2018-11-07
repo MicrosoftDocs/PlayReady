@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: Stream concurrency limiting
-description:
+description: With PlayReady, a service can limit the number of concurrent playback sessions across devices from a user account.
 ms.assetid: "983f2084-d2c6-46d6-875d-c89082c2394a"
 keywords: secure, stop, stream concurrency limiting
-ms.author: rolefran
 ms.date: 05/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 
@@ -26,7 +22,7 @@ There are two PlayReady features that you can leverage to limit the number of co
 You can use Secure Stop, supported in PlayReady 3.0 or higher, to limit the number of concurrent playback sessions across devices.
 With Secure Stop, a player will send a trusted event to the license server when it stops playing a stream or file. You can use this to allow another client to start playback, depending on the number of players the server is aware of that is currently playing, and the service logic. This is the preferred option, and is implemented by several large services. In some cases, a player may disappear from the network before it has sent its Secure Stop event, so the logic on the license server must be set in place to handle this case.
 
-For more information, see [Scenario: Subscription Content](scenario-subscription-content.md).
+For more information, see [Scenario: Subscription Content](../Overview/scenario-subscription-content.md).
 
 ## Using Limited Duration Licenses
 

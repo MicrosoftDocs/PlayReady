@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Domains
 description: You can manage content access for multiple Clients through a single entity, called a PlayReady domain.
 ms.assetid: "6B015DD7-9337-4E36-822A-5DF35476C4FF"
 keywords: PlayReady domains,  PlayReady domain 
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

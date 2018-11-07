@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Communication Protocols
 description: PlayReady Clients communicate with PlayReady Servers to acquire licenses and perform additional operations related to the management of rights set by services for Clients.
 ms.assetid: "1CB607F6-FBE2-4EE9-8721-529D6BFFF9F1"
 keywords: PlayReady communication protocols, soap, PlayReady protocols, PlayReady communication
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # PlayReady Communication Protocols

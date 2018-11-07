@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Revocation
 description: When Microsoft identifies a Client with compromised security, the device may be revoked and added to a revocation list.
 ms.assetid: "09869289-666b-272e-1cc2-97079cb71204"
 keywords: playready revocation,  revocation list
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

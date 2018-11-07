@@ -1,16 +1,12 @@
 ---
-author: rolandlefranc
 title:  Microsoft PlayReady Documentation
 description: PlayReady Product documentation
 layout: LandingPage
 description: Documentation for Microsoft PlayReady
 ms.assetid: "1C6257BD-0C75-4D47-84F5-F738759C039D"
 keywords: PlayReady, licensing, playable content license
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # Microsoft PlayReady

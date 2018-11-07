@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: MP4-based Formats Supported by PlayReady Clients
 description: This page describes the MP4-based audio/video formats supported by Windows 10, the Xbox, and other PlayReady Clients
 ms.assetid: "7158373B-8E90-4CD0-8CAB-85A23BC60ED7"
 keywords: Packaging, PlayReady Packaging, PlayReady Encryption, MP4, mpeg 4, CMAF, Supported, Windows 10, Xbox
-ms.author: rolefran
 ms.date: 06/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # MP4-based Formats Supported by PlayReady Clients

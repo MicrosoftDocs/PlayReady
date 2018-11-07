@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: License to use PlayReady
 description: License to use PlayReady
 ms.assetid: "42BA7CE6-6A6A-46BA-A1F9-B21AD1CA4E3D"
 keywords:  License, License to use, PlayReady
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # License to use PlayReady
@@ -19,4 +15,4 @@ There are separate licenses depending on what type of PlayReady product you inte
 
 These licenses provide additional benefits including intellectual property rights, intellectual property protection, and indemnification.
 
-If you are a content provider using third party PlayReady Clients and PlayReady Servers, you do not need a license from Microsoft to encrypt your content with a PlayReady Header. In addition, if you are an encryptor developer, you do not need a license from Microsoft to include a PlayReady Header insertion function in your encryptor code. See [Packaging Content](packaging-content.md) for more information.
+If you are a content provider using third party PlayReady Clients and PlayReady Servers, you do not need a license from Microsoft to encrypt your content with a PlayReady Header. In addition, if you are an encryptor developer, you do not need a license from Microsoft to include a PlayReady Header insertion function in your encryptor code. See [Packaging Content](../Packaging/packaging-content.md) for more information.
