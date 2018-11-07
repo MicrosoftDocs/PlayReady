@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Advanced Topics
 description: This section covers more advanced features in the PlayReady technology.
 ms.assetid: "A5BA095E-3045-41A9-B947-72D21FFD885D"
 keywords: playready advanced topics
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

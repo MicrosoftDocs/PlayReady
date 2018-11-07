@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title: Developing a PlayReady Packager
 description: Developing a PlayReady Packager
 ms.assetid: "CFAF35FD-CCBE-49EF-B4CE-708FBCDE298A"
 keywords:  PlayReady, packager, encryptor, developing packager
-ms.author: v-doklo
 ms.date: 05/11/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # Developing a PlayReady Packager 

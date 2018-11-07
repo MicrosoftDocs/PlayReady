@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: Normative References
 description: Contains the list of the normative references used in this documentation, and the documentation for the SDK and PK.
 ms.assetid: "a0de8579-5291-4889-8ffd-2bd01d8520c0"
 keywords: normative, references, normative references
-ms.author: rolefran
 ms.date: 06/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

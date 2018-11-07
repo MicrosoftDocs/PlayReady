@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: Licenses Restricted by Binding Policy
 description: Licenses may be bound to entities such as a Client or a domain.
 ms.assetid: "02874cfb-f124-7be2-0319-6a8c15197f99"
 keywords:  restricted licenses, licenses restricted by binding, machine binding, domain binding
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

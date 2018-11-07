@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Secure Delete
 description: The PlayReady Secure Delete feature allows service providers to receive secure acknowledgement when a persistent license is deleted by the app on the Client.
 ms.assetid: "dd1ee858-198b-494f-bc42-038a906bef35"
 keywords: secure, delete, server, license, deletion, remove
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

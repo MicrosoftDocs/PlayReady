@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady and Silverlight
 description: This topic discusses PlayReady support in Silverlight applications.
 ms.assetid: "cfce96cc-41c3-cd90-f872-66a503fcfb13"
 keywords: playready and silverlight
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

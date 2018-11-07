@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title: Scenario Purchased Content
 description: In the purchased content scenario, a content owner sells media to consumers using an online media store.
 ms.assetid: "75bf75de-b445-a957-f804-948a235048e7"
 keywords: purchased content scenarios
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

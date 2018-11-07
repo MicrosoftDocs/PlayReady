@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title:  Support Options
 description: Describes the support options available to customers
 ms.assetid: "780AD34E-24F2-4980-9427-B4C04BC9F4F7"
 keywords: PlayReady, support, technical, operations, business
-ms.author: v-doklo
 ms.date: 04/06/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # Support Options

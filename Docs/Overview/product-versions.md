@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title: PlayReady Product Versions
 description: Feature availability for each version of the PlayReady products.
 ms.assetid: "b1fe306d-2ef3-565a-ae60-cea1592ce0e8"
 keywords: PlayReady product versions
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

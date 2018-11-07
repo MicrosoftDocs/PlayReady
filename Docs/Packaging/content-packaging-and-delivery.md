@@ -1,14 +1,10 @@
 ---
-author:
 title: Content Packaging and Delivery
 description: The basic capability of PlayReady is to protect content from unauthorized use.
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
 keywords: playready content encryption, encryption and delivery
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

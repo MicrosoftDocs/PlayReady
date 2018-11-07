@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Server on Azure
 description: PlayReady Server on Azure
 ms.assetid: "8B491ACA-0B27-4360-9242-7559B36AF8ED"
 keywords:  playready, license server, azure, azure media services content protection, ams
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # PlayReady Server on Azure

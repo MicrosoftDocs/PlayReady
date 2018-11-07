@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: Security Level
 description: The PlayReady Client Security Level is a property of the Client (device or application) that defines how robust the Client is against unauthorized use.
 ms.assetid: "352220F0-2566-431E-8CC3-DC649B5E3CF2"
 keywords: security level
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # Security Level

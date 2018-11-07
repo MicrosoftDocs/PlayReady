@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Metering Server
 description: Metering is the process for counting the number of times content is played.
 ms.assetid: "fec11f72-95f0-a80c-83cd-beafe53b4a57"
 keywords: PlayReady metering, metering architecture, metering certificate acquisition
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

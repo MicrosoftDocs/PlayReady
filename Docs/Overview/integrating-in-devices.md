@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: Integrating PlayReady in Devices
 description: This topic provides a brief description on the different ways to implement a DRM Client in a device and how to develop applications using DRM.
 ms.assetid: "B58235E5-3E78-44CA-8BDE-22961773DDF4"
 keywords: client, device, architecture, porting kit, pk, dpk, integration, embedded
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

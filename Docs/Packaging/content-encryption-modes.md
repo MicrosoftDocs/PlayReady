@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title: PlayReady Content Encryption Modes
 description: This topic provides an overview about content encryption modes in PlayReady systems.
 ms.assetid: "4fcd8a74-5416-44f0-972d-532feab7bfde"
 keywords: content encryption,  content key, encryption overview, cbc, ctr, cipher block chaining, counter
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: playreadydpk
 ---
 
 # PlayReady Content Encryption Modes

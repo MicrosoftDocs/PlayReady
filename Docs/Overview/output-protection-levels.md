@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: Output Protection Levels
 description: This topic describes some of the general behavior of output protection levels.
 ms.assetid: "538c8046-99bf-f922-321f-4425f02d8bbd"
 keywords: output protection levels
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

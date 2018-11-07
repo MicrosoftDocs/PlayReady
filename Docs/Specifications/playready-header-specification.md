@@ -1,14 +1,10 @@
 ---
-author: rolandlefranc
 title: PlayReady Header Specification
 description: This specification applies to any end product created with any of the PlayReady technologies.
 ms.assetid: "5DC27BBD-0ADA-48CD-B1CB-5D46A7059DB4"
 keywords: PlayReady header specification
-ms.author: rolefran
 ms.date: 02/01/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 

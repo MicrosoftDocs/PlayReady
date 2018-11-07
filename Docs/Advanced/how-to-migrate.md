@@ -1,14 +1,10 @@
 ---
-author: dougklopfenstein
 title: How to Migrate from Previous Versions of the PK and Server
 description: Describes how to migrate from previous versions of the PK and server
 ms.assetid: "70D82E7F-096B-4D15-91B8-00C1E20A3BC5"
 keywords: How to migrate versions
-ms.author: v-doklo
 ms.date: 04/06/2018
 ms.topic: conceptual
-ms.prod: playready
-ms.technology: drm
 ---
 
 # How to Migrate from Previous Versions of the PK and Server
