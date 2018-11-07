@@ -150,5 +150,5 @@ PlayReady 3.0 and higher policies around resolutions can be accomplished in a co
 
 [PlayReady Product Versions](../Overview/product-versions.md)
 
-[How to Test PlayReady Clients with Versions of the PlayReady Server SDK](testing-client-server-versions.md)
+[How to Test PlayReady Clients with Versions of the PlayReady Server SDK](how-to-test-client-server-versions.md)
 

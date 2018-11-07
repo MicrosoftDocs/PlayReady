@@ -23,7 +23,7 @@ Note that the service can deliver multiple licenses in one single license respon
 In a subscription model where a large number of content pieces are played (for example, in a music service where the user downloads thousands of tracks to play offline), the client has to manage thousands of different licenses, one for each content. Because this is a subscription service (for example, it requires a monthly renewal), the licenses that are delivered have an expiration at the renewal date of the monthly subscription, and the user expects all the licenses to be renewed when the monthly fee is paid again.
 
 
-To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](license-chaining.md) and [Trusted Clocks](trusted-clocks.md).
+To optimize this scenario, the service should use chained licenses. Each piece of content is bound to a unique leaf license. All leaf licenses are bound to the same root license. The leaf licenses do not have beginning and expiration times, but the root license has these beginning and expiration times. Therefore, only the root license must be reacquired upon subscription renewal. Additionally, devices that play subscription content must support a PlayReady trusted clock to enforce the subscription policy associated with playback licenses. For more information, see [License Chaining](license-chaining.md) and [Trusted Clocks](../Features/trusted-clocks.md).
 
 
  ![Subscription Content](../images/image26_9.jpg)
@@ -47,7 +47,7 @@ The most common delivery mechanisms for subscription content is to stream the pr
 ## Streaming subscription content
 
 
-In a subscription scenario, where the subscription allows a certain maximum number of concurrent streams (for example, three streams), the service may want to leverage [PlayReady Secure Stop](secure-stop-pk.md) to enforce this number.
+In a subscription scenario, where the subscription allows a certain maximum number of concurrent streams (for example, three streams), the service may want to leverage [PlayReady Secure Stop](../Features/secure-stop-pk.md) to enforce this number.
 
 
 With adaptive streaming protocols over HTTP, the stream is HTTP cached and the streaming origin Server gets all the streaming requests. As a consequence, it is non-trivial for the service to count how many clients currently play one stream.
