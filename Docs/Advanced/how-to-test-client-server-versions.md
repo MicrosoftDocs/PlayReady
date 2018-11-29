@@ -64,7 +64,7 @@ Test Steps:
 
    {*versioned license service URL*}**?cfg=(persist:true,firstexp:60)** 
 
-   This parameter will direct the license service to return a license that expires 60 seconds after its first played. Note that you have to explicitely call out **persist:true** to receive persistent licenses.
+   This parameter will direct the license service to return a license that expires 60 seconds after its first played. Note that you have to explicitly call out **persist:true** to receive persistent licenses.
 
    ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:true,firstexp:60)](http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=\(persist:true,firstexp:60\)) 
 
