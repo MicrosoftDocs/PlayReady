@@ -45,7 +45,6 @@ All clients built on or after PlayReady PK version 4.0 may support CBC keys. Sup
 
 **Notes:**
 
-* Windows 10 computers equipped with an Intel Ice Lake processor or later and supporting HWDRM (SL3000) will support 'cbcs' starting in 2018.
 * All Xbox One units upgraded with version 1709 or higher support 'cbcs'.
 * All PlayReady License Servers starting with version 4.0 support issuing licenses with CBC keys.
 
