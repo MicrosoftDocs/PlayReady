@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 ## Content Encryption
 
-The packager needs to encrypt the content. Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the Compliance Rules. 
+The packager needs to encrypt the content. Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the Compliance Rules.
 
 MP4-based formats are recommended. CMAF is the preferred MP4-based format for PlayReady Clients, Windows 10, and Xbox One.
 
@@ -92,4 +92,4 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 
 [Supported Formats](mp4-based-formats-supported-by-playready-clients.md)
 
-[PlayReady Test Server Content](http://test.playready.microsoft.com/)
+[PlayReady Test Server Content](https://test.playready.microsoft.com/)

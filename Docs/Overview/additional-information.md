@@ -17,7 +17,7 @@ In addition to the pages on this website, the PlayReady team provides the follow
 
 * [PlayReady for Windows 8.1](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn468834(v=ieb.10)) Documentation
 
-* [PlayReady Test Server](http://test.playready.microsoft.com/) with a test license server and test content
+* [PlayReady Test Server](https://test.playready.microsoft.com/) with a test license server and test content
 
 * PlayReady Product [Home Page](https://www.microsoft.com/PlayReady/)
 
@@ -35,7 +35,7 @@ In addition to the pages on this website, the PlayReady team provides the follow
   * Additional Specifications and Format Documentation
 
 
-* [PlayReady Video Tutorials](http://test.playready.microsoft.com/Doc/VideoTutorials)
+* [PlayReady Video Tutorials](https://test.playready.microsoft.com/Doc/VideoTutorials)
 
   Provides video training and PlayReady conference videos that describe in detail aspects of PlayReady implementation. This website is restricted to licensees and requires an authorization token.
 

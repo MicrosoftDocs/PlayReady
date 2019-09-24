@@ -57,4 +57,4 @@ For each piece of content to protect, you are going to input the KID and content
 
 
 ## See also
-[PlayReady Test Server Content](http://test.playready.microsoft.com/)
+[PlayReady Test Server Content](https://test.playready.microsoft.com/)

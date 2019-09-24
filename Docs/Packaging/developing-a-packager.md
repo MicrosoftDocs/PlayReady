@@ -7,11 +7,11 @@ ms.date: 05/11/2018
 ms.topic: conceptual
 ---
 
-# Developing a PlayReady Packager 
+# Developing a PlayReady Packager
 
 There are several considerations you should examine before you begin incorporating PlayReady in your packager to protect content. Note that developing a packager that provides PlayReady protection for content you want to encrypt:
 
-* Does not require a licensing agreement from Microsoft. 
+* Does not require a licensing agreement from Microsoft.
 * There are no fees to Microsoft associated with inserting PlayReady in your content.
 * There are no royalty payments to Microsoft applicable to PlayReady encoders or packagers.
 
@@ -37,7 +37,7 @@ The development time for incorporating the PlayReady functionality in your packa
 
 If you have decided to develop your own PlayReady Packager, you will need to decide how you want the packager to work, based on how you want your content stored and delivered. The following list provides the necessary steps required to add PlayReady functionality to your packager.
 
-1. Choose your encryption format. Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) and CTR (Counter Mode) modes, as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms. 
+1. Choose your encryption format. Several different types of encryption are used to protect content. Microsoft PlayReady systems use the symmetric key algorithm, Advanced Encryption Standard (AES). Starting with version 4.0, PlayReady systems support AES 128 keys in both CBC (Cipher Block Chaining) and CTR (Counter Mode) modes, as defined in the ISO standard ISO/IEC 23001-7. The encryption mechanisms used to protect content are encapsulated in a container, so that files can be efficiently browsed and decrypted on a variety of platforms.
 
    Any encryption format that uses AES-128 keys used in CTR mode or CBC mode is allowed by the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). For more information, see [PlayReady Content Encryption Modes](content-encryption-modes.md).
 
@@ -45,7 +45,7 @@ If you have decided to develop your own PlayReady Packager, you will need to dec
 
 3. Choose whether you want to decrypt your content using only PlayReady, or whether you want to support multiple DRMs. For more information, see [Using encryption tools](content-packaging-and-delivery.md#using-encryption-tools).
 
-4. Choose how you are going to generate and store content keys (Key Value and Key ID). 
+4. Choose how you are going to generate and store content keys (Key Value and Key ID).
 
    Your packager should include some kind of key generator that creates the Key Value used to encrypt and decrypt your content. The key generator should associate a Key ID to the Key Value. The Key Value remains a secret, and the Key ID is public and is inserted in the PlayReady header in your content. If the packager does not include a key generator, you need to develop or source one separately.
 
@@ -53,11 +53,11 @@ If you have decided to develop your own PlayReady Packager, you will need to dec
 
 5. Choose how you are going to insert a PlayReady Object (including the PlayReady header and/or the embedded license store) in your encrypted content. For more information, see [How to generate a PlayReady Header](how-to-generate-playready-header.md).
 
-6. Choose how you are going to provide the key values and key IDs to a PlayReady Server, which will then distribute the key values to PlayReady clients. 
+6. Choose how you are going to provide the key values and key IDs to a PlayReady Server, which will then distribute the key values to PlayReady clients.
 
     You can develop your own PlayReady License Server (requires a license from PlayReady &mdash; however no fees or royalties are collected by Microsoft for your development or use of a PlayReady Server), or you can use a PlayReady Server provided or operated by a third party. Whether you develop your own PlayReady Server or the PlayReady Server is provided or operated by a third party, you must be able to communicate the key values and the key IDs to the server in a timely manner for the client to be able to play back your content efficiently.
-    
+
 7. Choose how the clients are going to contact the PlayReady License Server to acquire the content encryption keys. The client apps must be aware of the PlayReady License Server URL (also known as License Acquisition URL, or LA URL) when they need to acquire a license. The client apps could be programmed to have that LA URL value hardcoded, or retrieve it dynamically from the server. If the client app doesn't have this LA URL value, it will use the LA URL value found in the content's PlayReady Header, which is the default LA URL. Although it is not required, it is very common for services to include a default LA URL value in the content's PlayReady Header at packaging time.
 
 ## See also
-[PlayReady Test Server Content](http://test.playready.microsoft.com/)
+[PlayReady Test Server Content](https://test.playready.microsoft.com/)

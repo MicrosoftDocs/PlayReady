@@ -179,4 +179,4 @@ The following is a license response sample:
 ```
 
 ## See also
-[PlayReady Test Server](http://test.playready.microsoft.com/)
+[PlayReady Test Server](https://test.playready.microsoft.com/)
