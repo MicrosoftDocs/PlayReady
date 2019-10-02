@@ -27,6 +27,8 @@ The server can now process SecureStop2 messages. For more information, see [Play
 
 ## Changes in PlayReady Device Porting Kit Version 4.3
 
+### General Changes
+
 The client now sends SecureStop2 messages to the server. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
 The client application can now choose to reject individual licenses during Drm_Reader_Bind. For more information, refer to enum and structure documentation in source code file source/inc/drmcallbacktypes.h.
@@ -39,13 +41,15 @@ The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in co
 
 The DrmFileViewer.exe tool and its corresponding source code are no longer included. It only supported file formats which are no longer in widespread use.
 
-The non-spec-compliant CDMI interface is no longer included. Microsoft recommends migration to the spec-compliant CDMI interface. For more information, refer to source code files source/inc/drmcdmi* and source/modules/cdmi/real/*.
-
-The DRM_CDMI_DecryptOpaque API has been updated to support decryptionof AES128CBC content. For more information, refer to source code files source/inc/drmcdmi.h and source/modules/cdmi/real/drmcdmireal.c.
-
 Because the term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit, "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession.
 
+### API changes
+
 Migration from previous versions of PlayReady has been simplified with respect to the Output Protection structures passed to the DRMPFNPOLICYCALLBACK callback. For more information, refer to source code file source/inc/drmoutputleveltypes.h.
+
+The non-spec-compliant CDMI interface is no longer included (formerly source/cdmi/*). Microsoft recommends migration to the spec-compliant CDMI interface. For more information, refer to source code files source/inc/drmcdmi* and source/modules/cdmi/real/*.
+
+The DRM_CDMI_DecryptOpaque API has been updated to support decryptionof AES128CBC content. For more information, refer to source code files source/inc/drmcdmi.h and source/modules/cdmi/real/drmcdmireal.c.
 
 The following public API has been removed.
 
