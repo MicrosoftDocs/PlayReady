@@ -21,6 +21,8 @@ The SecureStop2 feature is added. For more information, see [PlayReady Secure St
 
 ## Changes in PlayReady Server SDK Version 4.3
 
+### General
+
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
 
