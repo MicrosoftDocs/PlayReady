@@ -27,7 +27,7 @@ The server can now process SecureStop2 messages. For more information, see [Play
 
 ## Changes in PlayReady Device Porting Kit Version 4.3
 
-### General Changes
+### General
 
 The client now sends SecureStop2 messages to the server. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
@@ -43,7 +43,7 @@ The DrmFileViewer.exe tool and its corresponding source code are no longer inclu
 
 Because the term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit, "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession.
 
-### API changes
+### API
 
 Migration from previous versions of PlayReady has been simplified with respect to the Output Protection structures passed to the DRMPFNPOLICYCALLBACK callback. For more information, refer to source code file source/inc/drmoutputleveltypes.h.
 
