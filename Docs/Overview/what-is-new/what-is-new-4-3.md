@@ -35,9 +35,9 @@ The client application can now determine what features the specific OEM implemen
 
 It is now easier to change compiler settings and add OEM-specific error codes. For more information, refer to source code files source/inc/oemcompiler.h and source/inc/oemresults.h.
 
-The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in compiled form. They are compiled with source code files source/test/cipher/* and source/test/crypto/*.
+The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in compiled form. They can still be compiled using source code files source/test/cipher/* and source/test/crypto/*.
 
-The DrmFileViewer.exe tool and its corresopnding source code are no longer included. It only supported file formats which are no longer in widespread use.
+The DrmFileViewer.exe tool and its corresponding source code are no longer included. It only supported file formats which are no longer in widespread use.
 
 The non-spec-compliant CDMI interface is no longer included. Microsoft recommends migration to the spec-compliant CDMI interface. For more information, refer to source code files source/inc/drmcdmi* and source/modules/cdmi/real/*.
 
@@ -48,35 +48,56 @@ Because the term "batch ID" and the term "session ID" have historically been int
 Migration from previous versions of PlayReady has been simplified with respect to the Output Protection structures passed to the DRMPFNPOLICYCALLBACK callback. For more information, refer to source code file source/inc/drmoutputleveltypes.h.
 
 The following public API has been removed.
+
     Drm_Revocation_StoreRevListArray
 
 The following OEM API has been renamed.
+
     OEM_TEE_BASE_SignHashWithDeviceSigningKey -> OEM_TEE_BASE_ECDSA_P256_SignHash
 
 The following OEM API now has some of its parameters changed to optional (they may be NULL on input). For more information, refer to source code file source/oem/common/inc/oemtee.h.
+
     OEM_TEE_BASE_GetVersionInformation
 
 The following OEM APIs have been added. For more information, refer to the corresponding source code file where the default implementation of the API resides.
+
     Oem_Clock_GetSystemTimeOffsetAsInt64
+
     Oem_Clock_SetSecureClockOffsetValue
+
     OEM_ECC_GenerateTeeFeatureInformationSigningPublicKey_P256Impl
+
     OEM_ECC_GenerateTeeFeatureInformationSigningPublicKey_P256
+
     OEM_TEE_CRYPTO_ECC256_GenerateTeeFeatureInformationSigningKey
+
     OEM_TEE_BASE_ECC256_GenerateTeeFeatureInformationSigningKey
+
     OEM_TEE_BASE_GetExtendedVersion
+
     OEM_TEE_BASE_ECDSA_P256_SignData
+
     OEM_TEE_SECURESTOP2_StopDecryptors
 
 The following OEM APIs have been removed.
+
     Oem_MemRealloc
     OEM_SHA256_Finalize_With_SHA_1_Size
+
     OEM_SHA256_HMAC_Init
+
     OEM_SHA256_HMAC_Update
+
     OEM_SHA256_HMAC_Finalize
+
     OEM_SHA256_HMAC_FinalizeOffset
+
     OEM_SHA256_HMAC_CreateMAC
+
     OEM_SHA256_HMAC_VerifyMAC
+
     OEM_TEE_LPROV_ECDSA_Sign
+
     OEM_TEE_LPROV_GetDeviceModelInfo
 
 
