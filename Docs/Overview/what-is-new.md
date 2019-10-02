@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # What's New
 
-Microsoft PlayReady adds, removes, and changes functionality from version to version.  Starting with PlayReady version 4.3, more detailed information is provided in this documentation than was available for previous versions.  For previous versions, refer to [PlayReady Product Versions](product-versions.md).
+Microsoft PlayReady adds, removes, and changes functionality from version to version. Starting with PlayReady version 4.3, more detailed information is provided in this documentation than was available for previous versions. For previous versions, refer to [PlayReady Product Versions](product-versions.md).
 
 ## In this section
 
