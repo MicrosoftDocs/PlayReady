@@ -14,9 +14,10 @@ This page contains an overview of the most significant changes between PlayReady
 
 ## PlayReady Server SDK Changes in Version 4.3
 
-TBD
+The server can now process SecureStop2 messages.  For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
 
 ## PlayReady Device Porting Kit Changes in Version 4.3
 
-TBD
+The client now sends SecureStop2 messages to the server.  For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
+
