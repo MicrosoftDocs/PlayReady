@@ -18,6 +18,8 @@
 
 ### [Output Protection Levels](Overview/output-protection-levels.md)
 
+### [What's New](Overview/what-is-new/what-is-new-4-3.md)
+
 ## [Common PlayReady Scenarios](Overview/common-playready-scenarios.md)
 
 ### [Scenario: Rental Content](Overview/scenario-rental-content.md)
