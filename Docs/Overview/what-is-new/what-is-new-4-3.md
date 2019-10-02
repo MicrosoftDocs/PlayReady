@@ -82,6 +82,7 @@ The following OEM APIs have been added. For more information, refer to the corre
 The following OEM APIs have been removed.
 
     Oem_MemRealloc
+
     OEM_SHA256_Finalize_With_SHA_1_Size
 
     OEM_SHA256_HMAC_Init
