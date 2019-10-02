@@ -13,19 +13,19 @@ This page contains an overview of the most significant changes between PlayReady
 
 
 
-## General PlayReady Changes in Version 4.3
+## General Changes in PlayReady Version 4.3
 
 The SecureStop2 feature is added. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
 
 
-## PlayReady Server SDK Changes in Version 4.3
+## Changes in PlayReady Server SDK Version 4.3
 
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
 
 
-## PlayReady Device Porting Kit Changes in Version 4.3
+## Changes in PlayReady Device Porting Kit Version 4.3
 
 The client now sends SecureStop2 messages to the server. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
