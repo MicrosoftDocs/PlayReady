@@ -37,11 +37,11 @@ The client application can now determine what features the specific OEM implemen
 
 It is now easier to change compiler settings and add OEM-specific error codes. For more information, refer to source code files source/inc/oemcompiler.h and source/inc/oemresults.h.
 
-The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in compiled form. They can still be compiled using source code files source/test/cipher/* and source/test/crypto/*.
+The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in compiled form. They can still be compiled using source code files source/test/cipher/\* and source/test/crypto/*.
 
 The DrmFileViewer.exe tool and its corresponding source code are no longer included. It only supported file formats which are no longer in widespread use.
 
-Because the term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit, "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession.
+The term "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession. (The term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit.)
 
 ### API
 
