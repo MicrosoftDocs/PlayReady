@@ -7,13 +7,15 @@ ms.date: 10/02/2019
 ms.topic: conceptual
 ---
 
-# What's New in PlayReady verion 4.3
+# What's New in PlayReady Version 4.3
 
 This page contains an overview of the most significant changes between PlayReady version 4.0 and PlayReady version 4.3.
+
 
 ## PlayReady Server SDK Changes in Version 4.3
 
 TBD
+
 
 ## PlayReady Device Porting Kit Changes in Version 4.3
 
