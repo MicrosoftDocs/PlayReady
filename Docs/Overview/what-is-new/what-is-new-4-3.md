@@ -62,43 +62,26 @@ The following OEM API now has some of its parameters changed to optional (they m
 The following OEM APIs have been added. For more information, refer to the corresponding source code file where the default implementation of the API resides.
 
     Oem_Clock_GetSystemTimeOffsetAsInt64
-
     Oem_Clock_SetSecureClockOffsetValue
-
     OEM_ECC_GenerateTeeFeatureInformationSigningPublicKey_P256Impl
-
     OEM_ECC_GenerateTeeFeatureInformationSigningPublicKey_P256
-
     OEM_TEE_CRYPTO_ECC256_GenerateTeeFeatureInformationSigningKey
-
     OEM_TEE_BASE_ECC256_GenerateTeeFeatureInformationSigningKey
-
     OEM_TEE_BASE_GetExtendedVersion
-
     OEM_TEE_BASE_ECDSA_P256_SignData
-
     OEM_TEE_SECURESTOP2_StopDecryptors
 
 The following OEM APIs have been removed.
 
     Oem_MemRealloc
-
     OEM_SHA256_Finalize_With_SHA_1_Size
-
     OEM_SHA256_HMAC_Init
-
     OEM_SHA256_HMAC_Update
-
     OEM_SHA256_HMAC_Finalize
-
     OEM_SHA256_HMAC_FinalizeOffset
-
     OEM_SHA256_HMAC_CreateMAC
-
     OEM_SHA256_HMAC_VerifyMAC
-
     OEM_TEE_LPROV_ECDSA_Sign
-
     OEM_TEE_LPROV_GetDeviceModelInfo
 
 
