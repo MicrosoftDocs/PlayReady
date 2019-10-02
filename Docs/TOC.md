@@ -18,7 +18,7 @@
 
 ### [Output Protection Levels](Overview/output-protection-levels.md)
 
-### [What's New](Overview/what-is-new/what-is-new-4-3.md)
+### [What's New](Overview/what-is-new.md)
 
 ## [Common PlayReady Scenarios](Overview/common-playready-scenarios.md)
 
