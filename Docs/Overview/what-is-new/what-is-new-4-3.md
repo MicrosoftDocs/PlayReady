@@ -45,7 +45,7 @@ Migration from previous versions of PlayReady has been simplified with respect t
 
 The non-spec-compliant CDMI interface is no longer included (formerly source/cdmi/\*). Microsoft recommends migration to the spec-compliant CDMI interface. For more information, refer to source code files source/inc/drmcdmi\* and source/modules/cdmi/real/\*.
 
-The DRM_CDMI_DecryptOpaque API has been updated to support decryptionof AES128CBC content. For more information, refer to source code files source/inc/drmcdmi.h and source/modules/cdmi/real/drmcdmireal.c.
+The DRM_CDMI_DecryptOpaque API has been updated to support decryption of AES128CBC content. For more information, refer to source code files source/inc/drmcdmi.h and source/modules/cdmi/real/drmcdmireal.c.
 
 The following public API has been removed.
 
