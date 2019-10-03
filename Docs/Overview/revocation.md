@@ -33,7 +33,7 @@ Microsoft builds and maintains the revocation list and its versioning structure.
 
 Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), companies operating a PlayReady Server "must update the PlayReady Server Software Development Kit certificate revocation lists for each PlayReady Server once a week". This ensures any compromised client gets its license requests declined in a reasonable time frame after its addition by Microsoft to the Revocation List.
 
-## Ignoring individual entries in the PlayReady Revocation List
+## Ignoring Individual Entries in the PlayReady Revocation List
 
 TODO
 
