@@ -37,7 +37,8 @@ The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in co
 
 The DrmFileViewer.exe tool and its corresponding source code are no longer included. It only supported file formats which are no longer in widespread use.
 
-The term "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession. (The term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit.)<br/><br/>
+The term "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession. (The term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit.)
+<br/><br/>
 
 ### API
 
