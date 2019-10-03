@@ -134,6 +134,8 @@
 
 ### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Advanced/how-to-test-client-server-versions.md)
 
+### [How to Determine What Features a Client Supports](Advanced/how-to-determine-client-features.md)
+
 ## [Specifications](Specifications/specifications.md)
 
 ### [PlayReady Header Specification](Specifications/playready-header-specification.md)

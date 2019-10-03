@@ -22,6 +22,8 @@ The SecureStop2 feature is added. For more information, see [PlayReady Secure St
 ### General
 
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
+
+The server can now tell the application what features the client has implemented if the client is also version 4.3 or higher.  For more information see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md)
 <br/><br/>
 
 ## Changes in PlayReady Device Porting Kit Version 4.3
@@ -33,6 +35,8 @@ The client now sends SecureStop2 messages to the server. For more information, s
 The client application can now choose to reject individual licenses during Drm_Reader_Bind. For more information, refer to enum and structure documentation in source code file source/inc/drmcallbacktypes.h.
 
 The client application can now determine what features the specific OEM implementation of the PlayReady Device Porting Kit has implemented. For more information, refer to structure definitions in source code file source/inc/drmmanagertypes.h.
+
+The client sends what features the specific OEM implementation of the PlayReady Device Porting Kit has implemented to the server as part of its License Acquisition challenge.  For more information see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md)
 
 It is now easier to change compiler settings and add OEM-specific error codes. For more information, refer to source code files source/inc/oemcompiler.h and source/inc/oemresults.h.
 
