@@ -13,15 +13,13 @@ This page contains an overview of the most significant changes between PlayReady
 
 ## General Changes in PlayReady Version 4.3
 
-The SecureStop2 feature is added. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).<br/>
+The SecureStop2 feature is added. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).<br/><br/>
 
 ## Changes in PlayReady Server SDK Version 4.3
 
 ### General
 
-The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
-
-
+The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).<br/><br/>
 
 ## Changes in PlayReady Device Porting Kit Version 4.3
 
@@ -39,7 +37,7 @@ The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in co
 
 The DrmFileViewer.exe tool and its corresponding source code are no longer included. It only supported file formats which are no longer in widespread use.
 
-The term "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession. (The term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit.)
+The term "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession. (The term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit.)<br/><br/>
 
 ### API
 
