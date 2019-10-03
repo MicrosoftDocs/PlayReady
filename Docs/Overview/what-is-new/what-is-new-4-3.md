@@ -23,7 +23,9 @@ The SecureStop2 feature is added. For more information, see [PlayReady Secure St
 
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
-The server can now tell the application what features the client has implemented if the client is also version 4.3 or higher. For more information see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
+A server application can now determine what features the client has implemented if the client is also version 4.3 or higher. For more information, see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
+
+A server application can now explicitly request that one or more revoked client certificates be treated as if they were not revoked.  For more information, see [PlayReady Revocation](../revocation.md).
 
 The server's Certificate class now correctly returns ManufacturerName, ModelName, and ModelNumber for certificates coming from Windows clients.
 <br/><br/>
