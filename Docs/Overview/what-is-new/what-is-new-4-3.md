@@ -24,6 +24,8 @@ The SecureStop2 feature is added. For more information, see [PlayReady Secure St
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
 The server can now tell the application what features the client has implemented if the client is also version 4.3 or higher. For more information see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
+
+The server's Certificate class now correctly returns ManufacturerName, ModelName, and ModelNumber for certificates coming from Windows clients.
 <br/><br/>
 
 ## Changes in PlayReady Device Porting Kit Version 4.3
@@ -59,9 +61,10 @@ The following public API has been removed.
 
     Drm_Revocation_StoreRevListArray
 
-The following OEM API has been renamed.
+The following OEM APIs have been renamed.
 
     OEM_TEE_BASE_SignHashWithDeviceSigningKey -> OEM_TEE_BASE_ECDSA_P256_SignHash
+    OEM_TEE_LPROV_ECDSA_Sign -> OEM_TEE_BASE_ECDSA_P256_SignData
 
 The following OEM API now has some of its parameters changed to optional (they may be NULL on input). For more information, refer to source code file source/oem/common/inc/oemtee.h.
 
@@ -76,7 +79,6 @@ The following OEM APIs have been added. For more information, refer to the corre
     OEM_TEE_CRYPTO_ECC256_GenerateTeeFeatureInformationSigningKey
     OEM_TEE_BASE_ECC256_GenerateTeeFeatureInformationSigningKey
     OEM_TEE_BASE_GetExtendedVersion
-    OEM_TEE_BASE_ECDSA_P256_SignData
     OEM_TEE_SECURESTOP2_StopDecryptors
 
 The following OEM APIs have been removed.
@@ -89,7 +91,6 @@ The following OEM APIs have been removed.
     OEM_SHA256_HMAC_FinalizeOffset
     OEM_SHA256_HMAC_CreateMAC
     OEM_SHA256_HMAC_VerifyMAC
-    OEM_TEE_LPROV_ECDSA_Sign
     OEM_TEE_LPROV_GetDeviceModelInfo
 
 
