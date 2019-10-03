@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This page contains an overview of the most significant changes between PlayReady version 4.0 and PlayReady version 4.3.
 
-
+<br/>
 
 ## General Changes in PlayReady Version 4.3
 
