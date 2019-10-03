@@ -1,6 +1,6 @@
 ---
 title: "How to Determine What Features a Client Supports"
-description: 
+description: Describes how a server application can determine whether a client supports a given feature or not
 ms.assetid: "345F02F1-4233-4D60-81CB-7403702CFEF6"
 keywords: playready server client feature support
 ms.date: 10/02/2019
