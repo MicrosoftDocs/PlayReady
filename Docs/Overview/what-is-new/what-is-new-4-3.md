@@ -14,7 +14,9 @@ This page contains an overview of the most significant changes between PlayReady
 
 ## General Changes in PlayReady Version 4.3
 
-The SecureStop2 feature is added. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
+The SecureStop2 feature is added. For more specific information, refer to the corresponding sections below.
+
+The ability to determine which features a given implementation supports is added. For more specific information, refer to the corresponding sections below.
 <br/><br/>
 
 ## Changes in PlayReady Server SDK Version 4.3
