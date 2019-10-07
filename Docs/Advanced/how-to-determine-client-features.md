@@ -13,7 +13,7 @@ Starting with PlayReady Device Porting Kit Version 4.3, the client sends informa
 
 Features are exposed through the LicenseChallenge class in three different catagories: TEE Properties, TEE APIs, and REE Features. In order to access an individual catagory of client features, you can use the properties of the License Challenge to get either a list of enums corresponding to each feature or access the raw XML containing feature information sent within the license challenge. The current features exposed in the LicenseChallenge class are listed below with their corresponding enum values.
 
-TeePropertyList:
+TeePropertyList:<br/>
     SUPPORTS_HEVC_HW_DECODING                            => 0<br/>
     SUPPORTS_REMOTE_PROVISIONING                         => 1<br/>
     SUPPORTS_PRE_PROCESS_ENCRYPTED_DATA                  => 2<br/>
@@ -27,7 +27,7 @@ TeePropertyList:
     REQUIRES_MINIMAL_REVOCATION_DATA                     => 10<br/>
     SUPPORTS_OPTIMIZED_CONTENT_KEY2                      => 11<br/>
 
-TeeApiList:
+TeeApiList:<br/>
     DRM_TEE_BASE_AllocTEEContext                         => 0<br/>
     DRM_TEE_BASE_FreeTEEContext                          => 1<br/>
     DRM_TEE_BASE_SignDataWithSecureStoreKey              => 2<br/>
@@ -73,7 +73,7 @@ TeeApiList:
     DRM_TEE_SECURESTOP2_SignChallenge                    => 42<br/>
     DRM_TEE_BASE_GetFeatureInformation                   => 43<br/>
 
-ReeFeatureList:
+ReeFeatureList:<br/>
     Assembly                                             => 0<br/>
     PersistentStorePrealloc                              => 1<br/>
     ECCProfiling                                         => 2<br/>
@@ -119,7 +119,13 @@ ReeFeatureList:
     LegacyXmlCertificates                                => 42<br/>
     AESCBCS                                              => 43<br/>
 
-There are a few common states that the LicenseChallenge class can be in with respect to the client feature set exposed. If the TeePropertyList, TeeApiList, and ReeFeatureList are all empty, then it means that the client is running a version of the PK older than 4.3. If the ReeFeatureList is non-empty and the TeePropertyList and TeeApiList are both empty, then it can mean one of two things. The client is either running in Software DRM, or the client's PK is version 4.3+ but with an old TEE. Finally, if the TeePropertyList, TeeApiList, and ReeFeatureList are all non-empty, then the client is running PK version 4.3+ with an updated TEE in Hardware DRM.
+There are a few common states that the LicenseChallenge class can be in with respect to the client feature set exposed.
+
+* If the TeePropertyList, TeeApiList, and ReeFeatureList are all empty, then it means that the client is running a version of the PK older than 4.3.
+* If the ReeFeatureList is non-empty and the TeePropertyList and TeeApiList are both empty, then it can mean one of two things.
+** On Windows clients, the client is either running in Software DRM or the client's TEE is older than PK version 4.3.
+** On non-Windows clients, the client's REE is running PK version 4.3+ but the client's TEE is older than PK version 4.3.
+* If the TeePropertyList, TeeApiList, and ReeFeatureList are all non-empty, then the client is running PK version 4.3+ for all components.
 
 <br/><br/>
 
