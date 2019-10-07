@@ -53,10 +53,13 @@ The data within the "CertificateHash" node must match the hash of the revoked mo
 
 You must also reference this XML file from within your server configuration.
 
-* For .Net Core-based RMSDK deployments, the XML file should be added as an item project, and the RevocationAllowFile string in config/RMSDKConfig.cs should be updated with the path to the XML file.
-* For IIS-based RMSDK deployments, this is done by adding a new key with a name of "REVOCATIONALLOWFILE" which points to your XML file to the web.config file.
+* For .Net Core-based RMSDK deployments
+    * The XML file should be added as an item project.
+    * The RevocationAllowFile string in config/RMSDKConfig.cs should be updated with the path to the XML file.
 
-    * For example, if the XML file above was named "REVOCATIONALLOWSAMPLE.XML", the web.config file would be updated as follows:
+* For IIS-based RMSDK deployments
+    * Add a new key with a name of "REVOCATIONALLOWFILE" which points to your XML file to the web.config file.
+    * For example, if the XML file above was named "REVOCATIONALLOWSAMPLE.XML", the web.config file would be updated as follows.
 
 ```XML
 <?XML VERSION="1.0" ENCODING="UTF-8"?>
