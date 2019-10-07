@@ -35,5 +35,34 @@ Per the requirements of the [Compliance Rules for PlayReady Products](https://ww
 
 ## Ignoring Individual Entries in the PlayReady Revocation List
 
-TODO
+Starting with PlayReady Server version 4.3, your server application may explicitly ignore one or more revoked hashes and continue to issue content to them even though they are revoked. This may be useful to companies that both produce and distribute protected content and who wish to have more control over where that content can flow.
+
+To utilize this feature, you will need to create a new XML file containing the certificate hashes you wish to ignore as well as add a new entry to the web.config file of your RMSDK implementation.  The XML file has the following format.
+
+<?XML VERSION="1.0" ENCODING="UTF-8"?>
+   <REVALLOWINFO>
+      <ALLOWLIST>
+         <CERTIFICATEHASH>2C4OCYBGE3XZ3ODIUVUWD0SVLWH4W1NX9EA5DMJZ/PK=</CERTIFICATEHASH>
+         <CERTIFICATEHASH>9OHU9A1KAJYI9BUWQWAVXBOO7R4XS+GG8HV0ESDBTNW=</CERTIFICATEHASH>
+      </ALLOWLIST>
+   </REVALLOWINFO>
+
+The data within the "CertificateHash" node must match the hash of the revoked model or company certificate. Microsoft intends to publish this information, along with corresponding model information, for future revocations.  
+
+You must also reference this XML file from within your server configuration.
+
+* For .Net Core-based RMSDK deployments, the XML file should be added as an item project, and the RevocationAllowFile string in config/RMSDKConfig.cs should be updated with the path to the XML file.
+* For IIS-based RMSDK deployments, this is done by adding a new key with a name of "REVOCATIONALLOWFILE" which points to your XML file to the web.config file.
+
+    * For example, if the XML file above was named "REVOCATIONALLOWSAMPLE.XML", the web.config file would be updated as follows:
+
+<?XML VERSION="1.0" ENCODING="UTF-8"?>
+   <CONFIGURATION>
+      <APPSETTINGS>
+         <ADD KEY="HANDLERDLL" VALUE="BIN\CFGHANDLER.DLL"/>
+         <ADD KEY="SERVERCERTIFICATECONFIGFILE" VALUE="APP_DATA\TESTSERVICEDEPLOYMENTCERT_EX20200311.XML"/>           
+         <ADD KEY="REVOCATIONDATAFILE" VALUE="REVINFO2V43_20180427.XML"/>
+         <ADD KEY="ROBUSTNESSVERSIONSDATAFILE" VALUE="ROBUSTNESSVERSIONS.XML"/>
+         <ADD KEY="REVOCATIONALLOWFILE" VALUE="REVOCATIONALLOWSAMPLE.XML">
+         ...
 
