@@ -123,8 +123,8 @@ There are a few common states that the LicenseChallenge class can be in with res
 
 * If the TeePropertyList, TeeApiList, and ReeFeatureList are all empty, then it means that the client is running a version of the PK older than 4.3.
 * If the ReeFeatureList is non-empty and the TeePropertyList and TeeApiList are both empty, then it can mean one of two things.
-** On Windows clients, the client is either running in Software DRM or the client's TEE is older than PK version 4.3.
-** On non-Windows clients, the client's REE is running PK version 4.3+ but the client's TEE is older than PK version 4.3.
+    * On Windows clients, the client is either running in Software DRM or the client's TEE is older than PK version 4.3.
+    * On non-Windows clients, the client's REE is running PK version 4.3+ but the client's TEE is older than PK version 4.3.
 * If the TeePropertyList, TeeApiList, and ReeFeatureList are all non-empty, then the client is running PK version 4.3+ for all components.
 
 <br/><br/>
