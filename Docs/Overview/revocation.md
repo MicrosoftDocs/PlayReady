@@ -39,6 +39,7 @@ Starting with PlayReady Server version 4.3, your server application may explicit
 
 To utilize this feature, you will need to create a new XML file containing the certificate hashes you wish to ignore as well as add a new entry to the web.config file of your RMSDK implementation.  The XML file has the following format.
 
+```XML
 <?XML VERSION="1.0" ENCODING="UTF-8"?>
    <REVALLOWINFO>
       <ALLOWLIST>
@@ -46,6 +47,7 @@ To utilize this feature, you will need to create a new XML file containing the c
          <CERTIFICATEHASH>9OHU9A1KAJYI9BUWQWAVXBOO7R4XS+GG8HV0ESDBTNW=</CERTIFICATEHASH>
       </ALLOWLIST>
    </REVALLOWINFO>
+```
 
 The data within the "CertificateHash" node must match the hash of the revoked model or company certificate. Microsoft intends to publish this information, along with corresponding model information, for future revocations.  
 
@@ -56,6 +58,7 @@ You must also reference this XML file from within your server configuration.
 
     * For example, if the XML file above was named "REVOCATIONALLOWSAMPLE.XML", the web.config file would be updated as follows:
 
+```XML
 <?XML VERSION="1.0" ENCODING="UTF-8"?>
    <CONFIGURATION>
       <APPSETTINGS>
@@ -65,4 +68,5 @@ You must also reference this XML file from within your server configuration.
          <ADD KEY="ROBUSTNESSVERSIONSDATAFILE" VALUE="ROBUSTNESSVERSIONS.XML"/>
          <ADD KEY="REVOCATIONALLOWFILE" VALUE="REVOCATIONALLOWSAMPLE.XML">
          ...
+```
 
