@@ -9,9 +9,11 @@ ms.topic: conceptual
 
 # How to Determine What Features a Client Supports
 
-Starting with PlayReady Device Porting Kit Version 4.3, the client sends information about what features it supports to the License Server as part of its license acquisition challenge.  Starting with PlayReady Server SDK Version 4.3, this information is made publically available to an application via the LicenseChallenge class.  (Previous versions of the PlayReady Server SDK will ignore this information if present in the license acquisition challenge.)  This page describes how to use this feature to make decisions in a server application based on what functionality the client has implemented.
+Starting with PlayReady Device Porting Kit Version 4.3, the client sends information about what features it supports to the License Server as part of its license acquisition challenge. This includes both the Rich Execution Environment (REE) features and the Trusted Execution Environment (TEE) features.
 
-Features are exposed through the LicenseChallenge class in three different catagories: TEE Properties, TEE APIs, and REE Features. In order to access an individual catagory of client features, you can use the properties of the License Challenge to get either a list of enums corresponding to each feature or access the raw XML containing feature information sent within the license challenge. The current features exposed in the LicenseChallenge class are listed below with their corresponding enum values.
+Starting with PlayReady Server SDK Version 4.3, this information is made publically available to an application via the LicenseChallenge class. (Previous versions of the PlayReady Server SDK will ignore this information if present in the license acquisition challenge.) This page describes how to use this feature to make decisions in a server application based on what functionality the client has implemented.
+
+Features are exposed through the LicenseChallenge class in three different catagories: TEE Properties, TEE APIs, and REE Features. In order to access an individual catagory of client features, you can use the properties of the License Challenge to get either a list of enums corresponding to each feature or access the raw XML containing feature information sent within the license challenge. The features exposed in the LicenseChallenge class as of version 4.3 are listed below with their corresponding enum values.
 
 TeePropertyList:<br/>
     SUPPORTS_HEVC_HW_DECODING                            => 0<br/>
@@ -126,6 +128,7 @@ There are a few common states that the LicenseChallenge class can be in with res
     * On Windows clients, the client is either running in Software DRM or the client's TEE is older than PK version 4.3.
     * On non-Windows clients, the client's REE is running PK version 4.3+ but the client's TEE is older than PK version 4.3.
 * If the TeePropertyList, TeeApiList, and ReeFeatureList are all non-empty, then the client is running PK version 4.3+ for all components.
+    * Note: The TeePropertyList and TeeApiList are provided by the client's TEE and can be trusted to its security level.
 
 <br/><br/>
 

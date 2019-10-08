@@ -78,10 +78,10 @@ The following OEM APIs have been added. For more information, refer to the corre
 
     Oem_Clock_GetSystemTimeOffsetAsInt64
     Oem_Clock_SetSecureClockOffsetValue
-    OEM_ECC_GenerateTeeFeatureInformationSigningPublicKey_P256Impl
-    OEM_ECC_GenerateTeeFeatureInformationSigningPublicKey_P256
-    OEM_TEE_CRYPTO_ECC256_GenerateTeeFeatureInformationSigningKey
-    OEM_TEE_BASE_ECC256_GenerateTeeFeatureInformationSigningKey
+    OEM_ECC_GenerateTeeSigningPublicKey_P256Impl
+    OEM_ECC_GenerateTeeSigningPublicKey_P256
+    OEM_TEE_CRYPTO_ECC256_GenerateTeeSigningPrivateKey
+    OEM_TEE_BASE_ECC256_GenerateTeeSigningPrivateKey
     OEM_TEE_BASE_GetExtendedVersion
     OEM_TEE_SECURESTOP2_StopDecryptors
 
