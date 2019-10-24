@@ -31,7 +31,7 @@ For information about Secure Stop in UWP apps, see the *[Add secure stop](https:
 
 ## Secure Stop 2
 
-In PlayReady version 4.2, *PlayReady Secure Stop 2* provides more security by enforcing the Secure Stop functionality on the client in the Trusted Execution Environment (TEE) at Security Level 3000.
+In PlayReady version 4.3, *PlayReady Secure Stop 2* provides more security by enforcing the Secure Stop functionality on the client in the Trusted Execution Environment (TEE) at Security Level 3000.
 
 A service may use the SecureStop feature to enforce playback across multiple clients belonging to a same user account. Depending on the configuration of a particular client in that user account, the service will receive slightly different messages from the client.
 
@@ -73,13 +73,20 @@ th {
     <td>Medium</td>
   </tr>
   <tr>
-    <td>PlayReady version 4.2+ <br>SL3000</td>
+    <td>PlayReady version 4.3+ <br>SL3000</td>
     <td>Server receives a SecureStop2 message from the client. A malicious SecureStop2 message from this client would require an attack in the client’s Trusted Execution Environment (TEE). <br><span style="color:red">The robustness of this message against attacks is higher than SecureStop1.</span></td>
     <td>High</td>
   </tr>
 </table>
 
+<br>
 
+In order to take advantage of the Secure Stop 2 feature, the Server application must enalble the feature as follows:
+
+   *  Set the SecureStop2AESKey property on the MediaLicense class when issuing a license with Secure Stop. (This can be done regardless of whether or not the client supports Secure Stop 2.)
+   *  Create a class that implements the ISecureStop2Handler interface such that, for any given KID, it returns the same Key that was used when setting the SecureStop2AESKey property on a MediaLicense with that KID.
+   *  Pass an instance of the class that implements the ISecureStop2Handler interface to the GetSecureStopData method of the SecureStopDataChallenge class.
+   *  After calling GetSecureStopData, query the SecureStop2VerifiedSession property on the SecureStopDataChallenge class. If it is set to Guid.Empty, then the client sent a SecureStop1 message. If it is set to any other Guid, then the client sent a SecureStop2 message. The returned Guid is the session Id of the single session within the SecureStop2 challenge which can be verified to be non-malicious (assuming the client's Trusted Execution Environment (TEE) was not successfully attacked).
 
 ## See also
 

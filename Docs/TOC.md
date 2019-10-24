@@ -18,6 +18,8 @@
 
 ### [Output Protection Levels](Overview/output-protection-levels.md)
 
+### [What's New](Overview/what-is-new.md)
+
 ## [Common PlayReady Scenarios](Overview/common-playready-scenarios.md)
 
 ### [Scenario: Rental Content](Overview/scenario-rental-content.md)
@@ -131,6 +133,8 @@
 ### [How to Migrate from Previous Versions of the PK and Server](Advanced/how-to-migrate.md)
 
 ### [How to Test PlayReady Clients with Versions of the PlayReady Server SDK](Advanced/how-to-test-client-server-versions.md)
+
+### [How to Determine What Features a Client Supports](Advanced/how-to-determine-client-features.md)
 
 ## [Specifications](Specifications/specifications.md)
 
