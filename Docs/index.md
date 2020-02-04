@@ -93,7 +93,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
         </a>
     </li>
     <li>
-        <a href="http://test.playready.microsoft.com/">
+        <a href="https://test.playready.microsoft.com/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

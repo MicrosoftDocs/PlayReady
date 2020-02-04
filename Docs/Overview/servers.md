@@ -60,7 +60,7 @@ See the [PlayReady Partners](https://www.microsoft.com/playready/partners) page 
 
 ## PlayReady Server Sample
 
-The following is a description of the PlayReady Server SOAP interface available at **[http://test.playready.microsoft.com/service/rightsmanager.asmx](https://test.playready.microsoft.com/service/rightsmanager.asmx)**
+The following is a description of the PlayReady Server SOAP interface available at **[https://test.playready.microsoft.com/service/rightsmanager.asmx](https://test.playready.microsoft.com/service/rightsmanager.asmx)**
 
 ```
 RightsManager
