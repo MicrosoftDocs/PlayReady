@@ -47,7 +47,7 @@ Test Steps:
 
    {*versioned license service URL*}**without any parameters**
 
-    ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx](https://test.playready.microsoft.com/service/rightsmanager.asmx)
+    ex: [https://test.playready.microsoft.com/service/rightsmanager.asmx](https://test.playready.microsoft.com/service/rightsmanager.asmx)
 
 1. Validate a license is returned and that playback is successful.
 
@@ -66,7 +66,7 @@ Test Steps:
 
    This parameter will direct the license service to return a license that expires 60 seconds after its first played. Note that you have to explicitly call out **persist:true** to receive persistent licenses.
 
-   ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:true,firstexp:60)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=\(persist:true,firstexp:60\))
+   ex: [https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:true,firstexp:60)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=\(persist:true,firstexp:60\))
 
 1. Validate that a license is returned and that playback is successful. Add or change the time based policy parameters as listed on the test site to test other persistent scenarios.
 
@@ -85,7 +85,7 @@ Test Steps:
 
    {*versioned license service URL*}**?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==)**
 
-   ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==))
+   ex: [https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(rootid:uPeXHrR3K0icGCpYMBGsZw==,kid:header),(isroot:true,kid:uPeXHrR3K0icGCpYMBGsZw==))
 
 1. Validate that a license is returned and that playback is successful. In this scenario a single response from the service should contain two licenses. One of them will be a root license and the other a leaf license. The licenses should expire five minutes after being issued to the client.
 
@@ -102,7 +102,7 @@ Domains are not as commonly used by services. PlayReady domains provide both a w
 
    {*versioned license service url*}?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==)
 
-   ex: [http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==))
+   ex: [https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(accountid:A/uHOj7F+UaM+Jlny2obFA==))
 
 1. Have the test client generate and send a JoinDomain challenge and validate that there is a domain certificate in the service response.
 
@@ -113,5 +113,5 @@ Domains are not as commonly used by services. PlayReady domains provide both a w
 
 ## More information
 
-For more information, visit the PlayReady website at [http://www.microsoft.com/playready/](https://www.microsoft.com/playready/) and  the PlayReady test site at [http://test.playready.microsoft.com/](https://test.playready.microsoft.com/).
+For more information, visit the PlayReady website at [https://www.microsoft.com/playready/](https://www.microsoft.com/playready/) and  the PlayReady test site at [https://test.playready.microsoft.com/](https://test.playready.microsoft.com/).
 

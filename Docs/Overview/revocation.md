@@ -27,7 +27,7 @@ Microsoft builds and maintains the revocation list and its versioning structure.
 
 **PlayReady Revocation List(https): [https://aka.ms/revinfo](https://aka.ms/revinfo)**
 
-**PlayReady Revocation List(http): [http://go.microsoft.com/fwlink/?LinkId=110086](https://go.microsoft.com/fwlink/?LinkId=110086)**
+**PlayReady Revocation List(http): [https://go.microsoft.com/fwlink/?LinkId=110086](https://go.microsoft.com/fwlink/?LinkId=110086)**
 
 ## Requirement for PlayReady Servers
 

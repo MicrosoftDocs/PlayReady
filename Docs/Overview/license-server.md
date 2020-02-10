@@ -48,13 +48,13 @@ The following is a license request sample:
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	<soap:Body>
-		<AcquireLicense xmlns="http://schemas.microsoft.com/DRM/2007/03/protocols">
+		<AcquireLicense xmlns="https://schemas.microsoft.com/DRM/2007/03/protocols">
 			<challenge>
-				<Challenge xmlns="http://schemas.microsoft.com/DRM/2007/03/protocols/messages">
-					<LA xmlns="http://schemas.microsoft.com/DRM/2007/03/protocols" Id="SignedData" xml:space="preserve">
+				<Challenge xmlns="https://schemas.microsoft.com/DRM/2007/03/protocols/messages">
+					<LA xmlns="https://schemas.microsoft.com/DRM/2007/03/protocols" Id="SignedData" xml:space="preserve">
 						<Version>1</Version>
 						<ContentHeader>
-							<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
+							<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
 								<DATA>
 									<PROTECTINFO>
 										<KEYLEN>16</KEYLEN>
@@ -80,7 +80,7 @@ The following is a license request sample:
 							<EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"></EncryptionMethod>
 							<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
 								<EncryptedKey xmlns="http://www.w3.org/2001/04/xmlenc#">
-									<EncryptionMethod Algorithm="http://schemas.microsoft.com/DRM/2007/03/protocols#ecc256"></EncryptionMethod>
+									<EncryptionMethod Algorithm="https://schemas.microsoft.com/DRM/2007/03/protocols#ecc256"></EncryptionMethod>
 									<KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
 										<KeyName>WMRMServer</KeyName>
 									</KeyInfo>
@@ -97,9 +97,9 @@ The following is a license request sample:
 					<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
 						<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
 							<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
-							<SignatureMethod Algorithm="http://schemas.microsoft.com/DRM/2007/03/protocols#ecdsa-sha256"></SignatureMethod>
+							<SignatureMethod Algorithm="https://schemas.microsoft.com/DRM/2007/03/protocols#ecdsa-sha256"></SignatureMethod>
 							<Reference URI="#SignedData">
-								<DigestMethod Algorithm="http://schemas.microsoft.com/DRM/2007/03/protocols#sha256"></DigestMethod>
+								<DigestMethod Algorithm="https://schemas.microsoft.com/DRM/2007/03/protocols#sha256"></DigestMethod>
 								<DigestValue>NnkxTbC9yLGwYWSRfOz3VqKRYd62AGqTnwpSHsCklhI=</DigestValue>
 							</Reference>
 						</SignedInfo>
@@ -127,10 +127,10 @@ The following is a license response sample:
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<soap:Body>
-		<AcquireLicenseResponse xmlns="http://schemas.microsoft.com/DRM/2007/03/protocols">
+		<AcquireLicenseResponse xmlns="https://schemas.microsoft.com/DRM/2007/03/protocols">
 			<AcquireLicenseResult>
-				<Response xmlns="http://schemas.microsoft.com/DRM/2007/03/protocols/messages">
-					<LicenseResponse xmlns="http://schemas.microsoft.com/DRM/2007/03/protocols" Id="SignedData">
+				<Response xmlns="https://schemas.microsoft.com/DRM/2007/03/protocols/messages">
+					<LicenseResponse xmlns="https://schemas.microsoft.com/DRM/2007/03/protocols" Id="SignedData">
 						<Version>1</Version>
 						<Licenses>
 							<License>WE1SAAAAAANryW57jI0QQJItXt7rxagIAAMAAQAAAWIAAgAEAAAACAADAAIAAABEAAEAEgAAABAAAAAAVjOhZgAAABMAAAAMVjOhKgABADIAAAAMAAAAHgABADQAAAAKB9AAAAAzAAAACgABAAMACQAAAPIAAQAKAAAAnowA4DNExHBHmJmjIeB53TYAAQADAIAKFe+fsiOCUo/ndSfV1p0YK1qzUAgypRhiMUObPbmJ+P3GMFziaM+O0jHVttk0TAxxGsreh3PumUKJJ1CYMCYGJSgFm7ceuCsOxRBKCJcH+jGVlocmKMw0zrG41DeTrgDLw/rDDEDtmQvIwezIcwUwqWFxq7o5+kYWA4TdwTZNRAAAACoAAABMAAEAQOSjiOqgw3D8yP0vsKUOkh9SDIb3OghTm5812xCi7Y1q+Yr2U6KPQAUDgandzhhSKvebDjmWCIhxcjv+cIE5WIsAAQALAAAAHAABABBDCGMQnJ3JfqzT5K+5nS5k</License>
@@ -163,9 +163,9 @@ The following is a license response sample:
 					<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
 						<SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
 							<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
-							<SignatureMethod Algorithm="http://schemas.microsoft.com/DRM/2007/03/protocols#ecdsa-sha256"></SignatureMethod>
+							<SignatureMethod Algorithm="https://schemas.microsoft.com/DRM/2007/03/protocols#ecdsa-sha256"></SignatureMethod>
 							<Reference URI="#SignedData">
-								<DigestMethod Algorithm="http://schemas.microsoft.com/DRM/2007/03/protocols#sha256"></DigestMethod>
+								<DigestMethod Algorithm="https://schemas.microsoft.com/DRM/2007/03/protocols#sha256"></DigestMethod>
 								<DigestValue>H9QaFwGEr4BnkJX0nRoztartIba7dcvEU5G1vYu9jTs=</DigestValue>
 							</Reference>
 						</SignedInfo>
