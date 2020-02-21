@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # Developing PlayReady Security Level 3000 Clients
 
-## 1. Introduction 
+## 1. Introduction
 
 This page is intended to serve as a step-by-step guide for PlayReady Licensees seeking SL3000 Compliance for PlayReady Intermediate or Final Products. The document outlines the end-to-end process for Intermediate and Final Products and details the requirements for SL3000 Conformant Intermediate Products.
 
 This page contains two main sections:
 
- - The SL3000 Design Process section outlines the end-to-end process to be followed by a PlayReady Licensee seeking SL3000 Compliance for an Intermediate Product or a PlayReady Final Product. 
+ - The SL3000 Design Process section outlines the end-to-end process to be followed by a PlayReady Licensee seeking SL3000 Compliance for an Intermediate Product or a PlayReady Final Product.
 
  - The SL3000 Requirements section details the requirements for SL3000 Conformant Intermediate Products. It is important, and required, that IPLs verify these requirements and document this verification for FPLs in a form of “checklist”, because of the nature of the requirements: they’re deep in the hardware and the TEE, and FPLs might not always be in the capacity of verifying these requirements themselves. The provided test report or checklist is a tool to use by IPLs so FPLs know what tests were already run and passed, and can confidently do the supplemental tests that verify the entire conformity of the Final Product.
 
@@ -23,7 +23,7 @@ There is no such section detailing the requirements for Final Products, because 
 
 ## 2. SL3000 Design Process Overview
 
-A PlayReady Security Level is a publicly available and widely understood definition of robustness for PlayReady Products. While products may exceed the robustness requirements for a specific PlayReady Security Level, it establishes the minimum bar that must be met by a product in order to consume content requiring the defined level of protection. The [PlayReady Compliance and Robustness Rules](http://www.microsoft.com/playready/licensing/compliance/) updated in April 2015 introduce the PlayReady Security Level 3000 (SL3000), and requirements for PlayReady TEE implementations to meet the hardware security requirements for PlayReady Enhanced Content Protection. PlayReady SL3000 is designed to be sufficient to meet the security standards for a wide range of content producers, including premium Hollywood content.
+A PlayReady Security Level is a publicly available and widely understood definition of robustness for PlayReady Products. While products may exceed the robustness requirements for a specific PlayReady Security Level, it establishes the minimum bar that must be met by a product in order to consume content requiring the defined level of protection. The [PlayReady Compliance and Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) updated in April 2015 introduce the PlayReady Security Level 3000 (SL3000), and requirements for PlayReady TEE implementations to meet the hardware security requirements for PlayReady Enhanced Content Protection. PlayReady SL3000 is designed to be sufficient to meet the security standards for a wide range of content producers, including premium Hollywood content.
 
 PlayReady SL3000 Self-Assessment is intended to assist PlayReady Licensees in obtaining distribution rights for UHD (4K), other types of Enhanced Content (for example, HDR, 3D, and so on), and new Enhanced Content Delivery Models (for example, early window).
 
@@ -31,15 +31,15 @@ The security of a PlayReady Product depends critically on the robustness of the 
 
 ![PlayReady SL3000 IPL Design](../images/sl3000_design_ipl.png)
 
-PlayReady Final Products are not required to be reviewed by a third-party test house to qualify for SL3000 Compliance. However, Final Products that wish to ship with an SL3000 Certificate may only do so when they meet the requirements for SL3000 Compliant Final Products. This requires the Final Product to utilize an SL3000 Conformant Intermediate Product and conform to the SL3000 Compliance and Robustness rules. 
+PlayReady Final Products are not required to be reviewed by a third-party test house to qualify for SL3000 Compliance. However, Final Products that wish to ship with an SL3000 Certificate may only do so when they meet the requirements for SL3000 Compliant Final Products. This requires the Final Product to utilize an SL3000 Conformant Intermediate Product and conform to the SL3000 Compliance and Robustness rules.
 
 ![PlayReady SL3000 FPL Design](../images/sl3000_design_fpl.png)
 
 ## 3. SL3000 Requirements for Intermediate Products
 
-The security of a PlayReady Product depends critically on the robustness of the PlayReady implementation. As such, Microsoft has defined requirements in the [PlayReady Compliance and Robustness rules](http://www.microsoft.com/playready/licensing/compliance/) that all PlayReady Intermediate Products MUST meet or exceed before they can be distributed to Final Product Licensees. The checklist below is a tool for IPLs to document the security review they’ve run on their product before they distribute it. This security review documentation must be communicated to companies building a Final Product based on this Intermediate Product.
+The security of a PlayReady Product depends critically on the robustness of the PlayReady implementation. As such, Microsoft has defined requirements in the [PlayReady Compliance and Robustness rules](https://www.microsoft.com/playready/licensing/compliance/) that all PlayReady Intermediate Products MUST meet or exceed before they can be distributed to Final Product Licensees. The checklist below is a tool for IPLs to document the security review they’ve run on their product before they distribute it. This security review documentation must be communicated to companies building a Final Product based on this Intermediate Product.
 
-The requirements are broken into 5 categories: 
+The requirements are broken into 5 categories:
  1. CA: Content Accessibility
  2. CPR: Content Protection Robustness
  3. PKR: PlayReady Device Porting Kit Robustness

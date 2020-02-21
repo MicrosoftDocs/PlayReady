@@ -27,9 +27,47 @@ Microsoft builds and maintains the revocation list and its versioning structure.
 
 **PlayReady Revocation List(https): [https://aka.ms/revinfo](https://aka.ms/revinfo)**
 
-**PlayReady Revocation List(http): [http://go.microsoft.com/fwlink/?LinkId=110086](http://go.microsoft.com/fwlink/?LinkId=110086)**
+**PlayReady Revocation List(http): [https://go.microsoft.com/fwlink/?LinkId=110086](https://go.microsoft.com/fwlink/?LinkId=110086)**
 
 ## Requirement for PlayReady Servers
 
 Per the requirements of the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/), companies operating a PlayReady Server "must update the PlayReady Server Software Development Kit certificate revocation lists for each PlayReady Server once a week". This ensures any compromised client gets its license requests declined in a reasonable time frame after its addition by Microsoft to the Revocation List.
+
+## Ignoring Individual Entries in the PlayReady Revocation List
+
+Starting with PlayReady Server version 4.3, your server application may explicitly ignore one or more revoked hashes and continue to issue content to them even though they are revoked. This may be useful to companies that both produce and distribute protected content and who wish to have more control over where that content can flow.
+
+To utilize this feature, you will need to create a new XML file containing the certificate hashes you wish to ignore as well as add a new entry to the web.config file of your RMSDK implementation.  The XML file has the following format.
+
+```XML
+<?xml version="1.0" ENCODING="utf-8"?>
+   <RevAllowInfo>
+      <AllowList>
+         <CertificateHash>2C4OCYBGE3XZ3ODIUVUWD0SVLWH4W1NX9EA5DMJZ/PK=</CertificateHash>
+         <CertificateHash>9OHU9A1KAJYI9BUWQWAVXBOO7R4XS+GG8HV0ESDBTNW=</CertificateHash>
+      </AllowList>
+   </RevAllowInfo>
+```
+
+The data within the "CertificateHash" node must match the hash of the revoked model or company certificate. Microsoft intends to publish this information, along with corresponding model information, for future revocations.  
+
+You must also reference this XML file from within your server configuration.
+
+* For .Net Core-based RMSDK deployments:
+    * The XML file should be added as an item project.
+    * The RevocationAllowFile string in config/RMSDKConfig.cs should be updated with the path to the XML file.
+
+* For IIS-based RMSDK deployments:
+    * Add a new key with a name of "REVOCATIONALLOWFILE" which points to your XML file to the web.config file.
+    * For example, if the XML file above was named "REVOCATIONALLOWSAMPLE.XML", the web.config file would be updated as follows.
+
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+   <configuration>
+      <appSettings>
+         ...
+         <add key="RevocationAllowFile" value="REVOCATIONALLOWSAMPLE.XML">
+         ...
+```
+<br>
 

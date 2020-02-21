@@ -17,7 +17,7 @@ During license acquisition, the client sends a challenge to the PlayReady Licens
 A PlayReady policy describes the actions permitted and/or required with respect to PlayReady content and restrictions on those actions as described in the PlayReady license associated with the PlayReady content. PlayReady policies are defined in the PlayReady Compliance Rules (CR). The service provider must incorporate the mandatory policies and choose which of the optional policies to use, and have these policies integrated into the license handler on the PlayReady License Server. These policies can be rights, such as the Play right, or restrictions, such as the Minimum Security Level, Output Protection Level, expiration after first play, and so on. 
 
 Note that a license response may contain multiple licenses. Each license contains one and only one Content Key {KID, CK} and a set of associated policies.
- 
+
 When the client receives the license response from the PlayReady License Server, it must be able to parse the content key and the policies sent back in the licenses it receives. The PlayReady Client must be able to follow the policies sent in the license response and play back content if all the mandatory policies are met, or halt play back if any of the mandatory policies are not met. 
 
 >[!NOTE]
@@ -36,7 +36,7 @@ The following PlayReady rights are listed in the PlayReady Compliance Rules:
 ## Rights Restrictions and other Policies
 
 The PlayReady Compliance Rules contain a full list of right modifiers (extensions and restrictions) that may apply to the license. Each of these modifiers has multiple properties:
- 
+
   *  **Action**&mdash;specifies the action of the policy (for example, engage HDCP encryption on the HDMI output). 
   *  **Optional**&mdash;specifies if the client must engage the action or must try to engage the action (for example, Output Control for Uncompressed Digital Video Content 250, see CR 3.6.5).
   *  **Must Understand**&mdash;specifies if a client is allowed to bind a license and decrypt content even if it does not understand the policy. Applicable for clients of a lower version (for example, a PlayReady 2.X Client) receiving a license including PlayReady policy introduced in a future version (for example, a PlayReady 3.X Server, see CR 2.4).
@@ -57,7 +57,7 @@ This policy is by definition a Must Understand and Mandatory (meaning, not Best 
   *  Be able to parse and understand the Expiration policy in the license.
   *  Compare the current time from the PlayReady Trusted Clock System with the Expiration value.
   *  Not bind the license if the current time is past the Expiration value. 
- 
+
 >[!NOTE]
 >Whenever a License Server sets an Absolute Expiration policy in a license, Microsoft strongly recommends that a Begin Date policy also be set, for Robustness Reasons. See [Best Practices for License Policies](policies-best-practices.md) for more details.
 
@@ -107,26 +107,26 @@ Note that HDCP Type 1 is supported starting with HDCP version 2.1, so engaging H
 ### Other Policies 
 PlayReady supports dozens if not hundreds of different policies beyond the ones described on this page. Please read the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/) for the complete definition of the supported policies.
 
-The following table contains a complete map of the Output Protections defined in the Compliance Rules and the corresponding test server policies. 
+The following table contains a complete map of the Output Protections defined in the Compliance Rules and the corresponding test server policies.
 
 | Policy | CR Section|
 |:--- |:--- |
-| Output Control for Compressed Digital Audio Content | [CRs section 3.6.2](http://www.microsoft.com/playReady/licensing/compliance) |
-| Explicit Digital Audio Output Restriction | [CRs section 3.6.2.8](http://www.microsoft.com/playReady/licensing/compliance) |
-| Output Control for Uncompressed Digital Audio Content | [CRs section 3.6.3](http://www.microsoft.com/playReady/licensing/compliance) |
-| Explicit Digital Audio Output Restriction | [CRs section 3.6.3.8](http://www.microsoft.com/playReady/licensing/compliance) |
-| Output Control for Compressed Digital Video Content | [CRs section 3.6.4](http://www.microsoft.com/playReady/licensing/compliance) |
-| Output Control for Uncompressed Digital Video Content | [CRs section 3.6.5](http://www.microsoft.com/playReady/licensing/compliance) |
-| Maximum Decode Resolution | [CRs section 3.6.5.7.1](http://www.microsoft.com/playReady/licensing/compliance) |
-| HDCP Type Restriction | [CRs section 3.6.5.7.2](http://www.microsoft.com/playReady/licensing/compliance) |
-| Output Control for Analog Television Outputs | [CRs section 3.6.6](http://www.microsoft.com/playReady/licensing/compliance) |
-| Extended Output Controls for Analog Television Outputs CGMS-A | [CRs section 3.6.7.1](http://www.microsoft.com/playReady/licensing/compliance) |
-| Extended Output Controls for Analog Television Outputs AGCCS | [CRs section 3.6.7.2](http://www.microsoft.com/playReady/licensing/compliance) |
-| Output Control for Analog Computer Monitor Output | [CRs section 3.6.8](http://www.microsoft.com/playReady/licensing/compliance) |
-| Output Control for Analog Component Video Output | [CRs section 3.6.9](http://www.microsoft.com/playReady/licensing/compliance) |
-| Digital Video Only Content | [CRs section 3.6.11](http://www.microsoft.com/playReady/licensing/compliance) |
-| Passing to Unknown Output | [CRs section 3.9.1](http://www.microsoft.com/playReady/licensing/compliance) |
-| Passing constrained resolution to Unknown Output | [CRs section 3.9.2](http://www.microsoft.com/playReady/licensing/compliance) |  
+| Output Control for Compressed Digital Audio Content | [CRs section 3.6.2](https://www.microsoft.com/playReady/licensing/compliance) |
+| Explicit Digital Audio Output Restriction | [CRs section 3.6.2.8](https://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Uncompressed Digital Audio Content | [CRs section 3.6.3](https://www.microsoft.com/playReady/licensing/compliance) |
+| Explicit Digital Audio Output Restriction | [CRs section 3.6.3.8](https://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Compressed Digital Video Content | [CRs section 3.6.4](https://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Uncompressed Digital Video Content | [CRs section 3.6.5](https://www.microsoft.com/playReady/licensing/compliance) |
+| Maximum Decode Resolution | [CRs section 3.6.5.7.1](https://www.microsoft.com/playReady/licensing/compliance) |
+| HDCP Type Restriction | [CRs section 3.6.5.7.2](https://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Analog Television Outputs | [CRs section 3.6.6](https://www.microsoft.com/playReady/licensing/compliance) |
+| Extended Output Controls for Analog Television Outputs CGMS-A | [CRs section 3.6.7.1](https://www.microsoft.com/playReady/licensing/compliance) |
+| Extended Output Controls for Analog Television Outputs AGCCS | [CRs section 3.6.7.2](https://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Analog Computer Monitor Output | [CRs section 3.6.8](https://www.microsoft.com/playReady/licensing/compliance) |
+| Output Control for Analog Component Video Output | [CRs section 3.6.9](https://www.microsoft.com/playReady/licensing/compliance) |
+| Digital Video Only Content | [CRs section 3.6.11](https://www.microsoft.com/playReady/licensing/compliance) |
+| Passing to Unknown Output | [CRs section 3.9.1](https://www.microsoft.com/playReady/licensing/compliance) |
+| Passing constrained resolution to Unknown Output | [CRs section 3.9.2](https://www.microsoft.com/playReady/licensing/compliance) |
 
 
 ## XMR Specification 

@@ -21,13 +21,13 @@ ms.topic: conceptual
 
 #### Supported
 
-Supported in version 1507 or higher with the `<mspr:pro>` tag for the Live Profile with static manifests (On-Demand content). 
+Supported in version 1507 or higher with the `<mspr:pro>` tag for the Live Profile with static manifests (On-Demand content).
 
 Supported in version 1703 or higher with the `<mspr:pro>` tag for the Live Profile with dynamic manifests (Live content).
 
 The DASH manifest contains a PlayReady Object including a PlayReady Header using the `<mspr:pro>` tag in the `<Period>` node. If different keys are used for different tracks or bitrates, the DASH manifest may have multiple PlayReady Objects in the multiple `<AdaptationSet>` or `<Representation>` nodes instead.
 
-> [!NOTE] 
+> [!NOTE]
 > It is possible to insert the PlayReady Objects inside the init segments of the different `<AdaptationSet>` nodes. If PlayReady Objects are found both in the init segments and in the manifest, the ones in the manifest take precedence.
 
 <br />
@@ -121,7 +121,7 @@ MP4 files
 
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
-  [moov] 
+  [moov]
     [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL (optional)
     [pssh] pssh box for other DRM
 
@@ -133,7 +133,7 @@ MP4 files
 ```
 
 #### Test Vectors
-See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
 
 
 
@@ -180,7 +180,7 @@ MP4 files
 
 ```
 [init segment] separate file for a dash stream. Includes only the moov box
-  [moov] 
+  [moov]
     [pssh] pssh box for PlayReady. Includes a PRO including a PRH with KID and LA_URL (optional)
     [pssh] pssh box for other DRM
 
@@ -192,7 +192,7 @@ MP4 files
 ```
 
 #### Test Vectors
-See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
 
 # [DASH Rotating Keys](#tab/case3)
 
@@ -246,7 +246,7 @@ Example of a MP4 segment file when the key rotates
       [sgpd] 00 00 00 2C 73 67 70 64 01 00 00 00 73 65 69 67          ...,sgpd....seig
              00 00 00 14 00 00 00 01 00 00 01 08 57 48 35 6D          ............WH5m
              82 C0 40 54 81 BC FD 89 45 2E FF ED                      ..@T....E...
-  [mdat] 
+  [mdat]
 ```
 
 
@@ -310,7 +310,7 @@ QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 ```
 
 #### Test Vectors
-See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
 
 
 
@@ -391,7 +391,7 @@ QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 PlayReady Header in the master playlist and the individual playlists:
 
 ```xml
-<WRMHEADER version="4.2.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+<WRMHEADER version="4.2.0.0" xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
   <DATA>
     <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
   </DATA>
@@ -414,7 +414,7 @@ A PlayReady Object containing all the KIDs used for the entire asset is inserted
 
 When different keys are used for different tracks (`<StreamIndex>`) or different bitrates (`<QualityLevel>`), the PlayReady Object is still inserted in the top level node of the manifest (`SmoothStreamingMedia`); the PlayReady Object contains a PlayReady Header version 4.2.0.0 minimum, listing multiple KIDs.
 
-> [!NOTE] 
+> [!NOTE]
 > Smooth Streaming assets don't include an init segment like DASH assets.
 
 #### Sample
@@ -454,7 +454,7 @@ Smooth Streaming manifest
   [mdat] movie fragment data
 ```
 #### Test Vectors
-See [Test Content on the Test Server](http://test.playready.microsoft.com/Content/Content2X)
+See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
 
 # [Smooth Rotating Keys](#tab/case9)
 
@@ -487,7 +487,7 @@ Here is the Smooth Streaming Manifest extracted from the test stream `http://pla
 
 The manifest includes the PlayReady Header:
 ```xml
-<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
+<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
 <DATA>
   <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
 </DATA>
@@ -513,7 +513,7 @@ Example of a MP4 fragment header when the key rotates
       [sgpd] 00 00 00 2C 73 67 70 64 01 00 00 00 73 65 69 67          ...,sgpd....seig
              00 00 00 14 00 00 00 01 00 00 01 08 57 48 35 6D          ............WH5m
              82 C0 40 54 81 BC FD 89 45 2E FF ED                      ..@T....E...
-  [mdat] 
+  [mdat]
 ```
 
 ---
@@ -532,5 +532,5 @@ Example of a MP4 fragment header when the key rotates
 
 ## See also
 
-[PlayReady Test Server Content](http://test.playready.microsoft.com/)
+[PlayReady Test Server Content](https://test.playready.microsoft.com/)
 

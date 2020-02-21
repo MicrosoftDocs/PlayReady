@@ -1,6 +1,5 @@
 ---
 title:  Microsoft PlayReady Documentation
-description: PlayReady Product documentation
 layout: LandingPage
 description: Documentation for Microsoft PlayReady
 ms.assetid: "1C6257BD-0C75-4D47-84F5-F738759C039D"
@@ -94,7 +93,7 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
         </a>
     </li>
     <li>
-        <a href="http://test.playready.microsoft.com/">
+        <a href="https://test.playready.microsoft.com/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
