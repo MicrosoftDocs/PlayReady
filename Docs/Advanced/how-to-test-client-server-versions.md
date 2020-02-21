@@ -68,6 +68,7 @@ Test Steps:
 
    ex: [https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:true,firstexp:60)](https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=\(persist:true,firstexp:60\))
 
+
 1. Validate that a license is returned and that playback is successful. Add or change the time based policy parameters as listed on the test site to test other persistent scenarios.
 
 
