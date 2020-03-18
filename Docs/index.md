@@ -1,6 +1,5 @@
 ---
 title:  Microsoft PlayReady Documentation
-layout: LandingPage
 description: Documentation for Microsoft PlayReady
 ms.assetid: "1C6257BD-0C75-4D47-84F5-F738759C039D"
 keywords: PlayReady, licensing, playable content license
@@ -30,185 +29,16 @@ PlayReady can work on non-Windows platforms (such as iOS and Android) and is use
 As of 2018, the latest version of PlayReady is 4.0, released in October 2017. It adds support for content encrypted in AES-CBC mode, in addition to the content already supported in AES-CTR mode. Find more about the different versions of PlayReady [here](Overview/product-versions.md). We recommend that services and device manufacturers update to the latest version available. However, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](Overview/product-versions.md) to learn more about the interoperability of PlayReady Clients and PlayReady Servers.
 
 PlayReady 3.0 and later supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) support other types of content, such as executable applications and ebooks. 
-<br/>
-<br/>
-<br/>
 
-<h2>Links to other Sources of Documentation</h2>
+## Links to other Sources of Documentation
 
-<!-- You can find a list of docs icons for use here: https://review.docs.microsoft.com/en-us/prod-test/gallery/image-gallery?branch=master  -->
-<ul class="panelContent cardsFTitle">
-    <li>
-        <a href="https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="PlayReady for Windows 10" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady for Windows 10</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn468834(v=ieb.10)">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="PlayReady for Windows 8.1" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady for Windows 8.1</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-        <li>
-        <a href="https://www.microsoft.com/playready/features/">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_get-started.svg" alt="PlayReady for iOS or Android" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady for iOS or Android</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://test.playready.microsoft.com/">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_tools.svg" alt="PlayReady Test Server" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady Test Server</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://www.microsoft.com/playready/documents/">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="PlayReady White Papers" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady White Papers</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-        <li>
-        <a href="https://www.microsoft.com/playready/licensing/">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_learn-about.svg" alt="PlayReady Licensing Options" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>PlayReady Licensing Options</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
+* [PlayReady for Windows 10](https://docs.microsoft.com/windows/uwp/audio-video-camera/playready-Client-sdk)
+* [PlayReady for Windows 8.1](https://docs.microsoft.com/previous-versions/windows/apps/dn468834(v=ieb.10))
+* [PlayReady for iOS or Android](https://www.microsoft.com/playready/features/)
+* [PlayReady Test Server](https://testweb.playready.microsoft.com/)
+* [PlayReady White Papers](https://www.microsoft.com/playready/documents/)
+* [PlayReady Licensing Options](https://www.microsoft.com/playready/licensing/)
 
-  </ul>
+## Programming Reference
 
----
-
-<h2>Programming Reference</h2>
-
-<ul class="panelContent cardsFTitle">
-    <li>
-        <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Protection.PlayReady">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_benefits.svg" alt="Windows.Media.Protection.PlayReady" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Windows.Media.Protection.PlayReady Namespace</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-
-<!--
-    <li>
-        <a href="">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_tasks.svg" alt="Tasks Icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Placeholder</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-
-    <li>
-        <a href="">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="/media/common/i_tasks.svg" alt="Tasks Icon" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Placeholder</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>   -->
-</ul>
+* [Windows.Media.Protection.PlayReady Namespace](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady)
