@@ -32,8 +32,8 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
 
 ## Links to other Sources of Documentation
 
-* [PlayReady for Windows 10](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-Client-sdk)
-* [PlayReady for Windows 8.1](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn468834(v=ieb.10))
+* [PlayReady for Windows 10](https://docs.microsoft.com/windows/uwp/audio-video-camera/playready-Client-sdk)
+* [PlayReady for Windows 8.1](https://docs.microsoft.com/previous-versions/windows/apps/dn468834(v=ieb.10))
 * [PlayReady for iOS or Android](https://www.microsoft.com/playready/features/)
 * [PlayReady Test Server](https://testweb.playready.microsoft.com/)
 * [PlayReady White Papers](https://www.microsoft.com/playready/documents/)
@@ -41,4 +41,4 @@ PlayReady 3.0 and later supports media content composed of audio and video, such
 
 ## Programming Reference
 
-* [Windows.Media.Protection.PlayReady Namespace](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Protection.PlayReady)
+* [Windows.Media.Protection.PlayReady Namespace](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady)
