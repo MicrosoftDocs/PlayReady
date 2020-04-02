@@ -18,58 +18,58 @@ landingContent:
       - linkListType: overview
         links:
           - text: PlayReady overview
-            url: overview.md
+            url: Overview/overview.md
           - text: PlayReady Ecosystem
-            url: ecosystem.md
+            url: Overview/ecosystem.md
           - text: Simple End to End System
-            url: simple-end-to-end-system.md
+            url: Overview/simple-end-to-end-system.md
           - text: Common PlayReady Scenarios
-            url: common-playready-scenarios.md
+            url: Overview/common-playready-scenarios.md
           - text: PlayReady Products, Deliverables and Services
-            url: products-deliverables-services.md
+            url: Overview/products-deliverables-services.md
           - text: Packaging Content
-            url: packaging-content.md
+            url: Overview/packaging-content.md
   
   - title: Security
     linkLists:
       - linkListType: concept
         links:
           - text: Key and Key IDs (KIDs)
-            url: key-and-key-ids-kids.md
+            url: Overview/key-and-key-ids-kids.md
           - text: Security Level
-            url: security-level.md
+            url: Overview/security-level.md
           - text: Output Protection Levels
-            url: output-protection-levels.md
+            url: Overview/output-protection-levels.md
 
   - title: Licensing
     linkLists:
       - linkListType: concept
         links:
           - text: License Acquisition
-            url: license-acquisition.md
+            url: Overview/license-acquisition.md
           - text: License Persistence
-            url: license-persistence.md
+            url: Overview/license-persistence.md
           - text: License and Policies
-            url: license-and-policies.md
+            url: Overview/license-and-policies.md
 
   - title: PlayReady technology
     linkLists:
       - linkListType: concept
         links:
           - text: PlayReady Servers
-            url: servers.md
+            url: Overview/servers.md
           - text: PlayReady Clients
-            url: clients.md
+            url: Overview/clients.md
           - text: PlayReady Features
-            url: playready-features.md
+            url: Overview/playready-features.md
           - text: PlayReady Advanced Topics
-            url: advanced-topics.md
+            url: Overview/advanced-topics.md
           - text: Specifications
-            url: specifications.md
+            url: Overview/specifications.md
 
   - title: What's new
     linkLists:
       - linkListType: whats-new
         links:
           - text: What's New
-            url: what-is-new.md
+            url: Overview/what-is-new.md
