@@ -28,7 +28,7 @@ landingContent:
           - text: PlayReady Products, Deliverables and Services
             url: Overview/products-deliverables-services.md
           - text: Packaging Content
-            url: Overview/packaging-content.md
+            url: packaging/packaging-content.md
   
   - title: Security
     linkLists:
@@ -61,11 +61,11 @@ landingContent:
           - text: PlayReady Clients
             url: Overview/clients.md
           - text: PlayReady Features
-            url: Overview/playready-features.md
+            url: features/playready-features.md
           - text: PlayReady Advanced Topics
             url: Overview/advanced-topics.md
           - text: Specifications
-            url: Overview/specifications.md
+            url: specifications/specifications.md
 
   - title: What's new
     linkLists:
