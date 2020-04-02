@@ -56,6 +56,13 @@ landingContent:
           - text: Specifications
             url: specifications/specifications.md
 
+  - title: What's new
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: What's New
+            url: Overview/what-is-new.md
+
   - title: Licensing
     linkLists:
       - linkListType: concept
@@ -66,10 +73,3 @@ landingContent:
             url: Overview/license-persistence.md
           - text: License and Policies
             url: Overview/license-and-policies.md
-
-  - title: What's new
-    linkLists:
-      - linkListType: whats-new
-        links:
-          - text: What's New
-            url: Overview/what-is-new.md
