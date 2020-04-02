@@ -1,0 +1,75 @@
+### YamlMime:Landing
+
+title: Microsoft PlayReady
+summary: Microsoft PlayReady content access and protection technology is a set of technologies that can be used to distribute audio/video content more securely over a network, and help prevent the unauthorized use of this content.
+metadata:
+  title: Microsoft PlayReady 
+  description: Use PlayReady for defining, incorporating, and enforcing rights for digital media. The service provider and content provider can control the expiration date, the number of times a user can play the content file, the resolution of the content that can be played on a screen, the type of screen that content is rendered to, and many other control settings.
+  ms.topic: landing-page 
+  author: EliotSeattle 
+  ms.author: eliotgra
+  ms.date: 04/10/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+  - title: About PlayReady
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: PlayReady overview
+            url: overview.md
+          - text: PlayReady Ecosystem
+            url: ecosystem.md
+          - text: Simple End to End System
+            url: simple-end-to-end-system.md
+          - text: Common PlayReady Scenarios
+            url: common-playready-scenarios.md
+          - text: PlayReady Products, Deliverables and Services
+            url: products-deliverables-services.md
+          - text: Packaging Content
+            url: packaging-content.md
+  
+  - title: Security
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Key and Key IDs (KIDs)
+            url: key-and-key-ids-kids.md
+          - text: Security Level
+            url: security-level.md
+          - text: Output Protection Levels
+            url: output-protection-levels.md
+
+  - title: Licensing
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: License Acquisition
+            url: license-acquisition.md
+          - text: License Persistence
+            url: license-persistence.md
+          - text: License and Policies
+            url: license-and-policies.md
+
+  - title: PlayReady technology
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: PlayReady Servers
+            url: servers.md
+          - text: PlayReady Clients
+            url: clients.md
+          - text: PlayReady Features
+            url: playready-features.md
+          - text: PlayReady Advanced Topics
+            url: advanced-topics.md
+          - text: Specifications
+            url: specifications.md
+
+  - title: What's new
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: What's New
+            url: what-is-new.md
