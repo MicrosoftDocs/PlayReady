@@ -41,17 +41,6 @@ landingContent:
           - text: Output Protection Levels
             url: Overview/output-protection-levels.md
 
-  - title: Licensing
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: License Acquisition
-            url: Overview/license-acquisition.md
-          - text: License Persistence
-            url: Overview/license-persistence.md
-          - text: License and Policies
-            url: Overview/license-and-policies.md
-
   - title: PlayReady technology
     linkLists:
       - linkListType: concept
@@ -66,6 +55,17 @@ landingContent:
             url: Overview/advanced-topics.md
           - text: Specifications
             url: specifications/specifications.md
+
+  - title: Licensing
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: License Acquisition
+            url: Overview/license-acquisition.md
+          - text: License Persistence
+            url: Overview/license-persistence.md
+          - text: License and Policies
+            url: Overview/license-and-policies.md
 
   - title: What's new
     linkLists:
