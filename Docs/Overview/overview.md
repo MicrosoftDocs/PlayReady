@@ -6,6 +6,7 @@ keywords: introduction to Microsoft PlayReady content access technology
 ms.date: 02/01/2018
 ms.topic: conceptual
 ---
+
 # PlayReady Overview
 
 ## Secure audio/video content against unauthorized use, and help monetize content
@@ -26,7 +27,7 @@ PlayReady can work on non-Windows platforms (such as iOS and Android) and is use
 
 ## Versions
 
-As of 2018, the latest version of PlayReady is 4.0, released in October 2017. It adds support for content encrypted in AES-CBC mode, in addition to the content already supported in AES-CTR mode. Find more about the different versions of PlayReady [here](Overview/product-versions.md). We recommend that services and device manufacturers update to the latest version available. However, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](Overview/product-versions.md) to learn more about the interoperability of PlayReady Clients and PlayReady Servers.
+As of 2018, the latest version of PlayReady is 4.0, released in October 2017. It adds support for content encrypted in AES-CBC mode, in addition to the content already supported in AES-CTR mode. Find more about the different versions of PlayReady [here](product-versions.md). We recommend that services and device manufacturers update to the latest version available. However, the PlayReady ecosystem includes servers and clients running various versions of PlayReady. Please see [that same page](/product-versions.md) to learn more about the interoperability of PlayReady Clients and PlayReady Servers.
 
 PlayReady 3.0 and later supports media content composed of audio and video, such as music or movies. Earlier versions of PlayReady (1.X and 2.X) support other types of content, such as executable applications and ebooks.
 
