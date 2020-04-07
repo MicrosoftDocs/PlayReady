@@ -6,6 +6,7 @@ keywords: introduction to Microsoft PlayReady content access technology
 ms.date: 02/01/2018
 ms.topic: conceptual
 ---
+# PlayReady Overview
 
 ## Secure audio/video content against unauthorized use, and help monetize content
 
