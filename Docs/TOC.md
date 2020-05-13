@@ -1,4 +1,4 @@
-# [Microsoft PlayReady](index.yml)
+# [Microsoft PlayReady](index.md)
 
 ## [PlayReady Overview](Overview/overview.md)
 
