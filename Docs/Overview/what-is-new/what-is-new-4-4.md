@@ -1,38 +1,38 @@
 ---
 title: "What's New"
-description: This section provides an overview of changes from PlayReady version 4.0 to PlayReady version 4.3.
+description: This section provides an overview of changes from PlayReady version 4.0 to PlayReady version 4.4.
 ms.assetid: "D9B3FE09-931E-4B28-8A7A-5D422C86AB12"
-keywords: playready overview version changes 4.0 4.3
+keywords: playready overview version changes 4.0 4.4
 ms.date: 10/02/2019
 ms.topic: conceptual
 ---
 
-# What's New in PlayReady Version 4.3
+# What's New in PlayReady Version 4.4
 
-This page contains an overview of the most significant changes between PlayReady version 4.0 and PlayReady version 4.3.
+This page contains an overview of the most significant changes between PlayReady version 4.0 and PlayReady version 4.4.
 <br/><br/>
 
-## General Changes in PlayReady Version 4.3
+## General Changes in PlayReady Version 4.4
 
 The SecureStop2 feature is added.  This provides a higher level of security than the previously-extant SecureStop1 feature.
 
 The ability to determine what features a given Porting Kit implementation supports is added on both client and server.
 <br/><br/>
 
-## Changes in PlayReady Server SDK Version 4.3
+## Changes in PlayReady Server SDK Version 4.4
 
 ### General
 
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
-A server application can now determine what features the client has implemented if the client is also version 4.3 or higher. For more information, see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
+A server application can now determine what features the client has implemented if the client is also version 4.4 or higher. For more information, see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
 
 A server application can now explicitly request that one or more revoked client certificates be treated as if they were not revoked.  For more information, see [PlayReady Revocation](../revocation.md).
 
 The server's Certificate class now correctly returns ManufacturerName, ModelName, and ModelNumber for certificates coming from Windows clients.
 <br/><br/>
 
-## Changes in PlayReady Device Porting Kit Version 4.3
+## Changes in PlayReady Device Porting Kit Version 4.4
 
 ### General
 
