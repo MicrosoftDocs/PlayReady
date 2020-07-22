@@ -75,7 +75,7 @@ The following is an example of a PlayReady Header v4.2.
 ```xml
 <WRMHEADER
           version="4.2.0.0"
-          xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+          xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -95,7 +95,7 @@ The ALGID (algorithm identifier) is a property of the KID element, and specifies
 ```xml
 <WRMHEADER
           version="4.3.0.0"
-          xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+          xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -121,7 +121,7 @@ Starting with the PlayReady Header version 4.3, the ALGID may be missing. The fo
 ```xml
 <WRMHEADER
           version="4.3.0.0"
-          xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+          xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
   <DATA>
     <PROTECTINFO>
       <KIDS>

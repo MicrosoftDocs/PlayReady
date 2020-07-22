@@ -157,12 +157,12 @@ All namespace attributes must be before non-namespaces attributes.
 <table>
     <tr>
         <td>• Supported</td>
-        <td>&lt;WRMHEADER xmlns=&quot;<a href="https://schemas.microsoft.com/DRM/2007/03/PlayReady" data-raw-source="https://schemas.microsoft.com/DRM/2007/03/PlayReady">https://schemas.microsoft.com/DRM/2007/03/PlayReady</a>
+        <td>&lt;WRMHEADER xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/2007/03/PlayReady" data-raw-source="http://schemas.microsoft.com/DRM/2007/03/PlayReady">http://schemas.microsoft.com/DRM/2007/03/PlayReady</a>
 Header&quot; version=&quot;4.3.0.0&quot;&gt;</td>
     </tr>
     <tr>
         <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;WRMHEADER version=&quot;4.3.0.0&quot; xmlns=&quot;<a href="https://schemas.microsoft.com/DRM/" data-raw-source="https://schemas.microsoft.com/DRM/">https://schemas.microsoft.com/DRM/</a>
+        <td style="border: none">&lt;WRMHEADER version=&quot;4.3.0.0&quot; xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/" data-raw-source="http://schemas.microsoft.com/DRM/">http://schemas.microsoft.com/DRM/</a>
 2007/03/PlayReadyHeader&quot;&gt;</td>
     </tr>
 </table>
@@ -203,7 +203,7 @@ The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2
 The following is an example of a PlayReady Header 4.3.0.0 with AESCBC keys:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -220,7 +220,7 @@ The following is an example of a PlayReady Header 4.3.0.0 with AESCBC keys:
 The following is an example of a PlayReady Header 4.3.0.0 with a missing ALGID:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -239,7 +239,7 @@ The following is an example of a PlayReady Header 4.3.0.0 with a missing ALGID:
 The PlayReady Header v4.3.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
       <PROTECTINFO>
         <KIDS>
@@ -302,7 +302,7 @@ The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1
 PlayReady Header 4.2.0.0 with two AESCTR keys:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -321,7 +321,7 @@ PlayReady Header 4.2.0.0 with two AESCTR keys:
 The PlayReady Header v4.2.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
   <DATA>
       <PROTECTINFO>
         <KIDS>
@@ -388,7 +388,7 @@ The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0
 The PlayReady Header v4.1.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
   <DATA>
       <PROTECTINFO>
         <KID ALGID="AESCTR" CHECKSUM=“base64-encoded value” VALUE="base64-encoded guid"></KID>
@@ -443,7 +443,7 @@ PlayReady Header v4.0.0.0 was introduced with PlayReady version 1.0 in 2008 and 
 PlayReady Header 4.0.0.0:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
   <DATA>
     <PROTECTINFO>
       <ALGID>AESCTR</ALGID>
@@ -469,7 +469,7 @@ XAMAAAEAAQBSAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8A
 The PlayReady Header v4.0.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
 <DATA>
       <PROTECTINFO>
         <ALGID>AESCTR</ALGID>

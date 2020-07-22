@@ -28,7 +28,7 @@ For example, a PlayReady client needs to know what Key IDs (KIDs) are used in th
 
 Here is an example of a PlayReady Header
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
