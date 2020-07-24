@@ -18,7 +18,7 @@ Within each PRO is a *PlayReady Header*, which gives a client the information ne
 
 ```xml
 
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>

@@ -391,7 +391,7 @@ QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 PlayReady Header in the master playlist and the individual playlists:
 
 ```xml
-<WRMHEADER version="4.2.0.0" xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+<WRMHEADER version="4.2.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
   <DATA>
     <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
   </DATA>
@@ -487,7 +487,7 @@ Here is the Smooth Streaming Manifest extracted from the test stream `http://pla
 
 The manifest includes the PlayReady Header:
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
 <DATA>
   <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
 </DATA>
