@@ -1,6 +1,6 @@
 ---
 title: "What's New"
-description: An overview of changes across versions of PlayReady starting with 4.4.
+description: An overview of changes across versions of PlayReady starting with 4.2.
 ms.assetid: "B360F030-CE72-4ED1-A373-D66FB5B8768C"
 keywords: playready overview version changes
 ms.date: 10/02/2019
