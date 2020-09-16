@@ -13,8 +13,8 @@ ms.topic: conceptual
 
 Output protection levels (OPLs) are described in detail in the [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/). This topic describes some of the general behavior of OPLs.
 
->[!IMPORTANT]
->This documentation page is informational only.  An implementation is required to comply with [Compliance Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/).  In the event of any conflict between this document and the Compliance Rules, the Compliance Rules always take precedence.
+>[!NOTE]
+> If this documentation differs from the language included in the [Licensing Agreements](https://www.microsoft.com/playready/licensing/), in the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) document or the [Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) document, those documents take precedence.
 
 OPLs create layers of rights protection in order to associate types of content to a security restriction. Higher OPLs indicate a higher-level security. A device does not output content if the device only supports an output protection level that is lower than the minimum OPL for the content, because the device does not support the protected path requirements for playing back content protected at that level.
 
