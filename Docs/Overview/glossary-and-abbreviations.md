@@ -30,10 +30,10 @@ The following high-level terms are used throughout this documentation.
 | CA | Certificate Authority. An entity that issues digital certificates and provides trust in certificate chains. |
 | CAS | Conditional Access System. |
 | CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher. |
-| 'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. |
+| 'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
 | CDM | See [Content Decryption Module](#contdecrypt). |
 | CENC | See [Common Encryption (CENC)](#commencrypt). |
-| 'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. |
+| 'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
 | Certificate | A digitally-signed binary document used to grant and revoke privileges to devices and computers to perform specific operations.|
 | Certificate revocation list (CRL)| A list that maintains the information necessary to disable a device from being able to acquire licenses and play protected content.|
 | Certificate Security Level (CSL) | The security value specified in the leafmost certificate in the certificate chain associated with a PlayReady Final Product. A PlayReady Final Product may consume only Content that has an associated License Security Level no greater than the PlayReady Final Product’s Certificate Security Level. |
@@ -41,7 +41,7 @@ The following high-level terms are used throughout this documentation.
 | Clear content| A media file that is not encrypted.|
 | Client | Content receiver. May be a device or an application.|
 | CMAF | Common Media Application Format. A multimedia format specified in ISO/IEC 23000-19:2018. |
-| <a id="commencrypt"></a>Common Encryption (CENC) | An MPEG Standard that defines encryption and container formats for protected media content. |
+| <a id="commencrypt"></a>Common Encryption (CENC) | An MPEG Standard that defines encryption and container formats for protected media content specified in ISO/IEC 23001-7:2016 |
 | Company Certificate | A Certificate unique to a Company issued by Microsoft for the purpose of issuing other Device/Model Certificates. |
 | <a id="comply"></a>Compliance Rules | Compliance Rules specify the required behaviors of PlayReady implementations and the software accessing the implementations. Compliance Rules describe how content may be accessed and passed using specific policy rules. |
 | <a id="contdecrypt"></a>Content Decryption Module (CDM) | The client component that provides the DRM functionality, including decryption. |
