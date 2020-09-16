@@ -14,7 +14,7 @@ This page contains an overview of the most significant changes between PlayReady
 
 ## General Changes in PlayReady Version 4.3
 
-A PlayReady Server SDK built on .NETCore was released.  This SDK can be installed on Linux machines in addition to Windows.
+A PlayReady Server SDK built on .NETCore was released.  This SDK can be installed on Linux machines in addition to Windows and is compatible with the same clients as the Windows-specific PlayReady Server SDK.  For more information on version compatibility, see [PlayReady Product Versions](../product-versions.md).
 <br/><br/>
 
 ## Changes in PlayReady Server SDK Version 4.3
