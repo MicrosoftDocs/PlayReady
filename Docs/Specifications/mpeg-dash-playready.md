@@ -164,7 +164,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 | Code | Informational Reference |
 |:--|:--|
-| [CPSID] | *DASH Industry Forum, “Protection System-specific Identifiers”,*  [http://dashif.org/identifiers/protection/](http://dashif.org/identifiers/protection/)  |
+| [CPSID] | *DASH Industry Forum, “Protection System-specific Identifiers”,*  [http://dashif.org/identifiers/content_protection/](http://dashif.org/identifiers/content_protection/)  |
 | [DASHIF] | *DASH Industry Forum, “Guidelines for Implementation: DASH-IF Interoperability Points”, September 07, 2017, Version 4.1,* [http://dashif.org/wp-content/uploads/2017/09/DASH-IF-IOP-v4.1-clean.pdf](http://dashif.org/wp-content/uploads/2017/09/DASH-IF-IOP-v4.1-clean.pdf)   |
 | [ISOBFF] | *ISO/IEC 14496-12, Fourth Edition (Corrected version 2012-09-15), “Information technology – Coding of audio-visual objects – Part 12: ISO Base Media File Format”,* [http://standards.iso.org/ittf/PubliclyAvailableStandards/c061988_ISO_IEC_14496-12_2012.zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c061988_ISO_IEC_14496-12_2012.zip)   |
 
@@ -212,7 +212,7 @@ The second descriptor type indicates the UUID string for a particular DRM system
 
 > **Note** The ‘pssh’ box includes a SystemID, a UUID [[X.667](#references)] that uniquely identifies the content protection system. The PlayReady SystemID is 9a04f079-9840-4286-ab92-e65be0885f95.
 
-SystemID values for DRM systems are registered at:  [http://dashif.org/identifiers/protection/](http://dashif.org/identifiers/protection/)
+SystemID values for DRM systems are registered at:  [https://dashif.org/identifiers/content_protection/](https://dashif.org/identifiers/content_protection/)
 
 Each AdaptationSet element MAY list multiple DRM Descriptors to indicate that licenses are available for multiple DRM systems.  Each DRM system can specify elements and attributes in their own namespace and make them optional or required in Descriptors using their SystemID.
 
