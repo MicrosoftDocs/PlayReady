@@ -193,10 +193,10 @@ Starting with version 4.0, PlayReady SDKs and Clients are able to process PlayRe
 The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2.0.0:
 
   *  The **WRMHEADER** element’s version attribute is set to the string “4.3.0.0”.
-  *  The **ALGID** element located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
-     *  The **ALGID** element located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** element has a valid value in the header included in the content.
-     *  When the **ALGID** elements are present, and there is more than one **KID** element in the **KIDS** element, all the **ALGID** values must be the same.
-     *  When the **ALGID** element is set to “AESCBC”, the **CHECKSUM** attribute must not be included.
+  *  The **ALGID** attribute located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
+     *  The **ALGID** attribute located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** attribute has a valid value in the header included in the content.
+     *  When the **ALGID** attributes are present, and there is more than one **KID** element in the **KIDS** element, all the **ALGID** values must be the same.
+     *  When the **ALGID** attribute is set to “AESCBC”, the **CHECKSUM** attribute must not be included.
 
 #### 3.3.2. Examples
 
