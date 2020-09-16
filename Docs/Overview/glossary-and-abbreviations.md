@@ -30,10 +30,10 @@ The following high-level terms are used throughout this documentation.
 | CA | Certificate Authority. An entity that issues digital certificates and provides trust in certificate chains. |
 | CAS | Conditional Access System. |
 | CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher. |
-| 'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
+| <a id="'cbcs'"></a>'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
 | CDM | See [Content Decryption Module](#contdecrypt). |
 | CENC | See [Common Encryption (CENC)](#commencrypt). |
-| 'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
+| <a id="cenc"></a>'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
 | Certificate | A digitally-signed binary document used to grant and revoke privileges to devices and computers to perform specific operations.|
 | Certificate revocation list (CRL)| A list that maintains the information necessary to disable a device from being able to acquire licenses and play protected content.|
 | Certificate Security Level (CSL) | The security value specified in the leafmost certificate in the certificate chain associated with a PlayReady Final Product. A PlayReady Final Product may consume only Content that has an associated License Security Level no greater than the PlayReady Final Product’s Certificate Security Level. |
@@ -78,6 +78,7 @@ The following high-level terms are used throughout this documentation.
 | Final Product | See [PFPL](#pfpl). |
 | FPL | See [PFPL](#pfpl). |
 | Full Ultra-High Definition Content (Full UHD) | UHD content with Full 4K resolution&mdash;4096 x 2160 pixels.  |
+| Full Sample Encryption | See ['cenc'](#cenc).
 | Hashed data store (HDS)| A file also know as a PlayReady data store, that contains all licenses, certificates, and related content access protection data associated with a particular client. This file is created by the PlayReady Client runtime when a device is first started and individualized.
 | HLS | HTTP Live Streaming. An adaptive streaming protocol that was introduced by Apple. |
 | IIS | See [Internet Information Services](#iis). |
@@ -115,6 +116,7 @@ The following high-level terms are used throughout this documentation.
 | OS | Operating System. PlayReady is supported on all operating systems. |
 | Output protection level (OPL)| A setting in a license that indicates which technologies can be used to play protected digital media content.|
 | Packaging| The process by which clear content is encrypted to protect it from unlicensed use.|
+| Partial Sample Encryption | See ['cbcs'](#cbcs).
 | Partner | Company that resells products including PlayReady functionality to customers.|
 | Personally Identifiable Information | Any information that can be used to identify, contact, or locate end users of PlayReady. |
 | <a id="pipl"></a>PIPL, IPL | PlayReady Intermediate Product Licensee. A company that has signed a PlayReady Intermediate Product License with Microsoft. |
