@@ -15,6 +15,8 @@ This page contains an overview of the most significant changes between PlayReady
 ## General Changes in PlayReady Version 4.4
 
 The ability to determine what features a given Porting Kit implementation supports is added on both client and server.
+
+When multiple non-leaf licenses are acquired in a single license acquisition response, the server can optionally perform additional cryptography to reduce cryptography on the client.
 <br/><br/>
 
 ## Changes in PlayReady Server SDK Version 4.4
@@ -22,6 +24,11 @@ The ability to determine what features a given Porting Kit implementation suppor
 ### General
 
 A server application can now determine what features the client has implemented if the client is also version 4.4 or higher. For more information, see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
+
+Property LicenseResponse.IncludeOptimizedContentKey2 has been added (defaulting to false).
+1. If the Optimized Content Key 2 feature cannot improve performance on the client, the property has no effect.  For example, if the client is older than version 4.4, the property is ignored.
+2. Otherwise, setting the property to true will cause the server to perform one additional asymmetric encrypt operation when generating the license acquisition response and include an "Optimized Content Key 2" in each non-leaf license included in the response.
+See "Changes in PlayReady Device Porting Kit Version 4.4" below for the corresponding benefits of this feature.
 <br/><br/>
 
 ## Changes in PlayReady Device Porting Kit Version 4.4
@@ -31,6 +38,8 @@ A server application can now determine what features the client has implemented 
 The client application can now determine what features the specific OEM implementation of the PlayReady Device Porting Kit has implemented. For more information, refer to structure definitions in source code file source/inc/drmmanagertypes.h.
 
 The client sends what features the specific OEM implementation of the PlayReady Device Porting Kit has implemented to the server as part of its License Acquisition challenge. For more information see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
+
+A license may now contain an Optimized Content Key 2 XMR object.  When multiple non-leaf licenses from a single license acquisition response containing this XMR object are bound (via Drm_Reader_Bind) in the same DRM_APP_CONTEXT, the client will only perform one asymmetric crypto operation total instead of one per license.  This can be particularly useful when a client might receive multiple bitrates or streams with different content keys; a single asymmetric crypto operation on the server could eliminate several such operations on the client.
 <br/><br/>
 
 ### API
