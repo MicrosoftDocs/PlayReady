@@ -30,7 +30,7 @@ The following high-level terms are used throughout this documentation.
 | CA | Certificate Authority. An entity that issues digital certificates and provides trust in certificate chains. |
 | CAS | Conditional Access System. |
 | CBC mode | An AES encryption mode. Cipher Block Chaining (CBC) mode turns a block cipher into a stream cipher. |
-| <a id="'cbcs'"></a>'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
+| <a id="cbcs"></a>'cbcs' | One of the encryption modes of the Common Encryption standard. Uses the AES CBC mode with Stripped (partial) sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
 | CDM | See [Content Decryption Module](#contdecrypt). |
 | CENC | See [Common Encryption (CENC)](#commencrypt). |
 | <a id="cenc"></a>'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
