@@ -25,8 +25,6 @@ Windows now supports CBCS for both hardware and software DRM. Additionally, the 
 
 The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
 
-A server application can now explicitly request that one or more revoked client certificates be treated as if they were not revoked.  For more information, see [PlayReady Revocation](../revocation.md).
-
 The server's Certificate class now correctly returns ManufacturerName, ModelName, and ModelNumber for certificates coming from Windows clients.
 <br/><br/>
 
