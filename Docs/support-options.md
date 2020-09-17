@@ -22,6 +22,7 @@ Starting in March 2018, Microsoft provides technical support to licensed compani
 
 Microsoft provides legal agreement administration and support for the following:
 
+* Licensing and Downloading the PlayReady Device Porting Kit and the PlayReady Server SDK
 * PlayReady Licensing Agreement(s) management
 * PlayReady Certificate and Deliverables (PK and SDK) fulfillment
 * PlayReady royalty reporting and invoicing support 
