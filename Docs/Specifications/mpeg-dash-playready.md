@@ -212,7 +212,7 @@ The second descriptor type indicates the UUID string for a particular DRM system
 
 > **Note** The ‘pssh’ box includes a SystemID, a UUID [[X.667](#references)] that uniquely identifies the content protection system. The PlayReady SystemID is 9a04f079-9840-4286-ab92-e65be0885f95.
 
-SystemID values for DRM systems are registered at:  [http://dashif.org/identifiers/protection/](http://dashif.org/identifiers/protection/)
+SystemID values for DRM systems are registered at:  [https://dashif.org/identifiers/content_protection/](https://dashif.org/identifiers/content_protection/)
 
 Each AdaptationSet element MAY list multiple DRM Descriptors to indicate that licenses are available for multiple DRM systems.  Each DRM system can specify elements and attributes in their own namespace and make them optional or required in Descriptors using their SystemID.
 
