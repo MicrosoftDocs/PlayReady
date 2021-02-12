@@ -1,80 +1,50 @@
 ---
 title: "What's New"
-description: This section provides an overview of changes from PlayReady version 4.0 to PlayReady version 4.4.
+description: This section provides an overview of changes from PlayReady version 4.3 to PlayReady version 4.4.
 ms.assetid: "D9B3FE09-931E-4B28-8A7A-5D422C86AB12"
-keywords: playready overview version changes 4.0 4.4
+keywords: playready overview version changes 4.3 4.4
 ms.date: 10/02/2019
 ms.topic: conceptual
 ---
 
 # What's New in PlayReady Version 4.4
 
-This page contains an overview of the most significant changes between PlayReady version 4.0 and PlayReady version 4.4.
+This page contains an overview of the most significant changes between PlayReady version 4.3 and PlayReady version 4.4.
 <br/><br/>
 
 ## General Changes in PlayReady Version 4.4
 
-The SecureStop2 feature is added.  This provides a higher level of security than the previously-extant SecureStop1 feature.
-
 The ability to determine what features a given Porting Kit implementation supports is added on both client and server.
+
+When multiple non-leaf licenses are acquired in a single license acquisition response, the server can optionally perform additional cryptography to reduce cryptography on the client.
 <br/><br/>
 
 ## Changes in PlayReady Server SDK Version 4.4
 
 ### General
 
-Windows now supports CBCS for both hardware and software DRM. Additionally, the PlayReady license server extends CBCS support for SL2000. 
-
-The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
-
 A server application can now determine what features the client has implemented if the client is also version 4.4 or higher. For more information, see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
 
-A server application can now explicitly request that one or more revoked client certificates be treated as if they were not revoked.  For more information, see [PlayReady Revocation](../revocation.md).
-
-The server's Certificate class now correctly returns ManufacturerName, ModelName, and ModelNumber for certificates coming from Windows clients.
+Property LicenseResponse.IncludeOptimizedContentKey2 has been added (defaulting to false).
+1. If the Optimized Content Key 2 feature cannot improve performance on the client, the property has no effect.  For example, if the client is older than version 4.4, the property is ignored.
+2. Otherwise, setting the property to true will cause the server to perform one additional asymmetric encrypt operation when generating the license acquisition response and include an "Optimized Content Key 2" in each non-leaf license included in the response.
+See "Changes in PlayReady Device Porting Kit Version 4.4" below for the corresponding benefits of this feature.
 <br/><br/>
 
 ## Changes in PlayReady Device Porting Kit Version 4.4
 
 ### General
 
-The client now sends SecureStop2 messages to the server. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
-
-The client application can now choose to reject individual licenses during Drm_Reader_Bind. For more information, refer to enum and structure documentation in source code file source/inc/drmcallbacktypes.h.
-
 The client application can now determine what features the specific OEM implementation of the PlayReady Device Porting Kit has implemented. For more information, refer to structure definitions in source code file source/inc/drmmanagertypes.h.
 
 The client sends what features the specific OEM implementation of the PlayReady Device Porting Kit has implemented to the server as part of its License Acquisition challenge. For more information see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
 
-It is now easier to change compiler settings and add OEM-specific error codes. For more information, refer to source code files source/inc/oemcompiler.h and source/inc/oemresults.h.
-
-The drmcipher_test.exe and drmcrypto_test.exe tools are no longer included in compiled form. They can still be compiled using source code files source/test/cipher/\* and source/test/crypto/\*.
-
-The DrmFileViewer.exe tool and its corresponding source code are no longer included. It only supported file formats which are no longer in widespread use.
-
-The term "batch ID" has been globally replaced with "session ID". This impacts certain public structures. For example, in source code file source/inc/drmlicacqv3.h structure definition DRM_LICENSE_RESPONSE, the member m_oBatchID was renamed to m_idSession. (The term "batch ID" and the term "session ID" have historically been interchangeable in the PlayReady Device Porting Kit.)
+A license may now contain an Optimized Content Key 2 XMR object.  When multiple non-leaf licenses from a single license acquisition response containing this XMR object are bound (via Drm_Reader_Bind) in the same DRM_APP_CONTEXT, the client will only perform one asymmetric crypto operation total instead of one per license.  This can be particularly useful when a client might receive multiple bitrates or streams with different content keys; a single asymmetric crypto operation on the server could eliminate several such operations on the client.
 <br/><br/>
 
 ### API
 
-Migration from previous versions of PlayReady has been simplified with respect to the Output Protection structures passed to the DRMPFNPOLICYCALLBACK callback. For more information, refer to source code file source/inc/drmoutputleveltypes.h.
-
 The non-spec-compliant CDMI interface is no longer included (formerly source/cdmi/\*). Microsoft recommends migration to the spec-compliant CDMI interface. For more information, refer to source code files source/inc/drmcdmi\* and source/modules/cdmi/real/\*.
-
-The DRM_CDMI_DecryptOpaque API has been updated to support decryption of AES128CBC content. For more information, refer to source code files source/inc/drmcdmi.h and source/modules/cdmi/real/drmcdmireal.c.
-
-The following public API has been removed.
-
-    Drm_Revocation_StoreRevListArray
-
-The following OEM APIs have been renamed.
-
-    OEM_TEE_BASE_SignHashWithDeviceSigningKey -> OEM_TEE_BASE_ECDSA_P256_SignHash
-    OEM_TEE_LPROV_ECDSA_Sign -> OEM_TEE_BASE_ECDSA_P256_SignData
-
-The following OEM API now has some of its parameters changed to optional (they may be NULL on input). For more information, refer to source code file source/oem/common/inc/oemtee.h.
-
-    OEM_TEE_BASE_GetVersionInformation
 
 The following OEM APIs have been added. For more information, refer to the corresponding source code file where the default implementation of the API resides.
 
@@ -85,19 +55,4 @@ The following OEM APIs have been added. For more information, refer to the corre
     OEM_TEE_CRYPTO_ECC256_GenerateTeeSigningPrivateKey
     OEM_TEE_BASE_ECC256_GenerateTeeSigningPrivateKey
     OEM_TEE_BASE_GetExtendedVersion
-    OEM_TEE_SECURESTOP2_StopDecryptors
-
-The following OEM APIs have been removed.
-
-    Oem_MemRealloc
-    OEM_SHA256_Finalize_With_SHA_1_Size
-    OEM_SHA256_HMAC_Init
-    OEM_SHA256_HMAC_Update
-    OEM_SHA256_HMAC_Finalize
-    OEM_SHA256_HMAC_FinalizeOffset
-    OEM_SHA256_HMAC_CreateMAC
-    OEM_SHA256_HMAC_VerifyMAC
-    OEM_TEE_LPROV_GetDeviceModelInfo
-
-
 

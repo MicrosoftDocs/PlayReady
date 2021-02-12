@@ -21,7 +21,7 @@ The PlayReady Header contains information about the content being played back, i
 The following XML code provides an example of a PlayReady Header, which may be inserted in the header of a segmented MP4 file, typically for On-Demand content. It includes the list of KIDs (the IDs of the content encryption keys) that are needed for a client to decrypt the content. It is the most common way to signal these KIDs for an On-Demand file or stream. 
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -41,7 +41,7 @@ The following XML code provides an example of a PlayReady Header for Live Linear
 >DECRYPTORSETUP = ONDEMAND does not mean the content is served On-Demand, it is actually the opposite.
 
 ```xml
-<WRMHEADER version="4.2.0.0" xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
+<WRMHEADER version="4.2.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader">
   <DATA>
     <DECRYPTORSETUP>ONDEMAND</DECRYPTORSETUP>
   </DATA>
@@ -78,7 +78,7 @@ void buildRMObject(string KeyID1, string KeyID2, string encryptMode, string doma
 	// encryptMode - the encryption mode used to encrypt content, can be AESCTR or AESCBC
 	// domainID - the optional domain service identifier (only used for domains)
 
-	string xmlString = "<WRMHEADER xmlns=\"https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader\" version=\"4.3.0.0\"><DATA><PROTECTINFO><KIDS><KID ALGID=\"";
+	string xmlString = "<WRMHEADER xmlns=\"http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader\" version=\"4.3.0.0\"><DATA><PROTECTINFO><KIDS><KID ALGID=\"";
 	xmlString.append(encryptMode);
 	xmlString.append("\" VALUE=\"");
 	xmlString.append(KeyID1);
@@ -132,7 +132,7 @@ public void buildRMHeader(string KeyID1, string KeyID2, string encryptMode, stri
     string prHeader;
 
     // Create the PlayReady Header
-    prHeader = "<WRMHEADER xmlns=\"https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader\" version=\"4.3.0.0\"><DATA><PROTECTINFO><KIDS><KID ALGID=\"";
+    prHeader = "<WRMHEADER xmlns=\"http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader\" version=\"4.3.0.0\"><DATA><PROTECTINFO><KIDS><KID ALGID=\"";
     prHeader += encryptMode;
     prHeader += "\" VALUE=\"";
     prHeader += KeyID1;
