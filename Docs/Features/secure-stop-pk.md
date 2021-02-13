@@ -1,6 +1,6 @@
 ---
 title: PlayReady Secure Stop
-description: PlayReady Secure Stop is a feature that provides the means for a PlayReady device to confidently assert to a media streaming service that media playback has stopped for any given piece of content.
+description: PlayReady Secure Stop provides the means for a PlayReady device to confidently assert to a media streaming service that media playback has stopped for a given piece of content.
 ms.assetid: "9736c55e-3628-4d93-8d55-48d4be6af137"
 keywords: secure, stop, server, license
 ms.date: 05/01/2018
