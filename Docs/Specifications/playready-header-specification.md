@@ -43,8 +43,6 @@ The PlayReady Object consists of additional sub-objects called PlayReady Object 
 | Record Length| WORD| 16| Specifies the size in bytes of the Record Value.|
 | Record Value| BYTE array| Varies| The content of the object depends on the value of Record Type.|
 
-&nbsp;
-
 The Record Type field has one of the following values.
 
 |Value type| Description|
@@ -108,79 +106,49 @@ The PlayReady Header (PRH) is used by a Client to locate or acquire a license fo
 </table>
 
 Notes:
-  * (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
-  * (3) Windows 10 (all versions) and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (for example, Smart TVs) released after 2017 are PlayReady 3.X Clients.
-  * (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
-  * (1) Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
+
+* (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
+* (3) Windows 10 (all versions) and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (for example, Smart TVs) released after 2017 are PlayReady 3.X Clients.
+* (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+* (1) Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 
 ### 3.2. Syntax Requirements
 
 #### 3.2.1. Canonicalized
+
 The XML must be canonicalized.
 
 #### 3.2.2. All Node and Attributes names are case-sensitive
 
-<table>
-    <tr>
-        <td>• Supported</td>
-        <td>&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;</td>
-    <tr>
-        <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;KID value=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;<br/>
-            &lt;kid VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/kid&gt;
-        </td>
-    </tr>
-</table>
+|Supported|Not Supported|
+|----|----|
+|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`| |
+| |`<KID value="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`<br/>`<kid VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </kid>`|
 
 #### 3.2.3. Closing tags must be explicit
 
 All XML nodes must be explicitly closed by a closing tag including those in nodes inside the CUSTOMATTRIBUTES node.
 
-<table>
-    <tr>
-        <td>• Supported</td>
-        <td>&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;<br/>
-            &lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute=&quot;Foo&quot;&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;
-        </td>
-    </tr>
-    <tr>
-        <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;/&gt;
-&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute=&quot;Foo&quot;/&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
-    </tr>
-</table>
+|Supported|Not Supported|
+|----|----|
+|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`<br/>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>`|
+| |`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> <CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </CUSTOMATTRIBUTES>`|
 
 #### 3.2.4. Namespace attributes
 
 All namespace attributes must be before non-namespaces attributes.
 
-<table>
-    <tr>
-        <td>• Supported</td>
-        <td>&lt;WRMHEADER xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/2007/03/PlayReady" data-raw-source="http://schemas.microsoft.com/DRM/2007/03/PlayReady">http://schemas.microsoft.com/DRM/2007/03/PlayReady</a>
-Header&quot; version=&quot;4.3.0.0&quot;&gt;</td>
-    </tr>
-    <tr>
-        <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;WRMHEADER version=&quot;4.3.0.0&quot; xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/" data-raw-source="http://schemas.microsoft.com/DRM/">http://schemas.microsoft.com/DRM/</a>
-2007/03/PlayReadyHeader&quot;&gt;</td>
-    </tr>
-</table>
+|Supported|Not Supported|
+|----|----|
+|`<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">`|`<WRMHEADER version="4.3.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader>`|
 
-#### 3.2.5.	Alphabetical order
+#### 3.2.5. Alphabetical order
 
 All attributes must be in alphabetical order including those in nodes inside the CUSTOMATTRIBUTES node.
 
-<table>
-    <tr>
-        <td>• Supported</td>
-        <td>&lt;KID ALGID=&quot;AESCBC&quot; VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot;&gt;&lt;/KID&gt;<br/>&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode BarAttribute=&quot;Bar&quot; FooAttribute=&quot;Foo&quot;&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
-    </tr>
-    <tr>
-        <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;KID VALUE=&quot;PV1LM/VEVk+kEOB8qqcWDg==&quot; ALGID=&quot;AESCBC&quot;&gt;&lt;/KID&gt;<br/>&lt;CUSTOMATTRIBUTES&gt;&lt;MyNode FooAttribute=&quot;Foo&quot; BarAttribute=&quot;Bar&quot;&gt;&lt;/MyNode&gt;&lt;/CUSTOMATTRIBUTES&gt;</td>
-    </tr>
-</table>
+|Supported|Not Supported|
+|----|----|
+|`<KID ALGID="AESCBC" VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID><br/><CUSTOMATTRIBUTES> <MyNode BarAttribute="Bar" FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>`|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg==" ALGID="AESCBC"> </KID>`<br/>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo" BarAttribute="Bar"> </MyNode> </CUSTOMATTRIBUTES>|
 
 ### 3.3. v4.3.0.0
 
@@ -192,11 +160,11 @@ Starting with version 4.0, PlayReady SDKs and Clients are able to process PlayRe
 
 The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2.0.0:
 
-  *  The **WRMHEADER** element’s version attribute is set to the string "4.3.0.0".
-  *  The **ALGID** attribute located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** attribute has a valid value in the header included in the content.
-  *  When the **ALGID** attribute is present in any **KID** element, and there is more than one **KID** element in the **KIDS** element, all **KID** elements must include the **ALGID** attribute and the attribute values must be the same.
-  *  The **ALGID** attribute located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
-     *  When the **ALGID** attribute is set to "AESCBC", the **CHECKSUM** attribute must not be included.
+* The **WRMHEADER** element’s version attribute is set to the string "4.3.0.0".
+* The **ALGID** attribute located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** attribute has a valid value in the header included in the content.
+* When the **ALGID** attribute is present in any **KID** element, and there is more than one **KID** element in the **KIDS** element, all **KID** elements must include the **ALGID** attribute and the attribute values must be the same.
+* The **ALGID** attribute located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
+  * When the **ALGID** attribute is set to "AESCBC", the **CHECKSUM** attribute must not be included.
 
 #### 3.3.2. Examples
 
@@ -234,9 +202,9 @@ The following is an example of a PlayReady Header 4.3.0.0 with a missing ALGID:
 </WRMHEADER>
 ```
 
-#### 3.3.3.	Format
+#### 3.3.3. Format
 
-The PlayReady Header v4.3.0.0 has the following syntax.
+The PlayReady Header v4.3.0.0 has the following syntax:
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
@@ -293,9 +261,9 @@ PlayReady 3.0 SDKs and later Clients are able to process the v4.0, v4.1, and v4.
 
 The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1.0.0:
 
-  *  The **WRMHEADER** element’s version attribute is set to the string "4.2.0.0".
-  *  The **KID** element located inside the **PROTECTINFO** element has been renamed to **KIDS** and is still optional.
-  *  Multiple **KID** elements are located inside the **KIDS** element.
+* The **WRMHEADER** element’s version attribute is set to the string "4.2.0.0".
+* The **KID** element located inside the **PROTECTINFO** element has been renamed to **KIDS** and is still optional.
+* Multiple **KID** elements are located inside the **KIDS** element.
 
 #### 3.4.2. Example
 
@@ -318,7 +286,7 @@ PlayReady Header 4.2.0.0 with two AESCTR keys:
 
 #### 3.4.3. Format
 
-The PlayReady Header v4.2.0.0 has the following syntax.
+The PlayReady Header v4.2.0.0 has the following syntax:
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
@@ -365,7 +333,6 @@ The tags are described below.
 | CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
- 
 ### 3.5. v4.1.0.0
 
 PlayReady Header v4.1.0.0 was introduced with PlayReady version 2.0 in September 2011 to support live linear streams with scalable leaf licenses embedded in the stream. This type of stream requires Clients to bind a scalable root license without knowledge of the content encryption key that will be used in the decryptor.
@@ -376,16 +343,16 @@ PlayReady 2.0 SDKs and later Clients are able to process both the v4.0 and v4.1 
 
 The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0.0.0:
 
-  *  The **WRMHEADER** element’s version attribute is set to the string "4.1.0.0".
-  *  The **DATA** element contains an optional **DECRYPTORSETUP** element.
-  *  The **KID** element is located inside the **PROTECTINFO** element and is optional rather than required.
-  *  The **KID** element contains the attributes **ALGID** (required), **CHECKSUM** (optional), and **VALUE** (required).
-  *  The **KEYLEN** element has been removed. The **KEYLEN** attribute was previously used to disambiguate cocktail licenses with different length keys. The v4.1 header will break the ability to support anything but 8-byte cocktail keys. If you use cocktail keys that aren't 8-byte, you must use v4.0 headers.
-  *  The **ALGID** and **CHECKSUM** elements have been removed since their data is contained within attributes of the **KID** element.
+* The **WRMHEADER** element’s version attribute is set to the string "4.1.0.0".
+* The **DATA** element contains an optional **DECRYPTORSETUP** element.
+* The **KID** element is located inside the **PROTECTINFO** element and is optional rather than required.
+* The **KID** element contains the attributes **ALGID** (required), **CHECKSUM** (optional), and **VALUE** (required).
+* The **KEYLEN** element has been removed. The **KEYLEN** attribute was previously used to disambiguate cocktail licenses with different length keys. The v4.1 header will break the ability to support anything but 8-byte cocktail keys. If you use cocktail keys that aren't 8-byte, you must use v4.0 headers.
+* The **ALGID** and **CHECKSUM** elements have been removed since their data is contained within attributes of the **KID** element.
 
 #### 3.5.2. Format
 
-The PlayReady Header v4.1.0.0 has the following syntax.
+The PlayReady Header v4.1.0.0 has the following syntax:
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
@@ -429,10 +396,10 @@ The tags are described below.
 
 Notes for v4.1:
 
-  *  All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element.
-  *  The PlayReady Header should abide by the W3C Canonical XML v1.1 specifications ([http://www.w3.org/TR/xml-c14n11/](http://www.w3.org/TR/xml-c14n11/)).
-  *  The PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
-  *  It is recommended that the size of this field should not exceed 1 KB.
+* All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element.
+* The PlayReady Header should abide by the W3C Canonical XML v1.1 specifications ([http://www.w3.org/TR/xml-c14n11/](http://www.w3.org/TR/xml-c14n11/)).
+* The PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
+* It is recommended that the size of this field should not exceed 1 KB.
 
 ### 3.6. v4.0.0.0
 
@@ -440,7 +407,7 @@ PlayReady Header v4.0.0.0 was introduced with PlayReady version 1.0 in 2008 and 
 
 #### 3.6.1. Examples
 
-PlayReady Header 4.0.0.0:
+##### PlayReady Header 4.0.0.0
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
@@ -459,14 +426,13 @@ PlayReady Header 4.0.0.0:
 </WRMHEADER>
 ```
 
-Base64-encoded PlayReady Object containing a PlayReady Header 4.0.0.0:
+##### Base64-encoded PlayReady Object containing a PlayReady Header 4.0.0.0
 
 XAMAAAEAAQBSAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AcQA1AEgAZwBDAFQAagA0ADAAawBHAGUATgBWAGgAVABIADkARwBlAHgAdwA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgB3ACsATwBaAFYAcgA4AHYAegByAFEAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAHIAbwBmAGYAaQBjAGkAYQBsAHMAaQB0AGUALgBrAGUAeQBkAGUAbABpAHYAZQByAHkALgBtAGUAZABpAGEAcwBlAHIAdgBpAGMAZQBzAC4AdwBpAG4AZABvAHcAcwAuAG4AZQB0AC8AUABsAGEAeQBSAGUAYQBkAHkALwA8AC8ATABBAF8AVQBSAEwAPgA8AEMAVQBTAFQATwBNAEEAVABUAFIASQBCAFUAVABFAFMAPgA8AEkASQBTAF8ARABSAE0AXwBWAEUAUgBTAEkATwBOAD4AOAAuADAALgAxADcAMAA1AC4AMQA5ADwALwBJAEkAUwBfAEQAUgBNAF8AVgBFAFIAUwBJAE8ATgA+ADwALwBDAFUAUwBUAE8ATQBBAFQAVABSAEkAQgBVAFQARQBTAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=
 
-
 #### 3.6.2. Format
 
-The PlayReady Header v4.0.0.0 has the following syntax.
+The PlayReady Header v4.0.0.0 has the following syntax:
 
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
@@ -516,11 +482,11 @@ The following table describes the different tags.
 
 Notes for v4.0:
 
-  *  All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element as doing so may clash with future tags that Microsoft defines.
-  *  The order of child elements within a container element does not matter.
-  *  Note that the PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
-  *  It is recommended that the size of this field should not exceed 1 KB.
-  *  **CHECKSUM** is required by PlayReady Server SDK up to version 1.2.
+* All XML tags and attributes in the PlayReady Header are defined by Microsoft. The only exception is the content of the **CUSTOMATTRIBUTES** element. PlayReady PC application developers must not add any custom tags outside of the **CUSTOMATTRIBUTES** element as doing so may clash with future tags that Microsoft defines.
+* The order of child elements within a container element does not matter.
+* Note that the PlayReady Header does not contain a top-level `?XML` tag that is required in well-formed XML.
+* It is recommended that the size of this field should not exceed 1 KB.
+* **CHECKSUM** is required by PlayReady Server SDK up to version 1.2.
 Since version 1.5, PlayReady Server SDK treats the **CHECKSUM** as optional.
 PlayReady Porting Kit 1.2 out of the box requires the **CHECKSUM**.
 PlayReady Porting Kit 2.0 treats the **CHECKSUM** as optional.
@@ -529,8 +495,8 @@ PlayReady Porting Kit 2.0 treats the **CHECKSUM** as optional.
 
 It is good practice to add an empty Embedded License Store to the PlayReady Object under the following conditions:
 
-  *  The PlayReady Object is to be inserted into a content file.
-  *  The content may be used in a context of PlayReady domains with embedded licenses.
+* The PlayReady Object is to be inserted into a content file.
+* The content may be used in a context of PlayReady domains with embedded licenses.
 
 This allows a PlayReady Client to further embed a domain-bound license in the PlayReady Object by simply populating the existing Embedded License Store and saves the effort of having to re-header the entire file with a new PlayReady Object of a larger size than that of the initial one.
 
@@ -539,8 +505,6 @@ This allows a PlayReady Client to further embed a domain-bound license in the Pl
 
 >[!NOTE]
 >The recommended size is 10KB.
-
-<a id="keychecksum"></a>
 
 ## 5. Key Checksum Algorithm
 
@@ -552,17 +516,17 @@ For an **ALGID** value set to "AESCTR", the 16-byte Key ID is encrypted with a 1
 
 For an **ALGID** value set to "COCKTAIL", perform the following steps:
 
-1.	A 21-byte buffer is created.
+1. A 21-byte buffer is created.
 
-2.	The content key is put in the buffer and the rest of the buffer is filled with zeros.
+2. The content key is put in the buffer and the rest of the buffer is filled with zeros.
 
-3.	For five iterations:
+3. For five iterations:
 
-    a.	buffer = SHA-1 (buffer).
+    a. buffer = SHA-1 (buffer).
 
-4.	The first 7 bytes of the buffer are extracted and base64 encoded.
+4. The first 7 bytes of the buffer are extracted and base64 encoded.
 
-5.	After these steps are performed, the base64-encoded bytes are used as the checksum.
+5. After these steps are performed, the base64-encoded bytes are used as the checksum.
 
 ## 6. CUSTOMATTRIBUTES
 

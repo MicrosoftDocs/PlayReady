@@ -23,6 +23,10 @@ When multiple non-leaf licenses are acquired in a single license acquisition res
 
 ### General
 
+Windows now supports CBCS for both hardware and software DRM.  Additionally, the PlayReady license server extends CBCS support for SL2000.
+
+The server can now process SecureStop2 messages. For more information, see [PlayReady Secure Stop](../../Features/secure-stop-pk.md).
+
 A server application can now determine what features the client has implemented if the client is also version 4.4 or higher. For more information, see [How to Determine What Features a Client Supports](../../Advanced/how-to-determine-client-features.md).
 
 Property LicenseResponse.IncludeOptimizedContentKey2 has been added (defaulting to false).
