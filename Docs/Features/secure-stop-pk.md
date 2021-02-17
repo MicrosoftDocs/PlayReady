@@ -80,7 +80,7 @@ th {
 
 <br>
 
-In order to take advantage of the Secure Stop 2 feature, the Server application must enalble the feature as follows:
+In order to take advantage of the Secure Stop 2 feature, the Server application must enable the feature as follows:
 
 * Set the SecureStop2AESKey property on the MediaLicense class when issuing a license with Secure Stop. (This can be done regardless of whether or not the client supports Secure Stop 2.)
 * Create a class that implements the ISecureStop2Handler interface (similar to any other handler) such that, for any given KID, it returns the same Key that was used when setting the SecureStop2AESKey property on a MediaLicense with that KID.
