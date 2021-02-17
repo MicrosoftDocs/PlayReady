@@ -157,12 +157,12 @@ All namespace attributes must be before non-namespaces attributes.
 <table>
     <tr>
         <td>• Supported</td>
-        <td>&lt;WRMHEADER xmlns=&quot;<a href="https://schemas.microsoft.com/DRM/2007/03/PlayReady" data-raw-source="https://schemas.microsoft.com/DRM/2007/03/PlayReady">https://schemas.microsoft.com/DRM/2007/03/PlayReady</a>
+        <td>&lt;WRMHEADER xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/2007/03/PlayReady" data-raw-source="http://schemas.microsoft.com/DRM/2007/03/PlayReady">http://schemas.microsoft.com/DRM/2007/03/PlayReady</a>
 Header&quot; version=&quot;4.3.0.0&quot;&gt;</td>
     </tr>
     <tr>
         <td style="border: none">• Not supported</td>
-        <td style="border: none">&lt;WRMHEADER version=&quot;4.3.0.0&quot; xmlns=&quot;<a href="https://schemas.microsoft.com/DRM/" data-raw-source="https://schemas.microsoft.com/DRM/">https://schemas.microsoft.com/DRM/</a>
+        <td style="border: none">&lt;WRMHEADER version=&quot;4.3.0.0&quot; xmlns=&quot;<a href="http://schemas.microsoft.com/DRM/" data-raw-source="http://schemas.microsoft.com/DRM/">http://schemas.microsoft.com/DRM/</a>
 2007/03/PlayReadyHeader&quot;&gt;</td>
     </tr>
 </table>
@@ -192,18 +192,18 @@ Starting with version 4.0, PlayReady SDKs and Clients are able to process PlayRe
 
 The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2.0.0:
 
-  *  The **WRMHEADER** element’s version attribute is set to the string “4.3.0.0”.
-  *  The **ALGID** element located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
-     *  The **ALGID** element located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** element has a valid value in the header included in the content.
-     *  When the **ALGID** elements are present, and there is more than one **KID** element in the **KIDS** element, all the **ALGID** values must be the same.
-     *  When the **ALGID** element is set to “AESCBC”, the **CHECKSUM** attribute must not be included.
+  *  The **WRMHEADER** element’s version attribute is set to the string "4.3.0.0".
+  *  The **ALGID** attribute located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** attribute has a valid value in the header included in the content.
+  *  When the **ALGID** attribute is present in any **KID** element, and there is more than one **KID** element in the **KIDS** element, all **KID** elements must include the **ALGID** attribute and the attribute values must be the same.
+  *  The **ALGID** attribute located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
+     *  When the **ALGID** attribute is set to "AESCBC", the **CHECKSUM** attribute must not be included.
 
 #### 3.3.2. Examples
 
 The following is an example of a PlayReady Header 4.3.0.0 with AESCBC keys:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -220,7 +220,7 @@ The following is an example of a PlayReady Header 4.3.0.0 with AESCBC keys:
 The following is an example of a PlayReady Header 4.3.0.0 with a missing ALGID:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -239,13 +239,13 @@ The following is an example of a PlayReady Header 4.3.0.0 with a missing ALGID:
 The PlayReady Header v4.3.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
       <PROTECTINFO>
         <KIDS>
-          <KID ALGID="value" CHECKSUM=“base64-encoded value" VALUE="base64-encoded guid"></KID>
-          <KID ALGID="value" CHECKSUM=“base64-encoded value" VALUE="base64-encoded guid"></KID>
-          <KID ALGID="value" CHECKSUM=“base64-encoded value" VALUE="base64-encoded guid"></KID>
+          <KID ALGID="value" CHECKSUM="base64-encoded value" VALUE="base64-encoded guid"></KID>
+          <KID ALGID="value" CHECKSUM="base64-encoded value" VALUE="base64-encoded guid"></KID>
+          <KID ALGID="value" CHECKSUM="base64-encoded value" VALUE="base64-encoded guid"></KID>
         </KIDS>
       </PROTECTINFO>
       <LA_URL> URL for license acquisition </LA_URL>
@@ -289,11 +289,11 @@ PlayReady Header v4.2.0.0 was introduced with PlayReady version 3.0 in April 201
 
 #### 3.4.1. Differences with other versions
 
-PlayReady 3.0 SDKs and later Clients are able to process the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.2 headers. When using the v4.2 header, the Client has to know what Server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
+PlayReady 3.0 SDKs and later Clients are able to process the v4.0, v4.1, and v4.2 PlayReady Header versions. Prior PlayReady SDKs return an "unsupported version" error when provided with v4.2 headers. When using the v4.2 header, the Client has to know what Server version it is using through a custom, app-specific mechanism. PlayReady SDKs provide no native way to get this version information.
 
 The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1.0.0:
 
-  *  The **WRMHEADER** element’s version attribute is set to the string “4.2.0.0”.
+  *  The **WRMHEADER** element’s version attribute is set to the string "4.2.0.0".
   *  The **KID** element located inside the **PROTECTINFO** element has been renamed to **KIDS** and is still optional.
   *  Multiple **KID** elements are located inside the **KIDS** element.
 
@@ -302,7 +302,7 @@ The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1
 PlayReady Header 4.2.0.0 with two AESCTR keys:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
   <DATA>
     <PROTECTINFO>
       <KIDS>
@@ -321,7 +321,7 @@ PlayReady Header 4.2.0.0 with two AESCTR keys:
 The PlayReady Header v4.2.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.2.0.0">
   <DATA>
       <PROTECTINFO>
         <KIDS>
@@ -363,7 +363,7 @@ The tags are described below.
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND”. When this tag is present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
+| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
  
 ### 3.5. v4.1.0.0
@@ -372,11 +372,11 @@ PlayReady Header v4.1.0.0 was introduced with PlayReady version 2.0 in September
 
 #### 3.5.1. Differences with other versions
 
-PlayReady 2.0 SDKs and later Clients are able to process both the v4.0 and v4.1 PlayReady Header versions. Prior PlayReady SDKs return an “unsupported version” error when provided with v4.1 headers.
+PlayReady 2.0 SDKs and later Clients are able to process both the v4.0 and v4.1 PlayReady Header versions. Prior PlayReady SDKs return an "unsupported version" error when provided with v4.1 headers.
 
 The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0.0.0:
 
-  *  The **WRMHEADER** element’s version attribute is set to the string “4.1.0.0”.
+  *  The **WRMHEADER** element’s version attribute is set to the string "4.1.0.0".
   *  The **DATA** element contains an optional **DECRYPTORSETUP** element.
   *  The **KID** element is located inside the **PROTECTINFO** element and is optional rather than required.
   *  The **KID** element contains the attributes **ALGID** (required), **CHECKSUM** (optional), and **VALUE** (required).
@@ -388,10 +388,10 @@ The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0
 The PlayReady Header v4.1.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.1.0.0">
   <DATA>
       <PROTECTINFO>
-        <KID ALGID="AESCTR" CHECKSUM=“base64-encoded value” VALUE="base64-encoded guid"></KID>
+        <KID ALGID="AESCTR" CHECKSUM="base64-encoded value" VALUE="base64-encoded guid"></KID>
       </PROTECTINFO>
       <LA_URL> URL for license acquisition </LA_URL>
       <LUI_URL>
@@ -425,7 +425,7 @@ The tags are described below.
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. Only up to one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag present in the **DATA** node and its value is set to “ONDEMAND” then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. Only up to one **DECRYPTORSETUP** element may be included in the **DATA** element.|
+| DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. Only up to one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
 Notes for v4.1:
 
@@ -443,7 +443,7 @@ PlayReady Header v4.0.0.0 was introduced with PlayReady version 1.0 in 2008 and 
 PlayReady Header 4.0.0.0:
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
   <DATA>
     <PROTECTINFO>
       <ALGID>AESCTR</ALGID>
@@ -469,7 +469,7 @@ XAMAAAEAAQBSAzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8A
 The PlayReady Header v4.0.0.0 has the following syntax.
 
 ```xml
-<WRMHEADER xmlns="https://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.0.0.0">
 <DATA>
       <PROTECTINFO>
         <ALGID>AESCTR</ALGID>
@@ -546,11 +546,11 @@ This allows a PlayReady Client to further embed a domain-bound license in the Pl
 
 The checksum algorithm in the PlayReady Header is intended to protect against mismatched keys. In the early days of DRM, songs were encrypted with incorrectly labeled keys. This resulted in white noise being played back when the songs were decrypted. And if the songs were played back loud enough, the playback equipment was destroyed. With the checksum, the content key can be verified as the key that was used to encrypt the file. The algorithm works as follows:
 
-For an **ALGID** value set to “AESCBC”, there is no Key Checksum Algorithm defined. The **CHECKSUM** attribute must be omitted.
+For an **ALGID** value set to "AESCBC", there is no Key Checksum Algorithm defined. The **CHECKSUM** attribute must be omitted.
 
-For an **ALGID** value set to “AESCTR”, the 16-byte Key ID is encrypted with a 16-byte AES content key using ECB mode. The first 8 bytes of the buffer is extracted and base64 encoded.
+For an **ALGID** value set to "AESCTR", the 16-byte Key ID is encrypted with a 16-byte AES content key using ECB mode. The first 8 bytes of the buffer is extracted and base64 encoded.
 
-For an **ALGID** value set to “COCKTAIL”, perform the following steps:
+For an **ALGID** value set to "COCKTAIL", perform the following steps:
 
 1.	A 21-byte buffer is created.
 
