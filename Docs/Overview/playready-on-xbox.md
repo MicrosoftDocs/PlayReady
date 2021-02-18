@@ -14,4 +14,4 @@ PlayReady enables developers to create UWP apps capable of providing PlayReady c
 
 ## See also
 
-[Developing Applications using PlayReady on Windows, Xbox](developing-applications.md#developing_applications_windows_xbox)
+[Developing Applications using PlayReady on Windows, Xbox](developing-applications.md#developing-applications-using-playready-on-windows-xbox)
