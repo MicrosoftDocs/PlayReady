@@ -22,7 +22,7 @@ The following high-level terms are used throughout this documentation.
 | AES 128 CBC Content Key | Symmetric Key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bits (or 16 bytes), in CBC mode. Consider the content key as the compound object { Key Value, ALGID }. |
 | AES 128 CTR Content Key | Symmetric key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bits (or 16 bytes), in CTR mode. Consider the content key as the compound object { Key Value, ALGID }. |
 | AMS | Microsoft Azure Media Services. See https://azure.microsoft.com/en-us/services/media-services/. |
-| AMS CP | The Content Protection (also known as DRM) functionality available in Microsoft Azure Media Services. See https://docs.microsoft.com/en-us/azure/media-services/media-services-content-protection-overview. |
+| AMS CP | The Content Protection (also known as DRM) functionality available in Microsoft Azure Media Services. See https://docs.microsoft.com/azure/media-services/media-services-content-protection-overview. |
 | Anti-rollback clock| A process by which PlayReady detects whether a clock on the client has been reset to an earlier time by the user and triggers a rollback event. |
 | Application Secrets | PlayReady stub library provided to Company and secrets, such as symmetric keys and private keys that reside in the application binary and/or in the process space of the application. |
 | Attacker | Person trying to get unauthorized access to content or client secrets. In digital rights management (DRM), any user may be an attacker.|
