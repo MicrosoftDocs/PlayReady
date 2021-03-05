@@ -173,7 +173,7 @@ Examples:
 ## Limitations
 
 * A PlayReady Header must use only one ALGID value for all the KID elements. In other words, all the keys used to encrypt the different tracks and qualities of an asset must be AES CTR or AES CBC. If the ALGID is missing on any KID element, it must be missing from all KID elements.
-* [Prior to PlayReady version 4.4](https://docs.microsoft.com/en-us/playready/overview/what-is-new/what-is-new-4-4#general), generating a license with a CBC key when the incoming Client Certificate is Windows and SL2000 throws an exception. This is because Windows Clients support CBC only on SL3000 units. It may be possible to deliver a license with a CBC key to a SL2000 Client, however, if  this client is PlayReady version 4.0 minimum and declares support for the CBC mode.
+* [Prior to PlayReady version 4.4](https://docs.microsoft.com/playready/overview/what-is-new/what-is-new-4-4#general), generating a license with a CBC key when the incoming Client Certificate is Windows and SL2000 throws an exception. This is because Windows Clients support CBC only on SL3000 units. It may be possible to deliver a license with a CBC key to a SL2000 Client, however, if  this client is PlayReady version 4.0 minimum and declares support for the CBC mode.
 * Generating a license with a CBC key when the incoming Client Certificate is a device that uses a Porting Kit version prior to 4.0 will throw an exception.
 * Generating a license with a CBC key when the incoming license request does not indicate support for AES CBC, will throw an exception.
 
