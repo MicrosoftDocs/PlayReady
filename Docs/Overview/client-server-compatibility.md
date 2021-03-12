@@ -59,8 +59,8 @@ There are, however, some nuances in compatibility as services and devices move i
 
 Most versions of PlayReady on the client can work with the different versions of the PlayReady Server SDK. There are some subtleties as noted below as well as a change with PlayReady clients developed on the 3.0 Porting Kit.
 
-|   | Server SDK 1.x  | Server SDK 2.0 (2011)  | Server SDK 2.1 (2013)  | Server SDK 2.9 (2014)  | Server SDK 3.0 (2015)  |
-|:--|:--|:--|:--|:--|:--|
+|&nbsp;| Server SDK 1.x  | Server SDK 2.0 (2011)  | Server SDK 2.1 (2013)  | Server SDK 2.9 (2014)  | Server SDK 3.0 (2015)  |
+|----|----|----|----|----|----|
 | PK 1.x (2008)      |   | *  | *  | *  | *  |
 | PK 2.x (2011)    |   |   |   |   |   |
 | PK 3.0 (2015)  | **  | ***  | ***  | ***  |   |
