@@ -9,13 +9,13 @@ ms.topic: conceptual
 
 # DASH Content Protection using Microsoft PlayReady
 
-Implementing Content Protection for Live and On-Demand Profiles of Dynamic Adaptive Streaming over HTTP (ISO/IEC 23009-1) using Common Encryption (ISO/IEC 23001-7) and Microsoft PlayReady.<br/>
+Implementing Content Protection for Live and On-Demand Profiles of Dynamic Adaptive Streaming over HTTP (ISO/IEC 23009-1) using Common Encryption (ISO/IEC 23001-7) and Microsoft PlayReady.
 
 **Current Version**
 
-The current version is **version 1.3** published on **February 15, 2018**<br/>
-Please refer to the [Change History](#change-history) for more information.
+The current version is **version 1.3** published on **February 15, 2018**
 
+Please refer to the [Change History](#change-history) for more information.
 
 **Abstract**
 
@@ -27,23 +27,22 @@ The ISO/IEC 23009-1 ISO Base Media File Format On-Demand and Live DASH Profiles 
 
 This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.  You may not remove any notices from this document.
 
-
 **Contents**
 
 | Section | Title |
 | --- | --- |
-| **1** | **[Introduction](#introduction)** |
-| 1.1 | [Scope](#scope) |
-| 1.2 | [Conventions](#conventions) |
-| 1.3 | [Terminology, Abbreviations and Acronyms](#terminology) |
-| 1.4 | [References](#references) |
-| 1.5 | [Change History](#change-history) |
-| **2** | **[PlayReady DASH Content Protection Scheme](#scheme)** |
-| 2.1 | [DASH ContentProtection Descriptor Elements](#descriptor-elements) |
-| 2.2 | [Implementation Recommendations and Requirements](#implementation-recommendations) |
-| **3** | **[Media Presentation Description Example](#example)** |
-| 3.1 | [Correct PRO in Initialization Segment or Media Content](#correct-pro) |
-| 3.2 | [Including a PlayReady Object in the MPD](#mpd) |
+| **1** | **[Introduction](#1-introduction)** |
+| 1.1 | [Scope](#11-scope) |
+| 1.2 | [Conventions](#12-conventions) |
+| 1.3 | [Terminology, Abbreviations and Acronyms](#13-terminology-abbreviations-and-acronyms) |
+| 1.4 | [References](#14-references) |
+| 1.5 | [Change History](#15-change-history) |
+| **2** | **[PlayReady DASH Content Protection Scheme](#2-playready-dash-content-protection-scheme)** |
+| 2.1 | [DASH ContentProtection Descriptor Elements](#21-dash-contentprotection-descriptor-elements) |
+| 2.2 | [Implementation Recommendations and Requirements](#22-implementation-recommendations-and-requirements) |
+| **3** | **[Media Presentation Description Example](#3-media-presentation-description-example)** |
+| 3.1 | [Correct PRO in Initialization Segment or Media Content](#31-correct-pro-in-initialization-segment-or-media-content) |
+| 3.2 | [Including a PlayReady Object in the MPD](#32-including-a-playready-object-pro-in-the-mpd) |
 
 **Tables**
 
@@ -52,9 +51,6 @@ This document does not provide you with any legal rights to any intellectual pro
 | Table 1 | [Track Encryption Box ](#table-1)|
 | Table 2 |[KID representation example](#table-2)|
 
-<a id="introduction"></a>
-<br/>
-<br/>
 ## 1. Introduction
 
 The MPEG’s Dynamic Adaptive Streaming over HTTP standard [[DASH](#references)] specifies formats for the delivery of media content from HTTP servers to HTTP clients. In DASH the presentation of media content is described by a Media Presentation Description (MPD) file.  The MPD provides resource identifiers for Segments along with context for these resources within a Media Presentation.
@@ -63,15 +59,13 @@ In DASH a Media Presentation consists of a time sequence of Periods ([[DASH](#re
 
 A ContentProtection Descriptor element may be associated with an Adaptation Set or a Representation, to indicate the encryption scheme, and one or more ContentProtection Descriptor elements may be added to enable DRM license acquisition ([[DASH](#references)], section 5.8.4.1).
 
-<a id="scope"></a>
 ### 1.1 Scope
 
 How to use Microsoft PlayReady as the Content Protection scheme in an ISO/IEC 23009-1 DASH Media Presentation Description file.
 
-<a id="conventions"></a>
 ### 1.2 Conventions
 
-The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in [[RFC2119].](#RFC2119)  That is:
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in [[RFC2119].](https://www.ietf.org/rfc/rfc2119)  That is:
 
 * “MUST”, “REQUIRED” and “SHALL” mean that the definition is an absolute requirement of the specification.
 
@@ -85,7 +79,6 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 [Back to top](#top)
 
-<a id="terminology"></a>
 ### 1.3 Terminology, Abbreviations and Acronyms
 
 #### 1.3.1 Terminology
@@ -122,7 +115,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 | Stream Access Point (SAP)  | The position in a Representation which enables Media Segment playback using only the Representation data from that position forward. |
 | Subsegment  | In DASH, this is a unit within a Media Segment indexed by a Segment Index.  A movie segment is addressed as a Subsegment in DASH On Demand Profile, but a Segment in DASH Live Profile. |
 | Track Encryption box |In the ISO Base Media File Format, the Track Encryption box (‘tenc’) describes the default encryption parameters for a track [[CENC](#references)], [[ISOBFF](#info-ref)]. |
-| UUID  | A mathematically unique identifier represented as a number or string as specified in [[X.667](#X667)] |
+| UUID  | A mathematically unique identifier represented as a number or string as specified in [[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)] |
 | Video On Demand (VOD)  | System enabling the End-user to select and watch video content on demand. Both the DASH Live Profile and DASH On Demand Profile can be used for VOD presentation. |
 
 #### 1.3.2 Abbreviations and Acronyms
@@ -151,7 +144,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 |:--|:--|
 | [CENC] | *ISO/IEC FDIS 23001-7:2016 “Information technology – MPEG systems technologies – Part 7: Common encryption in ISO base media file format files”*, [https://www.iso.org/standard/68042.html](https://www.iso.org/standard/68042.html) |
 | [DASH] | *ISO/IEC 23009-1:2014, Second Edition, “Information technology — Dynamic adaptive streaming over HTTP (DASH) — Part 1: Media presentation description and segment formats”*, [http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip](http://standards.iso.org/ittf/PubliclyAvailableStandards/c065274_ISO_IEC_23009-1_2014.zip) |
-| [EME] | *“Encrypted Media Extensions”, W3C Recommendation 18 September 2017* [http://www.w3.org/TR/encrypted-media/](http://www.w3.org/TR/encrypted-media/) |
+| [EME] | *“Encrypted Media Extensions”, W3C Recommendation 18 September 2017* [https://www.w3.org/TR/encrypted-media/](https://www.w3.org/TR/encrypted-media/) |
 | [PRH] | *“Microsoft PlayReady Header*, see [PlayReady Header Specification](playready-header-specification.md) |
 | [PRO] | *“Microsoft PlayReady Object*, see [PlayReady Header Specification](playready-header-specification.md) |
 | [RFC2119] | “Key *words for use in RFCs to Indicate Requirement* Levels”, S. Bradner, March 1997, [http://www.ietf.org/rfc/rfc2119](http://www.ietf.org/rfc/rfc2119)   |
@@ -216,7 +209,7 @@ SystemID values for DRM systems are registered at:  [https://dashif.org/identifi
 
 Each AdaptationSet element MAY list multiple DRM Descriptors to indicate that licenses are available for multiple DRM systems.  Each DRM system can specify elements and attributes in their own namespace and make them optional or required in Descriptors using their SystemID.
 
-The second edition of Common Encryption ([[CENC](#references)] section 11) specifies an optional cenc:pssh element that can be used by all DRM ContentProtection Descriptors for improved interoperability.  It also specifies a cenc:default_KID attribute recommended for inclusion in the mp4protection Descriptor to identify the license required in one place for all systems.  The element cenc:pssh contains a complete ‘pssh’ box structure, so is processed identically by the Encrypted Media Extension (EME) API in web browsers [[EME](#EME)].
+The second edition of Common Encryption ([[CENC](#references)] section 11) specifies an optional cenc:pssh element that can be used by all DRM ContentProtection Descriptors for improved interoperability.  It also specifies a cenc:default_KID attribute recommended for inclusion in the mp4protection Descriptor to identify the license required in one place for all systems.  The element cenc:pssh contains a complete ‘pssh’ box structure, so is processed identically by the Encrypted Media Extension (EME) API in web browsers [[EME](https://www.w3.org/TR/encrypted-media/)].
 
 DRM systems can provide license acquisition information in:
 
@@ -307,13 +300,13 @@ Table 1 below lists the fields specified in the ISO Media Track Encryption Box (
 
 <a id="table-1"></a>
 
-**Table 1 – Track Encryption Box Fields**
+#### Table 1 – Track Encryption Box Fields
 
 | **Element** | **Default** | **Description**  |
 |:--|:--|:--|
 | **default_IsEncrypted** | 1 | Flag indicating the encryption status of the samples in the sample group. Allowed values are 0 (not encrypted) and 1 (encrypted). |
 | **default_IV_size** | 8 | The size in bytes of the Initialization Vector (IV) field.<br/>- PlayReady version 1, 2, 3 support 0 and 8.<br/>- PlayReady version 4 and higher support 0, 8 and 16.<br/>If default_IsEncrypted =1, default_IV_size MUST NOT be set to 0. <br/><br/>Since not all PlayReady enabled players support 16 byte Initialization Vectors, it is RECOMMENDED that only an default_IV_size of 8 be used for encrypted content, if the service needs to reach PlayReady version 1/2/3 players. |
-| **default_KID** | *None* | 16-Byte (128-bit) Key Identifier that uniquely identifies the key needed to decrypt the associated samples. The key identifier is treated as UUID according to [[CENC](#references)]<br/> Please note that unlike the KID in PlayReady Header [[PRH](#references)], ‘tenc’ default_KID is stored as a 16 byte array containing a big endian byte ordered, 128-bit integer equivalent to binary (section 6.2) and number (section 6.3) UUID representations specified in [[X.667](#X667)]. |
+| **default_KID** | *None* | 16-Byte (128-bit) Key Identifier that uniquely identifies the key needed to decrypt the associated samples. The key identifier is treated as UUID according to [[CENC](#references)]<br/> Please note that unlike the KID in PlayReady Header [[PRH](#references)], ‘tenc’ default_KID is stored as a 16 byte array containing a big endian byte ordered, 128-bit integer equivalent to binary (section 6.2) and number (section 6.3) UUID representations specified in [[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)]. |
 
 > **Note:** The format of the default_KID in the Track Encryption Box is different than the format of the KID value embedded in PRO in cenc:pssh, mspr:pro, and mspr:kid. See section 2.2.5, [[CENC](#references)], and [[PRO](#references)] for details.
 
@@ -394,9 +387,9 @@ It is NOT RECOMMENDED to include an ELS unless it is needed as part of a DRM Dom
 
 #### 2.2.5 KID Byte Order
 
-The Key identifiers (KIDs) in PlayReady are stored in a byte array formatted as a GUID (DWORD, WORD, WORD, 8-BYTE array) in little endian byte order, which is then base64 encoded for storage as a string in the PRO. Both PlayReady license servers and PlayReady clients in a PlayReady ecosystem expect that the KID in the PRO and PlayReady license is a little-endian byte order representation of [[GUID](#GUID)].
+The Key identifiers (KIDs) in PlayReady are stored in a byte array formatted as a GUID (DWORD, WORD, WORD, 8-BYTE array) in little endian byte order, which is then base64 encoded for storage as a string in the PRO. Both PlayReady license servers and PlayReady clients in a PlayReady ecosystem expect that the KID in the PRO and PlayReady license is a little-endian byte order representation of [[GUID](/windows/win32/api/guiddef/ns-guiddef-guid)].
 
-The equivalent KID can be represented as a UUID string ([[X.667](#X667)] section 6.4) or byte array containing a UUID in big endian byte order binary (section 6.2) or number (section 6.3) as specified in [[X.667](#X667)]. Common Encryption [[CENC](#references)] and DASH use these representations in the cenc:default_KID attribute (6.4 string), Track Encryption Box (‘tenc’), and ‘seig’ Sample Group Description Box (‘sgpd’) (6.2 binary or 6.3 number byte array).
+The equivalent KID can be represented as a UUID string ([[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)] section 6.4) or byte array containing a UUID in big endian byte order binary (section 6.2) or number (section 6.3) as specified in [[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)]. Common Encryption [[CENC](#references)] and DASH use these representations in the cenc:default_KID attribute (6.4 string), Track Encryption Box (‘tenc’), and ‘seig’ Sample Group Description Box (‘sgpd’) (6.2 binary or 6.3 number byte array).
 
 As a result, unless there is a change the client must convert the endianness of the KIDs byte array in order to match it to the PlayReady license.
 
@@ -445,13 +438,14 @@ void Swap(ref byte[] bytes, int pos1, int pos2)
 ```
 
 <a id="table-2"></a>
-**Table 2** – **KID representation example**
+
+#### **Table 2** – **KID representation example**
 
 | **KID Parameter** | **Type** | **Representation** |
 |:--|:--|:--|
-| **KID** | UUID BE Hex Number | f81d4fae7dec11d0a76500a0c91e6bf6 <br/>Section 6.3 of [[X.667](#X667)] |
-| **cenc:default_KID attribute** | UUID Hex String with hyphens　 | “f81d4fae-7dec-11d0-a765-00a0c91e6bf6” <br/>Section 6.4 of [[X.667](#X667)] |
-| **KID in ISOBFF boxes** | UUID BE Byte Array | Hex representation is { 0xf8, 0x1d, 0x4f, 0xae, 0x7d, 0xec, 0x11, 0xd0, 0xa7, 0x65, 0x00, 0xa0, 0xc9, 0x1e, 0x6b, 0xf6 } <br/>Section 6.2 of [[X.667](#X667)] |
+| **KID** | UUID BE Hex Number | f81d4fae7dec11d0a76500a0c91e6bf6 <br/>Section 6.3 of [[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)] |
+| **cenc:default_KID attribute** | UUID Hex String with hyphens　 | “f81d4fae-7dec-11d0-a765-00a0c91e6bf6” <br/>Section 6.4 of [[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)] |
+| **KID in ISOBFF boxes** | UUID BE Byte Array | Hex representation is { 0xf8, 0x1d, 0x4f, 0xae, 0x7d, 0xec, 0x11, 0xd0, 0xa7, 0x65, 0x00, 0xa0, 0xc9, 0x1e, 0x6b, 0xf6 } <br/>Section 6.2 of [[X.667](https://www.itu.int/rec/T-REC-X.667-201210-I/en)] |
 | **KID in PRO** | Base64 String of GUID LE Byte Array | "rk8d+Ox90BGnZQCgyR5r9g==” <br/>(Hex representation of the data before Base64 encoding is { 0xae, 0x4f, 0x1d, 0xf8, 0xec, 0x7d, 0xd0, 0x11, 0xa7, 0x65, 0x00, 0xa0, 0xc9, 0x1e, 0x6b, 0xf6 }) |
 | **mspr:kid** | Base64 String of default_KID  Byte Array in ‘tenc’ box | “+B1Prn3sEdCnZQCgyR5r9g==” <br/>(Hex representation of the data before Base64 encoding is { 0xf8, 0x1d, 0x4f, 0xae, 0x7d, 0xec, 0x11, 0xd0, 0xa7, 0x65, 0x00, 0xa0, 0xc9, 0x1e, 0x6b, 0xf6 }) |
 | **KID in PlayReady license** | GUID LE Byte Array | Hex representation is { 0xae, 0x4f, 0x1d, 0xf8, 0xec, 0x7d, 0xd0, 0x11, 0xa7, 0x65, 0x00, 0xa0, 0xc9, 0x1e, 0x6b, 0xf6 } |
