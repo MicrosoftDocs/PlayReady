@@ -27,7 +27,7 @@ Using the license acquisition protocol, a PlayReady client and server may now ex
 
 ### Watermarking Policy
 
-Functionality to simplify use of the Watermarking Signalling Explicit Digital Video Output Restriction as defined by the PlayReady Compliance Rules.
+Functionality was added to simplify use of the Watermarking Signalling Explicit Digital Video Output Restriction as defined by the PlayReady Compliance Rules.
 
 ## Changes in PlayReady Server SDK Version 4.5
 
