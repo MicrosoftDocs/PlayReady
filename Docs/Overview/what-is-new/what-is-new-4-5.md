@@ -41,6 +41,8 @@ If provided by the client, the supported watermarking technologies are exposed t
 
 This is merely an overview.  Refer to the API documentation [TODO: link?  refernece chm?] for more information.
 
+The LicenseResponse.GetLicenses method now returns an empty array instead of null when no licenses have been added.
+
 The following classes and enums were added.
 
    *  AdvancedLicense class (abstract, inherits from License) - a subset existing properties and methods from MediaLicense were moved into this class, and MediaLicense now inherits from AbstractLicense.  No application changes are required to use MediaLicense.
@@ -62,10 +64,6 @@ The following were added to individual classes.
    *  The LicenseResponse class adds a LicenseServerTimeCertificate property for setting the certificate used to sign the License Server Time returned in the license acquisition response.
    *  The ExplicitOutputRestrictionsConstants class adds constants for Watermark and InternalScreenOnly.  Refer to the PlayReady Compliance Rules for more information on these guids.
 
-The following behavioral change was made.
-
-   *  The LicenseResponse.GetLicenses method now returns an empty array instead of null when no licenses have been added.
-
 ## Changes in PlayReady Device Porting Kit Version 4.5
 
 ### General
@@ -79,48 +77,57 @@ The following behavioral change was made.
 
 This is merely an overview.  Refer to the API documentation [TODO: link?  refernece chm?] and associated code comments in the PlayReady Porting Kit for more information.
 
+DRM_CDMI_SetServercertificate is now allowed to be called with a PlayReady Server Deployment Certificate for privacy-encrypting license acquisition and other client challenges.  Forwards to Drm_AppContext_SetProperty in this scenario.  Existing usage reamins as-is.
+
 The following public functions were added.
 
-   *  Drm_AppContext_SetProperty - Used to set the PlayReady Server Deployment Certificate for privacy-encrypting license acquisition and other client challenges.
-   *  Drm_KeyExchange_Prepare - Used to set up a key exchange context for performing cryptographic operations returned in a KeyExchange license.  Similar to Drm_Reader_Bind.
-   *  Drm_KeyExchange_Perform - Used to encrypt, decrypt, sign, or verify arbitrary data using a key from a KeyExchange license.
-   *  Drm_KeyExchange_Close - Used to free resources associated with a key exchange context returned from Drm_KeyExchange_Prepare.
+```c
+Drm_AppContext_SetProperty
+Drm_KeyExchange_Prepare
+Drm_KeyExchange_Perform
+Drm_KeyExchange_Close
+```
 
 The following structures were added.
 
-   *  DRM_DGP_REE_FEATURE_LIST_4_5 - Superset of DRM_DGP_REE_FEATURE_LIST_4_3, adds LicenseServerTime and KeyExchange.
-   *  DRM_DGP_TEE_API_LIST_4_5 - Superset of DRM_DGP_TEE_API_LIST_4_3, adds all new TEE APIs.
+```c
+DRM_DGP_REE_FEATURE_LIST_4_5
+DRM_DGP_TEE_API_LIST_4_5
+```
 
 The following TEE APIs were added.
 
-   *  DRM_TEE_BASE_GetSystemTime2
-   *  DRM_TEE_LICPREP_PackageKey2
-   *  DRM_TEE_LICENSESERVERTIME_ProcessResponseData
-   *  DRM_TEE_DECRYPT_PrepareToDecrypt2
-   *  DRM_TEE_LICGEN_CompleteLicense2
-   *  DRM_TEE_KEYEXCHANGE_Prepare
-   *  DRM_TEE_KEYEXCHANGE_Perform
+```c
+DRM_TEE_BASE_GetSystemTime2
+DRM_TEE_LICPREP_PackageKey2
+DRM_TEE_LICENSESERVERTIME_ProcessResponseData
+DRM_TEE_DECRYPT_PrepareToDecrypt2
+DRM_TEE_LICGEN_CompleteLicense2
+DRM_TEE_KEYEXCHANGE_Prepare
+DRM_TEE_KEYEXCHANGE_Perform
+```
 
 The following OEM TEE APIs were added.
 
-   *  OEM_TEE_BASE_ECC256_SetKey
-   *  OEM_TEE_CRYPTO_SHA256_HMAC_VerifyMAC
-   *  OEM_TEE_CRYPTO_SHA256_HMAC_CreateMAC
-   *  OEM_TEE_PERSISTENTSTORAGE_Read
-   *  OEM_TEE_PERSISTENTSTORAGE_Write
-   *  OEM_TEE_GetSupportedWatermarkVendors
+```c
+OEM_TEE_BASE_ECC256_SetKey
+OEM_TEE_CRYPTO_SHA256_HMAC_VerifyMAC
+OEM_TEE_CRYPTO_SHA256_HMAC_CreateMAC
+OEM_TEE_PERSISTENTSTORAGE_Read
+OEM_TEE_PERSISTENTSTORAGE_Write
+OEM_TEE_GetSupportedWatermarkVendors
+```
 
 The following OEM TEE APIs were renamed without functional changes.
 
-   *  OEM_TEE_DECRYPT_UnshuffleScalableContentKeys          -> OEM_TEE_BASE_UnshuffleScalableContentKeys
-   *  OEM_TEE_DECRYPT_CalculateContentKeyPrimeWithAES128Key -> OEM_TEE_BASE_CalculateContentKeyPrimeWithAES128Key
-   *  OEM_TEE_DECRYPT_DeriveScalableKeyWithAES128Key        -> OEM_TEE_BASE_DeriveScalableKeyWithAES128Key
-   *  OEM_TEE_DECRYPT_InitUplinkXKey                        -> OEM_TEE_BASE_InitUplinkXKey
-   *  OEM_TEE_DECRYPT_UpdateUplinkXKey                      -> OEM_TEE_BASE_UpdateUplinkXKey
-   *  OEM_TEE_DECRYPT_DecryptContentKeysWithDerivedKeys     -> OEM_TEE_BASE_DecryptContentKeysWithDerivedKeys
-   *  OEM_TEE_DECRYPT_EnforcePolicy                         -> OEM_TEE_POLICY_Enforce
+```c
+OEM_TEE_DECRYPT_UnshuffleScalableContentKeys -> OEM_TEE_BASE_UnshuffleScalableContentKeys
+OEM_TEE_DECRYPT_CalculateContentKeyPrimeWithAES128Key -> OEM_TEE_BASE_CalculateContentKeyPrimeWithAES128Key
+OEM_TEE_DECRYPT_DeriveScalableKeyWithAES128Key -> OEM_TEE_BASE_DeriveScalableKeyWithAES128Key
+OEM_TEE_DECRYPT_InitUplinkXKey -> OEM_TEE_BASE_InitUplinkXKey
+OEM_TEE_DECRYPT_UpdateUplinkXKey -> OEM_TEE_BASE_UpdateUplinkXKey
+OEM_TEE_DECRYPT_DecryptContentKeysWithDerivedKeys -> OEM_TEE_BASE_DecryptContentKeysWithDerivedKeys
+OEM_TEE_DECRYPT_EnforcePolicy -> OEM_TEE_POLICY_Enforce
+```
 
-The following behavioral change was made.
-
-   *  DRM_CDMI_SetServercertificate - Is now allowed to be called with a PlayReady Server Deployment Certificate for privacy-encrypting license acquisition and other client challenges.  Forwards to Drm_AppContext_SetProperty in this scenario.  Existing usage reamins as-is.
 
