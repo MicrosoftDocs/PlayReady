@@ -50,7 +50,7 @@ The following classes and enums were added.
    *  WatermarkVendor class - used to expose the client's supported watermarking technologies to the application.
    *  LicenseServerTimeCertificate class - used to contain the certificate for signing the license server time returned in the license acquisition response.
 
-The following was added to individual classes.
+The following were added to individual classes.
 
    *  The PlayReadyHeader class exposes whether the header indicates support for per-stream keys and whether it explicitly requests a license or not.
    *  The ContentKeyType enum adds the value KeyExchange.
