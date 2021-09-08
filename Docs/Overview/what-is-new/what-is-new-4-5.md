@@ -19,11 +19,11 @@ In previous versions of PlayReady, license acquisition and other client challeng
 
 ### License Server Time
 
-In previous versions of PlayReady, using the Secure Time feature required the client application to talk to a Microsoft-hosted Secure Time server to obtain the time used to set its local clock.  Starting with PlayReady 4.5, a client that is coded to talk only to a supporting server may instead use a time provided by the PlayReady Server SDK during license acquisition.
+In previous versions of PlayReady, using the Secure Time feature usually required the client application to talk to a separate Secure Time server to obtain the time used to set its local clock.  Starting with PlayReady 4.5, a client that is coded to talk only to a supporting server may instead use a time provided by the PlayReady Server SDK during license acquisition.  For more information, see [PlayReady Trusted Clocks](../../Features/trusted-clocks.md).
 
 ### Key Exchange
 
-Using the license acquisition protocol, a PlayReady client and server may now exchange arbitrary keys which can be used to encrypt, decrypt, sign, and verify arbitrary application-provided data where the keys themselves are protected using PlayReady.  When the client is SL3000, the keys themsevles are protected by the Trusted Execution Environment.
+Using the license acquisition protocol, a PlayReady client and server may now exchange arbitrary keys which can be used to encrypt, decrypt, sign, and verify arbitrary application-provided data where the keys themselves are protected using PlayReady.  When the client is SL3000, the keys themsevles are protected by the Trusted Execution Environment.  For more information, see [PlayReady Key Exchange](../../Features/key-exchange.md).
 
 ### Watermarking Policy
 
@@ -75,9 +75,9 @@ The following were added to individual classes.
 
 ### API
 
-This is merely an overview.  Refer to the API documentation [TODO: link?  refernece chm?] and associated code comments in the PlayReady Porting Kit for more information.
+This is merely an overview.  Refer to the API documentation provided in the associated code comments in the PlayReady Porting Kit for more information.
 
-DRM_CDMI_SetServercertificate is now allowed to be called with a PlayReady Server Deployment Certificate for privacy-encrypting license acquisition and other client challenges.  Forwards to Drm_AppContext_SetProperty in this scenario.  Existing usage reamins as-is.
+DRM_CDMI_SetServercertificate is now allowed to be called with a PlayReady Server Deployment Certificate for privacy-encrypting license acquisition and other client challenges.  The function forwards to Drm_AppContext_SetProperty in this scenario.  Existing usage reamins as-is.
 
 The following public functions were added.
 
