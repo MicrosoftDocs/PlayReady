@@ -57,10 +57,10 @@ The following were added to individual classes.
    *  The PlayReadyHeader class exposes whether the header indicates support for per-stream keys and whether it explicitly requests a license or not.
    *  The ContentKeyType enum adds the value KeyExchange.
    *  The Certificate class adds byte array properties exposing the certificate's digest and issuer public key.
-   *  The License class adds a guid property exposing the license's unique id and an IEnumeratble<Right> property to return the rights that were added to the license.
+   *  The License class adds a guid property exposing the license's unique id and an IEnumerable<Right> property to return the rights that were added to the license.
    *  The LicenseChalengeTeeAPIs enum adds values for all new PK 4.5 TEE APIs.
    *  The LicenseChallengeReeFeatures enum adds values for LicenseServerTime and KeyExchange.
-   *  The LicenseChallenge class adds the list of KeyExchangeAlgorithms the client supports, the WatermarkVendors the client supports, tne PK versions of the client's TEE and REE (which may or may not be the same), and whether the client requires the current LicenseServerTime.
+   *  The LicenseChallenge class adds the list of KeyExchangeAlgorithms the client supports, the WatermarkVendors the client supports, the PK versions of the client's TEE and REE (which may or may not be the same), and whether the client requires the current LicenseServerTime.
    *  The LicenseResponse class adds a LicenseServerTimeCertificate property for setting the certificate used to sign the License Server Time returned in the license acquisition response.
    *  The ExplicitOutputRestrictionsConstants class adds constants for Watermark and InternalScreenOnly.  Refer to the PlayReady Compliance Rules for more information on these guids.
 
@@ -69,8 +69,8 @@ The following were added to individual classes.
 ### General
 
    *  The entire PlayReady Device Porting Kit has been updated to Microsoft Source-code Annotation Language (SAL) 2.0.
-   *  Some unsupported codepaths only used in Microsoft-internal implementations were removed to eliminate confusion and reduce compile times and binary sizes.  Further work in this area is expected in future releases.
-   *  Where supported by the underlying compiler and machine architecture, native 128-bit integer types can now be used to accelerate the default implementation ECC256.
+   *  Some unsupported codepaths only used in Microsoft-internal implementations were removed to eliminate confusion and reduce compile times and binary sizes.  Further improvements in this area is expected to be included in future releases.
+   *  Where supported by the underlying compiler and machine architecture, native 128-bit integer types can now be used to accelerate the default implementation of ECC256.
    *  A default implementation of the SHA256 HMAC algorithm was added.
 
 ### API
