@@ -48,14 +48,14 @@ A server enables this functionality as follows.
    *  Construct an instance of the LicenseServerTimeCertificate class with the License Server Time certificate provided by Microsoft and its corresponding keypair.
    *  Set the LicenseResponse class's LicenseServerTimeCertificate property to that instance.  Note: Setting this property has no effect if the client does not support the feature, so there is no need to bifurcate your application code based on client support.
    *  (Optional) If the LicenseAcquisitionChallenge class's LicenseServerTimeRequested read-only property returns true, the license response may optionally include no licenses.
-   *  (Optional) If the PlayReadyHeader class's LicenseRequested read-only property returns false, the client has indicated that no licenses are being requested and server application logic may choose to act on this information.  (This means that the PlayReady Header v4.3.0.0 sent from the client has the additional optional PROTECTINFO attribute LICENSEREQUESTED set to false.)
+   *  (Optional) If the PlayReadyHeader class's LicenseRequested read-only property returns false, the client has indicated that no licenses are being requested and server application logic may choose to act on this information.  (This means that the PlayReady Header v4.3.0.0 sent from the client has the additional optional attribute LICENSEREQUESTED on the PROTECTINFO node set to false.)
 
 A client enables this functionality as follows.
 
    *  Include (in both the TEE and REE, if separate) the Secure Time feature at compile/link time and implement the associated OEM_TEE methods as documented in code comments in the PlayReady Porting Kit.
    *  When any PlayReady API returns DRM_E_SECURETIME_CLOCK_NOT_SET, perform License Acquisition to set the secure clock.
    *  When any PlayReady API returns DRM_E_LICENSESERVERTIME_MUST_REACQUIRE_LICENSE, perform License Acquisition to reacquire a persistent license which has been invalidated.  This will only occur if persistent licenses with time-based restrictions were acquired before the feature was enabled (e.g. the client was upgraded from a previous version of PlayReady to PlayReady 4.5).
-   *  (Optional) When performing License Acquisition purely for the purpose of setting the secure clock, the application may choose to use a PlayReady Header v4.3.0.0 with the additional optional PROTECTINFO attribute LICENSEREQUESTED set to false to indicate that no license is needed.  For more information, refer to the [PlayReady Header Specification](../../Specifications/playready-header-specification.md).
+   *  (Optional) When performing License Acquisition purely for the purpose of setting the secure clock, the application may choose to use a PlayReady Header v4.3.0.0 with the additional optional attribute LICENSEREQUESTED on the PROTECTINFO node set to false to indicate that no license is needed.  For more information, refer to the [PlayReady Header Specification](../../Specifications/playready-header-specification.md).
 
 ## PlayReady Anti-rollback Clock
 A *PlayReady Anti-rollback Clock* is "a real-time clock that is periodically verified by the PlayReady Final Product to have advanced", as defined in the [Defined Terms document for the Compliance and Robustness Rules for PlayReady Products](https://www.microsoft.com/playready/licensing/compliance/)
