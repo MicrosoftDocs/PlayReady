@@ -17,6 +17,7 @@ This specification applies to any end product created with the PlayReady Server 
 
 | Version | Change |
 | --- | --- |
+| September 8, 2021 | Add optional LICENSEREQUESTED attribute to PROTECTINFO node.
 | November 1, 2017 | Add the Syntax Requirements section. Fix multiples examples with incorrect attribute order (attributes must be in alphabetical order)<p/>|
 | July 12, 2017 | Add PlayReady Header 4.3.0.0 section, supported starting with PlayReady version 4.<p/>Add syntax requirement that all XML nodes must be explicitly closed by a closing tag |
 | April 10, 2015 | Add PlayReady Header 4.2.0.0 section, supported starting with PlayReady version 3 |
@@ -209,7 +210,7 @@ The PlayReady Header v4.3.0.0 has the following syntax:
 ```xml
 <WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
   <DATA>
-      <PROTECTINFO>
+      <PROTECTINFO LICENSEREQUESTED="true">
         <KIDS>
           <KID ALGID="value" CHECKSUM="base64-encoded value" VALUE="base64-encoded guid"></KID>
           <KID ALGID="value" CHECKSUM="base64-encoded value" VALUE="base64-encoded guid"></KID>
@@ -242,7 +243,8 @@ The tags are described below.
 | --- | --- | --- |
 | WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.3.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the Client code was written, then the Client code must fail, because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, than the Client code can safely skip any tags or attributes that it does not understand.|
 | DATA| No| Container element for header data, including third-party tags. No more than one **DATA** element may be included in the **WRMHEADER** element.|
-| PROTECTINFO| No| Specifies zero or one **KIDS** element. No more than one **PROTECTINFO** element may be included in the **DATA** element.|
+| PROTECTINFO| No| Specifies zero or one **KIDS** element. No more than one **PROTECTINFO** element may be included in the **DATA** element. Optionally includes the LICENSEREQUESTED attribute.|
+| LICENSEREQUESTED| No| Specifies whether license acquisition is requesting at least one license or not. Must be set to "true" or "false" if present and is assumed to be set to "true" if not present. This attribute is ignored by PlayReady versions before 4.5. The PlayReady Server SDK application is free to ignore this attribute; it is informational only.|
 | KIDS| No| Specifies one or more **KID** elements that may be used for creating decryptor objects for the associated content. Either one or zero **KIDS** elements may exist under the **PROTECTINFO** node.|
 | KID| No| Contains all key data for a given license. If the **KIDS** node is present, one or more **KID** element must exist under the **KIDS** node. The **KID** element contains the following attributes.<br/><br/>**ALGID**: Optional. Specifies the encryption algorithm. May be set to either: "AESCTR", "AESCBC", or "COCKTAIL".<br/><br/>**CHECKSUM**: Optional. Only for AESCTR keys. Contains a checksum calculated by using the KID VALUE attribute and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.<br/><br/>If this node exists in the WRMHeader XML then its data value must be empty.<br/><br/>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
 | LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
