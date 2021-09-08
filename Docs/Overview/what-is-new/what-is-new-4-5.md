@@ -39,7 +39,7 @@ If provided by the client, the supported watermarking technologies are exposed t
 
 ### API
 
-This is merely an overview.  Refer to the API documentation [TODO: link?  refernece chm?] for more information.
+This is merely an overview.  Refer to the API documentation [TODO: link] for more information.
 
 The LicenseResponse.GetLicenses method now returns an empty array instead of null when no licenses have been added.
 
