@@ -26,6 +26,7 @@ This section covers PlayReady features in the PlayReady technology.
 
 [PlayReady Trusted Clocks](trusted-clocks.md) 
 
+[Key Exchange](key-exchange.md) 
 
 
 
