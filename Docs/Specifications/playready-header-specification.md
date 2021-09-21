@@ -3,14 +3,14 @@ title: PlayReady Header Specification
 description: This specification applies to any end product created with any of the PlayReady technologies.
 ms.assetid: "5DC27BBD-0ADA-48CD-B1CB-5D46A7059DB4"
 keywords: PlayReady header specification
-ms.date: 02/01/2018
+ms.date: 09/21/2021
 ms.topic: conceptual
 ---
-
 
 # PlayReady Header Specification
 
 ## 1. Introduction
+
 This specification applies to any end product created with the PlayReady Server SDK, PlayReady Device Porting Kit, Windows, Xbox, Windows Phone, and Silverlight.
 
 ### 1.1. Change History
@@ -66,45 +66,14 @@ The following figure shows the HEX view of this MP4 file:
 
 The PlayReady Header (PRH) is used by a Client to locate or acquire a license for the piece of content it is stored in. It is encoded using UTF-16.
 
-### 3.1. Version support matrix
+### 3.1 Version support matrix
 
-<table>
-    <tr>
-        <th></th>
-        <th>PlayReady Header v4.3.0.0</th>
-        <th>PlayReady Header v4.2.0.0</th>
-        <th>PlayReady Header v4.1.0.0</th>
-        <th>PlayReady Header v4.0.0.0</th>
-    </tr>
-    <tr>
-        <td>PlayReady 4.0 SDK based Clients<br/> (see note 4)</td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-    </tr>
-    <tr>
-        <td>PlayReady 3.0 SDK based Clients<br/> (see note 3)</td>
-        <td></td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-    </tr>
-    <tr>
-        <td>PlayReady 2.x SDK based Clients<br/> (see note 2)</td>
-        <td></td>
-        <td></td>
-        <td align="center">✔</td>
-        <td align="center">✔</td>
-    </tr>
-    <tr>
-        <td>PlayReady 1.x SDK based Clients<br/> (see note 1)</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td align="center">✔</td>
-    </tr>
-</table>
+||PlayReady Header v4.3.0.0|PlayReady Header v4.2.0.0|PlayReady Header v4.1.0.0|PlayReady Header v4.0.0.0|
+|--- |--- |--- |--- |--- |
+|PlayReady 4.0 SDK based Clients</br> (see note 4)|✔|✔|✔|✔|
+|PlayReady 3.0 SDK based Clients</br> (see note 3)||✔|✔|✔|
+|PlayReady 2.x SDK based Clients</br> (see note 2)|||✔|✔|
+|PlayReady 1.x SDK based Clients</br> (see note 1)||||✔|
 
 Notes:
 
@@ -123,8 +92,7 @@ The XML must be canonicalized.
 
 |Supported|Not Supported|
 |----|----|
-|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`| |
-| |`<KID value="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`<br/>`<kid VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </kid>`|
+|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>` | `<KID value="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`</br>`<kid VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </kid>`|
 
 #### 3.2.3. Closing tags must be explicit
 
@@ -132,8 +100,7 @@ All XML nodes must be explicitly closed by a closing tag including those in node
 
 |Supported|Not Supported|
 |----|----|
-|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`<br/>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>`|
-| |`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> <CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </CUSTOMATTRIBUTES>`|
+|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`</br>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>` | `<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> <CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </CUSTOMATTRIBUTES>`|
 
 #### 3.2.4. Namespace attributes
 
@@ -141,7 +108,7 @@ All namespace attributes must be before non-namespaces attributes.
 
 |Supported|Not Supported|
 |----|----|
-|`<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">`|`<WRMHEADER version="4.3.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader>`|
+|`<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">` | `<WRMHEADER version="4.3.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader>`|
 
 #### 3.2.5. Alphabetical order
 
@@ -149,7 +116,7 @@ All attributes must be in alphabetical order including those in nodes inside the
 
 |Supported|Not Supported|
 |----|----|
-|`<KID ALGID="AESCBC" VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID><br/><CUSTOMATTRIBUTES> <MyNode BarAttribute="Bar" FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>`|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg==" ALGID="AESCBC"> </KID>`<br/>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo" BarAttribute="Bar"> </MyNode> </CUSTOMATTRIBUTES>|
+|`<KID ALGID="AESCBC" VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID></br><CUSTOMATTRIBUTES> <MyNode BarAttribute="Bar" FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>` | `<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg==" ALGID="AESCBC"> </KID>`</br>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo" BarAttribute="Bar"> </MyNode> </CUSTOMATTRIBUTES>|
 
 ### 3.3. v4.3.0.0
 
@@ -161,7 +128,7 @@ Starting with version 4.0, PlayReady SDKs and Clients are able to process PlayRe
 
 The PlayReady Header format v.4.3.0.0 has the following changes compared to v4.2.0.0:
 
-* The **WRMHEADER** element’s version attribute is set to the string "4.3.0.0".
+* The **WRMHEADER** element's version attribute is set to the string "4.3.0.0".
 * The **ALGID** attribute located inside the **KID** element may be missing in a license acquisition request. Microsoft recommends that the **ALGID** attribute has a valid value in the header included in the content.
 * When the **ALGID** attribute is present in any **KID** element, and there is more than one **KID** element in the **KIDS** element, all **KID** elements must include the **ALGID** attribute and the attribute values must be the same.
 * The **ALGID** attribute located inside the KID element can now have the value "AESCBC", in addition to "AESCTR", provided that:
@@ -246,11 +213,11 @@ The tags are described below.
 | PROTECTINFO| No| Specifies zero or one **KIDS** element. No more than one **PROTECTINFO** element may be included in the **DATA** element. Optionally includes the LICENSEREQUESTED attribute.|
 | LICENSEREQUESTED| No| Specifies whether license acquisition is requesting at least one license or not. Must be set to "true" or "false" if present and is assumed to be set to "true" if not present. This attribute is ignored by PlayReady versions before 4.5. The PlayReady Server SDK application is free to ignore this attribute; it is informational only.|
 | KIDS| No| Specifies one or more **KID** elements that may be used for creating decryptor objects for the associated content. Either one or zero **KIDS** elements may exist under the **PROTECTINFO** node.|
-| KID| No| Contains all key data for a given license. If the **KIDS** node is present, one or more **KID** element must exist under the **KIDS** node. The **KID** element contains the following attributes.<br/><br/>**ALGID**: Optional. Specifies the encryption algorithm. May be set to either: "AESCTR", "AESCBC", or "COCKTAIL".<br/><br/>**CHECKSUM**: Optional. Only for AESCTR keys. Contains a checksum calculated by using the KID VALUE attribute and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.<br/><br/>If this node exists in the WRMHeader XML then its data value must be empty.<br/><br/>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
-| LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DS_ID| No| Service ID for the domain service. Only up to one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| CUSTOMATTRIBUTES| No| The content author can add custom XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| KID| No| Contains all key data for a given license. If the **KIDS** node is present, one or more **KID** element must exist under the **KIDS** node. The **KID** element contains the following attributes.</br></br>**ALGID**: Optional. Specifies the encryption algorithm. May be set to either: "AESCTR", "AESCBC", or "COCKTAIL".</br></br>**CHECKSUM**: Optional. Only for AESCTR keys. Contains a checksum calculated by using the KID VALUE attribute and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.</br></br>If this node exists in the WRMHeader XML then its data value must be empty.</br></br>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
+| LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| DS_ID| No| Service ID for the domain service. Only up to one **DS_ID** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| CUSTOMATTRIBUTES| No| The content author can add custom XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.
 
 ### 3.4. v4.2.0.0
@@ -263,7 +230,7 @@ PlayReady 3.0 SDKs and later Clients are able to process the v4.0, v4.1, and v4.
 
 The PlayReady Header format v.4.2.0.0 has the following changes compared to v4.1.0.0:
 
-* The **WRMHEADER** element’s version attribute is set to the string "4.2.0.0".
+* The **WRMHEADER** element's version attribute is set to the string "4.2.0.0".
 * The **KID** element located inside the **PROTECTINFO** element has been renamed to **KIDS** and is still optional.
 * Multiple **KID** elements are located inside the **KIDS** element.
 
@@ -328,11 +295,11 @@ The tags are described below.
 | DATA| No| Container element for header data, including third-party tags. Only up to one **DATA** element may be included in the **WRMHEADER** element.|
 | PROTECTINFO| No| Specifies zero or one **KIDS** element. No more than one **PROTECTINFO** element may be included in the **DATA** element.|
 | KIDS| No| Specifies one or more **KID** elements that may be used for creating decryptor objects for the associated content. Either one or zero **KIDS** elements may exist under the **PROTECTINFO** node.|
-| KID| No| Contains all key data for a given license. If the **KIDS** node is present, one or more **KID** elements must exist under the **KIDS** node. The **KID** element contains the following attributes.<br/><br/>**ALGID**: Required. Specifies the encryption algorithm. Must be set to either: AESCTR, or COCKTAIL<br/><br/>**CHECKSUM**: Optional. Contains a checksum calculated using the KID VALUE and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.<br/><br>If this node exists in the WRMHeader XML then its data value must be empty.<br/><br/>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
-| LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| KID| No| Contains all key data for a given license. If the **KIDS** node is present, one or more **KID** elements must exist under the **KIDS** node. The **KID** element contains the following attributes.</br></br>**ALGID**: Required. Specifies the encryption algorithm. Must be set to either: AESCTR, or COCKTAIL</br></br>**CHECKSUM**: Optional. Contains a checksum calculated using the KID VALUE and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.</br><br>If this node exists in the WRMHeader XML then its data value must be empty.</br></br>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
+| LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. No more than one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag is present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. No more than one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
 ### 3.5. v4.1.0.0
@@ -345,7 +312,7 @@ PlayReady 2.0 SDKs and later Clients are able to process both the v4.0 and v4.1 
 
 The PlayReady Header format v.4.1.0.0 has the following changes compared to v4.0.0.0:
 
-* The **WRMHEADER** element’s version attribute is set to the string "4.1.0.0".
+* The **WRMHEADER** element's version attribute is set to the string "4.1.0.0".
 * The **DATA** element contains an optional **DECRYPTORSETUP** element.
 * The **KID** element is located inside the **PROTECTINFO** element and is optional rather than required.
 * The **KID** element contains the attributes **ALGID** (required), **CHECKSUM** (optional), and **VALUE** (required).
@@ -389,11 +356,11 @@ The tags are described below.
 | WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and must contain one version attribute. The version for the header is "4.1.0.0". Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. If the version is greater than that for which the Client code was written, then the Client code must fail, because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, than the Client code can safely skip any tags or attributes that it does not understand.|
 | DATA| No| Container element for header data, including third-party tags. No more than one **DATA** element may be included in the **WRMHEADER** element.|
 | PROTECTINFO| No| Specifies zero or one **KID** elements that may be used for creating decryptor objects for the associated content. No more than one **PROTECTINFO** element may be included in the **DATA** element.|
-| KID| No| Contains all key data for a given license. Either one or zero **KID** elements may exist under the **PROTECTINFO** node. The **KID** element contains the following attributes.<br/><br/>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.<br/><br/>**ALGID**: Required. Specifies the encryption algorithm. Must be set to either: "AESCTR", or "COCKTAIL"<br/><br/>**CHECKSUM**: Optional. Contains a checksum calculated using the KID VALUE and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.<br/><br/>If this node exists in the WRMHeader XML then its data value must be empty.|
-| LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
-| CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. Only up to one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.<br/><br/>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| KID| No| Contains all key data for a given license. Either one or zero **KID** elements may exist under the **PROTECTINFO** node. The **KID** element contains the following attributes.</br></br>**VALUE**: Required. Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.</br></br>**ALGID**: Required. Specifies the encryption algorithm. Must be set to either: "AESCTR", or "COCKTAIL"</br></br>**CHECKSUM**: Optional. Contains a checksum calculated using the KID VALUE and content key. Refer to the [Key Checksum Algorithm](#5-key-checksum-algorithm) section of this document for details.</br></br>If this node exists in the WRMHeader XML then its data value must be empty.|
+| LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed. No more than one **LA_URL** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed. No more than one **LUI_URL** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| DS_ID| No| Service ID for the domain service. No more than one **DS_ID** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
+| CUSTOMATTRIBUTES| No| The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element. Only up to one **CUSTOMATTRIBUTES** element may be included in the **DATA** element.</br></br>If this node exists in the WRMHeader XML then its data value must not be empty.|
 | DECRYPTORSETUP| No| This tag may only contain the value "ONDEMAND". When this tag present in the **DATA** node and its value is set to "ONDEMAND" then it indicates to an application that it should not expect the full license chain for the content to be available for acquisition, or already present on the Client machine, prior to setting up the media graph. If this tag is not set then it indicates that an application can enforce the license to be acquired, or already present on the Client machine, prior to setting up the media graph. Only up to one **DECRYPTORSETUP** element may be included in the **DATA** element.|
 
 Notes for v4.1:
@@ -470,13 +437,13 @@ The following table describes the different tags.
 
 | Tag name| Required| Description|
 | --- | --- | --- |
-| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and one version attribute. The version for the header is "4.0.0.0".<br/><br/>Semantics for packager:<br/>Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. The version of the PlayReady Header must be set to the highest of the versions of the mandatory tags and attributes present in the header.<br/><br/>Semantics for Client:<br/>If the version is greater than that for which the Client code was written, then the Client code must fail because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, then the Client code can safely skip any tags or attributes it does not understand.|
+| WRMHEADER| Yes| Outermost element of the header object. It can contain one **DATA** element and one version attribute. The version for the header is "4.0.0.0".</br></br>Semantics for packager:</br>Every time Microsoft defines new mandatory tags or attributes, a new version number is associated with those tags or attributes. The version of the PlayReady Header must be set to the highest of the versions of the mandatory tags and attributes present in the header.</br></br>Semantics for Client:</br>If the version is greater than that for which the Client code was written, then the Client code must fail because it implies that the header contains mandatory tags that the Client does not understand. If the version is less than or equal to that for which the Client code was written, then the Client code can safely skip any tags or attributes it does not understand.|
 | DATA| Yes| Container element for header data, including third-party tags.|
 | PROTECTINFO| Yes| Specifies the type of encryption using the **KEYLEN** and **ALGID** child elements.|
 | KEYLEN| Yes| Specifies the size of the content key. Must be set to 16 if **ALGID** is set to "AESCTR" and 7 if **ALGID** is set to "COCKTAIL".|
-| ALGID| Yes| Specifies the encryption algorithm. Must be set to the following value:<br/><br/>AESCTR: Corresponds to the AES algorithm in counter mode.<br/><br/>COCKTAIL: Corresponds to the Cocktail algorithm.|
+| ALGID| Yes| Specifies the encryption algorithm. Must be set to the following value:</br></br>AESCTR: Corresponds to the AES algorithm in counter mode.</br></br>COCKTAIL: Corresponds to the Cocktail algorithm.|
 | KID| Yes| Contains a base64-encoded key ID GUID value. Note that this GUID (DWORD, WORD, WORD, 8-BYTE array) value must be little endian byte order.|
-| CHECKSUM| No| Contains checksum calculated by using the KID VALUE and content key. See the [Key Checksum Algorithm](#5-key-checksum-algorithm) section for details.<br/><br/>Previous versions of PlayReady treated this field as required, so it should be included in any header that is going to be consumed by a previous version of PlayReady.|
+| CHECKSUM| No| Contains checksum calculated by using the KID VALUE and content key. See the [Key Checksum Algorithm](#5-key-checksum-algorithm) section for details.</br></br>Previous versions of PlayReady treated this field as required, so it should be included in any header that is going to be consumed by a previous version of PlayReady.|
 | LA_URL| No| Contains the URL for the license acquisition Web service. Only absolute URLs are allowed.|
 | LUI_URL| No| Contains the URL for a non-silent license acquisition Web page. Only absolute URLs are allowed.|
 | DS_ID| No| Service ID for the domain service.|
@@ -534,6 +501,6 @@ For an **ALGID** value set to "COCKTAIL", perform the following steps:
 
 A service provider can add proprietary XML inside the **CUSTOMATTRIBUTES** element of the PlayReady Header. Any tags used inside the **CUSTOMATTRIBUTES** element are guaranteed to not clash with future tags defined by Microsoft.
 
-Microsoft code does not act on any XML inside this element. The service provider’s backend or their Client side code are the only ones who typically interpret the value of this element. For example, let’s say a white label service represents front-end services AAA, BBB, CCC. Such a service can encrypt its content library only once (since that is an expensive operation), but when it serves out content to an end-user, it can set the **CUSTOMATTRIBUTES** to the name of the specific front-end service that the end-user subscribes to. When the end user requests a license for that content, this enables the white label service to determine which front-end service the end-user subscribes to, so that it can issue a different license.
+Microsoft code does not act on any XML inside this element. The service provider's backend or their Client side code are the only ones who typically interpret the value of this element. For example, let's say a white label service represents front-end services AAA, BBB, CCC. Such a service can encrypt its content library only once (since that is an expensive operation), but when it serves out content to an end-user, it can set the **CUSTOMATTRIBUTES** to the name of the specific front-end service that the end-user subscribes to. When the end user requests a license for that content, this enables the white label service to determine which front-end service the end-user subscribes to, so that it can issue a different license.
 
 It is recommended that the size of this field should not exceed 1 kilobyte (KB).

@@ -21,8 +21,8 @@ The following high-level terms are used throughout this documentation.
 | AES 128 Content Key | Symmetric key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bits (or 16 bytes), in either mode. |
 | AES 128 CBC Content Key | Symmetric Key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bits (or 16 bytes), in CBC mode. Consider the content key as the compound object { Key Value, ALGID }. |
 | AES 128 CTR Content Key | Symmetric key used to encrypt and decrypt content using the AES algorithm with a key length of 128 bits (or 16 bytes), in CTR mode. Consider the content key as the compound object { Key Value, ALGID }. |
-| AMS | Microsoft Azure Media Services. See https://azure.microsoft.com/en-us/services/media-services/. |
-| AMS CP | The Content Protection (also known as DRM) functionality available in Microsoft Azure Media Services. See https://docs.microsoft.com/azure/media-services/media-services-content-protection-overview. |
+| AMS | Microsoft Azure Media Services. See https://azure.microsoft.com/services/media-services/. |
+| AMS CP | The Content Protection (also known as DRM) functionality available in Microsoft Azure Media Services. For more information, see [Content protection overview](/azure/media-services/media-services-content-protection-overview). |
 | Anti-rollback clock| A process by which PlayReady detects whether a clock on the client has been reset to an earlier time by the user and triggers a rollback event. |
 | Application Secrets | PlayReady stub library provided to Company and secrets, such as symmetric keys and private keys that reside in the application binary and/or in the process space of the application. |
 | Attacker | Person trying to get unauthorized access to content or client secrets. In digital rights management (DRM), any user may be an attacker.|
@@ -36,7 +36,7 @@ The following high-level terms are used throughout this documentation.
 | <a id="cenc"></a>'cenc' | One of the encryption modes of the Common Encryption standard. Uses the AES CTR mode with full sample encryption. See also [Common Encryption (CENC)](#commencrypt). |
 | Certificate | A digitally-signed binary document used to grant and revoke privileges to devices and computers to perform specific operations.|
 | Certificate revocation list (CRL)| A list that maintains the information necessary to disable a device from being able to acquire licenses and play protected content.|
-| Certificate Security Level (CSL) | The security value specified in the leafmost certificate in the certificate chain associated with a PlayReady Final Product. A PlayReady Final Product may consume only Content that has an associated License Security Level no greater than the PlayReady Final Product’s Certificate Security Level. |
+| Certificate Security Level (CSL) | The security value specified in the leafmost certificate in the certificate chain associated with a PlayReady Final Product. A PlayReady Final Product may consume only Content that has an associated License Security Level no greater than the PlayReady Final Product's Certificate Security Level. |
 | Challenge| A request from a client. A challenge contains information about the client, a list of requested rights, and other information about the content, including the content header and key identifier. |
 | Clear content| A media file that is not encrypted.|
 | Client | Content receiver. May be a device or an application.|
@@ -107,7 +107,7 @@ The following high-level terms are used throughout this documentation.
 | Metering identifier (MID) | The value that identifies the specific license for which content is being metered.|
 | Metering response | A confirmation from a metering aggregation service that metering data was successfully reported by a client.|
 | Metering Server | A computer that monitors the number of times an action has been performed on specific content.|
-| Microsoft Implementation | The implementation of PlayReady Functionality provided to a Company as source code, binaries, technical documentation, tools, and/or sample files under the Company’s PlayReady Agreement. |
+| Microsoft Implementation | The implementation of PlayReady Functionality provided to a Company as source code, binaries, technical documentation, tools, and/or sample files under the Company's PlayReady Agreement. |
 | <a id="mpegdash"></a>MPEG DASH | Dynamic Adaptive Streaming over HTTP. An adaptive streaming protocol which is an MPEG standard. |
 | MSI installer| A Windows installer file.|
 | NIST algorithms | Algorithms standardized by the National Institute of Standards and Technology of the United States of America. |

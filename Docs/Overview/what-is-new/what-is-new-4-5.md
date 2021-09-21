@@ -31,13 +31,13 @@ Functionality was added to simplify use of the Watermarking Signalling Explicit 
 
 ## Changes in PlayReady Server SDK Version 4.5
 
-### General
+### General Server changes
 
 Key Exchange licenses can be used to provide arbitrary keys to a client during license acquisition.
 
 If provided by the client, the supported watermarking technologies are exposed to the PlayReady Server SDK application.  This simplifies use of the Watermarking Signalling Explicit Digital Video Output Restriction as defined by the PlayReady Compliance Rules.
 
-### API
+### Server API changes
 
 This is merely an overview.  Refer to the API documentation [TODO: link] for more information.
 
@@ -45,35 +45,35 @@ The LicenseResponse.GetLicenses method now returns an empty array instead of nul
 
 The following classes and enums were added.
 
-   *  AdvancedLicense class (abstract, inherits from License) - a subset existing properties and methods from MediaLicense were moved into this class, and MediaLicense now inherits from AbstractLicense.  No application changes are required to use MediaLicense.
-   *  KeyExchangeLicense class (inherits from AdvancedLicense) - used to create licenses that provide arbitrary keys to a client during license acquisition.
-   *  KeyExchangeRight class (inherits from Right) - used to specify the key and its allowed usage to a KeyExchange license.
-   *  KeyExchangeAlgorithm enum - used to specify the allowed usage for a key in a KeyExchange license.
-   *  WatermarkVendor class - used to expose the client's supported watermarking technologies to the application.
-   *  LicenseServerTimeCertificate class - used to contain the certificate for signing the license server time returned in the license acquisition response.
+* AdvancedLicense class (abstract, inherits from License) - a subset existing properties and methods from MediaLicense were moved into this class, and MediaLicense now inherits from AbstractLicense.  No application changes are required to use MediaLicense.
+* KeyExchangeLicense class (inherits from AdvancedLicense) - used to create licenses that provide arbitrary keys to a client during license acquisition.
+* KeyExchangeRight class (inherits from Right) - used to specify the key and its allowed usage to a KeyExchange license.
+* KeyExchangeAlgorithm enum - used to specify the allowed usage for a key in a KeyExchange license.
+* WatermarkVendor class - used to expose the client's supported watermarking technologies to the application.
+* LicenseServerTimeCertificate class - used to contain the certificate for signing the license server time returned in the license acquisition response.
 
 The following were added to individual classes.
 
-   *  The PlayReadyHeader class exposes whether the header indicates support for per-stream keys and whether it explicitly requests a license or not.
-   *  The ContentKeyType enum adds the value KeyExchange.
-   *  The Certificate class adds byte array properties exposing the certificate's digest and issuer public key.
-   *  The License class adds a guid property exposing the license's unique id and an IEnumerable<Right> property to return the rights that were added to the license.
-   *  The LicenseChalengeTeeAPIs enum adds values for all new PK 4.5 TEE APIs.
-   *  The LicenseChallengeReeFeatures enum adds values for LicenseServerTime and KeyExchange.
-   *  The LicenseChallenge class adds the list of KeyExchangeAlgorithms the client supports, the WatermarkVendors the client supports, the PK versions of the client's TEE and REE (which may or may not be the same), and whether the client requires the current LicenseServerTime.
-   *  The LicenseResponse class adds a LicenseServerTimeCertificate property for setting the certificate used to sign the License Server Time returned in the license acquisition response.
-   *  The ExplicitOutputRestrictionsConstants class adds constants for Watermark and InternalScreenOnly.  Refer to the PlayReady Compliance Rules for more information on these guids.
+* The PlayReadyHeader class exposes whether the header indicates support for per-stream keys and whether it explicitly requests a license or not.
+* The ContentKeyType enum adds the value KeyExchange.
+* The Certificate class adds byte array properties exposing the certificate's digest and issuer public key.
+* The License class adds a guid property exposing the license's unique id and an IEnumerable\<Right\> property to return the rights that were added to the license.
+* The LicenseChallengeTeeAPIs enum adds values for all new PK 4.5 TEE APIs.
+* The LicenseChallengeReeFeatures enum adds values for LicenseServerTime and KeyExchange.
+* The LicenseChallenge class adds the list of KeyExchangeAlgorithms the client supports, the WatermarkVendors the client supports, the PK versions of the client's TEE and REE (which may or may not be the same), and whether the client requires the current LicenseServerTime.
+* The LicenseResponse class adds a LicenseServerTimeCertificate property for setting the certificate used to sign the License Server Time returned in the license acquisition response.
+* The ExplicitOutputRestrictionsConstants class adds constants for Watermark and InternalScreenOnly.  Refer to the PlayReady Compliance Rules for more information on these guids.
 
 ## Changes in PlayReady Device Porting Kit Version 4.5
 
-### General
+### General Device Porting Kit changes
 
-   *  The entire PlayReady Device Porting Kit has been updated to Microsoft Source-code Annotation Language (SAL) 2.0.
-   *  Some unsupported codepaths only used in Microsoft-internal implementations were removed to eliminate confusion and reduce compile times and binary sizes.  Further improvements in this area is expected to be included in future releases.
-   *  Where supported by the underlying compiler and machine architecture, native 128-bit integer types can now be used to accelerate the default implementation of ECC256.
-   *  A default implementation of the SHA256 HMAC algorithm was added.
+* The entire PlayReady Device Porting Kit has been updated to Microsoft Source-code Annotation Language (SAL) 2.0.
+* Some unsupported codepaths only used in Microsoft-internal implementations were removed to eliminate confusion and reduce compile times and binary sizes.  Further improvements in this area is expected to be included in future releases.
+* Where supported by the underlying compiler and machine architecture, native 128-bit integer types can now be used to accelerate the default implementation of ECC256.
+* A default implementation of the SHA256 HMAC algorithm was added.
 
-### API
+### Device Porting Kit API changes
 
 This is merely an overview.  Refer to the API documentation provided in the associated code comments in the PlayReady Porting Kit for more information.
 
@@ -129,5 +129,3 @@ OEM_TEE_DECRYPT_UpdateUplinkXKey -> OEM_TEE_BASE_UpdateUplinkXKey
 OEM_TEE_DECRYPT_DecryptContentKeysWithDerivedKeys -> OEM_TEE_BASE_DecryptContentKeysWithDerivedKeys
 OEM_TEE_DECRYPT_EnforcePolicy -> OEM_TEE_POLICY_Enforce
 ```
-
-
