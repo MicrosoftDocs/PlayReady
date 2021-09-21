@@ -90,33 +90,69 @@ The XML must be canonicalized.
 
 #### 3.2.2. All Node and Attributes names are case-sensitive
 
-|Supported|Not Supported|
-|----|----|
-|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>` | `<KID value="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`</br>`<kid VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </kid>`|
+Supported
+
+```xml
+<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>
+```
+
+Not supported
+
+```xml
+<KID value="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>
+<kid VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </kid>
+```
 
 #### 3.2.3. Closing tags must be explicit
 
 All XML nodes must be explicitly closed by a closing tag including those in nodes inside the CUSTOMATTRIBUTES node.
 
-|Supported|Not Supported|
-|----|----|
-|`<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>`</br>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>` | `<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> <CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </CUSTOMATTRIBUTES>`|
+Supported
+
+```xml
+<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>
+<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>
+```
+
+Not supported
+
+```xml
+<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> <CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo"> </CUSTOMATTRIBUTES>
+```
 
 #### 3.2.4. Namespace attributes
 
-All namespace attributes must be before non-namespaces attributes.
+All namespace attributes must appear before non-namespaces attributes.
 
-|Supported|Not Supported|
-|----|----|
-|`<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">` | `<WRMHEADER version="4.3.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader>`|
+Supported
+
+```xml
+<WRMHEADER xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader" version="4.3.0.0">
+```
+
+Not Supported
+
+```xml
+<WRMHEADER version="4.3.0.0" xmlns="http://schemas.microsoft.com/DRM/2007/03/PlayReadyHeader>
+```
 
 #### 3.2.5. Alphabetical order
 
 All attributes must be in alphabetical order including those in nodes inside the CUSTOMATTRIBUTES node.
 
-|Supported|Not Supported|
-|----|----|
-|`<KID ALGID="AESCBC" VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID></br><CUSTOMATTRIBUTES> <MyNode BarAttribute="Bar" FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>` | `<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg==" ALGID="AESCBC"> </KID>`</br>`<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo" BarAttribute="Bar"> </MyNode> </CUSTOMATTRIBUTES>|
+Supported
+
+```xml
+<KID ALGID="AESCBC" VALUE="PV1LM/VEVk+kEOB8qqcWDg=="> </KID>
+<CUSTOMATTRIBUTES> <MyNode BarAttribute="Bar" FooAttribute="Foo"> </MyNode> </CUSTOMATTRIBUTES>
+```
+
+Not supported
+
+```xml
+<KID VALUE="PV1LM/VEVk+kEOB8qqcWDg==" ALGID="AESCBC"> </KID>
+<CUSTOMATTRIBUTES> <MyNode FooAttribute="Foo" BarAttribute="Bar"> </MyNode> </CUSTOMATTRIBUTES>
+```
 
 ### 3.3. v4.3.0.0
 
