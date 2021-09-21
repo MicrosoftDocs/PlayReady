@@ -70,17 +70,17 @@ The PlayReady Header (PRH) is used by a Client to locate or acquire a license fo
 
 ||PlayReady Header v4.3.0.0|PlayReady Header v4.2.0.0|PlayReady Header v4.1.0.0|PlayReady Header v4.0.0.0|
 |--- |--- |--- |--- |--- |
-|PlayReady 4.0 SDK based Clients</br> (see note 4)|✔|✔|✔|✔|
-|PlayReady 3.0 SDK based Clients</br> (see note 3)||✔|✔|✔|
-|PlayReady 2.x SDK based Clients</br> (see note 2)|||✔|✔|
-|PlayReady 1.x SDK based Clients</br> (see note 1)||||✔|
+|**PlayReady 4.0 SDK based Clients</br> (see note 1)**|✔|✔|✔|✔|
+|**PlayReady 3.0 SDK based Clients</br> (see note 2)**|&nbsp;|✔|✔|✔|
+|**PlayReady 2.x SDK based Clients</br> (see note 3)**|&nbsp;|&nbsp;|✔|✔|
+|**PlayReady 1.x SDK based Clients</br> (see note 4)**|&nbsp;|&nbsp;|&nbsp;|✔|
 
 Notes:
 
-* (4) Xbox One version 1709 or higher are PlayReady 4.X Clients.
-* (3) Windows 10 (all versions) and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (for example, Smart TVs) released after 2017 are PlayReady 3.X Clients.
-* (2) Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
-* (1) Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
+1. Xbox One version 1709 or higher are PlayReady 4.X Clients.
+1. Windows 10 (all versions) and Xbox One version 1703 or lower are PlayReady 3.X Clients. Newest non-Windows devices (for example, Smart TVs) released after 2017 are PlayReady 3.X Clients.
+1. Silverlight and Windows 8, 8.1 are PlayReady 2.X Clients. Most non-Windows devices (for example, Smart TVs) released between 2011 and 2017 are PlayReady 2.X Clients.
+1. Most non-Windows devices (for example, Smart TVs) released between 2008 and 2011 are PlayReady 1.X Clients.
 
 ### 3.2. Syntax Requirements
 
