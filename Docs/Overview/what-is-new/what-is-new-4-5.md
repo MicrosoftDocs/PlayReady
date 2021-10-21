@@ -31,13 +31,56 @@ Functionality was added to simplify use of the Watermarking Signalling Explicit 
 
 ## Changes in PlayReady Server SDK Version 4.5
 
-### General Server changes
+### General Server Changes
 
 Key Exchange licenses can be used to provide arbitrary keys to a client during license acquisition.
 
 If provided by the client, the supported watermarking technologies are exposed to the PlayReady Server SDK application.  This simplifies use of the Watermarking Signalling Explicit Digital Video Output Restriction as defined by the PlayReady Compliance Rules.
 
-### Server API changes
+### Server API Documentation Changes
+
+New Server API reference documentation [TODO: link] for the <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard" target="_blank">.NET Standard</a> version of the PlayReady Server SDK has been created and published. Microsoft recommends migrating to the .NET Standard SDK.
+
+The Server API reference documentation in the PlayReady.chm file included in the PlayReady Documentation Pack only applies to the legacy .NET Framework version of the PlayReady Server SDK.  This documentation is now considered deprecated, has not been updated since PlayReady 4.0, and will not receive future updates.
+
+Most APIs in the two SDKs are identical, so the .NET Standard documentation should be sufficient for most purposes.  However, there are a few significant differences where classes, interfaces, and methods differ.
+
+Here are the general differences between the two SDKs.
+
+   1. The .NET Standard SDK uses interfaces in many places where the .NET Framework SDK uses classes.
+
+   1. The .NET Standard SDK handler interfaces implemented by the application uses asynchronous methods where the .NET Framework SDK uses synchronous methods.  Therefore, the .Net Standard SDK handler interface API names end with the word "Async" and return a Task<class> instead of simply class (where class is specific to the handler interface method).
+
+   1. The .NET Standard SDK is transport agnostic. As such, no HTTP context is directly provided to the application. When using ASP.NET Core, refer to the ASP.NET Core documentation, especially the <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor?view=aspnetcore-5.0" target="_blank">IHttpContextAccessor Interface</a>.
+
+   1. The .NET Standard SDK does not support the packaging content protocol (e.g. IPackagingDataAcquisitionHandler does not exist). This functionality will be restored in PlayReady 4.6.
+
+Here is a complete list of the specific differences as of PlayReady 4.5. This list does not include functionaity that only exists in the .NET Standard SDK nor does it list all of the packaging classes removed which will be restored.
+
+&nbsp;
+>[!div class="mx-tdBreakAll"]
+>|.NET Framework class or interface|.NET Standard equivalent|Differences|
+>|:---|:---|:---|
+>|ProtocolChallengeContext class|IProtocolChallengeContext interface|The HttpRequest Request property only exists in the .NET Framework SDK as discussed above.|
+>|ProtocolChallenge class|IProtocolChallenge interface|None.|
+>|IDeleteLicenseHandler interface|Same|ProcessDeleteLicenseDataAsync is synchronous in the .NET Framework SDK as discussed above.|
+>|DeleteLicenseDataChallenge class|IDeleteLicenseDataChallenge interface|None.|
+>|IDomainHandler interface|Same|HandleJoinDomanAsync and HandleLeaveDomainAsync are synchronous in the .NET Framework SDK as discussed above.|
+>|JoinDomainChallenge class|IDomainChallenge and IJoinDomainChallenge interfaces|The static JoinDomainChallenge.GenerateDomainKeyPair method does not exist in the .NET Standard SDK. The loss of this functionality is a bug that will be fixed in PlayReady 4.6 by adding it as a static method to DomainCertificateBuilder.|
+>|LeaveDomainChallenge class|ILeaveDomainChallenge interface|None.|
+>|ILicenseAcknowledgementHandler interface|Same|HandleLicenseAcknowledgementAsync is synchronous in the .NET Framework SDK as discussed above.|
+>|LicenseAcknowledgementChallenge class|ILicenseAcknowledgementChallenge interface|None.|
+>|ILicenseAcquisitionHandler interface|Same|HandleLicenseAcquisitionAsync is synchronous in the .NET Framework SDK as discussed above.|
+>|LicenseChallenge class|ILicenseChallenge interface|None.|
+>|IMeteringHandler interface|Same|GetMeteringCertificateAsync and ProcessMeteringData are synchronous in the .NET Framework SDK as discussed above.|
+>|MeteringCertificateChallenge class|IMeteringCertificateChallenge interface|None.|
+>|ProcessMeteringDataChallenge class|IProcessMeteringDataChallenge interface|None.|
+>|ISecureStopHandler interface|Same|ProcessSecureStopData is synchronous in the .NET Framework SDK as discussed above.|
+>|SecureStopDataChallenge class|ISecureStopDataChallenge interface|The GetSecureStopData method overload that takes an ISecureStop2Handler only exists in the .NET Framework SDK. The .NET Standard SDK instead loads this handler like any other.|
+>|ISecureStopHandler2 interface|Same|GetSecureStop2AESKey is synchronous in the .NET Framework SDK as discussed above.|
+>|PlayReadyServerAuthorization class|Same|The class's methods are static in the .NET Framework SDK and instance in the .NET Standard SDK.|
+
+### Server API Changes
 
 This is merely an overview.  Refer to the API documentation [TODO: link] for more information.
 
