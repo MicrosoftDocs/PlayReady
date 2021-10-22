@@ -72,12 +72,12 @@ Here is a complete list of the specific differences as of PlayReady 4.5. This li
 >|LicenseAcknowledgementChallenge class|ILicenseAcknowledgementChallenge interface|None.|
 >|ILicenseAcquisitionHandler interface|Same|HandleLicenseAcquisitionAsync is synchronous in the .NET Framework SDK as discussed above.|
 >|LicenseChallenge class|ILicenseChallenge interface|None.|
->|IMeteringHandler interface|Same|GetMeteringCertificateAsync and ProcessMeteringData are synchronous in the .NET Framework SDK as discussed above.|
+>|IMeteringHandler interface|Same|GetMeteringCertificateAsync and ProcessMeteringDataAsync are synchronous in the .NET Framework SDK as discussed above.|
 >|MeteringCertificateChallenge class|IMeteringCertificateChallenge interface|None.|
 >|ProcessMeteringDataChallenge class|IProcessMeteringDataChallenge interface|None.|
->|ISecureStopHandler interface|Same|ProcessSecureStopData is synchronous in the .NET Framework SDK as discussed above.|
+>|ISecureStopHandler interface|Same|ProcessSecureStopDataAsync is synchronous in the .NET Framework SDK as discussed above.|
 >|SecureStopDataChallenge class|ISecureStopDataChallenge interface|The GetSecureStopData method overload that takes an ISecureStop2Handler only exists in the .NET Framework SDK. The .NET Standard SDK instead loads this handler like any other.|
->|ISecureStopHandler2 interface|Same|GetSecureStop2AESKey is synchronous in the .NET Framework SDK as discussed above.|
+>|ISecureStopHandler2 interface|Same|GetSecureStop2AESKeyAsync is synchronous in the .NET Framework SDK as discussed above.|
 >|PlayReadyServerAuthorization class|Same|The class's methods are static in the .NET Framework SDK and instance in the .NET Standard SDK.|
 
 ### Server API Changes
