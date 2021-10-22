@@ -51,13 +51,14 @@ Here are the general differences between the two SDKs.
 
    1. The .NET Standard SDK handler interfaces implemented by the application uses asynchronous methods where the .NET Framework SDK uses synchronous methods.  Therefore, the .Net Standard SDK handler interface API names end with the word "Async" and return a Task\<class\> instead of simply class (where class is specific to the handler interface method).
 
-   1. The .NET Standard SDK is transport agnostic. As such, no HTTP context is directly provided to the application. When using ASP.NET Core, refer to the ASP.NET Core documentation, especially the [IHttpContextAccessor Interface](/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor?view=aspnetcore-5.0).
+   1. The .NET Standard SDK is transport agnostic. As such, no HTTP context is directly provided to the application. When using ASP.NET Core, refer to the ASP.NET Core documentation, especially the [IHttpContextAccessor Interface](/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor).
 
    1. The .NET Standard SDK does not support the packaging content protocol (e.g. IPackagingDataAcquisitionHandler does not exist). This functionality will be restored in PlayReady 4.6.
 
 Here is a complete list of the specific differences as of PlayReady 4.5. This list does not include functionality that only exists in the .NET Standard SDK nor does it list all of the packaging classes removed which will be restored.
 
 &nbsp;
+
 | .NET Framework class or interface | .NET Standard equivalent | Differences |
 |:---|:---|:---|
 | ProtocolChallengeContext class | IProtocolChallengeContext interface | The HttpRequest Request property only exists in the .NET Framework SDK as discussed above. |
