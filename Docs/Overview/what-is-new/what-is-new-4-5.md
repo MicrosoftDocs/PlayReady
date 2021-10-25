@@ -39,9 +39,9 @@ If provided by the client, the supported watermarking technologies are exposed t
 
 ### Server API Documentation Changes
 
-New Server API reference documentation [TODO: link] for the [.NET Standard](/dotnet/standard/net-standard) version of the PlayReady Server SDK has been created and published. Microsoft recommends migrating to the .NET Standard SDK.
+New [Server API documentation](/dotnet/api/Microsoft.Media.Drm) for the [.NET Standard](/dotnet/standard/net-standard) version of the PlayReady Server SDK has been created and published. Microsoft recommends migrating to the .NET Standard SDK.
 
-The Server API reference documentation in the PlayReady.chm file included in the PlayReady Documentation Pack only applies to the legacy .NET Framework version of the PlayReady Server SDK.  This documentation is now considered deprecated, has not been updated since PlayReady 4.0, and will not receive future updates.
+The Server API documentation in the PlayReady.chm file included in the PlayReady Documentation Pack only applies to the legacy .NET Framework version of the PlayReady Server SDK.  This documentation is now considered deprecated, has not been updated since PlayReady 4.0, and will not receive future updates.
 
 Most APIs in the two SDKs are identical, so the .NET Standard documentation should be sufficient for most purposes.  However, there are a few significant differences where classes, interfaces, and methods differ.
 
@@ -82,7 +82,7 @@ Here is a complete list of the specific differences as of PlayReady 4.5. This li
 
 ### Server API Changes
 
-This is merely an overview. Refer to the API documentation [TODO: link] for more information.
+This is merely an overview. Refer to the [Server API documentation](/dotnet/api/Microsoft.Media.Drm) for more information.
 
 The LicenseResponse.GetLicenses method now returns an empty array instead of null when no licenses have been added.
 
