@@ -33,9 +33,7 @@ The following table shows the feature availability for each version of the PlayR
 >|Feb'19|**4.2**| - See [What's New in PlayReady Version 4.2](what-is-new/what-is-new-4-2.md) | 4.2.5545 | 4.2.5545 | &mdash; | &mdash; |
 >|Aug'19|**4.3**| - See [What's New in PlayReady Version 4.3](what-is-new/what-is-new-4-3.md) | 4.3.5841 | &mdash;  | &mdash; | &mdash; |
 >|May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4     | &mdash; |
-
-
-                       
+>|Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7220 | 4.5     | &mdash; |
 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
@@ -51,22 +49,10 @@ The following table lists the compatibility between the various PlayReady Device
 
 ![Porting Kit and Server Compatibility](../images/pk-server-compatibility.png)
 
-<table>
-  <tr style="border: 0; border-collapse: collapse;">
-    <td style="border: 0; border-collapse: collapse;"><em></td>
-    <td style="border: 0; border-collapse: collapse;">Some PK 1.2 clients did not support revocation which is required in Server SDK 2.x+. This is not common.
-    </td>
-  </tr>
-  <tr style="border: 0; border-collapse: collapse;">
-    <td style="border: 0; border-collapse: collapse;"></em><em></td>
-    <td style="border: 0; border-collapse: collapse;">PK 3.0 and higher clients cannot use a Server SDK prior to version 2.0 to get a media playback license.
-    </td>
-  </tr>
-  <tr style="border: 0; border-collapse: collapse;">
-    <td style="border: 0; border-collapse: collapse; vertical-align:top"></em>**</td>
-    <td style="border: 0; border-collapse: collapse;">PK 3.0 and higher clients can use license servers using a 2.X SDK, but can only obtain a license with a SL2000 security level. In addition, new features, such as support for version 4.2 headers (multiple keys) and policies such as Secure Stop and MaxResDecode, are not available when creating a license. There have been issues with chained licenses (root/leaf) on some PK 3.0 clients with Server SDK 2.0. Services will need to test clients to validate compatibility. There are a set of scenarios at the end of this document that can assist in testing.</td>
-  </tr>
-</table>
+| &nbsp; | &nbsp; |
+|--------|--------|
+| \* | Some PK 1.2 clients did not support revocation which is required in Server SDK 2.x+. This is not common. |
+| \** | PK 3.0 and higher clients cannot use a Server SDK prior to version 2.0 to get a media playback license. |
+| \*** | PK 3.0 and higher clients can use license servers using a 2.X SDK, but can only obtain a license with a SL2000 security level. In addition, new features, such as support for version 4.2 headers (multiple keys) and policies such as Secure Stop and MaxResDecode, are not available when creating a license. There have been issues with chained licenses (root/leaf) on some PK 3.0 clients with Server SDK 2.0. Services will need to test clients to validate compatibility. There are a set of scenarios at the end of this document that can assist in testing. |
 
-Even though PlayReady v3.X/4.X based clients work with a Server running Server SDK v2.0, v2.1, or v2.9, Microsoft recommends that customers running Server SDK v1.5.2 upgrade to the latest version of the Server SDK instead of upgrading to Server SDK v2.0, v2.1, or v2.9. This will ensure that you are on a much more supportable path.
-
+Even though PlayReady v3.X/4.X based clients work with a server running Server SDK v2.0, v2.1, or v2.9, Microsoft recommends that customers running Server SDK v1.5.2 upgrade to the latest version of the Server SDK instead of upgrading to Server SDK v2.0, v2.1, or v2.9. This will ensure that you are on a much more supportable path.
