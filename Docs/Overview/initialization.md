@@ -52,10 +52,10 @@ This initialization may be performed at the factory before the device is distrib
 Another initialization may also be performed again at regular intervals (like every month) or at particular events (like every time the device gets a major OS update), or very frequently (like every time the device boots). An application should not make any assumptions regarding how often a device is re-initialized (or re-individualized / re-activated / re-provisioned).
 
 
-## Windows 10 devices and Xbox
+## Windows 10/11 devices and Xbox
 
-Windows 10 and Xbox One / One S / One X use PlayReady Remote Provisioning, per application. 
+Windows 10/11 and Xbox One / One S / One X / Series S / Series X use PlayReady Remote Provisioning, per application. 
 
-This means the device will, at some point, contact a Microsoft server (`xxx.microsoft.com`) to retrieve the PlayReady Client Initialization data over the Internet, typically the first time an application requiring DRM is run. This provisioning is done separately for each application. For web apps running in Microsoft Edge, provisioning is done separately for each web domain.
+This means the device will, at some point, contact a Microsoft server (`xxx.microsoft.com`) to retrieve the PlayReady Client Initialization data over the Internet, typically the first time an application requiring DRM is run. This provisioning is done separately for each application. For web apps running in Microsoft Edge, provisioning is done separately for each web domain (more details in [Edge Privacy Whitepaper](https://docs.microsoft.com/en-us/microsoft-edge/privacy-whitepaper/#digital-rights-management-and-media-licenses)).
 
 In addition, as stated above, re-provisioning may occur at any time: every month on some devices, at every reboot on others, or less frequently on others. An application should not make any assumptions regarding how often a device is re-provisioned, and it should not use the PlayReady Client Initialization data (including the PlayReady Client Certificate or the Client ID) to uniquely identify a unit.
