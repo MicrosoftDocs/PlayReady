@@ -206,7 +206,7 @@ The versioned services are listed in the table below.
 | **SDK 2.9**  | [https://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx](https://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx) |
 | **SDK 3.0**  | [https://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx](https://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx) |
 
-These versioned services can utilize the parameters listed on the PlayReady test site for testing specific policies: [http://playready.azurewebsites.net/Home/TestService](http://playready.azurewebsites.net/Home/TestService).
+These versioned services can utilize the parameters listed on the PlayReady test site for testing specific policies: [https://testweb.playready.microsoft.com/](https://testweb.playready.microsoft.com/).
 
 >[NOTE!]
 >Not all of the policy parameters will work with each of the service versions. For example, MaxResDecode is a new policy and only works with services developed with the Server SDK 3.0 or later.
