@@ -8,7 +8,7 @@ ms.topic: conceptual
 ---
 
 # PlayReady Servers
-PlayReady Servers can take different forms depending on whether they are programmed to deliver licenses, or manage PlayReady domains of clients, or receive and aggregate metering data from clients, and so on. These logical Servers are all developed in C# based on the same PlayReady Server SDK, and a single Server application can implement one or several of the PlayReady Server functionalities.
+PlayReady Servers can take different forms depending on whether they are programmed to deliver licenses, or manage PlayReady domains of clients, or receive and aggregate metering data from clients, and so on. These logical Servers are all developed in C# based on the same [PlayReady Server SDK](https://docs.microsoft.com/dotnet/api/microsoft.media.drm), and a single Server application can implement one or several of the PlayReady Server functionalities.
 
 
 ## PlayReady License Server
@@ -107,3 +107,5 @@ The following operations are supported. For a formal definition, please review t
 [PlayReady Test Server](https://test.playready.microsoft.com/)
 
 [PlayReady Test License Server](https://test.playready.microsoft.com/service/rightsmanager.asmx)
+
+[PlayReady Server SDK](https://docs.microsoft.com/dotnet/api/microsoft.media.drm)
