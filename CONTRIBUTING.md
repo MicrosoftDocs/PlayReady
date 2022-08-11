@@ -67,7 +67,7 @@ We also ask that before contributing a new article, to ask yourself the followin
 - Click the "New pull request" button. (The "base fork:" will be listed as "MicrosoftDocs/playready", the "head fork:" should show your fork of the repo and the branch in which you made your changes.) You can review your changes here as well. 
 - Click the green "Create pull request" button. You will then be asked to give your Pull Request a title and description, then click the "Create pull request" button once more.
 - After pushing your contribution to the remote repo, you will be sent an email from *Open Publishing Build Service* informing whether your contribution built successfully and linking to any error warnings such as broken links, click the links to see your content staged on the site.
-- Once your PR is submitted, a member of the documentation team will review your contribution and, if approved, it will be published to [https://docs.microsoft.com/windows/playready](https://docs.microsoft.com/windows/playready).
+- Once your PR is submitted, a member of the documentation team will review your contribution and, if approved, it will be published to [https://docs.microsoft.com/playready](https://docs.microsoft.com/playready).
 
 ## Using issues to provide feedback on this documentation
 
