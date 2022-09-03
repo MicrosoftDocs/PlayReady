@@ -2,8 +2,8 @@
 
 Thank you for your interest in our documentation. We appreciate your feedback, edits, additions and help with improving our docs. This page covers the basic steps and guidelines for contributing.
 
-> [!IMPORTANT] 
-> All repositories that publish to docs.microsoft.com have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.<br> 
+> [!IMPORTANT]
+> All repositories that publish to Microsoft Docs have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.<br> 
 >
 > Minor corrections or clarifications to documentation and code examples in public repositories are covered by the [docs.microsoft.com Terms of Use](https://docs.microsoft.com/legal/termsofuse). New or significant changes will generate a comment in the pull request asking you to submit an online Contribution License Agreement (CLA) if you are not an employee of Microsoft. We need you to complete the online form before we can accept your pull request.
 
@@ -11,16 +11,16 @@ Thank you for your interest in our documentation. We appreciate your feedback, e
 
 | To suggest a change to the docs, follow these steps: | Screenshots |
 | :------------------- | :--------: |
-| 1. If you're viewing a Docs.microsoft.com page, click the **Edit** button in the upper right of the page.  You will be redirected to the corresponding Markdown source file in the [GitHub repository](https://github.com/MicrosoftDocs/playready). | ![Edit Button](docs/images/edit_button.jpg) |
+| 1. If you're viewing a Microsoft Docs page, click the **Edit** button in the upper right of the page.  You will be redirected to the corresponding Markdown source file in the [GitHub repository](https://github.com/MicrosoftDocs/playready). | ![Edit Button](docs/images/edit_button.jpg) |
 | 2. If you don't already have a GitHub account, click **Sign Up** in the upper right and create a new account. | ![Signup button](docs/images/signup-for-github-button.png)|
 | 3. On the corresponding GitHub page that opens, click Edit (the pencil icon). | ![Pencil button](docs/images/pencil_button.jpg)|
 | 4. In the Edit file pane, use Markdown language to make changes to the content. ([How to write markdown.](https://help.github.com/articles/basic-writing-and-formatting-syntax/))| ![Edit File](docs/images/edit-in-github.png)|
 | 5. Click Preview changes to verify the formatting looks as expected. | ![Preview changes](docs/images/edit-in-github.png)|
 | 6. When you're done, scroll to the bottom of the page and click "Propose file change", you will be presented with a "Comparing changes" page, allowing you to verify your changes. Then click the "Create pull request" button to submit your changes. At this point you are finished! | ![Propose a change](docs/images/propose.jpg)|
 
-After you submit changes (via a pull request), they will be reviewed by a member of the documentation team. If your request is accepted, updates are published to [https://docs.microsoft.com/windows/playready](https://docs.microsoft.com/windows/playready).
+After you submit changes (via a pull request), they will be reviewed by a member of the documentation team. If your request is accepted, updates are published to [PlayReady documentation](https://docs.microsoft.com/playready).
 
-*For internal review only, you can see your changes at [https://review.docs.microsoft.com/windows/playready](https://review.docs.microsoft.com/en-us/collaborate/?branch=master).
+*For internal review only, you can see your changes on the [staging site](https://review.docs.microsoft.com/collaborate/?branch=main).
 
 ## Working with Branches
 
@@ -40,11 +40,12 @@ Be sure to include the topic title and the URL if you are creating an issue rega
 To make substantial changes to an existing article, add or change images, or contribute a new article, we recommend using Git commands to fork and clone the repo for authoring. If you are unfamiliar with using Git, try this [Git training](https://try.github.io/) to get started.
 
 We also ask that before contributing a new article, to ask yourself the following questions...
+
 * Have I included one, and only one, #-level title (equivalent to H1 in HTML)? 
 * Is the verb tense (if applicable) in the title of my new article in the present tense and consistent with the other documentation?
 * Is all of my grammar correct?
 * Have I added my article - if contributing a new article - to the appropriate category as well as updated TOC.md?
-* Have I properly formatted URLs to [look like this](https://docs.microsoft.com) instead of this: https://docs.microsoft.com
+* Have I properly formatted URLs to [look like this](https://docs.microsoft.com) instead of this: `https://docs.microsoft.com`?
 * Have you had at least two people review your new article?
 * Have you contacted [WindowsAuthoring](mailto:windowsauthoring@microsoft.com) if you're unsure about anything?
 
@@ -67,7 +68,7 @@ We also ask that before contributing a new article, to ask yourself the followin
 - Click the "New pull request" button. (The "base fork:" will be listed as "MicrosoftDocs/playready", the "head fork:" should show your fork of the repo and the branch in which you made your changes.) You can review your changes here as well. 
 - Click the green "Create pull request" button. You will then be asked to give your Pull Request a title and description, then click the "Create pull request" button once more.
 - After pushing your contribution to the remote repo, you will be sent an email from *Open Publishing Build Service* informing whether your contribution built successfully and linking to any error warnings such as broken links, click the links to see your content staged on the site.
-- Once your PR is submitted, a member of the documentation team will review your contribution and, if approved, it will be published to [https://docs.microsoft.com/windows/playready](https://docs.microsoft.com/windows/playready).
+- Once your PR is submitted, a member of the documentation team will review your contribution and, if approved, it will be published to [PlayReady documentation](https://docs.microsoft.com/playready).
 
 ## Using issues to provide feedback on this documentation
 
