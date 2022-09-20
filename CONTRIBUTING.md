@@ -5,7 +5,7 @@ Thank you for your interest in our documentation. We appreciate your feedback, e
 > [!IMPORTANT]
 > All repositories that publish to Microsoft Docs have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.<br> 
 >
-> Minor corrections or clarifications to documentation and code examples in public repositories are covered by the [docs.microsoft.com Terms of Use](https://docs.microsoft.com/legal/termsofuse). New or significant changes will generate a comment in the pull request asking you to submit an online Contribution License Agreement (CLA) if you are not an employee of Microsoft. We need you to complete the online form before we can accept your pull request.
+> Minor corrections or clarifications to documentation and code examples in public repositories are covered by the [learn.microsoft.com Terms of Use](https://learn.microsoft.com/legal/termsofuse). New or significant changes will generate a comment in the pull request asking you to submit an online Contribution License Agreement (CLA) if you are not an employee of Microsoft. We need you to complete the online form before we can accept your pull request.
 
 ## How to make a change
 
@@ -18,13 +18,13 @@ Thank you for your interest in our documentation. We appreciate your feedback, e
 | 5. Click Preview changes to verify the formatting looks as expected. | ![Preview changes](docs/images/edit-in-github.png)|
 | 6. When you're done, scroll to the bottom of the page and click "Propose file change", you will be presented with a "Comparing changes" page, allowing you to verify your changes. Then click the "Create pull request" button to submit your changes. At this point you are finished! | ![Propose a change](docs/images/propose.jpg)|
 
-After you submit changes (via a pull request), they will be reviewed by a member of the documentation team. If your request is accepted, updates are published to [PlayReady documentation](https://docs.microsoft.com/playready).
+After you submit changes (via a pull request), they will be reviewed by a member of the documentation team. If your request is accepted, updates are published to [PlayReady documentation](https://learn.microsoft.com/playready).
 
-*For internal review only, you can see your changes on the [staging site](https://review.docs.microsoft.com/collaborate/?branch=main).
+*For internal review only, you can see your changes on the [staging site](https://review.learn.microsoft.com/collaborate/?branch=main).
 
 ## Working with Branches
 
-The [PlayReady GitHub repository](https://github.com/MicrosoftDocs/playready) utilizes two main parent branches: [Master](https://github.com/MicrosoftDocs/playready/tree/master), this content can be reviewed on the [staging site](https://review.docs.microsoft.com/windows/playready), and [Live](https://github.com/MicrosoftDocs/MicrosoftCollaboratePortal/tree/live), for content appearing on the [live site](https://docs.microsoft.com/windows/playready). 
+The [PlayReady GitHub repository](https://github.com/MicrosoftDocs/playready) utilizes two main parent branches: [Master](https://github.com/MicrosoftDocs/playready/tree/master), this content can be reviewed on the [staging site](https://review.learn.microsoft.com/windows/playready), and [Live](https://github.com/MicrosoftDocs/MicrosoftCollaboratePortal/tree/live), for content appearing on the [live site](https://learn.microsoft.com/windows/playready). 
 
 When making contributions, please submit your Pull Request (PR) to the **Master** branch. This branch can be viewed on the staging site and should only contain contributions that are ready to be published live. You may also create and submit a branch with your own unique branch name which can be selected and viewed in the staging site. (The **Live** branch is only allowed for use by the content administrators.)
 
@@ -45,7 +45,7 @@ We also ask that before contributing a new article, to ask yourself the followin
 * Is the verb tense (if applicable) in the title of my new article in the present tense and consistent with the other documentation?
 * Is all of my grammar correct?
 * Have I added my article - if contributing a new article - to the appropriate category as well as updated TOC.md?
-* Have I properly formatted URLs to [look like this](https://docs.microsoft.com) instead of this: `https://docs.microsoft.com`?
+* Have I properly formatted URLs to [look like this](https://learn.microsoft.com) instead of this: `https://learn.microsoft.com`?
 * Have you had at least two people review your new article?
 * Have you contacted [WindowsAuthoring](mailto:windowsauthoring@microsoft.com) if you're unsure about anything?
 
@@ -68,7 +68,7 @@ We also ask that before contributing a new article, to ask yourself the followin
 - Click the "New pull request" button. (The "base fork:" will be listed as "MicrosoftDocs/playready", the "head fork:" should show your fork of the repo and the branch in which you made your changes.) You can review your changes here as well. 
 - Click the green "Create pull request" button. You will then be asked to give your Pull Request a title and description, then click the "Create pull request" button once more.
 - After pushing your contribution to the remote repo, you will be sent an email from *Open Publishing Build Service* informing whether your contribution built successfully and linking to any error warnings such as broken links, click the links to see your content staged on the site.
-- Once your PR is submitted, a member of the documentation team will review your contribution and, if approved, it will be published to [PlayReady documentation](https://docs.microsoft.com/playready).
+- Once your PR is submitted, a member of the documentation team will review your contribution and, if approved, it will be published to [PlayReady documentation](https://learn.microsoft.com/playready).
 
 ## Using issues to provide feedback on this documentation
 
@@ -78,5 +78,5 @@ To provide feedback rather than directly modifying actual documentation pages, [
 - [Getting started with writing and formatting on GitHub](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 ## Additional resources for Microsoft employees
-- [Connect your GitHub account and MS alias](https://review.docs.microsoft.com/en-us/windows-authoring-guide/github-account#2-connect-your-github-account-and-ms-alias-on-the-microsoft-open-source-portal)
-- [Resources for writing Markdown](https://review.docs.microsoft.com/en-us/windows-authoring-guide/writing-guidance/writing-markdown)
+- [Connect your GitHub account and MS alias](https://review.learn.microsoft.com/windows-authoring-guide/github-account#2-connect-your-github-account-and-ms-alias-on-the-microsoft-open-source-portal)
+- [Resources for writing Markdown](https://review.learn.microsoft.com/windows-authoring-guide/writing-guidance/writing-markdown)
