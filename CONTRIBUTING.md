@@ -1,17 +1,17 @@
 # Contributing to the PlayReady documentation
 
-Thank you for your interest in our documentation. We appreciate your feedback, edits, additions and help with improving our docs. This page covers the basic steps and guidelines for contributing.
+Thank you for your interest in our documentation. We appreciate your feedback, edits, additions and help with improving our content. This page covers the basic steps and guidelines for contributing.
 
 > [!IMPORTANT]
-> All repositories that publish to Microsoft Docs have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.<br> 
+> All repositories that publish to Microsoft Learn have adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.<br> 
 >
 > Minor corrections or clarifications to documentation and code examples in public repositories are covered by the [learn.microsoft.com Terms of Use](https://learn.microsoft.com/legal/termsofuse). New or significant changes will generate a comment in the pull request asking you to submit an online Contribution License Agreement (CLA) if you are not an employee of Microsoft. We need you to complete the online form before we can accept your pull request.
 
 ## How to make a change
 
-| To suggest a change to the docs, follow these steps: | Screenshots |
+| To suggest a change, follow these steps: | Screenshots |
 | :------------------- | :--------: |
-| 1. If you're viewing a Microsoft Docs page, click the **Edit** button in the upper right of the page.  You will be redirected to the corresponding Markdown source file in the [GitHub repository](https://github.com/MicrosoftDocs/playready). | ![Edit Button](docs/images/edit_button.jpg) |
+| 1. If you're viewing a Microsoft Learn page, click the **Edit** button in the upper right of the page.  You will be redirected to the corresponding Markdown source file in the [GitHub repository](https://github.com/MicrosoftDocs/playready). | ![Edit Button](docs/images/edit_button.jpg) |
 | 2. If you don't already have a GitHub account, click **Sign Up** in the upper right and create a new account. | ![Signup button](docs/images/signup-for-github-button.png)|
 | 3. On the corresponding GitHub page that opens, click Edit (the pencil icon). | ![Pencil button](docs/images/pencil_button.jpg)|
 | 4. In the Edit file pane, use Markdown language to make changes to the content. ([How to write markdown.](https://help.github.com/articles/basic-writing-and-formatting-syntax/))| ![Edit File](docs/images/edit-in-github.png)|
