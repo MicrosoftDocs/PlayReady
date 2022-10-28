@@ -98,6 +98,8 @@
 
 ### [PlayReady Initialization](Overview/initialization.md)
 
+### [PlayReady Encrypted Media Extensions Key System Strings](Overview/key-system-strings.md)
+
 ### [PlayReady Revocation](Overview/revocation.md)
 
 ## [PlayReady Features](Features/playready-features.md)
