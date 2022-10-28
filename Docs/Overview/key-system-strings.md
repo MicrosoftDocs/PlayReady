@@ -15,10 +15,14 @@ The following table shows the key system string availability and support for eac
 
 &nbsp;
 >[!div class="mx-tdBreakAll"]
->| Key System String | Microsoft Edge | Porting Kit |
+>| Key System String | Windows 10+ Microsoft Edge* | Porting Kit |
 >|:--- |:---|:---|
 >| com.microsoft.playready.recommendation | - Supported.<br/>- Security Level 2000.<br/>- Best effort compliance with latest EME specification. | - Supported in PK 3.3 and higher.<br/>- Security Level depends on OEM device.<br/>- Best effort compliance with latest EME specification as of PK version's release date. |
 >| com.microsoft.playready.recommendation.3000 | - Supported on devices with required hardware.<br/>- Security Level 3000.<br/>- Best effort compliance with latest EME specification. | - Not supported. |
 >| com.microsoft.playready | - Deprecated.<br/>- Will be removed in a future release.<br/>- Non-compliant with any version of the EME specifification. | - Supported in PK 3.2.<br/>- Deprecated in PK 3.3-4.2.<br/>- Not supported in PK 4.3 or higher.<br/>- Security Level depends on OEM device.<br/>- All versions only compliant with EME specification circa 2017. |
 >| All other key system strings | - Behavior undefined. | - Not supported. |
+
+| &nbsp; | &nbsp; |
+|--------|--------|
+| \* | Only versions of the OS and browser which are currently supported by Microsoft. Versions that are out of support have undefined behavior. |
 
