@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # PlayReady Encrypted Media Extensions Key System Strings
 
-Support for PlayReady Encrypted Media Extensions (EME) Key System Strings varies based on client and version.
+Support for Encrypted Media Extensions (EME) Key System Strings varies based on client and version.
 
 The following table shows the key system string availability and support for each PlayReady client and version.
 
