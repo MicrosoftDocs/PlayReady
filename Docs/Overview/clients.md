@@ -28,4 +28,6 @@ This topic provides a description of the different ways to implement a PlayReady
 
 [PlayReady Initialization](initialization.md) 
 
+[PlayReady Encrypted Media Extensions Key System Strings](key-system-strings.md) 
+
 [PlayReady Revocation](revocation.md) 
