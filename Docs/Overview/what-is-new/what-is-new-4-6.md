@@ -36,11 +36,12 @@ This is merely an overview. Refer to the [Server API documentation](/dotnet/api/
 ### General Device Porting Kit changes
 
 * More unsupported codepaths only used in Microsoft-internal implementations were removed to eliminate confusion and reduce compile times and binary sizes.
+* Code was moved across various files to enable linkers to do better optimization.
 * A single KeyExchangeLicense with multiple different algorithms will be properly handled.
 * The xmrlicensetoxml.exe tool and source code were added.
 * All memory allocation functions such as Oem_MemAlloc now take sizes based on the architecture of the system (32bit or 64bit) instead of always taking 32bit sizes.
 * A memory leak in Drm_SecureDelete_GenerateChallenge was fixed.
-* The drmmanager test area was broken up into numerous separate test areas at execution time to make log files easier to navigate.  As a single test area, the log file was enormous.
+* The drmmanager test area was broken up into numerous separate test areas to make logs easier to navigate. As a single test area, the log file was enormous.
 
 ### Device Porting Kit API changes
 
