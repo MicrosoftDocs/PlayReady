@@ -21,7 +21,7 @@ Starting with PlayReady 4.6, a single Key Exchange license can include multiple 
 
 ### General Server Changes
 
-* The SDK was migrated to .NET version 6.0.
+* The .NET Core SDK was migrated to .NET version 6.0.
 * Key Exchange licenses can now include multiple keys with different algorithms.
 
 ### Server API Changes
@@ -30,6 +30,7 @@ This is merely an overview. Refer to the [Server API documentation](/dotnet/api/
 
 * The LicenseChallengeReeFeatures enum now includes value KeyExchangeMultiple.
 * The KeyExchangeLicense class method AddRight can now be called multiple times with different KeyExchangeRight instances with different algorithms if the challenge's ReeFeatureList contains LicenseChallengeReeFeatures.KeyExchangeMultiple.
+* IPackagingDataAcquisitionHandler has been added to .NET Core version. .NET Core Server SDK was released without this functionality, it was added back to close functionality gap between Legacy and .NET Core editions.   
 
 ## Changes in PlayReady Device Porting Kit Version 4.6
 
