@@ -1,6 +1,6 @@
 ---
 title: What's New in PlayReady Version 4.6
-description: This section provides an overview of changes from PlayReady version 4.4 to PlayReady version 4.6.
+description: This section provides an overview of changes from PlayReady version 4.5 to PlayReady version 4.6.
 ms.assetid: "BD2B7B22-18AA-4029-BD64-41D9B79E6B23"
 keywords: playready overview version changes 4.5 4.6
 ms.date: 11/17/2022
@@ -30,8 +30,8 @@ This is merely an overview. Refer to the [Server API documentation](/dotnet/api/
 
 * The LicenseChallengeReeFeatures enum now includes value KeyExchangeMultiple.
 * The KeyExchangeLicense class method AddRight can now be called multiple times with different KeyExchangeRight instances with different algorithms if the challenge's ReeFeatureList contains LicenseChallengeReeFeatures.KeyExchangeMultiple.
-* IPackagingDataAcquisitionHandler has been added to .NET Core version. .NET Core Server SDK was released without this functionality, it was added back to close functionality gap between Legacy and .NET Core editions.   
-* IServerAuthorization now includes OnServerCertificateParsed. This method is called after the Server Certificate is validated by Server SDK, when succeeded certificate object is passed to the handler code otherwise exception that caused the issue is delivered.
+* IPackagingDataAcquisitionHandler has been added to .NET Core version. .NET Core Server SDK was originally released without this functionality. It was added back to close this functionality gap between the Legacy and .NET Core editions.
+* IServerAuthorization now includes OnServerCertificateParsed. This method is called after the Server Certificate is validated by Server SDK. If validation succeeded, the certificate object is provided to the handler; otherwise, the validation exception is provided.
 
 ## Changes in PlayReady Device Porting Kit Version 4.6
 
