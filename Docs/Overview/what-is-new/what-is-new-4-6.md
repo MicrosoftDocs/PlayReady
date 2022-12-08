@@ -23,11 +23,6 @@ Starting with PlayReady 4.6, a single Key Exchange license can include multiple 
 
 * The .NET Core SDK was migrated to .NET version 6.0.
 * Key Exchange licenses can now include multiple keys with different algorithms.
-* New method added to IServerAuthorization 
-```
-public void OnServerCertificateParsed(ServerCertificate certificate, RMServerException exc)
-```
-  It is called after the Server Certificate is validated, when succeeded certificate is passed to the handler code otherwise exception that caused the issue is delivered.
 
 ### Server API Changes
 
@@ -36,6 +31,7 @@ This is merely an overview. Refer to the [Server API documentation](/dotnet/api/
 * The LicenseChallengeReeFeatures enum now includes value KeyExchangeMultiple.
 * The KeyExchangeLicense class method AddRight can now be called multiple times with different KeyExchangeRight instances with different algorithms if the challenge's ReeFeatureList contains LicenseChallengeReeFeatures.KeyExchangeMultiple.
 * IPackagingDataAcquisitionHandler has been added to .NET Core version. .NET Core Server SDK was released without this functionality, it was added back to close functionality gap between Legacy and .NET Core editions.   
+* IServerAuthorization now includes OnServerCertificateParsed. This method is called after the Server Certificate is validated by Server SDK, when succeeded certificate object is passed to the handler code otherwise exception that caused the issue is delivered.
 
 ## Changes in PlayReady Device Porting Kit Version 4.6
 
