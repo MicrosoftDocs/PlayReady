@@ -32,6 +32,7 @@ This is merely an overview. Refer to the [Server API documentation](/dotnet/api/
 * The KeyExchangeLicense class method AddRight can now be called multiple times with different KeyExchangeRight instances with different algorithms if the challenge's ReeFeatureList contains LicenseChallengeReeFeatures.KeyExchangeMultiple.
 * IPackagingDataAcquisitionHandler has been added to .NET Core version. .NET Core Server SDK was originally released without this functionality. It was added back to close this functionality gap between the Legacy and .NET Core editions.
 * IServerAuthorization now includes OnServerCertificateParsed. This method is called after the Server Certificate is validated by Server SDK. If validation succeeded, the certificate object is provided to the handler; otherwise, the validation exception is provided.
+* Setting the LicenseResponse.LicenseServerTimeCertificate now throws an exception if ILicenseChallenge.ReeFeatureList does not include LicenseChallengeReeFeatures.LicenseServerTime instead of issuing unusable licenses to the client.
 
 ## Changes in PlayReady Device Porting Kit Version 4.6
 
