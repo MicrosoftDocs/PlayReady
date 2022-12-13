@@ -15,7 +15,7 @@ The following table shows the feature availability for each version of the PlayR
 &nbsp;
 >[!div class="mx-tdBreakAll"]
 >|Release date| Version |What's new| PlayReady Server SDK (.NET Legacy)| PlayReady Server SDK (.NET Core)| PlayReady Device Porting Kit| PlayReady Certificate Generation Kit| PlayReady PC SDK for Windows 7 Desktop Apps |
->|:--- |:---|:---|:---|:---|:---|:---|
+>|:--- |:---|:---|:---|:---|:---|:---|:---|
 >|Jun'08|**1.0** | Initial version | 1.0.1105| &mdash;| 1.0.1130|1.0.1130|1.1|
 >|Oct'08|**1.2** | [Embedded Licenses](embedded-licenses.md) | 1.2.1404 | &mdash;| 1.2.1404|1.2.1404|1.2|
 >|May'09|**1.3** | [Specifications section](../Specifications/specifications.md) | &mdash; | &mdash;|&mdash;| &mdash; |1.3|
