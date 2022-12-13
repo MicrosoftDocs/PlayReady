@@ -32,9 +32,9 @@ The following table shows the feature availability for each version of the PlayR
 >|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, 'cbcs' supported in addition to 'cenc'.<br/>- [Secure Delete](secure-delete-Server.md) support | 4.0.5117 | &mdash;| 4.0.5102 | 4.0| No longer distributed (see [PlayReady on Windows](playready-on-windows.md))|
 >|Feb'19|**4.2**| - See [What's New in PlayReady Version 4.2](what-is-new/what-is-new-4-2.md) | 4.2.5545 | &mdash;| 4.2.5545 | &mdash; | &mdash; |
 >|Aug'19|**4.3**| - See [What's New in PlayReady Version 4.3](what-is-new/what-is-new-4-3.md) | 4.3.5841 | 4.3.5841 | &mdash;  | &mdash; | &mdash; |
->|May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4.6621 | 4.4     | &mdash; |
->|Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | 4.5     | &mdash; |
->|Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | 4.6     | &mdash; |
+>|May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4.6621 | &mdash; | &mdash; |
+>|Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | &mdash; | &mdash; |
+>|Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | &mdash; | &mdash; |
 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
