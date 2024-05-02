@@ -49,7 +49,7 @@ Most versions of PlayReady on the client can work with the different versions of
 
 The following table lists the compatibility between the various PlayReady Device Porting Kit and PlayReady Server SDK versions:
 
-![User's image](media/product-versions/image2.png)
+![Porting Kit and Server Compatibility.](media/product-versions/image2.png)
 
 |||
 |--------|--------|
