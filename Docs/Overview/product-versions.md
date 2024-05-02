@@ -35,8 +35,8 @@ The following table shows the feature availability for each version of the PlayR
 > |May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4.6621 | &mdash; | &mdash; |
 > |Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | &mdash; | &mdash; |
 > |Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | &mdash; | &mdash; |
-> |May'22|**4.6**|Required Release|4.6.7674 |4.6.7674|— |— |— |
-
+> |May'22|**4.6**| Required Release | 4.6.7674 | 4.6.7674 | &mdash; | &mdash; | &mdash; |
+ 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
 PlayReady license services maintain backward compatibility for legacy PlayReady devices. For example, a new license service developed with the PlayReady Server SDK 4.0 can deliver licenses to a legacy device thatwas developed using the PlayReady Device Porting Kit (PK) 1.2 from its initial release (2008).  
