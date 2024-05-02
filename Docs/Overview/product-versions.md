@@ -13,28 +13,29 @@ ms.topic: conceptual
 The following table shows the feature availability for each version of the PlayReady products.
 
 &nbsp;
->[!div class="mx-tdBreakAll"]
->|Release date| Version |What's new| PlayReady Server SDK (.NET Legacy)| PlayReady Server SDK (.NET Core)| PlayReady Device Porting Kit| PlayReady Certificate Generation Kit| PlayReady PC SDK for Windows 7 Desktop Apps |
->|:--- |:---|:---|:---|:---|:---|:---|:---|
->|Jun'08|**1.0** | Initial version | 1.0.1105| &mdash;| 1.0.1130|1.0.1130|1.1|
->|Oct'08|**1.2** | [Embedded Licenses](embedded-licenses.md) | 1.2.1404 | &mdash;| 1.2.1404|1.2.1404|1.2|
->|May'09|**1.3** | [Specifications section](../Specifications/specifications.md) | &mdash; | &mdash;|&mdash;| &mdash; |1.3|
->|Apr'10|**1.5** | Common Encryption Smooth Streaming | 1.5.4018| &mdash;| &mdash; | 1.5| No further enhancements |
->|Sep'10|**1.5.2** | Security improvements | 1.5.4094| &mdash;| &mdash;| &mdash; | &mdash; |
->|Sep'11|**2.0** | - Live TV with Key Rotation through Scalable Embedded Licenses<br/>- Silverlight Client Verification | 2.0.1402 | &mdash;| 2.0.1402 | 2.0.1402| &mdash; |
->|Apr'12|**2.1** | - PlayEnablers for additional policies<br/>- License Template Handler| 2.1.1444| &mdash;| &mdash;| &mdash; | &mdash; |
->|Dec'12|**2.5** | - PlayReady-Network Device (PlayReady-ND)| &mdash; | &mdash;| 2.5.1789 | 2.5.1778| &mdash; |
->|Nov'13|**2.9** | - LicenseTemplateHandlerChaining sample<br/>- Support for iOS and Android| 2.9.1995| &mdash;| &mdash;| &mdash; | &mdash; |
->|May'14|**2.11** | - MPEG-DASH<br/>- Updated PlayReady-ND test transmitter<br/>- Updates to PlayReady Client SDK for iOS<br/>- Updates to PlayReady Client SDK for Android| &mdash; | &mdash;| 2.11.2155| &mdash; | &mdash; |
->|Mar'15|**3.0** | - SL3000<br/>- Multiple Keys<br/>- [Secure Stop](secure-stop-Server.md)<br/>- Improvements for non-persistent licenses|3.0| &mdash;|  3.0.4019 | 3.0.2726 | &mdash; |
->|Sep'16|**3.2** | [Secure Time](../Features/trusted-clocks.md) (Secure Clock Service in the TEE)|&mdash;| &mdash;|3.2.4242| 3.2.4242 | Deprecated |
->|Apr'17|**3.3** | - New CDMi module<br/>- Fix for vulnerabilities in the PK header parser |&mdash;| &mdash;|3.3.4474| 3.3.4475 | &mdash;|
->|Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, 'cbcs' supported in addition to 'cenc'.<br/>- [Secure Delete](secure-delete-Server.md) support | 4.0.5117 | &mdash;| 4.0.5102 | 4.0.5102| No longer distributed (see [PlayReady on Windows](playready-on-windows.md))|
->|Feb'19|**4.2**| - See [What's New in PlayReady Version 4.2](what-is-new/what-is-new-4-2.md) | 4.2.5545 | &mdash;| 4.2.5545 | &mdash; | &mdash; |
->|Aug'19|**4.3**| - See [What's New in PlayReady Version 4.3](what-is-new/what-is-new-4-3.md) | 4.3.5841 | 4.3.5841 | &mdash;  | &mdash; | &mdash; |
->|May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4.6621 | &mdash; | &mdash; |
->|Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | &mdash; | &mdash; |
->|Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | &mdash; | &mdash; |
+> [!div class="mx-tdBreakAll"]
+> |Release date| Version |What's new| PlayReady Server SDK (.NET Legacy)| PlayReady Server SDK (.NET Core)| PlayReady Device Porting Kit| PlayReady Certificate Generation Kit| PlayReady PC SDK for Windows 7 Desktop Apps |
+> |:--- |:---|:---|:---|:---|:---|:---|:---|
+> |Jun'08|**1.0** | Initial version | 1.0.1105| &mdash;| 1.0.1130|1.0.1130|1.1|
+> |Oct'08|**1.2** | [Embedded Licenses](embedded-licenses.md) | 1.2.1404 | &mdash;| 1.2.1404|1.2.1404|1.2|
+> |May'09|**1.3** | [Specifications section](../Specifications/specifications.md) | &mdash; | &mdash;|&mdash;| &mdash; |1.3|
+> |Apr'10|**1.5** | Common Encryption Smooth Streaming | 1.5.4018| &mdash;| &mdash; | 1.5| No further enhancements |
+> |Sep'10|**1.5.2** | Security improvements | 1.5.4094| &mdash;| &mdash;| &mdash; | &mdash; |
+> |Sep'11|**2.0** | - Live TV with Key Rotation through Scalable Embedded Licenses<br/>- Silverlight Client Verification | 2.0.1402 | &mdash;| 2.0.1402 | 2.0.1402| &mdash; |
+> |Apr'12|**2.1** | - PlayEnablers for additional policies<br/>- License Template Handler| 2.1.1444| &mdash;| &mdash;| &mdash; | &mdash; |
+> |Dec'12|**2.5** | - PlayReady-Network Device (PlayReady-ND)| &mdash; | &mdash;| 2.5.1789 | 2.5.1778| &mdash; |
+> |Nov'13|**2.9** | - LicenseTemplateHandlerChaining sample<br/>- Support for iOS and Android| 2.9.1995| &mdash;| &mdash;| &mdash; | &mdash; |
+> |May'14|**2.11** | - MPEG-DASH<br/>- Updated PlayReady-ND test transmitter<br/>- Updates to PlayReady Client SDK for iOS<br/>- Updates to PlayReady Client SDK for Android| &mdash; | &mdash;| 2.11.2155| &mdash; | &mdash; |
+> |Mar'15|**3.0** | - SL3000<br/>- Multiple Keys<br/>- [Secure Stop](secure-stop-Server.md)<br/>- Improvements for non-persistent licenses|3.0| &mdash;|  3.0.4019 | 3.0.2726 | &mdash; |
+> |Sep'16|**3.2** | [Secure Time](../Features/trusted-clocks.md) (Secure Clock Service in the TEE)|&mdash;| &mdash;|3.2.4242| 3.2.4242 | Deprecated |
+> |Apr'17|**3.3** | - New CDMi module<br/>- Fix for vulnerabilities in the PK header parser |&mdash;| &mdash;|3.3.4474| 3.3.4475 | &mdash;|
+> |Oct'17|**4.0**| - Expanded support for multiple Common Encryption Modes, 'cbcs' supported in addition to 'cenc'.<br/>- [Secure Delete](secure-delete-Server.md) support | 4.0.5117 | &mdash;| 4.0.5102 | 4.0.5102| No longer distributed (see [PlayReady on Windows](playready-on-windows.md))|
+> |Feb'19|**4.2**| - See [What's New in PlayReady Version 4.2](what-is-new/what-is-new-4-2.md) | 4.2.5545 | &mdash;| 4.2.5545 | &mdash; | &mdash; |
+> |Aug'19|**4.3**| - See [What's New in PlayReady Version 4.3](what-is-new/what-is-new-4-3.md) | 4.3.5841 | 4.3.5841 | &mdash;  | &mdash; | &mdash; |
+> |May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4.6621 | &mdash; | &mdash; |
+> |Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | &mdash; | &mdash; |
+> |Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | &mdash; | &mdash; |
+> |May'22|**4.6**|Required Release|4.6.7674 |4.6.7674|— |— |— |
 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
