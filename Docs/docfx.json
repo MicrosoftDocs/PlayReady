@@ -44,7 +44,7 @@
       "searchScope": [
         "PlayReady"
       ],
-      "feedback_system": "GitHub",
+      "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/PlayReady",
       "feedback_product_url": "mailto:askplayready@microsoft.com",
       "ms.author": "windowsdriverdev",
