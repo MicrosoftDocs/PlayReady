@@ -35,11 +35,11 @@ The following table shows the feature availability for each version of the PlayR
 > |May'20|**4.4**| - See [What's New in PlayReady Version 4.4](what-is-new/what-is-new-4-4.md) | 4.4.6621 | 4.4.6621 | 4.4.6621 | &mdash; | &mdash; |
 > |Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | &mdash; | &mdash; |
 > |Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | &mdash; | &mdash; |
-> |May'22|**4.6**| Required Release, culmination of numerous features and security updates over several releases | 4.6.7674 | 4.6.7674 | &mdash; | &mdash; | &mdash; |
- 
+> |Oct'24|**4.6**| Required Release, culmination of numerous features and security updates over several releases | 4.6.7674 | 4.6.7674 | &mdash; | &mdash; | &mdash; |
+
 ## Porting Kit Version Compatibility with Server SDK Versions
 
-PlayReady license services maintain backward compatibility for legacy PlayReady devices. For example, a new license service developed with the PlayReady Server SDK 4.0 can deliver licenses to a legacy device thatwas developed using the PlayReady Device Porting Kit (PK) 1.2 from its initial release (2008).  
+PlayReady license services maintain backward compatibility for legacy PlayReady devices. For example, a new license service developed with the PlayReady Server SDK 4.0 can deliver licenses to a legacy device that was developed using the PlayReady Device Porting Kit (PK) 1.2 from its initial release (2008).  
 
 There are, however, some nuances in compatibility as services and devices move into the PlayReady 3.0 and higher releases. PlayReady Clients developed with the 3.0 and higher Device Porting Kit cannot obtain licenses from a license service built prior to the 2011 release of the Server SDK 2.0. Services running earlier versions of the Server SDK will need to upgrade to be compatible with PlayReady 3.0 and higher. 
 
