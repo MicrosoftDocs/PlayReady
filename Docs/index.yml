@@ -7,7 +7,7 @@ metadata:
   description: Use PlayReady for defining, incorporating, and enforcing rights for digital media. The service provider and content provider can control the expiration date, the number of times a user can play the content file, the resolution of the content that can be played on a screen, the type of screen that content is rendered to, and many other control settings.
   ms.topic: landing-page 
   author: EliotSeattle 
-  ms.author: eliotgra
+  ms.author: windowsdriverdev
   ms.date: 04/10/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
