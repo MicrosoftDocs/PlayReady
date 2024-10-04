@@ -1,10 +1,10 @@
 ---
 author: timrule
-title: PlayReady Client-Server Compatibility and Migration Considerations
-description: Most versions of PlayReady Clients and PlayReady Servers interoperate correctly.
+title: PlayReady Client-Server Compatibility and Migration
+description: Most versions of PlayReady Clients and PlayReady Servers interoperate correctly. There are a few compatibility issues with services more than 5 years old.
 ms.assetid: "9A903AA9-BBAD-424D-9740-9C8C1D7E5F45"
 keywords: client, server, compatibility, migration
-ms.author: timrule
+ms.author: windowsdriverdev
 ms.date: 02/01/2018
 ms.topic: conceptual
 ---
