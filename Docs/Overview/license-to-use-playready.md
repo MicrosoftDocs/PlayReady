@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 If you are an original equipment manufacturer (OEM), a PlayReady Client developer, or a PlayReady service provider, you must first obtain a PlayReady license from Microsoft before you can begin developing your product. This will entitle you to receive from Microsoft all of the material you will need to create your product, whether it is an integrated circuit with built-in PlayReady functionality, a device including a PlayReady Client in the operating system or the silicon, a PlayReady application running on iOS or Android, or a PlayReady Server supplying licenses for specific content.
 
-There are separate licenses depending on what type of PlayReady product you intend to produce. For example, there are licenses for distributing a device, developing a downloadable software application, or developing Server applications or deploying a PlayReady service to end-users. For more information about all of the licensing options for the various parts of PlayReady, see [PlayReady Licensing Options](https://www.microsoft.com/playready/licensing/).
+There are separate licenses depending on what type of PlayReady product you intend to produce. For example, there are licenses for distributing a device, developing a downloadable software application, or developing Server applications or deploying a PlayReady service to end-users. 
 
 These licenses provide additional benefits including intellectual property rights, intellectual property protection, and indemnification.
 
