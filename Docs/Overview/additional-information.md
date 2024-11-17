@@ -34,14 +34,14 @@ In addition to the pages on this website, the PlayReady team provides the follow
   * PlayReady Certificates
   * Additional Specifications and Format Documentation
 
-* [PlayReady Video Tutorials](https://test.playready.microsoft.com/Doc/VideoTutorials)
+* [PlayReady Video Tutorials](https://devcenter.ipla.microsoft.com/)
 
   Provides video training and PlayReady conference videos that describe in detail aspects of PlayReady implementation. This website is restricted to licensees and requires an authorization token.
 
-* [PlayReady Training Slides](http://wmlalicensing.com)
+* [PlayReady Training Slides](https://devcenter.ipla.microsoft.com/)
 
   Provides training slides (Knowledge Base) that describe how to implement PlayReady Clients and PlayReady Servers. This website is restricted to licensees.
 
-* [PlayReady Licensing Portal](http://wmlalicensing.com)
+* [PlayReady Licensing Portal](https://devcenter.ipla.microsoft.com/)
 
   Provides information and operations about licensing agreements and certificates
