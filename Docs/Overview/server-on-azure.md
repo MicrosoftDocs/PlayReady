@@ -9,12 +9,6 @@ ms.topic: conceptual
 
 # PlayReady Server on Azure
 
-## PlayReady License Server in Azure Media Services
-
-Microsoft Azure Media Services (AMS) provides a service for encrypting content and delivering PlayReady licenses, called Content Protection (AMS CP). Media Services also provides APIs that let you configure the rights and restrictions that you want for the PlayReady runtime to enforce when a user plays back protected content. When a user requests PlayReady protected content, the player application will request a license from the AMS license service. The AMS license service will issue a license to the player if it is authorized. A PlayReady license contains the decryption key that can be used by the client player to decrypt and stream the content.
-
-For more information about PlayReady on Azure, see [Announcing Azure Media Services Live Streaming With PlayReady encryption capability](https://azure.microsoft.com/blog/announcing-azure-media-services-live-streaming-with-playready-encryption-capability/) and the [Azure Protecting Content Overview](/azure/media-services/).
-
 ## PlayReady Servers in Azure App Services
 
 All types of PlayReady Servers developed on top of PlayReady Server SDK can run in Azure App Services (also known as Web App), and leverage the full power of Platform as a Service (PaaS).
