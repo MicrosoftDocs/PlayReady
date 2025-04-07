@@ -29,10 +29,10 @@ Microsoft provides legal agreement administration and support for the following:
 
 through:
 
-* the WMLA Portal: [https://wmlalicensing.com](https://wmlalicensing.com)
-* Email to: [wmlalicensing@microsoft.com](mailto:wmlalicensing@microsoft.com)
+* the IPLA Portal: [[https://aka.ms/IPLA](https://aka.ms/IPLA)]
+* Email to: [ipla@microsoft.com](mailto:ipla@microsoft.com)
 
-![Website home page for WMLA licensing](images/website-wmlalicensing-home.png)
+ 
 
 
 ## Business Discussions
