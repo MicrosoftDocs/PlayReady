@@ -29,7 +29,7 @@ Microsoft provides legal agreement administration and support for the following:
 
 through:
 
-* the IPLA Portal: [[https://aka.ms/IPLA](https://aka.ms/IPLA)]
+* the IPLA Portal: https://aka.ms/IPLA 
 * Email to: [ipla@microsoft.com](mailto:ipla@microsoft.com)
 
  
