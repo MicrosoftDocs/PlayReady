@@ -65,7 +65,7 @@ How to use Microsoft PlayReady as the Content Protection scheme in an ISO/IEC 23
 
 ### 1.2 Conventions
 
-The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in [[RFC2119].](https://www.ietf.org/rfc/rfc2119)  That is:
+The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in [[RFC2119].](https://www.ietf.org/rfc/rfc2119.txt)  That is:
 
 * “MUST”, “REQUIRED” and “SHALL” mean that the definition is an absolute requirement of the specification.
 
@@ -147,7 +147,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 | [EME] | *“Encrypted Media Extensions”, W3C Recommendation 18 September 2017* [https://www.w3.org/TR/encrypted-media/](https://www.w3.org/TR/encrypted-media/) |
 | [PRH] | *“Microsoft PlayReady Header*, see [PlayReady Header Specification](playready-header-specification.md) |
 | [PRO] | *“Microsoft PlayReady Object*, see [PlayReady Header Specification](playready-header-specification.md) |
-| [RFC2119] | “Key *words for use in RFCs to Indicate Requirement* Levels”, S. Bradner, March 1997, [http://www.ietf.org/rfc/rfc2119](http://www.ietf.org/rfc/rfc2119)   |
+| [RFC2119] | “Key *words for use in RFCs to Indicate Requirement* Levels”, S. Bradner, March 1997, [http://www.ietf.org/rfc/rfc2119.txt](https://www.ietf.org/rfc/rfc2119.txt)   |
 | [RFC3629] | *“UTF-8, a transformation format of ISO* 10646”, F. Yergeau, November 2003, [http://tools.ietf.org/html/rfc3629](http://tools.ietf.org/html/rfc3629) |
 | [RFC4122] | *“A Universally Unique IDentifier (UUID) URN Namespace”, P. Leach, M. Mealling, R. Salz, July 2005,* [http://www.ietf.org/rfc/rfc4122.txt](http://www.ietf.org/rfc/rfc4122.txt) |
 | [X.667]  | *“Information technology – Open Systems Interconnection – Procedures for the operation of OSI Registration Authorities: Generation and registration of Universally Unique Identifiers (UUIDs) and their use as ASN.1 object identifier components”  Series X ITU-T Recommendation* [http://www.itu.int/rec/T-REC-X.667-201210-I/en](http://www.itu.int/rec/T-REC-X.667-201210-I/en) |
