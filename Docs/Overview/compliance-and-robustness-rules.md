@@ -13,10 +13,6 @@ ms.topic: conceptual
 Microsoft edits and publishes the PlayReady Compliance Rules and the PlayReady Robustness Rules, the requirements of which all PlayReady Final Products distributed on the market must satisfy, as specified in the PlayReady license agreement(s) customers sign with Microsoft.
 
 
-> [!NOTE]
-> If this documentation differs from the language included in the [Licensing Agreements](https://www.microsoft.com/playready/licensing/), in the [Compliance Rules](https://www.microsoft.com/playready/licensing/compliance/) document, or the [Robustness Rules](https://www.microsoft.com/playready/licensing/compliance/) document, those documents take precedence.
-
-
 ## PlayReady Compliance Rules
 
 Compliance Rules (CRs) specify the required behaviors of PlayReady implementations, and describe how content may be accessed and passed using specific policy rules. For example, the Compliance Rules contain:
