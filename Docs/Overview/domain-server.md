@@ -4,7 +4,7 @@ description: You can manage content access for multiple Clients through a single
 ms.assetid: "0F53EB0C-1BF0-4949-8889-244AE669A28D"
 keywords: about PlayReady domains,  PlayReady domain server
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

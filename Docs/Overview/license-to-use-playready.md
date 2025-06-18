@@ -4,7 +4,7 @@ description: License to use PlayReady
 ms.assetid: "42BA7CE6-6A6A-46BA-A1F9-B21AD1CA4E3D"
 keywords:  License, License to use, PlayReady
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # License to use PlayReady

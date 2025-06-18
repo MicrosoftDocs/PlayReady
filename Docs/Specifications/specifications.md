@@ -4,7 +4,7 @@ description: This section contains a list of public specifications that provide 
 ms.assetid: "d8bbd962-4195-1966-c89b-f38074c1d6d6"
 keywords: PlayReady specifications, PlayReady whitepapers, specs
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

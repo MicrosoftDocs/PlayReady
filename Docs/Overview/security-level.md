@@ -4,7 +4,7 @@ description: The PlayReady Client Security Level is a property of the Client (de
 ms.assetid: "352220F0-2566-431E-8CC3-DC649B5E3CF2"
 keywords: security level
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Security Level

@@ -4,7 +4,7 @@ description: This page describes how to encrypt or package audio video content t
 ms.assetid: "7DF4D94C-1962-49B9-A369-0803EB886235"
 keywords: Packaging, PlayReady Packaging, PlayReady Encryption, MP4, mpeg 4, CMAF, Windows 10, Xbox
 ms.date: 04/01/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to package MP4-based content for PlayReady

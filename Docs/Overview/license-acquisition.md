@@ -4,7 +4,7 @@ description: To play protected content, a valid license for the content must be 
 ms.assetid: "bfd615d3-0dfc-b261-b346-456e7aa617a5"
 keywords: playready license acquisition
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 

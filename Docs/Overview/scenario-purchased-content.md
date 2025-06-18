@@ -4,7 +4,7 @@ description: In the purchased content scenario, a content owner sells media to c
 ms.assetid: "75bf75de-b445-a957-f804-948a235048e7"
 keywords: purchased content scenarios
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

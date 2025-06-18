@@ -4,7 +4,7 @@ description: This sections describes the PlayReady ecosystem.
 ms.assetid: "dfb65490-8a56-fdda-a81d-b106ad0c69bb"
 keywords: about the Microsoft PlayReady ecosystem, PlayReady ecosystem
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

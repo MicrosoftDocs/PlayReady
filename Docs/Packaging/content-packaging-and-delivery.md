@@ -4,7 +4,7 @@ description: The basic capability of PlayReady is to protect content from unauth
 ms.assetid: "7E87CB5D-59E1-4E25-8271-82FB97998ECD"
 keywords: playready content encryption, encryption and delivery
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

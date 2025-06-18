@@ -4,7 +4,7 @@ description: In the live TV scenario, a service sends live streams to users and 
 ms.assetid: "9c919b0f-c860-9d89-1297-16922e8de0e4"
 keywords: live, tv, scenarios, key, rotation
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

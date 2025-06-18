@@ -4,7 +4,7 @@ description: This topic describes the different types of PlayReady Servers.
 ms.assetid: "ECD043B6-9F4B-4801-A3AE-9FD822DCD9E4"
 keywords: playready servers
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Servers

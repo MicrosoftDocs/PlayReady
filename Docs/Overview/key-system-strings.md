@@ -4,7 +4,7 @@ description: Describes the Key System Strings to use for Encrypted Media Extensi
 ms.assetid: "e982455f-96d2-4e2b-8084-ac3b4d0ea54c"
 keywords: clients, playready, initialization, EME, keysystem
 ms.date: 10/28/2022
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Encrypted Media Extensions Key System Strings

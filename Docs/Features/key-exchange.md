@@ -4,7 +4,7 @@ description: Key Exchange is the process for providing arbitrary keys to a clien
 ms.assetid: "7E53CF48-9CFC-4875-8EC8-4BA38AB2E602"
 keywords: PlayReady Key Exchange, Key Exchange architecture, Key Exchange licenses
 ms.date: 10/15/2021
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Key Exchange

@@ -4,7 +4,7 @@ description: PlayReady Secure Stop provides the means for a PlayReady device to 
 ms.assetid: "9736c55e-3628-4d93-8d55-48d4be6af137"
 keywords: secure, stop, server, license
 ms.date: 05/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

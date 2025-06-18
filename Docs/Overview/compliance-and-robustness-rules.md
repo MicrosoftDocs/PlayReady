@@ -4,7 +4,7 @@ description: PlayReady Compliance and Robustness Rules
 ms.assetid: "90172919-D79B-45CE-969D-028BABB5BBA2"
 keywords:  PlayReady Compliance and Robustness Rules
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 
