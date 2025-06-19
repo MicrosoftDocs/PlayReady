@@ -4,7 +4,7 @@ description: This page describes how to generate a PlayReady Header in order to 
 ms.assetid: "D2F152D4-D0EC-4B32-9A50-A296670F4563"
 keywords: PlayReady Header, PlayReady Object, Programming Guide
 ms.date: 04/01/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to generate a PlayReady Header

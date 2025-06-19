@@ -4,7 +4,7 @@ description: License Servers built using PlayReady Server SDK issue licenses to 
 ms.assetid: "3da1f73f-e8a0-aa6a-a9cf-24a74226311b"
 keywords: playready generation and license persistence
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

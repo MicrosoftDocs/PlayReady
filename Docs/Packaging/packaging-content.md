@@ -4,7 +4,7 @@ description: PlayReady helps secure encrypted content by distributing and contro
 ms.assetid: "4B45DCD6-73FE-45B4-A5DF-926942695B7B"
 keywords: playready content encryption, encryption, content encryption
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 

@@ -4,7 +4,7 @@ description: PlayReady on Xbox
 ms.assetid: "67839EA4-58C4-4C71-AB40-B149F7CE1B84"
 keywords:  Windows, UWP, Xbox, PlayReady
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

@@ -4,7 +4,7 @@ description: Implementing Content Protection for Live and On-Demand Profiles of 
 ms.assetid: "938d107a-8f4c-43ab-a78a-9ef0e419e05d"
 keywords: drm, specification, PlayReady, content protection
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # DASH Content Protection using Microsoft PlayReady

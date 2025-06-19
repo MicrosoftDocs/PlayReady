@@ -4,7 +4,7 @@ description: Procedure to develop and distribute PlayReady Security Level 3000 C
 ms.assetid: "E658777F-FF3A-4898-A884-B281107A621E"
 keywords: clients, playready, playbook, security level, 3000, sl3000
 ms.date: 06/01/2018
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Developing PlayReady Security Level 3000 Clients

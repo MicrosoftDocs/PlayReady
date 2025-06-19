@@ -4,7 +4,7 @@ description: This page specifies the PlayReady Key Seed algorithm that allows di
 ms.assetid: "62995E85-EE3A-4C36-844B-950719194185"
 keywords: PlayReady key seed, kid, content key, specification
 ms.date: 06/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

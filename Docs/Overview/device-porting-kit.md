@@ -4,7 +4,7 @@ description: PlayReady Device Porting Kit contains ANSI C source code designed t
 ms.assetid: "a480bc16-79f3-a8b5-c63a-c07cba4ed963"
 keywords: PlayReady Device Porting Kit overview
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

@@ -4,7 +4,7 @@ description: PlayReady allows an application to store the license for a DRM-prot
 ms.assetid: "97eab5cb-afc4-fde8-91d2-904213fb3b54"
 keywords:  about embedded licenses
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

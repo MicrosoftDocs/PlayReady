@@ -4,7 +4,7 @@ description: This section provides an overview of changes from PlayReady version
 ms.assetid: "D9B3FE09-931E-4B28-8A7A-5D422C86AB12"
 keywords: playready overview version changes 4.3 4.4
 ms.date: 10/02/2019
-ms.topic: conceptual
+ms.topic: whats-new
 ---
 
 # What's New in PlayReady Version 4.4

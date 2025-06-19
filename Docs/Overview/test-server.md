@@ -4,7 +4,7 @@ description: PlayReady Test Server
 ms.assetid: "D8A54F3A-CF84-4352-A9A4-DB244826F5A3"
 keywords:  PlayReady, Test, Server
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

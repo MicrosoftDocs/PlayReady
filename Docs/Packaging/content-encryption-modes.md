@@ -4,7 +4,7 @@ description: This topic provides an overview about content encryption modes in P
 ms.assetid: "4fcd8a74-5416-44f0-972d-532feab7bfde"
 keywords: content encryption,  content key, encryption overview, cbc, ctr, cipher block chaining, counter
 ms.date: 12/15/2022
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Content Encryption Modes

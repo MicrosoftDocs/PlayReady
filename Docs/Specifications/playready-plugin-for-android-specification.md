@@ -4,7 +4,7 @@ description: This specification describes the requirements for incorporating Pla
 ms.assetid: "a63aa484-5dfc-fe56-abb4-87152ffc47f1"
 keywords: playready, drm, plugin, android, java, specification, PlayReadyDrmPlugin, PlayReadyDRMPlugin
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 
