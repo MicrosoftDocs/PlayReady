@@ -4,7 +4,7 @@ description: This specification applies to any end product created with any of t
 ms.assetid: "5DC27BBD-0ADA-48CD-B1CB-5D46A7059DB4"
 keywords: PlayReady header specification
 ms.date: 10/15/2021
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Header Specification

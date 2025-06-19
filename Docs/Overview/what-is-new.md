@@ -4,7 +4,7 @@ description: An overview of changes across versions of PlayReady starting with 4
 ms.assetid: "B360F030-CE72-4ED1-A373-D66FB5B8768C"
 keywords: playready overview version changes
 ms.date: 10/02/2019
-ms.topic: conceptual
+ms.topic: whats-new
 ---
 
 # What's New in PlayReady

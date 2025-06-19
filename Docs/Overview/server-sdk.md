@@ -4,7 +4,7 @@ description: PlayReady Server Software Development Kit (SDK) is a collection of 
 ms.assetid: "7de2da30-5f9d-3167-a180-2d01a50c6ea7"
 keywords: PlayReady Server SDK
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

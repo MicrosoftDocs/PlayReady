@@ -4,7 +4,7 @@ description: In rental content, the license delivered for the content specifies 
 ms.assetid: "30da1be6-dfdc-d98e-261b-cc86c7e6da02"
 keywords: rental content scenario, rental content scenario,  rental content streaming,  rental content download and play
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

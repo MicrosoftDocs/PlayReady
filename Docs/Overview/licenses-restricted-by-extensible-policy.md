@@ -4,7 +4,7 @@ description: The Extensible Media Rights (XMR) system is a binary system used to
 ms.assetid: "5fc141a7-025e-32d9-7879-ce481c29eaaa"
 keywords: licenses restricted by extensible policy, extensible media rights
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

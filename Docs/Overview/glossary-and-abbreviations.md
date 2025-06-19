@@ -4,7 +4,7 @@ description: Contains a glossary of PlayReady terms and abbreviations.
 ms.assetid: "07554286-539a-072a-14d9-81200b223c50"
 keywords: glossary, playready
 ms.date: 09/22/2021
-ms.topic: conceptual
+ms.topic: glossary
 ---
 
 # Glossary and Abbreviations

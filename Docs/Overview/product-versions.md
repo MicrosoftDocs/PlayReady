@@ -4,7 +4,7 @@ description: Feature availability for each version of the PlayReady products.
 ms.assetid: "b1fe306d-2ef3-565a-ae60-cea1592ce0e8"
 keywords: PlayReady product versions
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

@@ -5,7 +5,7 @@ description: PlayReady Compliance and Robustness Rules
 ms.assetid: "5522351E-5935-4F94-8F40-F051CAD77CC2"
 keywords:  PlayReady, certificates, certificate authority, authority, ca
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Certificates and Certificate Authority

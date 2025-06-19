@@ -4,7 +4,7 @@ description: With PlayReady, a service can limit the number of concurrent playba
 ms.assetid: "983f2084-d2c6-46d6-875d-c89082c2394a"
 keywords: secure, stop, stream concurrency limiting
 ms.date: 05/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

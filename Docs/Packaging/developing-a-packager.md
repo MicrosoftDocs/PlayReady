@@ -4,7 +4,7 @@ description: Developing a PlayReady Packager
 ms.assetid: "CFAF35FD-CCBE-49EF-B4CE-708FBCDE298A"
 keywords:  PlayReady, packager, encryptor, developing packager
 ms.date: 05/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Developing a PlayReady Packager

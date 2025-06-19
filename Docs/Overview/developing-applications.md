@@ -4,7 +4,7 @@ description: This topic provides a description of the different ways to develop 
 ms.assetid: "D90F1658-B12F-4424-9D44-DE9F5FC5B892"
 keywords: Client, application, development, uwp, android, xbox, sdk, iOS, Browser
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 

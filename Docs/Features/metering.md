@@ -4,7 +4,7 @@ description: Metering is the process for counting the number of times content is
 ms.assetid: "EA376626-C72F-436F-AD6E-2ECDA9DD8B5E"
 keywords: PlayReady metering, metering architecture, metering certificate acquisition
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

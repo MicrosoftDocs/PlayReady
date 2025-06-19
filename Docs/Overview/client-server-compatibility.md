@@ -6,7 +6,7 @@ ms.assetid: "9A903AA9-BBAD-424D-9740-9C8C1D7E5F45"
 keywords: client, server, compatibility, migration
 ms.author: windowsdriverdev
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # PlayReady Client-Server Compatibility and Migration Considerations

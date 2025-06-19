@@ -4,7 +4,7 @@ description: This section describes how a server application can determine wheth
 ms.assetid: "345F02F1-4233-4D60-81CB-7403702CFEF6"
 keywords: playready server client feature support
 ms.date: 10/02/2019
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # How to Determine What Features a Client Supports

@@ -4,7 +4,7 @@ description: Client Initialization is the process of updating the PlayReady runt
 ms.assetid: "2d0eed43-5a52-a642-ff7f-aa1927766e5a"
 keywords: initialization, provisioning, activation, individualization
 ms.date: 02/01/2018
-ms.topic: conceptual
+ms.topic: article
 ---
 
 

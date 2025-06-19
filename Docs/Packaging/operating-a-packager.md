@@ -4,7 +4,7 @@ description: Describes the basic process of operating a PlayReady packager
 ms.assetid: "726C14AE-AE51-4DE3-BB11-F43FFE18CE9B"
 keywords:  PlayReady, ackager, encryptor, operating packager
 ms.date: 05/11/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 

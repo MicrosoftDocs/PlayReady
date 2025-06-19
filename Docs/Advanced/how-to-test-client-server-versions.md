@@ -4,7 +4,7 @@ description: Contains scenarios for testing various client versions with various
 ms.assetid: "8607D297-DD0F-4EE5-AE74-342935DE9C39"
 keywords: compatibility, testing, clients, Server SDK, content protection
 ms.date: 03/30/2018
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 
