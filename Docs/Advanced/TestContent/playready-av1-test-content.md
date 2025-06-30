@@ -4,10 +4,8 @@ description: Test content collection for validating PlayReady with AV1 codec sce
 ms.assetid: "E5F6A7B8-C9D0-1234-5678-90ABCDEF1234"
 keywords: playready av1, test content, AV1 codec, CBC, CTR, encryption modes
 ms.date: 06/30/2025
-ms.topic: article
+ms.topic: reference
 ---
-
-# PlayReady AV1 Test Content
 
 This section contains a collection of test content that can be used to validate PlayReady+AV1 scenarios for both CBC and CTR block cipher modes.
 
@@ -246,12 +244,12 @@ For technical support and additional information:
 
 - **PlayReady Business Queries:** [playready@microsoft.com](mailto:playready@microsoft.com)
 - **PlayReady Operations:** Visit [wmlalicensing.com](http://wmlalicensing.com/) or email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support:** [Support Options](https://test.playready.microsoft.com/Support/SupportOptions)
+- **PlayReady Technical Support:** [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)
 - **PlayReady Training Information:** [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)
 
 ## See Also
 
 - [PlayReady 4.0+ Test Content](playready-4x-test-content.md)
-- [PlayReady Features](../Features/playready-features.md)
-- [How to Test PlayReady Clients](how-to-test-client-server-versions.md)
+- [PlayReady Features](../../Features/playready-features.md)
+- [How to Test PlayReady Clients](../how-to-test-client-server-versions.md)
 - [AV1 Codec Information](https://aomedia.org/av1/)

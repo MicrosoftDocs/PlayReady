@@ -4,12 +4,10 @@ description: Test content collection for validating PlayReady 3.X scenarios, inc
 ms.assetid: "F8A3B521-9C47-4D2E-B185-7E9F1A5D8C3A"
 keywords: playready 3.0, test content, WRMHEADER 4.2, CENC, HEVC, H.264, multi-key content
 ms.date: 06/30/2025
-ms.topic: article
+ms.topic: reference
 ---
 
-# PlayReady 3.0+ Test Content
-
-This section contains a collection of test content that can be used to validate some PlayReady 3.X scenarios, for example using the [WRMHEADER v4.2](http://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF) and with audio and video tracks protected with different content keys.
+This section contains a collection of test content that can be used to validate some PlayReady 3.X scenarios, for example using the [WRMHEADER v4.2](https://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF) and with audio and video tracks protected with different content keys.
 
 ## Important Notes
 
@@ -383,12 +381,12 @@ For technical support and additional information:
 
 - **PlayReady Business Queries:** [playready@microsoft.com](mailto:playready@microsoft.com)
 - **PlayReady Operations:** Visit [wmlalicensing.com](http://wmlalicensing.com/) or email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support:** [Support Options](https://test.playready.microsoft.com/Support/SupportOptions)
+- **PlayReady Technical Support:** [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)
 - **PlayReady Training Information:** [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)
 
 ## See Also
 
 - [PlayReady 2.0+ Test Content](playready-2x-test-content.md)
 - [PlayReady 4.0+ Test Content](playready-4x-test-content.md)
-- [PlayReady Features](../Features/playready-features.md)
-- [How to Test PlayReady Clients](how-to-test-client-server-versions.md)
+- [PlayReady Features](../../Features/playready-features.md)
+- [How to Test PlayReady Clients](../how-to-test-client-server-versions.md)

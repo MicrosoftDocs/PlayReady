@@ -1,14 +1,9 @@
 ---
 title: PlayReady Test Content from Encoder Vendors
 description: Collection of test content generated using specific encoders for compatibility validation
-author: Microsoft
-ms.author: Microsoft
-ms.date: 2024-01-15
-ms.service: playready
+ms.date: 06/30/2025
 ms.topic: reference
 ---
-
-# PlayReady Test Content from Encoder Vendors
 
 This page provides a collection of test content that has been generated using specific encoders from various vendors. This content allows client developers and OEMs to verify compatibility with specific encoder implementations and validate their PlayReady integration across different encoding toolchains.
 
@@ -16,7 +11,6 @@ This page provides a collection of test content that has been generated using sp
 
 The vendor-specific test content collection includes:
 
-- **Anevia encoder content** - Content created using Anevia encoding solutions
 - **Spotify-specific content** - Multi-DRM content for dual DRM scenarios
 - **Various encoding toolchains** - Different encoder implementations and configurations
 - **Multiple streaming formats** - Support for Smooth Streaming, HLS, and MP4
@@ -24,42 +18,6 @@ The vendor-specific test content collection includes:
 This content helps ensure interoperability across different encoding ecosystems and validates PlayReady implementations with real-world encoder outputs.
 
 ## Vendor Test Content Collection
-
-### Anevia Encoder Content
-
-#### Anevia ViaDemand VOD Content
-
-| Property | Value |
-|----------|-------|
-| **Description** | See Anevia at [http://www.anevia-software.com/](http://www.anevia-software.com/) |
-| **Tool Chain** | Anevia ViaDemand |
-| **Creation Date** | 01 February 2017 |
-| **Video Encoding Settings** | H264 AVC1 up to 1920x1080 |
-| **Audio Encoding Settings** | AAC HE, 24000Hz, 1 channel (mono), 16bit |
-| **Encryption Settings** | CENC AES128-CTR |
-| **Video KID** | `{66306c66-096d-4b85-9f64-e5dd17cde172}` |
-| **Audio KID** | `{66306c66-096d-4b85-9f64-e5dd17cde172}` |
-| **Multi DRM** | False |
-| **PlayReady WRMHEADER** | 4.0 |
-| **Smooth Streaming Manifest (Protected)** | `http://cdn-demo.anevia.com/vod/localdisk/Chaos_Chapter1/_/ss_playready/Manifest` |
-| **HLS Manifest (Protected)** | `http://cdn-demo.anevia.com/vod/localdisk/Chaos_Chapter1/_/hls_playready/Chaos_Chapter1.m3u8` |
-
-#### Anevia NEA LIVE 500 Content
-
-| Property | Value |
-|----------|-------|
-| **Description** | See Anevia at [http://www.anevia-software.com/](http://www.anevia-software.com/) |
-| **Tool Chain** | Anevia NEA LIVE 500 |
-| **Creation Date** | 01 February 2017 |
-| **Video Encoding Settings** | H264 AVC1 up to 1920x1080 |
-| **Audio Encoding Settings** | AAC LC, 44100Hz, 2 channels, 16 bit, 192kbps |
-| **Encryption Settings** | CENC AES128-CTR |
-| **Video KID** | `{66306c66-096d-4b85-9f64-e5dd17cde172}` |
-| **Audio KID** | `{66306c66-096d-4b85-9f64-e5dd17cde172}` |
-| **Multi DRM** | False |
-| **PlayReady WRMHEADER** | 4.0 |
-| **Smooth Streaming Manifest (Protected)** | `http://cdn-demo.anevia.com/live/nas41/Arte/ss_playready/Manifest` |
-| **HLS Manifest (Protected)** | `http://cdn-demo.anevia.com/live/nas41/Arte/hls_playready/Arte.m3u8` |
 
 ### Spotify Multi-DRM Content
 
@@ -217,9 +175,9 @@ This content helps ensure interoperability across different encoding ecosystems 
 
 ## Vendor Information
 
-### Anevia
+### Ateme (formerly Anevia)
 
-- **Website**: [http://www.anevia-software.com/](http://www.anevia-software.com/)
+- **Website**: [https://www.ateme.com/](https://www.ateme.com/)
 - **Products**: ViaDemand (VOD), NEA LIVE 500 (Live Encoding)
 - **Specialization**: Professional video encoding and streaming solutions
 
@@ -241,7 +199,7 @@ This content helps ensure interoperability across different encoding ecosystems 
 
 ### Technical Support
 
-- **Support Portal**: [PlayReady Technical Support](https://test.playready.microsoft.com/Support/SupportOptions)
+- **Support Portal**: [PlayReady Technical Support](mailto:AskDRM@microsoft.com)
 
 ### Training Information
 

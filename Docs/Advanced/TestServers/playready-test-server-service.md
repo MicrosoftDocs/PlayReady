@@ -1,18 +1,8 @@
 ---
 title: "PlayReady Test License Server"
 description: "Comprehensive documentation for the PlayReady Public Test License Server including syntax options, parameters, and usage examples."
-services: playready
-documentationcenter: ''
-author: rolandlefranc
-manager: stevemay
-editor: ''
-ms.service: playready
-ms.devlang: na
 ms.topic: reference
-ms.tgt_pltfrm: na
-ms.workload: media
 ms.date: 01/01/2018
-ms.author: rolefran
 ---
 
 # PlayReady Test License Server
@@ -121,7 +111,7 @@ See the full documentation: [Legacy Syntax](playready-test-server-legacy-syntax.
 
 ## Rights and Right Restrictions Reference
 
-The full description of the rights and right restrictions is published in the [PlayReady Compliance and Robustness Rules](http://www.microsoft.com/playReady/licensing/compliance).
+The full description of the rights and right restrictions is published in the [PlayReady Compliance and Robustness Rules](https://www.microsoft.com/playReady/licensing/compliance).
 
 ## Related Topics
 
@@ -140,5 +130,5 @@ For technical support and additional resources:
 
 - **PlayReady Business Queries:** [playready@microsoft.com](mailto:playready@microsoft.com)
 - **PlayReady Operations:** Visit [http://wmlalicensing.com/](http://wmlalicensing.com/) and email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support:** Visit [Support Options](https://test.playready.microsoft.com/Support/SupportOptions)
+- **PlayReady Technical Support:** [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)
 - **PlayReady Training Information:** [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)

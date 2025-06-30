@@ -4,10 +4,8 @@ description: Test content collection for validating PlayReady 4.X scenarios, inc
 ms.assetid: "A1B2C3D4-5E6F-7890-ABCD-EF1234567890"
 keywords: playready 4.0, test content, CBCS, CENC CTR, VP9, AV1, modern encryption
 ms.date: 06/30/2025
-ms.topic: article
+ms.topic: reference
 ---
-
-# PlayReady 4.0+ Test Content
 
 This section contains a collection of test content that can be used to validate some PlayReady 4.X scenarios, for example using CBCS encryption.
 
@@ -193,12 +191,12 @@ For technical support and additional information:
 
 - **PlayReady Business Queries:** [playready@microsoft.com](mailto:playready@microsoft.com)
 - **PlayReady Operations:** Visit [wmlalicensing.com](http://wmlalicensing.com/) or email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support:** [Support Options](https://test.playready.microsoft.com/Support/SupportOptions)
+- **PlayReady Technical Support:** [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)
 - **PlayReady Training Information:** [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)
 
 ## See Also
 
 - [PlayReady 3.0+ Test Content](playready-3x-test-content.md)
 - [PlayReady AV1 Test Content](playready-av1-test-content.md)
-- [PlayReady Features](../Features/playready-features.md)
-- [How to Test PlayReady Clients](how-to-test-client-server-versions.md)
+- [PlayReady Features](../../Features/playready-features.md)
+- [How to Test PlayReady Clients](../how-to-test-client-server-versions.md)

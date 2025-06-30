@@ -434,7 +434,7 @@ right.AddPlayEnabler(
 
 ### Technical Support
 
-- **Support Portal**: [PlayReady Technical Support](https://test.playready.microsoft.com/Support/SupportOptions)
+- **Support Portal**: [PlayReady Technical Support](mailto:AskDRM@microsoft.com)
 
 ### Training Information
 
@@ -442,4 +442,4 @@ right.AddPlayEnabler(
 
 ---
 
-© Microsoft Corporation. All rights reserved. [Trademarks](http://go.microsoft.com/fwlink/?LinkID=623755) | [Privacy](http://privacy.microsoft.com/)
+© Microsoft Corporation. All rights reserved. [Trademarks](https://go.microsoft.com/fwlink/?LinkID=623755) | [Privacy](https://privacy.microsoft.com/)

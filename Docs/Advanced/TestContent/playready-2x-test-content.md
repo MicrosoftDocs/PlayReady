@@ -4,10 +4,8 @@ description: Test content collection compatible with PlayReady version 2.0 and h
 ms.assetid: "D4F2E681-7B94-4A2C-9F85-3E8D1C5A9B4E"
 keywords: playready 2.0, test content, media files, encryption, CENC, smooth streaming, DASH
 ms.date: 06/30/2025
-ms.topic: article
+ms.topic: reference
 ---
-
-# PlayReady 2.0+ Test Content
 
 The content provided on this page is compatible with PlayReady version 2.0 and higher clients: 2.0, 2.5, 2.11, 3.0, 3.2, and higher.
 
@@ -216,7 +214,7 @@ For technical support and additional information:
 
 - **PlayReady Business Queries:** [playready@microsoft.com](mailto:playready@microsoft.com)
 - **PlayReady Operations:** Visit [wmlalicensing.com](http://wmlalicensing.com/) or email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support:** [Support Options](https://test.playready.microsoft.com/Support/SupportOptions)
+- **PlayReady Technical Support:** [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)
 - **PlayReady Training Information:** [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)
 
 ## See Also

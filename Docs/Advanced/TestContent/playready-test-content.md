@@ -1,14 +1,9 @@
 ---
 title: PlayReady Test Content
 description: Comprehensive collection of PlayReady test content for validation and compatibility testing across different versions and scenarios
-author: Microsoft
-ms.author: Microsoft
-ms.date: 06/30/2025
-ms.service: playready
+ms.date: 6/30/2025
 ms.topic: reference
 ---
-
-# PlayReady Test Content
 
 This page provides access to a comprehensive collection of PlayReady test content designed to help developers validate their PlayReady implementations across different versions, codecs, and scenarios. The test content is organized by PlayReady version and specific use cases to facilitate targeted testing.
 
@@ -161,7 +156,7 @@ For technical support and additional information:
 
 - **PlayReady Business Queries**: [playready@microsoft.com](mailto:playready@microsoft.com)
 - **PlayReady Operations**: Visit [wmlalicensing.com](http://wmlalicensing.com/) or email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support**: [Support Options](https://test.playready.microsoft.com/Support/SupportOptions)  
+- **PlayReady Technical Support**: [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)  
 - **PlayReady Training Information**: [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)
 
 ## Related Topics

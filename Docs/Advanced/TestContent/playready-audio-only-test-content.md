@@ -1,10 +1,7 @@
 ---
-title: PlayReady Audio Only Test Content
+title: PlayReady Audio-Only Test Content
 description: Collection of audio-only test content for PlayReady validation and compatibility testing
-author: Microsoft
-ms.author: Microsoft
-ms.date: 2024-01-15
-ms.service: playready
+ms.date: 6/30/2025
 ms.topic: reference
 ---
 
@@ -182,7 +179,7 @@ All content uses PlayReady WRMHEADER version 4.0 and is encrypted using PIFF (Pr
 
 ### Technical Support
 
-- **Support Portal**: [PlayReady Technical Support](https://test.playready.microsoft.com/Support/SupportOptions)
+- **Support Portal**: [PlayReady Technical Support](mailto:AskDRM@microsoft.com)
 
 ### Training Information
 

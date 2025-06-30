@@ -1,10 +1,7 @@
 ---
 title: PlayReady Test Servers
 description: Documentation for PlayReady test servers and their various service configurations
-author: Microsoft
-ms.author: Microsoft
 ms.date: 06/30/2025
-ms.service: playready
 ms.topic: reference
 ---
 
@@ -230,7 +227,7 @@ Test Key Seed (Base64): "XVBovsmzhP9gRIZxWfFta3VVRPzVEWmJsazEJ46I"
 
 ### Technical Support
 
-- **Support Portal**: [PlayReady Technical Support](https://test.playready.microsoft.com/Support/SupportOptions)
+- **Support Portal**: [PlayReady Technical Support](mailto:AskDRM@microsoft.com)
 
 ### Training Information
 
