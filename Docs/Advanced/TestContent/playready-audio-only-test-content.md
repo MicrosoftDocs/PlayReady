@@ -41,20 +41,6 @@ All content uses PlayReady WRMHEADER version 4.0 and is encrypted using PIFF (Pr
 | **Smooth Streaming Manifest (Protected)** | `https://test.playready.microsoft.com/media/profficialsite/Taxi3_AACLCPR.ism/manifest` |
 | **Smooth Streaming Manifest (Clear)** | `https://test.playready.microsoft.com/media/profficialsite/Taxi3_AACLC.ism/manifest` |
 
-#### Taxi3 AAC-LC Audio File (154k)
-
-| Property | Value |
-|----------|-------|
-| **Tool Chain** | Smooth Protect (IIS Media Transform) |
-| **Creation Date** | 01 February 2010 |
-| **Video Encoding Settings** | None |
-| **Audio Encoding Settings** | AAC-LC |
-| **Encryption Settings** | PIFF Encryption AES128-CTR |
-| **Multi DRM** | False |
-| **PlayReady WRMHEADER** | 4.0 |
-| **Encrypted File** | `https://playreadydata.blob.core.windows.net/asset-33c2dbff-5f5e-475b-904e-b13f1d5f7186/Taxi3_AACLC_154k.isma?sv=2012-02-12&sr=c&si=d46b2dd3-e9f6-40e9-8a57-f31dfff51bfa&sig=p740biwUqRSljucOrlqBwl0YSMJTE6%2FYCFD6UobCc5k%3D&se=2026-07-13T16%3A51%3A58Z` |
-| **Clear File** | `https://playreadydata.blob.core.windows.net/asset-fef6cea3-9397-491b-8869-38e7afb390c7/Taxi3_AACLC_154k.isma?sv=2012-02-12&sr=c&si=0f5769ba-6f0d-4053-bfaf-0e875167b850&sig=Ta%2FPe3JBMWOhvuhG4mnKzVsXcugqD1M6gyZvBzwHe78%3D&se=2026-07-13T16%3A45%3A00Z` |
-
 ### AAC-HE Audio Content
 
 #### Taxi3 AAC-HE Audio (Smooth Streaming)
@@ -70,20 +56,6 @@ All content uses PlayReady WRMHEADER version 4.0 and is encrypted using PIFF (Pr
 | **PlayReady WRMHEADER** | 4.0 |
 | **Smooth Streaming Manifest (Protected)** | `https://test.playready.microsoft.com/media/profficialsite/Taxi3_AACHEPR.ism/manifest` |
 | **Smooth Streaming Manifest (Clear)** | `https://test.playready.microsoft.com/media/profficialsite/Taxi3_AACHE.ism/manifest` |
-
-#### Taxi3 AAC-HE Audio File (61k)
-
-| Property | Value |
-|----------|-------|
-| **Tool Chain** | Smooth Protect (IIS Media Transform) |
-| **Creation Date** | 01 February 2010 |
-| **Video Encoding Settings** | None |
-| **Audio Encoding Settings** | AAC-HE |
-| **Encryption Settings** | PIFF Encryption AES128-CTR |
-| **Multi DRM** | False |
-| **PlayReady WRMHEADER** | 4.0 |
-| **Encrypted File** | `https://playreadydata.blob.core.windows.net/asset-6fc57439-8b9c-4f7c-b936-7995e069c36b/Taxi3_AACHE_61k.isma?sv=2012-02-12&sr=c&si=f196a0fd-640b-4b49-99c4-37d07933dea1&sig=RZWekz%2BC%2FmDRLWutUEZVrBG2YRJ6NXsdEdqx6T%2FDkoU%3D&se=2026-07-13T16%3A54%3A30Z` |
-| **Clear File** | `https://playreadydata.blob.core.windows.net/asset-c443b46e-5914-4884-9e3b-c6784a041ab0/Taxi3_AACHE_61k.isma?sv=2012-02-12&sr=c&si=42c296b1-c6e3-4acf-a868-9fc121e29138&sig=4F5%2FcGT7qvbbQ1O39dADjjQ%2F6pUnESGUCYyDNm5t50I%3D&se=2026-07-13T16%3A54%3A10Z` |
 
 ## Technical Details
 
