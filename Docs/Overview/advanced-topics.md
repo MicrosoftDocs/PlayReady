@@ -32,4 +32,8 @@ This section covers more advanced features in the PlayReady technology.
 
 [How to Determine What Features a Client Supports](../Advanced/how-to-determine-client-features.md)
 
+[PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)
+
+[PlayReady Test Servers](../Advanced/TestServers/playready-test-servers.md)
+
 
