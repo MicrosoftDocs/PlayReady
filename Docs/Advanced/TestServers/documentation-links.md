@@ -19,7 +19,7 @@ This section provides a comprehensive list of PlayReady documentation resources 
 
 ### Windows Platform Documentation
 
-- **[Windows 10 SDK Documentation](https://docs.microsoft.com/windows/uwp/audio-video-camera/playready-client-sdk)** - Documentation for implementing PlayReady in Universal Windows Platform (UWP) applications
+- **[Windows 10 SDK Documentation](/windows/uwp/audio-video-camera/playready-client-sdk)** - Documentation for implementing PlayReady in Universal Windows Platform (UWP) applications
 
 - **[Windows 8.1 SDK Documentation](https://visualstudiogallery.msdn.microsoft.com/59be4d26-7f00-463e-9d61-2803c36b576b)** - Legacy documentation for Windows 8.1 PlayReady implementations
 
@@ -219,4 +219,4 @@ To access licensed partner resources:
 
 ---
 
-© Microsoft Corporation. All rights reserved. [Trademarks](https://go.microsoft.com/fwlink/?LinkID=623755) | [Privacy](https://privacy.microsoft.com/)
+© Microsoft Corporation. All rights reserved. [Trademarks](https://www.microsoft.com/legal/intellectualproperty/trademarks) | [Privacy](https://privacy.microsoft.com/)

@@ -1,3 +1,10 @@
+---
+title: Versioned Servers for PlayReady Test Environment
+description: Documentation for versioned PlayReady test servers supporting different PlayReady versions and features
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # Versioned Servers for PlayReady Test Environment
 
 ## Overview

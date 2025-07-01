@@ -1,3 +1,10 @@
+---
+title: Testing Output Protections
+description: Documentation for testing PlayReady output protection policies and restrictions using test server
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # Testing Output Protections
 
 ## Overview
@@ -442,4 +449,4 @@ right.AddPlayEnabler(
 
 ---
 
-© Microsoft Corporation. All rights reserved. [Trademarks](https://go.microsoft.com/fwlink/?LinkID=623755) | [Privacy](https://privacy.microsoft.com/)
+© Microsoft Corporation. All rights reserved. [Trademarks](https://www.microsoft.com/legal/intellectualproperty/trademarks) | [Privacy](https://privacy.microsoft.com/)
