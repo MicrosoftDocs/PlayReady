@@ -13,9 +13,9 @@ ms.topic: article
 
 In addition to the pages on this website, the PlayReady team provides the following documentation:
 
-* [PlayReady for Windows 10](https://learn.microsoft.com/windows/uwp/audio-video-camera/playready-Client-sdk) Documentation
+* [PlayReady for Windows 10](/windows/uwp/audio-video-camera/playready-client-sdk) Documentation
 
-* [PlayReady for Windows 8.1](https://learn.microsoft.com/previous-versions/windows/apps/dn468834(v=ieb.10)) Documentation
+* [PlayReady for Windows 8.1](/previous-versions/windows/apps/dn468834(v=ieb.10)) Documentation
 
 * [PlayReady Test Server](https://test.playready.microsoft.com/) with a test license server and test content
 

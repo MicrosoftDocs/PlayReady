@@ -26,7 +26,7 @@ There are two primary scenarios for sending a Secure Stop challenge:
 * When the media playback stops either at the end, or because the user stopped the media presentation somewhere in the middle.
 * When the previous session ends unexpectedly (for example, due to a system or app crash). The app will need to query, either at startup or shutdown, for any outstanding Secure Stop sessions and send challenge(s) separate from any other media playback.
 
-For information about Secure Stop in UWP apps, see the *[Add secure stop](https://learn.microsoft.com/windows/uwp/audio-video-camera/playready-Client-sdk#add-secure-stop)* section in the [PlayReady DRM](https://learn.microsoft.com/windows/uwp/audio-video-camera/playready-client-sdk) article.
+For information about Secure Stop in UWP apps, see the *[Add secure stop](/windows/uwp/audio-video-camera/playready-client-sdk#add-secure-stop)* section in the [PlayReady DRM](/windows/uwp/audio-video-camera/playready-client-sdk) article.
 
 ## Secure Stop 2
 
