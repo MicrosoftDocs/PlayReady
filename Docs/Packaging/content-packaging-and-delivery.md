@@ -41,7 +41,7 @@ These non audio/video content types are no longer supported in PlayReady 3.0 and
 
 Microsoft does not include a packager as part of the PlayReady deliverables. PlayReady instead provides specifications based on common encryption standards for use by encoders. Therefore the encryption format is not PlayReady specific, rather it's a function of the file format. The most widely used encryption format today is the Common Encryption ISO Standard format, **ISO/IEC 23001-7**.
 
-Basically, you could either create your own packager, or you could work with any type of open source encryptor (such as ffmpeg). In addition, you could work with a professional encoder company if you want to encrypt content with PlayReady (such as Harmonic, Elemental, Ericsson, Wowza, Allegro). Azure Media Services also provides a packaging functionality for clear content.
+Basically, you could either create your own packager, or you could work with any type of open source encryptor (such as ffmpeg). In addition, you could work with a professional encoder company if you want to encrypt content with PlayReady (such as Harmonic, Elemental, Ericsson, Wowza, Allegro).
 
 <a id="encryptiontools"></a>
 

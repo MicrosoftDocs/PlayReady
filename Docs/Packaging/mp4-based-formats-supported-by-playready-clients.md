@@ -133,7 +133,7 @@ MP4 files
 ```
 
 #### Test Vectors
-See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
+See [PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)
 
 
 
@@ -192,7 +192,7 @@ MP4 files
 ```
 
 #### Test Vectors
-See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
+See [PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)
 
 # [DASH Rotating Keys](#tab/case3)
 
@@ -310,7 +310,7 @@ QualityLevels(128003)/Manifest(aac_UND_2_128,format=m3u8-aapl)
 ```
 
 #### Test Vectors
-See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
+See [PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)
 
 
 
@@ -454,7 +454,7 @@ Smooth Streaming manifest
   [mdat] movie fragment data
 ```
 #### Test Vectors
-See [Test Content on the Test Server](https://test.playready.microsoft.com/Content/Content2X)
+See [PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)
 
 # [Smooth Rotating Keys](#tab/case9)
 
@@ -532,5 +532,5 @@ Example of a MP4 fragment header when the key rotates
 
 ## See also
 
-[PlayReady Test Server Content](https://test.playready.microsoft.com/)
+[PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)
 
