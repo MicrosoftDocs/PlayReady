@@ -188,7 +188,7 @@ PlayReady hardware security level for running within a trusted execution environ
 
 Here is an example of a service providing different policies based on the reported security level from the client’s challenge:
 
-A service will determine how policies should differ between software-based DRM clients and hardwarebased DRM clients. These policies may be driven by studio requirements. For example, a studio may require in the future that Ultra-HD or 4K content be limited to devices that support hardware-based PlayReady DRM.
+A service will determine how policies should differ between software-based DRM clients and hardware based DRM clients. These policies may be driven by studio requirements. For example, a studio may require in the future that Ultra-HD or 4K content be limited to devices that support hardware-based PlayReady DRM.
 
 With PlayReady 3 policies around resolutions can be accomplished in a couple of different ways. One way is to set the MaxResDecode policy of SL2000 licenses to the allowable limits provided by the content owner. The SL3000 devices would not get this policy restriction. Another option applicable to adaptive streaming technologies is to use a different KeyID when protecting the various resolutions. When detecting the security level, a service can then only provide licenses for the resolutions allowed for a software-based. A clients reporting a security level of SL3000 would get playback licenses for all the resolutions. PlayReady introduced a new DRM header to support this latter scenario by enabling multiple KeyIDs in the schema.
 
@@ -206,7 +206,7 @@ The versioned services are listed in the table below.
 | **SDK 2.9**  | [https://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx](https://test.playready.microsoft.com/directtaps/svc/pr29/rightsmanager.asmx) |
 | **SDK 3.0**  | [https://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx](https://test.playready.microsoft.com/directtaps/svc/pr30/rightsmanager.asmx) |
 
-These versioned services can utilize the parameters listed on the PlayReady test site for testing specific policies: [https://testweb.playready.microsoft.com/](https://testweb.playready.microsoft.com/).
+These versioned services can utilize the parameters listed in the [PlayReady Test Server Service](../Advanced/TestServers/playready-test-server-service.md) documentation for testing specific policies.
 
 >[NOTE!]
 >Not all of the policy parameters will work with each of the service versions. For example, MaxResDecode is a new policy and only works with services developed with the Server SDK 3.0 or later.
