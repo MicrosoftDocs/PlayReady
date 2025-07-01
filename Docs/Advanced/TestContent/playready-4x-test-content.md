@@ -7,6 +7,8 @@ ms.date: 06/30/2025
 ms.topic: reference
 ---
 
+# PlayReady 4.0+ Test Content
+
 This section contains a collection of test content that can be used to validate some PlayReady 4.X scenarios, for example using CBCS encryption.
 
 ## Important Notes

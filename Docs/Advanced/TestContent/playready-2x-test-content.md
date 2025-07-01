@@ -7,6 +7,8 @@ ms.date: 06/30/2025
 ms.topic: reference
 ---
 
+# PlayReady 2.0+ Test Content
+
 The content provided on this page is compatible with PlayReady version 2.0 and higher clients: 2.0, 2.5, 2.11, 3.0, 3.2, and higher.
 
 ## Important Notes

@@ -7,6 +7,8 @@ ms.date: 06/30/2025
 ms.topic: reference
 ---
 
+# PlayReady 3.0+ Test Content
+
 This section contains a collection of test content that can be used to validate some PlayReady 3.X scenarios, for example using the [WRMHEADER v4.2](https://download.microsoft.com/download/2/3/8/238F67D9-1B8B-48D3-AB83-9C00112268B2/PlayReady%20Header%20Object%202015-08-13-FINAL-CL.PDF) and with audio and video tracks protected with different content keys.
 
 ## Important Notes

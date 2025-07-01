@@ -1,3 +1,10 @@
+---
+title: CustomData JSON Syntax for PlayReady Test Server
+description: Documentation for CustomData JSON syntax used in PlayReady test server license configuration
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # CustomData JSON Syntax for PlayReady Test Server
 
 ## Overview

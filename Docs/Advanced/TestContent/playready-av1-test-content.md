@@ -7,6 +7,8 @@ ms.date: 06/30/2025
 ms.topic: reference
 ---
 
+# PlayReady AV1 Test Content
+
 This section contains a collection of test content that can be used to validate PlayReady+AV1 scenarios for both CBC and CTR block cipher modes.
 
 ## Test Content Collection

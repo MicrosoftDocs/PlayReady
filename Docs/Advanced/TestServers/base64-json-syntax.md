@@ -1,3 +1,10 @@
+---
+title: Base64 JSON Syntax for PlayReady Test Server
+description: Documentation for Base64 JSON syntax used in PlayReady test server license configuration
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # Base64 JSON Syntax for PlayReady Test Server
 
 ## Overview

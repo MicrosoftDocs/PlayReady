@@ -1,3 +1,10 @@
+---
+title: PlayReady Documentation Links
+description: Comprehensive list of PlayReady documentation resources from Microsoft and the community
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # PlayReady Documentation Links
 
 ## Overview
@@ -8,11 +15,11 @@ This section provides a comprehensive list of PlayReady documentation resources 
 
 ### General PlayReady Documentation
 
-- **[PlayReady Documentation Portal](https://docs.microsoft.com/playready)** - General public PlayReady documentation covering core concepts, implementation guides, and best practices
+- **[PlayReady Documentation Portal](/playready)** - General public PlayReady documentation covering core concepts, implementation guides, and best practices
 
 ### Windows Platform Documentation
 
-- **[Windows 10 SDK Documentation](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/playready-client-sdk)** - Documentation for implementing PlayReady in Universal Windows Platform (UWP) applications
+- **[Windows 10 SDK Documentation](https://docs.microsoft.com/windows/uwp/audio-video-camera/playready-client-sdk)** - Documentation for implementing PlayReady in Universal Windows Platform (UWP) applications
 
 - **[Windows 8.1 SDK Documentation](https://visualstudiogallery.msdn.microsoft.com/59be4d26-7f00-463e-9d61-2803c36b576b)** - Legacy documentation for Windows 8.1 PlayReady implementations
 
@@ -41,8 +48,6 @@ The sample applications demonstrate:
 
 **PlayReady Documentation Package** - Comprehensive documentation delivered to licensed companies:
 
-![PlayReady Documentation Package](https://testweb.playready.microsoft.com/images/chm02.png)
-
 - Server SDK documentation
 - Device Porting Kit documentation
 - Standalone CHM file format
@@ -52,8 +57,6 @@ The sample applications demonstrate:
 ### Training Materials
 
 **PlayReady Training Resources** - Available to licensed companies through the licensing portal:
-
-![PlayReady Training Material](https://testweb.playready.microsoft.com/images/website-wmlalicensing-kb.png)
 
 Access training materials at: [https://wmlalicensing.com](https://wmlalicensing.com/)
 
@@ -77,8 +80,6 @@ Access training materials at: [https://wmlalicensing.com](https://wmlalicensing.
 ### Microsoft PlayReady Website
 
 **[Microsoft PlayReady Portal](https://www.microsoft.com/playready)** - Official PlayReady website
-
-![PlayReady Compliance and Robustness Rules](https://testweb.playready.microsoft.com/images/website-crrr.png)
 
 **Available Information:**
 
