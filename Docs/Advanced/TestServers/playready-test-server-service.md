@@ -49,7 +49,7 @@ The PlayReady Test Server supports four different syntax options for specifying 
 - Example: video track encrypted with one key set at SL3000, and audio track encrypted with another key set at SL2000
 - New date time format yyyymmdd (example: 20171231) and allows set hours, minutes and seconds: yyyymmdd[hhmmss] (example: 20171231235959)
 
-See the full documentation: [Query String Syntax](playready-test-server-query-string-syntax.md)
+See the full documentation: [Query String Syntax](query-string-syntax.md)
 
 ### 2. CustomData JSON Syntax
 
@@ -72,7 +72,7 @@ CustomData = "json=[{'kid':'B6E39626-1CFB-4AA1-BCBD-4EF1ABA7843A','sl':'3000'},{
 - Allow all sorts of properties and combinations of rights and right restrictions
 - Require the client to be able to insert data in LicenseRequest.CustomData
 
-See the full documentation: [CustomData JSON Syntax](playready-test-server-customdata-json-syntax.md)
+See the full documentation: [CustomData JSON Syntax](customdata-json-syntax.md)
 
 ### 3. Base64 JSON Syntax
 
@@ -91,7 +91,7 @@ http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg64=W3sna2lkJzo
 - Does not require the client to be able to insert data in LicenseRequest.CustomData
 - Note: '+' characters are acceptable in the base64 encoded string
 
-See the full documentation: [Base64 JSON Syntax](playready-test-server-base64-json-syntax.md)
+See the full documentation: [Base64 JSON Syntax](base64-json-syntax.md)
 
 ### 4. Legacy Syntax
 
@@ -107,7 +107,7 @@ http://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&First
 - Limited possibilities (one license only)
 - "US" date format: mm/dd/yyyy (example: 12/31/2017)
 
-See the full documentation: [Legacy Syntax](playready-test-server-legacy-syntax.md)
+See the full documentation: [Legacy Syntax](legacy-syntax.md)
 
 ## Rights and Right Restrictions Reference
 
@@ -116,13 +116,13 @@ The full description of the rights and right restrictions is published in the [P
 ## Related Topics
 
 - [PlayReady Test Servers Overview](playready-test-servers.md)
-- [Query String Syntax](playready-test-server-query-string-syntax.md)
-- [CustomData JSON Syntax](playready-test-server-customdata-json-syntax.md)
-- [Base64 JSON Syntax](playready-test-server-base64-json-syntax.md)
-- [Legacy Syntax](playready-test-server-legacy-syntax.md)
-- [Versioned Servers](playready-test-server-versioned.md)
-- [Secure Stop Server](playready-test-server-secure-stop.md)
-- [Secure Delete Server](playready-test-server-secure-delete.md)
+- [Query String Syntax](query-string-syntax.md)
+- [CustomData JSON Syntax](customdata-json-syntax.md)
+- [Base64 JSON Syntax](base64-json-syntax.md)
+- [Legacy Syntax](legacy-syntax.md)
+- [Versioned Servers](versioned-servers.md)
+- [Secure Stop Server](secure-stop-server.md)
+- [Secure Delete Server](secure-delete-server.md)
 
 ## Support
 

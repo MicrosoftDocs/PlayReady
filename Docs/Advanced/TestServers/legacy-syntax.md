@@ -1,3 +1,10 @@
+---
+title: Legacy Syntax for PlayReady Test Server
+description: Documentation for legacy syntax supported by PlayReady test server for backward compatibility
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # Legacy Syntax for PlayReady Test Server
 
 ## Overview

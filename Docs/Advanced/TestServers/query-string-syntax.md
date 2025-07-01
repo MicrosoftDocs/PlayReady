@@ -1,3 +1,10 @@
+---
+title: Query String Syntax for PlayReady Test Server
+description: Documentation for query string syntax used in PlayReady test server license requests
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # Query String Syntax for PlayReady Test Server
 
 ## Overview

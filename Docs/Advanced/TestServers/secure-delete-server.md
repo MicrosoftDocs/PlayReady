@@ -1,3 +1,10 @@
+---
+title: Secure Delete Server for PlayReady Test Environment
+description: Documentation for PlayReady secure delete test server functionality and endpoints
+ms.topic: reference
+ms.date: 06/30/2025
+---
+
 # Secure Delete Server for PlayReady Test Environment
 
 ## Overview
