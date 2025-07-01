@@ -60,4 +60,4 @@ If you have decided to develop your own PlayReady Packager, you will need to dec
 7. Choose how the clients are going to contact the PlayReady License Server to acquire the content encryption keys. The client apps must be aware of the PlayReady License Server URL (also known as License Acquisition URL, or LA URL) when they need to acquire a license. The client apps could be programmed to have that LA URL value hardcoded, or retrieve it dynamically from the server. If the client app doesn't have this LA URL value, it will use the LA URL value found in the content's PlayReady Header, which is the default LA URL. Although it is not required, it is very common for services to include a default LA URL value in the content's PlayReady Header at packaging time.
 
 ## See also
-[PlayReady Test Server Content](https://test.playready.microsoft.com/)
+[PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)

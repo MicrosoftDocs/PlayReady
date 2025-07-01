@@ -26,7 +26,7 @@ There are two primary scenarios for sending a Secure Stop challenge:
 * When the media playback stops either at the end, or because the user stopped the media presentation somewhere in the middle.
 * When the previous session ends unexpectedly (for example, due to a system or app crash). The app will need to query, either at startup or shutdown, for any outstanding Secure Stop sessions and send challenge(s) separate from any other media playback.
 
-For information about Secure Stop in UWP apps, see the *[Add secure stop](https://learn.microsoft.com/windows/uwp/audio-video-camera/playready-Client-sdk#add-secure-stop)* section in the [PlayReady DRM](https://learn.microsoft.com/windows/uwp/audio-video-camera/playready-client-sdk) article.
+For information about Secure Stop in UWP apps, see the *[Add secure stop](/windows/uwp/audio-video-camera/playready-client-sdk#add-secure-stop)* section in the [PlayReady DRM](/windows/uwp/audio-video-camera/playready-client-sdk) article.
 
 ## Secure Stop 2
 
@@ -36,49 +36,11 @@ A service may use the SecureStop feature to enforce playback across multiple cli
 
 The following table shows the Server App logic on different Client Security Level and Secure Stop versions.
 
-<style>
-table {
-    border: none;
-    width: 100%;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #0000FF;
-    color: white;
-}
-</style>
-
-<table>
-  <tr>
-    <th>Client Version</th>
-    <th>SecureStop Server Logic</th>
-    <th>Robustness</th>
-  </tr>
-  <tr>
-    <td>PlayReady version 2.0+<br>SL2000</td>
-    <td>Server does not receive any SecureStop message from the client. Use app logic to do this.</td>
-    <td>Low</td>
-  </tr>
-  <tr>
-    <td>PlayReady version 3.0+ <br>SL3000 (Example: Windows 10 App)</td>
-    <td>Server receives a SecureStop1 message from the client. <br><span style="color:red">The robustness of this message against attacks is higher than simple app logic.</span></td>
-    <td>Medium</td>
-  </tr>
-  <tr>
-    <td>PlayReady version 4.2+ <br>SL3000</td>
-    <td>Server receives a SecureStop2 message from the client. A malicious SecureStop2 message from this client would require an attack in the client’s Trusted Execution Environment (TEE). <br><span style="color:red">The robustness of this message against attacks is higher than SecureStop1.</span></td>
-    <td>High</td>
-  </tr>
-</table>
-
-<br>
+| Client Version | SecureStop Server Logic | Robustness |
+|----------------|-------------------------|------------|
+| PlayReady version 2.0+ SL2000 | Server does not receive any SecureStop message from the client. Use app logic to do this. | Low |
+| PlayReady version 3.0+ SL3000 (Example: Windows 10 App) | Server receives a SecureStop1 message from the client. **The robustness of this message against attacks is higher than simple app logic.** | Medium |
+| PlayReady version 4.2+ SL3000 | Server receives a SecureStop2 message from the client. A malicious SecureStop2 message from this client would require an attack in the client's Trusted Execution Environment (TEE). **The robustness of this message against attacks is higher than SecureStop1.** | High |
 
 In order to take advantage of the Secure Stop 2 feature, the Server application must enable the feature as follows:
 
@@ -88,4 +50,4 @@ In order to take advantage of the Secure Stop 2 feature, the Server application 
 
 ## See also
 
-[Secure Stop Server](https://learn.microsoft.com/playready/overview/secure-stop-server)
+[Secure Stop Server](../Overview/secure-stop-server.md)
