@@ -92,4 +92,4 @@ For adaptive streaming assets, Microsoft recommends inserting the PlayReady Head
 
 [Supported Formats](mp4-based-formats-supported-by-playready-clients.md)
 
-[PlayReady Test Server Content](https://test.playready.microsoft.com/)
+[PlayReady Test Content](../Advanced/TestContent/playready-test-content.md)

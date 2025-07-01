@@ -98,7 +98,7 @@ If a service uses a single client application on both legacy devices (PlayReady 
 
 ![Configuring a Proxy](../images/migration-service-proxy.png)
 
-This can be done in a proxy by inspecting the license challenge. The PK version will be noted in the <CLIENTVERSION> element.  
+This can be done in a proxy by inspecting the license challenge. The PK version will be noted in the `<CLIENTVERSION>` element.
 
 The element is located within the SOAP challenge under the following element:  
 
