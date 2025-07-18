@@ -23,3 +23,5 @@ Microsoft PlayReady adds, removes, and changes functionality from version to ver
 
 ### [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md)
 
+### [What's New in PlayReady Version 4.7](what-is-new/what-is-new-4-7.md)
+
