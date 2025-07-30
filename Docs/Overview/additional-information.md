@@ -38,10 +38,10 @@ In addition to the pages on this website, the PlayReady team provides the follow
 
   Provides video training and PlayReady conference videos that describe in detail aspects of PlayReady implementation. This website is restricted to licensees and requires an authorization token.
 
-* [PlayReady Training Slides](http://wmlalicensing.com)
+* [PlayReady Training Slides](https://home.ipla.microsoft.com/)
 
   Provides training slides (Knowledge Base) that describe how to implement PlayReady Clients and PlayReady Servers. This website is restricted to licensees.
 
-* [PlayReady Licensing Portal](http://wmlalicensing.com)
+* [PlayReady Licensing Portal](https://home.ipla.microsoft.com)
 
   Provides information and operations about licensing agreements and certificates
