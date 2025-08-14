@@ -142,6 +142,8 @@
 
 ### [PlayReady Test Servers](Advanced/TestServers/playready-test-servers.md)
 
+#### [Query String Syntax Documentation](Advanced/TestServers/query-string-syntax.md)
+
 ## [Specifications](Specifications/specifications.md)
 
 ### [PlayReady Header Specification](Specifications/playready-header-specification.md)
