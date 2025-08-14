@@ -50,8 +50,8 @@ The client info feature processes standard PlayReady license acquisition request
                                         <ALGID>AESCTR</ALGID>
                                     </PROTECTINFO>
                                     <KID>JpbjtvscoUq8vU7xq6eEOg==</KID>
-                                    <LA_URL>http://test.playready.microsoft.com/service/rightsmanager.asmx</LA_URL>
-                                    <LUI_URL>http://test.playready.microsoft.com/service/getrights.html</LUI_URL>
+                                    <LA_URL>https://test.playready.microsoft.com/service/rightsmanager.asmx</LA_URL>
+                                    <LUI_URL>https://test.playready.microsoft.com/service/getrights.html</LUI_URL>
                                 </DATA>
                             </WRMHEADER>
                         </ContentHeader>
@@ -436,26 +436,3 @@ public OutputProtectionLevels DetermineOutputProtections(ClientInfo clientInfo)
 - [Query String Syntax](query-string-syntax.md) - Parameter syntax reference
 - [Testing Output Protections](testing-output-protections.md) - Output protection testing
 - [PlayReady Test Servers](playready-test-servers.md) - Complete server documentation
-
-## Support Resources
-
-### Business Queries
-
-- **Email**: [playready@microsoft.com](mailto:playready@microsoft.com)
-
-### Operations Queries
-
-- **Website**: [http://wmlalicensing.com/](http://wmlalicensing.com/)
-- **Email**: [ipla@microsoft.com](mailto:ipla@microsoft.com)
-
-### Technical Support
-
-- **Support Portal**: [PlayReady Technical Support](mailto:AskDRM@microsoft.com)
-
-### Training Information
-
-- **Email**: [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)
-
----
-
-© Microsoft Corporation. All rights reserved. [Trademarks](https://www.microsoft.com/legal/intellectualproperty/trademarks) | [Privacy](https://privacy.microsoft.com/)
