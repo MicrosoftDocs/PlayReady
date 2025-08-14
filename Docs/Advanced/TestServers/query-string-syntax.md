@@ -22,7 +22,7 @@ Note: the parameters need to include persist:true if you want to receive persi
 
 ## Examples
 
-| LAURL (http://test.playready.microsoft.com/service/) | Description |
+| LAURL (https://test.playready.microsoft.com/service/) | Description |
 | --- | --- |
 | `rightsmanager.asmx` | Return one non-persistent license with a PLAY right and a Security Level of 150 for the kid found in the WRMHEADER, using the Test Key Seed |
 | `rightsmanager.asmx?cfg=(ckt:aescbc)` | NEW IN PLAYREADY 4.0. Return one non-persistent license with a PLAY right for the kid found in the WRMHEADER, with a content key type set for AESCBC encryption (as opposed to AESCTR) |
