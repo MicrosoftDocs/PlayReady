@@ -33,11 +33,11 @@ This content helps ensure interoperability across different encoding ecosystems 
 | **Video Encoding Settings** | N/A |
 | **Audio Encoding Settings** | AAC |
 | **Encryption Settings** | CENC AES128-CTR |
-| **Key ID (KID)** | `{b0498601-8a4a-4418-9fa5-5a326ea2961c}` |
+| **Key ID (KID)** | `{aaaaaaaa-0b0b-1c1c-2d2d-333333333333}` |
 | **Key ID (Base64)** | `AYZJsEqKGESfpVoybqKWHA==` |
 | **Key Value (Hex)** | `{0x12, 0x34, 0x56, 0x78, 0x12, 0x34, 0x56, 0x78, 0x12, 0x34, 0x56, 0x78, 0x12, 0x34, 0x56, 0x78}` |
 | **Key Value (Base64)** | `EjRWeBI0VngSNFZ4EjRWeA==` |
-| **Audio KID** | `{b0498601-8a4a-4418-9fa5-5a326ea2961c}` |
+| **Audio KID** | `{aaaaaaaa-0b0b-1c1c-2d2d-333333333333}` |
 | **Multi DRM** | True |
 | **PlayReady WRMHEADER** | 4.0 |
 | **Encrypted File** | `https://prtsprodstorage.blob.core.windows.net/media/vendor/Spotify-DualDRM2017-bbb/Spotify-DualDRM2017-bbb.mp4` |
