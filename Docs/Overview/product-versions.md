@@ -36,6 +36,7 @@ The following table shows the feature availability for each version of the PlayR
 >|Oct'21|**4.5**| - See [What's New in PlayReady Version 4.5](what-is-new/what-is-new-4-5.md) | 4.5.7218 | 4.5.7218 | 4.5.7220 | &mdash; | &mdash; |
 >|Dec'22|**4.6**| - See [What's New in PlayReady Version 4.6](what-is-new/what-is-new-4-6.md) | 4.6.7668 | 4.6.7604 | 4.6.7673 | &mdash; | &mdash; |
 >|Aug'25|**4.7**| - See [What's New in PlayReady Version 4.7](what-is-new/what-is-new-4-7.md) | 4.7.8118 | 4.7.8118 | 4.7.8118 | 4.7.8102 | &mdash; |
+>|Aug'25|**4.7.1**| - See [What's New in PlayReady Version 4.7](what-is-new/what-is-new-4-7.md) | 4.7.8119 | 4.7.8119 | 4.7.8118 | 4.7.8102 | &mdash; |
 
 ## Porting Kit Version Compatibility with Server SDK Versions
 
