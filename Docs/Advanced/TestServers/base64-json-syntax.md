@@ -29,7 +29,7 @@ Before encoding, create a JSON configuration:
 ```json
 {
   "licenseType": "persistent",
-  "keyId": "12345678-1234-1234-1234-123456789012",
+  "keyId": "aaaaaaaa-0b0b-1c1c-2d2d-333333333333",
   "outputProtection": {
     "digital": "required",
     "analog": "optional"
@@ -44,7 +44,7 @@ Before encoding, create a JSON configuration:
 **Original JSON:**
 
 ```json
-{"licenseType": "persistent", "keyId": "12345678-1234-1234-1234-123456789012"}
+{"licenseType": "persistent", "keyId": "aaaaaaaa-0b0b-1c1c-2d2d-333333333333"}
 ```
 
 **Base64 Encoded:**
@@ -60,7 +60,7 @@ eyJsaWNlbnNlVHlwZSI6InBlcnNpc3RlbnQiLCJrZXlJZCI6IjEyMzQ1Njc4LTEyMzQtMTIzNC0xMjM0
 ```json
 {
   "licenseType": "rental",
-  "keyId": "87654321-4321-4321-4321-210987654321",
+  "keyId": "bbbbbbbb-1c1c-2d2d-3e3e-444444444444",
   "expirationDate": "2024-12-31T23:59:59Z",
   "outputProtection": {
     "digital": "required",
