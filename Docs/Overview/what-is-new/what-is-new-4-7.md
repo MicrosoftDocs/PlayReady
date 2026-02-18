@@ -35,9 +35,9 @@ The following APIs were added:
 *  public byte[] Microsoft.Media.Drm.Certificate.CertificateChain
 *  public bool Microsoft.Media.Drm.LicenseResponse.ForceSignature
 
-### 4.7.8119 Patch Notes
+### 4.7.8120 Patch Notes
 
-The following changes were made to the RMSDK in the 4.7.8119 patch:
+The following changes were made to the RMSDK in the 4.7.8120 patch:
 
 * General bug fixes around Counter Signature Enforcement.
 * Adding Server Authorization Key History for proper handling of rolled certificates
