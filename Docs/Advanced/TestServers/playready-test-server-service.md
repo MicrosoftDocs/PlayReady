@@ -7,7 +7,7 @@ ms.date: 01/01/2018
 
 # PlayReady Test License Server
 
-The PlayReady Public Test Server available at `http://test.playready.microsoft.com/service/rightsmanager.asmx` unconditionally delivers to clients licenses with customizable rights and right restrictions, by providing parameters as arguments to the license request. The client can specify the rights requested in the returned license(s) by providing a set of parameters in the query string, or in the request headers. The PlayReady Public Test Server now supports multiple syntaxes to provide these parameters so testers can choose the one most appropriate to their case.
+The PlayReady Public Test Server available at `https://test.playready.microsoft.com/service/rightsmanager.asmx` unconditionally delivers to clients licenses with customizable rights and right restrictions, by providing parameters as arguments to the license request. The client can specify the rights requested in the returned license(s) by providing a set of parameters in the query string, or in the request headers. The PlayReady Public Test Server now supports multiple syntaxes to provide these parameters so testers can choose the one most appropriate to their case.
 
 The recommended syntax is the **Query String Syntax**.
 
@@ -35,8 +35,8 @@ The PlayReady Test Server supports four different syntax options for specifying 
 
 **Examples:**
 
-- `http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(begindate:20151201,expiration:20171230)`
-- `http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(kid:B6E39626-1CFB-4AA1-BCBD-4EF1ABA7843A,sl:3000),(kid:7C9484BA-C238-467A-869C-CDD8C7167712,sl:2000)`
+- `https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(begindate:20151201,expiration:20171230)`
+- `https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(kid:B6E39626-1CFB-4AA1-BCBD-4EF1ABA7843A,sl:3000),(kid:7C9484BA-C238-467A-869C-CDD8C7167712,sl:2000)`
 
 **Features:**
 
@@ -56,7 +56,7 @@ See the full documentation: [Query String Syntax](query-string-syntax.md)
 **Example:**
 
 ```http
-http://test.playready.microsoft.com/service/rightsmanager.asmx
+https://test.playready.microsoft.com/service/rightsmanager.asmx
 ```
 
 with:
@@ -78,7 +78,7 @@ See the full documentation: [CustomData JSON Syntax](customdata-json-syntax.md)
 
 **Example:**
 ```
-http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg64=W3sna2lkJzonQjZFMzk2MjYtMUNGQi00QUExLUJDQkQtNEVGMUFCQTc4NDNBJywnc2wnOiczMDAwJ30seydraWQnOic3Qzk0ODRCQS1DMjM4LTQ2N0EtODY5Qy1DREQ4QzcxNjc3MTInLCdzbCc6JzIwMDAnfV0=
+https://test.playready.microsoft.com/service/rightsmanager.asmx?cfg64=W3sna2lkJzonQjZFMzk2MjYtMUNGQi00QUExLUJDQkQtNEVGMUFCQTc4NDNBJywnc2wnOiczMDAwJ30seydraWQnOic3Qzk0ODRCQS1DMjM4LTQ2N0EtODY5Qy1DREQ4QzcxNjc3MTInLCdzbCc6JzIwMDAnfV0=
 ```
 
 **Features:**
@@ -97,13 +97,13 @@ See the full documentation: [Base64 JSON Syntax](base64-json-syntax.md)
 
 **Example:**
 ```
-http://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60&UncompressedDigitalVideoOPL=270
+https://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&FirstPlayExpiration=60&UncompressedDigitalVideoOPL=270
 ```
 
 **Features:**
-- Inherited from and compatible with the previous test server hosted on `http://playready.directtaps.net/rightsmanager.asmx`
+- Inherited from and compatible with the previous test server hosted on `https://playready.directtaps.net/rightsmanager.asmx`
 - The '&' character in the LA URL isn't well supported by XML parser, so for inclusion as a LA_URL value in a WRMHEADER (media file header or media stream header), you have to escape this character
-- Example: `http://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&amp;UseSimpleNonPersistentLicense=1`
+- Example: `https://test.playready.microsoft.com/service/rightsmanager.asmx?PlayRight=1&amp;UseSimpleNonPersistentLicense=1`
 - Limited possibilities (one license only)
 - "US" date format: mm/dd/yyyy (example: 12/31/2017)
 
@@ -123,12 +123,3 @@ The full description of the rights and right restrictions is published in the [P
 - [Versioned Servers](versioned-servers.md)
 - [Secure Stop Server](secure-stop-server.md)
 - [Secure Delete Server](secure-delete-server.md)
-
-## Support
-
-For technical support and additional resources:
-
-- **PlayReady Business Queries:** [playready@microsoft.com](mailto:playready@microsoft.com)
-- **PlayReady Operations:** Visit [http://wmlalicensing.com/](http://wmlalicensing.com/) and email [ipla@microsoft.com](mailto:ipla@microsoft.com)
-- **PlayReady Technical Support:** [AskDRM@microsoft.com](mailto:AskDRM@microsoft.com)
-- **PlayReady Training Information:** [plyrdyev@microsoft.com](mailto:plyrdyev@microsoft.com)

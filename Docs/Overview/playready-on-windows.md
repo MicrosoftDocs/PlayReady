@@ -15,7 +15,7 @@ For Universal Windows Platform (UWP) applications, Microsoft provides a PlayRead
 
 For Windows Store applications (Windows 8.1), Microsoft also provides a PlayReady SDK. For the Windows 8.1 reference, see [Developing PlayReady Windows Store and Web Apps](/previous-versions/windows/apps/dn468834(v=ieb.10)).
 
-## PlayReady on Windows 7, MacOS
+## PlayReady on Window 7, MacOS
 
 Some Microsoft Partners provide SDKs to run PlayReady on Windows 7 and Mac OS, based on Electron, Xamarin, or other technologies. You can contact these [PlayReady Partners](https://www.microsoft.com/playready/partners/) directly for more information.
 
