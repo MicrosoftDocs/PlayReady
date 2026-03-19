@@ -23,7 +23,7 @@ Starting with PlayReady 4.7, dual-signed (counter-signed) certificates are now s
 
 * The .NET Core SDK has been migrated to .NET version 8.0.
 * Root-of-trust validation options have been implemented across appsettings.json files and server-side configurations.
-* RMSDK versioning is now embedded in server responses to improve telemetry and facilitate client compliance tracking.
+* PlayReady Server SDK versioning is now embedded in server responses to improve telemetry and facilitate client compliance tracking.
 * A new property was added to the Certificate object to expose the raw bytes of the certificate chain.
 * Gets or sets a value indicating whether the server should sign the license response. By default, only responses that contain persistent licenses are signed.
 
@@ -37,7 +37,7 @@ The following APIs were added:
 
 ### 4.7.8120 Patch Notes
 
-The following changes were made to the RMSDK in the 4.7.8120 patch:
+The following changes were made in the 4.7.8120 patch:
 
 * General bug fixes around Counter Signature Enforcement.
 * Adding Server Authorization Key History for proper handling of rolled certificates
