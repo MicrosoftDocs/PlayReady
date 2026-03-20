@@ -37,7 +37,7 @@ Per the requirements of the [Compliance Rules for PlayReady Products](https://ww
 
 Starting with PlayReady Server version 4.3, your server application may explicitly ignore one or more revoked hashes and continue to issue content to them even though they are revoked. This may be useful to companies that both produce and distribute protected content and who wish to have more control over where that content can flow.
 
-To utilize this feature, you will need to create a new XML file containing the certificate hashes you wish to ignore as well as add a new entry to the web.config file of your RMSDK implementation.  The XML file has the following format.
+To utilize this feature, you will need to create a new XML file containing the certificate hashes you wish to ignore as well as add a new entry to the web.config file of your PlayReady Server SDK implementation.  The XML file has the following format.
 
 ```XML
 <?xml version="1.0" ENCODING="utf-8"?>
@@ -53,11 +53,11 @@ The data within the "CertificateHash" node must match the hash of the revoked mo
 
 You must also reference this XML file from within your server configuration.
 
-* For .Net Core-based RMSDK deployments:
+* For .Net Core-based PlayReady Server SDK deployments:
     * The XML file should be added as an item project.
     * The RevocationAllowFile string in config/RMSDKConfig.cs should be updated with the path to the XML file.
 
-* For IIS-based RMSDK deployments:
+* For IIS-based PlayReady Server SDK deployments:
     * Add a new key with a name of "REVOCATIONALLOWFILE" which points to your XML file to the web.config file.
     * For example, if the XML file above was named "REVOCATIONALLOWSAMPLE.XML", the web.config file would be updated as follows.
 
