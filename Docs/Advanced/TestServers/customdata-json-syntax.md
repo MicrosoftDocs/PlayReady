@@ -54,7 +54,7 @@ Configure encryption keys and identifiers:
 
 ```json
 {
-  "keyId": "12345678-1234-1234-1234-123456789012",
+  "keyId": "aaaaaaaa-0b0b-1c1c-2d2d-333333333333",
   "contentKey": "base64EncodedContentKey",
   "keyRotation": {
     "enabled": true,
@@ -91,7 +91,7 @@ Control output protection requirements:
   "version": "1.0",
   "config": {
     "licenseType": "persistent",
-    "keyId": "12345678-1234-1234-1234-123456789012",
+    "keyId": "aaaaaaaa-0b0b-1c1c-2d2d-333333333333",
     "policies": {
       "playback": {
         "allowOffline": true
@@ -108,7 +108,7 @@ Control output protection requirements:
   "version": "1.0",
   "config": {
     "licenseType": "rental",
-    "keyId": "87654321-4321-4321-4321-210987654321",
+    "keyId": "bbbbbbbb-1c1c-2d2d-3e3e-444444444444",
     "policies": {
       "playback": {
         "expirationDate": "2024-12-31T23:59:59Z",
@@ -130,7 +130,7 @@ Control output protection requirements:
   "version": "1.0",
   "config": {
     "licenseType": "subscription",
-    "keyId": "11111111-2222-3333-4444-555555555555",
+    "keyId": "cccccccc-2d2d-3e3e-4f4f-555555555555",
     "policies": {
       "playback": {
         "allowOffline": false
