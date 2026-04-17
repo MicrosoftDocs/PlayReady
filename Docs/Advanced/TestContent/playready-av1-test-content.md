@@ -45,7 +45,7 @@ This section contains a collection of test content that can be used to validate 
 - **Video KID:** `{00000000-03fc-eacd-0000-000000000000}`
 - **Multi DRM:** True
 - **PlayReady WRMHEADER:** 4.3
-- **LA URL:** `https://test.playready.microsoft.com/core/rightsmanager.asmx?cfg=(ckt:AES128BitCBC)`
+- **LA URL:** `https://test.playready.microsoft.com/core/rightsmanager.asmx?cfg=(ckt:aes128bitcbc)`
 
 **Content URLs:**
 
@@ -78,6 +78,7 @@ PlayReady support for AV1 enables:
 Counter mode encryption for AV1 content:
 
 - **Mode:** `Aes128Ctr`
+- **Configuration:** `cfg=(ckt:aes128bitctr)`
 - **Characteristics:** Stream cipher mode with counter
 - **Performance:** Generally faster encryption/decryption
 - **Compatibility:** Widely supported across PlayReady versions
@@ -87,7 +88,7 @@ Counter mode encryption for AV1 content:
 Cipher Block Chaining mode for AV1 content:
 
 - **Mode:** `Aes128Cbc`
-- **Configuration:** `cfg=(ckt:AES128BitCBC)`
+- **Configuration:** `cfg=(ckt:aes128bitcbc)`
 - **Characteristics:** Block cipher mode with chaining
 - **Security:** Enhanced security through block dependencies
 - **Requirements:** PlayReady 4.0+ for CBC support

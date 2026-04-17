@@ -25,7 +25,7 @@ Note: the parameters need to include persist:true if you want to receive persi
 | LAURL (https://test.playready.microsoft.com/service/) | Description |
 | --- | --- |
 | `rightsmanager.asmx` | Return one non-persistent license with a PLAY right and a Security Level of 150 for the kid found in the WRMHEADER, using the Test Key Seed |
-| `rightsmanager.asmx?cfg=(ckt:aescbc)` | NEW IN PLAYREADY 4.0. Return one non-persistent license with a PLAY right for the kid found in the WRMHEADER, with a content key type set for AESCBC encryption (as opposed to AESCTR) |
+| `rightsmanager.asmx?cfg=(ckt:aes128bitcbc)` | NEW IN PLAYREADY 4.0. Return one non-persistent license with a PLAY right for the kid found in the WRMHEADER, with a content key type set for AESCBC encryption (as opposed to AESCTR) |
 | `rightsmanager.asmx?cfg=(begindate:20170101,expiration:20170101010000)` | Return one non-persistent license with a PLAY right for the kid found in the WRMHEADER, using the Test Key Seed, with a begin date of January 1st, 2017 0:00, and a fixed expiration of January 1st, 2017 1:00am |
 | `rightsmanager.asmx?cfg=(persist:true,begindate:20170101,expiration:20170201,firstexp:60)` | Return one persistent license with fixed begin and end dates, and a relative expiration of 60 seconds after first play. Note: you have to explicitely call out persist:true to receive persistent licenses. |
 | `rightsmanager.asmx?cfg=(kid:B6E39626-1CFB-4AA1-BCBD-4EF1ABA7843A,sl:3000),(kid:7C9484BA-C238-467A-869C-CDD8C7167712,sl:2000)` | Return two non-persistent licenses with PLAY rights, one with a Security Level of 3000, one with a Security Level of 2000. Note: these two KIDs must match the KIDs in the WRMHEADER |
@@ -38,7 +38,7 @@ Note: the parameters need to include persist:true if you want to receive persi
 | keyseed | Use the key seed provided to generate the content key in the licenses | base64 byte array | Example: keyseed:Wdkg2jsl3djgqSFer26XVBoVVRPzVEggUOSKSQaz<BR/>Default value is the Test Key Seed provided [here](playready-test-server-service.md) |
 | kid | Used in a group of properties to associate these properties to one KID | 'header', or Guid in registry format or base64 string | Example 1: kid:header<BR/>Example 2: kid:e13a7861-d8cc-4284-9245-7c835ebde9f0<BR/>Example 3: kid:YXg64czYhEKSRXyDXr3p8A==<BR/>In the case of kid:header, the license server uses the KID found in the WRMHEADER coming along with the license request. In this case, the WRMHEADER has to include only one KID |
 | contentkey | Set the content key | base64 byte array | Example: contentkey:eNqVnXrElmo2NSsn7IXeEA==<BR/>Default value is key(TestKeySeed, kid) |
-| ckt | Specifies the Content Key Encryption Type (CTR or CBC) | aesctr , aescbc | Example: ckt:aescbc<BR/>Default value is aesctr<BR/>The license will include a content key set for AESCBC encryption<BR/>NEW IN PLAYREADY 4.0 |
+| ckt | Specifies the Content Key Encryption Type (CTR or CBC) | aes128bitctr , aes128bitcbc , keyexchange | Example: ckt:aes128bitcbc<BR/>Default value is aes128bitctr<BR/>The license will include a content key set for AESCBC encryption<BR/>NEW IN PLAYREADY 4.0 |
 | tid | Set a TransactionId in the license response | guid (arbitrary) | Example: tid:3033E8F0-FB1B-4170-AD5C-60549AAB2C79<BR/>Adds the provided value to the LicenseResponse.TransactionId property, which will require the client to post a license acknowledgement challenge using the specified transaction identifier back to the license server |
 |   |  |  |  |
 | playright | Add a Play Right | false, true | Example: playright:true<BR/>Default value is true<BR/>Note: a license returned with no right will not allow the client to consume the content |
@@ -80,3 +80,4 @@ Note: the parameters need to include persist:true if you want to receive persi
 | allowunknownhd | Add an Output Control for Unknown Output for any resolution | false, true | Example: allowunknownhd:true<BR/>Equivalent to: playenablers:(786627D8-C2A6-44BE-8F88-08AE255B01A7)<BR/>See the [CRs section 3.9.1](https://www.microsoft.com/playReady/licensing/compliance).<BR/>Server SDK code:<BR/>`right.AddPlayEnabler(new PlayEnabler(new Guid("786627D8-C2A6-44BE-8F88-08AE255B01A7")))` |
 |   |  |  |  |
 | clientinfo |  |  | Special reflection feature. See [this page](testing-client-info.md) for more details. |
+| revoked | Simulate device revocation for this request | false, true | Example: revoked:true

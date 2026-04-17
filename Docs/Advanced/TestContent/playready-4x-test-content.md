@@ -41,7 +41,7 @@ LA_URL = http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(per
 - **Audio KID:** `{10000000-1000-1000-1000-100000000001}`
 - **Multi DRM:** False
 - **PlayReady WRMHEADER:** 4.3
-- **LA URL:** `http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:false,ck:W31bfVt9W31bfVt9W31bfQ==,ckt:aescbc)`
+- **LA URL:** `http://test.playready.microsoft.com/service/rightsmanager.asmx?cfg=(persist:false,ck:W31bfVt9W31bfVt9W31bfQ==,ckt:aes128bitcbc)`
 
 **Content URLs:**
 
