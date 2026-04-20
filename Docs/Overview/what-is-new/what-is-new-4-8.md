@@ -33,7 +33,7 @@ PlayReady 4.8 adds full platform support for OP-TEE (Open Portable Trusted Execu
 
 * The .NET Framework version is fully deprecated. This is the first release where it is not included.
 * The Certificate Revocation List must now be downloaded from a new URL, your choice of https://go.microsoft.com/fwlink/?LinkId=2359173 or https://aka.ms/revinfo2.
-* Converted RMSDK Samples to run on .NET Core
+* Converted PlayReady Server SDK Samples to run on .NET Core
 * Added a revoked query syntax argument to the CfgHandler to simulate device revocation.
 * Improved XML Validation for the License Server Time challenge.
 
