@@ -23,10 +23,6 @@ Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_R
 
 PlayReady 4.8 introduces an updated Activation v2 protocol for device individualization. The new protocol uses a new XML-based challenge/response format under the `ActivationService/v2` namespace and points to updated activation endpoints. Activation v2 also introduces a v1-to-v2 reactivation path, allowing devices that were previously individualized using the legacy activation protocol to seamlessly transition to the new protocol. The legacy Activation v1 protocol remains functional for existing devices but is no longer the default for new activations on supported platforms.
 
-### OP-TEE Platform Support
-
-PlayReady 4.8 adds full platform support for OP-TEE (Open Portable Trusted Execution Environment), enabling PlayReady to run as a trusted application within ARM TrustZone-based TEEs. The OP-TEE platform includes OEM-layer implementations for file I/O, cryptography, secure time, device model identification, and tracing, as well as a TEE bridge and broker trusted application. A Buildroot external package is provided for streamlined integration into embedded Linux build systems. Comprehensive documentation is included covering integration, quick start, and troubleshooting guidance.
-
 ## Changes in PlayReady Server SDK Version 4.8
 
 ### General Server Changes
@@ -36,6 +32,7 @@ PlayReady 4.8 adds full platform support for OP-TEE (Open Portable Trusted Execu
 * Converted PlayReady Server SDK Samples to run on .NET Core
 * Added a revoked query syntax argument to the CfgHandler to simulate device revocation.
 * Improved XML Validation for the License Server Time challenge.
+* Security Improvements
 
 ### Server API Changes
 
@@ -46,8 +43,8 @@ There have been no changes to the Server API.
 ### General Device Porting Kit changes
 
 * Added new Activation v2 Protocol and point the activation URL at the new v2 endpoints.
-* Full OP-TEE (ARM TrustZone TEE) platform added.
 * Added CMake Build Infrastructure for Linux and Cross-Platform targets.
-* Provenance PK Module cleanup. Removed: `merkletree`, `mp4parser`, `provenance`, `provenancemanifest`, `utilities/map`, and `utilities/vector`.
+* PK Module cleanup. Removed: `merkletree`, `mp4parser`, `provenance`, `provenancemanifest`, `utilities/map`, and `utilities/vector`.
 * Various Bug fixes, including with the `DRM_TEE_PROPERTY_REQUIRES_MINIMAL_REVOCATION_DATA` TEE Property
+* Security Improvements
 
