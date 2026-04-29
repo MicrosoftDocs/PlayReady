@@ -19,9 +19,11 @@ Starting with PlayReady 4.8, PlayReady Server SDK Clients will use a new certifi
 
 Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_REQUIRES_MINIMAL_REVOCATION_DATA` in order to reduce the size of the revocation data package passed into the TEE when building the RKB. 
 
-### Activation v2 Protocol
+### CMake Build Infrastructure
 
-PlayReady 4.8 introduces an updated Activation v2 protocol for device individualization. The new protocol uses a new XML-based challenge/response format under the `ActivationService/v2` namespace and points to updated activation endpoints. Activation v2 also introduces a v1-to-v2 reactivation path, allowing devices that were previously individualized using the legacy activation protocol to seamlessly transition to the new protocol. The legacy Activation v1 protocol remains functional for existing devices but is no longer the default for new activations on supported platforms.
+Starting with PlayReady 4.8, the PlayReady Device Porting Kit includes CMake build infrastructure for Linux, macOS, and cross-platform targets. This provides a modern, flexible build system that supports multiple compilers and architectures out of the box, including cross-compilation for ARM64. For full instructions, see [Building with CMake](../cmake-build.md).
+
+This is a new addition to the Device Porting Kit and we would love feedback from partners who use the new build system. Please reach out through your normal support channels with any suggestions or issues.
 
 ## Changes in PlayReady Server SDK Version 4.8
 
@@ -30,6 +32,7 @@ PlayReady 4.8 introduces an updated Activation v2 protocol for device individual
 * The .NET Framework version is fully deprecated. This is the first release where it is not included.
 * The Certificate Revocation List must now be downloaded from a new URL, your choice of https://go.microsoft.com/fwlink/?LinkId=2359173 or https://aka.ms/revinfo2.
 * Converted PlayReady Server SDK Samples to run on .NET Core
+  * Added Samples for Extended Restriction and Limited Duration Chained Licenses. Removed AES Packaging, Static Reheadering, and CfgHandler.Legacy Samples
 * Added a revoked query syntax argument to the CfgHandler to simulate device revocation.
 * Improved XML Validation for the License Server Time challenge.
 * Security Improvements
