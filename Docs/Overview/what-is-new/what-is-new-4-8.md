@@ -47,7 +47,6 @@ There have been no changes to the Server API.
 
 * Added new Activation v2 Protocol and point the activation URL at the new v2 endpoints.
 * Added CMake Build Infrastructure for Linux and Cross-Platform targets.
-* PK Module cleanup. Removed: `merkletree`, `mp4parser`, `provenance`, `provenancemanifest`, `utilities/map`, and `utilities/vector`.
 * Various Bug fixes, including with the `DRM_TEE_PROPERTY_REQUIRES_MINIMAL_REVOCATION_DATA` TEE Property
 * Security Improvements
 
