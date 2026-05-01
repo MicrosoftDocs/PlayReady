@@ -19,12 +19,6 @@ Starting with PlayReady 4.8, PlayReady Server SDK Clients will use a new certifi
 
 Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_REQUIRES_MINIMAL_REVOCATION_DATA` in order to reduce the size of the revocation data package passed into the TEE when building the RKB. 
 
-### CMake Build Infrastructure
-
-Starting with PlayReady 4.8, the PlayReady Device Porting Kit includes CMake build infrastructure for Linux, macOS, and cross-platform targets. This provides a modern, flexible build system that supports multiple compilers and architectures out of the box, including cross-compilation for ARM64. For full instructions, see [Building with CMake](../cmake-build.md).
-
-This is a new addition to the Device Porting Kit and we would love feedback from partners who use the new build system. Please reach out through your normal support channels with any suggestions or issues.
-
 ## Changes in PlayReady Server SDK Version 4.8
 
 ### General Server Changes
