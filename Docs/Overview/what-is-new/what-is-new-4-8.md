@@ -35,6 +35,12 @@ Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_R
 
 There have been no changes to the Server API.
 
+### 4.8.93 Patch Notes
+
+The following changes were made in the 4.8.93 patch:
+
+* General bug fixes around ECC Validation to improve support for Legacy PlayReady Clients
+
 ## Changes in PlayReady Device Porting Kit Version 4.8
 
 ### General Device Porting Kit changes
