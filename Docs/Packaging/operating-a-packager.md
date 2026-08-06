@@ -5,6 +5,7 @@ ms.assetid: "726C14AE-AE51-4DE3-BB11-F43FFE18CE9B"
 keywords:  PlayReady, packager, encryptor, operating packager
 ms.date: 05/11/2018
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Operating a PlayReady Packager

@@ -5,6 +5,7 @@ ms.assetid: "121F7DEA-A0D1-4279-9BBF-D8EBEA1F894C"
 keywords: playready end to end, playready introduction
 ms.date: 02/01/2018
 ms.topic: article
+ms.custom: sfi-image-nochange
 ---
 
 # Simple End to End System
