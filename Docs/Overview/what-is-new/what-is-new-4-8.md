@@ -19,6 +19,12 @@ Starting with PlayReady 4.8, PlayReady Server SDK Clients will use a new certifi
 
 Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_REQUIRES_MINIMAL_REVOCATION_DATA` in order to reduce the size of the revocation data package passed into the TEE when building the RKB. 
 
+### ECC Validation Patch Detection Improvements (4.8.95 QFE)
+
+Added more ways for Device PK clients to communicate they have the ECC Patch to the Server SDK. In addition to updating your Company Certificate to use our new ECC Patch Root, clients can also use the TEE Property `DRM_TEE_PROPERTY_SUPPORTS_ECC_POINT_VALIDATION` with the 4.8.95 QFE Device PK, or update their Device Certificate's Model Name to include the string `[ECV]` on any Device PK version.
+
+A new boolean property `IsECCPatched` has been added to the `ILicenseChallenge` interface. This property will perform the three checks described above and will be set to `true` if **any** of them are true.
+
 ## Changes in PlayReady Server SDK Version 4.8
 
 ### General Server Changes
@@ -35,11 +41,18 @@ Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_R
 
 There have been no changes to the Server API.
 
-### 4.8.93 Patch Notes
+### 4.8.95 QFE Patch Notes
 
-The following changes were made in the 4.8.93 patch:
+The following changes were made in the 4.8.95 patch:
 
-* General bug fixes around ECC Validation to improve support for Legacy PlayReady Clients
+* General bug fixes around ECC Validation to improve support for Legacy PlayReady Clients.
+* Bug fixes around reading Wide Strings as Narrow, which caused many Certificate fields to include null escape characters.
+* Added boolean `IsECCPatched` property to the `ILicenseChallenge` interface that reflects if the the client has taken the ECC Patch yet.
+  * All checks for ECC Vulnerability presence should use this property
+* Expose the new TEE Property as `LicenseChallengeTeeProperties.SUPPORTS_ECC_POINT_VALIDATION` in the `ILicenseChallenge`'s `TeePropertyList` property.
+* Added a `eccpatch` query syntax argument to the CfgHandler to simulate ECC Patch enforcement.
+  * Treats devices without the ECC Patch as revoked.
+* Add proper error handling to validate and handle invalid client SOAP requests.
 
 ## Changes in PlayReady Device Porting Kit Version 4.8
 
@@ -48,4 +61,9 @@ The following changes were made in the 4.8.93 patch:
 * Added CMake Build Infrastructure for Linux and Cross-Platform targets.
 * Various Bug fixes, including with the `DRM_TEE_PROPERTY_REQUIRES_MINIMAL_REVOCATION_DATA` TEE Property
 * Security Improvements
+
+### 4.8.95 QFE Patch Notes
+
+* Added the ECC Validation Test to the `pritee_test_utility`.
+* Expose a new TEE Property, `DRM_TEE_PROPERTY_SUPPORTS_ECC_POINT_VALIDATION`, which can be used to show the device has taken the ECC Patch.
 

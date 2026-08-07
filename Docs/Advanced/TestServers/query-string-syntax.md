@@ -81,3 +81,4 @@ Note: the parameters need to include persist:true if you want to receive persi
 |   |  |  |  |
 | clientinfo |  |  | Special reflection feature. See [this page](testing-client-info.md) for more details. |
 | revoked | Simulate device revocation for this request | false, true | Example: revoked:true
+| eccpatch | Simulate ECC Patch enforcement for this request | false, true | Example: eccpatch:true
