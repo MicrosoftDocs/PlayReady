@@ -21,9 +21,7 @@ Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_R
 
 ### ECC Validation Patch Detection Improvements (4.8.95 QFE)
 
-Added more ways for Device PK clients to communicate they have the ECC Patch to the Server SDK. In addition to updating your Company Certificate to use our new ECC Patch Root, clients can also use the TEE Property `DRM_TEE_PROPERTY_SUPPORTS_ECC_POINT_VALIDATION` with the 4.8.95 QFE Device PK, or update their Device Certificate's Model Name to include the string `[ECV]` on any Device PK version.
-
-A new boolean property `IsECCPatched` has been added to the `ILicenseChallenge` interface. This property will perform the three checks described above and will be set to `true` if **any** of them are true.
+A new boolean property `IsECCPatched` has been added to the `ILicenseChallenge` interface. This property will perform all necessary checks to ensure the device does or does not have the patch. This will be set to `true` if if the device is perfomring ECC Point Validation and is not vulnerable to the attack and **false** otherwise. Consumers of the PlayReady Server SDK should use this property instead of performing any manual checks, such as the checking the digest of device's Root Cert.
 
 ## Changes in PlayReady Server SDK Version 4.8
 
