@@ -21,7 +21,7 @@ Porting Kit implementers can now safely use the TEE property `DRM_TEE_PROPERTY_R
 
 ### ECC Validation Patch Detection Improvements (4.8.95 QFE)
 
-A new boolean property `IsECCPatched` has been added to the `ILicenseChallenge` interface. This property will perform all necessary checks to ensure the device does or does not have the patch. This will be set to `true` if if the device is perfomring ECC Point Validation and is not vulnerable to the attack and **false** otherwise. Consumers of the PlayReady Server SDK should use this property instead of performing any manual checks, such as the checking the digest of device's Root Cert.
+A new boolean property `IsECCPatched` has been added to the `ILicenseChallenge` interface. This property will perform all necessary checks to ensure the device does or does not have the patch. This will be set to `true` if the device is performing ECC Point Validation and is not vulnerable to the attack and `false` otherwise. Consumers of the PlayReady Server SDK should use this property instead of performing any manual checks, such as the checking the digest of device's Root Cert.
 
 ## Changes in PlayReady Server SDK Version 4.8
 
@@ -45,7 +45,7 @@ The following changes were made in the 4.8.95 patch:
 
 * General bug fixes around ECC Validation to improve support for Legacy PlayReady Clients.
 * Bug fixes around reading Wide Strings as Narrow, which caused many Certificate fields to include null escape characters.
-* Added boolean `IsECCPatched` property to the `ILicenseChallenge` interface that reflects if the the client has taken the ECC Patch yet.
+* Added boolean `IsECCPatched` property to the `ILicenseChallenge` interface that reflects if the client has taken the ECC Patch yet.
   * All checks for ECC Vulnerability presence should use this property
 * Expose the new TEE Property as `LicenseChallengeTeeProperties.SUPPORTS_ECC_POINT_VALIDATION` in the `ILicenseChallenge`'s `TeePropertyList` property.
 * Added a `eccpatch` query syntax argument to the CfgHandler to simulate ECC Patch enforcement.
@@ -63,5 +63,5 @@ The following changes were made in the 4.8.95 patch:
 ### 4.8.95 QFE Patch Notes
 
 * Added the ECC Validation Test to the `pritee_test_utility`.
-* Expose a new TEE Property, `DRM_TEE_PROPERTY_SUPPORTS_ECC_POINT_VALIDATION`, which can be used to show the device has taken the ECC Patch.
+* Expose a new TEE Property, `DRM_TEE_PROPERTY_SUPPORTS_ECC_POINT_VALIDATION`, which can be set if the device has taken the ECC Patch.
 
