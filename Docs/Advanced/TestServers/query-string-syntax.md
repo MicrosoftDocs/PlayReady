@@ -2,7 +2,7 @@
 title: Query String Syntax for PlayReady Test Server
 description: Documentation for query string syntax used in PlayReady test server license requests
 ms.topic: reference
-ms.date: 06/30/2025
+ms.date: 10/20/2026
 ---
 
 # Query String Syntax Documentation
@@ -29,6 +29,8 @@ Note: the parameters need to include persist:true if you want to receive persi
 | `rightsmanager.asmx?cfg=(begindate:20170101,expiration:20170101010000)` | Return one non-persistent license with a PLAY right for the kid found in the WRMHEADER, using the Test Key Seed, with a begin date of January 1st, 2017 0:00, and a fixed expiration of January 1st, 2017 1:00am |
 | `rightsmanager.asmx?cfg=(persist:true,begindate:20170101,expiration:20170201,firstexp:60)` | Return one persistent license with fixed begin and end dates, and a relative expiration of 60 seconds after first play. Note: you have to explicitely call out persist:true to receive persistent licenses. |
 | `rightsmanager.asmx?cfg=(kid:B6E39626-1CFB-4AA1-BCBD-4EF1ABA7843A,sl:3000),(kid:7C9484BA-C238-467A-869C-CDD8C7167712,sl:2000)` | Return two non-persistent licenses with PLAY rights, one with a Security Level of 3000, one with a Security Level of 2000. Note: these two KIDs must match the KIDs in the WRMHEADER |
+| `rightsmanager.asmx?cfg=(persist:true),(lst:true)` | Return persistent licenses and request a License Server Time certificate if the client advertises support for License Server Time. The separate `lst` group is a response directive, not an additional license. |
+| `rightsmanager.asmx?cfg=(persist:true),(lst:true,servertime:20261020000000)` | Also override the response server time with October 20, 2026, 00:00:00 UTC when the client supports License Server Time. |
 
 ## Parameters
 
@@ -80,5 +82,76 @@ Note: the parameters need to include persist:true if you want to receive persi
 | allowunknownhd | Add an Output Control for Unknown Output for any resolution | false, true | Example: allowunknownhd:true<BR/>Equivalent to: playenablers:(786627D8-C2A6-44BE-8F88-08AE255B01A7)<BR/>See the [CRs section 3.9.1](https://www.microsoft.com/playReady/licensing/compliance).<BR/>Server SDK code:<BR/>`right.AddPlayEnabler(new PlayEnabler(new Guid("786627D8-C2A6-44BE-8F88-08AE255B01A7")))` |
 |   |  |  |  |
 | clientinfo |  |  | Special reflection feature. See [this page](testing-client-info.md) for more details. |
-| revoked | Simulate device revocation for this request | false, true | Example: revoked:true
-| eccpatch | Simulate ECC Patch enforcement for this request | false, true | Example: eccpatch:true
+| revoked | Simulate device revocation for this request | false, true | Example: revoked:true<BR/>Default value is false. |
+| eccpatch | Simulate ECC Patch enforcement for this request | false, true | Example: eccpatch:true<BR/>Default value is false. |
+| lst (LicenseServerTime) | Request a License Server Time certificate in the license response | false, true | Example: `cfg=(persist:true),(lst:true)`.<BR/>Default value is false. A certificate is included only if the challenge advertises the License Server Time REE feature. A group containing only `lst` or `LicenseServerTime`, optionally with `servertime`, is a response directive when its time flag is true; it does not create or replace a license policy. |
+| servertime | Override the license response's server time | yyyymmdd, yyyymmddhhmm, or yyyymmddhhmmss (UTC) | Example: `cfg=(servertime:20261020000000)` sets `LicenseResponse.ServerTime` while applying the normal license defaults. If omitted, the server's normal time is used. In a separate `lst:true` directive, the override is applied only when the client supports License Server Time. This does not change the server's system clock or the license's begin/expiration dates. |
+| ForceResponseSignature (forcesignature, sig) | Force a signature on the license response | false, true | Example: `cfg=(sig:true)`.<BR/>Default value is false. If any license configuration requests it, `LicenseResponse.ForceSignature` is set to true. |
+| echoserverauthcert | Return the server authorization certificate in response custom data | false, true | Example: `cfg=(echoserverauthcert:true)`.<BR/>Default value is false. |
+| echofeatures | Return the client's reported features and versions in response custom data | false, true | Example: `cfg=(echofeatures:true)`.<BR/>Default value is false. Includes TEE properties/APIs, REE features, raw feature XML, and TEE/REE versions. Takes precedence over `echoserverauthcert` when both are true. |
+| servicemsg (msg) | Return a diagnostic service message instead of a normal media license | NotSet, ClientInfo, ClientTime, Version | Example: `cfg=(msg:ClientInfo)`.<BR/>Default value is NotSet. |
+| errorcode (err) | Simulate a server error | unsigned 32-bit integer, decimal or 0x-prefixed hexadecimal | Example: `cfg=(err:0x8004c065)` simulates device revocation.<BR/>Default value is 0 (no simulated error). |
+| pr (HasPlayRight) | Set whether to include a Play Right | false, true | Example: `cfg=(pr:false)`.<BR/>Use `pr` when explicitly disabling play: it also records that the choice was explicit. `HasPlayRight` sets the field directly and does not record that choice, so default-right processing can re-enable it. A Play Right is added by default when no copy or extended rights are configured. |
+| copyright (cr, HasCopyRight) | Add a Copy Right | false, true, or a copy-policy object for copyright/cr | Example: `cfg=(cr:(todevice:true,tocd:false,copycount:3))`.<BR/>Default value is false. `true` enables both copy-to-device and burn-to-audio-CD enablers. In an object, omitted `todevice` and `tocd` values default to false. `HasCopyRight` accepts only a Boolean. These are legacy copy-right controls. |
+| copycount (cc) | Set the number of permitted copies | integer | Example: `cfg=(cr:true,cc:3)`.<BR/>Applied only when a Copy Right is present. Default value is -1 (leave unspecified). |
+| graceperiod (grace) | Set the license grace period | seconds in integer | Example: `cfg=(grace:60)`.<BR/>Default value is -1 (leave unspecified). This is a legacy license property. |
+| extendedglobal (extg, extendedrestrictionsglobal, ExtendedGlobalRestrictions) | Add extended restrictions to the license rather than the Play Right | restriction object or list of restriction objects | Example: `cfg=(extg:((type:400,mustunderstand:true,besteffort:false,data:Ag==)))`.<BR/>No global restrictions are added by default. The direct `ExtendedGlobalRestrictions` property requires a list. |
+| playenablers2 | Add Play Enablers with explicit policy data | GUID/data object or list of GUID/data objects | Example: `cfg=(playenablers2:((guid:786627D8-C2A6-44BE-8F88-08AE255B01A7,data:AAAAAQ==)))`.<BR/>Unlike the GUID-only shorthand, this form explicitly supplies each enabler's optional data. |
+| Restricted (res) | Mark the Source ID as restricted | false, true | Example: `cfg=(sourceid:267,res:true)`.<BR/>Default value is false; Source IDs 4 and 267 automatically set it to true. Only used when `sourceid` is specified. |
+| IsDomainBound (domains, d) | Bind a license to a domain certificate instead of a device | false, true | Example: `cfg=(domains:true)`.<BR/>Default value is false. Requires a matching domain certificate in the challenge. Domain-bound licenses default to persistent unless `persist` is explicitly supplied. |
+| serviceid (svcid) | Override the domain Service ID | GUID in registry format or base64 string | Example: `cfg=(domains:true,svcid:3033E8F0-FB1B-4170-AD5C-60549AAB2C79)`.<BR/>If omitted, the configured Service ID is used, or the first domain certificate's Service ID during license acquisition when one is present. Also used by domain join requests. |
+| accountid (aid) | Override the domain Account ID | GUID in registry format or base64 string | Example: `cfg=(domains:true,aid:3033E8F0-FB1B-4170-AD5C-60549AAB2C79)`.<BR/>If omitted, the configured domain Account ID is used. Also used by domain join requests. |
+| Revision | Override the domain revision for a join request | integer | Example: `cfg=(revision:2)`.<BR/>Default value is 0 (no override); the challenge or server configuration supplies the revision. |
+| Metering (m) | Enable metering on a media license | false, true | Example: `cfg=(m:true)`.<BR/>Default value is false. Uses the server's configured Metering ID. |
+| securestop (ss) | Enable Secure Stop on a license | false, true | Example: `cfg=(ss:true)`.<BR/>Default value is false. |
+| publisherid (pid) | Set the Secure Stop publisher identifier | GUID in registry format or base64 string | Example: `cfg=(ss:true,pid:3033E8F0-FB1B-4170-AD5C-60549AAB2C79)`.<BR/>Used when Secure Stop is enabled. Defaults to the server's configured Metering ID. |
+| securestop2aeskey (securestop2key, ss2aeskey, ss2key) | Supply the Secure Stop 2 AES key | byte string encoded as base64 or hexadecimal | Example: `cfg=(ss:true,ss2key:AAECAwQFBgcICQoLDA0ODw==)`.<BR/>Omitted by default. For license acquisition, requires Secure Stop to be enabled. These same key property names are also accepted in Secure Stop request configuration. |
+| keyexchange | Add Key Exchange Rights | object or list of objects containing alg and key | Example: `cfg=(ckt:keyexchange,keyexchange:((alg:1,key:AAECAwQFBgcICQoLDA0ODw==)))`.<BR/>`alg` is an unsigned algorithm identifier (decimal or 0x-prefixed hexadecimal); `key` is a base64 or hexadecimal byte string. Use an algorithm and key valid for the client being tested. No key exchange rights are added by default. |
+| clientkeyset (ScalableServiceSet) | Supply a scalable service master key set for the content encryption key | master-key-set object | Example shape: `cfg=(clientkeyset:(id:3033E8F0-FB1B-4170-AD5C-60549AAB2C79,masterkey:AAECAwQFBgcICQoLDA0ODw==,servicecount:1,service:0))`.<BR/>Omitted by default. Supply a valid master key and service configuration for the scenario. The direct `ScalableServiceSet` property takes this same master-key-set object, not a serialized service-set wrapper. |
+| auxkeyset | Supply a scalable service master key set for the license binding key | master-key-set object | Uses the same object shape as `clientkeyset`, but selects auxiliary-key-set binding instead of a client content key. Omitted by default. |
+
+## JSON property names and aliases
+
+The following spellings correspond to parameters described above. Names within each row select the same setting unless noted. For direct JSON input, use JSON objects/arrays and quoted names instead of query-string parentheses.
+
+| Documented parameter | Additional accepted JSON property names |
+| --- | --- |
+| sl | securitylevel |
+| kid | keyid |
+| contentkey | ck |
+| ckt | contentkeytype |
+| keyseed | seed |
+| tid | transactionid |
+| readright | rr |
+| executeright | er |
+| extendedright | xr, ExtendedRights |
+| persist | per |
+| simple | issimple |
+| begindate | begin |
+| enddate, expiration | end |
+| firstplayexpiration, firstexp | No additional aliases |
+| realtime | rt |
+| removaldate | rd |
+| isroot | root |
+| rootid | rid |
+| sourceid | sid |
+| caopl | compresseddigitalaudioopl |
+| ucaopl | uncompresseddigitalaudioopl |
+| cvopl | compresseddigitalvideoopl |
+| ucvopl | uncompresseddigitalvideoopl |
+| avopl | AnalogVideoOPL |
+| dvop | digitalvideooutputprotection |
+| daop | digitalaudiooutputprotection |
+| avop | analogvideooutputprotection |
+| extendedrestrictions | ext, extended |
+| playenablers | enablers |
+| explicitacp | acp |
+| maxres | max, MaxResDecode |
+| allowunknownsd | unsd |
+| allowunknownhd | unhd, AllowUnknownForHD |
+
+Additional expiration properties `expireinseconds` and `expirein` accept an integer number of seconds and calculate the expiration from the current UTC time when the configuration is parsed. For example, `cfg=(expirein:300)` expires in five minutes. They do not calculate relative to a `servertime` override.
+
+For extended rights and restrictions, `type` has the alias `t`. Restriction members `mustunderstand`, `besteffort`, and `data` also accept `mu`, `be`, and `d`. Each extended right contains an `extended` list of restrictions. The direct `ExtendedRights` and `extended` properties require lists; the `extendedright`/`xr` and `extendedrestrictions`/`ext` setters also accept a single object.
+
+GUID/data objects used by output protections and Play Enablers accept `guid` (alias `g`) and `data` (alias `d`). GUID values can use registry format or base64. Byte strings can use base64 or hexadecimal (optionally separated by underscores).
