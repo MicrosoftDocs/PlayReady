@@ -5,6 +5,7 @@ ms.assetid: "70D82E7F-096B-4D15-91B8-00C1E20A3BC5"
 keywords: How to migrate versions
 ms.date: 04/06/2018
 ms.topic: upgrade-and-migration-article
+ms.custom: sfi-image-nochange
 ---
 
 # How to Migrate from Previous Versions of the PK and Server
